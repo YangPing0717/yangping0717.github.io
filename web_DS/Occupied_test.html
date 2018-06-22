@@ -1,0 +1,887 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	  
+<link rel="shortcut icon" href="assets/img/favicon.ico">
+<link rel="bookmark" href="assets/img/favicon.ico"/>
+<link rel="apple-touch-icon" href="assets/img/icon_DS.png">
+
+<meta property="og:title" content="DanSummit" />
+<meta property="og:description" content="DanSummit" />
+<meta property="og:image" content="assets/img/share_img_DS.jpg">
+<meta name="keywords" content="DanSummit, Education, 菁英" />
+
+    <title>DanSummit - 我的課程</title>
+
+	<!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	
+	<!-- iconfont -->
+	<link href="assets/css/fontawesome-all.css" rel="stylesheet">
+	<link href="assets/css/style_icomoon.css" rel="stylesheet">
+	<link href="assets/css/material-icons.css" rel="stylesheet">
+	  
+	<!-- timeline -->
+	<link rel="stylesheet" href="assets/css/style_timeline.css">
+	<!-- sidebar -->	
+	<link rel="stylesheet" href="assets/css/style_sidebar.css">
+	<!-- hamburger btn -->
+	<link rel="stylesheet" href="assets/css/style_ham.css">
+	<!-- select --> 
+	<!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">-->
+  	<link rel="stylesheet" href="assets/css/bootstrap-select.css">
+	  
+	<link rel="stylesheet" href="assets/css/ds_1.css" />
+	<link rel="stylesheet" href="assets/css/ds_2.css" />
+
+<style>
+.background {
+	position: absolute; 
+	top: -3%; 
+	left: -3%; 
+	width: 106%; 
+	height: 106%;
+	z-index: -1;
+}
+.bg_po {
+	background-color: #dacdf3;
+	/*background: url(assets/images/background.jpg) no-repeat center center;
+	background-size: cover, cover;*/
+}
+.cloud {
+	position: absolute; 
+	top: 0; 
+	left: 0; 
+	width: 100%; 
+	height: 100%;
+	z-index: 2;
+	opacity: 1;
+}
+.cloud0{
+	background: url(assets/img/3-0.svg) no-repeat center center;
+	background-size: cover, cover;
+	top: 1%; 
+	left: -1%;
+}
+.cloud1{
+	background: url(assets/img/3-1.svg) no-repeat center center;
+	background-size: cover, cover;
+}
+.cloud2{
+	background: url(assets/img/3-2.svg) no-repeat center center;
+	background-size: cover, cover;
+}
+.cloud3{
+	background: url(assets/img/3-3.svg) no-repeat center center;
+	background-size: cover, cover;
+}
+.cloud4{
+	background: url(assets/img/3-4.svg) no-repeat center center;
+	background-size: cover, cover;
+	-webkit-filter: drop-shadow(0px 10px 5px rgba(0,0,0,0.3));      
+    filter: drop-shadow(0px 10px 5px rgba(0,0,0,0.3)); 
+}
+.cl_smoo_1 {
+	opacity: .4;
+	/*-webkit-filter: saturate(8); 
+    filter: saturate(8);*/
+}
+.cl_smoo_2 {
+	opacity: .5;
+}
+.cl_smoo_3 {
+	opacity: .8;
+}
+
+</style>  
+	  
+	  
+  </head>
+
+<body class="">
+<div class="bgtoeic">
+<div class="bg_purple background ">
+	<div class=" cloud cloud0"></div>
+	<div class=" cloud cloud1"></div>
+	<div class=" cloud cloud2"></div>
+	<div class=" cloud cloud3"></div>
+	<div class=" cloud cloud4"></div>
+</div>
+</div>
+	
+<div class="container">
+	<div class="row header px-3 px-sm-0">
+	<div class="col col-12 col-md-12 px-0 school">
+    	<img src="assets/img/logo_DS.svg" alt=""/>
+		<button type="button" class="btn btn_logout float-right">退 出</button>
+	</div>
+	</div>	
+
+<nav class="row navbar navbar-expand-lg">
+<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+<span class="navbar-toggler-icon"><i class="material-icons">menu</i></span>
+</button>
+
+<div class="collapse navbar-collapse" id="navbarSupportedContent">
+<ul class="navbar-nav mr-auto">
+  <li class="nav-item active">
+	<a class="nav-link" href="#">丹山e学霸</a>
+  </li>
+  <li class="nav-item">
+	<a class="nav-link" href="#">丹山嘉文</a>
+  </li>
+  <li class="nav-item dropdown">
+	<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+	  学习中心
+	</a>
+	<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+		<a class="dropdown-item" href="#">我的课程</a>
+		<a class="dropdown-item" href="#">我的收藏</a>
+		<a class="dropdown-item" href="#">信息管理</a>
+		<a class="dropdown-item" href="#">摸底测验</a>
+		<a class="dropdown-item" href="#">申请试课</a>
+		<a class="dropdown-item" href="#">购买丹山e学霸</a>
+		<a class="dropdown-item" href="#">课堂软件</a>
+	</div>
+  </li>
+  <li class="nav-item">
+	<a class="nav-link" href="#">关于丹山嘉讯</a>
+  </li>
+	<li class="nav-item">
+	<a class="nav-link" href="#">联络我们</a>
+	</li>
+	<li class="nav-item">
+	<a class="nav-link" href="#">修改密码</a>
+	</li>
+</ul>
+</div>
+</nav>
+
+</div>	
+
+	
+
+<!-- sidebar 開始 -->
+<div class="container ">
+<div class="row ">
+	
+<div class="wrapper">
+<!-- Sidebar Holder -->
+<nav id="sidebar">
+
+<div class="sidenav p-0 pb-3">
+<div class="userid">
+<div class="photo float-left"><i class="material-icons">perm_identity</i></div>
+<div class="username float-left">Mike Chen<br /><span class="">Student</span></div>
+</div>
+<button type="button" class="btn btn_rounded mx-3 mt-2 mb-3">進入教室 <i class="material-icons">arrow_forward</i></button>
+<a href="#" onclick="window.location.href='MyCourse.html'"><i class="material-icons">book</i> 我的課表</a>
+<a href="#" onclick="window.location.href='ReserveClass.html'"><i class="material-icons">date_range</i> 預約課程</a>
+<a href="#" class="active" onclick="window.location.href='Occupied.html'"><i class="material-icons">history</i> 已上課程</a>
+<a href="#" onclick="window.location.href='#'"><i class="material-icons">trending_up</i> 能力分析</a>
+</div>
+
+
+
+</nav>
+
+
+			
+
+
+	
+<!-- Page Content Holder -->
+<div id="content">
+	
+<div class="hamburger navbar-toggle hamburger-11" id="sidebarCollapse" data-toggle="collapse" data-target="#myNavbar">
+  <span class="menuline"></span>
+  <span class="menuline"></span>
+  <span class="menuline"></span>
+</div>
+
+<div class="main p-3">
+	
+<ul class="nav nav-tabs" id="myTab" role="tablist">
+  <li class="nav-item">
+    <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">主課程</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">輔修課程</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" id="profile-tab_cancelclass" data-toggle="tab" href="#cancelclass" role="tab" aria-controls="profile" aria-selected="false">已取消課程</a>
+  </li>
+</ul>
+	
+<div class="tab-content p-3" id="myTabContent">
+<div class="tab-pane fade show active " id="home" role="tabpanel" aria-labelledby="home-tab">
+		 		  
+<div class="row px-3 pb-4">
+<div class="col col-md-12 col-lg-4 pl-md-3 mt-lg-0">
+<div class="row align-items-start board">
+<div class="col board_body border-right">
+	<h5 class="board_text">主課程<br /><span class="bigger">25/50</span> 小時</h5>
+	<button type="button" class="btn btn-primary btn_rounded btn_small">加購</button>
+</div>
+</div>	
+</div>		
+</div>	
+  	  
+<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" data-interval="false" >
+	<ol class="carousel-indicators">
+		<li data-target="#carouselExampleIndicators" data-slide-to="0" class="active">三月</li>
+		<li data-target="#carouselExampleIndicators" data-slide-to="1">四月</li>
+		<li data-target="#carouselExampleIndicators" data-slide-to="2">五月</li>
+	</ol>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+		
+<!--<div class="row mb-3 justify-content-md-left">
+
+<div class="col mr-md-2 col-sm-6 col-md-3">
+<div class="">
+  <div class="float-right text-right">
+	  <div class="percent">100%</div>
+  </div>
+<h5 class="card-title">Unit 1</h5>
+<div class="text">時間：2018-03-01<br />
+老師：Amy Chenh<br />
+預習：15 分鐘<br />
+上課：<span class="like"><i class="fas fa-heart"></i><i class="fas fa-heart"></i><i class="fas fa-heart"></i><span>4.65 分</span></span> <br />
+作業：A+<br />
+測驗：90%
+</div>
+<div class="icon_btn mt-2">
+<i class="material-icons" data-toggle="tooltip" data-placement="bottom" title="課程回放">play_circle_filled</i>
+<i class="material-icons" data-toggle="tooltip" data-placement="bottom" title="學霸點評">highlight</i>
+<i class="material-icons" data-toggle="tooltip" data-placement="bottom" title="學習活動">assignment</i>
+</div>
+</div>
+</div>
+	
+<div class="col mr-md-2 col-sm-6 col-md-3">
+<div class="">
+  <div class="float-right text-right">
+	  <div class="percent down">58%</div>
+  </div>
+<h5 class="card-title">Unit 2</h5>
+<div class="text">時間：2018-03-01<br />
+老師：Amy Chenh<br />
+預習：15 分鐘<br />
+上課：<span class="like"><i class="fas fa-heart"></i><i class="fas fa-heart"></i><i class="fas fa-heart"></i><span>4.65 分</span></span> <br />
+作業：A+<br />
+測驗：90%
+</div>
+<div class="icon_btn mt-2">
+<i class="material-icons" data-toggle="tooltip" data-placement="bottom" title="課程回放">play_circle_filled</i>
+<i class="material-icons" data-toggle="tooltip" data-placement="bottom" title="學霸點評">highlight</i>
+<i class="material-icons" data-toggle="tooltip" data-placement="bottom" title="學習活動">assignment</i>
+</div>
+</div>
+</div>
+	
+<div class="col mr-md-2 col-sm-6 col-md-3">
+<div class="">
+  <div class="float-right text-right">
+	  <div class="percent">88%</div>
+  </div>
+<h5 class="card-title">Unit 3</h5>
+<div class="text">時間：2018-03-01<br />
+老師：Amy Chenh<br />
+預習：15 分鐘<br />
+上課：<span class="like"><i class="fas fa-heart"></i><i class="fas fa-heart"></i><i class="fas fa-heart"></i><span>4.65 分</span></span> <br />
+作業：A+<br />
+測驗：90%
+</div>
+<div class="icon_btn mt-2">
+<i class="material-icons" data-toggle="tooltip" data-placement="bottom" title="課程回放">play_circle_filled</i>
+<i class="material-icons" data-toggle="tooltip" data-placement="bottom" title="學霸點評">highlight</i>
+<i class="material-icons" data-toggle="tooltip" data-placement="bottom" title="學習活動">assignment</i>
+</div>
+</div>
+</div>
+	
+<div class="col col-sm-6 col-md-3">
+<div class="">
+  <div class="float-right text-right">
+	  <div class="percent">100%</div>
+  </div>
+<h5 class="card-title">期中評測</h5>
+<div class="text">時間：2018-03-01<br />
+老師：Amy Chenh<br />
+預習：15 分鐘<br />
+上課：<span class="like"><i class="fas fa-heart"></i><i class="fas fa-heart"></i><i class="fas fa-heart"></i><span>4.65 分</span></span> <br />
+作業：A+<br />
+測驗：90%
+</div>
+<div class="icon_btn mt-2">
+<i class="material-icons" data-toggle="tooltip" data-placement="bottom" title="課程回放">play_circle_filled</i>
+<i class="material-icons" data-toggle="tooltip" data-placement="bottom" title="學霸點評">highlight</i>
+<i class="material-icons" data-toggle="tooltip" data-placement="bottom" title="學習活動">assignment</i>
+</div>
+</div>
+</div>
+
+</div>-->
+		
+		
+		
+		
+		
+		
+<div class="">
+
+  <div class="card">
+	  <div class="card-body">
+		  <div class="float-right text-right">
+			  <div class="percent">100%</div>
+		  </div>
+    <h5 class="card-title">Unit 4</h5>
+	<div class="text">時間：2018-03-01<br />
+		老師：Amy Chenh card-deck<br />
+		預習：15 分鐘row cardbox<br />
+		上課：<span class="like"><i class="fas fa-heart"></i><i class="fas fa-heart"></i><i class="fas fa-heart"></i><i class="fas fa-heart"></i><i class="fas fa-heart"></i><span>8.65 分</span></span> <br />
+		作業：A+<br />
+		測驗：90%
+	</div>
+	<div class="icon_btn mt-2">
+		<i class="material-icons" data-toggle="tooltip" data-placement="bottom" title="課程回放">play_circle_filled</i>
+		<i class="material-icons" data-toggle="tooltip" data-placement="bottom" title="學霸點評">highlight</i>
+		<i class="material-icons" data-toggle="tooltip" data-placement="bottom" title="學習活動">assignment</i>
+	</div> 
+  </div>
+  </div>
+	
+  <div class="card">
+	  <div class="card-body">
+		  <div class="float-right text-right">
+			  <div class="percent down">58%</div>
+		  </div>
+    <h5 class="card-title">Unit 5期中評測期中評測</h5>
+	<div class="text">時間：2018-03-01<br />
+		老師：Amy Chenh<br />
+		預習：15 分鐘<br />
+		上課：<span class="like"><i class="fas fa-heart"></i><i class="fas fa-heart"></i><i class="fas fa-heart"></i><span>4.65 分</span></span> <br />
+		作業：A+<br />
+		測驗：90%
+	</div>
+	<div class="icon_btn mt-2">
+		<i class="material-icons" data-toggle="tooltip" data-placement="bottom" title="課程回放">play_circle_filled</i>
+		<i class="material-icons" data-toggle="tooltip" data-placement="bottom" title="學霸點評">highlight</i>
+		<i class="material-icons" data-toggle="tooltip" data-placement="bottom" title="學習活動">assignment</i>
+	</div>
+  </div>
+  </div>
+	
+  <div class="card">
+	  <div class="card-body">
+		  <div class="float-right text-right">
+			  <div class="percent">88%</div>
+		  </div>
+    <h5 class="card-title">期中評測</h5>
+	<div class="text">時間：2018-03-01<br />
+		老師：Amy Chenh<br />
+		預習：15 分鐘<br />
+		上課：<span class="like"><i class="fas fa-heart"></i><i class="fas fa-heart"></i><i class="fas fa-heart"></i><span>4.65 分</span></span> <br />
+		作業：A+<br />
+		測驗：90%
+	</div>
+	<div class="icon_btn mt-2">
+		<i class="material-icons" data-toggle="tooltip" data-placement="bottom" title="課程回放">play_circle_filled</i>
+		<i class="material-icons" data-toggle="tooltip" data-placement="bottom" title="學霸點評">highlight</i>
+		<i class="material-icons" data-toggle="tooltip" data-placement="bottom" title="學習活動">assignment</i>
+	</div>
+  </div>
+  </div>
+	
+  <div class="card">
+	  <div class="card-body">
+		  <div class="float-right text-right">
+			  <div class="percent">100%</div>
+		  </div>
+    <h5 class="card-title">Level 6</h5>
+	<div class="text">時間：2018-03-01<br />
+		老師：Amy Chenh<br />
+		預習：15 分鐘<br />
+		上課：<span class="like"><i class="fas fa-heart"></i><i class="fas fa-heart"></i><i class="fas fa-heart"></i><span>4.65 分</span></span> <br />
+		作業：A+<br />
+		測驗：90%
+	</div>
+	<div class="icon_btn mt-2">
+		<i class="material-icons" data-toggle="tooltip" data-placement="bottom" title="課程回放">play_circle_filled</i>
+		<i class="material-icons" data-toggle="tooltip" data-placement="bottom" title="學霸點評">highlight</i>
+		<i class="material-icons" data-toggle="tooltip" data-placement="bottom" title="學習活動">assignment</i>
+	</div>
+  </div>
+  </div>
+	
+
+<!--</div>
+
+<div class="card-deck mt-md-3">-->
+
+  <div class="card">
+	  <div class="card-body">
+		  <div class="float-right text-right">
+			  <div class="percent">100%</div>
+		  </div>
+    <h5 class="card-title">Unit 4</h5>
+	<div class="text">時間：2018-03-01<br />
+		老師：Amy Chenh<br />
+		預習：15 分鐘<br />
+		上課：<span class="like"><i class="fas fa-heart"></i><i class="fas fa-heart"></i><i class="fas fa-heart"></i><span>4.65 分</span></span> <br />
+		作業：A+<br />
+		測驗：90%
+	</div>
+	<div class="icon_btn mt-2">
+		<i class="material-icons" data-toggle="tooltip" data-placement="bottom" title="課程回放">play_circle_filled</i>
+		<i class="material-icons" data-toggle="tooltip" data-placement="bottom" title="學霸點評">highlight</i>
+		<i class="material-icons" data-toggle="tooltip" data-placement="bottom" title="學習活動">assignment</i>
+	</div>
+	  
+  </div>
+  </div>
+	
+  <div class="card">
+	  <div class="card-body">
+		  <div class="float-right text-right">
+			  <div class="percent down">58%</div>
+		  </div>
+    <h5 class="card-title">Unit 5</h5>
+	<div class="text">時間：2018-03-01<br />
+		老師：Amy Chenh<br />
+		預習：15 分鐘<br />
+		上課：<span class="like"><i class="fas fa-heart"></i><i class="fas fa-heart"></i><i class="fas fa-heart"></i><span>4.65 分</span></span> <br />
+		作業：A+<br />
+		測驗：90%
+	</div>
+	<div class="icon_btn mt-2">
+		<i class="material-icons" data-toggle="tooltip" data-placement="bottom" title="課程回放">play_circle_filled</i>
+		<i class="material-icons" data-toggle="tooltip" data-placement="bottom" title="學霸點評">highlight</i>
+		<i class="material-icons" data-toggle="tooltip" data-placement="bottom" title="學習活動">assignment</i>
+	</div>
+  </div>
+  </div>
+	
+  <div class="card">
+	  <div class="card-body">
+		  <div class="float-right text-right">
+			  <div class="percent">88%</div>
+		  </div>
+    <h5 class="card-title">期中評測期中評測期中評測期中評測期中評測</h5>
+	<div class="text">時間：2018-03-01<br />
+		老師：Amy Chenh<br />
+		預習：15 分鐘<br />
+		上課：<span class="like"><i class="fas fa-heart"></i><i class="fas fa-heart"></i><i class="fas fa-heart"></i><i class="fas fa-heart"></i><i class="fas fa-heart"></i><span>4.65 分</span></span> <br />
+		作業：A+<br />
+		測驗：90%
+	</div>
+	<div class="icon_btn mt-2">
+		<i class="material-icons" data-toggle="tooltip" data-placement="bottom" title="課程回放">play_circle_filled</i>
+		<i class="material-icons" data-toggle="tooltip" data-placement="bottom" title="學霸點評">highlight</i>
+		<i class="material-icons" data-toggle="tooltip" data-placement="bottom" title="學習活動">assignment</i>
+	</div>
+  </div>
+  </div>
+	
+  <!--<div class="card">
+	  <div class="card-body">
+		  <div class="float-right text-right">
+			  <div class="percent">100%</div>
+		  </div>
+    <h5 class="card-title">Level 6</h5>
+	<div class="text">時間：2018-03-01<br />
+		老師：Amy Chenh<br />
+		預習：15 分鐘<br />
+		上課：<span class="like"><i class="fas fa-heart"></i><i class="fas fa-heart"></i><i class="fas fa-heart"></i><span>4.65 分</span></span> <br />
+		作業：A+<br />
+		測驗：90%
+	</div>
+	<div class="icon_btn mt-2">
+		<i class="material-icons" data-toggle="tooltip" data-placement="bottom" title="課程回放">play_circle_filled</i>
+		<i class="material-icons" data-toggle="tooltip" data-placement="bottom" title="學霸點評">highlight</i>
+		<i class="material-icons" data-toggle="tooltip" data-placement="bottom" title="學習活動">assignment</i>
+	</div>
+  </div>
+  </div>-->
+	
+
+</div>
+		
+		
+		
+		
+
+
+
+
+		
+
+    </div>
+    <div class="carousel-item">
+      <div>四月 內容放這裡</div>
+    </div>
+    <div class="carousel-item">
+      <div>五月 內容放這裡</div>
+    </div>
+  </div>
+</div>
+
+
+</div>
+<div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+<div class="row px-3 pb-4">
+<div class="col col-md-12 col-lg-8 pl-md-3 mt-lg-0">
+<div class="row align-items-start board">
+<div class="col board_body border-right">
+	<h5 class="board_text">項目課<br /><span class="bigger">25/50</span> 小時</h5>
+	<button type="button" class="btn btn-primary btn_rounded btn_small">加購</button>
+</div>
+<div class="col board_body">
+	<h5 class="board_text">專家課<br /><span class="bigger">25/50</span> 小時</h5>
+	<button type="button" class="btn btn-primary btn_rounded btn_small">加購</button>
+</div>
+</div>	
+</div>		
+</div>	
+	  
+<div id="carouselExampleIndicators2" class="carousel slide" data-ride="carousel" data-interval="false" >
+	<ol class="carousel-indicators">
+		<li data-target="#carouselExampleIndicators2" data-slide-to="0" class="active">三月</li>
+		<li data-target="#carouselExampleIndicators2" data-slide-to="1">四月</li>
+		<li data-target="#carouselExampleIndicators2" data-slide-to="2">五月</li>
+	</ol>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+		
+<div class="row cardbox">
+
+  <div class="card">
+	  <div class="card-body">
+		  <div class="float-right text-right">
+			  <div class="percent">100%</div>
+		  </div>
+	<div class="badge badge-info">項目課</div>
+    <h5 class="card-title mt-2">Unit 4</h5>
+	<div class="text">時間：2018-03-01<br />
+		老師：Amy Chenh<br />
+		預習：15 分鐘<br />
+		上課：<span class="like"><i class="fas fa-heart"></i><i class="fas fa-heart"></i><i class="fas fa-heart"></i><span>4.65 分</span></span> <br />
+		作業：A+<br />
+		測驗：90%
+	</div>
+	<div class="icon_btn mt-2">
+		<i class="material-icons" data-toggle="tooltip" data-placement="bottom" title="課程回放">play_circle_filled</i>
+		<i class="material-icons" data-toggle="tooltip" data-placement="bottom" title="學霸點評">highlight</i>
+		<i class="material-icons" data-toggle="tooltip" data-placement="bottom" title="學習活動">assignment</i>
+	</div>
+  </div>
+  </div>
+	
+  <div class="card">
+	  <div class="card-body">
+		  <div class="float-right text-right">
+			  <div class="percent down">58%</div>
+		  </div>
+    <div class="badge badge-info">專家課</div>
+    <h5 class="card-title mt-2">Unit 5</h5>
+	<div class="text">時間：2018-03-01<br />
+		老師：Amy Chenh<br />
+		預習：15 分鐘<br />
+		上課：<span class="like"><i class="fas fa-heart"></i><i class="fas fa-heart"></i><i class="fas fa-heart"></i><span>4.65 分</span></span> <br />
+		作業：A+<br />
+		測驗：90%
+	</div>
+	<div class="icon_btn mt-2">
+		<i class="material-icons" data-toggle="tooltip" data-placement="bottom" title="課程回放">play_circle_filled</i>
+		<i class="material-icons" data-toggle="tooltip" data-placement="bottom" title="學霸點評">highlight</i>
+		<i class="material-icons" data-toggle="tooltip" data-placement="bottom" title="學習活動">assignment</i>
+	</div>
+  </div>
+  </div>
+	
+  <div class="card">
+	  <div class="card-body">
+		  <div class="float-right text-right">
+			  <div class="percent">88%</div>
+		  </div>
+    <div class="badge badge-info">項目課</div>
+    <h5 class="card-title mt-2">期中評測</h5>
+	<div class="text">時間：2018-03-01<br />
+		老師：Amy Chenh<br />
+		預習：15 分鐘<br />
+		上課：<span class="like"><i class="fas fa-heart"></i><i class="fas fa-heart"></i><i class="fas fa-heart"></i><span>4.65 分</span></span> <br />
+		作業：A+<br />
+		測驗：90%
+	</div>
+	<div class="icon_btn mt-2">
+		<i class="material-icons" data-toggle="tooltip" data-placement="bottom" title="課程回放">play_circle_filled</i>
+		<i class="material-icons" data-toggle="tooltip" data-placement="bottom" title="學霸點評">highlight</i>
+		<i class="material-icons" data-toggle="tooltip" data-placement="bottom" title="學習活動">assignment</i>
+	</div>
+  </div>
+  </div>
+	
+  <div class="card">
+	  <div class="card-body">
+		  <div class="float-right text-right">
+			  <div class="percent">100%</div>
+		  </div>
+    <div class="badge badge-info">專家課</div>
+    <h5 class="card-title mt-2">Level 6</h5>
+	<div class="text">時間：2018-03-01<br />
+		老師：Amy Chenh<br />
+		預習：15 分鐘<br />
+		上課：<span class="like"><i class="fas fa-heart"></i><i class="fas fa-heart"></i><i class="fas fa-heart"></i><span>4.65 分</span></span> <br />
+		作業：A+<br />
+		測驗：90%
+	</div>
+	<div class="icon_btn mt-2">
+		<i class="material-icons" data-toggle="tooltip" data-placement="bottom" title="課程回放">play_circle_filled</i>
+		<i class="material-icons" data-toggle="tooltip" data-placement="bottom" title="學霸點評">highlight</i>
+		<i class="material-icons" data-toggle="tooltip" data-placement="bottom" title="學習活動">assignment</i>
+	</div>
+  </div>
+  </div>
+  
+  <div class="card">
+	  <div class="card-body">
+		  <div class="float-right text-right">
+			  <div class="percent">100%</div>
+		  </div>
+    <div class="badge badge-info">專家課</div>
+    <h5 class="card-title mt-2">Level 77</h5>
+	<div class="text">時間：2018-03-01<br />
+		老師：Amy Chenh<br />
+		預習：15 分鐘<br />
+		上課：<span class="like"><i class="fas fa-heart"></i><i class="fas fa-heart"></i><i class="fas fa-heart"></i><span>4.65 分</span></span> <br />
+		作業：A+<br />
+		測驗：90%
+	</div>
+	<div class="icon_btn mt-2">
+		<i class="material-icons" data-toggle="tooltip" data-placement="bottom" title="課程回放">play_circle_filled</i>
+		<i class="material-icons" data-toggle="tooltip" data-placement="bottom" title="學霸點評">highlight</i>
+		<i class="material-icons" data-toggle="tooltip" data-placement="bottom" title="學習活動">assignment</i>
+	</div>
+  </div>
+  </div>
+	
+
+</div>
+		
+
+		
+
+    </div>
+    <div class="carousel-item">
+      <div class="row cardbox">四月 內容放這裡</div>
+    </div>
+    <div class="carousel-item">
+      <div class="row cardbox">五月 內容放這裡</div>
+    </div>
+  </div>
+</div>	  
+  
+</div>
+
+	
+<div class="tab-pane fade" id="cancelclass" role="tabpanel" aria-labelledby="profile-tab">
+<div class="col col-md-12 col-lg-4 pl-md-3 mt-lg-0">
+<div class="row align-items-start board">
+<div class="col cancel_body">
+	<h5 class="cancel_text">學生臨時請假扣課：<span class="red">5</span> 堂<br />
+	學生未出席扣課：<span class="red">1</span> 堂<br />
+	總計扣課數：<span class="red">6</span> 堂</h5>
+</div>
+</div>	
+</div>		
+<div class="cancel_table">
+<form class="float-lg-right mb-lg-3" >
+    <div class="form-group">
+	<!--<label class="custom-control-label control-label" for="lunch">約課時段</label>-->
+	<select id="year" class="selectpicker" title="年份">
+        <option>2018</option>
+        <option>2017</option>
+     </select>
+	<select id="week" class="selectpicker" title="月份">
+        <option>全部</option>
+        <option>一月</option>
+		<option>二月</option>
+		<option>三月</option>
+		<option>四月</option>
+		<option>五月</option>
+		<option>六月</option>
+	</select>
+    </div>
+  </form>	
+	
+<div class="table-responsive ">
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">日期</th> 
+      <th scope="col">時間</th>
+      <th scope="col">類型</th>
+      <th scope="col">名稱</th>
+	  <th scope="col">進度</th>
+      <th scope="col">學霸</th>
+      <th scope="col">取消事由</th>
+      <th scope="col">扣課</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">2018-04-30</th>
+      <td>10:00</td>
+	  <td>主修課</td>
+      <td>Level 2</td>
+      <td>Unit 5</td>
+	  <td>Amy Chen</td>
+      <td>學生-請假</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th scope="row">2018-04-30</th>
+      <td>14:00</td>
+	  <td>主修課</td>
+      <td>Level 3</td>
+      <td>Unit 4</td>
+	  <td>Amy Chen</td>
+      <td>學生-臨時請假</td>
+      <td>-1</td>
+    </tr>
+    <tr>
+      <th scope="row">2018-04-27</th>
+      <td>16:00</td>
+	  <td>主修課</td>
+      <td>Level 2</td>
+      <td>Unit 3</td>
+	  <td>Amy Chen</td>
+      <td>學生-未出席</td>
+      <td>-1</td>
+    </tr>
+	<tr>
+      <th scope="row">2018-04-27</th>
+      <td>17:00</td>
+	  <td>主修課</td>
+      <td>Level 2</td>
+      <td>Unit 3</td>
+	  <td>Amy Chen</td>
+      <td>學霸-未出席</td>
+      <td>0</td>
+    </tr>
+	<tr>
+      <th scope="row">2018-04-27</th>
+      <td>18:00</td>
+	  <td>主修課</td>
+      <td>Level 2</td>
+      <td>Unit 3</td>
+	  <td>Amy Chen</td>
+      <td>學霸-臨時請假</td>
+      <td>0</td>
+    </tr>
+	<tr>
+      <th scope="row">2018-04-27</th>
+      <td>20:00</td>
+	  <td>輔修課</td>
+      <td>繪本導讀</td>
+      <td>小王子</td>
+	  <td>Amy Chen</td>
+      <td>學生-臨時請假</td>
+      <td>0</td>
+    </tr>
+  </tbody>
+</table>
+</div>	
+	
+</div>
+	
+<div class="info">
+<i class="fas fa-info-circle red"></i>
+臨時請假：學生在課程開始前 <span>24</span> 小時內取消課程者，扣課程權限 <span>1</span> 堂<br />
+未出席：學生未取消課程且未出席上課者，扣課程權限 <span>1</span> 堂
+</div>
+	
+</div>
+
+</div>
+	
+</div> 	<!-- main 結束 -->
+
+</div>
+</div>	
+	
+</div>	
+
+</div>
+	
+
+	
+<footer class="container cpyright">
+<div class="row">	
+<div class="col px-3 px-sm-0">
+	<h5 class="d-none d-sm-block">Copyright &#169; 2018 by <a href="http://www.language-center.com.tw/" target="_blank">ELITE</a> International Education Services. All rights reserved.</h5>
+	<h5 class="d-block d-sm-none text-center">&#169; 2018 <a href="http://www.language-center.com.tw/" target="_blank">ELITE</a></h5>
+</div></div>	
+</footer>
+
+
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+	
+
+	
+<!--  parallax BG -->
+<!--<script src="https://code.jquery.com/jquery-1.11.3.min.js" type="text/javascript" charset="utf-8"></script>-->
+<script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.17.0/TweenMax.min.js"></script>
+<script src="assets/js/jquery-parallax.js"></script>
+<script>
+	$( document ).mousemove( function( e ) {
+		$( '.background' ).parallax( -50, e );
+		$( '.cloud0' )	  .parallax( -50, e );
+		$( '.cloud1' )	  .parallax( 20	, e );
+		$( '.cloud2' )	  .parallax( 120, e );
+		$( '.cloud3' )	  .parallax( 160, e );
+		$( '.cloud4' )	  .parallax( 350, e );
+
+	});
+</script>
+
+<!-- hamburger btn -->
+<!--<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>-->
+<script src="assets/js/index_ham.js"></script>	
+	
+<!-- sidebar -->	
+<script type="text/javascript">
+	$(document).ready(function () {
+
+
+		$('#sidebarCollapse').on('click', function () {
+			$('#sidebar, #content').toggleClass('active');
+			$('.collapse.in').toggleClass('in');
+			$('a[aria-expanded=true]').attr('aria-expanded', 'false');
+		});
+	});
+</script>
+
+<!-- select --> 
+<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>-->
+<script src="assets/js/bootstrap-select.js"></script>	
+	
+<script>
+$(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+})
+</script>
+	
+</body>
+</html>

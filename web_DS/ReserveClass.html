@@ -1,0 +1,1283 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	  
+<link rel="shortcut icon" href="assets/img/favicon.ico">
+<link rel="bookmark" href="assets/img/favicon.ico"/>
+<link rel="apple-touch-icon" href="assets/img/icon_DS.png">
+
+<meta property="og:title" content="DanSummit" />
+<meta property="og:description" content="DanSummit" />
+<meta property="og:image" content="assets/img/share_img_DS.jpg">
+<meta name="keywords" content="DanSummit, Education, 菁英" />
+
+    <title>DanSummit - 我的課程</title>
+	  
+
+	<!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	
+	<!-- iconfont -->
+	<link href="assets/css/fontawesome-all.css" rel="stylesheet">
+	<link href="assets/css/style_icomoon.css" rel="stylesheet">
+	<link href="assets/css/material-icons.css" rel="stylesheet">
+	  
+	<!-- timeline -->
+	<link rel="stylesheet" href="assets/css/style_timeline.css">
+	<!-- sidebar -->	
+	<link rel="stylesheet" href="assets/css/style_sidebar.css">
+	<!-- hamburger btn -->
+	<link rel="stylesheet" href="assets/css/style_ham.css">
+	
+	<!-- select --> 
+	<!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">-->
+  	<link rel="stylesheet" href="assets/css/bootstrap-select.css">
+	<!-- vertical tab menu -->
+	<link rel="stylesheet" href="assets/css/v_tab_menu.css">
+	<!-- popModal -->  
+	<link type="text/css" rel="stylesheet" href="assets/css/popModal.css">
+	<!-- search -->  
+	<link type="text/css" rel="stylesheet" href="assets/css/search.css">
+	  
+	<link rel="stylesheet" href="assets/css/ds_1.css" />
+	<link rel="stylesheet" href="assets/css/ds_2.css" />
+
+<style>
+.background {
+	position: absolute; 
+	top: -3%; 
+	left: -3%; 
+	width: 106%; 
+	height: 106%;
+	z-index: -1;
+}
+.bg_po {
+	background-color: #dacdf3;
+	/*background: url(assets/images/background.jpg) no-repeat center center;
+	background-size: cover, cover;*/
+}
+.cloud {
+	position: absolute; 
+	top: 0; 
+	left: 0; 
+	width: 100%; 
+	height: 100%;
+	z-index: 2;
+	opacity: 1;
+}
+.cloud0{
+	background: url(assets/img/2-0.svg) no-repeat center center;
+	background-size: cover, cover;
+	top: 1%; 
+	left: -1%;
+}
+.cloud1{
+	background: url(assets/img/2-1.svg) no-repeat center center;
+	background-size: cover, cover;
+}
+.cloud2{
+	background: url(assets/img/2-2.svg) no-repeat center center;
+	background-size: cover, cover;
+}
+.cloud3{
+	background: url(assets/img/2-3.svg) no-repeat center center;
+	background-size: cover, cover;
+}
+.cloud4{
+	background: url(assets/img/2-4.svg) no-repeat center center;
+	background-size: cover, cover;
+	-webkit-filter: drop-shadow(0px 10px 5px rgba(0,0,0,0.3));      
+    filter: drop-shadow(0px 10px 5px rgba(0,0,0,0.3)); 
+}
+.cl_smoo_1 {
+	opacity: .4;
+	/*-webkit-filter: saturate(8); 
+    filter: saturate(8);*/
+}
+.cl_smoo_2 {
+	opacity: .5;
+}
+.cl_smoo_3 {
+	opacity: .8;
+}
+
+</style>  
+	  
+	  
+  </head>
+
+<body class="">
+<div class="bgtoeic">
+<div class="bg_blue background">
+	<div class=" cloud cl_smoo_1 cloud0"></div>
+	<div class=" cloud cloud1"></div>
+	<div class=" cloud cloud2"></div>
+	<div class=" cloud cloud3"></div>
+	<div class=" cloud cloud4"></div>
+</div>
+</div>
+	
+<div class="container">
+	<div class="row header px-3 px-sm-0">
+	<div class="col col-12 col-md-12 px-0 school">
+    	<img src="assets/img/logo_DS.svg" alt=""/>
+		<button type="button" class="btn btn_logout float-right">退 出</button>
+	</div>
+	</div>	
+
+<nav class="row navbar navbar-expand-lg">
+<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+<span class="navbar-toggler-icon"><i class="material-icons">menu</i></span>
+</button>
+
+<div class="collapse navbar-collapse" id="navbarSupportedContent">
+<ul class="navbar-nav mr-auto">
+  <li class="nav-item active">
+	<a class="nav-link" href="#">丹山e学霸</a>
+  </li>
+  <li class="nav-item">
+	<a class="nav-link" href="#">丹山嘉文</a>
+  </li>
+  <li class="nav-item dropdown">
+	<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+	  学习中心
+	</a>
+	<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+		<a class="dropdown-item" href="#">我的课程</a>
+		<a class="dropdown-item" href="#">我的收藏</a>
+		<a class="dropdown-item" href="#">信息管理</a>
+		<a class="dropdown-item" href="#">摸底测验</a>
+		<a class="dropdown-item" href="#">申请试课</a>
+		<a class="dropdown-item" href="#">购买丹山e学霸</a>
+		<a class="dropdown-item" href="#">课堂软件</a>
+	</div>
+  </li>
+  <li class="nav-item">
+	<a class="nav-link" href="#">关于丹山嘉讯</a>
+  </li>
+	<li class="nav-item">
+	<a class="nav-link" href="#">联络我们</a>
+	</li>
+	<li class="nav-item">
+	<a class="nav-link" href="#">修改密码</a>
+	</li>
+</ul>
+</div>
+</nav>
+
+</div>	
+
+	
+
+<!-- sidebar 開始 -->
+<div class="container ">
+<div class="row ">
+	
+<div class="wrapper">
+<!-- Sidebar Holder -->
+<nav id="sidebar">
+
+<div class="sidenav p-0 pb-3">
+<div class="userid">
+<div class="photo float-left"><i class="material-icons">perm_identity</i></div>
+<div class="username float-left">Mike Chen<br /><span class="">Student</span></div>
+</div>
+<button type="button" class="btn btn_rounded mx-3 mt-2 mb-3 ">進入教室 <i class="material-icons">arrow_forward</i></button>
+<a href="#" onclick="window.location.href='MyCourse.html'"><i class="material-icons">book</i> 我的課表</a>
+<a href="#" class="active" onclick="window.location.href='ReserveClass.html'"><i class="material-icons">date_range</i> 預約課程</a>
+<a href="#" onclick="window.location.href='Occupied.html'"><i class="material-icons">history</i> 已上課程</a>
+<a href="#" onclick="window.location.href='#'"><i class="material-icons">trending_up</i> 能力分析</a>
+</div>
+</nav>
+
+
+			
+
+
+	
+<!-- Page Content Holder -->
+<div id="content">
+	
+<div class="hamburger navbar-toggle hamburger-11" id="sidebarCollapse" data-toggle="collapse" data-target="#myNavbar">
+  <span class="menuline"></span>
+  <span class="menuline"></span>
+  <span class="menuline"></span>
+</div>
+
+<div class="main p-3">
+	
+<div class="row p-3">
+	
+<div class="col-12 col-md-12 col-lg-8">
+<h5 class="row">學習進度</h5>
+<div class="row align-items-start board">
+<div class="col board_body border-right">
+	<h5 class="board_text">主課程<br /><span class="bigger">25/50</span> 小時</h5>
+	<button type="button" class="btn btn-primary btn_rounded btn_small">加購</button>
+</div>
+<div class="col board_body border-right">
+	<h5 class="board_text">項目課<br /><span class="bigger">25/50</span> 小時</h5>
+	<button type="button" class="btn btn-primary btn_rounded btn_small">加購</button>
+</div>
+<div class="col board_body">
+	<h5 class="board_text">專家課<br /><span class="bigger">25/50</span> 小時</h5>
+	<button type="button" class="btn btn-primary btn_rounded btn_small">加購</button>
+</div>
+</div>	
+</div>
+	
+	
+<div class="col col-md-4 col-lg-3 mt-3 pl-md-3 mt-md-3 mt-lg-0 ml-lg-3">	
+<h5 class="row">剩餘課時</h5>
+<div class="row board">
+<div class="col board_body">
+	<h5 class="board_text"><span class="bigger">25</span> 小時</h5>
+	<button type="button" class="btn btn-primary btn_rounded btn_small">加購</button>
+</div>
+</div>
+</div>	
+</div>	
+	
+<div class="mt-3 mt-sm-2">
+<ul class="nav nav-tabs" id="myTab" role="tablist">
+  <li class="nav-item">
+    <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">主課程</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">輔修課程</a>
+  </li>	
+</ul>
+	
+<div class="tab-content p-3" id="myTabContent">
+<!-- tab-content-1 開始 -->
+<div class="tab-pane fade show active " id="home" role="tabpanel" aria-labelledby="home-tab">
+<form class="form-inline pt-1">
+    <div class="form-group">
+	<label class="custom-control-label control-label" for="lunch">約課時段</label>
+	<select id="week" class="selectpicker" title="週次">
+        <option>本週</option>
+        <option>下週</option>
+     </select>
+	<select id="first-disabled1" class="selectpicker" multiple data-hide-disabled="true" data-size="5" title="顯示日期">
+    <option>週五</option>
+    <option>週六</option>
+	<option>週日</option>
+	<option>週一 - 週四</option>
+  </select>
+	<select id="first-disabled2" class="selectpicker" multiple data-hide-disabled="true" data-size="5" title="約課時間">
+    <option>18:00 - 22:00</option>
+    <option>19:00 - 22:00</option>
+    <option>20:00 - 22:00</option>
+    <option>21:00 - 22:00</option>
+	<option>18:00 - 22:00</option>
+    <option>19:00 - 22:00</option>
+    <option>20:00 - 22:00</option>
+    <option>21:00 - 22:00</option>
+  </select>
+    </div>
+  </form>	
+	
+<form class="form-inline pt-2">
+    <div class="form-group">
+	<label class="custom-control-label control-label" for="lunch">學霸條件</label>
+	<select id="first-disabled3" class="selectpicker" multiple data-hide-disabled="true" data-size="5" title="過濾學霸">
+    <option>上過課的</option>
+    <option>我關注的</option>
+  </select>
+	<select id="class" class="selectpicker" title="約課狀態">
+        <option>只看可預約的</option>
+        <option>全部</option>
+     </select>
+	<select id="first-disabled4" class="selectpicker" multiple data-hide-disabled="true" data-size="5" title="教學特色">
+    <option>糾正發音</option>
+    <option>生動活潑</option>
+    <option>適合幼齡</option>
+    <option>喜歡分享校園生活</option>
+	<option>糾正發音</option>
+    <option>生動活潑</option>
+    <option>適合幼齡</option>
+    <option>喜歡分享校園生活</option>
+  </select>
+    </div>
+  </form>	
+	
+<div class="searchbar_a ">
+<form onsubmit="submitFn(this, event);">
+	<div class="search-wrapper">
+		<div class="input-holder">
+			<input type="text" class="search-input" placeholder="Type to search" />
+			<button class="search-icon" onclick="searchToggle(this, event);"><span></span></button>
+		</div>
+		<span class="close" onclick="searchToggle(this, event);"></span>
+		<div class="result-container">
+
+		</div>
+	</div>
+</form>	
+</div>
+<div class="clearfix"></div>	  
+<hr>	
+<div class="col bhoechie-tab-container mt-3">
+	<div class="row">
+            <div class="col-3 bhoechie-tab-menu">
+              <div class="list-group">
+                <a href="#" class="list-group-item active">
+					<img class="card-img-top photo " src=".." alt="" id="popModal_ex100" >
+					<!--<div class="hintModal ">
+					
+					<div class="hintModal_container ">
+						<h6>美国华裔 / 加利福尼亚州 / 高中三年級</h6>
+						<div class="text">
+						<div class="like"><i class="fas fa-heart"></i><i class="fas fa-heart"></i><i class="fas fa-heart"></i><i class="fas fa-heart"></i><i class="fas fa-heart"></i><i class="fas fa-heart"></i><span>4.65 分</span></div>
+							<div>興趣：Music、Literature<br />
+							專長：Math<br />
+							得獎：Champion of ...
+							</div>
+						</div>
+						<div class="badgebox_absolute">
+						<div class="badge badge-secondary">已關注 <i class="fas fa-star"></i></div>
+						<div class="badge badge-secondary">上過課 <i class="fas fa-check"></i></div>
+						<div class="badge badge-secondary">優先選 <i class="fas fa-paperclip"></i></div>
+						</div>
+						<hr>
+						<div class="badgebox">
+						<div class="badge badge-primary">糾正發音</div>
+						<div class="badge badge-primary">生動活潑</div>
+						<div class="badge badge-primary">適合幼齡</div>
+						<div class="badge badge-primary">糾正發音</div>
+						<div class="badge badge-primary">喜歡分享校園生活</div>
+						</div>
+					</div>
+					</div>-->
+					  <div class="name">Wilson Chen<br /><span><i class="fas fa-star"></i> 已關注</span></div>	
+                </a>
+				<a href="#" class="list-group-item">
+					<img class="card-img-top photo " src=".." alt="" id="popModal_ex101" >
+					<!--<div class="hintModal ">
+						
+						<div class="hintModal_container ">
+						<h6>美国华裔 / 加利福尼亚州 / 高中三年級</h6>
+						<div class="text">
+						<div class="like"><i class="fas fa-heart"></i><i class="fas fa-heart"></i><i class="fas fa-heart"></i><i class="fas fa-heart"></i><i class="fas fa-heart"></i><i class="fas fa-heart"></i><span>4.65 分</span></div>
+							<div>興趣：Music、Literature<br />
+							專長：Math<br />
+							得獎：Champion of ...
+							</div>
+						</div>
+						<div class="badgebox_absolute">
+						<div class="badge badge-secondary">已關注 <i class="fas fa-star"></i></div>
+						<div class="badge badge-secondary">上過課 <i class="fas fa-check"></i></div>
+						<div class="badge badge-secondary">優先選 <i class="fas fa-paperclip"></i></div>
+						</div>
+						<hr>
+						<div class="badgebox">
+						<div class="badge badge-primary">糾正發音</div>
+						<div class="badge badge-primary">生動活潑</div>
+						<div class="badge badge-primary">適合幼齡</div>
+						<div class="badge badge-primary">糾正發音</div>
+						<div class="badge badge-primary">喜歡分享校園生活</div>
+						</div>
+					</div>
+					  </div>-->
+					  <div class="name">Amy Chen<br /><span><i class="far fa-star"></i> 未關注</span></div>	
+                </a>
+				<a href="#" class="list-group-item">
+					<img class="card-img-top photo " src=".." alt="" id="popModal_ex102" >
+					<!--<div class="hintModal hintModal_abso">
+						  <div class="hintModal_container ">
+						<h6>美国华裔 / 加利福尼亚州 / 高中三年級</h6>
+						<div class="text">
+						<div class="like"><i class="fas fa-heart"></i><i class="fas fa-heart"></i><i class="fas fa-heart"></i><i class="fas fa-heart"></i><i class="fas fa-heart"></i><i class="fas fa-heart"></i><span>4.65 分</span></div>
+							<div>興趣：Music、Literature<br />
+							專長：Math<br />
+							得獎：Champion of ...
+							</div>
+						</div>
+						<div class="badgebox_absolute">
+						<div class="badge badge-secondary">已關注 <i class="fas fa-star"></i></div>
+						<div class="badge badge-secondary">上過課 <i class="fas fa-check"></i></div>
+						<div class="badge badge-secondary">優先選 <i class="fas fa-paperclip"></i></div>
+						</div>
+						<hr>
+						<div class="badgebox">
+						<div class="badge badge-primary">糾正發音</div>
+						<div class="badge badge-primary">生動活潑</div>
+						<div class="badge badge-primary">適合幼齡</div>
+						<div class="badge badge-primary">糾正發音</div>
+						<div class="badge badge-primary">喜歡分享校園生活</div>
+						</div>
+					</div>
+					  </div>-->
+					  <div class="name">Angie Chen<br /><span><i class="far fa-star"></i> 未關注</span></div>	
+                </a>
+				<a href="#" class="list-group-item">
+					<img class="card-img-top photo " src=".." alt="" id="popModal_ex103" >
+                    <!--<div class="hintModal hintModal_abso">
+					  	
+					<div class="hintModal_container ">
+						<h6>美国华裔 / 加利福尼亚州 / 高中三年級</h6>
+						<div class="text">
+						<div class="like"><i class="fas fa-heart"></i><i class="fas fa-heart"></i><i class="fas fa-heart"></i><i class="fas fa-heart"></i><i class="fas fa-heart"></i><i class="fas fa-heart"></i><span>4.65 分</span></div>
+							<div>興趣：Music、Literature<br />
+							專長：Math<br />
+							得獎：Champion of ...
+							</div>
+						</div>
+						<div class="badgebox_absolute">
+						<div class="badge badge-secondary">已關注 <i class="fas fa-star"></i></div>
+						<div class="badge badge-secondary">上過課 <i class="fas fa-check"></i></div>
+						<div class="badge badge-secondary">優先選 <i class="fas fa-paperclip"></i></div>
+						</div>
+						<hr>
+						<div class="badgebox">
+						<div class="badge badge-primary">糾正發音</div>
+						<div class="badge badge-primary">生動活潑</div>
+						<div class="badge badge-primary">適合幼齡</div>
+						<div class="badge badge-primary">糾正發音</div>
+						<div class="badge badge-primary">喜歡分享校園生活</div>
+						</div>
+					</div>
+					</div>-->
+					<div class="name">Wilson Chen<br /><span><i class="far fa-star"></i> 未關注</span></div>
+                </a>
+				  
+				<a href="#" class="list-group-item">
+					<img class="card-img-top photo " src=".." alt="" id="popModal_ex104" >
+                    <!--<div class="hintModal hintModal_abso">
+					  	
+					<div class="hintModal_container ">
+						<h6>美国华裔 / 加利福尼亚州 / 高中三年級</h6>
+						<div class="text">
+						<div class="like"><i class="fas fa-heart"></i><i class="fas fa-heart"></i><i class="fas fa-heart"></i><i class="fas fa-heart"></i><i class="fas fa-heart"></i><i class="fas fa-heart"></i><span>4.65 分</span></div>
+							<div>興趣：Music、Literature<br />
+							專長：Math<br />
+							得獎：Champion of ...
+							</div>
+						</div>
+						<div class="badgebox_absolute">
+						<div class="badge badge-secondary">已關注 <i class="fas fa-star"></i></div>
+						<div class="badge badge-secondary">上過課 <i class="fas fa-check"></i></div>
+						<div class="badge badge-secondary">優先選 <i class="fas fa-paperclip"></i></div>
+						</div>
+						<hr>
+						<div class="badgebox">
+						<div class="badge badge-primary">糾正發音</div>
+						<div class="badge badge-primary">生動活潑</div>
+						<div class="badge badge-primary">適合幼齡</div>
+						<div class="badge badge-primary">糾正發音</div>
+						<div class="badge badge-primary">喜歡分享校園生活</div>
+						</div>
+					</div>
+					</div>-->
+					<div class="name">Amy Chen<br /><span><i class="far fa-star"></i> 未關注</span></div>
+                </a>
+
+
+              </div>
+            </div>
+		
+            <div class="col-9 px-0 bhoechie-tab">
+				<div class="bhoechie-tab-content active">
+					<div class="table-responsive">
+						<table class="table text-center">
+						  <thead>
+							<tr>
+							  <th scope="col">周一<br />03-05</th>
+							  <th scope="col">周二<br />03-06</th>
+							  <th scope="col">周三<br />03-07</th>
+							  <th scope="col">周四<br />03-08</th>
+								<th scope="col">周五<br />03-09</th>
+								<th scope="col">周六<br />03-10</th>
+								<th scope="col">周日<br />03-11</th>
+							</tr>
+						  </thead>
+						  <tbody>
+							<tr>
+							  <th scope="row"><button type="button" class="btn btn-default ">10:00-11:00<br /><span class=""><span></span></span></button></th>
+							  <td><button type="button" class="btn btn-default ">10:00-11:00<br /><span class="">可預約</span></button></td>
+							  <td><button type="button" class="btn btn-default ">10:00-11:00<br /><span class="">可預約</span></button></td>
+							  <td><button type="button" class="btn btn-default ">10:00-11:00<br /><span class="">可預約</span></button></td>
+								<td><button type="button" class="btn btn-default ">10:00-11:00<br /><span class="">可預約</span></button></td>
+							  <td><button type="button" class="btn btn-default ">10:00-11:00<br /><span class="">可預約</span></button></td>
+							  <td><button type="button" class="btn btn-default ">10:00-11:00<br /><span class="">可預約</span></button></td>
+							</tr>
+							<tr>
+							  <th scope="row"><button type="button" class="btn btn-default ">10:00-11:00<br /><span class=""><span></span></span></button></th>
+							  <td></td>
+							  <td><button type="button" class="btn btn-default ">10:00-11:00<br /><span class="">可預約</span></button></td>
+							  <td><button type="button" class="btn btn-default ">10:00-11:00<br /><span class="">可預約</span></button></td>
+								<td><button type="button" class="btn btn-default ">10:00-11:00<br /><span class=""><span></span></span></button></td>
+							  <td><button type="button" class="btn btn-default ">10:00-11:00<br /><span class="">可預約</span></button></td>
+							  <td><button type="button" class="btn btn-default ">10:00-11:00<br /><span class="">確定約課</span></button></td>
+							</tr>
+							<tr>
+							  <th scope="row"><button type="button" class="btn btn-default ">10:00-11:00<br /><span class=""><span></span></span></button></th>
+							  <td></td>
+							  <td></td>
+							  <td><button type="button" class="btn btn-default ">10:00-11:00<br /><span class="">可預約</span></button></td>
+								<td></td>
+							  <td><button type="button" class="btn btn-default ">10:00-11:00<br /><span class="">可預約</span></button></td>
+							  <td><button type="button" class="btn btn-default ">10:00-11:00<br /><span class=""><span></span></span></button></td>
+							</tr>
+						  </tbody>
+						</table>
+					</div>	
+                </div>
+                <div class="bhoechie-tab-content">
+                      Amy Chen 學霸預約時段放這裡
+                </div>
+                <div class="bhoechie-tab-content">
+                      Angie Chen 學霸預約時段放這裡
+                </div>
+                <div class="bhoechie-tab-content">
+                      Wilson Chen 學霸預約時段放這裡
+                </div>
+                <div class="bhoechie-tab-content">
+                      Amy Chen 學霸預約時段放這裡
+                </div>
+            </div>
+        </div></div>
+</div>
+
+<!-- tab-content-2 開始 -->
+<div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab1">
+	
+<form class="form-inline pt-1">
+<div class="form-group mr-md-3">
+<label class="custom-control-label control-label" for="lunch">課程類型</label>
+<select id="first-disabled11" class="selectpicker" multiple data-hide-disabled="true" data-size="5" title="項目課">
+<option>項目課</option>
+<option>專家課</option>
+<option>公開課</option>
+</select>
+</div>
+<div class="form-group">
+<label class="custom-control-label control-label" for="lunch">適合等級</label>
+<select id="first-disabled22" class="selectpicker" multiple data-hide-disabled="true" data-size="5" title="適合等級">
+<option>Level-1</option>
+<option>Level-2</option>
+<option>Level-3</option>
+<option>Level-4</option>
+</select>
+</div>
+</form>
+<div class="clearfix"></div>	  
+<hr>
+<!--<div class="container"></div>	-->
+<div class="row cardbox mt-md-3 reservecard ">
+
+  <div class="card ">
+	  <div class="card-body ">
+		<div class="more hintModal "><i class="material-icons">more_vert</i>
+		<div class="hintModal_container ">
+		<div class="float-right text-right">
+			  <img class="card-img-top photo" src=".." alt="">
+			  <div class="teahername mt-1">Wilson Chen</div>
+		  </div>
+		<div class="text_1">	
+		<div class="badge badge-info">項目課</div>
+		<h6 class="mt-2">校園生活分享 - Unit 1</h6>
+		
+			<div>時間：2018-06-01 (五) 10:00<br />
+			適合等級：Level 2 - Level 4
+			</div></div>
+			<div class="text_2 mt-3">
+			Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</div>
+	</div> 
+	</div>    
+		    
+	<div class="badge badge-info">項目課</div>
+    <h5 class="card-title mt-2 ">校園生活分享 - Unit 1</h5>
+	<div class="text">老師：Amy Chen<br />
+		時間：2018-06-01 (五) 10:00<br />
+		適合等級：Level 2 - Level 4<br /><hr>
+		<strong>報名截止：2018-05-23<br />
+		預約人數：8 / 8 人</strong>
+	</div>
+	<div class="btnbox">
+		<button type="button" class="btn btn-primary">我要預約</button>
+	</div>
+  </div>
+	  
+	  
+  
+	
+  </div>
+	
+  <div class="card">
+	  <div class="card-body">
+		<div class="more hintModal "><i class="material-icons">more_vert</i>
+		<div class="hintModal_container ">
+		<div class="float-right text-right">
+			  <img class="card-img-top photo" src=".." alt="">
+			  <div class="teahername mt-1">Alex Chen</div>
+		  </div>
+		<div class="text_1">	
+		<div class="badge badge-info">專家課</div>
+		<h6 class="mt-2">如何提升口語技巧</h6>
+		
+			<div>時間：2018-06-01 (五) 10:00<br />
+			適合等級：Level 2 - Level 4
+			</div></div>
+			<div class="text_2 mt-3">
+			Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</div>
+	</div> 
+	</div>
+		  
+	<div class="badge badge-info">專家課</div>
+    <h5 class="card-title mt-2">如何提升口語技巧</h5>
+	<div class="text">老師：Amy Chen<br />
+		時間：2018-06-01 (五) 10:00<br />
+		適合等級：Level 2 - Level 4<br /><hr>
+		<strong>報名截止：2018-05-23<br />
+		預約人數：8 / 8 人</strong>
+	</div>
+	<div class="btnbox">
+		<button type="button" class="btn btn-default disabled">已額滿</button>
+	</div>
+  </div>
+  </div>
+	
+  <div class="card ">
+	  <div class="card-body">
+		  <div class="more hintModal "><i class="material-icons">more_vert</i>
+		<div class="hintModal_container ">
+		<div class="float-right text-right">
+			  <img class="card-img-top photo" src=".." alt="">
+			  <div class="teahername mt-1">Alice Wang</div>
+		  </div>
+		<div class="text_1">	
+		<div class="badge badge-info">專家課</div>
+		<h6 class="mt-2">校園生活分享 - Unit 2</h6>
+		
+			<div>時間：2018-06-01 (五) 10:00<br />
+			適合等級：Level 2 - Level 4
+			</div></div>
+			<div class="text_2 mt-3">
+			Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</div>
+	</div> 
+	</div>
+		  
+	<div class="badge badge-info">專家課</div>
+    <h5 class="card-title mt-2">校園生活分享 - Unit 2</h5>
+	<div class="text">老師：Amy Chen<br />
+		時間：2018-06-01 (五) 10:00<br />
+		適合等級：Level 2 - Level 4<br /><hr>
+		<strong>報名截止：2018-05-23<br />
+		預約人數：8 / 8 人</strong>
+	</div>
+	<div class="btnbox">
+		<button type="button" class="btn btn-secondary reserved"></button>
+	</div>
+  </div>
+  </div>
+	
+  <div class="card ">
+	  <div class="card-body">
+		  <div class="more hintModal "><i class="material-icons">more_vert</i>
+		<div class="hintModal_container ">
+		<div class="float-right text-right">
+			  <img class="card-img-top photo" src=".." alt="">
+			  <div class="teahername mt-1">Princess Chen</div>
+		  </div>
+		<div class="text_1">	
+		<div class="badge badge-info">公開課</div>
+		<h6 class="mt-2">繪本導讀-小王子</h6>
+		
+			<div>時間：2018-06-01 (五) 10:00<br />
+			適合等級：Level 2 - Level 4
+			</div></div>
+			<div class="text_2 mt-3">
+			Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</div>
+	</div> 
+	</div>
+		  
+	<div class="badge badge-info">公開課</div>
+    <h5 class="card-title mt-2">繪本導讀-小王子</h5>
+	<div class="text">老師：Amy Chen<br />
+		時間：2018-06-01 (五) 10:00<br />
+		適合等級：Level 2 - Level 4<br /><hr>
+		<strong>報名截止：2018-05-23<br />
+		預約人數：8 / 8 人</strong>
+	</div>
+	<div class="btnbox">
+		<button type="button" class="btn btn-primary">我要預約</button>
+	</div>
+		  
+  </div>
+  </div>
+	
+  <div class="card ">
+	  <div class="card-body">
+		  <div class="more hintModal "><i class="material-icons">more_vert</i>
+		<div class="hintModal_container ">
+		<div class="float-right text-right">
+			  <img class="card-img-top photo" src=".." alt="">
+			  <div class="teahername mt-1">Princess Chen</div>
+		  </div>
+		<div class="text_1">	
+		<div class="badge badge-info">公開課</div>
+		<h6 class="mt-2">繪本導讀-霸王子</h6>
+		
+			<div>時間：2018-06-01 (五) 10:00<br />
+			適合等級：Level 2 - Level 4
+			</div></div>
+			<div class="text_2 mt-3">
+			Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</div>
+	</div> 
+	</div>
+		  
+	<div class="badge badge-info">公開課</div>
+    <h5 class="card-title mt-2">繪本導讀-霸王子</h5>
+	<div class="text">老師：Amy Chen<br />
+		時間：2018-06-01 (五) 10:00<br />
+		適合等級：Level 2 - Level 4<br /><hr>
+		<strong>報名截止：2018-05-23<br />
+		預約人數：8 / 8 人</strong>
+	</div>
+	<div class="btnbox">
+		<button type="button" class="btn btn-primary">我要預約</button>
+	</div>
+		  
+  </div>
+  </div>
+
+</div>
+
+</div>
+
+
+</div>
+	
+</div>
+
+
+	
+
+	
+</div> <!-- main 結束 -->
+
+</div>
+</div>	
+	
+</div>	
+
+</div>	
+	
+	
+<footer class="container cpyright">
+<div class="row">	
+<div class="col px-3 px-sm-0">
+	<h5 class="d-none d-sm-block">Copyright &#169; 2018 by <a href="http://www.language-center.com.tw/" target="_blank">ELITE</a> International Education Services. All rights reserved.</h5>
+	<h5 class="d-block d-sm-none text-center">&#169; 2018 <a href="http://www.language-center.com.tw/" target="_blank">ELITE</a></h5>
+</div></div>	
+</footer>
+
+
+<div style="display:none">
+<div id="content100">
+	<h6>美国华裔 / 加利福尼亚州 / 高中三年級</h6>
+	<div class="text">
+	<div class="like"><i class="fas fa-heart"></i><i class="fas fa-heart"></i><i class="fas fa-heart"></i><i class="fas fa-heart"></i><i class="fas fa-heart"></i><i class="fas fa-heart"></i><span>4.65 分</span></div>
+		<div>興趣：Music、Literature<br />
+		專長：Math<br />
+		得獎：Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+		</div>
+	</div>
+	<div class="badgebox_absolute">
+	<div class="badge badge-secondary">已關注 <i class="fas fa-star"></i></div>
+	<div class="badge badge-secondary">上過課 <i class="fas fa-check"></i></div>
+	<div class="badge badge-secondary">優先選 <i class="fas fa-paperclip"></i></div>
+	</div>
+	<hr>
+	<div class="badgebox">
+	<div class="badge badge-primary">糾正發音</div>
+	<div class="badge badge-primary">生動活潑</div>
+	<div class="badge badge-primary">適合幼齡</div>
+	<div class="badge badge-primary">糾正發音</div>
+	<div class="badge badge-primary">喜歡分享校園生活</div>
+	</div>
+</div>
+</div>
+	
+<div style="display:none">
+<div id="content101">
+	<h6>美国华裔 / 加利福尼亚州 / 高中三年級</h6>
+	<div class="text">
+	<div class="like"><i class="fas fa-heart"></i><i class="fas fa-heart"></i><i class="fas fa-heart"></i><i class="fas fa-heart"></i><i class="fas fa-heart"></i><i class="fas fa-heart"></i><span>4.65 分</span></div>
+		<div>興趣：Music、Literature<br />
+		專長：Math<br />
+		得獎：Champion of ...
+		</div>
+	</div>
+	<div class="badgebox_absolute">
+	<div class="badge badge-secondary">已關注 <i class="fas fa-star"></i></div>
+	<div class="badge badge-secondary">上過課 <i class="fas fa-check"></i></div>
+	<div class="badge badge-secondary">優先選 <i class="fas fa-paperclip"></i></div>
+	</div>
+	<hr>
+	<div class="badgebox">
+	<div class="badge badge-primary">糾正發音</div>
+	<div class="badge badge-primary">生動活潑</div>
+	<div class="badge badge-primary">適合幼齡</div>
+	<div class="badge badge-primary">糾正發音</div>
+	<div class="badge badge-primary">喜歡分享校園生活</div>
+	</div>
+</div>
+</div>
+
+<div style="display:none">
+<div id="content102">
+	<h6>美国华裔 / 加利福尼亚州 / 高中三年級</h6>
+	<div class="text">
+	<div class="like"><i class="fas fa-heart"></i><i class="fas fa-heart"></i><i class="fas fa-heart"></i><i class="fas fa-heart"></i><i class="fas fa-heart"></i><i class="fas fa-heart"></i><span>4.65 分</span></div>
+		<div>興趣：Music、Literature<br />
+		專長：Math<br />
+		得獎：Champion of ...
+		</div>
+	</div>
+	<div class="badgebox_absolute">
+	<div class="badge badge-secondary">已關注 <i class="fas fa-star"></i></div>
+	<div class="badge badge-secondary">上過課 <i class="fas fa-check"></i></div>
+	<div class="badge badge-secondary">優先選 <i class="fas fa-paperclip"></i></div>
+	</div>
+	<hr>
+	<div class="badgebox">
+	<div class="badge badge-primary">糾正發音</div>
+	<div class="badge badge-primary">生動活潑</div>
+	<div class="badge badge-primary">適合幼齡</div>
+	<div class="badge badge-primary">糾正發音</div>
+	<div class="badge badge-primary">喜歡分享校園生活</div>
+	</div>
+</div>
+</div>	
+
+<div style="display:none">
+<div id="content103">
+	<h6>美国华裔 / 加利福尼亚州 / 高中三年級</h6>
+	<div class="text">
+	<div class="like"><i class="fas fa-heart"></i><i class="fas fa-heart"></i><i class="fas fa-heart"></i><i class="fas fa-heart"></i><i class="fas fa-heart"></i><i class="fas fa-heart"></i><span>4.65 分</span></div>
+		<div>興趣：Music、Literature<br />
+		專長：Math<br />
+		得獎：Champion of ...
+		</div>
+	</div>
+	<div class="badgebox_absolute">
+	<div class="badge badge-secondary">已關注 <i class="fas fa-star"></i></div>
+	<div class="badge badge-secondary">上過課 <i class="fas fa-check"></i></div>
+	<div class="badge badge-secondary">優先選 <i class="fas fa-paperclip"></i></div>
+	</div>
+	<hr>
+	<div class="badgebox">
+	<div class="badge badge-primary">糾正發音</div>
+	<div class="badge badge-primary">生動活潑</div>
+	<div class="badge badge-primary">適合幼齡</div>
+	<div class="badge badge-primary">糾正發音</div>
+	<div class="badge badge-primary">喜歡分享校園生活</div>
+	</div>
+</div>
+</div>
+
+<div style="display:none">
+<div id="content104">
+	<h6>美国华裔 / 加利福尼亚州 / 高中三年級</h6>
+	<div class="text">
+	<div class="like"><i class="fas fa-heart"></i><i class="fas fa-heart"></i><i class="fas fa-heart"></i><i class="fas fa-heart"></i><i class="fas fa-heart"></i><i class="fas fa-heart"></i><span>4.65 分</span></div>
+		<div>興趣：Music、Literature<br />
+		專長：Math<br />
+		得獎：Champion of ...
+		</div>
+	</div>
+	<div class="badgebox_absolute">
+	<div class="badge badge-secondary">已關注 <i class="fas fa-star"></i></div>
+	<div class="badge badge-secondary">上過課 <i class="fas fa-check"></i></div>
+	<div class="badge badge-secondary">優先選 <i class="fas fa-paperclip"></i></div>
+	</div>
+	<hr>
+	<div class="badgebox">
+	<div class="badge badge-primary">糾正發音</div>
+	<div class="badge badge-primary">生動活潑</div>
+	<div class="badge badge-primary">適合幼齡</div>
+	<div class="badge badge-primary">糾正發音</div>
+	<div class="badge badge-primary">喜歡分享校園生活</div>
+	</div>
+</div>
+</div>
+	
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+	
+
+<!-- timeline -->
+<script src="assets/js/jquery-2.1.4.js"></script>
+<script src="assets/js/jtline.js"></script>
+<script type="text/javascript">
+        $(document).ready(function () {
+            var contentText = 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.';
+
+            // dataRoot : '/'
+            var myMappedObject = [
+                  {
+                      "isSelected": "true",
+                      "taskTitle": "My First Point 1",
+                      "taskSubTitle": "January 16th, 2014",
+                      "assignDate": "16/01/2014",
+                      "taskShortDate": "L-1",
+                      "taskDetails": "hi <span style=\"color:red\">my html content</span> other text"
+                  },
+                  {
+                      "isSelected": "",
+                      "taskTitle": "My Point 2",
+                      "taskSubTitle": "February 28th, 2014",
+                      "assignDate": "28/02/2014",
+                      "taskShortDate": "L-2",
+                      "taskDetails": contentText
+                  },
+                  {
+                      "isSelected": "",
+                      "taskTitle": "My Point 3",
+                      "taskSubTitle": "March 20th, 2014",
+                      "assignDate": "20/04/2014",
+                      "taskShortDate": "Unit1",
+                      "taskDetails": contentText
+                  },
+                  {
+                      "isSelected": "",
+                      "taskTitle": "My Point 4",
+                      "taskSubTitle": "May 20th, 2014",
+                      "assignDate": "20/05/2014",
+                      "taskShortDate": "Unit2",
+                      "taskDetails": contentText
+                  },
+                  {
+                      "isSelected": "",
+                      "taskTitle": "My Point 5",
+                      "taskSubTitle": "July 9th, 2014",
+                      "assignDate": "09/07/2014",
+                      "taskShortDate": "Unit3",
+                      "taskDetails": contentText
+                  },
+                  {
+                      "isSelected": "",
+                      "taskTitle": "My Point 6",
+                      "taskSubTitle": "August 30th, 2014",
+                      "assignDate": "30/08/2014",
+                      "taskShortDate": "Unit4",
+                      "taskDetails": contentText
+                  },
+                  {
+                      "isSelected": "",
+                      "taskTitle": "My Point 7",
+                      "taskSubTitle": "September 15th, 2014",
+                      "assignDate": "15/09/2014",
+                      "taskShortDate": "評測",
+                      "taskDetails": contentText
+                  },
+                  {
+                      "isSelected": "",
+                      "taskTitle": "My Point 8",
+                      "taskSubTitle": "November 1st, 2014",
+                      "assignDate": "01/11/2014",
+                      "taskShortDate": "Unit5",
+                      "taskDetails": contentText
+                  },
+                  {
+                      "isSelected": "",
+                      "taskTitle": "My Point 9",
+                      "taskSubTitle": "December 10th, 2014",
+                      "assignDate": "10/12/2014",
+                      "taskShortDate": "Unit6",
+                      "taskDetails": contentText
+                  },
+                  {
+                      "isSelected": "",
+                      "taskTitle": "My Point 10",
+                      "taskSubTitle": "January 19th, 2015",
+                      "assignDate": "19/01/2015",
+                      "taskShortDate": "Unit7",
+                      "taskDetails": contentText
+                  },
+                  {
+                      "isSelected": "",
+                      "taskTitle": "My Point 11",
+                      "taskSubTitle": "March 3rd, 2015",
+                      "assignDate": "03/03/2015",
+                      "taskShortDate": "評測",
+                      "taskDetails": contentText
+                  },
+                  {
+                      "isSelected": "",
+                      "taskTitle": "My Point 11",
+                      "taskSubTitle": "March 3rd, 2015",
+                      "assignDate": "03/03/2015",
+                      "taskShortDate": "Unit8",
+                      "taskDetails": contentText
+                  },
+                  {
+                      "isSelected": "",
+                      "taskTitle": "My Point 11",
+                      "taskSubTitle": "March 3rd, 2015",
+                      "assignDate": "03/03/2015",
+                      "taskShortDate": "Unit9",
+                      "taskDetails": contentText
+                  },
+                  {
+                      "isSelected": "",
+                      "taskTitle": "My Point 11",
+                      "taskSubTitle": "March 3rd, 2015",
+                      "assignDate": "03/03/2015",
+                      "taskShortDate": "Unit10",
+                      "taskDetails": contentText
+                  },
+                  {
+                      "isSelected": "",
+                      "taskTitle": "My Point 11",
+                      "taskSubTitle": "March 3rd, 2015",
+                      "assignDate": "03/03/2015",
+                      "taskShortDate": "Unit11",
+                      "taskDetails": contentText
+                  }
+            ];
+
+            var jtLine = $('.myjtline').jTLine({
+                callType: 'jsonObject',
+                structureObj: myMappedObject,
+                map: {
+                    "dataRoot": "/",
+                    "title": "taskTitle",
+                    "subTitle": "taskSubTitle",
+                    "dateValue": "assignDate",
+                    "pointCnt": "taskShortDate",
+                    "bodyCnt": "taskDetails"
+                },
+                distanceMode: 'fixDistance', // 'fixDistance' 'auto' 'predefinedDistance'
+                eventsMinDistance: 23,       // Consider It as Distance Unit "by Pixel"
+                fixDistanceValue: 2,         // if eventsMinDistance = 60 & fixDistanceValue= 2 then the value is: (60*2) = 120 px
+                firstPointMargin: 1          // First Point Margin from the left
+            });
+        });
+    </script>
+
+	
+<!--  parallax BG -->
+<!--<script src="https://code.jquery.com/jquery-1.11.3.min.js" type="text/javascript" charset="utf-8"></script>-->
+<script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.17.0/TweenMax.min.js"></script>
+<script src="assets/js/jquery-parallax.js"></script>
+<script>
+	$( document ).mousemove( function( e ) {
+		$( '.background' ).parallax( -50, e );
+		$( '.cloud0' )	  .parallax( 10, e );
+		$( '.cloud1' )	  .parallax( 20, e );
+		$( '.cloud2' )	  .parallax( 120, e );
+		$( '.cloud3' )	  .parallax( 300, e );
+		$( '.cloud4' )	  .parallax( 500, e );
+
+	});
+</script>
+
+<!-- hamburger btn -->
+<!--<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>-->
+<script src="assets/js/index_ham.js"></script>	
+	
+<!-- sidebar -->	
+<script type="text/javascript">
+	$(document).ready(function () {
+
+
+		$('#sidebarCollapse').on('click', function () {
+			$('#sidebar, #content').toggleClass('active');
+			$('.collapse.in').toggleClass('in');
+			$('a[aria-expanded=true]').attr('aria-expanded', 'false');
+		});
+	});
+</script>
+	
+<!-- select --> 
+<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>-->
+<script src="assets/js/bootstrap-select.js"></script>
+	
+<!-- vertical tab menu -->
+<script type="text/javascript">
+$(document).ready(function() {
+    $("div.bhoechie-tab-menu>div.list-group>a").click(function(e) {
+        e.preventDefault();
+        $(this).siblings('a.active').removeClass("active");
+        $(this).addClass("active");
+        var index = $(this).index();
+        $("div.bhoechie-tab>div.bhoechie-tab-content").removeClass("active");
+        $("div.bhoechie-tab>div.bhoechie-tab-content").eq(index).addClass("active");
+    });
+});
+</script>
+	
+	
+<!-- popModal -->	
+<script src="assets/js/popModal.js"></script>
+<script>
+$(function(){
+	$('#popModal_ex100').mouseover(function(){
+		$('#popModal_ex100').popModal({
+			html : $('#content100'),
+			placement : 'bottomLeft',
+			showCloseBut : false,
+			onDocumentClickClose : true,
+			onDocumentClickClosePrevent : '',
+			overflowContent : false,
+			inline : true,
+			asMenu : false,
+			beforeLoadingContent : 'Please, wait...',
+			onOkBut : function() {},
+			onCancelBut : function() {},
+			onLoad : function() {},
+			onClose : function() {}
+		});
+	});
+	
+	$('#popModal_ex101').mouseover(function(){
+		$('#popModal_ex101').popModal({
+			html : $('#content101'),
+			placement : 'bottomLeft',
+			showCloseBut : false,
+			onDocumentClickClose : true,
+			onDocumentClickClosePrevent : '',
+			overflowContent : false,
+			inline : true,
+			asMenu : false,
+			beforeLoadingContent : 'Please, wait...',
+			onOkBut : function() {},
+			onCancelBut : function() {},
+			onLoad : function() {},
+			onClose : function() {}
+		});
+	});
+	
+	$('#popModal_ex102').mouseover(function(){
+		$('#popModal_ex102').popModal({
+			html : $('#content102'),
+			placement : 'bottomLeft',
+			showCloseBut : false,
+			onDocumentClickClose : true,
+			onDocumentClickClosePrevent : '',
+			overflowContent : false,
+			inline : true,
+			asMenu : false,
+			beforeLoadingContent : 'Please, wait...',
+			onOkBut : function() {},
+			onCancelBut : function() {},
+			onLoad : function() {},
+			onClose : function() {}
+		});
+	});
+	
+	$('#popModal_ex103').mouseover(function(){
+		$('#popModal_ex103').popModal({
+			html : $('#content103'),
+			placement : 'bottomLeft',
+			showCloseBut : false,
+			onDocumentClickClose : true,
+			onDocumentClickClosePrevent : '',
+			overflowContent : false,
+			inline : true,
+			asMenu : false,
+			beforeLoadingContent : 'Please, wait...',
+			onOkBut : function() {},
+			onCancelBut : function() {},
+			onLoad : function() {},
+			onClose : function() {}
+		});
+	});
+	
+	$('#popModal_ex104').mouseover(function(){
+		$('#popModal_ex104').popModal({
+			html : $('#content103'),
+			placement : 'bottomLeft',
+			showCloseBut : false,
+			onDocumentClickClose : true,
+			onDocumentClickClosePrevent : '',
+			overflowContent : false,
+			inline : true,
+			asMenu : false,
+			beforeLoadingContent : 'Please, wait...',
+			onOkBut : function() {},
+			onCancelBut : function() {},
+			onLoad : function() {},
+			onClose : function() {}
+		});
+	});
+		
+	/*$('#popModal_ex2').click(function(){
+		$('#popModal_ex2').popModal({
+			html : function(callback) {
+				$.ajax({url:'ajax.html'}).done(function(content){
+					callback(content);
+				});
+			}
+		});
+	});
+	
+	$('#popModal_ex3').click(function(){
+		$('#popModal_ex3').popModal({
+			html : $('#content3'),
+			placement : 'bottomLeft',
+			asMenu : true
+		});
+	});
+	
+	$('#notifyModal_ex1').click(function(){
+		$('#content2').notifyModal({
+			duration : 2500,
+			placement : 'center',
+			overlay : true,
+			type : 'notify',
+			icon: false,
+			onClose : function() {}
+		});
+	});
+	
+	$('#dialogModal_ex1').click(function(){
+		$('.dialog_content').dialogModal({
+			topOffset: 0,
+			top: 0,
+			type: '',
+			onOkBut: function() {},
+			onCancelBut: function() {},
+			onLoad: function(el, current) {},
+			onClose: function() {},
+			onChange: function(el, current) {
+				if(current == 3){
+					el.find('.dialogModal_header span').text('Page 3');
+					$.ajax({url:'ajax.html'}).done(function(content){
+						el.find('.dialogModal_content').html(content);
+					});
+				}
+			}
+		});
+	});
+	
+	$('#confirmModal_ex1').click(function(){
+		$('#confirm_content').confirmModal({
+			topOffset: 0,
+			top: 0,
+			onOkBut: function() {},
+			onCancelBut: function() {},
+			onLoad: function() {},
+			onClose: function() {}
+		});
+	});*/
+
+	
+});
+</script>	
+
+<!-- search -->  
+<script src="assets/js/search.js"></script>
+	
+	
+</body>
+</html>
