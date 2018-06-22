@@ -1,0 +1,85 @@
+/*
+body {
+  font-family: Arial;
+  background: #eee;
+}*/
+
+
+
+
+/* 左右 橫式 柱狀圖 */
+.barfiller {
+     width: 100%;
+        height: 28px;
+    background: rgba(0, 0, 0, 0.35);
+    border: 1px solid #898989;
+    position: relative;
+    margin-bottom: 45px !important;
+    box-shadow: inset 0px 0px 0px -6px rgba(0,0,0,0);
+  	-moz-box-shadow: inset 0px 0px 0px -6px rgba(0,0,0,0);
+}
+
+.barfiller .fill {
+  display: block;
+  position: relative;
+  width: 0px;
+  height: 100%;
+  background: #333;
+  z-index: 1;
+}
+
+.barfiller .tipWrap { display: none; }
+
+.barfiller .tip {
+    margin-top: 35px;
+    padding: 4px 8px;
+    font-size: 16px;
+    color: #fff !important;
+    left: 0px;
+    position: absolute;
+    z-index: 2;
+    background: #5329c7;
+    font-weight: 700;
+}
+.barfiller .tip:after {
+    border: solid;
+    border-color: rgb(83, 41, 199) transparent;
+    border-width: 0px 8px 8px 8px;
+    content: "";
+    display: block;
+    position: absolute;
+    left: 9px;
+    top: -8px;
+    z-index: 9;
+}
+
+/* 百分比在上方 */
+
+/*.barfiller .tip {
+    margin-top: -45px;
+    padding: .3rem .7rem;
+    font-size: 16px;
+    color: #fff;
+    left: 0px;
+    position: absolute;
+    z-index: 2;
+    background: #00bcd4;
+	font-weight: 700;
+}
+.barfiller .tip:after {
+  border: solid;
+  border-color: rgb(0, 188, 212) transparent;
+  border-width: 8px 8px 0 8px;
+  content: "";
+  display: block;
+  position: absolute;
+  left: 9px;
+  top: 100%;
+  z-index: 9
+}*/
+
+
+/* 上下 直式 柱狀圖 */
+
+
+

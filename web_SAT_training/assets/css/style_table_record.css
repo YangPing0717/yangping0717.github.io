@@ -1,0 +1,235 @@
+fht-cellfht-cellfht-cell.container {
+	width: 1024px;
+	padding: 2em;
+}
+
+.bold-blue {
+	font-weight: bold;
+	color: #0277BD;
+}
+
+.bootstrap-table table>thead {
+	background-color: #21143a;
+}
+.bootstrap-table table>thead>tr>th {
+	color: #160c29;;
+	font-weight: bold;
+}
+.bootstrap-table .table>caption+thead>tr:first-child>td, 
+.bootstrap-table .table>caption+thead>tr:first-child>th, 
+.bootstrap-table .table>colgroup+thead>tr:first-child>td, 
+.bootstrap-table .table>colgroup+thead>tr:first-child>th, 
+.bootstrap-table .table>thead:first-child>tr:first-child>td, 
+.bootstrap-table .table>thead:first-child>tr:first-child>th {
+    border-top: 0;
+    /*border-left: 1px solid #3c3c3c;*/
+}
+.fixed-table-toolbar, .fht-cell {
+	display: none;
+}
+.fixed-table-container {
+    position: relative;
+    clear: both;
+    border: 1px solid #ddd;
+    border-radius: 0px;
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+	margin-bottom: 20px;
+}
+.fixed-table-body {
+    overflow-x: auto;
+    overflow-y: auto;
+    height: initial;
+}
+.fixed-table-container thead th:first-child {
+    border-left: none;
+    border-top-left-radius: 0px;
+    -webkit-border-top-left-radius: 0px;
+    -moz-border-radius-topleft: 0px;
+}
+.fixed-table-container thead tr th .both, 
+.fixed-table-container thead tr th .desc, 
+.fixed-table-container thead tr th .asc {
+	background-image: none;
+}
+.fixed-table-container thead tr th {
+	position: relative;
+}
+.fixed-table-container thead tr th .both:after {
+	font-family: 'Material Icons';
+    content: "\E313";
+    color: #7425ff;
+    position: absolute;
+    right: 5px;
+    bottom: 8px;
+}
+.fixed-table-container thead tr th .desc:after {
+	font-family: 'Material Icons';
+    content: "\E316";
+    color: #7425ff;
+    position: absolute;
+    right: 5px;
+    bottom: 8px;
+}
+.fixed-table-container thead tr th .asc:after {
+	font-family: 'Material Icons';
+    content: "\E313";
+    color: #7425ff;
+    position: absolute;
+    right: 5px;
+    bottom: 8px;
+}
+.bootstrap-table .table:not(.table-condensed) > tbody > tr > td.right:after {
+	font-family: 'Material Icons';
+    content: "\E836";
+}
+.bootstrap-table .table:not(.table-condensed) > tbody > tr > td.wrong:after {
+	font-family: 'Material Icons';
+    content: "\E5CD";
+	color: #ff0058;
+	font-weight: 700;
+}
+.t_alert {
+	color: #ff0058;
+}
+.t_alert_dark {
+	color: #940028;
+}
+.discri_ta {
+	margin-bottom: 20px;
+    display: flow-root;
+    font-weight: 700;
+    line-height: 2em;
+}
+.discri_ta span {
+	margin-right: 0.8em;
+    background: #21143a;
+    color: #fff;
+    padding: 3px 12px;
+    border-radius: 50px;
+	font-size: 0.45em;
+}
+.discri_ta .number {
+	color: #21143a;
+    float: left;
+    min-width: 200px;
+}
+.discri_ta .number i {
+	font-weight: 700;
+    vertical-align: text-bottom;
+}
+.discri_ta small {
+	font-size: .8rem;
+}
+
+.record .bootstrap-table {
+	background-color: #fff;
+	color: #555;
+	text-align: left;
+	box-shadow: 0 4px 5px rgba(0, 0, 0, 0.8);
+}
+
+/*.record .link {
+	color: rgba(0, 0, 0, 0.6) !important;
+    border-bottom: 0px solid #F3CEFF !important;
+    box-shadow: 0px -4px 0px #F3CEFF inset !important;
+    transition: background 0.15s cubic-bezier(0.33, 0.66, 0.66, 1) 0s;
+}
+.record .link:hover {
+    color: #000 !important;
+    background: #F3CEFF none repeat scroll 0% 0%;
+    transition: all 250ms ease-out;
+}*/
+
+.record table {
+	background-color: #fff;
+	color: #555;
+	text-align: left;
+	
+}
+.record table>thead>tr>th,
+.record table>tbody>tr>td, 
+.record table>tbody>tr>th {  
+	padding: 8px;
+}
+.record table>thead {
+    background-color: #c7c7c7;
+    color: #160c29;
+}
+.record .link {
+	text-decoration: underline;
+	cursor: pointer;
+	transition: all 300ms ease-out;
+}
+.record .link:hover {
+	text-decoration: none;
+	color: #7425ff;
+}
+.record .retest:after {
+	font-family: 'Material Icons';
+	content: "\E879";
+	font-size: 150%;
+	text-decoration: none !important;
+}
+.record .askmark:after {
+    /*font-family: 'Material Icons';*/
+    content: "●";
+    font-size: 150%;
+    text-decoration: none !important;
+}
+.record .scorere:after {
+	font-family: 'Material Icons';
+	content: "\E873";
+	font-size: 150%;
+	text-decoration: none !important;
+}
+.record .retest:hover:after, .record .scorere:hover:after {
+	color: #7425ff;
+	transition: all 300ms ease-out;
+}
+
+
+#table_reading a {
+	text-decoration: underline;
+    cursor: pointer;
+	color: #555;
+}
+#table_reading a:after {
+	font-family: 'Material Icons';
+    content: "\E879";
+    font-size: 150%;
+    text-decoration: none !important;
+}
+#table_reading a:hover, #table_reading a:focus {
+    text-decoration: none;
+    color: #21143a;
+    transition: all 300ms ease-out;
+}
+#table_reading span {
+    margin-right: 8px;
+    color: #555;
+}
+
+
+
+.link {
+	color: #555;
+    text-decoration: underline;
+}
+.link:hover {
+	text-decoration: none;
+	color: #21143a;
+	transition: all 300ms ease-out;
+}
+
+
+
+
+.fixed-table-container thead th .th-inner {
+    /*padding: 8px;
+    line-height: 24px;
+    vertical-align: top;
+    overflow: hidden;
+    text-overflow: ellipsis;*/
+    white-space: initial;
+}

@@ -1,0 +1,39 @@
+/*
+Error: Invalid US-ASCII character "\xEF"
+        on line 27 of /YP_WorkSpace/_SAT_刷題/web_SAT_training/q/q_assets/fonts/octicons/sprockets-octicons.scss
+
+22:   -ms-user-select: none;
+23:   user-select: none;
+24: }
+25: .mega-octicon { font-size: 32px; }
+26: 
+27: .octicon-alert:before { content: '\f02d'} /*  *\/
+28: .octicon-arrow-down:before { content: '\f03f'} /*  *\/
+29: .octicon-arrow-left:before { content: '\f040'} /*  *\/
+30: .octicon-arrow-right:before { content: '\f03e'} /*  *\/
+31: .octicon-arrow-small-down:before { content: '\f0a0'} /*  *\/
+32: .octicon-arrow-small-left:before { content: '\f0a1'} /*  *\/
+
+Backtrace:
+/YP_WorkSpace/_SAT_刷題/web_SAT_training/q/q_assets/fonts/octicons/sprockets-octicons.scss:27
+/Applications/Adobe Dreamweaver CC 2018/Adobe Dreamweaver CC 2018.app/Contents/Resources/gems/rubygems/gems/sass-3.4.24/lib/sass/util.rb:1325:in `rescue in block in find_encoding_error'
+/Applications/Adobe Dreamweaver CC 2018/Adobe Dreamweaver CC 2018.app/Contents/Resources/gems/rubygems/gems/sass-3.4.24/lib/sass/util.rb:1322:in `block in find_encoding_error'
+/Applications/Adobe Dreamweaver CC 2018/Adobe Dreamweaver CC 2018.app/Contents/Resources/gems/rubygems/gems/sass-3.4.24/lib/sass/util.rb:1321:in `each'
+/Applications/Adobe Dreamweaver CC 2018/Adobe Dreamweaver CC 2018.app/Contents/Resources/gems/rubygems/gems/sass-3.4.24/lib/sass/util.rb:1321:in `each_with_index'
+/Applications/Adobe Dreamweaver CC 2018/Adobe Dreamweaver CC 2018.app/Contents/Resources/gems/rubygems/gems/sass-3.4.24/lib/sass/util.rb:1321:in `find_encoding_error'
+/Applications/Adobe Dreamweaver CC 2018/Adobe Dreamweaver CC 2018.app/Contents/Resources/gems/rubygems/gems/sass-3.4.24/lib/sass/util.rb:930:in `check_sass_encoding'
+/Applications/Adobe Dreamweaver CC 2018/Adobe Dreamweaver CC 2018.app/Contents/Resources/gems/rubygems/gems/sass-3.4.24/lib/sass/engine.rb:436:in `check_encoding!'
+/Applications/Adobe Dreamweaver CC 2018/Adobe Dreamweaver CC 2018.app/Contents/Resources/gems/rubygems/gems/sass-3.4.24/lib/sass/engine.rb:392:in `_to_tree'
+/Applications/Adobe Dreamweaver CC 2018/Adobe Dreamweaver CC 2018.app/Contents/Resources/gems/rubygems/gems/sass-3.4.24/lib/sass/engine.rb:281:in `render'
+/Applications/Adobe Dreamweaver CC 2018/Adobe Dreamweaver CC 2018.app/Contents/Resources/gems/rubygems/gems/sass-3.4.24/lib/sass/exec/sass_scss.rb:400:in `run'
+/Applications/Adobe Dreamweaver CC 2018/Adobe Dreamweaver CC 2018.app/Contents/Resources/gems/rubygems/gems/sass-3.4.24/lib/sass/exec/sass_scss.rb:63:in `process_result'
+/Applications/Adobe Dreamweaver CC 2018/Adobe Dreamweaver CC 2018.app/Contents/Resources/gems/rubygems/gems/sass-3.4.24/lib/sass/exec/base.rb:52:in `parse'
+/Applications/Adobe Dreamweaver CC 2018/Adobe Dreamweaver CC 2018.app/Contents/Resources/gems/rubygems/gems/sass-3.4.24/lib/sass/exec/base.rb:19:in `parse!'
+/Applications/Adobe Dreamweaver CC 2018/Adobe Dreamweaver CC 2018.app/Contents/Resources/gems/rubygems/gems/sass-3.4.24/bin/sass:13:in `<top (required)>'
+/Applications/Adobe Dreamweaver CC 2018/Adobe Dreamweaver CC 2018.app/Contents/Resources/gems/bin/sass:34:in `load'
+/Applications/Adobe Dreamweaver CC 2018/Adobe Dreamweaver CC 2018.app/Contents/Resources/gems/bin/sass:34:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Invalid US-ASCII character \"\xEF\"\A         on line 27 of /YP_WorkSpace/_SAT_刷題/web_SAT_training/q/q_assets/fonts/octicons/sprockets-octicons.scss\A \A 22:   -ms-user-select: none;\A 23:   user-select: none;\A 24: }\A 25: .mega-octicon { font-size: 32px; }\A 26: \A 27: .octicon-alert:before { content: '\f02d'} /*  */\A 28: .octicon-arrow-down:before { content: '\f03f'} /*  */\A 29: .octicon-arrow-left:before { content: '\f040'} /*  */\A 30: .octicon-arrow-right:before { content: '\f03e'} /*  */\A 31: .octicon-arrow-small-down:before { content: '\f0a0'} /*  */\A 32: .octicon-arrow-small-left:before { content: '\f0a1'} /*  */"; }

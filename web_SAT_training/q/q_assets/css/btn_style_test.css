@@ -1,0 +1,397 @@
+@charset "UTF-8";
+/* CSS Document */
+
+
+*, *::after, *::before {
+    box-sizing: border-box;
+}
+
+/* Common button styles */
+.button {
+	/*float: left;*/
+	/*min-width: 150px;*/
+	/*max-width: 250px;*/
+	/*display: block;*/
+	/*margin: 1em;*/
+	/*padding: 1em 2em;*/
+	border: none;
+	background: none;
+	color: inherit;
+	/*vertical-align: middle;*/
+	position: relative;
+	z-index: 1;
+	-webkit-backface-visibility: hidden;
+	-moz-osx-font-smoothing: grayscale;
+	/*line-height:10px;*/
+}
+.button:focus {
+	outline: none;
+}
+.button > span {
+	vertical-align: middle;
+}
+.button_min_w {
+	min-width: 250px;
+}
+
+@media (max-width: 575px) {
+.button {
+	margin-bottom: 8px;
+} 
+}
+   
+
+
+/* Winona_1 */
+.button--winona {
+	overflow: hidden;
+	padding: 0;
+	-webkit-transition: border-color 0.3s, background-color 0.3s;
+	transition: border-color 0.3s, background-color 0.3s;
+	-webkit-transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+	transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+}
+.button--winona::after {
+	content: attr(data-text); 
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	opacity: 0;
+	color: #3f51b5;
+	-webkit-transform: translate3d(0, 25%, 0);
+	transform: translate3d(0, 25%, 0);
+}
+.button--winona > span {
+	display: block;
+}
+.button--winona.button--inverted {
+	background-color: #001254;
+	color: #fff;
+	border-radius: 50px;
+	width: 50%;
+}
+.button--winona.button--inverted:after {
+	color: #001254;
+}
+.button--winona::after,
+.button--winona > span{
+	padding: 0.55em 2em;
+	-webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
+	transition: transform 0.3s, opacity 0.3s;
+	-webkit-transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+	transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+}
+.button--winona:hover {
+	border-color: #3f51b5;
+	background-color: rgba(63, 81, 181, 0.1);
+}
+.button--winona.button--inverted:hover {
+	color: #001254;
+	border-color: #001254;
+	/*box-shadow: 0px 0px 10px 5px rgba(255, 255, 255, 0.5);*/
+	background: rgba(255,255,255,0.7);
+}
+.button--winona:hover::after {
+	opacity: 1;
+	-webkit-transform: translate3d(0, 0, 0);
+	transform: translate3d(0, 0, 0);
+}
+.button--winona:hover > span {
+	opacity: 0;
+	-webkit-transform: translate3d(0, -25%, 0);
+	transform: translate3d(0, -25%, 0);
+}
+
+/* Winona_小按鍵_深色 */
+.button--winona2 {
+	overflow: hidden;
+	padding: 0;
+	/*-webkit-transition: border-color 0.3s, background-color 0.3s;
+	transition: border-color 0.3s, background-color 0.3s;
+	-webkit-transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+	transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);*/
+}
+.button--winona2::after {
+	content: attr(data-text); 
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	opacity: 0;
+	color: #3f51b5;
+	-webkit-transform: translate3d(0, 25%, 0);
+	transform: translate3d(0, 25%, 0);
+}
+.button--winona2 > span {
+	display: block;
+}
+.button--winona2.button--inverted2 {
+	background-color: #001254;
+	color: #fff;
+	border-radius: 50px;
+	width: 50%;
+}
+.button--winona2.button--inverted2:after {
+	color: #001254;
+}
+.button--winona2::after,
+.button--winona2 > span{
+	padding: 0.5em 1.6em;
+	-webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
+	transition: transform 0.3s, opacity 0.3s;
+	-webkit-transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+	transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+}
+.button--winona2:hover {
+	border-color: #3f51b5;
+	background-color: rgba(63, 81, 181, 0.1);
+}
+.button--winona2.button--inverted2:hover {
+	color: #001254;
+	border-color: #001254;
+	background: rgba(255,255,255,0.7);
+}
+.button--winona2:hover::after {
+	opacity: 1;
+	-webkit-transform: translate3d(0, 0, 0);
+	transform: translate3d(0, 0, 0);
+}
+.button--winona2:hover > span {
+	opacity: 0;
+	-webkit-transform: translate3d(0, -25%, 0);
+	transform: translate3d(0, -25%, 0);
+}
+
+
+/* disabled */
+.button.disabled {
+    color: #b6b6b6;
+    border-color: #808080;
+    background: #8f8f8f;
+	padding: 0.5em 1.6em;
+	border-radius: 50px;
+	cursor: no-drop;
+}
+
+
+
+
+
+
+
+
+
+/* Winona_小按鍵_白色 */
+.button--winona3 {
+	overflow: hidden;
+	padding: 0;
+	-webkit-transition: border-color 0.3s, background-color 0.3s;
+	transition: border-color 0.3s, background-color 0.3s;
+	-webkit-transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+	transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+}
+.button--winona3::after {
+	content: attr(data-text); 
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	opacity: 0;
+	color: #3f51b5;
+	-webkit-transform: translate3d(0, 25%, 0);
+	transform: translate3d(0, 25%, 0);
+}
+.button--winona3 > span {
+	display: block;
+}
+.button--winona3.button--inverted3 {
+	background-color: #fff;
+	color: #001254;
+	border-radius: 50px;
+	width: 50%;
+}
+.button--winona3.button--inverted3:after {
+	color: #8f8f8f;
+}
+.button--winona3::after,
+.button--winona3 > span{
+	padding: 0.5em 1.6em;
+	-webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
+	transition: transform 0.3s, opacity 0.3s;
+	-webkit-transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+	transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+}
+.button--winona3:hover {
+	border-color: #3f51b5;
+	background-color: rgba(63, 81, 181, 0.1);
+}
+.button--winona3.button--inverted3:hover {
+	color: #8f8f8f;
+    border-color: #808080;
+    background: #ffffff;
+}
+.button--winona3:hover::after {
+	opacity: 1;
+	-webkit-transform: translate3d(0, 0, 0);
+	transform: translate3d(0, 0, 0);
+}
+.button--winona3:hover > span {
+	opacity: 0;
+	-webkit-transform: translate3d(0, -25%, 0);
+	transform: translate3d(0, -25%, 0);
+}
+
+
+/* Borders */
+.button--border-thin {
+	border: 1px solid #001254;
+}
+.button--border-thin2 {
+	border: 2px solid #001254;
+}
+.button--border-medium {
+	border: 2px solid;
+}
+.button--border-thick {
+	border: 3px solid;
+}
+
+.button--round-l {
+	border-radius: 40px;
+}
+.button--round-l.button--quidel::after {
+	border-radius: 40px;
+}
+.button--scanite.button--round-l {
+	border-radius: 50%;
+}
+.button--text-upper {
+	letter-spacing: 2px;
+	text-transform: uppercase;
+}
+.button--antiman.button--border-thick::before {
+	border-width: 3px;
+}
+.button--antiman.button--border-thin::before {
+	border-width: 1px;
+}
+.button--itzel.button--border-thick::before {
+	border: 3px solid;
+	-webkit-transform: translate3d(0, 100%, 0) translate3d(0, -3px, 0);
+	transform: translate3d(0, 100%, 0) translate3d(0, -3px, 0);
+}
+.button--itzel.button--border-thin::before {
+	border: 1px solid;
+	-webkit-transform: translate3d(0, 100%, 0) translate3d(0, -1px, 0);
+	transform: translate3d(0, 100%, 0) translate3d(0, -1px, 0);
+}
+.button--size-s {
+	font-size: 14px;
+}
+.button--text-thick {
+	font-weight: 600;
+}
+
+
+
+/*btn_其他效果*/
+.icon_r_m{
+	margin-right: 8px;
+	vertical-align: text-top;
+	font-size: 1.3em;
+	}
+.icon_l_m{
+	margin-left: 8px;
+	vertical-align: text-top;
+	font-size: 1.3em;
+	}
+.icon_l_m_small{
+	margin-left: 8px;
+	vertical-align: middle;
+	font-size: 1em;
+	}
+.icon_r_l{
+	margin-right: 5px;
+	margin-left: 5px;
+	color: #cccccc;
+	}
+.icon_r_l2{
+	margin-right: 10px;
+	color: #cccccc;
+	}
+.complete_text{
+	float: right;
+	line-height: 145px;
+	padding-right: 100px;
+	color: #756F63;
+	font-size: 1.3em;
+	}
+.btn_s2 {
+    width: auto !important;
+    float: right;
+    font-size: 0.8em;
+}
+.btn_s2_mr{
+	margin-right: -25px;
+	}
+.btn_s2_mr2{
+	margin-right: 15px;
+	}
+.btn_mt{
+	margin-bottom: 80px;
+	width: auto !important;
+	padding: 0em 2em;
+	}
+
+.btn_mt_lightbox{
+	padding: 0.4em 1.8em;
+	float: none !important;
+	}
+.btnbox {
+	margin: 1.5rem auto 1.5rem;
+}
+.btn_loginsize{
+	font-size: 16px;
+	text-transform: uppercase;
+}
+.btn_start{
+	font-size: 16px;
+	min-width: 250px;
+    max-width: 300px;
+	text-transform: uppercase;
+} 
+.btn_print {
+    width: auto !important;
+    float: right;
+    font-size: 0.8em;
+    right: 0px;
+	position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    height: 33px;
+}
+.discuss_btnbox {
+	margin-top: 15px;
+    margin-bottom: 35px;
+} 
+.discuss_btnbox .icons {
+   margin-bottom: 6px;
+} 
+.discuss_btnbox .button {
+	font-size: 13px;
+}
+.discuss_btnbox .icons i, .discuss_btnbox .icons span {
+	margin-right: 20px;
+	vertical-align: middle;
+}
+.discuss_btnbox .icons i {
+	cursor: pointer;
+}
+.discuss_btnbox .icons i:hover {
+	color: #864eff;
+}
