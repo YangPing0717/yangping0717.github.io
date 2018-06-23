@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>函式-function</title>
+</head>
+<body>
+
+<!--<script>
+function test(msg){  // () 裡放參數列表
+    // 函式的程式區塊，需要呼叫才會執行
+    alert(msg);
+}
+// 使用函式
+test("5444646543148");
+test("000000");
+</script>-->
+
+
+<!--<script>
+function add(n1,n2){  // () 裡放參數列表，可建立 n 個參數，用逗號隔開
+    // return;   // return如果在這個位置 強制中段涵式 跳到 { } 外
+    // alert(n1+n2);
+    return n1+n2;   // 函式內可使用 return  // 帶回資料 5 
+}
+let result=add(3,4)*add(5,8);
+alert(result);
+// add(32,41);
+</script>-->
+
+
+包裝涵式；重覆取用這段功能時
+<!--<script>
+function calSum(max){
+    let sum=0;
+    for(let n=1;n<=max;n++){  // 進入圈時執行一次 ; n<=50 ; 每次繞圈圈時執行
+    sum=sum+n;  
+    // n++;
+}
+console.log(sum);
+}
+calSum(50);
+calSum(130);
+</script>-->
+
+
+<!--<script>
+let x=3;
+let add=function(n1,n2){ //宣告一個變數 裡面是涵式
+	alert(n1*n2);
+};
+add(3,4);
+let newName=add;
+newName(5,6)
+</script>-->
+
+
+變數的使用範圍 - Scope
+<!--<script>
+let x;  // 在 if 外部先宣告 才能被呼叫出來 如果宣告在 {} 內 則無法被呼叫出來
+if(true){ 
+    x=3;
+}
+alert(x);
+</script>-->
+
+<script>
+let x; 
+if(true){ 
+    let x; 
+    x=3;
+}
+alert(x);  // 抓了 if 外的 x，因此出現 undefined
+</script>
+
+</body>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>迴圈</title>
+</head>
+<body>
+
+
+<!--<script>
+let n=0;
+while(n<10){
+    if(n==5){
+        break; // 立刻終止迴圈
+    }
+    console.log(n);
+    n++;
+}
+console.log("final", n);
+</script>-->
+
+<!--<script>
+let n=0;
+while(n<10){
+    n++;
+    if(n==5){
+        continue; // 立刻進入下一回圈
+    }
+    console.log(n);
+}
+console.log("final", n);
+</script>-->
+
+以下搭配迴圈用:
+break; 立刻終止迴圈
+continue; 立刻進入下一回圈
+% mod 取餘數
+
+
+<!--<script>
+let n=0;
+while(n<10){
+    n++;
+    if(n%2==0){
+        continue; // 立刻進入下一回圈
+    }
+    console.log(n);
+}
+console.log("final", n);
+</script>-->
+
+1+2+3+4....+50
+let result=(1+50)*50/2
+<!--<script>
+let sum=0;  // 紀錄最後的總和
+let n=1;    // 在迴圈中，追蹤1,2,3,4,5, ...每個數字
+while(n<=50){
+    // console.log(sum, n);   // 檢視數字變化的過程
+    sum=sum+n;  // 將 n 加入總合中
+    n++;
+}
+console.log(sum);
+</script>-->
+
+使用者輸入一個數字，計算整數的平方根
+9=>3, 16=>4, 25=>5, 30=>沒有, 
+<!--<script>
+let num=prompt("enter a number", '')
+number=parseInt(num);
+let n=1;
+while(n<num){
+    console.log(n);
+    n++;
+}
+</script>-->
+
+
+使用者輸入一個數字，開根號是否整除
+<script>
+let num=prompt("enter a number", '')
+number=parseInt(num);
+let n=1;
+while(n<num){
+    if(n*n==num){
+        alert("答案是"+n);
+        break;
+    }else if(n==num-1) { // 測到最後，才說沒有
+        alert("沒有");
+    }
+    n++;
+}
+</script>
+
+
+
+for 迴圈 // 與 while 差別: for 的規則較能一目了然 ( ) 裡面就能看出 
+<!--<script>
+let sum=0;
+for(let n=1;n<=50;n++){  // 進入圈時執行一次 ; n<=50 ; 每次繞圈圈時執行
+    sum=sum+n;  
+    // n++;
+}
+console.log(sum);
+</script>-->
+
+
+作業；
+使用者輸入一數字，判斷是否整除 7 與 9   質數 合數
+
+
+</body>
+</html>
