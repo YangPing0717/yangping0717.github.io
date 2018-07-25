@@ -19,13 +19,17 @@ body {
 .barfiller .fill {
   display: block;
   position: relative;
-  width: 0px;
+/*  width: 0px;*/
   height: 100%;
   background: #333;
   z-index: 1;
+width: 100% !important;
 }
 
-.barfiller .tipWrap { display: none; }
+.barfiller .tipWrap { 
+	display: none; 
+    width: 100%;
+}
 
 .barfiller .tip {
 	margin-top: -35px;

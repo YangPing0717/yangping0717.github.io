@@ -807,7 +807,7 @@ body {
 	line-height: 15px;
 }
 .barfiller span {
-	margin-right: 0px !important;
+/*	margin-right: 0px !important;*/
 }
 .barper_t {
     font-size: .9rem;
@@ -1705,6 +1705,47 @@ font-weight: 700;
 }
 
 
+.progress {
+    height: 8px;
+    margin-bottom: 0px;
+    overflow: visible;
+    background-color: #dddddd;
+    border-radius: 0px;
+    -webkit-box-shadow: inset 0 0px 0px rgba(0,0,0,.1);
+    box-shadow: inset 0 0px 0px rgba(0,0,0,.1);
+    border: 0px solid #9E9E9E;
+    margin-top: 32px;
+}
+.progress-bar {
+    float: left;
+    width: 0;
+    height: 100%;
+    font-size: 12px;
+    line-height: 20px;
+    color: #fff;
+    text-align: center;
+    -webkit-box-shadow: inset 0 0px 0 rgba(0,0,0,.15);
+    box-shadow: inset 0 0px 0 rgba(0,0,0,.15);
+    -webkit-transition: width .6s ease;
+    -o-transition: width .6s ease;
+    transition: width .6s ease;
+}
+.progress-bar{
+    background-color: #a8243b;
+}
+.bg-success {
+    background-color: #e3a043;
+}
+.bg-info {
+    background-color: #1a7c1f;
+}
+.pro_percent {
+    color: #e90000;
+    font-size: 18px;
+    margin-top: -28px;
+    position: absolute;
+}
+
 
 @media print {
 html,body {
@@ -1734,9 +1775,11 @@ body * {
 .diplomatitle {
     min-width: 260px;
 }
+/*
 .scrbox {
 	width: 33.3333334%;
 }
+*/
 .sbox_hlimit {
     height: fit-content;
     padding-bottom: 0px;
@@ -1759,4 +1802,35 @@ body * {
     float: left;
     margin-top: 20px;
 }
+.fillover {
+	position: absolute;
+	width: 100%;
+	height: 8px;
+	top: 0;
+    left: 0;
+    /*background-color: #ddd;*/
+	border: 1px solid #ccc;
+	z-index: 1;
+}
+
+.progress {
+    border: 1px solid #9E9E9E;
+	background-color: #000000;
+}
+/*
+.progress-bar{
+    background-color: #8c8c8c !important;
+}
+.bg-success {
+    background-color: #696969 !important;
+}
+.bg-info {
+    background-color: black;
+}
+*/
+.pro_percent {
+    margin-top: -30px;
+}
+	
+	
 }

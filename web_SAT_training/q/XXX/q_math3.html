@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html hola_ext_inject="ready" lang="zh-Hans"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<link rel="shortcut icon" href="assets/images/favicon.ico">
+<link rel="bookmark" href="assets/images/favicon.ico"/>
+<link rel="apple-touch-icon" href="assets/images/icon_SAT_2017.png">
+    
+<meta property="og:title" content="ELITE SAT Intensive Program" />
+<meta property="og:description" content="ELITE SAT Intensive Program" />
+<meta property="og:image" content="assets/images/share_img_sat.jpg">
+<meta name="keywords" content="ELITE, Education, SAT, 菁英" />
+<title>New SAT Entrance Test</title>		
+	
+	<!-- jQuery Core File-->
+	<script src="assets/jquery-1.html"></script>
+
+	<!-- jQuery UI Core Files -->
+	<link rel="stylesheet" href="assets/jquery-ui.css">
+	<script src="assets/jquery-ui-1.html"></script>
+
+	<!-- Touch Event Support for jQuery UI (http://touchpunch.furf.com/) -->
+	<script src="assets/jquery.html"></script>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="assets/bootstrap.css">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="assets/bootstrap-theme.css">
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="assets/bootstrap.html"></script>
+
+	<!-- Dialog JavaScript -->
+	<script src="assets/bootstrap-dialog.html"></script>
+	<link rel="stylesheet" href="assets/bootstrap-dialog.css">
+
+	<!-- Hover to active dropdown submenu -->
+	<script>
+		/**
+		 * @preserve
+		 * Project: Bootstrap Hover Dropdown
+		 * Author: Cameron Spear
+		 * Version: v2.1.3
+		 * Contributors: Mattia Larentis
+		 * Dependencies: Bootstrap's Dropdown plugin, jQuery
+		 * Description: A simple plugin to enable Bootstrap dropdowns to active on hover and provide a nice user experience.
+		 * License: MIT
+		 * Homepage: http://cameronspear.com/blog/bootstrap-dropdown-on-hover-plugin/
+		 */
+		;(function ($, window, undefined) {
+		    // outside the scope of the jQuery plugin to
+		    // keep track of all dropdowns
+		    var $allDropdowns = $();
+
+		    // if instantlyCloseOthers is true, then it will instantly
+		    // shut other nav items when a new one is hovered over
+		    $.fn.dropdownHover = function (options) {
+		        // don't do anything if touch is supported
+		        // (plugin causes some issues on mobile)
+		        if('ontouchstart' in document) return this; // don't want to affect chaining
+
+		        // the element we really care about
+		        // is the dropdown-toggle's parent
+		        $allDropdowns = $allDropdowns.add(this.parent());
+
+		        return this.each(function () {
+		            var $this = $(this),
+		                $parent = $this.parent(),
+		                defaults = {
+		                    delay: 500,
+		                    hoverDelay: 0,
+		                    instantlyCloseOthers: true
+		                },
+		                data = {
+		                    delay: $(this).data('delay'),
+		                    hoverDelay: $(this).data('hover-delay'),
+		                    instantlyCloseOthers: $(this).data('close-others')
+		                },
+		                showEvent   = 'show.bs.dropdown',
+		                hideEvent   = 'hide.bs.dropdown',
+		                // shownEvent  = 'shown.bs.dropdown',
+		                // hiddenEvent = 'hidden.bs.dropdown',
+		                settings = $.extend(true, {}, defaults, options, data),
+		                timeout, timeoutHover;
+
+		            $parent.hover(function (event) {
+		                // so a neighbor can't open the dropdown
+		                if(!$parent.hasClass('open') && !$this.is(event.target)) {
+		                    // stop this event, stop executing any code
+		                    // in this callback but continue to propagate
+		                    return true;
+		                }
+
+		                openDropdown(event);
+		            }, function () {
+		                // clear timer for hover event
+		                window.clearTimeout(timeoutHover)
+		                timeout = window.setTimeout(function () {
+		                    $this.attr('aria-expanded', 'false');
+		                    $parent.removeClass('open');
+		                    $this.trigger(hideEvent);
+		                }, settings.delay);
+		            });
+
+		            // this helps with button groups!
+		            $this.hover(function (event) {
+		                // this helps prevent a double event from firing.
+		                // see https://github.com/CWSpear/bootstrap-hover-dropdown/issues/55
+		                if(!$parent.hasClass('open') && !$parent.is(event.target)) {
+		                    // stop this event, stop executing any code
+		                    // in this callback but continue to propagate
+		                    return true;
+		                }
+
+		                openDropdown(event);
+		            });
+
+		            // handle submenus
+		            $parent.find('.dropdown-submenu').each(function (){
+		                var $this = $(this);
+		                var subTimeout;
+		                $this.hover(function () {
+		                    window.clearTimeout(subTimeout);
+		                    $this.children('.dropdown-menu').show();
+		                    // always close submenu siblings instantly
+		                    $this.siblings().children('.dropdown-menu').hide();
+		                }, function () {
+		                    var $submenu = $this.children('.dropdown-menu');
+		                    subTimeout = window.setTimeout(function () {
+		                        $submenu.hide();
+		                    }, settings.delay);
+		                });
+		            });
+
+		            function openDropdown(event) {
+		                // clear dropdown timeout here so it doesnt close before it should
+		                window.clearTimeout(timeout);
+		                // restart hover timer
+		                window.clearTimeout(timeoutHover);
+		                
+		                // delay for hover event.  
+		                timeoutHover = window.setTimeout(function () {
+		                    $allDropdowns.find(':focus').blur();
+
+		                    if(settings.instantlyCloseOthers === true)
+		                        $allDropdowns.removeClass('open');
+		                    
+		                    // clear timer for hover event
+		                    window.clearTimeout(timeoutHover);
+		                    $this.attr('aria-expanded', 'true');
+		                    $parent.addClass('open');
+		                    $this.trigger(showEvent);
+		                }, settings.hoverDelay);
+		            }
+		        });
+		    };
+
+		    $(document).ready(function () {
+		        // apply dropdownHover to all elements with the data-hover="dropdown" attribute
+		        $('[data-hover="dropdown"]').dropdownHover();
+		    });
+		})(jQuery, window);
+	</script>
+	<!--<link rel="stylesheet" type="text/css" href="assets/css/loading.css">-->
+	<script>		
+		function showLoading() {
+			if ($('#loading-mask').length == 0)
+			$('body').prepend('<div id="loading-mask"></div><div id="loading-img"><div class="pulse"></div></div>');
+		}
+		function hideLoading() {
+			if ($('#loading-mask').length == 1)
+			$('#loading-mask, #loading-img').remove();
+		}
+		$(document).on('click', 'a[href!="#"]', function(e) {
+			e.preventDefault();
+			showLoading();
+			window.location.href = $(this).attr('href');
+		});
+	</script>
+	
+    
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link type="text/css" rel="stylesheet" href="assets/css/font-awesome.css"/>
+	<link type="text/css" rel="stylesheet" href="assets/css/font-awesome.min.css"/>
+	<link type="text/css" rel="stylesheet" href="assets/css/style_icomoon.css"/>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link href="assets/css/btn_style_test.css" rel="stylesheet" type="text/css">
+	<link href="assets/css/sat_pretest.css" rel="stylesheet" type="text/css">
+    
+</head>
+
+
+<body hola-ext-player="1">
+	<section id="head" class="head_h"> 
+	<div class="container inheadbox">
+    <div class="row">
+    <div class="col-sm-6 col-md-6 col-lg-6">
+    <div class="logo2"><img src="assets/images/logo_elite_sat_tw.svg" alt="" class="img-responsive"/></div>
+    <div class="ihb_t">New SAT Entrance Test</div></div>
+	</div> 
+    </div> 
+	</section>	
+  
+
+    
+<section id="body">
+		<div class="container b_c_box2">
+        <div class="row">
+        
+		<div class="step_block2 col-xs-12">
+                <div class="step_block_box2">25<br/><span>min</span></div>
+                <div class="step_text_box2">Math Test (No Calculator)<span>20 questions</span></div>
+                
+              <div class="pull-right" id="time-disp-area">
+			  <p class="time_box">Remaining time
+			  <i class="fa fa-clock-o icon_r_l"></i>
+			  <span id="time-disp">62:52</span>
+			  </p>
+			</div>	
+    	</div>
+          		
+           		
+            <ul class="list-inline name_box">
+				<div>Direction<div class="cate_t_icon" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample"></div></div>
+			
+			<div class="clearfix"></div>
+			<div class="collapse in" id="collapseExample">
+			<div class="instru">Each passage or pair of passages below is followed by a number of questions. After reading each passage or pair, choose the best answer to each question based on what is stated or implied in the passage or passages and in any accompanying graphics (such as a table or graph).
+			</div>
+			</div>
+			</ul>
+			
+			
+			<div id="exam-loader"  class="q_box"><div class="row">
+			<div class="col-xs-6 ref-wrapper">
+			<div class="q2_box q2_box_w">
+			<img class="img-responsive" src="assets/images/math_qtype_1.png" alt="">
+			</div>					
+
+	</div>
+	<div class="a_box col-xs-6">
+	   <h3><span class="q2_box">37.</span><span class="q2_box">Carbon makes up what percent of the mass of one mole of chloroform? Round your answer to the nearest whole percent and ignore the percent sign when entering your answer.</span></h3>
+   										
+    <div class="card-selection-area">
+							<table>
+								<tbody>
+                                <tr>
+										<td><input type="text" size="1"></td>
+										<td><input type="text" size="1"></td>
+										<td><input type="text" size="1"></td>
+										<td><input type="text" size="1"></td>
+									</tr>
+                                
+                                <tr style="display: none;">
+									<td><input size="1" type="text"></td>
+									<td><input size="1" type="text"></td>
+									<td><input size="1" type="text"></td>
+									<td><input size="1" type="text"></td>
+								</tr>
+								<tr>
+									<td></td>
+									<td><input name="decimal" id="fractionLine1" data-digit="2" value="/" type="radio"><label for="fractionLine1">/</label></td>
+									<td><input name="decimal" id="fractionLine2" data-digit="3" value="/" type="radio"><label for="fractionLine2">/</label></td>
+									<td></td>
+								</tr>
+								<tr>
+									<td><input name="decimal" id="decimalPoint1" data-digit="1" value="." type="radio"><label for="decimalPoint1">.</label></td>
+									<td><input name="decimal" id="decimalPoint2" data-digit="2" value="." type="radio"><label for="decimalPoint2">.</label></td>
+									<td><input name="decimal" id="decimalPoint3" data-digit="3" value="." type="radio"><label for="decimalPoint3">.</label></td>
+									<td><input name="decimal" id="decimalPoint4" data-digit="4" value="." type="radio"><label for="decimalPoint4">.</label></td>
+								</tr>
+								<tr>
+									<td></td>
+									<td><input name="digit2" id="digit2-0" value="0" data-digit="2" type="radio"><label for="digit2-0">0</label></td>
+									<td><input name="digit3" id="digit3-0" value="0" data-digit="3" type="radio"><label for="digit3-0">0</label></td>
+									<td><input name="digit4" id="digit4-0" value="0" data-digit="4" type="radio"><label for="digit4-0">0</label></td>
+								</tr>
+								<tr>
+									<td><input name="digit1" id="digit1-1" value="1" data-digit="1" type="radio"><label for="digit1-1">1</label></td>
+									<td><input name="digit2" id="digit2-1" value="1" data-digit="2" type="radio"><label for="digit2-1">1</label></td>
+									<td><input name="digit3" id="digit3-1" value="1" data-digit="3" type="radio"><label for="digit3-1">1</label></td>
+									<td><input name="digit4" id="digit4-1" value="1" data-digit="4" type="radio"><label for="digit4-1">1</label></td>
+								</tr>
+								<tr>
+									<td><input name="digit1" id="digit1-2" value="2" data-digit="1" type="radio"><label for="digit1-2">2</label></td>
+									<td><input name="digit2" id="digit2-2" value="2" data-digit="2" type="radio"><label for="digit2-2">2</label></td>
+									<td><input name="digit3" id="digit3-2" value="2" data-digit="3" type="radio"><label for="digit3-2">2</label></td>
+									<td><input name="digit4" id="digit4-2" value="2" data-digit="4" type="radio"><label for="digit4-2">2</label></td>
+								</tr>
+								<tr>
+									<td><input name="digit1" id="digit1-3" value="3" data-digit="1" type="radio"><label for="digit1-3">3</label></td>
+									<td><input name="digit2" id="digit2-3" value="3" data-digit="2" type="radio"><label for="digit2-3">3</label></td>
+									<td><input name="digit3" id="digit3-3" value="3" data-digit="3" type="radio"><label for="digit3-3">3</label></td>
+									<td><input name="digit4" id="digit4-3" value="3" data-digit="4" type="radio"><label for="digit4-3">3</label></td>
+								</tr>
+								<tr>
+									<td><input name="digit1" id="digit1-4" value="4" data-digit="1" type="radio"><label for="digit1-4">4</label></td>
+									<td><input name="digit2" id="digit2-4" value="4" data-digit="2" type="radio"><label for="digit2-4">4</label></td>
+									<td><input name="digit3" id="digit3-4" value="4" data-digit="3" type="radio"><label for="digit3-4">4</label></td>
+									<td><input name="digit4" id="digit4-4" value="4" data-digit="4" type="radio"><label for="digit4-4">4</label></td>
+								</tr>
+								<tr>
+									<td><input name="digit1" id="digit1-5" value="5" data-digit="1" type="radio"><label for="digit1-5">5</label></td>
+									<td><input name="digit2" id="digit2-5" value="5" data-digit="2" type="radio"><label for="digit2-5">5</label></td>
+									<td><input name="digit3" id="digit3-5" value="5" data-digit="3" type="radio"><label for="digit3-5">5</label></td>
+									<td><input name="digit4" id="digit4-5" value="5" data-digit="4" type="radio"><label for="digit4-5">5</label></td>
+								</tr>
+								<tr>
+									<td><input name="digit1" id="digit1-6" value="6" data-digit="1" type="radio"><label for="digit1-6">6</label></td>
+									<td><input name="digit2" id="digit2-6" value="6" data-digit="2" type="radio"><label for="digit2-6">6</label></td>
+									<td><input name="digit3" id="digit3-6" value="6" data-digit="3" type="radio"><label for="digit3-6">6</label></td>
+									<td><input name="digit4" id="digit4-6" value="6" data-digit="4" type="radio"><label for="digit4-6">6</label></td>
+								</tr>
+								<tr>
+									<td><input name="digit1" id="digit1-7" value="7" data-digit="1" type="radio"><label for="digit1-7">7</label></td>
+									<td><input name="digit2" id="digit2-7" value="7" data-digit="2" type="radio"><label for="digit2-7">7</label></td>
+									<td><input name="digit3" id="digit3-7" value="7" data-digit="3" type="radio"><label for="digit3-7">7</label></td>
+									<td><input name="digit4" id="digit4-7" value="7" data-digit="4" type="radio"><label for="digit4-7">7</label></td>
+								</tr>
+								<tr>
+									<td><input name="digit1" id="digit1-8" value="8" data-digit="1" type="radio"><label for="digit1-8">8</label></td>
+									<td><input name="digit2" id="digit2-8" value="8" data-digit="2" type="radio"><label for="digit2-8">8</label></td>
+									<td><input name="digit3" id="digit3-8" value="8" data-digit="3" type="radio"><label for="digit3-8">8</label></td>
+									<td><input name="digit4" id="digit4-8" value="8" data-digit="4" type="radio"><label for="digit4-8">8</label></td>
+								</tr>
+								<tr>
+									<td><input name="digit1" id="digit1-9" value="9" data-digit="1" type="radio"><label for="digit1-9">9</label></td>
+									<td><input name="digit2" id="digit2-9" value="9" data-digit="2" type="radio"><label for="digit2-9">9</label></td>
+									<td><input name="digit3" id="digit3-9" value="9" data-digit="3" type="radio"><label for="digit3-9">9</label></td>
+									<td><input name="digit4" id="digit4-9" value="9" data-digit="4" type="radio"><label for="digit4-9">9</label></td>
+								</tr>
+							</tbody></table>
+						</div>
+	</div>
+				</div></div>
+			
+			</div>
+            </div>
+
+    </section>
+    
+ 	<section id="exam_btn"> 
+    <div class="container">
+	<div class="row">
+     <div class="col-sm-7 text-left">
+						<ul class="pagination answer_block">
+							<li><a href="#"><i class="fa fa-angle-left"></i></a></li>
+							<li><a href="#">1</a></li>
+							<li><a href="#">2</a></li>
+							<li class="active"><a href="#">3</a></li>
+							<li><a href="#">4</a></li>
+							<li><a href="#">5</a></li>
+                            <li><a href="#">6</a></li>
+							<li><a href="#">7</a></li>
+                            <li><a href="#">8</a></li>
+							<li><a href="#">9</a></li>
+                            <li><a href="#">10</a></li>
+                            <li><a href="#">11</a></li>
+							<li><a href="#">12</a></li>
+                            <li><a href="#">13</a></li>
+							<li><a href="#">14</a></li>
+                            <li><a href="#">15</a></li>
+							<li><a href="#"><i class="fa fa-angle-right"></i></a></li>
+						</ul>
+					</div>
+    <div class="copyright_b">Copyright © 2017 ELITE Language Institute</div>
+    <button class="button button--winona2 button--border-thin button--text-thick button--inverted2 btn_s1" data-text="Next to 11–21"><span>Next to 11–21</span></button>
+    <button class="button button--winona3 button--border-thin button--text-thick button--inverted3 btn_s1" data-text="Back"><span>Back</span></button>
+    </div>
+    </div>
+    
+    </section>
+	
+    
+	<script>
+		$(function() {
+			showLoading();
+			loadQuestion('qtype1.php', function() {
+				cdInitial();
+			});
+		});
+
+		function loadQuestion(examScript, callback) {
+			if (typeof examScript != 'undefined') {
+				$('#exam-loader').load(examScript + ' #exam-loader>*', function() {
+					(callback && typeof(callback) === "function") && callback();
+					referenceNumberInit();
+					hideLoading();
+				});
+			} else {
+				hideLoading();
+			}
+		}
+		function locateCallback(json) {
+			if (json.sectionIsEnd) {
+				if (json.examIsEnd) {
+					window.location.href = 'transcript.php';
+				} else {
+					window.location.href = 'flow.php';
+				}
+			} else {
+				var scrollVal = $('.ref-numbers-wrapper > div').scrollTop();
+				loadQuestion(json.examScript, function() {
+					$('.ref-numbers-wrapper > div').scrollTop(scrollVal);
+				});
+			}
+		}
+		function prevQuestion() {
+			showLoading();
+			$.ajax({
+				type: 'POST',
+				url: 'locate.php',
+				data: {
+					'method': 'prev'
+				},
+				success: function(res) {
+					if (isJSONString(res)) {
+						obj = $.parseJSON(res);
+						locateCallback(obj);
+					} else {
+						console.log(res);
+						hideLoading();
+					}
+				}
+			});
+		}
+		function nextQuestion() {
+			showLoading();
+			$.ajax({
+				type: 'POST',
+				url: 'locate.php',
+				data: {
+					'method': 'next'
+				},
+				success: function(res) {
+					if (isJSONString(res)) {
+						obj = $.parseJSON(res);
+						locateCallback(obj);
+					} else {
+						console.log(res);
+						hideLoading();
+					}
+				}
+			});
+		}
+		function sectionEnd() {
+			showLoading();
+			$.ajax({
+				type: 'POST',
+				url: 'locate.php',
+				data: {
+					'method': 'end'
+				},
+				success: function(res) {
+					if (isJSONString(res)) {
+						window.location.href = 'flow.php';
+					} else {
+						console.log(res);
+						hideLoading();
+					}
+				}
+			});
+		}
+
+		//Reference line numbers
+		function referenceNumberInit() {
+			if ($('.ref-numbers-wrapper .ref-numbers').length == 1 && $('.ref-numbers-wrapper .ref-content').length == 1) {
+				$('.ref-numbers-wrapper .ref-content > p').each(function() {
+					if (typeof $(this).attr('data-line') == 'undefined') {
+						$('.ref-numbers-wrapper .ref-numbers').append('<p>&nbsp;</p>');
+					} else {
+						$('.ref-numbers-wrapper .ref-numbers').append('<p>' + ($(this).attr('data-line') % 5 == 0 ? $(this).attr('data-line') : '&nbsp;') + '</p>');
+					}
+				});
+			}
+		}
+		function scrollToLine(line) {
+			showLoading();
+			if ($('[data-line="' + line + '"]').length == 0) {
+				return false;
+			} else {
+				return $('.ref-numbers-wrapper > div').animate({
+					scrollTop: ($('.ref-numbers-wrapper > div').scrollTop() + $('[data-line="' + line + '"]').position().top)
+				}, 800, function() {
+					$('[data-line]').css({
+						'background-color': 'transparent'
+					});
+					$('[data-line="' + line + '"]').css({
+						'background-color': '#fffbe0'
+					});
+					hideLoading();
+				});
+			}
+		}
+
+		/**
+		 * Exam countdown
+		 */
+		var cd, cdInt = 0, cdIntSet = 3900;
+		function cdInitial() {
+			cdInt = cdIntSet;
+			cd = setInterval(cdFunction, 1000);
+		}
+		function cdOver() {
+			clearInterval(cd);
+			sectionEnd();
+		}
+		function cdFunction() {
+			$('#time-disp').text(cdFormatter(cdInt));
+			setCookie('cdInt', cdInt, 1000 * 60 * 180);
+			if (cdInt > 0) {
+				cdInt -= 1;
+			} else {
+				cdOver();
+			}
+		}
+		function cdFormatter(second) {
+			var minute = Math.floor(second / 60);
+			var second = second % 60;
+			return leadingZero(minute, 2) + ':' + leadingZero(second, 2);
+		}
+		function leadingZero(num, size) {
+			var s = num + '';
+			while (s.length < size) s = '0' + s;
+			return s;
+		}
+
+		/**
+		 * Common functions
+		 */
+		function isJSONString(msg) {
+			var isJSON = true;
+			try {
+				var json = $.parseJSON(msg);
+			}
+			catch(err) {
+				isJSON = false;
+			}
+			return isJSON;
+		}
+		function setCookie(cname, cvalue, exminutes) {
+			var d = new Date();
+			d.setTime(d.getTime() + (exminutes * 60 * 1000));
+			var expires = "expires=" + d.toUTCString();
+			document.cookie = cname + "=" + cvalue + "; " + expires;
+		}
+		function getCookie(cname) {
+			var name = cname + "=";
+			var ca = document.cookie.split(';');
+			for (var i = 0; i < ca.length; i++) {
+				var c = ca[i];
+				while (c.charAt(0) == ' ') c = c.substring(1);
+				if (c.indexOf(name) == 0) return c.substring(name.length, c.length);
+			}
+			return "";
+		}
+	</script>
+	<script src="assets/exam.html"></script>
+
+</body></html>
