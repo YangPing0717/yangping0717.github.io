@@ -1,0 +1,59 @@
+.infoBox .info {
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+
+.infoBox .info .title {
+  font-weight: initial;
+  font-size: 85%;
+}
+
+.infoBox .info .title.im {
+  background: #492882;
+  color: white;
+  display: inline-block;
+  padding: 0 10px;
+  border-radius: 2rem;
+  margin-left: -2px;
+}
+
+.infoBox .info .title.im_r {
+  background: #ff5b00;
+  color: white;
+  display: inline-block;
+  padding: 0 10px;
+  border-radius: 2rem;
+  margin-left: -2px;
+}
+
+.infoBox .info .content {
+  color: #041c32;
+  font-size: 110%;
+}
+
+.nav-tabs > li > a {
+  font-size: 16px;
+  cursor: default;
+  background-color: #fff;
+  border: 0px solid #ddd;
+  border-bottom-color: transparent;
+  padding: 13px 3px;
+  margin-right: 26px;
+}
+
+.nav-tabs > li.active > a,
+.nav-tabs > li.active > a:focus,
+.nav-tabs > li.active > a:hover {
+  color: #273f56;
+  font-weight: bold;
+  border: 0px;
+  border-bottom: 5px solid #273f56;
+}
+
+.x_content .tab-content {
+  padding-top: 20px;
+}
+
+.x_content hr {
+  display: block;
+}
