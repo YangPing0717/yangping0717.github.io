@@ -1,0 +1,62 @@
+.tadList header li > a, .olive, .timothee {
+  text-decoration: none;
+  display: block;
+  width: 100%;
+  text-align: center;
+  background: #00E3B6;
+  color: #fff;
+  font-weight: 700;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+.aa {
+  padding: 20px;
+}
+
+.bb {
+  padding: 10px;
+}
+
+.cc {
+  padding: 30px;
+}
+
+.dd {
+  padding: 36px;
+}
+
+.tadList header ul {
+  list-style: none;
+  font-size: 0px;
+  -webkit-padding-start: 0px;
+}
+
+.tadList header li {
+  display: inline-block;
+  font-size: 16px;
+  width: 16.66667%;
+}
+
+.tadList header li > a {
+  line-height: 56px;
+  font-size: 24px;
+  -webkit-transition: all .3s ease-out;
+  transition: all .3s ease-out;
+}
+
+.tadList header li > a:hover {
+  background: #055C4A;
+  color: #00E3B6;
+}
+
+.template {
+  list-style: circle;
+  -ms-grid-columns: auto;
+      grid-template-columns: auto;
+  -ms-grid-rows: auto;
+      grid-template-rows: auto;
+}

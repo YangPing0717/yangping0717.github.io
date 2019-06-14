@@ -1,0 +1,120 @@
+#pool .container {
+  width: 100%;
+  padding-right: 0px !important;
+  padding-left: 0px !important;
+}
+
+#pool .partName {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: .8rem;
+}
+
+#pool ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+#pool .option {
+  position: relative;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  color: #696969;
+  text-align: left;
+  text-decoration: none;
+  -webkit-transform-style: flat;
+          transform-style: flat;
+  -webkit-transition: all 250ms ease-out;
+  transition: all 250ms ease-out;
+  border-radius: 0;
+  padding: 10px 25px;
+  margin-bottom: 12px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+#pool .option .opt {
+  float: left;
+  margin-right: 10px;
+}
+
+#pool .option .optTxt {
+  overflow: hidden;
+}
+
+#pool .option:hover {
+  background: #fff0c4;
+  border-color: #949494;
+}
+
+#pool .option.active {
+  color: #fff;
+  background-color: rgba(50, 50, 50, 0.75);
+  border-color: #323232;
+}
+
+#pool .audiobox {
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  padding: 8px 8px 0px 8px;
+}
+
+#pool .audiobox audio {
+  width: 100%;
+}
+
+#pool img {
+  width: 100%;
+}
+
+#pool .question {
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 34px;
+  margin-bottom: 18px;
+}
+
+#pool .single {
+  margin-left: 40px;
+  position: relative;
+}
+
+#pool .single .sound {
+  position: absolute;
+  left: -45px;
+  top: 0px;
+}
+
+#pool .single .sound .coundown:before {
+  font-size: 13px;
+  position: absolute;
+  left: 8px;
+  top: 40px;
+  color: #c83000;
+  font-weight: 700;
+  letter-spacing: -1px;
+  content: '5 s';
+}
+
+#pool .single .sound:before {
+  font-family: 'Font Awesome 5 Free';
+  content: '\f028';
+  font-size: 2rem;
+  line-height: 36px;
+}
+
+#pool .counter {
+  position: absolute;
+  right: 30px;
+  top: 30px;
+  font-size: 13px;
+  background: #FF5722;
+  padding: 4px 26px;
+  border-radius: 50px;
+  color: #fff;
+  font-weight: 700;
+}
+
+#pool .counter .text {
+  font-size: 26px;
+}

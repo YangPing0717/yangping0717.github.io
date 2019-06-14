@@ -1,0 +1,246 @@
+/*  bhoechie tab */
+div.bhoechie-tab-container{
+    z-index: 10;
+    background-color: rgba(255, 255, 255, 0.4);
+    border-radius: 0px;
+}
+div.bhoechie-tab-menu{
+  padding-right: 0;
+  padding-left: 0;
+  padding-bottom: 0;
+}
+div.bhoechie-tab-menu div.list-group{
+  margin-bottom: 0;
+}
+div.bhoechie-tab-menu div.list-group>a{
+  margin-bottom: 0;
+	line-height: 20px;
+    position: relative;
+    padding: 25px 15px;
+	font-size: 1rem;
+}
+div.bhoechie-tab-menu div.list-group>a .glyphicon,
+div.bhoechie-tab-menu div.list-group>a .fa {
+  color: #5A55A3;
+}
+div.bhoechie-tab-menu div.list-group>a:first-child{
+  border-top-right-radius: 0;
+  -moz-border-top-right-radius: 0;
+}
+div.bhoechie-tab-menu div.list-group>a:last-child{
+  border-bottom-right-radius: 0;
+  -moz-border-bottom-right-radius: 0;
+}
+div.bhoechie-tab-menu div.list-group>a.active,
+div.bhoechie-tab-menu div.list-group>a.active .glyphicon,
+div.bhoechie-tab-menu div.list-group>a.active .fa{
+    background-color: #ffffff;
+    background-image: #5A55A3;
+	color: #585858;
+    border-color: #ff3822;
+    font-weight: 700;
+	border: 1px solid rgb(255, 57, 35);
+    border-right: 4px solid #ff3923;
+	
+}
+div.bhoechie-tab-menu div.list-group>a.active:after{
+	content: '';
+    position: absolute;
+    left: 100%;
+    top: 50%;
+    margin-top: -10px;
+    border-bottom: 10px solid transparent;
+    border-top: 10px solid transparent;
+    border-left: 10px solid #ff3822;
+	z-index: 100;
+}
+
+div.bhoechie-tab-content{
+  background-color: #ffffff;
+  padding: 0px;
+	height: 100%;
+}
+
+div.bhoechie-tab div.bhoechie-tab-content:not(.active){
+  display: none;
+}
+
+
+.list-group-item {
+    position: relative;
+    display: block;
+    padding: .75rem 1.25rem;
+    margin-bottom: -1px;
+    background-color: rgba(255, 255, 255, 0.4);
+    border: 0px solid rgba(0,0,0,.125);
+	border-bottom: 1px solid #ddd;
+}
+.list-group-item:first-child {
+    border-top-left-radius: 0rem;
+    border-top-right-radius: 0rem;
+}
+.list-group-item:last-child {
+	border-bottom-right-radius: 0rem;
+    border-bottom-left-radius: 0rem;
+}
+.list-group-item .photo {
+    width: 70px;
+    height: 70px;
+    overflow: hidden;
+    border-radius: 50%;
+    background-color: #dcdcdc;
+    display: inline-block;
+    margin-right: 8px;
+    vertical-align: middle;
+    text-align: center;
+    color: #fff;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.5);
+    position: absolute;
+	margin: auto;
+    top: 0;
+    bottom: 0;
+}
+.list-group-item .photo:after {
+    font-family: 'Material Icons';
+    content: '\E8A6';
+    font-size: 55px;
+    line-height: 65px;
+}
+.list-group-item span{
+	font-size: 70%;
+    color: #ff3923;
+}
+.list-group-item span i {
+    /*font-size: 14px;
+    vertical-align: text-top;*/
+}
+.list-group-item .name {
+	padding-left: 80px;
+}
+.list-group-item:focus, 
+.list-group-item:hover {
+    z-index: initial;
+    text-decoration: none;
+}
+
+
+
+.bhoechie-tab-content .table {
+	font-size: .8rem;
+	margin-bottom: 0rem;
+}
+.bhoechie-tab-content .table th {
+    padding: .45rem;
+}
+.bhoechie-tab-content .table thead {
+	background: #e2e2e2;
+    color: #5c5c5c;
+    line-height: 1rem;	
+}
+.bhoechie-tab-content .table tbody tr th {
+	padding: 0rem;
+}  
+.bhoechie-tab-content .table tbody .btn {
+	width: 100%;
+    padding: 5px 8px;
+    font-size: 90%;
+    height: 100%;
+    margin: 0;
+    color: #979797;
+    border:0;
+}
+
+.bhoechie-tab-content .table td, .bhoechie-tab-content .table th {
+    padding: 0rem;
+    vertical-align: top;
+    border-top: 1px solid #dee2e6;
+}	   
+.bhoechie-tab-content .table thead tr th {
+    padding: .45rem;
+}
+.bhoechie-tab-content .table tbody {
+	border-bottom: 1px solid #dee2e6;	
+}
+.bhoechie-tab-content .table tbody .btn span {
+    font-weight: 700;
+	font-size: 1rem;
+} 
+.bhoechie-tab-content .table tbody .btn:hover {
+	color: #fff;
+    background: #ff5835;
+}	
+.bhoechie-tab-content .table tbody .btn span span:after {
+	content: '確定約課';
+	color: #ff3923;
+}
+.bhoechie-tab-content .table tbody .btn:hover span span:after{
+	content: '取 消';
+	color: #fff;
+}
+
+@media (max-width: 991px) { 
+div.bhoechie-tab-container {
+    z-index: 10;
+    background-color: rgba(255, 255, 255, 0.4);
+    border-radius: 0px;
+    display: inline-block;
+}
+
+}
+
+@media (max-width: 991px) { 
+div.bhoechie-tab-menu div.list-group>a {
+    margin-bottom: 0;
+    line-height: 20px;
+    position: relative;
+    padding: 15px 12px;
+    font-size: 1rem;
+}
+.hintModal_abso {
+	width: 50px !important;
+    height: 60px !important;
+    position: relative !important;
+    left: 0;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+}
+.list-group-item .photo {
+	width: 40px;
+    height: 40px;
+    overflow: hidden;
+    border-radius: 50%;
+    background-color: #dcdcdc;
+    display: block;
+    margin-right: 0px;
+    vertical-align: middle;
+    text-align: center;
+    color: #fff;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.5);
+    position: relative;
+    /* left: 14px; */
+    /* padding-left: 0px; */
+    margin: auto;
+}
+.list-group-item .photo:after {
+    font-family: 'Material Icons';
+    content: '\E8A6';
+    font-size: 35px;
+    line-height: 38px;
+}
+.list-group-item .name {
+        /* padding-left: 42px; */
+    font-size: 80%;
+    padding-top: 8px;
+    position: relative;
+    display: block;
+    /* text-align: left; */
+    padding-left: 0;
+}
+div.bhoechie-tab-menu div.list-group>a {
+    text-align: center;
+}	
+}
+
+
+

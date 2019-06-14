@@ -1,0 +1,32 @@
+#exam-content h1 {
+	text-align: center;
+	line-height: 1.5;
+	margin: 10px 0;
+}
+#exam-content ul {
+	padding: 0;
+	margin: 10px 0;
+	list-style: none;
+}
+#exam-content ul > li {
+	margin: 0;
+	padding: 0;
+}
+#exam-content .progress {
+	margin: 0;
+}
+#exam-content label {	
+	display: block;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 0px;
+    background-color: #fff;
+}
+#exam-content label:hover, #exam-content label:active, #exam-content label:focus {
+	color: #fff;
+	background-image: linear-gradient(to bottom,#fff 0,#f2dede 100%);
+	border: 2px solid #112A40;
+}
+
+
+

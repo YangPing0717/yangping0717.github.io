@@ -1,0 +1,67 @@
+img {max-width:100% !important}
+
+#pool {}
+
+#pool .direction    {margin:10px auto; font-size:20px; color:#333; font-weight:bold}
+
+    #pool .body     {overflow:hidden; min-height:0; position:relative}
+
+        #pool .mock {margin-top:10px; padding:30px 45px 40px 45px; background:#fff; border:2px solid #ccc; border-radius:5px}
+        #pool .mock .sn {font-size:20px; font-weight:bold; color:#fff; text-align:center; line-height:42px; width:42px; height:42px; border-radius:50%; background:#007238}
+        #pool .body > .note         {font-size:20px; color:#333}
+        #pool .body > .note.half    {float:left; width:50%; line-height:1.5; word-break:break-all; padding:0 10px 10px 10px}
+
+        #pool .body > .itemPanel      {}
+        #pool .body > .itemPanel.half {}
+
+    #pool .body .itemBox    {}
+        #pool .body .controlBox {text-align:right; margin-top:40px; padding:20px 0}
+            #pool   .controlBox .btn {min-width:auto; padding:10px 30px !important}
+            #pool   .controlBox .btn+.btn {margin-left:15px}
+
+#pool .partName {position:relative; height:80px; padding:20px 0; background:url(/imgs/main-header-info-bg.png); border-top:1px solid #eee; border-bottom:3px solid #d2d2d2; color:#004d40; font-size:25px; font-weight:bold}
+#pool .partName .container  {position:relative}
+#pool .partName .counter    {position:absolute; top:0; right:0; z-index:99; width:140px; text-align:center; display:none; padding:0 15px; background:#fff; border:2px solid #004d40}
+    #pool .partName .counter .remain {display:inline-block; font-size:12px}
+    #pool .partName .counter .text   {display:inline-block; }
+
+#pool .questionBox {margin-bottom:10px}
+    #pool .questionBox .snBox {float:left; width:60px}
+    #pool .questionBox .question {overflow:hidden; color:#333; font-size:25px}
+
+#pool .optionBox    {margin-left:60px; overflow:hidden}
+#pool .optionBox ul {padding:0; margin:0; list-style:none}
+    #pool .option         {color:#000; font-size:20px; border:3px solid #ccc; border-radius:5px; cursor:pointer}
+    #pool .option+.option {margin-top:10px}
+
+    #pool .option .lab        {padding:5px 16px 5px 16px; margin:2px; font-weight:bold}
+    #pool .option .opt        {float:left}
+    #pool .option .optTxt     {padding-left:10px; overflow:hidden}
+    #pool .option .lab:before {margin-top:5px; float:left; width:20px; height:20px; margin-right:10px; content:''; background:url('/imgs/ui-radio.png') no-repeat center; background-size:cover}
+
+    #pool .option.active  {border-color:#3c6ae1}
+    #pool .option.active .lab {background-color:#b2d8f3;}
+
+    #pool .option.active .lab:before {background:url('/imgs/ui-radio_active.png') no-repeat center; background-size:cover}
+
+    #pool .active .info {position:absolute; top:0; left:0; padding-top:35px}
+    #pool .active .info:before {position:absolute; top:5px; left:0; font:normal normal normal 14px/1 FontAwesome; content:"\f028"; font-size:28px; color:#999; animation:blinker 1.75s linear infinite}
+
+        #pool .active .info .coundown {display:none; color:#d70c19; font-weight:bold}
+
+#pool .sn {float:left}
+#pool .mock {min-height:400px}
+
+    .listening .intro {}
+    .listening .intro .question {font-size:26px; line-height:1.75}
+
+    .single           {position:relative; overflow:hidden}
+    .single + .single {margin-top:30px}
+        .listening .single {padding-left:35px}
+
+    .photograph                 {padding-left:35px; position:relative; overflow:hidden}
+    .photograph + .photograph   {margin-top:30px}
+
+@keyframes blinker {  
+  50% {opacity:0;}
+}

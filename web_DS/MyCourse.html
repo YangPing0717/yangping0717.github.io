@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	  
+	
 <link rel="shortcut icon" href="assets/img/favicon.ico">
 <link rel="bookmark" href="assets/img/favicon.ico"/>
 <link rel="apple-touch-icon" href="assets/img/icon_DS.png">
@@ -22,14 +22,14 @@
 	<link href="assets/css/fontawesome-all.css" rel="stylesheet">
 	<link href="assets/css/style_icomoon.css" rel="stylesheet">
 	<link href="assets/css/material-icons.css" rel="stylesheet">
-	  
+	
 	<!-- timeline -->
 	<link rel="stylesheet" href="assets/css/style_timeline.css">
 	<!-- sidebar -->	
 	<link rel="stylesheet" href="assets/css/style_sidebar.css">
 	<!-- hamburger btn -->
 	<link rel="stylesheet" href="assets/css/style_ham.css">
-	  
+	
 	<link rel="stylesheet" href="assets/css/ds_1.css" />
 	<link rel="stylesheet" href="assets/css/ds_2.css" />
 
@@ -93,9 +93,9 @@
 }
 
 </style>  
-	  
-	  
-  </head>
+	
+	
+</head>
 
 <body class="">
 <div class="bgtoeic">
@@ -224,6 +224,32 @@
   <div class="carousel-inner">
     <div class="carousel-item active">
 <div class="">
+
+<div class="card mb-2 remindbook" id="remindbook">
+    <div class="card-body">
+        <div class="float-right text-right">
+            <img class="card-img-top photo" src=".." alt="">
+            <div class="teahername mt-1">Wilson Chen</div>
+        </div>
+    <h5 class="card-title">2018-02-03 (週五) 19:00<br /><span class="sub">Level 2 課程 - Unit 4</span></h5>
+    <button type="button" class="btn btn-secondary btn-cancel" onclick="hidecard();">取消預約</button>
+    <button type="button" class="btn btn-primary">確定預約課程 <i class="material-icons">event_available</i></button>
+    
+</div>
+</div>
+
+<div class="card mb-2 remindbook" >
+        <div class="card-body">
+            <div class="float-right text-right">
+                <img class="card-img-top photo" src=".." alt="">
+                <div class="teahername mt-1">Amy Chen</div>
+            </div>
+        <h5 class="card-title">2018-02-15 (週三) 20:00<br /><span class="sub">Level 5 課程 - Unit 14</span></h5>
+        <button type="button" class="btn btn-secondary btn-cancel">取消預約</button>
+        <button type="button" class="btn btn-primary ">確定預約課程 <i class="material-icons">event_available</i></button>
+    </div>
+    </div>
+
   <div class="card mb-2">
 	  <div class="card-body">
 		  <div class="float-right text-right">
@@ -309,8 +335,8 @@
 <footer class="container cpyright">
 <div class="row">	
 <div class="col px-3 px-sm-0">
-	<h5 class="d-none d-sm-block">Copyright &#169; 2018 by <a href="http://www.language-center.com.tw/" target="_blank">ELITE</a> International Education Services. All rights reserved.</h5>
-	<h5 class="d-block d-sm-none text-center">&#169; 2018 <a href="http://www.language-center.com.tw/" target="_blank">ELITE</a></h5>
+	<h5 class="d-none d-sm-block">Copyright &#169; <a href="http://www.language-center.com.tw/" target="_blank">ELITE</a> International Education Services. All rights reserved.</h5>
+	<h5 class="d-block d-sm-none text-center">&#169;  <a href="http://www.language-center.com.tw/" target="_blank">ELITE</a></h5>
 </div></div>	
 </footer>
 
@@ -499,8 +525,6 @@
 <!-- sidebar -->	
 <script type="text/javascript">
 	$(document).ready(function () {
-
-
 		$('#sidebarCollapse').on('click', function () {
 			$('#sidebar, #content').toggleClass('active');
 			$('.collapse.in').toggleClass('in');
@@ -508,6 +532,28 @@
 		});
 	});
 </script>
-	
+
+<!-- <script>
+$(document).ready(function(){
+    $(".btn-cancel").click(function(){
+        $(".remindbook").hide();
+    });
+});
+</script> -->
+
+
+<script>
+function hidecard(){
+    let divElement=document.getElementById('remindbook');
+    divElement.className='hidecard';
+    // divElement.style.display='none';
+}
+</script>
+
+
+
+
+
+
 </body>
 </html>

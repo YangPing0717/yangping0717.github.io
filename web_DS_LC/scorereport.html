@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+<html lang="zh-Hans-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	  
+		<link rel="shortcut icon" href="assets/img/favicon.ico">
+		<link rel="bookmark" href="assets/img/favicon.ico"/>
+		<link rel="apple-touch-icon" href="assets/img/icon_DS.png">
+		
+		<meta property="og:title" content="DanSummit" />
+		<meta property="og:description" content="DanSummit" />
+		<meta property="og:image" content="assets/img/share_img_DS.jpg">
+		<meta name="keywords" content="DanSummit, Education, 菁英" />
+
+		<title>DanSummit - 学习纪录</title>
+
+	<!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+	
+	<!-- iconfont -->
+	<link href="assets/css/all.css" rel="stylesheet">
+	<link href="assets/css/style_icomoon.css" rel="stylesheet">
+	<link href="assets/css/material-icons.css" rel="stylesheet">
+	  
+	<!-- timeline -->
+	<link rel="stylesheet" href="assets/css/style_timeline.css">
+	<!-- sidebar -->	
+	<link rel="stylesheet" href="assets/css/style_sidebar.css">
+	<!-- hamburger btn -->
+	<link rel="stylesheet" href="assets/css/style_ham.css">
+	<!-- select --> 
+	<!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">-->
+  <link rel="stylesheet" href="assets/css/bootstrap-select.css">
+	  
+	<link rel="stylesheet" href="assets/css/ds_1.css" />
+	<link rel="stylesheet" href="assets/css/ds_2.css" />
+	<link rel="stylesheet" href="assets/css/voca.css" />
+	<link rel="stylesheet" href="assets/css/voca_modal.css" />
+	<link rel="stylesheet" href="assets/css/share.min.css">
+	<link rel="stylesheet" href="assets/css/score.css" />
+  <link rel="stylesheet" href="assets/css/animate.css" />
+
+<style>
+.background {
+	position: absolute; 
+	top: -3%; 
+	left: -3%; 
+	width: 106%; 
+	height: 106%;
+	z-index: -1;
+}
+.bg_po {
+	background-color: #dacdf3;
+	/*background: url(assets/images/background.jpg) no-repeat center center;
+	background-size: cover, cover;*/
+}
+.cloud {
+	position: absolute; 
+	top: 0; 
+	left: 0; 
+	width: 100%; 
+	height: 100%;
+	z-index: 2;
+	opacity: 1;
+}
+.cloud0{
+	background: url(assets/img/3-0.svg) no-repeat center center;
+	background-size: cover, cover;
+	top: 1%; 
+	left: -1%;
+}
+.cloud1{
+	background: url(assets/img/3-1.svg) no-repeat center center;
+	background-size: cover, cover;
+}
+.cloud2{
+	background: url(assets/img/3-2.svg) no-repeat center center;
+	background-size: cover, cover;
+}
+.cloud3{
+	background: url(assets/img/3-3.svg) no-repeat center center;
+	background-size: cover, cover;
+}
+.cloud4{
+	background: url(assets/img/3-4.svg) no-repeat center center;
+	background-size: cover, cover;
+	-webkit-filter: drop-shadow(0px 10px 5px rgba(0,0,0,0.3));      
+    filter: drop-shadow(0px 10px 5px rgba(0,0,0,0.3)); 
+}
+.cl_smoo_1 {
+	opacity: .4;
+	/*-webkit-filter: saturate(8); 
+    filter: saturate(8);*/
+}
+.cl_smoo_2 {
+	opacity: .5;
+}
+.cl_smoo_3 {
+	opacity: .8;
+}
+
+</style>  
+	  
+	  
+  </head>
+
+<body class="">
+<div class="bgtoeic">
+<div class="bg_purple background ">
+	<div class=" cloud cloud0"></div>
+	<div class=" cloud cloud1"></div>
+	<div class=" cloud cloud2"></div>
+	<div class=" cloud cloud3"></div>
+	<div class=" cloud cloud4"></div>
+</div>
+</div>
+	
+<div class="container">
+	<div class="row header px-3 px-sm-0">
+		<div class="col col-12 col-md-12 px-0 school">
+				<img src="assets/img/logo_DS_e_lc_record.svg" alt=""/>
+		</div>
+	</div>	
+</div>	
+
+<div class="container scorereport">
+	<div class="row">
+		<div class="col-2 p-0">
+			<div class="nav flex-column nav-pills sticky-top" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+					<div class="userid">
+						<div class="photo"><i class="material-icons">perm_identity</i></div>
+						<div class="username"><span class="">用户名</span>135123646<br><span>姓名</span>陈超群</div>
+					</div>
+				<a class="nav-link active" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true">
+					<i class="far fa-calendar-alt"></i> 学习活动纪录
+				</a>
+				<a class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false">
+					<i class="fas fa-chart-line"></i> 阶段性测试
+				</a>
+				<a class="nav-link " id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab" aria-controls="v-pills-messages" aria-selected="false">
+					<i class="fas fa-trophy"></i> 综合成效
+				</a>
+				<!-- <a class="nav-link unfinish" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab" aria-controls="v-pills-settings" aria-selected="false">
+					<div class="discrip">课后复习</div>
+					<div class="discrip">预计完成日期 <span>11.01</span></div>
+					<i class="far fa-edit"></i> 回家作业 
+					<div>( 约 10 mins )</div>
+				</a> -->
+			</div>
+		</div>
+
+		<div class="col-10 p-0">
+			<div class="tab-content" id="v-pills-tabContent">
+				<div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
+						<div class="dropdown">
+							<button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown" title="" data-placement="" ><span>Level</span><span class="caret"></span></button>
+							<ul class="dropdown-menu">
+								<li><a href="#">Level 1</a></li>
+								<li><a href="#">Level 2</a></li>
+								<li><a href="#">Level 3</a></li>
+								<li><a href="#">Level 4</a></li>
+								<li><a href="#">Level 5</a></li>
+							</ul>
+						</div>
+						<!-- 卡始 -->
+						<div class="row cardbox mt-2">
+										<div class="card">
+											<div class="card-body">
+												<div class="float-right text-right">
+													<div class="percent">88%</div>
+												</div>
+											<h5 class="card-title">背单词</h5>
+											<div class="text">
+													应学会<span>80</span><br />
+													已学会<span>70</span><br />
+													未学会<span>10</span>
+											</div>
+										</div>
+										</div>
+										
+										<div class="card">
+											<div class="card-body">
+												<div class="float-right text-right">
+													<div class="percent down">58%</div>
+												</div>
+											<h5 class="card-title">视频跟读</h5>
+											<div class="text">
+													应完成<span>15</span>个<br />
+													已完成<span>7</span>个<br />
+													未完成<span>8</span>个
+											</div>
+										</div>
+										</div>
+										
+										<div class="card">
+											<div class="card-body">
+												<div class="float-right text-right">
+													<div class="percent">96%</div>
+												</div>
+											<h5 class="card-title">课后测试</h5>
+											<div class="text">
+													应测试<span>15</span>份<br />
+													已测试<span>14</span>份<br />
+													未测试<span>1</span>份
+											</div>
+										</div>
+										</div>
+										
+										<div class="card">
+											<div class="card-body">
+												<div class="float-right text-right">
+													<div class="percent">92%</div>
+												</div>
+											<h5 class="card-title">课后作业</h5>
+											<div class="text">
+												应缴交<span>15</span>份<br />
+												已缴交<span>14</span>份<br />
+												已迟交<span>3</span>份<br />
+												未缴交<span>1</span>
+											</div>
+										</div>
+										</div>
+									</div>
+									<!-- 卡完 -->
+									<div class="table-responsive mt-4">
+										<table class="table table-striped">
+											<thead>
+												<tr>
+													<th scope="col">等级</th>
+													<th scope="col">单元</th>
+													<th scope="col">单词(应学会)</th>
+													<th scope="col">单词(已学会)</th>
+													<th scope="col">视频跟读</th>
+													<th scope="col">课后测试</th>
+													<th scope="col">课后作业</th>
+													<th scope="col">完成度(%)</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<th scope="row">Level 1</th>
+													<td>Unit 1</td>
+													<td class="vocab">10</td>
+													<td>未背诵</td>
+													<td class="video">未阅读</td>
+													<td class="test" data-toggle="modal" data-target="#Modal_score">未测试</td>
+													<td class="hw">未缴交</td>
+													<td>0</td>
+												</tr>
+												<tr>
+													<th scope="row">Level 1</th>
+													<td>Unit 2</td>
+													<td class="vocab">10</td>
+													<td>未测试</td>
+													<td class="video">阅读中</td>
+													<td class="test" data-toggle="modal" data-target="#Modal_score">未测试</td>
+													<td class="hw">批改中</td>
+													<td>25</td>
+												</tr>
+												<tr>
+													<th scope="row">Level 1</th>
+													<td>Unit 3</td>
+													<td class="vocab">8</td>
+													<td>0</td>
+													<td class="video">已完成</td>
+													<td class="test" data-toggle="modal" data-target="#Modal_score">85</td>
+													<td class="hw">退回重写</td>
+													<td>75</td>
+												</tr>
+												<tr>
+														<th scope="row">Level 1</th>
+														<td>Unit 4</td>
+														<td class="vocab">9</td>
+														<td>8</td>
+														<td class="video">已完成</td>
+														<td class="test" data-toggle="modal" data-target="#Modal_score">90</td>	
+														<td class="hw">B+</td>
+														<td>100</td>
+													</tr>
+											</tbody>
+										</table>
+									</div>
+						
+				</div>
+				<div class="tab-pane fade " id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
+					<!-- 卡始 -->
+					<div class="lc_progress phased">	
+						<div class="row cardbox">
+							<div class="card">
+								<div class="card-body">
+								<h5 class="card-title">阶段性测试记录</h5>
+								<div class="chart animated zoomIn slower">
+									<div class="chartfix">
+										<div id="highcharts-Bl7TCfnPk"><script src="https://cloud.highcharts.com/inject/Bl7TCfnPk/" defer="defer"></script></div>
+									</div>								
+								</div>
+								<!-- <div class="standard">应学会<span>80</span>单词</div> -->
+							</div>
+							<div class="certificate">
+								<i class="fas fa-award"></i>
+								<div class="text">平均得分</div>
+								<div class="num">92<span>分</span></div>	
+							</div>
+							</div>
+							
+							<!-- <div class="card">
+								<div class="card-body">
+								<h5 class="card-title">视频跟读</h5>
+								<div class="chart">
+									<div class="donut" id="highcharts-5xwHN8YCm"><script src="https://cloud.highcharts.com/inject/5xwHN8YCm/" defer="defer"></script></div>
+								</div>
+								<div class="standard">应完成<span>20</span>个视频</div>
+							</div>
+							</div> -->
+						</div>
+					</div>
+					<!-- 卡完 -->
+					<div class="table-responsive mt-4 phased_table">
+							<table class="table table-striped">
+								<thead>
+									<tr>
+										<th scope="col">程度</th>
+										<th scope="col">测验名称</th>
+										<th scope="col">测验日期</th>
+										<th scope="col">成绩</th>
+										<th scope="col">进步</th>
+										<th scope="col">成绩单</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<th scope="row">-</th>
+										<td>摸底测试</td>
+										<td>2018-06-30</td>
+										<td>75</td>
+										<td>-</td>
+										<td class="test" data-toggle="modal" data-target="#Modal_score"></td>
+									</tr>
+									<tr>
+										<th scope="row">Level 3</th>
+										<td>Unit 1-8 阶段性测试</td>
+										<td>2018-07-30</td>
+										<td>80</td>
+										<td>+5</td>
+										<td class="test" data-toggle="modal" data-target="#Modal_score"></td>
+									</tr>
+									<tr>
+										<th scope="row">Level 3</th>
+										<td>Unit 9-16 阶段性测试</td>
+										<td>2018-08-30</td>
+										<td>90</td>
+										<td>+10</td>
+										<td class="test" data-toggle="modal" data-target="#Modal_score"></td>
+									</tr>
+									<tr>
+										<th scope="row">Level 3</th>
+										<td>Unit 17-25 阶段性测试</td>
+										<td>2018-09-30</td>
+										<td>75</td>
+										<td>-15</td>
+										<td class="test" data-toggle="modal" data-target="#Modal_score"></td>	
+										</tr>
+								</tbody>
+							</table>
+						</div>
+				</div>
+
+
+				<div class="tab-pane fade " id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">
+					<div class="row totalreport mr-0 ml-0">
+						<div class="col-4">
+							<div class="ds_logo"><img src="assets/img/logo_DS_e_CE.svg" alt="" ></div>
+							<div class="title">综合成效分析</div>
+							<div class="text">
+								<div><span><i class="fas fa-id-badge"></i> 姓名</span><br>陈超群</div>
+								<div><span><i class="far fa-calendar-check"></i> 统计日期</span><br>2018-10-22</div>
+							</div>
+							<div id="share-2"></div>
+						</div>
+						<div class="col line_l">
+							<!-- 卡始 -->
+							<div class="row lc_progress">	
+								<div class="certificate">
+									<i class="fas fa-award"></i>
+									<div class="text">达成率</div>
+									<div class="num">88<span>%</span></div>	
+								</div>
+								<div class="col cardbox">
+									<div class="card line_b">
+										<div class="card-body">
+											<h5 class="card-title">背单词</h5>
+											<div class="chart animated zoomIn slower">
+													<div class="donut" id="highcharts-qjYNpIRlb"><script src="https://cloud.highcharts.com/inject/qjYNpIRlb/" defer="defer"></script></div>	
+													<div class="standard">应学会<span>80</span>单词</div>
+											</div>
+									</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="row lc_progress">	
+								<div class="certificate">
+									<i class="fas fa-award"></i>
+									<div class="text">完成率</div>
+									<div class="num">80<span>%</span></div>	
+								</div>
+								<div class="col cardbox">
+									<div class="card line_b">
+										<div class="card-body chartcolumn"> 
+											<h5 class="card-title">视频跟读</h5>
+											<div class="chart animated zoomIn slower">
+												<div class="c_col_trans" id="highcharts-762vb2Fl2"><script src="https://cloud.highcharts.com/inject/762vb2Fl2/" defer="defer"></script></div>	
+											</div>
+									</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="row lc_progress">	
+								<div class="certificate">
+									<i class="fas fa-award"></i>
+									<div class="text">完成率</div>
+									<div class="num">96<span>%</span></div>	
+								</div>
+								<div class="col cardbox">
+									<div class="card line_b">
+										<div class="card-body ">
+										<h5 class="card-title">回家作业</h5>
+										<div class="chart animated zoomIn slower">
+												<div class="donut" id="highcharts-HwKwVXt_B"><script src="https://cloud.highcharts.com/inject/HwKwVXt_B/" defer="defer"></script></div>
+												<div class="standard">
+													应缴交<span>80</span>份<br>
+													已缴交<span>24</span>份<br>
+													迟交<span>2</span>份<br>
+													未缴交<span>1</span>份
+												</div>
+										</div>
+									</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="row lc_progress">	
+								<div class="certificate">
+									<i class="fas fa-award"></i>
+									<div class="text">平均得分</div>
+									<div class="num">92<span>分</span></div>	
+								</div>
+								<div class="col cardbox">
+									<div class="card">
+										<div class="card-body chartcolumn">
+											<h5 class="card-title">课后测试</h5>
+											<div class="chart animated zoomIn slower">
+													<div class="c_col_trans" id="highcharts-pVOUnJA8x"><script src="https://cloud.highcharts.com/inject/pVOUnJA8x/" defer="defer"></script></div>
+											</div>
+									</div>
+									</div>
+								</div>
+							</div>
+							<!-- 卡完 -->
+						</div>
+					</div>
+					
+
+				</div>
+				<!-- <div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab">...</div> -->
+			</div>
+		</div>
+
+
+	</div>
+</div>
+
+
+<footer class="container cpyright">
+	<div class="row">	
+		<div class="col px-3 px-sm-0">
+			<h5 class="d-none d-sm-block">Copyright &#169; <a href="http://www.language-center.com.tw/" target="_blank">ELITE</a> International Education Services. All rights reserved.</h5>
+			<h5 class="d-block d-sm-none text-center">&#169; <a href="http://www.language-center.com.tw/" target="_blank">ELITE</a></h5>
+		</div>
+	</div>	
+</footer>
+
+
+<!-- Modal 課後測驗 成绩报告单 -->
+<div class="modal fade bd-example-modal-lg" id="Modal_score" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	<div class="modal-dialog modal-lg" role="document">
+		<div class="modal-content afterclass_score">
+			<div class="modal-body">
+				<div class="row mb-4">
+					<div class="col-4 imgbox">
+						<img src="assets/img/logo_DS_e_CE.svg" alt="">
+					</div>
+					<div class="col-8 text">
+							<div class="title">课后测验 - 成绩报告单</div>
+							<span>姓名</span>王小明<br>
+							<span>试卷</span>Unit 3 课后测验<br>
+							<span>考试日期</span>2018-10-01
+					</div>
+				</div>
+				<div class="row">
+					<div class="col mt-3">
+							<div class="text-right expand_ans">
+								<a href="#">全部收合</a>
+								<a href="#">全部展开</a>
+							</div> 
+							<div class="table-responsive">
+									<table class="table table-striped">
+										<thead>
+											<tr>
+												<th scope="col">題號</th>
+												<th scope="col">回答</th>
+												<th scope="col">答案</th>
+												<th scope="col">對/錯</th>
+												<th scope="col">題目</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<th scope="row">1</th>
+												<td>A</td>
+												<td>C</td>
+												<td class="incorrect"></td>
+												<td class="open collapsed" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample"><i class="fa" aria-hidden="true"></i></td>
+											</tr>
+											<tr class="collapse fade" id="collapseExample" aria-expanded="false">
+												<td colspan="5" class="question_area">
+													<div class="exbox voice">
+														<div class="qno_a">1</div>
+														<div class="q_text">When I came into the room, I saw him&nbsp;<u>&nbsp; &nbsp;&nbsp;</u><u>&nbsp; &nbsp;&nbsp;</u>&nbsp;a model house.</div>
+														<div class="options clearfix vertical" data-mock-type="listening" data-mock-mock="6">
+															<form data-toggle="buttons" class="btn-group-vertical" action="" method="POST" data-success="answerSuccess">
+																<label class="btn correct"><input class="option" type="radio" name="answer" data-code="A" data-show-all="true" value="Company receptionist">A. something</label>
+																<label class="btn"><input class="option" type="radio" name="answer" data-code="B" data-show-all="true" value="Researcher">B. story</label>
+																<label class="btn"><input class="option" type="radio" name="answer" data-code="C" data-show-all="true" value="Sales assistant">C. like</label>
+																<label class="btn "><input class="option" type="radio" name="answer" data-code="D" data-show-all="true" value="Help desk technician">D. begin</label>
+															</form>
+														</div>
+													</div>
+													<div class="answer">正解 <span>A</span> 您回答 <span class="wrong">C</span></div> 
+												</td>
+											</tr>
+											<tr>
+												<th scope="row">2</th>
+												<td>A B A A B</td>
+												<td>A B A A B</td>
+												<td class="correct"></td>
+												<td class="open collapsed" data-toggle="collapse" data-target="#collapseExample2" aria-expanded="false" aria-controls="collapseExample2"><i class="fa" aria-hidden="true"></i></td>
+											</tr>
+											<tr class="collapse fade" id="collapseExample2" aria-expanded="false">
+													<td colspan="5" class="question_area">
+															<div class="row">  
+
+																<div class="col-6 note" role="note">
+																	<div>Let me tell you&nbsp;<u>&nbsp; &nbsp;&nbsp;</u><u>6&nbsp; &nbsp;&nbsp;</u>&nbsp;about my school day. Today is Friday. I have five lessons in the morning and one lesson in the afternoon. Lessons <u>&nbsp; &nbsp; 7</u><u>&nbsp; &nbsp;&nbsp;</u> at half past seven. The first lesson is English. I <u>&nbsp; &nbsp; 8</u><u>&nbsp; &nbsp;&nbsp;</u> English. It's interesting. At eight twenty, I have a Science lesson. It's a little difficult. I have Chinese at nine ten. I like Chinese. It's my <u>&#8203;&#8203;&#8203;&#8203;&#8203;&#8203;&#8203;&nbsp; &nbsp; 9</u><u>&nbsp; &nbsp;&nbsp;</u> subject. Then at ten o'clock, I have a Society (社会) lesson. I also like it. At ten to eleven, I have PE. It's boring. We have lunch in the dining hall at half past eleven. Then we have a break (休息) at noon. Lessons begin in the afternoon at two o'clock. I have an Art lesson. At ten to three, we can play games. I always play football with classmates. And at five o'clock, we can go <u>&#8203;&#8203;&#8203;&#8203;&#8203;&#8203;&#8203;&nbsp; &nbsp; 10</u><u>&nbsp; &nbsp;&nbsp;</u>. I often go with my friends.</div>
+																</div>     
+																<div class="col-6 options_rbox2">	
+																<div id="carouselExampleFade2" class="carousel slide carousel-fade" data-ride="carousel" data-interval="false">
+																	<div class="carousel-inner" role="listbox">
+																		<div class="carousel-item active">
+																			<div class="exbox animated fadeInRightBig">
+																			<div class="qno_b">6</div>
+																		<div class="options clearfix vertical" data-mock-type="listening" data-mock-mock="6">
+																		<form data-toggle="buttons" class="btn-group-vertical" action="https://mock.kennylee.tk/answer" method="POST" data-success="answerSuccess">
+																		<label class="btn correct"><input class="option" type="radio" name="answer" data-code="A" data-show-all="true" value="Company receptionist">A. something</label>
+																		<label class="btn"><input class="option" type="radio" name="answer" data-code="B" data-show-all="true" value="Researcher">B. story</label>
+																		<label class="btn"><input class="option" type="radio" name="answer" data-code="C" data-show-all="true" value="Sales assistant">C. like</label>
+																		<label class="btn"><input class="option" type="radio" name="answer" data-code="D" data-show-all="true" value="Help desk technician">D. begin</label>
+																		</form></div>
+																			</div>
+																		</div>
+																		<div class="carousel-item">
+																			<div class="exbox animated fadeInRightBig">
+																			<div class="qno_b">7</div>
+																		<div class="options clearfix vertical" data-mock-type="listening" data-mock-mock="6">
+																		<form data-toggle="buttons" class="btn-group-vertical" action="https://mock.kennylee.tk/answer" method="POST" data-success="answerSuccess">
+																		<label class="btn"><input class="option" type="radio" name="answer" data-code="A" data-show-all="true" value="Company receptionist">A. upset</label>
+																		<label class="btn correct"><input class="option" type="radio" name="answer" data-code="B" data-show-all="true" value="Researcher">B. upsetting</label>
+																		<label class="btn"><input class="option" type="radio" name="answer" data-code="C" data-show-all="true" value="Sales assistant">C. disappointed</label>
+																		<label class="btn "><input class="option" type="radio" name="answer" data-code="D" data-show-all="true" value="Help desk technician">D. excited</label>
+																		</form></div>
+																			</div>
+																		</div>
+																		<div class="carousel-item">
+																			<div class="exbox animated fadeInRightBig">
+																			<div class="qno_b">8</div>
+																		<div class="options clearfix vertical" data-mock-type="listening" data-mock-mock="6">
+																		<form data-toggle="buttons" class="btn-group-vertical" action="https://mock.kennylee.tk/answer" method="POST" data-success="answerSuccess">
+																		<label class="btn correct"><input class="option" type="radio" name="answer" data-code="A" data-show-all="true" value="Company receptionist">A. upset</label>
+																		<label class="btn"><input class="option" type="radio" name="answer" data-code="B" data-show-all="true" value="Researcher">B. upsetting</label>
+																		<label class="btn"><input class="option" type="radio" name="answer" data-code="C" data-show-all="true" value="Sales assistant">C. disappointed</label>
+																		<label class="btn "><input class="option" type="radio" name="answer" data-code="D" data-show-all="true" value="Help desk technician">D. excited</label>
+																		</form></div>
+																			</div>
+																		</div>
+																	<div class="carousel-item">
+																			<div class="exbox animated fadeInRightBig">
+																			<div class="qno_b">9</div>
+																		<div class="options clearfix vertical" data-mock-type="listening" data-mock-mock="6">
+																		<form data-toggle="buttons" class="btn-group-vertical" action="https://mock.kennylee.tk/answer" method="POST" data-success="answerSuccess">
+																		<label class="btn correct"><input class="option" type="radio" name="answer" data-code="A" data-show-all="true" value="Company receptionist">A. promise</label>
+																		<label class="btn"><input class="option" type="radio" name="answer" data-code="B" data-show-all="true" value="Researcher">B. meeting</label>
+																		<label class="btn"><input class="option" type="radio" name="answer" data-code="C" data-show-all="true" value="Sales assistant">C. wish</label>
+																		<label class="btn "><input class="option" type="radio" name="answer" data-code="D" data-show-all="true" value="Help desk technician">D. mistake</label>
+																		</form></div>
+																			</div>
+																		</div>
+																	<div class="carousel-item">
+																			<div class="exbox animated fadeInRightBig">
+																			<div class="qno_b">10</div>
+																		<div class="options clearfix vertical" data-mock-type="listening" data-mock-mock="6">
+																		<form data-toggle="buttons" class="btn-group-vertical" action="https://mock.kennylee.tk/answer" method="POST" data-success="answerSuccess">
+																		<label class="btn"><input class="option" type="radio" name="answer" data-code="A" data-show-all="true" value="Company receptionist">A. happen</label>
+																		<label class="btn correct"><input class="option" type="radio" name="answer" data-code="B" data-show-all="true" value="Researcher">B. take place</label>
+																		<label class="btn"><input class="option" type="radio" name="answer" data-code="C" data-show-all="true" value="Sales assistant">C. happening</label>
+																		<label class="btn "><input class="option" type="radio" name="answer" data-code="D" data-show-all="true" value="Help desk technician">D. happened</label>
+																		</form></div>
+																			</div>
+																		</div>
+																	</div>
+																	<div class="text-right"><hr>
+																		<button type="button" class="btn btn-secondary mr-2" href="#carouselExampleFade2" data-slide="prev">Prev</button>
+																		<button type="button" class="btn btn-primary" href="#carouselExampleFade2" data-slide="next">Next</button>
+																	</div>
+																</div>
+																</div>
+															</div>
+															<div class="col pr-0 answer"> 
+																正解<span><em>A</em><em>B</em><em>A</em><em>A</em><em>B</em></span>
+																您回答<span><em>A</em><em>B</em><em>A</em><em>A</em><em class="wrong">C</em></span>
+															</div>
+													</td>
+												</tr>
+
+										</tbody>
+									</table>
+								</div>
+
+					</div>
+				</div>
+
+				<div class="scorenumber"><div class="number">90<span>%</span></div></div>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="l_btn" data-dismiss="modal" aria-label="Close"><i class="fas fa-sign-out-alt"></i> 離開</button>
+			</div>
+		</div>
+
+	</div>
+</div>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+	
+
+	
+<!--  parallax BG -->
+<!--<script src="https://code.jquery.com/jquery-1.11.3.min.js" type="text/javascript" charset="utf-8"></script>-->
+<script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.17.0/TweenMax.min.js"></script>
+<script src="assets/js/jquery-parallax.js"></script>
+<script>
+	$( document ).mousemove( function( e ) {
+		$( '.background' ).parallax( -50, e );
+		$( '.cloud0' )	  .parallax( -50, e );
+		$( '.cloud1' )	  .parallax( 20	, e );
+		$( '.cloud2' )	  .parallax( 120, e );
+		$( '.cloud3' )	  .parallax( 160, e );
+		$( '.cloud4' )	  .parallax( 350, e );
+	});
+</script>
+
+<!-- hamburger btn -->
+<!--<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>-->
+<script src="assets/js/index_ham.js"></script>	
+	
+<!-- sidebar -->	
+<script type="text/javascript">
+	$(document).ready(function () {
+
+
+		$('#sidebarCollapse').on('click', function () {
+			$('#sidebar, #content').toggleClass('active');
+			$('.collapse.in').toggleClass('in');
+			$('a[aria-expanded=true]').attr('aria-expanded', 'false');
+		});
+	});
+</script>
+
+<!-- select --> 
+<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>-->
+<script src="assets/js/bootstrap-select.js"></script>	
+	
+<script>
+$(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+})
+</script>
+
+<!--  dropdown-menu btn  -->
+<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>-->
+<script>
+	$(".dropdown-menu li a").click(function(){
+		$(this).parents(".dropdown").find('.btn').html($(this).text() + ' <span class="caret"></span>');
+		$(this).parents(".dropdown").find('.btn').val($(this).data('value'));
+	});
+</script>
+<!-- dropdown-menu btn 完  -->	
+
+<!-- 微信分享 -->
+<script src="assets/js/social-share.js"></script>
+<script src="assets/js/qrcode.js"></script>
+<script>
+	socialShare('#share-2', {sites: ['qzone', 'qq', 'weibo','wechat']});
+</script>
+
+
+	
+</body>
+</html>

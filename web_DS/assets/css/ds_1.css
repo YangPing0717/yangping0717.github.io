@@ -268,6 +268,9 @@ padding: 8px 26px;
     background-color: #ffffff;
     border-color: #ff3224;
 }
+.btn-secondary:not(:disabled):not(.disabled).active:focus, .btn-secondary:not(:disabled):not(.disabled):active:focus, .show>.btn-secondary.dropdown-toggle:focus, .btn-secondary:focus {
+    box-shadow: 0 0 0 0rem rgba(255, 255, 255, 0);
+}
 .reserved:after {
     content: '確定約課';
 }

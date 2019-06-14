@@ -1,0 +1,84 @@
+
+// 變數：$
+$width: 100%;
+$buttonNumber: 6;
+$maincolor:#00E3B6;
+$baseLineHeight: 10px;
+$maincolorhover:#055C4A;
+
+// 被繼承：%，搭配 @extend
+%aButton{
+  text-decoration: none;
+  display: block;
+  width: 100%;
+  text-align: center;
+  background: $maincolor;
+  color: #fff;
+  font-weight: 700;
+}
+
+@function line($count: 1){  // 1 為預設值，()裡不寫就是 1
+  @return $baseLineHeight * $count;
+}
+// 多個參數，例如樣式 .dd 
+@function line_2($count, $baseLine){  
+  @return $baseLine * $count;
+}
+
+html, body{
+  margin: 0;
+  padding: 0;
+}
+.aa{
+  padding: line(2)
+}
+.bb{
+  padding: line()
+}
+.cc{
+  padding: line(3)
+}
+.dd{
+  padding: line_2(3, 12px)
+}
+
+
+.tadList{
+  header{
+  ul{
+    list-style: none;
+    font-size: 0px;
+    -webkit-padding-start: 0px;
+  }
+  li{
+    display: inline-block;
+    font-size: 16px;
+    // width: calc(100% / 6);     // 等於下一行，套進 sass 變數
+    width: $width/$buttonNumber;
+    > a{
+      @extend %aButton;
+      line-height: 56px;
+      font-size: 24px;
+      transition: all .3s ease-out;
+      }
+    > a:hover{
+      background: $maincolorhover;
+      color: $maincolor;
+      }
+    }
+  }
+}
+
+.olive{
+  @extend %aButton;
+}
+.timothee{
+  @extend %aButton;
+}
+
+
+.template{
+  list-style: circle;
+  grid-template-columns: auto;
+  grid-template-rows: auto;
+}
