@@ -1,0 +1,14 @@
+.debug-container {
+	background-color: #fff;
+	z-index: 99999;
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: 40%;
+	min-width: 300px;
+	display: none;
+}
+.debug-container > pre.debug {
+	max-height: 200px;
+	overflow-y: auto;
+}

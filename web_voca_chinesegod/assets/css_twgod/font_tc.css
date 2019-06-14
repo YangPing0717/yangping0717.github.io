@@ -1,0 +1,10 @@
+@charset "UTF-8";
+/* CSS Document */
+
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,700,700italic,800,800italic,600italic);
+
+html, body {
+	color: #333;
+	font-family: 'Open Sans', Helvetica, Arial, '微軟正黑體', sans-serif;
+	font-size: 14px;
+}
