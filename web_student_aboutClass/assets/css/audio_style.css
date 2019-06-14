@@ -1,0 +1,154 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  background-color: #4A3275;
+  color: #fff;
+  /*height: 100%;
+  font-family: sans-serif;*/
+}
+.audioprogress {
+	width: 166px;
+    height: 166px;
+    position: relative;
+    left: 8%;
+    /* top: 50%; */
+    transform: translate(-50%, -50%);
+    margin-top: -25%;
+	-webkit-filter: drop-shadow(0px 8px 10px rgba(0, 0, 0, 1));
+    filter: drop-shadow(0px 8px 10px rgba(0, 0, 0, 1));
+}
+.progressCircle {
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.progressCircle circle {
+  transition: stroke-dashoffset 1s linear;
+  backface-visibility: hidden;
+  stroke: #8644FF;
+  stroke-width: 5px;
+  transform-origin: center center;
+}
+.progressCircle .progressbarLoading {
+  backface-visibility: hidden;
+  stroke: #00E3A6;
+  transform: rotate(-90deg);
+  transform-origin: center center;
+}
+.progressbarLoading {
+  transition: all 1s linear;
+}
+.ease-none .progressbarLoading {
+  transition: none;
+}
+.control {
+  background-color: rgba(37,16,74,0.35);
+  color: #fff;
+  margin: 10px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 145px;
+  font-size: 0;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  /*box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.4), 0px 5px 10px rgba(0, 0, 0, 1);*/
+}
+.control > span {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  height: 46px;
+  width: 24px;
+  margin-left: -12px;
+  margin-top: -23px;
+  line-height: 1;
+  transition: 0.5s ease;
+  transform: translateX(-8px);
+}
+.control > span span {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 8px;
+  height: 100%;
+  transition: 0.5s ease;
+  transform-style: preserve-3d;
+  transform-origin: left top;
+}
+.control > span span:first-child {
+  transform: translateX(8px) rotateY(90deg);
+}
+.control > span span:first-child em {
+  left: 0px;
+}
+.control > span span:first-child em:after {
+  content: '';
+  width: 10px;
+  height: 46px;
+  position: absolute;
+  left: -36px;
+  top: -22px;
+  box-shadow: inset 5px 0px 6px 0px rgba(0, 0, 0, 0.3);
+}
+.control > span span:last-child {
+  transform: translateX(-8px) rotateY(90deg);
+  left: 16px;
+}
+.control > span span:last-child em {
+  left: 6px;
+}
+.control.active > span {
+  transform: translateX(0px);
+}
+.control.active > span span:first-child,
+.control.active > span span:last-child {
+  transform: translateX(0px) rotateY(0deg);
+}
+.control i {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  background-color: #0FB;
+}
+.control em {
+  width: 0;
+  height: 0;
+  border-top: 23px solid transparent;
+  border-left: 36px solid #0FB;
+  border-bottom: 23px solid transparent;
+  position: absolute;
+  top: 0;
+  transform: rotateY(-90deg);
+  transform-origin: left top;
+}
+.dashoffset {
+  position: absolute;
+  left: 10px;
+  bottom: 6px;
+  font-size: 20px;
+  opacity: 0.1;
+}
+audio {
+  opacity: 0;
+}
+.audioprogress .progressCircle:hover{
+ 	-webkit-filter: drop-shadow(0px 0px 20px rgba(134,68,255, 1));
+    filter: drop-shadow(0px 0px 20px rgba(134,68,255, 1));
+	transition: all 200ms ease-out;
+	transform: scale(1.1);
+}
+.audioprogress a.control:hover {
+	background-color: rgba(134,68,255,0.3);
+	-webkit-filter: drop-shadow(0px 0px 40px rgba(134,68,255, 1));
+    filter: drop-shadow(0px 0px 40px rgba(134,68,255, 1));
+	transition: all 200ms ease-out;
+	}
