@@ -1,0 +1,201 @@
+@charset "UTF-8";
+/* CSS Document */
+
+/*計畫首頁*/
+.plan_box{
+	font-size: 14px;
+	color:#FFFFFF;
+	background: -webkit-linear-gradient(165deg, #479CB7 0,#286F92 100%);
+    background: -moz-linear-gradient(165deg, #479CB7 0,#286F92 100%);
+    background: -ms-linear-gradient(165deg, #479CB7 0,#286F92 100%);
+    background: -o-linear-gradient(165deg, #479CB7 0,#286F92 100%);
+	background: linear-gradient(to bottom,#479CB7 0,#286F92 100%);
+    box-shadow: 2px 5px 12px rgba(0, 0, 0, 0.4);
+	margin-top: 20px;
+	padding:20px;
+	}
+.plan_box>h1{
+	font-size: 1.65em;
+	font-weight: 600;
+	border-bottom: 1px solid #C1BAB0;
+	margin-bottom: 0px; 
+	text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.9);
+	}
+.cb_in_mtb{
+	margin-top: 20px;
+	margin-bottom: 20px;
+	}
+.cb_in_pl{
+	padding-left: 10px;
+	margin-left: 0px !important;
+	margin-right: 15px;
+	}
+.text_bg_box1{
+	margin-bottom: 5px;
+	}
+.text_bg_box2{
+	background-color:#112A40;
+	padding:5px 10px;
+	margin-top: 8px;
+	}
+
+@media (min-width: 768px){
+.plan_box_h{
+	height: 280px;
+	}
+}
+
+
+/*** 首頁用 custom checkboxes ***/
+
+input[type=checkbox] { display:none; } /* to hide the checkbox itself */
+input[type=checkbox] + label:before {
+  font-family: FontAwesome;
+  display: inline-block;
+}
+
+input[type=checkbox] + label:before { content: "\f096"; color:#fff} /* unchecked icon */
+input[type=checkbox] + label:before { letter-spacing: 10px; font-size: 20px; vertical-align: middle;} /* space between checkbox and label */
+
+input[type=checkbox]:checked + label:before { content: "\f00c"; color:#fff} /* checked icon */
+input[type=checkbox]:checked + label:before { letter-spacing: 10px; vertical-align:middle;} /* allow space for check mark */
+
+
+
+/* BS 修改日期設定 */
+.form-control {
+    display: block;
+    width: 100%;
+    height: 34px;
+    padding: 6px 12px;
+    font-size: 16px;
+    line-height: 1.42857143;
+    color: #112A40;
+	font-weight: 700;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #5bc0de;
+    border-radius: 0px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+}
+.form-control[disabled], .form-control[readonly], fieldset[disabled] .form-control {
+    background-color: #FFF;
+    opacity: 1;
+}
+.form-control:focus {
+    border-color: #00CFFF;
+    outline: 0;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 12px rgba(44,145,255,1);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,0.075),0 0 12px rgba(44,145,255,1);
+}
+.input-group-addon {
+    padding: 6px 10px;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1;
+    color: #112A40;
+    text-align: center;
+    background-color: #FFF;
+    border: 1px solid #5bc0de;
+    border-radius: 0px;
+}
+.input-append.date .add-on i, .input-prepend.date .add-on i, .input-group.date .input-group-addon span {
+    cursor: pointer;
+    width: 18px;
+    height: 14px;
+}
+.datetimepicker table tr td.today, .datetimepicker table tr td.today:hover, .datetimepicker table tr td.today.disabled, .datetimepicker table tr td.today.disabled:hover {
+    background-color: #2C91FF;
+    background-image: -moz-linear-gradient(top,#2C91FF,#1F6FD9);
+    background-image: -ms-linear-gradient(top,#2C91FF,#1F6FD9);
+    background-image: -webkit-gradient(linear,0 0,0 100%,from(#2C91FF),to(#1F6FD9));
+    background-image: -webkit-linear-gradient(top,#2C91FF,#1F6FD9);
+    background-image: -o-linear-gradient(top,#2C91FF,#1F6FD9);
+    background-image: linear-gradient(top,#2C91FF,#1F6FD9);
+    background-repeat: repeat-x;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#2C91FF',endColorstr='#1F6FD9',GradientType=0);
+    border-color: #1F6FD9 #1F6FD9 #1F6FD9;
+    border-color: rgba(0,0,0,0.1) rgba(0,0,0,0.1) rgba(0,0,0,0.25);
+    filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+	color: #fff;
+}
+.datetimepicker table tr td.active, .datetimepicker table tr td.active:hover, .datetimepicker table tr td.active.disabled, .datetimepicker table tr td.active.disabled:hover {
+    background-color: #C22743;
+    background-image: -moz-linear-gradient(top,#C22743,#5E0B0B);
+    background-image: -ms-linear-gradient(top,#C22743,#5E0B0B);
+    background-image: -webkit-gradient(linear,0 0,0 100%,from(#C22743),to(#5E0B0B));
+    background-image: -webkit-linear-gradient(top,#C22743,#5E0B0B);
+    background-image: -o-linear-gradient(top,#C22743,#5E0B0B);
+    background-image: linear-gradient(top,#C22743,#5E0B0B);
+    background-repeat: repeat-x;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#C22743',endColorstr='#5E0B0B',GradientType=0);
+    border-color: #5E0B0B #5E0B0B #002a80;
+    border-color: rgba(0,0,0,0.1) rgba(0,0,0,0.1) rgba(0,0,0,0.25);
+    filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+    color: #fff;
+    text-shadow: 0 -1px 0 rgba(0,0,0,0.25);
+}
+
+
+
+
+
+/*-- 動態 --*/
+.planbox1{
+	-webkit-animation-delay: 1s;
+	}
+.planbox1{
+	-webkit-animation: GOGO1 0.5s ease-out;
+	-webkit-animation-fill-mode: both;
+	}
+	@-webkit-keyframes GOGO1
+	{
+	from {
+	  opacity:0;
+	  transform: translateY(100px);
+    }
+    to {
+      opacity:1;
+	  transform: translateY(0px);
+    }
+	}
+.planbox2{
+	-webkit-animation-delay: 5s;
+	}
+.planbox2{
+	-webkit-animation: GOGO1 0.8s ease-out;
+	-webkit-animation-fill-mode: both;
+	}
+	@-webkit-keyframes GOGO1
+	{
+	from {
+	  opacity:0;
+	  transform: translateY(100px);
+    }
+    to {
+      opacity:1;
+	  transform: translateY(0px);
+    }
+	}
+.planbtn{
+	-webkit-animation-delay: 8s;
+	}
+.planbtn{
+	-webkit-animation: GOGO1 1.5s ease-out;
+	-webkit-animation-fill-mode: both;
+	}
+	@-webkit-keyframes GOGO1
+	{
+	from {
+	  opacity:0;
+	  transform: translateY(100px);
+    }
+    to {
+      opacity:1;
+	  transform: translateY(0px);
+    }
+	}

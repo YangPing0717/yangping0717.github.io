@@ -1,0 +1,13 @@
+@charset "UTF-8";
+/* CSS Document */
+
+@font-face {
+  font-family: simplified_chinese;
+  src: url(../fonts/simplified_chinese.ttf);
+}
+
+html, body {
+	color: #333;
+	font-family: 'simplified_chinese', sans-serif;
+	font-size: 14px;
+}

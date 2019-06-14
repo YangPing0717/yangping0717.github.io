@@ -1,0 +1,72 @@
+
+
+/* 修改 _ 簡繁共用 */
+
+.alert {
+    text-shadow: transparent !important;
+    -webkit-box-shadow: transparent !important;
+    box-shadow: transparent !important;
+}
+.alert-danger {
+    background-image: none;
+    filter: none;
+    background-repeat: repeat-x;
+    border-color: transparent;
+}
+.alert-danger {
+    color: #C22743;
+    background-color: transparent;
+    border-color: transparent;
+    font-size: 1.2em;
+}
+.alert {
+    padding: 15px 0px;
+}
+.debug-alert {
+    padding: 15px;
+    margin: 10px 0;
+    word-wrap: break-word;
+    max-height: 200px;
+    overflow-y: auto;
+}
+.has-success .checkbox-inline{
+    color: #3F251C;
+}
+.table-striped>tbody>tr:nth-child(odd) {
+    background-color: transparent !important;
+}
+.lh_fix {
+    margin-right: 20px;
+}
+#score-detail h2{
+    margin: 10px 20px 10px 0px;
+}
+.dropdown-menu{
+    border-radius: 0px;
+    }
+.def-block {
+    margin-bottom: 0.6em;
+	margin-top: 0.2em;
+}
+
+@media screen and (min-width: 768px){
+.logo2{
+    margin-left: 20px;  
+}
+}
+
+@media screen and (max-width: 768px){
+.word_size {
+    border-bottom: 0px solid #B44057;
+    }
+.word_size {
+    font-size: 3.2em;
+    min-width: 100%;
+    overflow-x: hidden;
+    }
+}
+.pho_mtb {
+    float: none;
+    margin-top: 6px;
+}
+

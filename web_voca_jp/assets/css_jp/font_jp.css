@@ -1,0 +1,9 @@
+.word_block {
+	display: inline-block;
+	text-align: center;
+	margin: 0 3px;
+	line-height: 100%;
+}
+.word_block > .small {
+	font-size: 50%;
+}

@@ -1,0 +1,26 @@
+#lightbox > .window-menu {
+	padding: 15px 0;
+}
+#lightbox > .window-content {
+	font-size: 16px;
+	line-height: 1.4;
+	padding-bottom: 20px;
+}
+#lightbox h2 {
+	margin: 0 0 10px 0;
+	padding: 5px;
+	font-size: 36px;
+	line-height: 1;
+	text-align: center;
+}
+#lightbox > .window-content > ul > li {
+	padding-top: 5px;
+}
+#lightbox > .window-content > ul.list-inline > li > span {
+	display: inline-block;
+	margin-left: 5px;
+	margin-right: 5px;
+}
+#lightbox > .window-content > ul.list-inline > li > span:last-child {
+	margin-right: 0;
+}

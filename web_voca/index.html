@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html hola_ext_inject="ready" lang="zh-Hant-TW">
+
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<title>設定學習計畫書 - 菁英單字記憶庫</title>
+	<!-- jQuery Core File-->
+	<script src="assets/jquery-1.js"></script>
+
+	<!-- jQuery UI Core Files -->
+	<link rel="stylesheet" href="assets/jquery-ui.css">
+	<script src="assets/jquery-ui-1.js"></script>
+
+	<!-- Touch Event Support for jQuery UI (http://touchpunch.furf.com/) -->
+	<script src="assets/jquery.js"></script>
+
+	<!-- Swipe! -->
+	<script src="assets/jquery_003.js"></script>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="assets/bootstrap.css">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="assets/bootstrap-theme.css">
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="assets/bootstrap.js"></script>
+
+	<!-- Dialog JavaScript -->
+	<script src="assets/bootstrap-dialog.js"></script>
+	<link rel="stylesheet" href="assets/bootstrap-dialog.css">
+
+	<!-- Hover to active dropdown submenu -->
+	<script src="assets/hover.js"></script>
+
+	<!-- jQuery Pagination plugin Optimized for bootstrap -->
+	<script src="assets/jquery_002.js"></script>
+	<link rel="stylesheet" type="text/css" href="assets/loading.css">
+	<script>
+		function showLoading() {
+			if ($('#loading-mask').length == 0)
+				$('body').prepend('<div id="loading-mask"></div><div id="loading-img"><div class="pulse"></div></div>');
+		}
+
+		function hideLoading() {
+			if ($('#loading-mask').length == 1)
+				$('#loading-mask, #loading-img').remove();
+		}
+		$(document).on('click', 'a[href!="#"]', function (e) {
+			e.preventDefault();
+			showLoading();
+			window.location.href = $(this).attr('href');
+		});
+	</script>
+
+	<link href="assets/css/bootstrap.min.css" rel="stylesheet" media="screen">
+	<link href="assets/css/bootstrap-datetimepicker.min.css" rel="stylesheet" media="screen">
+	<link type="text/css" rel="stylesheet" href="assets/css/font-awesome.css" />
+	<link type="text/css" rel="stylesheet" href="assets/css/font-awesome.min.css" />
+	<link type="text/css" rel="stylesheet" href="assets/css/style_icomoon.css" />
+
+	<link rel="stylesheet" type="text/css" href="assets/cover.css">
+	<link rel="stylesheet" type="text/css" href="assets/wordcard.css">
+	<link href="assets/css/voca.css" rel="stylesheet" type="text/css">
+	<link href="assets/css/voca_plan.css" rel="stylesheet" type="text/css">
+	<link href="assets/css/lightbox_style.css" rel="stylesheet" type="text/css">
+	<link href="assets/css/font_tc.css" rel="stylesheet" type="text/css">
+
+
+</head>
+
+
+<body class="" style="overflow: auto; padding-right: 0px;" hola-ext-player="1">
+	<div class="head_style">
+		<div class="container hidden-xs hidden-sm">
+			<h3><span><img src="assets/images/logo_elite_tw_w.svg" alt="菁英" class="logo"></span> 菁英單字記憶庫</h3>
+		</div>
+		<div class="container t_align hidden-md hidden-lg">
+			<h3><span><img src="assets/images/logo_elite_tw_w.svg" alt="菁英" class="logo"></span> 菁英單字記憶庫</h3>
+		</div>
+	</div>
+	<div class="container container_tp">
+		<div class="row">
+			<div class="col-sm-12 col-xs-12">
+				<div class="voca_title hidden-xs hidden-sm">設定WebStudent的學習計畫書
+					<div class="b_dish"></div>
+				</div>
+				<div class="voca_title_m t_align hidden-md hidden-lg">設定 WebStudent 的<br/>學習計劃書
+					<div class="b_dish_mobile"></div>
+				</div>
+			</div>
+
+			<div class="col-sm-12 col-xs-12">
+				<div class="voca_title2_m hidden-xs hidden-sm"><span class="glyphicon glyphicon-exclamation-sign v_a_m" aria-hidden="true"></span><span class="v_a_m"> 您沒還沒有設定學習計畫，或者是計畫已經過期。</span></div>
+				<div class="voca_title2_m t_align hidden-md hidden-lg"><span class="glyphicon glyphicon-exclamation-sign v_a_m" aria-hidden="true"></span><span class="v_a_m"> 您沒還沒有設定學習計畫，或者是計畫已經過期。</span></div>
+			</div>
+
+
+			<!--<div class="row">-->
+			<div class="col-xs-12 col-sm-12 col-md-6 hidden-xs hidden-sm planbox1" id="">
+				<div class="plan_box plan_box_h">
+					<h1>制定考試目標</h1>
+					<div class="cb_in_mtb">
+						<label class="checkbox-inline cb_in_pl">
+                <div class="radio_spot"><input id="box1" type="checkbox" /><label for="box1" >TPO較難專業詞彙</label></div>
+					</label>
+					<label class="checkbox-inline cb_in_pl">
+                <div class="radio_spot"><input id="box2" type="checkbox" /><label for="box2" >托福高頻必考詞彙</label></div>
+				</label>
+				<label class="checkbox-inline cb_in_pl">
+                <div class="radio_spot"><input id="box3" type="checkbox" /><label for="box3" >托福進階詞彙</label></div>
+			</label>
+			<label class="checkbox-inline cb_in_pl">
+                <div class="radio_spot"><input id="box4" type="checkbox" /><label for="box4" >GEPT初級</label></div>
+		</label>
+		<label class="checkbox-inline cb_in_pl">
+                <div class="radio_spot"><input id="box5" type="checkbox" /><label for="box5" >GEPT中級</label></div>
+	</label>
+	<label class="checkbox-inline cb_in_pl">
+                <div class="radio_spot"><input id="box6" type="checkbox" /><label for="box6" >GEPT中高級</label></div>
+	</label>
+	<label class="checkbox-inline cb_in_pl">
+                <div class="radio_spot"><input id="box7" type="checkbox" /><label for="box7" >多益</label></div>
+	</label>
+	<label class="checkbox-inline cb_in_pl">
+                <div class="radio_spot"><input id="box8" type="checkbox" /><label for="box8" >SAT數學單詞</label></div>
+	</label>
+	</div>
+
+	</div>
+	</div>
+
+	<div class="col-xs-12 col-sm-12 hidden-md hidden-lg planbox1" id="">
+		<div class="plan_box">
+			<h1>制定考試目標</h1>
+			<div class="cb_in_mtb">
+				<label class="checkbox-inline cb_in_pl">
+                <div class="radio_spot"><input id="box1" type="checkbox" /><label for="box1" >TPO較難專業詞彙</label></div>
+			</label>
+			<label class="checkbox-inline cb_in_pl">
+                <div class="radio_spot"><input id="box2" type="checkbox" /><label for="box2" >托福高頻必考詞彙</label></div>
+		</label>
+		<label class="checkbox-inline cb_in_pl">
+                <div class="radio_spot"><input id="box3" type="checkbox" /><label for="box3" >托福進階詞彙</label></div>
+	</label>
+	<label class="checkbox-inline cb_in_pl">
+                <div class="radio_spot"><input id="box4" type="checkbox" /><label for="box4" >GEPT初級</label></div>
+	</label>
+	<label class="checkbox-inline cb_in_pl">
+                <div class="radio_spot"><input id="box5" type="checkbox" /><label for="box5" >GEPT中級</label></div>
+	</label>
+	<label class="checkbox-inline cb_in_pl">
+                <div class="radio_spot"><input id="box6" type="checkbox" /><label for="box6" >GEPT中高級</label></div>
+	</label>
+	<label class="checkbox-inline cb_in_pl">
+                <div class="radio_spot"><input id="box7" type="checkbox" /><label for="box7" >多益</label></div>
+	</label>
+	<label class="checkbox-inline cb_in_pl">
+                <div class="radio_spot"><input id="box8" type="checkbox" /><label for="box8" >SAT數學單詞</label></div>
+	</label>
+	</div>
+
+	</div>
+	</div>
+
+	<div class="col-xs-12 col-sm-12 col-md-6 planbox2" id="">
+		<div class="plan_box plan_box_h">
+			<h1>預計完成背誦日期</h1>
+			<div class="cb_in_mtb">
+
+				<div class="form-group">
+					<div class="input-group date form_date" data-date="" data-date-format="dd MM yyyy" data-link-field="dtp_input2" data-link-format="yyyy-mm-dd">
+						<input class="form-control" size="16" type="text" value="" readonly>
+						<span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
+						<span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+					</div>
+					<input type="hidden" id="dtp_input2" value="" /><br/>
+				</div>
+
+				<div class="text_bg_box1"><i class="fa fa-bell"></i> 您的課程權限至 2017-10-27 截止。</div>
+				<div class="text_bg_box1"><i class="fa fa-exclamation-triangle"></i> 數位學習權限至 2017-11-26 截止。(課程權限結束後 30 天)</div>
+				<div class="text_bg_box2">預計完成背誦日期必須設定在數位學習權限結束日之前。</div>
+			</div>
+		</div>
+	</div>
+
+	</div>
+
+	<div class="row text-center planbtn" id="">
+
+		<div class="btn_tbm t_align col-sm-6 col-sm-push-3 col-xs-12 hidden-md hidden-lg" id="btn1">
+			<button type="button" class="btn paper paper-raise btn_main btn_w" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-pencil"></span> 建立學習計劃書</button>
+			<button type="button" class="btn paper paper-raise btn_main btn_w" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-pencil"></span> 進入課程</button>
+		</div>
+		<div class="btn_tbm_plan hidden-xs hidden-sm" id="btn1">
+			<button type="button" class="btn paper paper-raise btn_main btn_w_350" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-pencil"></span> 建立學習計劃書</button>
+			<button type="button" class="btn paper paper-raise btn_main btn_w_350" data-toggle="modal" data-target="" onclick="location.href='voca-category.html'"><span class="glyphicon glyphicon-arrow-right"></span> 進入課程</button>	
+		</div>
+
+	</div>
+	<h4 id="copyright">Copyright © ELITE International Education Services. All rights reserved.</h4>
+	</div>
+
+
+	<!-- Modal -->
+	<div class="modal fade" id="myModal" role="dialog">
+		<div class="modal-dialog">
+
+			<!-- Modal content-->
+			<div class="modal-content">
+				<div class="modal-header2">
+					<button type="button" class="lb_close" data-dismiss="modal">&times;</button>
+					<h4 class="modal-title" id="myModalLabel">錯誤訊息</h4>
+				</div>
+				<div class="modal-body">
+					<div class="lb_text">您沒有選擇預計完成日，請重新設定。您沒有選擇預計完成日，請重新設定。您沒有選擇預計完成日，請重新設定。</div>
+				</div>
+				<div class="modal-footer2">
+					<div class="window-menu">
+						<button type="button" class="l_btn l_btn_small_f l_btn_mr" id="exam-skip">關 閉</button>
+
+					</div>
+				</div>
+
+			</div>
+
+
+		</div>
+	</div>
+
+
+
+	<!--<script>
+		$(document).ready(function() {
+			$('a[href="#"]').click(function(e) {
+				e.preventDefault();
+				return false;
+			});
+		});
+		$('#estimated-date').change(function() {
+			var _this = $(this);
+			_this.prop('disabled', true);
+			//檢查是否大於課程許可權結束日後的30天
+			if (new Date($(this).val()) > new Date('2017-11-26')) {
+				message_dialog('預計完成日不可超過數位學習系統許可權結束日！(2017-11-26)<br>請您重新設定。', '錯誤', 'danger', function() {
+					_this.val('').focus();
+				});
+			}
+			//檢查完成日是否小於等於今天
+			if (new Date($(this).val()) <= new Date('2015-11-04')) {
+				message_dialog('預計完成日不可小於等於今天！(2015-11-04)<br>請您重新設定。', '錯誤', 'danger', function() {
+					_this.val('').focus();
+				});
+			}
+			_this.prop('disabled', false);
+		});
+		$('#plan-create').click(function() {
+			if ($('[name="plan-target[]"]:checked').length > 0) {
+				if ($('#estimated-date').val().match(/^\d{4}\-\d{2}\-\d{2}$/)) {
+					$('input, select, button').prop('disabled', true);
+					var planTargets = [];
+					$('[name="plan-target[]"]:checked').each(function() {
+						planTargets.push($(this).val());
+					});
+					$.post('plan-update.php', {
+						'plan-target': planTargets,
+						'estimated-date': $('#estimated-date').val()
+					}, function(res) {
+						if (res == '') {
+							window.location.href = 'index.php';
+						}
+						else {
+							var is_json = true;
+							try {
+								var json = $.parseJSON(res);
+							}
+							catch(err) {
+								is_json = false;
+							}
+							if (is_json && json.needConfirm == 'true') {
+								var confirm_type = json.overload == 'true' ? 'danger' : 'info';
+								confirm_dialog(json.message, '請確認計畫內容', confirm_type, function() {
+									showLoading();
+									$.post('plan-update.php', {
+										'plan-target': planTargets,
+										'estimated-date': $('#estimated-date').val(),
+										'confirm': true
+									}, function(res) {
+										if (res == '') {
+											$('input, select, button').prop('disabled', true);
+											window.location.href = 'index.php';
+										}
+										else {
+											message_dialog(res, '錯誤', 'danger', function() {
+												$('input, select, button').prop('disabled', false);
+											});
+										}
+									});
+								}, function() {
+									$('input, select, button').prop('disabled', false);
+								});
+							}
+							else {
+								message_dialog(res, '錯誤', 'danger', function() {
+									$('input, select, button').prop('disabled', false);
+								});
+							}
+						}
+					});
+				}
+				else {
+					message_dialog('您沒有選擇預計完成日，請重新設定。', '錯誤', 'danger', function() {
+						$('#estimated-date').focus();
+					});
+				}
+			}
+			else {
+				message_dialog('您沒有選擇考試目標，請重新設定。', '錯誤', 'danger');
+			}
+		});
+	</script>-->
+
+	<!-- google font -->
+	<script type="text/javascript">
+		WebFontConfig = {
+			google: {
+				families: ['Open+Sans:400,300,300italic,400italic,600,700,700italic,800,800italic,600italic:latin']
+			}
+		};
+		(function () {
+			var wf = document.createElement('script');
+			wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
+				'://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+			wf.type = 'text/javascript';
+			wf.async = 'true';
+			var s = document.getElementsByTagName('script')[0];
+			s.parentNode.insertBefore(wf, s);
+		})();
+	</script>
+	<!-- google font 完-->
+
+	<script type="text/javascript" src="assets/jquery/jquery-1.8.3.min.js" charset="UTF-8"></script>
+	<script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="assets/js/bootstrap-datetimepicker.js" charset="UTF-8"></script>
+	<script type="text/javascript" src="assets/js/locales/bootstrap-datetimepicker.fr.js" charset="UTF-8"></script>
+	<script type="text/javascript">
+		$('.form_date').datetimepicker({
+			language: 'fr',
+			weekStart: 1,
+			todayBtn: 1,
+			autoclose: 1,
+			todayHighlight: 1,
+			startView: 2,
+			minView: 2,
+			forceParse: 0
+		});
+	</script>
+
+
+</body>
+
+</html>

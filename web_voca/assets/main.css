@@ -1,0 +1,227 @@
+@font-face {
+	font-family: 'lucida sans unicode';
+	src: url('../../include/font/lsansuni.ttf') format('truetype');
+}
+
+body[data-hidebeforejs="true"] {
+	display: none;
+}
+
+/*
+* Base structure
+*/
+
+/* Move down content because we have a fixed navbar that is 50px tall */
+body {
+	padding-top: 60px;
+	background-color: #fff;
+	background-image: url(../img/lightpaperfibers.png);
+	font-family: 'microsoft yahei', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+
+/*
+* Global add-ons
+*/
+
+.sub-header {
+	padding-bottom: 10px;
+	border-bottom: 1px solid #eee;
+}
+
+/*
+* Top navigation
+* Hide default border to remove 1px line.
+*/
+.navbar-fixed-top {
+	border: 0;
+}
+
+/*
+* Sidebar
+*/
+
+/* Hide for mobile, show later */
+.sidebar {
+	display: none;
+}
+@media (min-width: 768px) {
+	.sidebar {
+		position: fixed !important;
+    	top: 68px;
+		bottom: 0;
+		left: 0;
+		z-index: 1000;
+		display: block;
+		padding: 20px;
+		overflow-x: hidden;
+		overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
+		background-color: #f5f5f5;
+		border-right: 1px solid #eee;
+	}
+}
+
+/* Sidebar navigation */
+.nav-sidebar {
+	margin-right: -21px; /* 20px padding + 1px border */
+	margin-bottom: 20px;
+	margin-left: -20px;
+}
+.nav-sidebar > li {
+	padding: 10px 20px;
+}
+.nav-sidebar > li > a {
+	display: inline;
+	padding: 0;
+}
+.nav-sidebar > .active > a,
+.nav-sidebar > .active > a:hover,
+.nav-sidebar > .active > a:focus {
+	color: #fff;
+	background-color: #428bca;
+}
+
+
+/*
+* Main content
+*/
+
+.main {
+	padding: 0px;
+}
+@media (min-width: 768px) {
+	.main {
+		padding-right: 40px;
+		padding-left: 40px;
+	}	
+}
+.main .page-header {
+	margin-top: 30px;
+    border-bottom: 0px;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+    font-size: 2.5em;
+    color: #59382C;
+}
+
+@media (max-width: 767px) {
+.p_h_mt{
+	margin-top: 10px !important;
+}
+}
+
+/*
+* Placeholder dashboard ideas
+*/
+
+.placeholders {
+	margin-bottom: 30px;
+	text-align: center;
+}
+.placeholders h4 {
+	margin-bottom: 0;
+}
+.placeholder {
+	margin-bottom: 20px;
+}
+.placeholder img {
+	display: inline-block;
+	border-radius: 50%;
+}
+
+/*
+ * Custom
+ */
+
+.button-row {
+	margin: 15px 0 25px;
+}
+.navbar-brand img {
+	display: inline-block !important;
+	/*height: 100%;*/
+}
+#navbar .dropdown-menu>li>a {
+	padding: 10px 20px;
+}
+.serifipa {
+	/* font-family: 'TITUS Cyberbit Basic', 'Doulos SIL', 'Gentium', 'Junicode', 'Cardo', 'Aborigonal Serif', 'Arial Unicode MS'; */
+	font-family: 'lucida sans unicode', arial;
+}
+.score-detail-inquire {
+	padding: 3px 0;
+}
+#score-detail h2 {
+	text-align: left;
+	font-size: 20px;
+	font-weight: bold;
+	line-height: 1.5;
+	margin: 10px 0;
+}
+#score-detail tr > td {
+	width: 45%;
+}
+#score-detail tr > td:first-child {
+	width: 10%;;
+}
+
+@media (max-width: 768px) {
+
+	/* Force table to not be like tables anymore */
+	.table-responsive table, 
+	.table-responsive thead, 
+	.table-responsive tbody, 
+	.table-responsive th, 
+	.table-responsive td, 
+	.table-responsive tr { 
+		display: block;
+		height: auto !important;
+		width: 100% !important;
+		white-space: normal !important;
+		
+	}
+
+	.table-responsive thead {
+		display: none;
+	}
+	.table-responsive tr {
+		border-bottom: 1px solid #ddd !important;
+	}
+	.table-responsive tr > td {
+		border-top: none !important;
+	}
+
+	#score-list td:before {
+		display: inline-block;
+		content: attr(data-title);
+		margin-right: 10px;
+		font-weight: bold;
+		font-size: 16px;
+		width: 40%;
+	}
+	#score-list tr > td:first-child > .btn-block {
+		display: inline-block;
+		margin-left: -10px;
+		padding: 10px;
+	}
+
+	#voc-list tr > td:first-child {
+		text-align: left;
+	}
+	#voc-list tr > td:first-child > p {
+		/*display: inline;*/
+	}
+}
+
+#voc-list > tbody > tr:last-child > td {
+	border-bottom: 1px solid #C1BAB0;
+}
+
+/*
+ * jQuery Mobile Hack
+ */
+div {
+	outline: none;
+}
+.ui-page {
+	min-height: initial !important;
+}

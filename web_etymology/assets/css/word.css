@@ -1,0 +1,80 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,700,700italic,800,800italic,600italic);
+@import url(http://fonts.googleapis.com/earlyaccess/cwtexhei.css);
+
+
+
+html, body {
+	/*color: #333;*/
+	font-family: 'Open Sans', 'cwTeXHei', sans-serif !important;  
+	font-size: 18px;
+}
+.title_text{
+	font-size: 4.5em;
+	font-weight: 700;
+	text-shadow: 4px 4px 0px #630000, 8px 8px 0px rgba(0, 0, 0, 0.15);
+	}
+.title_text_s{
+	font-weight: 600;
+	text-shadow: 0px 2px 0px rgba(0, 0, 0, 0.7);
+	}
+.left_line{
+	color: white;
+	font-size: 1em;
+    font-weight: 900;
+    padding-left: 10px;
+	padding-right: 13px;
+	}
+.circle_btn{
+	background: #272833;
+    border-radius: 100%;
+    cursor: default;
+    display: inline-block;
+    height: 6em;
+    line-height: 1.5em;
+    margin: 0 0 2em 0;
+    text-align: center;
+    width: 6em;
+	padding-top: 1.5em;
+	color:#FFFFFF;
+	}
+.circle_btn:hover{
+	color: #7EEAFF !important;
+    background-color: #0A4A66;
+    transition: all 250ms ease-out;
+    text-decoration: none;
+	}
+.circle_btn:focus{
+    color: #1A90BA;
+    text-decoration: none;
+    background-color: #003248;
+}
+
+
+
+
+@media screen and (max-width: 980px) {
+	.title_text {
+	    font-size: 3.2em !important;
+	}
+}
+
+
+@media screen and (max-width: 480px) {
+.title_text_size{
+	font-size: 1.2em;
+	font-weight: 900;
+	}
+.circle_btn{
+    line-height: 2.8em;
+	}
+.circle_btn{
+	margin: 0 0 0 0;
+	}
+.title_text {
+    font-size: 2.2em;
+    font-weight: 900;
+    text-shadow: 4px 4px 0px #630000, 8px 8px 0px rgba(0, 0, 0, 0.15);
+}
+
+
+}

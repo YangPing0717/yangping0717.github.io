@@ -1,0 +1,67 @@
+@font-face {
+	font-family: 'icomoon';
+	src:url('../fonts/icomoon.eot?-97a6p6');
+	src:url('../fonts/icomoon.eot?#iefix-97a6p6') format('embedded-opentype'),
+		url('../fonts/icomoon.ttf?-97a6p6') format('truetype'),
+		url('../fonts/icomoon.woff?-97a6p6') format('woff'),
+		url('../fonts/icomoon.svg?-97a6p6#icomoon') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+	font-family: 'icomoon';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.icon-calendar-check-o:before {
+	content: "\e609";
+}
+.icon-folder-check:before {
+	content: "\e60a";
+}
+.icon-rss:before {
+	content: "\e60b";
+}
+.icon-sign-out:before {
+	content: "\e606";
+}
+.icon-alarm:before {
+	content: "\e605";
+}
+.icon-user:before {
+	content: "\e601";
+}
+.icon-users:before {
+	content: "\e600";
+}
+.icon-search:before {
+	content: "\e603";
+}
+.icon-zoom-in:before {
+	content: "\e602";
+}
+.icon-zoom-out:before {
+	content: "\e604";
+}
+.icon-share:before {
+	content: "\e607";
+}
+.icon-feed2:before {
+	content: "\e60c";
+}
+.icon-feed3:before {
+	content: "\e60d";
+}
+.icon-paperplane:before {
+	content: "\e608";
+}

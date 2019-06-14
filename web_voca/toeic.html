@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+<html hola_ext_inject="ready" lang="zh-Hant-TW"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<title>菁英單字記憶庫</title>
+	
+    <!-- jQuery Core File-->
+	<script src="assets/jquery-1.js"></script>
+
+	<!-- jQuery UI Core Files -->
+	<link rel="stylesheet" href="assets/jquery-ui.css">
+	<script src="assets/jquery-ui-1.js"></script>
+
+	<!-- Touch Event Support for jQuery UI (http://touchpunch.furf.com/) -->
+	<!--<script src="assets/jquery.js"></script>-->
+	<!-- Latest compiled and minified CSS -->
+	<!--<link rel="stylesheet" href="assets/bootstrap.css">-->
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="assets/bootstrap-theme.css">
+
+	<!-- Latest compiled and minified JavaScript -->
+	<!--<script src="assets/bootstrap.js"></script>-->
+
+	<!-- Dialog JavaScript -->
+	<script src="assets/bootstrap-dialog.js"></script>
+	<link rel="stylesheet" href="assets/bootstrap-dialog.css">
+
+	<!-- Hover to active dropdown submenu -->
+	<script src="assets/hover.js"></script>
+
+	<!-- jQuery Pagination plugin Optimized for bootstrap -->
+	<script src="assets/jquery_002.js"></script>
+	<link rel="stylesheet" type="text/css" href="assets/animate.css">
+	<style>
+		.animated-2s {
+			-webkit-animation-duration: 2s;
+			animation-duration: 2s;
+			-webkit-animation-fill-mode: both;
+			animation-fill-mode: both;
+		}
+		.animated-2s.infinite {
+			-webkit-animation-iteration-count: infinite;
+			animation-iteration-count: infinite;
+		}
+	</style>
+    
+	<!--<link rel="stylesheet" type="text/css" href="assets/css/loading.css">-->
+	<!--<script>		
+		function showLoading() {
+			if ($('#loading-mask').length == 0)
+			$('body').prepend('<div id="loading-mask"></div><div id="loading-img"><div class="pulse"></div></div>');
+		}
+		function hideLoading() {
+			if ($('#loading-mask').length == 1)
+			$('#loading-mask, #loading-img').remove();
+		}
+		$(document).on('click', 'a[href!="#"]', function(e) {
+			e.preventDefault();
+			showLoading();
+			window.location.href = $(this).attr('href');
+		});
+	</script>-->
+   
+	<link rel="stylesheet" type="text/css" href="assets/main.css">
+	<link rel="stylesheet" type="text/css" href="assets/wordcard.css">
+	<link rel="stylesheet" type="text/css" href="assets/exam.css">
+	<link rel="stylesheet" type="text/css" href="assets/bug-report.css">
+    
+   	<link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="assets/css/font-awesome.css"/>
+	<link type="text/css" rel="stylesheet" href="assets/css/font-awesome.min.css"/>
+	<link type="text/css" rel="stylesheet" href="assets/css/style_icomoon.css"/>
+    
+    <!-- stylesheet for demo and examples -->
+	<link rel="stylesheet" href="assets/css/scrollbar_style.css">
+	<!-- custom scrollbar stylesheet -->
+	<link rel="stylesheet" href="assets/css/jquery.mCustomScrollbar.css">
+    
+    <link rel="stylesheet" type="text/css" href="assets/cover.css">
+    <link href="assets/css/simple-sidebar.css" rel="stylesheet">
+    <link href="assets/css/voca.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/voca_2.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/lightbox_style.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/font_tc.css" rel="stylesheet" type="text/css">
+
+
+</head>
+
+
+<body hola-ext-player="1" style="display: block;" data-hidebeforejs="true">
+	<nav class="navbar navbar-inverse navbar-fixed-top">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="#"><img src="assets/images/logo_elite_tw_w.svg" alt="菁英" class="logo2"> 菁英單字記憶庫</a>
+			</div>
+			<div id="navbar" class="navbar-collapse collapse">
+				<ul class="nav navbar-nav navbar-right">
+					<li id="word_category">
+						<a href="#" class="dropdown-toggle" data-hover="dropdown" data-toggle="dropdown" aria-expanded="true"><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span> 字彙列表 <span class="caret"></span></a>
+						<ul class="dropdown-menu" role="menu">
+						<li><a href="#"><span class="glyphicon glyphicon-star" aria-hidden="true"></span> 我的字彙 <span class="badge" id="my_word_num">20</span></a></li>
+                        <li><a href="http://elweb.elite-learning.com.tw/voca/toeic.php?s=learned_word"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span> 已學習 <span class="badge" id="learned_word_num">5</span></a></li>
+                        <li><a href="http://elweb.elite-learning.com.tw/voca/toeic.php?s=learning_word"><span class="glyphicon glyphicon-time" aria-hidden="true"></span> 我的字彙 <span class="badge" id="learning_word_num">12</span></a></li>
+                        <li><a href="http://elweb.elite-learning.com.tw/voca/toeic.php?s=havent_seen_word"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span> 我的字彙 <span class="badge" id="havent_seen_word_num">30</span></a></li>						</ul>
+					</li>
+					<li>
+						<a href="#" id="scoreInquire">
+							<span class="glyphicon glyphicon-stats" aria-hidden="true"></span> 成績查詢
+						</a>
+					</li>
+					<li style="display:none">
+						<a href="#" id="hideSideMenu"><span class="glyphicon glyphicon-resize-small" aria-hidden="true"></span> 隱藏選單</a>
+					</li>
+					<li>
+						<a href="#" id="bugReport" data-toggle="modal" data-target="#myModal3" >
+							<span class="glyphicon glyphicon-comment" aria-hidden="true"></span> 錯誤回報
+						</a>
+					</li>
+					<li>
+						<a href="http://elweb.elite-learning.com.tw/voca/logout.php" id="sysLogOut" title="88110209500">
+							<span class="glyphicon glyphicon-log-out" aria-hidden="true"></span> 登出WebStudent						</a>
+					</li>
+				</ul>
+			</div>
+            
+		</div>
+	</nav>
+    
+    <!-- /#wrapper -->
+    <div id="wrapper">
+
+        <!-- Sidebar -->
+        
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav sidelist_p">
+            <div class="sidelist_title">基础单词初级</div>
+                <div class="sidebtn"><a href="#">第 1 回</a></div>
+                <div class="sidebtn"><a href="#">第 2 回</a></div>
+                <div class="sidebtn"><a href="#">第 3 回</a></div>
+                <div class="sidebtn"><a href="#">第 4 回</a></div>
+                <div class="sidebtn"><a href="#">第 5 回</a></div>
+                <div class="sidebtn"><a href="#">第 6 回</a></div>
+                <div class="sidebtn"><a href="#">第 7 回</a></div>
+                <div class="sidebtn"><a href="#">第 8 回</a></div>
+                <div class="sidebtn"><a href="#">第 9 回</a></div>
+                <div class="sidebtn"><a href="#" class="focus">第 10 回</a></div>
+                <div class="sidebtn"><a href="#">第 11 回</a></div>
+                <div class="sidebtn"><a href="#">第 12 回</a></div>
+                <div class="sidebtn"><a href="#">第 13 回</a></div>
+                <div class="sidebtn"><a href="#">第 14 回</a></div>
+                <div class="sidebtn"><a href="#">第 15 回</a></div>
+                <div class="sidebtn"><a href="#">第 16 回</a></div>
+                <div class="sidebtn"><a href="#">第 17 回</a></div>
+                <div class="sidebtn"><a href="#">第 18 回</a></div>
+                <div class="sidebtn"><a href="#">第 19 回</a></div>
+                <div class="sidebtn"><a href="#">第 20 回</a></div>
+               
+                
+            </ul>
+        </div>
+        <!-- /#sidebar-wrapper -->
+		<a href="#menu-toggle" class="btn_side" id="menu-toggle"><i class="fa fa-bars btn_side_icon_pt"></i></a>
+        
+
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+            <div class="col-sm-12 col-md-12 main" id="scroll-control">
+            <div class="mobile_row">
+				<h1 class="page-header p_h_mt">基础单词初级 第 1 回</h1>
+					<div class="button-row" id="btnbox">
+					<button type="button" data-toggle="modal" data-target="#myModal" class="btn paper paper-raise btn_main btn_w2 btn_mr" id="vocWordCard"><span class="glyphicon glyphicon-play"></span> 播放字卡</button>
+					<button type="button" data-toggle="modal" data-target="#myModal2" class="btn paper paper-raise btn_main btn_w2" id="vocExam"><span class="glyphicon glyphicon-edit"></span> 開始測驗</button>
+					<button type="button" data-toggle="modal" onclick="location.href='score.html'" class="btn paper paper-raise btn_main btn_w2" id="vocExam"><span class="glyphicon glyphicon-check"></span> 去看成績</button>
+				</div>
+					<div class="table-responsive">
+					<table class="table table-striped" id="voc-list">
+						<tbody>
+							<tr class="w_box">
+								<td class="def-td2">
+									<div class="p_mt">
+                                    <span class="label label-default"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span> 未學習</span>
+                                    <span class="label label5"><span class="glyphicon glyphicon-time" aria-hidden="true"></span> 学习中</span>
+                                    </div>									
+                                    <div data-word-id="3" data-word="floccinaucinihilipilification" data-checksum="ac1a3743ff24ca49a7a123d484f4d799fbd1f998" title="3" class="word_size">floccinaucinihilipilification</div>
+                                    <p class="phonetic pho_mtb">[<span class="serifipa">əˈbændən</span>]</p>
+                                    <p class="btn_icon_mtb btn_icon_mtb2">
+                                    <!--<div data-original-title="本字同時出現在：&lt;br&gt;GEPT中級" href="#" class="btn_icon btn_icon2 btn-link" data-toggle="tooltip" data-placement="bottom" data-html="true" title=""><span class="glyphicon glyphicon-link" aria-hidden="true"></span></div>-->
+                                    <button data-original-title="聆聽美式發音" type="button" class="btn_icon btn-link" title="" data-toggle="tooltip" onclick="pronounce('d41d8cd98f00b204e9800998ecf8427e');"><span class="glyphicon glyphicon-headphones" aria-hidden="true"><span class="flag_us"></span></span></button>
+                                    <button data-original-title="聆聽英式發音" type="button" class="btn_icon btn-link" title="" data-toggle="tooltip" onclick="pronounce('d41d8cd98f00b204e9800998ecf8427e');"><span class="glyphicon glyphicon-headphones" aria-hidden="true"><span class="flag_gb"></span></span></button>
+                                    <!--<button data-original-title="加入/移除我的字彙" type="button" class="btn_icon btn-link myWordToggle" title="" data-id="3" data-toggle="tooltip"><span class="glyphicon glyphicon-star" aria-hidden="true"></span> <span class="glyphicon glyphicon-floppy-saved" aria-hidden="true"></span> </button>
+                                    <button data-original-title="播放字卡" type="button" class="btn_icon btn-link vocWordCard" title="" data-toggle="tooltip"><span class="glyphicon glyphicon-play" aria-hidden="true"></span></button>
+                                    <button data-original-title="回報單字內容錯誤" type="button" class="btn_icon btn-link bugReport" title="" data-id="3" data-toggle="tooltip" ><span class="glyphicon glyphicon-flag" aria-hidden="true"></span></button>-->
+                                    </p>
+									
+								</td>
+								<td class="def-td2">
+									<div class="content_scro light" id="content-d" >
+										<div class="def-block"><span class="label label1">動詞</span><span class="text_basic_bold"> 離棄；遺棄；拋棄</span>
+                                        <div class="sentence sentence_mt">He claimed that his parents had abandoned him.</div>
+                                        <div class="sentence sentence_mb">他聲稱父母遺棄了他。</div>
+                                        </div>
+                                        <div class="def-block"><span class="label label1">動詞</span><span class="text_basic_bold"> 中途放棄，中止（活動、工作等）</span>
+                                        <div class="sentence sentence_mt">The road is strewn with abandoned vehicles.</div>
+                                        <div class="sentence sentence_mb">道路上滿是棄置的車輛。</div>
+                                        </div>
+                                        <div class="def-block"><span class="label label1">動詞</span><span class="text_basic_bold"> 放棄（想法或思路）</span>
+                                        <div class="sentence sentence_mt">The authorities have abandoned any attempt to distribute food.</div>
+                                        <div class="sentence sentence_mb">當局中止了分發食物的嘗試。</div>
+                                        </div>
+                                        <div class="def-block"><span class="label label1">動詞</span><span class="text_basic_bold"> 放縱；使沉湎於</span>
+                                        <div class="sentence sentence_mt">The scheme's investors, fearful of bankruptcy, decided to abandon the project.</div>
+                                        <div class="sentence sentence_mb">因為擔心破產，該計畫的投資者決定放棄這個項目。</div>
+                                        </div>
+                                        <div class="def-block"><span class="label label1">不可數名詞</span><span class="text_basic_bold"> 放任；放縱</span>
+                                        <div class="sentence sentence_mt">Logic had prevailed and he had abandoned the idea.</div>
+                                        <div class="sentence sentence_mb">最終理智占了上風，他打消了那個念頭。</div>
+                                        </div>
+                                        <div class="def-block"><span class="label label1">短語</span><span class="text_basic_bold"> 放縱；使沉湎於</span>
+                                        <div class="sentence sentence_mt">We are scared to abandon ourselves to our feelings in case we seem weak or out of control.</div>
+                                        <div class="sentence sentence_mb">我們不敢放縱自己的情感，以免顯得太過軟弱或缺乏自製。</div>
+                                        </div>
+                                    </div>
+								</td>
+                                
+								<td class="def-td2">
+                                
+                                <div class="dropdown pull-right hidden-xs">
+								<button class="btn btn-xs btn-default dropdown-toggle" type="button" id="dropdownMenu_lg_3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+												<span class="caret"></span>
+											</button>
+											<ul class="dropdown-menu" aria-labelledby="dropdownMenu_lg_3">
+												<li><a href="#" class="myWordToggle" data-id="3">加入我的字彙</a></li>
+									<li><a href="#" class="vocWordCard">由此播放字卡</a></li>
+									<li role="separator" class="divider"></li>
+									<li><a href="#" class="bugReport" data-id="3">回報此單字內容錯誤</a></li>											</ul>
+										</div>
+                                
+								<div class="text_basic">
+								<div class="p_mt"><span class="label label2">同義</span></div>
+                                <div class="sentence sentence_mt sentence_mb">desert, forsake, leave, cease, relinqish, quit, renounce, give up</div>
+                                <div class="p_mt"><span class="label label3">反義</span></div>
+                                <div class="sentence sentence_mt sentence_mb">maintain, retain, conserve, ratain</div>
+                                <div class="p_mt"><span class="label label4">衍生字</span></div>
+                                <div class="sentence sentence_mt sentence_mb">abandonment, abandonabl</div>
+								</div>
+								</td>
+							</tr>
+							<tr class="w_box">
+								<td class="def-td2">
+									<div class="p_mt"><span class="label label-default"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span> 未學習</span></div>									
+                                    <div data-word-id="3" data-word="abandon" data-checksum="ac1a3743ff24ca49a7a123d484f4d799fbd1f998" title="3" class="word_size">abandon</div>
+                                    <p class="btn_icon_mtb btn_icon_mtb2">
+                                    <div data-original-title="本字同時出現在：&lt;br&gt;GEPT中級" href="#" class="btn_icon btn_icon2 btn-link" data-toggle="tooltip" data-placement="bottom" data-html="true" title=""><span class="glyphicon glyphicon-link" aria-hidden="true"></span></div>
+                                    <button data-original-title="聆聽發音" type="button" class="btn_icon btn-link" title="" data-toggle="tooltip" onclick="pronounce('d41d8cd98f00b204e9800998ecf8427e');"><span class="glyphicon glyphicon-headphones" aria-hidden="true"></span></button>
+                                    <button data-original-title="加入/移除我的字彙" type="button" class="btn_icon btn-link myWordToggle" title="" data-id="3" data-toggle="tooltip"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><!-- <span class="glyphicon glyphicon-floppy-saved" aria-hidden="true"></span> --></button>
+                                    <button data-original-title="播放字卡" type="button" class="btn_icon btn-link vocWordCard" title="" data-toggle="tooltip"><span class="glyphicon glyphicon-play" aria-hidden="true"></span></button>
+                                    <button data-original-title="回報單字內容錯誤" type="button" class="btn_icon btn-link bugReport" title="" data-id="3" data-toggle="tooltip"><span class="glyphicon glyphicon-flag" aria-hidden="true"></span></button>
+                                    </p>
+									<p class="phonetic pho_mtb">[<span class="serifipa">əˈbændən</span>]</p>
+								</td>
+								<td class="def-td2">
+									<div class="content_scro light" id="content-d2">
+										<div class="def-block"><span class="label label1">動詞</span><span class="text_basic_bold"> 離棄；遺棄；拋棄</span>
+                                        <div class="sentence sentence_mt">He claimed that his parents had abandoned him.</div>
+                                        <div class="sentence sentence_mb">他聲稱父母遺棄了他。</div>
+                                        </div>
+                                        <div class="def-block"><span class="label label1">動詞</span><span class="text_basic_bold"> 中途放棄，中止（活動、工作等）</span>
+                                        <div class="sentence sentence_mt">The road is strewn with abandoned vehicles.</div>
+                                        <div class="sentence sentence_mb">道路上滿是棄置的車輛。</div>
+                                        </div>
+                                        <div class="def-block"><span class="label label1">動詞</span><span class="text_basic_bold"> 放棄（想法或思路）</span>
+                                        <div class="sentence sentence_mt">The authorities have abandoned any attempt to distribute food.</div>
+                                        <div class="sentence sentence_mb">當局中止了分發食物的嘗試。</div>
+                                        </div>
+                                        <div class="def-block"><span class="label label1">動詞</span><span class="text_basic_bold"> 放縱；使沉湎於</span>
+                                        <div class="sentence sentence_mt">The scheme's investors, fearful of bankruptcy, decided to abandon the project.</div>
+                                        <div class="sentence sentence_mb">因為擔心破產，該計畫的投資者決定放棄這個項目。</div>
+                                        </div>
+                                        <div class="def-block"><span class="label label1">不可數名詞</span><span class="text_basic_bold"> 放任；放縱</span>
+                                        <div class="sentence sentence_mt">Logic had prevailed and he had abandoned the idea.</div>
+                                        <div class="sentence sentence_mb">最終理智占了上風，他打消了那個念頭。</div>
+                                        </div>
+                                        <div class="def-block"><span class="label label1">短語</span><span class="text_basic_bold"> 放縱；使沉湎於</span>
+                                        <div class="sentence sentence_mt">We are scared to abandon ourselves to our feelings in case we seem weak or out of control.</div>
+                                        <div class="sentence sentence_mb">我們不敢放縱自己的情感，以免顯得太過軟弱或缺乏自製。</div>
+                                        </div>
+                                    </div>
+								</td>
+								<td class="def-td2">
+								<div class="text_basic">
+								<div class="p_mt"><span class="label label2">同義</span></div>
+                                <div class="sentence sentence_mt sentence_mb">desert, forsake, leave, cease, relinqish, quit, renounce, give up</div>
+                                <div class="p_mt"><span class="label label3">反義</span></div>
+                                <div class="sentence sentence_mt sentence_mb">maintain, retain, conserve, ratain</div>
+                                <div class="p_mt"><span class="label label4">衍生字</span></div>
+                                <div class="sentence sentence_mt sentence_mb">abandonment, abandonabl</div>
+								</div>
+								</td>
+							</tr>
+                            <tr class="w_box">
+								<td class="def-td2">
+									<div class="p_mt"><span class="label label-default"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span> 未學習</span></div>									
+                                    <div data-word-id="3" data-word="abandon" data-checksum="ac1a3743ff24ca49a7a123d484f4d799fbd1f998" title="3" class="word_size">abandon</div>
+                                    <p class="btn_icon_mtb btn_icon_mtb2">
+                                    <div data-original-title="本字同時出現在：&lt;br&gt;GEPT中級" href="#" class="btn_icon btn_icon2 btn-link" data-toggle="tooltip" data-placement="bottom" data-html="true" title=""><span class="glyphicon glyphicon-link" aria-hidden="true"></span></div>
+                                    <button data-original-title="聆聽發音" type="button" class="btn_icon btn-link" title="" data-toggle="tooltip" onclick="pronounce('d41d8cd98f00b204e9800998ecf8427e');"><span class="glyphicon glyphicon-headphones" aria-hidden="true"></span></button>
+                                    <button data-original-title="加入/移除我的字彙" type="button" class="btn_icon btn-link myWordToggle" title="" data-id="3" data-toggle="tooltip"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><!-- <span class="glyphicon glyphicon-floppy-saved" aria-hidden="true"></span> --></button>
+                                    <button data-original-title="播放字卡" type="button" class="btn_icon btn-link vocWordCard" title="" data-toggle="tooltip"><span class="glyphicon glyphicon-play" aria-hidden="true"></span></button>
+                                    <button data-original-title="回報單字內容錯誤" type="button" class="btn_icon btn-link bugReport" title="" data-id="3" data-toggle="tooltip"><span class="glyphicon glyphicon-flag" aria-hidden="true"></span></button>
+                                    </p>
+									<p class="phonetic pho_mtb">[<span class="serifipa">əˈbændən</span>]</p>
+								</td>
+								<td class="def-td2">
+									<div class="content_scro light" id="content-d3">
+										<div class="def-block"><span class="label label1">動詞</span><span class="text_basic_bold"> 離棄；遺棄；拋棄</span>
+                                        <div class="sentence sentence_mt">He claimed that his parents had abandoned him.</div>
+                                        <div class="sentence sentence_mb">他聲稱父母遺棄了他。</div>
+                                        </div>
+                                        <div class="def-block"><span class="label label1">動詞</span><span class="text_basic_bold"> 中途放棄，中止（活動、工作等）</span>
+                                        <div class="sentence sentence_mt">The road is strewn with abandoned vehicles.</div>
+                                        <div class="sentence sentence_mb">道路上滿是棄置的車輛。</div>
+                                        </div>
+                                        <div class="def-block"><span class="label label1">動詞</span><span class="text_basic_bold"> 放棄（想法或思路）</span>
+                                        <div class="sentence sentence_mt">The authorities have abandoned any attempt to distribute food.</div>
+                                        <div class="sentence sentence_mb">當局中止了分發食物的嘗試。</div>
+                                        </div>
+                                        <div class="def-block"><span class="label label1">動詞</span><span class="text_basic_bold"> 放縱；使沉湎於</span>
+                                        <div class="sentence sentence_mt">The scheme's investors, fearful of bankruptcy, decided to abandon the project.</div>
+                                        <div class="sentence sentence_mb">因為擔心破產，該計畫的投資者決定放棄這個項目。</div>
+                                        </div>
+                                        <div class="def-block"><span class="label label1">不可數名詞</span><span class="text_basic_bold"> 放任；放縱</span>
+                                        <div class="sentence sentence_mt">Logic had prevailed and he had abandoned the idea.</div>
+                                        <div class="sentence sentence_mb">最終理智占了上風，他打消了那個念頭。</div>
+                                        </div>
+                                        <div class="def-block"><span class="label label1">短語</span><span class="text_basic_bold"> 放縱；使沉湎於</span>
+                                        <div class="sentence sentence_mt">We are scared to abandon ourselves to our feelings in case we seem weak or out of control.</div>
+                                        <div class="sentence sentence_mb">我們不敢放縱自己的情感，以免顯得太過軟弱或缺乏自製。</div>
+                                        </div>
+                                    </div>
+								</td>
+								<td class="def-td2">
+								<div class="text_basic">
+								<div class="p_mt"><span class="label label2">同義</span></div>
+                                <div class="sentence sentence_mt sentence_mb">desert, forsake, leave, cease, relinqish, quit, renounce, give up</div>
+                                <div class="p_mt"><span class="label label3">反義</span></div>
+                                <div class="sentence sentence_mt sentence_mb">maintain, retain, conserve, ratain</div>
+                                <div class="p_mt"><span class="label label4">衍生字</span></div>
+                                <div class="sentence sentence_mt sentence_mb">abandonment, abandonabl</div>
+								</div>
+								</td>
+							</tr>
+							
+						</tbody>							
+					</table>
+				</div>
+                
+                <div class="col-sm-12 text-center">
+                	<ul class="pagination pagination-sm" id="voc-pagination">
+                    <li class="first disabled"><a href="#">First</a></li>
+                    <li class="prev"><a href="#">Previous</a></li>
+                    <li class="page active"><a href="#">1</a></li>
+                    <li class="page"><a href="#">2</a></li>
+                    <li class="page"><a href="#">3</a></li>
+                    <li class="page"><a href="#">4</a></li>
+                    <li class="page"><a href="#">5</a></li>
+                    <li class="page"><a href="#">6</a></li>
+                    <li class="page"><a href="#">7</a></li>
+                    <li class="page"><a href="#">8</a></li>
+                    <li class="page"><a href="#">9</a></li>
+                    <li class="page"><a href="#">10</a></li>
+                    <li class="next"><a href="#">Next</a></li>
+                    <li class="last"><a href="#">Last</a></li>
+                    </ul>
+                </div>
+                    
+				<p class="text-center text-muted cr_mt" id="copyright">Copyright © ELITE International Education Services. All rights reserved.</p>
+			</div>
+            </div>
+        </div>
+        <!-- /#page-content-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
+    
+    
+	<!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        <div class="modal-body">
+	<div class="light_wordsize">baby</div>
+	<ul class="list-inline text-center">
+		<li>
+			<span><span class="label label6">英式发音</span> <span class="phonetic p_ml">[<span class="serifipa">ˈbeɪbi</span>]</span></span>
+			<span class="p_mr"><span class="label label6">美式发音</span> <span class="phonetic p_ml">[<span class="serifipa">ˈbeɪbi</span>]</span></span>
+		</li>
+	</ul>
+
+	<ul class="list-unstyled wordcard-list">
+				<li class="w_l"><span class="label label1">可数名词</span><span class="text_basic_bold">婴儿；婴孩</span></li>
+				<li><span class="label label1">可数名词</span><span class="text_basic_bold">（动物）幼崽；幼兽；幼鸟</span></li>
+				<li><span class="label label1">形容词</span><span class="text_basic_bold">（蔬菜）幼嫩的</span></li>
+				<li><span class="label label1">N-VOC; N-COUNT</span><span class="text_basic_bold">宝贝儿（昵称，尤用于年轻女性）</span></li>
+				<li><span class="label label1">短语</span><span class="text_basic_bold">把婴儿和洗澡水一起倒掉；将精华连同糟粕一起丢弃；不分好坏地全盘抛弃</span></li>
+				<li><span class="label label1">短语</span><span class="text_basic_bold">替他人擦屁股；替别人干苦差事</span></li>
+			</ul>
+        </div>
+        <div class="modal-footer">
+          <div class="window-menu">
+	<button id="btn-lightbox-prev" type="button" class="l_btn l_btn_mr"><span class="glyphicon glyphicon-step-backward" aria-hidden="true"></span></button>
+	<button id="btn-lightbox-pause" type="button" class="l_btn_play2 l_btn_mr"><span class="glyphicon glyphicon-play" aria-hidden="true"></span></button>
+	<button id="btn-lightbox-next" type="button" class="l_btn"><span class="glyphicon glyphicon-step-forward" aria-hidden="true"></span><span id="lightbox-countdown"></span></button>
+
+</div>
+        </div>
+
+</div>
+
+      
+    </div>
+  </div>
+  
+  <!-- Modal2 -->
+  <div class="modal fade" id="myModal2" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal2 content-->
+      <div class="modal-content">
+      
+	<div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal">&times;</button>
+    <div class="hidden-xs e_h_text">基础单词初级第1回 5638545e191b6</div>
+    <div class="exam_head_text">英翻中 <span class="badge">11/78</span></div>
+    
+    </div>
+    
+	<div class="modal-body">
+<div class="window-content clearfix" id="exam-content">
+	<div>
+		<div class="light_wordsize">habit</div>
+		<ul>
+					<li>
+                   	<div class="radio_spot">
+					<input id="box1" type="checkbox" checked/>
+					<label for="box1"><span class="text_basic_bold text_basic"> …点钟</span></label></div>
+                    </li>
+                    <li>
+                   	<div class="radio_spot">
+					<input id="box2" type="checkbox" />
+					<label for="box2"><span class="text_basic_bold text_basic"> 斑马</span></label></div>
+                    </li>
+                    <li>
+                   	<div class="radio_spot">
+					<input id="box3" type="checkbox" />
+					<label for="box3"><span class="text_basic_bold text_basic"> 吸食海洛因、可卡因等的）毒瘾</span></label></div>
+                    </li>
+                    <li>
+                   	<div class="radio_spot">
+					<input id="box4" type="checkbox"/>
+					<label for="box4" class="active"><span class="text_basic_bold text_basic"> …点钟</span></label></div>
+                    </li>
+				</ul>
+	</div>
+	</div>
+    
+    <div class="progress progress2">
+		<div class="progress-bar animated infinite progress-bar-danger flash" role="progressbar" aria-valuenow="1" aria-valuemin="0" aria-valuemax="7" style="width: 45%;"></div>
+	</div>
+
+        </div>
+        
+        <div class="modal-footer">
+          <div class="window-menu">
+          <button type="button" class="l_btn l_btn_small_f l_btn_mr" id="exam-skip"><span class="glyphicon glyphicon-step-forward" aria-hidden="true"></span> 跳過</button> 
+	<button type="button" class="l_btn l_btn_small_f l_btn_mr" id="exam-pause"><span class="glyphicon glyphicon-pause" aria-hidden="true"></span> 暂停</button>
+	<button type="button" class="l_btn l_btn_small_f l_btn_mr" id="exam-abort"><span class="glyphicon glyphicon-stop" aria-hidden="true"></span> 离开</button>
+    
+
+</div>
+        </div>
+
+</div>
+
+      
+    </div>
+  </div>
+  
+  <!-- Modal3 -->
+  <div class="modal fade" id="myModal3" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal3 content-->
+      
+      <div class="modal-content">
+      <div class="modal-header2">
+          <button type="button" class="lb_close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title" id="myModalLabel">错误回报</h4>
+        </div>
+        
+        <div class="modal-body">
+        <div class="lb_text2">如果您对本系统有疑虑、建议或有任何有发生错误之处，欢迎来信与我们讨论与修正。</div>
+        
+        <div class="row feedbackbox">
+			<div class="col-sm-3">
+				<div class="form-group">
+					<label for="schoolName">分校</label>
+					<input type="text" id="schoolName" name="schoolName" class="form-control" readonly value="上海永嘉校">
+				</div>
+			</div>
+			<div class="col-sm-3">
+				<div class="form-group">
+					<label for="studentName">姓名</label>
+					<input type="text" id="studentName" name="studentName" class="form-control" readonly value="资讯部测试">
+				</div>
+			</div>
+			<div class="col-sm-6">
+				<div class="form-group">
+					<label for="studentMail">* E-Mail (专员将回覆到这个邮箱)</label>
+					<input type="email" id="studentMail" name="studentMail" class="form-control valid-email" placeholder="请在此输入您Email位址" value="mcyc129@gmail.com">
+				</div>
+			</div>
+		</div>
+        
+        <div class="form-group">
+			<label for="reportContent" class="lb_text2 lb_text2_mt">回报内容</label>
+            
+			<div class="checkbox2">
+            	<label class="checkbox-inline cb_in_text">
+                <div class="radio_spot"><input id="box7" type="checkbox" /><label for="box7" value="拼字错误">拼字错误</label></div></label>
+                <label class="checkbox-inline cb_in_text">
+                <div class="radio_spot"><input id="box8" type="checkbox" /><label for="box8" value="音标错误">音标错误</label></div></label>
+                <label class="checkbox-inline cb_in_text">
+                <div class="radio_spot"><input id="box9" type="checkbox" /><label for="box9" value="音档错误">音档错误</label></div></label>
+                <label class="checkbox-inline cb_in_text">
+                <div class="radio_spot"><input id="box10" type="checkbox" /><label for="box10" value="解释错误">解释错误</label></div></label>
+                <label class="checkbox-inline cb_in_text radio_ml">
+                <div class="radio_spot"><input id="box11" type="checkbox" /><label for="box11" value="例句错误">例句错误</label></div></label>
+                
+				
+			</div>
+            
+			<textarea id="reportContent" name="reportContent" class="form-control valid-empty" rows="5" placeholder="请在此输入您的意见"></textarea>
+		</div>
+        
+        <div class="form-group">
+			<label for="screenShot" class="lb_text2">上传截图 (非必要)</label>
+			<input type="file" id="screenShot" name="screenShot" class="form-control">
+		</div>
+		<div class="row">
+			<div class="col-sm-6">
+				<div class="form-group">
+					<label for="captchaCode" class="lb_text2">* 验证码 (不分大小写)</label>
+					<input type="text" id="captchaCode" name="captchaCode" class="form-control" placeholder="请在此输入图中显示的文字">
+				</div>
+			</div>
+			<div class="col-sm-6">
+				<img id="captchaCodeImg" src="/vocabulary_v2015/include/simple-php-captcha/simple-php-captcha.php?_CAPTCHA&amp;t=0.23826400+1448511983">
+			</div>
+		</div>
+        
+        </div>
+        
+        <div class="modal-footer2">
+        <div class="window-menu">
+			<button type="button" class="l_btn l_btn_small_f l_btn_mr">取 消</button> 
+    		<button type="button" class="l_btn l_btn_small_f l_btn_mr l_btn_dark">确认送出</button> 
+		</div>
+        </div>
+
+</div>
+
+      
+    </div>
+  </div>
+  
+
+  
+
+
+
+
+    
+    
+    
+	<!--<input id="wbKindId" value="16" type="hidden">
+	<input id="currRound" value="1" type="hidden">-->
+	<!--<script>
+		window['wbKey'] = 'TOEIC';
+		//字卡自動換頁秒數
+		window['vocTimerNumSet'] = 5;
+		window['vocTimerNum'] = window['vocTimerNumSet'];
+		var voc_num_min = 3;
+			</script>-->
+	<!--<script src="assets/main.js"></script>-->
+	<!--<script type="text/javascript" src="assets/soundmanager2.js"></script>-->
+	<!--<script>
+		soundManager.defaultOptions = {
+			autoLoad: true
+		};
+		soundManager.setup({
+			useHighPerformance: true,
+			ignoreMobileRestrictions: true,
+			debugMode: false,
+			url: 'include/soundmanager2/swf/',
+			preferFlash: false,
+			onready: function() {
+			soundManager.createSound('3715f0c5d8778cde356d3c5670de64bd', 'include/sound/effect/_correct.mp3');soundManager.createSound('0b67a654792a3add6a3546ac74a90c61', 'include/sound/effect/_incorrect.mp3');soundManager.createSound('b335791ae5aeba281d50b28f0bd9bb2a', 'include/sound/effect/_tickTock.mp3');soundManager.createSound('7cc63b26c07b32e118bd399a3f035e7e', 'include/sound/pronunciation/english/american/network/cable.mp3');soundManager.createSound('99857435a00a8cb175b35dde3285d6cb', 'include/sound/pronunciation/english/american/network/habit.mp3');soundManager.createSound('24b75f3b43d8e7395326fa2e2cec2813', 'include/sound/pronunciation/english/american/network/keep.mp3');soundManager.createSound('e0228b75ec16f47b10557ba017fa823e', 'include/sound/pronunciation/english/american/network/label.mp3');soundManager.createSound('e8ad11b5b61d285120c62dba33ba9d95', 'include/sound/pronunciation/english/american/network/machinery.mp3');soundManager.createSound('ddf2856f38d18a06b7e41a98c94a6b1e', 'include/sound/pronunciation/english/american/network/name.mp3');soundManager.createSound('3fbd1ed479e922ba611b6c58bbac96df', 'include/sound/pronunciation/english/american/network/napkin.mp3');			}
+		});
+		function pronounce(soundId, callback, hideError) {
+			var playSound = soundManager.getSoundById(soundId);
+			if (typeof playSound != 'undefined') {
+				soundManager.stopAll();
+				soundManager.play(soundId, {
+					onfinish: function() {
+						(callback && typeof(callback) === "function") && callback();
+					}
+				});
+			} else {
+				if (typeof(hideError) === "boolean" && hideError) {
+					(callback && typeof(callback) === "function") && callback();
+				} else {
+					BootstrapDialog.show({
+						type: BootstrapDialog.TYPE_DANGER,
+						title: '錯誤',
+						message: '無法播放這個音檔',
+						buttons: [{
+	                		cssClass: 'btn-danger',
+							label: '好',
+							action: function(dialogItself){
+								dialogItself.close();
+							}
+						}],
+						onhide: function() {
+							(callback && typeof(callback) === "function") && callback();
+						}
+					});
+				}
+			}
+		}
+	</script>-->
+	<!--<script>
+		$(document).ready(function() {
+			$('body[data-hidebeforejs="true"]').css('display', 'block');
+
+			if ($('.sidebar:visible').length == 0) { $('#hideSideMenu').html('<span class="glyphicon glyphicon-resize-full" aria-hidden="true"></span> 顯示選單'); }
+			else { $('#hideSideMenu').html('<span class="glyphicon glyphicon-resize-small" aria-hidden="true"></span> 隱藏選單'); }
+
+			if ($('.sidebar').length == 1 && $(this).find('.nav li.active').eq(0).length == 1) {
+				$('.sidebar').scrollTop($(this).find('.nav li.active').eq(0).offset().top - $('nav.navbar').outerHeight() - ($(this).find('.nav li.active').eq(0).outerHeight() * 2)); /* 距離上方2個li的高度 */
+			}
+		});
+	</script>-->
+    
+    <!-- HAMBURGER -->
+    <script>
+	$('#BOX').click(function() {
+		$(this).toggleClass("active");
+	});
+	</script>
+    <!-- HAMBURGER 完 -->
+    
+    <!-- 側邊欄 -->
+  	<!-- jQuery -->
+    <script src="assets/js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="assets/js/bootstrap.min.js"></script>
+	
+    <!-- Menu Toggle Script -->
+    <script>
+    $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+    });
+    </script>
+    <!--側邊欄 完-->
+    
+
+
+	<!-- Scrollbar -->
+	<!-- Google CDN jQuery with fallback to local -->
+	<!--<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>-->
+	<!--<script>window.jQuery || document.write('<script src="../js/minified/jquery-1.11.0.min.js"><\/script>')</script>-->
+	
+	<!-- custom scrollbar plugin -->
+	<script src="assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+	
+	<script>
+		(function($){
+			$(window).load(function(){
+				
+				$.mCustomScrollbar.defaults.scrollButtons.enable=true; //enable scrolling buttons by default
+				$.mCustomScrollbar.defaults.axis="yx"; //enable 2 axis scrollbars by default
+				
+				$("#content-l").mCustomScrollbar();
+				
+				$("#content-d, #content-d2, #content-d3").mCustomScrollbar({theme:"dark"});
+				
+				$(".all-themes-switch a").click(function(e){
+					e.preventDefault();
+					var $this=$(this),
+						rel=$this.attr("rel"),
+						el=$(".content");
+					switch(rel){
+						case "toggle-content":
+							el.toggleClass("expanded-content");
+							break;
+					}
+				});
+				
+			});
+		})(jQuery);
+	</script>
+    <!-- Scrollbar 完-->
+
+
+<!-- tooltip -->
+<script>
+$(document).ready(function(){
+    $('[data-toggle="tooltip"]').tooltip();
+});
+</script>
+<!-- tooltip 完 -->
+
+
+</body></html>

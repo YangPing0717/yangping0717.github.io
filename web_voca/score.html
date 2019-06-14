@@ -1,0 +1,754 @@
+<!DOCTYPE html>
+<html hola_ext_inject="ready" lang="zh-Hant-TW"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<title>菁英單字記憶庫</title>
+	<!-- jQuery Core File-->
+	<script src="assets/jquery-1.js"></script>
+
+	<!-- jQuery UI Core Files -->
+	<link rel="stylesheet" href="assets/jquery-ui.css">
+	<script src="assets/jquery-ui-1.js"></script>
+
+	<!-- Touch Event Support for jQuery UI (http://touchpunch.furf.com/) -->
+	<!--<script src="assets/jquery.js"></script>-->
+	<!-- Latest compiled and minified CSS -->
+	<!--<link rel="stylesheet" href="assets/bootstrap.css">-->
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="assets/bootstrap-theme.css">
+
+	<!-- Latest compiled and minified JavaScript -->
+	<!--<script src="assets/bootstrap.js"></script>-->
+
+	<!-- Dialog JavaScript -->
+	<script src="assets/bootstrap-dialog.js"></script>
+	<link rel="stylesheet" href="assets/bootstrap-dialog.css">
+
+	<!-- Hover to active dropdown submenu -->
+	<script src="assets/hover.js"></script>
+
+	<!-- jQuery Pagination plugin Optimized for bootstrap -->
+	<script src="assets/jquery_002.js"></script>
+	<link rel="stylesheet" type="text/css" href="assets/animate.css">
+	<style>
+		.animated-2s {
+			-webkit-animation-duration: 2s;
+			animation-duration: 2s;
+			-webkit-animation-fill-mode: both;
+			animation-fill-mode: both;
+		}
+		.animated-2s.infinite {
+			-webkit-animation-iteration-count: infinite;
+			animation-iteration-count: infinite;
+		}
+		
+		.table-striped>tbody>tr:nth-of-type(odd) {
+    		background: transparent !important;
+		}
+		.table-hover>tbody>tr:hover {
+    		background-color: rgba(94,77,67,0.05) !important;
+		}
+	</style>
+    
+	<!--<link rel="stylesheet" type="text/css" href="assets/css/loading.css">-->
+	<!--<script>		
+		function showLoading() {
+			if ($('#loading-mask').length == 0)
+			$('body').prepend('<div id="loading-mask"></div><div id="loading-img"><div class="pulse"></div></div>');
+		}
+		function hideLoading() {
+			if ($('#loading-mask').length == 1)
+			$('#loading-mask, #loading-img').remove();
+		}
+		$(document).on('click', 'a[href!="#"]', function(e) {
+			e.preventDefault();
+			showLoading();
+			window.location.href = $(this).attr('href');
+		});
+	</script>-->
+   
+	<link rel="stylesheet" type="text/css" href="assets/main.css">
+	<link rel="stylesheet" type="text/css" href="assets/wordcard.css">
+	<link rel="stylesheet" type="text/css" href="assets/exam.css">
+	<link rel="stylesheet" type="text/css" href="assets/bug-report.css">
+    
+   	<link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="assets/css/font-awesome.css"/>
+	<link type="text/css" rel="stylesheet" href="assets/css/font-awesome.min.css"/>
+	<link type="text/css" rel="stylesheet" href="assets/css/style_icomoon.css"/>
+    
+    <!-- stylesheet for demo and examples -->
+	<link rel="stylesheet" href="assets/css/scrollbar_style.css">
+    
+	<!-- custom scrollbar stylesheet -->
+	<link rel="stylesheet" href="assets/css/jquery.mCustomScrollbar.css">
+    
+
+    <link rel="stylesheet" type="text/css" href="assets/cover.css">
+    <link href="assets/css/simple-sidebar.css" rel="stylesheet">
+    <link href="assets/css/voca.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/voca_2.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/lightbox_style.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/font_tc.css" rel="stylesheet" type="text/css">
+
+</head>
+
+
+<body hola-ext-player="1" style="display: block;" data-hidebeforejs="true">
+	<nav class="navbar navbar-inverse navbar-fixed-top">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="#"><img src="assets/images/logo_elite_tw_w.svg" alt="菁英" class="logo2"> 菁英單字記憶庫</a>
+			</div>
+			<div id="navbar" class="navbar-collapse collapse">
+				<ul class="nav navbar-nav navbar-right">
+					<li id="word_category">
+						<a href="#" class="dropdown-toggle" data-hover="dropdown" data-toggle="dropdown" aria-expanded="true"><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span> 字彙列表 <span class="caret"></span></a>
+						<ul class="dropdown-menu" role="menu">
+						<li><a href="#"><span class="glyphicon glyphicon-star" aria-hidden="true"></span> 我的字彙 <span class="badge" id="my_word_num">20</span></a></li>
+                        <li><a href="http://elweb.elite-learning.com.tw/voca/toeic.php?s=learned_word"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span> 已學習 <span class="badge" id="learned_word_num">5</span></a></li>
+                        <li><a href="http://elweb.elite-learning.com.tw/voca/toeic.php?s=learning_word"><span class="glyphicon glyphicon-time" aria-hidden="true"></span> 我的字彙 <span class="badge" id="learning_word_num">12</span></a></li>
+                        <li><a href="http://elweb.elite-learning.com.tw/voca/toeic.php?s=havent_seen_word"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span> 我的字彙 <span class="badge" id="havent_seen_word_num">30</span></a></li></ul>
+					</li>
+					<li>
+						<a href="#" id="scoreInquire">
+							<span class="glyphicon glyphicon-stats" aria-hidden="true"></span> 成績查詢 </a>
+					</li>
+					<li>
+						<a href="#" id="bugReport">
+							<span class="glyphicon glyphicon-comment" aria-hidden="true"></span> 錯誤回報 </a>
+					</li>
+					<li>
+						<a href="http://elweb.elite-learning.com.tw/voca/logout.php" id="sysLogOut" title="88110209500">
+							<span class="glyphicon glyphicon-log-out" aria-hidden="true"></span> 登出WebStudent </a>
+					</li>
+				</ul>
+			</div>
+            
+		</div>
+	</nav>
+    
+    <!-- /#wrapper -->
+    <div id="wrapper">
+
+        <!-- Sidebar -->
+        
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav sidelist_p">
+            <div class="sidelist_title">词库选择</div>
+                <div class="sidebtn"><a href="#" class="sb_w180">基础单词初级</a></div>
+                <div class="sidebtn"><a href="#" class="sb_w180">基础单词中级</a></div>
+                <div class="sidebtn"><a href="#" class="sb_w180 focus">基础单词高级</a></div>
+                <div class="sidebtn"><a href="#" class="sb_w180">SSAT高频单词</a></div>
+                <div class="sidebtn"><a href="#" class="sb_w180">SAT高频单词</a></div>    
+            </ul>
+        </div>
+        <!-- /#sidebar-wrapper -->
+		<a href="#menu-toggle" class="btn_side" id="menu-toggle"><i class="fa fa-bars btn_side_icon_pt"></i></a>
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+            <div class="col-sm-12 col-md-12 main" id="scroll-control">
+            <div class="mobile_row">
+				<h1 class="page-header p_h_mt">基础单词高级 成绩查询</h1>              
+                    
+					<div class="button-row" id="btnbox">
+                    <div class="voca_title2_m note_mb hidden-xs hidden-sm"><span class="glyphicon glyphicon-exclamation-sign v_a_m" aria-hidden="true"></span><span class="v_a_m"> 底色为藍色，代表该次测验正确率低于60％。</span></div>
+                	<div class="voca_title2_m note_mb hidden-md hidden-lg"><span class="glyphicon glyphicon-exclamation-sign v_a_m" aria-hidden="true"></span><span class="v_a_m"> 底色为藍色，代表该次测验正确率低于60％。</span></div>
+					<button type="button" class="btn paper paper-raise btn_main btn_mr " id="vocWordCard"><span class="glyphicon glyphicon-log-in"></span> 进入基础单词高级</button>
+				</div>
+                
+                <div class="table-responsive score_box">
+					<table class="table table-striped table-hover s_table" id="score-list">
+						<thead class="thead_style">
+							<tr >
+								<th rowspan="2">&nbsp;</th>
+								<th rowspan="2">回合</th>
+								<th rowspan="2">测验时间</th>
+								<th colspan="2">英翻中</th>
+								<th colspan="2">中翻英</th>
+								<th colspan="2">听力选择</th>
+								<th colspan="2" class="visible-sm visible-md visible-lg">合计</th>
+								<th colspan="2">完全正确</th>
+							</tr>
+							<tr>
+								<th>正确数</th>
+								<th>正确率</th>
+								<th>正确数</th>
+								<th>正确率</th>
+								<th>正确数</th>
+								<th>正确率</th>
+								<th class="visible-sm visible-md visible-lg">正确数</th>
+								<th class="visible-sm visible-md visible-lg">正确率</th>
+								<th>正确数</th>
+								<th>正确率</th>
+							</tr>
+						</thead>
+						<tbody >
+							<tr>
+								<td data-title="">
+                                <button type="button" class="btn-block scorebtn" data-exam-token="5639aab924439" data-student-id="10011001888" data-toggle="modal" data-target="#myModal" >纪录</button></td>
+								<td class="table_text_ptl table_text_mt" data-title="回合">第1回 (中途放弃)</td>
+								<td class="table_text_ptl" data-title="测验时间">2015-11-04 14:50:33</td>
+								<td class="table_text_ptl" data-title="英翻中正确数">0 / 26</td>
+								<td class="table_text_ptl" data-title="英翻中正确率">0%</td>
+								<td class="table_text_ptl" data-title="中翻英正确数">0 / 26</td>
+								<td class="table_text_ptl" data-title="中翻英正确率">0%</td>
+								<td class="table_text_ptl" data-title="听力选择正确数">0 / 26</td>
+								<td class="table_text_ptl" data-title="听力选择正确率">0%</td>
+								<td class="table_text_ptl" data-title="正确数" class="visible-md visible-lg">0 / 78</td>
+								<td class="table_text_ptl" data-title="正确率" class="visible-md visible-lg">0%</td>
+								<td class="table_text_ptl" data-title="完全正确数">0 / 26</td>
+								<td class="table_text_ptl table_text_mb" data-title="完全正确率">
+									<span class="text-danger"><span class="glyphicon glyphicon-thumbs-down" aria-hidden="true"></span> 0 %</span>								</td>
+								</tr>
+                                
+                            <tr class="warning">
+								<td data-title="">
+                                <button type="button" class="btn-block scorebtn" data-exam-token="5639aab924439" data-student-id="10011001888">纪录</button></td>
+								<td class="table_text_ptl table_text_mt" data-title="回合">第1回 (中途放弃)</td>
+								<td class="table_text_ptl" data-title="测验时间">2015-11-04 14:50:33</td>
+								<td class="table_text_ptl" data-title="英翻中正确数">0 / 26</td>
+								<td class="table_text_ptl" data-title="英翻中正确率">0%</td>
+								<td class="table_text_ptl" data-title="中翻英正确数">0 / 26</td>
+								<td class="table_text_ptl" data-title="中翻英正确率">0%</td>
+								<td class="table_text_ptl" data-title="听力选择正确数">0 / 26</td>
+								<td class="table_text_ptl" data-title="听力选择正确率">0%</td>
+								<td class="table_text_ptl" data-title="正确数" class="visible-md visible-lg">0 / 78</td>
+								<td class="table_text_ptl" data-title="正确率" class="visible-md visible-lg">0%</td>
+								<td class="table_text_ptl" data-title="完全正确数">0 / 26</td>
+								<td class="table_text_ptl table_text_mb" data-title="完全正确率">
+									<span class="text-danger"><span class="glyphicon glyphicon-thumbs-down" aria-hidden="true"></span> 0 %</span>								</td>
+								</tr>
+                                
+							<tr class="warning">
+								<td data-title="">
+                                <button type="button" class="btn-block scorebtn" data-exam-token="5638545e191b6" data-student-id="10011001888">纪录</button></td>
+								<td class="table_text_ptl table_text_mt" data-title="回合">第1回</td>
+								<td class="table_text_ptl" data-title="测验时间">2015-11-03 14:29:50</td>
+								<td class="table_text_ptl" data-title="英翻中正确数">0 / 26</td>
+								<td class="table_text_ptl" data-title="英翻中正确率">0%</td>
+								<td class="table_text_ptl" data-title="中翻英正确数">0 / 26</td>
+								<td class="table_text_ptl" data-title="中翻英正确率">0%</td>
+								<td class="table_text_ptl" data-title="听力选择正确数">0 / 26</td>
+								<td class="table_text_ptl" data-title="听力选择正确率">0%</td>
+								<td class="table_text_ptl" data-title="正确数" class="visible-sm visible-md visible-lg">0 / 78</td>
+								<td class="table_text_ptl" data-title="正确率" class="visible-sm visible-md visible-lg">0%</td>
+								<td class="table_text_ptl" data-title="完全正确数">0 / 26</td>
+								<td class="table_text_ptl table_text_mb" data-title="完全正确率">
+									<span class="text-danger"><span class="glyphicon glyphicon-thumbs-down" aria-hidden="true"></span> 0 %</span>								</td>
+								</tr>
+                                
+							<tr>
+								<td data-title=""><button type="button" class="btn-block scorebtn" data-exam-token="563830cdb2c85" data-student-id="10011001888">纪录</button></td>
+								<td class="table_text_ptl table_text_mt" data-title="回合">第1回 (中途放弃)</td>
+								<td class="table_text_ptl" data-title="测验时间">2015-11-03 11:58:05</td>
+								<td class="table_text_ptl" data-title="英翻中正确数">1 / 26</td>
+								<td class="table_text_ptl" data-title="英翻中正确率">4%</td>
+								<td class="table_text_ptl" data-title="中翻英正确数">0 / 26</td>
+								<td class="table_text_ptl" data-title="中翻英正确率">0%</td>
+								<td class="table_text_ptl" data-title="听力选择正确数">0 / 26</td>
+								<td class="table_text_ptl" data-title="听力选择正确率">0%</td>
+								<td class="table_text_ptl" data-title="正确数" class="visible-sm visible-md visible-lg">1 / 78</td>
+								<td class="table_text_ptl" data-title="正确率" class="visible-sm visible-md visible-lg">1%</td>
+								<td class="table_text_ptl" data-title="完全正确数">0 / 26</td>
+								<td class="table_text_ptl table_text_mb" data-title="完全正确率">
+									<span class="text-danger"><span class="glyphicon glyphicon-thumbs-down" aria-hidden="true"></span> 0 %</span>								</td>
+								</tr>
+							<tr>
+								<td data-title=""><button type="button" class="btn-block scorebtn" data-exam-token="560e4e9c33042" data-student-id="10011001888">纪录</button></td>
+								<td class="table_text_ptl table_text_mt" data-title="回合">第1回 (中途放弃)</td>
+								<td class="table_text_ptl" data-title="测验时间">2015-10-02 17:30:04</td>
+								<td class="table_text_ptl" data-title="英翻中正确数">0 / 26</td>
+								<td class="table_text_ptl" data-title="英翻中正确率">0%</td>
+								<td class="table_text_ptl" data-title="中翻英正确数">0 / 26</td>
+								<td class="table_text_ptl" data-title="中翻英正确率">0%</td>
+								<td class="table_text_ptl" data-title="听力选择正确数">0 / 26</td>
+								<td class="table_text_ptl" data-title="听力选择正确率">0%</td>
+								<td class="table_text_ptl" data-title="正确数" class="visible-sm visible-md visible-lg">0 / 78</td>
+								<td class="table_text_ptl" data-title="正确率" class="visible-sm visible-md visible-lg">0%</td>
+								<td class="table_text_ptl" data-title="完全正确数">0 / 26</td>
+								<td class="table_text_ptl table_text_mb" data-title="完全正确率">
+									<span class="text-danger"><span class="glyphicon glyphicon-thumbs-down" aria-hidden="true"></span> 0 %</span>								</td>
+								</tr>
+							<tr class="warning">
+								<td data-title=""><button type="button" class="btn-block scorebtn" data-exam-token="56039434443d5" data-student-id="10011001888">纪录</button></td>
+								<td class="table_text_ptl table_text_mt" data-title="回合">学习中 (中途放弃)</td>
+								<td class="table_text_ptl" data-title="测验时间">2015-10-02 17:30:04</td>
+								<td class="table_text_ptl" data-title="英翻中正确数">0 / 26</td>
+								<td class="table_text_ptl" data-title="英翻中正确率">0%</td>
+								<td class="table_text_ptl" data-title="中翻英正确数">0 / 26</td>
+								<td class="table_text_ptl" data-title="中翻英正确率">0%</td>
+								<td class="table_text_ptl" data-title="听力选择正确数">0 / 26</td>
+								<td class="table_text_ptl" data-title="听力选择正确率">0%</td>
+								<td class="table_text_ptl" data-title="正确数" class="visible-sm visible-md visible-lg">0 / 78</td>
+								<td class="table_text_ptl" data-title="正确率" class="visible-sm visible-md visible-lg">0%</td>
+								<td class="table_text_ptl" data-title="完全正确数">0 / 26</td>
+								<td class="table_text_ptl table_text_mb" data-title="完全正确率">
+									<span class="text-danger"><span class="glyphicon glyphicon-thumbs-down" aria-hidden="true"></span> 0 %</span>								</td>
+								</tr>
+							<tr class="warning">
+								<td data-title=""><button type="button" class="btn-block scorebtn" data-exam-token="56038e5fb99a4" data-student-id="10011001888">纪录</button></td>
+								<td class="table_text_ptl table_text_mt" data-title="回合">学习中 (中途放弃)</td>
+								<td class="table_text_ptl" data-title="测验时间">2015-10-02 17:30:04</td>
+								<td class="table_text_ptl" data-title="英翻中正确数">0 / 26</td>
+								<td class="table_text_ptl" data-title="英翻中正确率">0%</td>
+								<td class="table_text_ptl" data-title="中翻英正确数">0 / 26</td>
+								<td class="table_text_ptl" data-title="中翻英正确率">0%</td>
+								<td class="table_text_ptl" data-title="听力选择正确数">0 / 26</td>
+								<td class="table_text_ptl" data-title="听力选择正确率">0%</td>
+								<td class="table_text_ptl" data-title="正确数" class="visible-sm visible-md visible-lg">0 / 78</td>
+								<td class="table_text_ptl" data-title="正确率" class="visible-sm visible-md visible-lg">0%</td>
+								<td class="table_text_ptl" data-title="完全正确数">0 / 26</td>
+								<td class="table_text_ptl table_text_mb" data-title="完全正确率">
+									<span class="text-danger"><span class="glyphicon glyphicon-thumbs-down" aria-hidden="true"></span> 0 %</span>								</td>
+								</tr>
+							<tr>
+								<td data-title=""><button type="button" class="btn-block scorebtn" data-exam-token="55f77dc6e7620" data-student-id="10011001888">纪录</button></td>
+								<td class="table_text_ptl table_text_mt" data-title="回合">第2回 (中途放弃)</td>
+								<td class="table_text_ptl" data-title="测验时间">2015-10-02 17:30:04</td>
+								<td class="table_text_ptl" data-title="英翻中正确数">0 / 26</td>
+								<td class="table_text_ptl" data-title="英翻中正确率">0%</td>
+								<td class="table_text_ptl" data-title="中翻英正确数">0 / 26</td>
+								<td class="table_text_ptl" data-title="中翻英正确率">0%</td>
+								<td class="table_text_ptl" data-title="听力选择正确数">0 / 26</td>
+								<td class="table_text_ptl" data-title="听力选择正确率">0%</td>
+								<td class="table_text_ptl" data-title="正确数" class="visible-sm visible-md visible-lg">0 / 78</td>
+								<td class="table_text_ptl" data-title="正确率" class="visible-sm visible-md visible-lg">0%</td>
+								<td class="table_text_ptl" data-title="完全正确数">0 / 26</td>
+								<td class="table_text_ptl table_text_mb" data-title="完全正确率">
+									<span class="text-danger"><span class="glyphicon glyphicon-thumbs-down" aria-hidden="true"></span> 0 %</span>								</td>
+								</tr>
+							<tr class="warning">
+								<td data-title=""><button type="button" class="btn-block scorebtn" data-exam-token="55f77aaacaddd" data-student-id="10011001888">纪录</button></td>
+								<td class="table_text_ptl table_text_mt" data-title="回合">第2回 (中途放弃)</td>
+								<td class="table_text_ptl" data-title="测验时间">2015-10-02 17:30:04</td>
+								<td class="table_text_ptl" data-title="英翻中正确数">0 / 26</td>
+								<td class="table_text_ptl" data-title="英翻中正确率">0%</td>
+								<td class="table_text_ptl" data-title="中翻英正确数">0 / 26</td>
+								<td class="table_text_ptl" data-title="中翻英正确率">0%</td>
+								<td class="table_text_ptl" data-title="听力选择正确数">0 / 26</td>
+								<td class="table_text_ptl" data-title="听力选择正确率">0%</td>
+								<td class="table_text_ptl" data-title="正确数" class="visible-sm visible-md visible-lg">0 / 78</td>
+								<td class="table_text_ptl" data-title="正确率" class="visible-sm visible-md visible-lg">0%</td>
+								<td class="table_text_ptl" data-title="完全正确数">0 / 26</td>
+								<td class="table_text_ptl table_text_mb" data-title="完全正确率">
+									<span class="text-danger"><span class="glyphicon glyphicon-thumbs-down" aria-hidden="true"></span> 0 %</span>								</td>
+								</tr>
+														<tr>
+							<td data-title=""><button type="button" class="btn-block scorebtn" data-exam-token="55f778fe8ddf7" data-student-id="10011001888">纪录</button></td>
+								<td class="table_text_ptl table_text_mt" data-title="回合">第2回 (中途放弃)</td>
+								<td class="table_text_ptl" data-title="测验时间">2015-10-02 17:30:04</td>
+								<td class="table_text_ptl" data-title="英翻中正确数">0 / 26</td>
+								<td class="table_text_ptl" data-title="英翻中正确率">0%</td>
+								<td class="table_text_ptl" data-title="中翻英正确数">0 / 26</td>
+								<td class="table_text_ptl" data-title="中翻英正确率">0%</td>
+								<td class="table_text_ptl" data-title="听力选择正确数">0 / 26</td>
+								<td class="table_text_ptl" data-title="听力选择正确率">0%</td>
+								<td class="table_text_ptl" data-title="正确数" class="visible-sm visible-md visible-lg">0 / 78</td>
+								<td class="table_text_ptl" data-title="正确率" class="visible-sm visible-md visible-lg">0%</td>
+								<td class="table_text_ptl" data-title="完全正确数">0 / 26</td>
+								<td class="table_text_ptl table_text_mb" data-title="完全正确率">
+									<span class="text-danger"><span class="glyphicon glyphicon-thumbs-down" aria-hidden="true"></span> 0 %</span>								</td>
+								</tr>
+							<tr class="warning">
+								<td data-title=""><button type="button" class="btn-block scorebtn" data-exam-token="55f775206c16c" data-student-id="10011001888">纪录</button></td>
+								<td class="table_text_ptl table_text_mt" data-title="回合">第2回 (中途放弃)</td>
+								<td class="table_text_ptl" data-title="测验时间">2015-10-02 17:30:04</td>
+								<td class="table_text_ptl" data-title="英翻中正确数">0 / 26</td>
+								<td class="table_text_ptl" data-title="英翻中正确率">0%</td>
+								<td class="table_text_ptl" data-title="中翻英正确数">0 / 26</td>
+								<td class="table_text_ptl" data-title="中翻英正确率">0%</td>
+								<td class="table_text_ptl" data-title="听力选择正确数">0 / 26</td>
+								<td class="table_text_ptl" data-title="听力选择正确率">0%</td>
+								<td class="table_text_ptl" data-title="正确数" class="visible-sm visible-md visible-lg">0 / 78</td>
+								<td class="table_text_ptl" data-title="正确率" class="visible-sm visible-md visible-lg">0%</td>
+								<td class="table_text_ptl" data-title="完全正确数">0 / 26</td>
+								<td class="table_text_ptl table_text_mb" data-title="完全正确率">
+									<span class="text-danger"><span class="glyphicon glyphicon-thumbs-down" aria-hidden="true"></span> 0 %</span>								</td>
+								</tr>
+							<tr class="warning">
+								<td data-title=""><button type="button" class="btn-block scorebtn" data-exam-token="55efedc7b6465" data-student-id="10011001888">纪录</button></td>
+								<td class="table_text_ptl table_text_mt" data-title="回合">第2回 (中途放弃)</td>
+								<td class="table_text_ptl" data-title="测验时间">2015-10-02 17:30:04</td>
+								<td class="table_text_ptl" data-title="英翻中正确数">0 / 26</td>
+								<td class="table_text_ptl" data-title="英翻中正确率">0%</td>
+								<td class="table_text_ptl" data-title="中翻英正确数">0 / 26</td>
+								<td class="table_text_ptl" data-title="中翻英正确率">0%</td>
+								<td class="table_text_ptl" data-title="听力选择正确数">0 / 26</td>
+								<td class="table_text_ptl" data-title="听力选择正确率">0%</td>
+								<td class="table_text_ptl" data-title="正确数" class="visible-sm visible-md visible-lg">0 / 78</td>
+								<td class="table_text_ptl" data-title="正确率" class="visible-sm visible-md visible-lg">0%</td>
+								<td class="table_text_ptl" data-title="完全正确数">0 / 26</td>
+								<td class="table_text_ptl table_text_mb" data-title="完全正确率">
+									<span class="text-danger"><span class="glyphicon glyphicon-thumbs-down" aria-hidden="true"></span> 0 %</span>								</td>
+								</tr>
+							<tr class="warning">
+								<td data-title=""><button type="button" class="btn-block scorebtn" data-exam-token="55e6b7bbf2bf5" data-student-id="10011001888">纪录</button></td>
+								<td class="table_text_ptl table_text_mt" data-title="回合">第2回 (中途放弃)</td>
+								<td class="table_text_ptl" data-title="测验时间">2015-10-02 17:30:04</td>
+								<td class="table_text_ptl" data-title="英翻中正确数">0 / 26</td>
+								<td class="table_text_ptl" data-title="英翻中正确率">0%</td>
+								<td class="table_text_ptl" data-title="中翻英正确数">0 / 26</td>
+								<td class="table_text_ptl" data-title="中翻英正确率">0%</td>
+								<td class="table_text_ptl" data-title="听力选择正确数">0 / 26</td>
+								<td class="table_text_ptl" data-title="听力选择正确率">0%</td>
+								<td class="table_text_ptl" data-title="正确数" class="visible-sm visible-md visible-lg">0 / 78</td>
+								<td class="table_text_ptl" data-title="正确率" class="visible-sm visible-md visible-lg">0%</td>
+								<td class="table_text_ptl" data-title="完全正确数">0 / 26</td>
+								<td class="table_text_ptl table_text_mb" data-title="完全正确率">
+									<span class="text-danger"><span class="glyphicon glyphicon-thumbs-down" aria-hidden="true"></span> 0 %</span>								</td>
+								</tr>
+							<tr>
+								<td data-title=""><button type="button" class="btn-block scorebtn" data-exam-token="55d811dda29fc" data-student-id="10011001888">纪录</button></td>
+								<td class="table_text_ptl table_text_mt" data-title="回合">第2回 (中途放弃)</td>
+								<td class="table_text_ptl" data-title="测验时间">2015-10-02 17:30:04</td>
+								<td class="table_text_ptl" data-title="英翻中正确数">0 / 26</td>
+								<td class="table_text_ptl" data-title="英翻中正确率">0%</td>
+								<td class="table_text_ptl" data-title="中翻英正确数">0 / 26</td>
+								<td class="table_text_ptl" data-title="中翻英正确率">0%</td>
+								<td class="table_text_ptl" data-title="听力选择正确数">0 / 26</td>
+								<td class="table_text_ptl" data-title="听力选择正确率">0%</td>
+								<td class="table_text_ptl" data-title="正确数" class="visible-sm visible-md visible-lg">0 / 78</td>
+								<td class="table_text_ptl" data-title="正确率" class="visible-sm visible-md visible-lg">0%</td>
+								<td class="table_text_ptl" data-title="完全正确数">0 / 26</td>
+								<td class="table_text_ptl table_text_mb" data-title="完全正确率">
+									<span class="text-danger"><span class="glyphicon glyphicon-thumbs-down" aria-hidden="true"></span> 0 %</span>								</td>
+								</tr>
+							<tr class="list_borderb">
+								<td data-title=""><button type="button" class="btn-block scorebtn" data-exam-token="55d59e7a1d9d1" data-student-id="10011001888">纪录</button></td>
+								<td class="table_text_ptl table_text_mt" data-title="回合">第2回 (中途放弃)</td>
+								<td class="table_text_ptl" data-title="测验时间">2015-10-02 17:30:04</td>
+								<td class="table_text_ptl" data-title="英翻中正确数">0 / 26</td>
+								<td class="table_text_ptl" data-title="英翻中正确率">0%</td>
+								<td class="table_text_ptl" data-title="中翻英正确数">0 / 26</td>
+								<td class="table_text_ptl" data-title="中翻英正确率">0%</td>
+								<td class="table_text_ptl" data-title="听力选择正确数">0 / 26</td>
+								<td class="table_text_ptl" data-title="听力选择正确率">0%</td>
+								<td class="table_text_ptl" data-title="正确数" class="visible-sm visible-md visible-lg">0 / 78</td>
+								<td class="table_text_ptl" data-title="正确率" class="visible-sm visible-md visible-lg">0%</td>
+								<td class="table_text_ptl" data-title="完全正确数">0 / 26</td>
+								<td class="table_text_ptl table_text_mb" data-title="完全正确率">
+									<span class="text-danger"><span class="glyphicon glyphicon-thumbs-down" aria-hidden="true"></span> 0 %</span>								</td>
+								</tr>
+												</tbody>
+					</table>
+				</div>
+
+				<p class="text-center text-muted" id="copyright">Copyright © ELITE International Education Services. All rights reserved.</p>
+			</div>
+            </div>
+        </div>
+        <!-- /#page-content-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
+    
+    
+<!-- Modal -->
+  <div class="modal fade bs-example-modal-lg" id="myModal" role="dialog">
+    <div class="modal-dialog modal-lg">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        <div class="modal-body">
+        
+    <div class="window-content" id="score-detail">
+	<div class="answer_box_title" >英翻中</div>
+    <div class="table-responsive lh_fix content_scro light bgw" id="content-d" >
+    <table class="table table-striped table-hover answer_box" >
+    
+    <tbody>
+    <tr>
+    	<td><span class="text-danger glyphicon glyphicon-remove" aria-hidden="true"></span></td>
+    	<td class="a_b_text">sad</td>
+    	<td class="l_list_ptb">
+         <div><span class="label label1">正确解答</span><span class="text_basic_bold2"> 悲哀的;悲伤的;伤心的</span></div>
+         <div><span class="label label6">您的答案</span><span class="text_basic_bold2"> 未作答</span></div>
+        </td>
+       </tr>
+      <tr>
+      	<td><span class="text-danger glyphicon glyphicon-remove" aria-hidden="true"></span></td>
+        <td class="a_b_text">ma'am</td>
+        <td class="l_list_ptb">
+        	<div><span class="label label1">正确解答</span><span class="text_basic_bold2"> 夫人;太太;女士;小姐</span></div>
+         	<div><span class="label label6">您的答案</span><span class="text_basic_bold2"> 未作答</span></div>
+        </td>
+       </tr>
+      <tr>
+    	<td><span class="text-danger glyphicon glyphicon-remove" aria-hidden="true"></span></td>
+    	<td class="a_b_text">nail</td>
+    	<td class="l_list_ptb">
+         <div><span class="label label1">正确解答</span><span class="text_basic_bold2"> 抓住;逮住;证明…有罪</span></div>
+         <div><span class="label label6">您的答案</span><span class="text_basic_bold2"> 未作答</span></div>
+        </td>
+       </tr>
+      <tr>
+      	<td><span class="text-danger glyphicon glyphicon-remove" aria-hidden="true"></span></td>
+        <td class="a_b_text">cabbage</td>
+        <td class="l_list_ptb">
+        	<div><span class="label label1">正确解答</span><span class="text_basic_bold2"> 同laboratory</span></div>
+         	<div><span class="label label6">您的答案</span><span class="text_basic_bold2"> 未作答</span></div>
+        </td>
+       </tr>
+       
+      </tbody></table></div>
+      
+    <div class="answer_box_title" >中翻英</div>
+    <div class="table-responsive lh_fix">
+    <table class="table table-striped table-hover answer_box">
+    
+    <tbody>
+    <tr>
+    	<td><span class="text-danger glyphicon glyphicon-remove" aria-hidden="true"></span></td>
+    	<td class="a_b_text">sad</td>
+    	<td class="l_list_ptb">
+         <div><span class="label label1">正确解答</span><span class="text_basic_bold2"> 悲哀的;悲伤的;伤心的</span></div>
+         <div><span class="label label6">您的答案</span><span class="text_basic_bold2"> 未作答</span></div>
+        </td>
+       </tr>
+      <tr>
+      	<td><span class="text-danger glyphicon glyphicon-remove" aria-hidden="true"></span></td>
+        <td class="a_b_text">ma'am</td>
+        <td class="l_list_ptb">
+        	<div><span class="label label1">正确解答</span><span class="text_basic_bold2"> 夫人;太太;女士;小姐</span></div>
+         	<div><span class="label label6">您的答案</span><span class="text_basic_bold2"> 未作答</span></div>
+        </td>
+       </tr>
+      <tr>
+    	<td><span class="text-danger glyphicon glyphicon-remove" aria-hidden="true"></span></td>
+    	<td class="a_b_text">nail</td>
+    	<td class="l_list_ptb">
+         <div><span class="label label1">正确解答</span><span class="text_basic_bold2"> 抓住;逮住;证明…有罪</span></div>
+         <div><span class="label label6">您的答案</span><span class="text_basic_bold2"> 未作答</span></div>
+        </td>
+       </tr>
+      <tr>
+      	<td><span class="text-danger glyphicon glyphicon-remove" aria-hidden="true"></span></td>
+        <td class="a_b_text">cabbage</td>
+        <td class="l_list_ptb">
+        	<div><span class="label label1">正确解答</span><span class="text_basic_bold2"> 同laboratory</span></div>
+         	<div><span class="label label6">您的答案</span><span class="text_basic_bold2"> 未作答</span></div>
+        </td>
+       </tr>
+       
+      </tbody></table></div>
+    <div class="answer_box_title" >听力选择</div>
+    <div class="table-responsive lh_fix">
+    <table class="table table-striped table-hover answer_box">
+    
+    <tbody>
+    <tr>
+    	<td><span class="text-danger glyphicon glyphicon-remove" aria-hidden="true"></span></td>
+    	<td class="a_b_text">sad</td>
+    	<td class="l_list_ptb">
+         <div><span class="label label1">正确解答</span><span class="text_basic_bold2"> 悲哀的;悲伤的;伤心的</span></div>
+         <div><span class="label label6">您的答案</span><span class="text_basic_bold2"> 未作答</span></div>
+        </td>
+       </tr>
+      <tr>
+      	<td><span class="text-danger glyphicon glyphicon-remove" aria-hidden="true"></span></td>
+        <td class="a_b_text">ma'am</td>
+        <td class="l_list_ptb">
+        	<div><span class="label label1">正确解答</span><span class="text_basic_bold2"> 夫人;太太;女士;小姐</span></div>
+         	<div><span class="label label6">您的答案</span><span class="text_basic_bold2"> 未作答</span></div>
+        </td>
+       </tr>
+      <tr>
+    	<td><span class="text-danger glyphicon glyphicon-remove" aria-hidden="true"></span></td>
+    	<td class="a_b_text">nail</td>
+    	<td class="l_list_ptb">
+         <div><span class="label label1">正确解答</span><span class="text_basic_bold2"> 抓住;逮住;证明…有罪</span></div>
+         <div><span class="label label6">您的答案</span><span class="text_basic_bold2"> 未作答</span></div>
+        </td>
+       </tr>
+      <tr>
+      	<td><span class="text-danger glyphicon glyphicon-remove" aria-hidden="true"></span></td>
+        <td class="a_b_text">cabbage</td>
+        <td class="l_list_ptb">
+        	<div><span class="label label1">正确解答</span><span class="text_basic_bold2"> 同laboratory</span></div>
+         	<div><span class="label label6">您的答案</span><span class="text_basic_bold2"> 未作答</span></div>
+        </td>
+       </tr>
+       
+      </tbody></table></div>
+
+        </div>
+        <div class="modal-footer lb_footer_p">
+          <div class="window-menu">
+	<button type="button" class="l_btn l_btn_small_f l_btn_mr" id="exam-pause"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span> 隐藏 / 显示正确题</button>
+	<button type="button" class="l_btn l_btn_small_f l_btn_mr" id="exam-abort"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span> 关闭</button>
+
+</div>
+        </div>
+
+</div>
+</div>
+      
+    </div>
+  </div>
+  
+ 
+    
+	<input id="wbKindId" value="16" type="hidden">
+	<input id="currRound" value="1" type="hidden">
+	<script>
+		window['wbKey'] = 'TOEIC';
+		//字卡自動換頁秒數
+		window['vocTimerNumSet'] = 5;
+		window['vocTimerNum'] = window['vocTimerNumSet'];
+		var voc_num_min = 3;
+			</script>
+	<!--<script src="assets/main.js"></script>-->
+	<script type="text/javascript" src="assets/soundmanager2.js"></script>
+	<script>
+		soundManager.defaultOptions = {
+			autoLoad: true
+		};
+		soundManager.setup({
+			useHighPerformance: true,
+			ignoreMobileRestrictions: true,
+			debugMode: false,
+			url: 'include/soundmanager2/swf/',
+			preferFlash: false,
+			onready: function() {
+			soundManager.createSound('3715f0c5d8778cde356d3c5670de64bd', 'include/sound/effect/_correct.mp3');soundManager.createSound('0b67a654792a3add6a3546ac74a90c61', 'include/sound/effect/_incorrect.mp3');soundManager.createSound('b335791ae5aeba281d50b28f0bd9bb2a', 'include/sound/effect/_tickTock.mp3');soundManager.createSound('7cc63b26c07b32e118bd399a3f035e7e', 'include/sound/pronunciation/english/american/network/cable.mp3');soundManager.createSound('99857435a00a8cb175b35dde3285d6cb', 'include/sound/pronunciation/english/american/network/habit.mp3');soundManager.createSound('24b75f3b43d8e7395326fa2e2cec2813', 'include/sound/pronunciation/english/american/network/keep.mp3');soundManager.createSound('e0228b75ec16f47b10557ba017fa823e', 'include/sound/pronunciation/english/american/network/label.mp3');soundManager.createSound('e8ad11b5b61d285120c62dba33ba9d95', 'include/sound/pronunciation/english/american/network/machinery.mp3');soundManager.createSound('ddf2856f38d18a06b7e41a98c94a6b1e', 'include/sound/pronunciation/english/american/network/name.mp3');soundManager.createSound('3fbd1ed479e922ba611b6c58bbac96df', 'include/sound/pronunciation/english/american/network/napkin.mp3');			}
+		});
+		function pronounce(soundId, callback, hideError) {
+			var playSound = soundManager.getSoundById(soundId);
+			if (typeof playSound != 'undefined') {
+				soundManager.stopAll();
+				soundManager.play(soundId, {
+					onfinish: function() {
+						(callback && typeof(callback) === "function") && callback();
+					}
+				});
+			} else {
+				if (typeof(hideError) === "boolean" && hideError) {
+					(callback && typeof(callback) === "function") && callback();
+				} else {
+					BootstrapDialog.show({
+						type: BootstrapDialog.TYPE_DANGER,
+						title: '錯誤',
+						message: '無法播放這個音檔',
+						buttons: [{
+	                		cssClass: 'btn-danger',
+							label: '好',
+							action: function(dialogItself){
+								dialogItself.close();
+							}
+						}],
+						onhide: function() {
+							(callback && typeof(callback) === "function") && callback();
+						}
+					});
+				}
+			}
+		}
+	</script>
+		<script>
+		$(document).ready(function() {
+			$('body[data-hidebeforejs="true"]').css('display', 'block');
+
+			if ($('.sidebar:visible').length == 0) { $('#hideSideMenu').html('<span class="glyphicon glyphicon-resize-full" aria-hidden="true"></span> 顯示選單'); }
+			else { $('#hideSideMenu').html('<span class="glyphicon glyphicon-resize-small" aria-hidden="true"></span> 隱藏選單'); }
+
+			if ($('.sidebar').length == 1 && $(this).find('.nav li.active').eq(0).length == 1) {
+				$('.sidebar').scrollTop($(this).find('.nav li.active').eq(0).offset().top - $('nav.navbar').outerHeight() - ($(this).find('.nav li.active').eq(0).outerHeight() * 2)); /* 距離上方2個li的高度 */
+			}
+		});
+	</script>
+    
+    <!-- HAMBURGER -->
+    <script>
+	$('#BOX').click(function() {
+		$(this).toggleClass("active");
+	});
+	</script>
+    <!-- HAMBURGER 完 -->
+    
+    <!-- 側邊欄 -->
+  	<!-- jQuery -->
+    <script src="assets/js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="assets/js/bootstrap.min.js"></script>
+	
+    <!-- Menu Toggle Script -->
+    <script>
+    $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+    });
+    </script>
+    <!--側邊欄 完-->
+    
+    
+  <!-- google font -->
+  <script type="text/javascript">
+  WebFontConfig = {
+    google: { families: [ 'Open+Sans:400,300,300italic,400italic,600,700,700italic,800,800italic,600italic:latin' ] }
+  };
+  (function() {
+    var wf = document.createElement('script');
+    wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
+      '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+    wf.type = 'text/javascript';
+    wf.async = 'true';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(wf, s);
+  })(); 
+  </script>
+  <!-- google font 完-->
+
+	<!-- Scrollbar -->
+	<!-- Google CDN jQuery with fallback to local -->
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+	<!--<script>window.jQuery || document.write('<script src="../js/minified/jquery-1.11.0.min.js"><\/script>')</script>-->
+	
+	<!-- custom scrollbar plugin -->
+	<script src="assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+	
+	<script>
+		(function($){
+			$(window).load(function(){
+				
+				$.mCustomScrollbar.defaults.scrollButtons.enable=true; //enable scrolling buttons by default
+				$.mCustomScrollbar.defaults.axis="yx"; //enable 2 axis scrollbars by default
+				
+				$("#content-l").mCustomScrollbar();
+				
+				$("#content-d, #content-d2, #content-d3").mCustomScrollbar({theme:"dark"});
+				
+				$(".all-themes-switch a").click(function(e){
+					e.preventDefault();
+					var $this=$(this),
+						rel=$this.attr("rel"),
+						el=$(".content");
+					switch(rel){
+						case "toggle-content":
+							el.toggleClass("expanded-content");
+							break;
+					}
+				});
+				
+			});
+		})(jQuery);
+	</script>
+    <!-- Scrollbar 完-->
+
+
+</body></html>
+
+

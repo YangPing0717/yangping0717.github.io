@@ -1,0 +1,66 @@
+.exam h1 {
+	text-align: center;
+	line-height: 1.5;
+	margin: 10px 0;
+}
+.exam ul {
+	padding: 0;
+	margin: 10px 0;
+	list-style: none;
+}
+.exam ul > li {
+	margin: 0;
+	padding: 0;
+}
+.exam .progress {
+	/*margin: 0;*/
+}
+.exam label {
+	display: block;
+    padding: 10px 15px;
+    border: 1px solid #ccc;
+    border-radius: 0px;
+    background-color: #fff;
+}
+.exam label:hover, .exam label:active, .exam label:focus {
+	color: #fff;
+	background-image: linear-gradient(to bottom,#fff 0,#f2dede 100%);
+	border: 1px solid #112A40;
+}
+#wrapper.toggled {
+	/*padding-left: 0 !important;*/
+}
+#page-content-wrapper {
+	/*position: static !important;*/
+}
+#card-control, #exam-landing {
+	/*margin-top: 15px;*/
+	margin-bottom: 2.6em;
+}
+#exam-landing {
+	padding: 30px 0;
+}
+#pause-message {
+	position: fixed;
+	top: 0;
+	left: 0;
+	bottom: 60px;
+	right: 0;
+	margin: auto auto;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	z-index: 1042;
+}
+#pause-message {
+	width: 300px;
+	height: 60px;
+}
+#pause-message > div {
+	padding: 30px 0;
+}
+#pause-message > p {
+	text-align: center;
+	line-height: 200%;
+}

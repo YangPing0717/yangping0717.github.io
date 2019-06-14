@@ -1,0 +1,12 @@
+#bug-content h2 {
+	font-size: 24px;
+	text-align: left;
+	margin-top: 0;
+	border-bottom: 2px solid #265a88;
+	padding-bottom: 10px;
+	margin-bottom: 20px;
+}
+
+#captchaCodeImg {
+	margin-bottom: 10px;
+}
