@@ -1428,7 +1428,7 @@ table.dataTable .t_alert {
 }
 .scrbox_t11{
     font-size: 14px;
-    margin-bottom: 20px;
+    margin-bottom: 12px;
     height: 40px;
     line-height: 20px;
 }
@@ -1616,7 +1616,7 @@ table.dataTable .t_alert {
 	padding-bottom: 15px;
 }
 .scrbox_t33 {
-    font-size: 14px;
+	font-size: 14px;
     margin-left: 0px;
     border-left: 3px solid #a69981;
     padding-left: 15px;
@@ -1645,14 +1645,15 @@ table.dataTable .t_alert {
 .bar_title {
     font-weight: 700;
     font-size: 14px;
-    height: 30px;
     line-height: 18px;
+	height: 40px;
 }
 }
 
 .bar_title{
-font-weight: 700;
+	font-weight: 700;
     font-size: 14px;
+	margin-bottom: 8px;
     /*margin-top: 10px;
 	color: #a8233b;*/
 	}
@@ -1706,7 +1707,7 @@ font-weight: 700;
 
 
 .progress {
-    height: 8px;
+    height: 29px;
     margin-bottom: 0px;
     overflow: visible;
     background-color: #dddddd;
@@ -1714,15 +1715,17 @@ font-weight: 700;
     -webkit-box-shadow: inset 0 0px 0px rgba(0,0,0,.1);
     box-shadow: inset 0 0px 0px rgba(0,0,0,.1);
     border: 0px solid #9E9E9E;
-    margin-top: 32px;
+/*    margin-top: 32px;*/
+	position: relative;
 }
 .progress-bar {
     float: left;
-    width: 0;
+/*	min-width: 1px;*/
     height: 100%;
     font-size: 12px;
     line-height: 20px;
     color: #fff;
+    background-color: #bcbcbc;
     text-align: center;
     -webkit-box-shadow: inset 0 0px 0 rgba(0,0,0,.15);
     box-shadow: inset 0 0px 0 rgba(0,0,0,.15);
@@ -1730,23 +1733,46 @@ font-weight: 700;
     -o-transition: width .6s ease;
     transition: width .6s ease;
 }
-.progress-bar{
+.bg-warning{
     background-color: #a8243b;
+	height: 3px;
+    margin-top: 26px;
 }
 .bg-success {
     background-color: #e3a043;
+	height: 3px;
+    margin-top: 26px;
 }
 .bg-info {
     background-color: #1a7c1f;
+	height: 3px;
+    margin-top: 26px;
 }
 .pro_percent {
-    color: #e90000;
+    color: #312f58;
     font-size: 18px;
-    margin-top: -28px;
-    position: absolute;
+    line-height: 24px;
 }
 
-
+.progress {
+    background-image: none;
+    -webkit-print-color-adjust: exact;
+    box-shadow: inset 0 0;
+    -webkit-box-shadow: inset 0 0;
+}
+.progress > .progress-bar {
+    background-image: none;
+    -webkit-print-color-adjust: exact;
+    box-shadow: inset 0 0;
+    -webkit-box-shadow: inset 0 0;
+}
+.progress > .progress-bar:nth-child(1){
+	position: absolute;
+    top: 0;
+    left: 0;
+	height: 26px;
+}
+    
 @media print {
 html,body {
 	overflow-x: initial;
@@ -1775,11 +1801,9 @@ body * {
 .diplomatitle {
     min-width: 260px;
 }
-/*
 .scrbox {
 	width: 33.3333334%;
 }
-*/
 .sbox_hlimit {
     height: fit-content;
     padding-bottom: 0px;
@@ -1817,20 +1841,46 @@ body * {
     border: 1px solid #9E9E9E;
 	background-color: #000000;
 }
+	
+}
+
+
+
+
+@media print{       
 /*
-.progress-bar{
-    background-color: #8c8c8c !important;
+            .progress{
+                background-color: #000 !important;
+                -ms-filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#F5F5F5', endColorstr='#F5F5F5')" !important;
+            }
+*/
+.progress-bar {
+	display: block !important;
+	background-color: #bcbcbc !important;
+	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#5BC0DE', endColorstr='#5BC0DE')" !important;
+}
+
+/*
+            .progress, .progress > .progress-bar {
+                display: block !important;
+                -webkit-print-color-adjust: exact !important;
+
+                box-shadow: inset 0 0 !important;
+                -webkit-box-shadow: inset 0 0 !important;
+            }   
+*/
+.bg-warning{
+    background-color: #a8243b !important;
 }
 .bg-success {
-    background-color: #696969 !important;
+    background-color: #e3a043 !important;
 }
 .bg-info {
-    background-color: black;
+    background-color: #1a7c1f !important;
 }
-*/
 .pro_percent {
-    margin-top: -30px;
+    color: #000 !important;
+    font-size: 18px;
+    line-height: 24px;
 }
-	
-	
 }

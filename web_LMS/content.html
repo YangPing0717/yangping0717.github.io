@@ -1,0 +1,462 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+<!---->
+<title>Elite LMS</title>
+<meta charset="utf-8" />
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<link rel="shortcut icon" href="assets/images/favicon.ico">
+<link rel="bookmark" href="assets/images/favicon.ico"/>
+<link rel="apple-touch-icon" href="assets/images/icon_LMS.png">
+
+<meta property="og:title" content="Elite LMS" />
+<meta property="og:description" content="Elite LMS" />
+<meta property="og:image" content="assets/images/share_img_lms.jpg">
+<meta name="keywords" content="ELITE, Education, LMS, 菁英" />
+
+<!-- Bootstrap -->
+<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+
+<!-- iconfont -->
+<link href="assets/css/font-awesome.min.css" rel="stylesheet">
+<link href="assets/css/style_icomoon.css" rel="stylesheet">
+<link href="assets/css/material-icons.css" rel="stylesheet">
+
+
+<!-- left_side_bar -->
+<link href="assets/css/simple-sidebar.css" rel="stylesheet">
+<!--<link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet">-->
+
+<!-- timeline part_2 -->
+<link rel="stylesheet" href="assets/timeline/css/style_timeline2.css">
+
+<!-- timeline -->
+<link rel="stylesheet" type="text/css" href="assets/timeline/css/default.css" />
+<link rel="stylesheet" type="text/css" href="assets/timeline/css/component.css" />
+<!--<script src="js/modernizr.custom.js"></script>-->
+
+<!-- left_side_bar --> <!-- sidebar -->
+<link rel="stylesheet" href="assets/css/dist_sidebar.css">
+<link rel="stylesheet" href="assets/css/left_sidebar.css">
+
+<!--<link rel="stylesheet" href="assets/nav/css/reset.css">--> <!-- CSS reset -->
+<link rel="stylesheet" href="assets/nav/css/style.css"> <!-- Resource style -->
+<script src="assets/nav/js/modernizr.js"></script> <!-- Modernizr -->
+  	
+<link rel="stylesheet" href="assets/css/lms_modal.css">
+<link rel="stylesheet" href="assets/css/lms_browse.css">
+	
+</head>
+
+<body>
+	<header class="cd-main-header">
+		<div class="brand">
+		<a href="#0" class="cd-logo">LMS 菁斗雲</a>
+		</div>
+
+		<a href="#menu-toggle" id="menu-toggle" class="cd-nav-trigger btn_trigger">Menu<span></span></a>
+		<div class="cd-search is-hidden">
+			<form action="#0">
+				<input type="search" placeholder="Search...">
+			</form>
+		</div> <!-- cd-search -->
+
+		<a href="#0" class="cd-nav-trigger">Menu<span></span></a>
+
+		<nav class="cd-nav">
+			<ul class="cd-top-nav">
+				<li><a href="#0">TasksXX</a></li>
+				<li><a href="#0">我的訊息<span class="count">2</span></a></li>
+				<li class="has-children account">
+					<a href="#0">
+						<img src="assets/images/img_user.jpg" alt="avatar">Ken
+					</a>
+
+					<ul>
+						<li><a href="#0"><i class="material-icons">perm_identity</i> 基本資料</a></li>
+						<li><a href="#0"><i class="material-icons">local_activity</i> 點數紀錄</a></li>
+						<li><a href="#0"><i class="material-icons">add_shopping_cart</i> 購買紀錄</a></li>
+						<li><a href="#0"><i class="material-icons">exit_to_app</i> 登出</a></li>
+					</ul>
+				</li>
+			</ul>
+		</nav>
+	</header> <!-- .cd-main-header -->
+	
+	
+<div id="wrapper">
+
+	<main class="cd-main-content ">
+	
+	
+	
+	
+	
+	
+	
+	
+		<div id="sidebar-wrapper">
+		<nav class="cd-side-nav" >
+		
+		<div class="mmenua"><button type="button" class="btn btn_back" onclick="location.href='plan.html'">返回學習計畫</button></div>
+		
+		<!-- sidebar left 開始 -->
+
+		<div class="mmenua">
+		<button type="button" class="btn collapsed m_btn" data-toggle="collapse" data-target="#mathmenu">第一堂 - 文法</button>
+		<div id="mathmenu" class="collapse">
+
+
+		<!-- A panel-group -->
+		<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+
+				<div class="panel panel-default">
+					<div class="panel-heading" role="tab" id="headingOne">
+						<h4 class="panel-title">
+							<a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+							<i class="more-less glyphicon glyphicon-plus"></i>課前任務</a>
+						</h4>
+					</div>
+					<div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+						<div class="panel-body mathsubmenubox">
+							  <table class="table">
+										<tbody>
+										<tr>
+											<td>
+												<a href="#" class="active finish"><i class="material-icons left">play_circle_filled</i>動詞概論</a>
+
+											</td>
+										</tr>
+										<tr>
+											<td>
+											   <a href="#" class="unfinish">
+												<i class="material-icons left">description</i>單字背誦</a>
+											</td>
+										</tr>
+										<tr>
+											<td>
+											   <a href="#" class="un">
+												<i class="material-icons left">create</i>動詞基礎測驗</a>
+											</td>
+										</tr>
+									</tbody></table>
+						</div>
+					</div>
+				</div>
+
+				<div class="panel panel-default">
+					<div class="panel-heading" role="tab" id="headingTwo">
+						<h4 class="panel-title">
+							<a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+								<i class="more-less glyphicon glyphicon-plus"></i>課中活動</a>
+						</h4>
+					</div>
+					<div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+						<div class="panel-body mathsubmenubox">
+							  <table class="table">
+										<tbody>
+										   <tr>
+											<td><a href="#" class="finish">
+												<i class="material-icons left">picture_as_pdf</i>動詞概論講義</a>
+											</td>
+										</tr>
+										<tr>
+											<td><a href="#" class="unfinish">
+												<i class="material-icons left">games</i>單字競賽</a>
+											</td>
+										</tr>
+									</tbody></table>
+						</div>
+					</div>
+				</div>
+
+				<div class="panel panel-default">
+					<div class="panel-heading" role="tab" id="headingThree">
+						<h4 class="panel-title">
+							<a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+								<i class="more-less glyphicon glyphicon-plus"></i>課後作業</a>
+						</h4>
+					</div>
+					<div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+						<div class="panel-body mathsubmenubox">
+							  <table class="table">
+										<tbody>
+										<tr>
+											<td><a href="#" class="un">
+												<i class="material-icons left">create</i>動詞進階測驗</a>
+											</td>
+										</tr>
+										<tr>
+											<td><a href="#" class="un">
+												<i class="material-icons left">subject</i>寫作練習</a>
+											</td>
+										</tr>
+									</tbody></table>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		<!-- A panel-group 結束-->
+
+		</div>
+		</div>
+
+		<div class="mmenua">
+		<button type="button" class="btn collapsed m_btn" data-toggle="collapse" data-target="#mathmenu2">第二堂 - 文法</button>
+		<div id="mathmenu2" class="collapse">
+
+
+		<!-- B panel-group -->
+		<div class="panel-group" id="accordion2" role="tablist" aria-multiselectable="true">
+
+				<div class="panel panel-default">
+					<div class="panel-heading" role="tab" id="headingOne2">
+						<h4 class="panel-title">
+							<a role="button" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne2" aria-expanded="true" aria-controls="collapseOne2">
+								<i class="more-less glyphicon glyphicon-plus"></i>課前任務</a>
+						</h4>
+					</div>
+					<div id="collapseOne2" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+						<div class="panel-body mathsubmenubox">
+							  <table class="table">
+										<tbody>
+										<tr>
+											<td>
+												<a href="#" class=""><i class="material-icons left">play_circle_filled</i>動詞概論</a>
+
+											</td>
+										</tr>
+										<tr>
+											<td>
+											   <a href="#" class="">
+												<i class="material-icons left">description</i>單字背誦</a>
+											</td>
+										</tr>
+										<tr>
+											<td>
+											   <a href="#" class="">
+												<i class="material-icons left">create</i>動詞基礎測驗</a>
+											</td>
+										</tr>
+									</tbody></table>
+						</div>
+					</div>
+				</div>
+
+				<div class="panel panel-default">
+					<div class="panel-heading" role="tab" id="headingTwo2">
+						<h4 class="panel-title">
+							<a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo2" aria-expanded="false" aria-controls="collapseTwo2">
+								<i class="more-less glyphicon glyphicon-plus"></i>課中活動</a>
+						</h4>
+					</div>
+					<div id="collapseTwo2" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+						<div class="panel-body mathsubmenubox">
+							  <table class="table">
+										<tbody>
+										   <tr>
+											<td><a href="#" class="">
+												<i class="material-icons left">picture_as_pdf</i>動詞概論講義</a>
+											</td>
+										</tr>
+										<tr>
+											<td><a href="#" class="">
+												<i class="material-icons left">event_available</i>單字競賽</a>
+											</td>
+										</tr>
+									</tbody></table>
+						</div>
+					</div>
+				</div>
+
+				<div class="panel panel-default">
+					<div class="panel-heading" role="tab" id="headingThree2">
+						<h4 class="panel-title">
+							<a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion2" href="#collapseThree2" aria-expanded="false" aria-controls="collapseThree2">
+								<i class="more-less glyphicon glyphicon-plus"></i>課後作業</a>
+						</h4>
+					</div>
+					<div id="collapseThree2" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree2">
+						<div class="panel-body mathsubmenubox">
+							  <table class="table">
+										<tbody>
+										<tr>
+											<td><a href="#" class="">
+												<i class="material-icons left">create</i>動詞進階測驗</a>
+											</td>
+										</tr>
+										<tr>
+											<td><a href="#" class="">
+												<i class="material-icons left">subject</i>寫作練習</a>
+											</td>
+										</tr>
+									</tbody></table>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		<!-- B panel-group 結束-->
+
+		</div>
+		</div>
+		
+		<div class="mmenua">
+		<button type="button" class="btn collapsed m_btn" data-toggle="collapse" data-target="#mathmenu3">第三堂 - 文法</button>
+		<div id="mathmenu3" class="collapse" style="padding: 12px 44px 12px 20px; background-color: #33383e; color: #63686e;">次目錄放這裡</div>
+		</div>
+		<div class="mmenua">
+		<button type="button" class="btn collapsed m_btn" data-toggle="collapse" data-target="#mathmenu4">第四堂 - 文法</button>
+		<div id="mathmenu4" class="collapse" style="padding: 12px 44px 12px 20px; background-color: #33383e; color: #63686e;">次目錄放這裡</div>
+		</div>
+		<div class="mmenua">
+		<button type="button" class="btn collapsed m_btn" data-toggle="collapse" data-target="#mathmenu5">第五堂 - 文法</button>
+		<div id="mathmenu5" class="collapse" style="padding: 12px 44px 12px 20px; background-color: #33383e; color: #63686e;">次目錄放這裡</div>
+		</div>
+		<div class="mmenua">
+		<button type="button" class="btn collapsed m_btn" data-toggle="collapse" data-target="#mathmenu6">第六堂 - 文法</button>
+		<div id="mathmenu6" class="collapse" style="padding: 12px 44px 12px 20px; background-color: #33383e; color: #63686e;">次目錄放這裡</div>
+		</div>
+
+		<!-- sidebar left 結束 -->
+
+		</nav>
+		</div>
+		
+		<div class="content-wrapper">
+
+<div class="title_ann">文法 I <span>第 2 堂 (2017-05-16 週二 14:00~16:00, 教室 404)</span></div>
+<div class=""><div>
+<div class="container_video">
+	<div class="videobox">
+		<video muted controls autoplay>
+			<source src="assets/media/C07_T01.mp4" type="video/mp4">
+			Your browser does not support HTML5 video.
+		  </video>
+	</div>
+	
+<div class="abusebtn_pos">
+  <span>
+  <input id="box2" type="checkbox" />
+  <label for="box2">2</label>
+  </span>
+</div>  
+ 
+ <div class="likebtn_pos">
+  <span>
+  <input id="box1" type="checkbox">
+  <label for="box1">12</label>
+  </span>
+</div>   
+ 
+  <!--<div class="like"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i>2</div>
+  <div class="liked"><i class="fa fa-thumbs-up" aria-hidden="true"></i>8</div>-->
+
+  <!--<span>
+  <input id="box3" type="checkbox" />
+  <label for="box3">Checkbox 3</label>
+  </span>-->
+
+
+</div>
+</div></div>
+
+
+	
+		</div> <!-- .content-wrapper -->
+		
+	</main> <!-- .cd-main-content -->
+</div>	
+
+	
+<!-- Modal -->
+<div class="modal fade" id="myModal" role="dialog">
+<div class="modal-dialog">
+
+  <!-- Modal content-->
+  <div class="modal-content">
+	<div class="modal-header">
+	  <button type="button" class="close" data-dismiss="modal">&times;</button>
+	  <h4 class="modal-title">5-21 上課時段調整</h4>
+	</div>
+	<div class="modal-body">
+	  <p>課程異動 - 代課通知 - 內容放這裡<br />多益考試主要在測試同學聽、讀方面的理解。既然是理解，所以基本、常用的詞彙變得相形重要，再來是句子結構部份。<br />
+	  <img src="assets/images/tumblr_1280.gif" width="600" height="329" alt=""/><br />同學可先整理常用的句型和相關片語。一個句子當中，主、動詞在哪，哪個部份是修飾的，可以快速拆解句構，對文法單元的解題有很大的幫助。句子看懂了，再來練習看文章，難度自然會降低。</p>
+	</div>
+	<div class="modal-footer">
+  	  <button type="button" class="btn btn_nor" data-dismiss="modal">取消</button>
+	  <button type="button" class="btn btn_nor btn_submit" data-dismiss="modal">確認已讀</button>
+	</div>
+  </div>
+
+</div>
+</div>	
+
+	
+
+	
+<script src="assets/nav/js/jquery-2.1.4.js"></script>
+<script src="assets/nav/js/jquery.menu-aim.js"></script>
+<script src="assets/nav/js/main.js"></script> <!-- Resource jQuery -->
+
+<!-- dropdown-menu -->
+<script>
+$(".dropdown-menu li a").click(function(){
+  $(this).parents(".dropdown").find('.btn').html($(this).text() + ' <span class="caret"></span>');
+  $(this).parents(".dropdown").find('.btn').val($(this).data('value'));
+});
+</script>
+<!-- dropdown-menu 完-->
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<!--<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>-->
+<!--<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>-->
+
+<!-- A panel-group -->
+<script type="text/javascript">
+function toggleIcon(e) {
+    $(e.target)
+        .prev('.panel-heading')
+        .find(".more-less")
+        .toggleClass('glyphicon-plus glyphicon-minus');
+}
+$('.panel-group').on('hidden.bs.collapse', toggleIcon);
+$('.panel-group').on('shown.bs.collapse', toggleIcon);
+</script>
+
+
+
+<!-- left_side_bar -->
+<!-- jQuery -->
+<!--<script src="assets/js/jquery.js"></script>-->
+
+<!-- Bootstrap Core JavaScript -->
+<!--<script src="js/bootstrap.min.js"></script>-->
+
+<!-- Menu Toggle Script -->
+<script>
+$("#menu-toggle").click(function(e) {
+	e.preventDefault();
+	$("#wrapper").toggleClass("toggled");
+});
+</script>
+<!-- left_side_bar 完 -->
+
+
+<!-- timeline part_2 -->
+<script src="assets/timeline/js/index_timeline2.js"></script>
+
+
+<!-- sidebar -->  
+<!--<script type="text/javascript" src="https://code.jquery.com/jquery-3.0.0.min.js"></script>
+<script type="text/javascript" src="assets/js/jquery/asidebar.jquery.js"></script>-->
+
+
+
+
+</body>
+</html>
