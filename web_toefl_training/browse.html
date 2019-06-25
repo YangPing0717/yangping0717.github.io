@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js"><head>
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+<meta name="viewport" content="width=device-width, initial-scale=1"> 
+
+<link rel="shortcut icon" href="assets/images/favicon.ico">
+<link rel="bookmark" href="assets/images/favicon.ico"/>
+<link rel="apple-touch-icon" href="assets/images/icon_toefl_training.png">
+
+<meta property="og:title" content="菁英托福魔鬼訓練營" />
+<meta property="og:description" content="菁英托福魔鬼訓練營" />
+<meta property="og:image" content="assets/images/share_img_toefl_training.jpg">
+<meta name="keywords" content="ELITE, Education, 菁英, 托福, 托福魔鬼訓練營" />
+
+<title>菁英 - 托福魔鬼訓練營</title>
+
+<!-- Bootstrap -->
+<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+	
+<!-- iconfont -->
+<link href="assets/css/font-awesome.min.css" rel="stylesheet">
+<link href="assets/css/style_icomoon.css" rel="stylesheet">
+<link href="assets/css/material-icons.css" rel="stylesheet">
+
+<link rel="stylesheet" href="assets/css/demo.css" />
+<link rel="stylesheet" href="assets/css/component.css" />
+
+<!--[if IE]>
+<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+
+<!--<audio src="assets/media/Holst - USAFB Holst-_mars.ogg" autoplay></audio>-->
+
+<!-- Select -->
+<link rel="stylesheet" href="assets/css/bootstrap-select.css">
+<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<script src="assets/js/bootstrap-select.js"></script>-->
+
+
+<!--  checkbox  -->
+<!--<link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">-->
+<link href="assets/css/checkbox.css" rel="stylesheet" media="screen">
+
+<!--<link rel="stylesheet" href="assets/css/sticky_style.css">-->
+<link rel="stylesheet" href="assets/css/header_component.css" />
+
+<!-- bar 圖 -->
+<link rel="stylesheet" href="assets/css/toefl_bar.css" />
+
+<!-- Sortable -->
+<!--<link rel="stylesheet" href="assets/css/sortable.css">-->
+<link rel="stylesheet" href="assets/css/style_draggabilly.css">
+
+<!-- 置頂 btn -->
+<link rel="stylesheet" href="assets/css/style_topbtn.css">
+<!-- hamburger btn -->
+<link rel="stylesheet" href="assets/css/style_ham.css">
+<!-- popmodal -->	
+<link rel="stylesheet" href="assets/css/popModal.css">
+<!--  datetimepicker  -->
+<link href="assets/css/bootstrap-datetimepicker.min.css" rel="stylesheet" media="screen">
+<!-- Material btn -->
+<link rel="stylesheet" href="assets/css/btn_style.css">
+<!-- Modal -->
+<link rel="stylesheet" href="assets/css/modal_component.css" />
+<!-- MAIN -->
+<link rel="stylesheet" href="assets/css/toefl_training.css" />
+<!-- loading -->
+<!--<link rel="stylesheet" href="assets/css/index_loading.css">-->
+<link rel="stylesheet" href="assets/css/style_loading_1.css">
+
+
+
+
+
+</head>
+	
+
+	<body class="demo-1">
+	<div class="bg_2"></div>
+	<canvas id="canvas"></canvas>
+	
+		<div id="container" class="container">
+		<div class="row">
+		
+		<div class="cbp-af-header">
+		<div class="cbp-af-inner">
+		<nav class="navbar ">
+		  <div class="">
+			<div class="navbar-header">
+			<div class="hamburger navbar-toggle" id="hamburger-11" data-toggle="collapse" data-target="#myNavbar">
+			  <span class="line"></span>
+			  <span class="line"></span>
+			  <span class="line"></span>
+			</div>
+			  <a class="navbar-brand" href="#"><img src="assets/images/logo.png" alt=""/></a>
+			</div>
+			
+			<div class="collapse navbar-collapse navbar-right menu menu--prospero" id="myNavbar">
+			  <ul class="nav navbar-nav menu__list">
+				<li class="menu__item menu__item--current"><a href="#" class="menu__link">總覽</a></li>
+				<li class="menu__item" onclick="location.href='reading.html'"><a href="#" class="menu__link">閱讀訓練</a></li>
+				<li class="menu__item" onclick="location.href='listening.html'"><a href="#" class="menu__link">聽力訓練</a></li> 
+				<li class="menu__item" onclick="location.href='record.html'"><a href="#" class="menu__link">訓練紀錄</a></li> 
+				<li class="menu__item"><a href="#" class="menu__link name"><i class="material-icons">exit_to_app</i>登出</a><div class="userid hidden-xs">TESTERXXX</div></li>
+			  </ul>
+			</div>
+		</div>
+		</nav>
+		</div></div>
+												
+
+		<article class="content container device_w">
+				<div class="">
+				<section class="itemarea itemarea_sect">  
+	   		
+		   		<div class="grid">  
+
+			   		<div class="grid-item">				   	
+				   	<h3>訓練計劃書</h3>
+					<div><small><i class="material-icons">lightbulb_outline</i> 根據您的「程度」、「目標」、「考試日期」，以下是您的訓練計劃</small></div>
+					<div class="subtext"><span>閱讀訓練程度範圍</span>難度較低 難度適中 難度較高<br /><span>聽力訓練程度範圍</span>難度較低 難度適中 難度較高</div>
+					<div class="subtext">
+	   				<span>閱讀訓練完成度</span>0% (0 篇 / 123 篇)<br />
+	   				<span>聽力訓練完成度</span>0% (0 篇 / 246 篇)
+	   				</div>
+	   				<div class="subtext">
+	   				<span>閱讀訓練規劃</span>每 2 天做 1 篇<br />
+	   				<span>聽力訓練規劃</span>每 1 天做 18 篇
+	   				</div>
+			   		<div>
+			   		<div class="checkbox-btn">
+                    <input type="checkbox" value="value-2" id="rc4" name="rc4" />
+                    <label for="rc4" onclick>進度提醒</label>
+                	</div>
+                	<a id="popModal_ex1"><i class="material-icons">help</i></a>
+					<div style="display:none">
+					<div id="content">若您沒有跟上練習的進度，系統會推播提醒通知到手機APP。若不想收到提醒，取消勾選即可。</div>
+					</div>
+			   		</div>
+			   		<!--<div class="btnbox"><button class="ripple">進入閱讀課程</button><button class="ripple">進入聽力課程</button></div>-->
+				   </div>
+				   
+                   <div class="grid-item">
+					<h3>我的程度 		
+					<a id="popModal_ex13"><i class="material-icons">help</i></a>
+					<div style="display:none">
+					<div id="content13">這裡的「程度」是根據您最近一次的TOEFL模考或入學測驗而定。若顯示「無資料可判定程度」，請點擊後面的「TOEFL入學測驗」連結，做完即可判定程度。之後您也可視需求重新設定程度，「訓練計劃書」就會相應調整練習的內容、數量和進度喔！</div>
+					</div>
+					<i class="material-icons md-trigger" data-modal="modal-level" style="float: right;">settings</i>
+					</h3>
+					<!--<div>無資料可判定程度，請先做 <a href="#">TOEFL 入學測驗！</a></div>-->
+					<div class="subtext"><span>閱讀</span>新兵訓練級 (0~14分)</div>
+					<div class="subtext"><span>聽力</span>新兵訓練級 (0~14分)</div>
+				   </div>
+	       
+			       <div class="grid-item">
+					<h3>我的目標 
+					<a id="popModal_ex11"><i class="material-icons">help</i></a>
+					<div style="display:none">
+					<div id="content11">「訓練計劃書」會根據您設定的閱讀和聽力目標而制定練習的內容、數量和進度。</div>
+					</div>
+					<i class="material-icons md-trigger" data-modal="modal-level" style="float: right;">settings</i>
+					</h3>
+					<!--<div>您尚未設定目標！請點選右上角編輯按鈕以設定，系統才能為您設計「訓練計劃書」制定練習的內容、數量和進度。</div>-->
+					<div class="subtext"><span>閱讀</span>新兵訓練級 (0~14分)</div>
+					<div class="subtext"><span>聽力</span>新兵訓練級 (0~14分)</div>
+			   		<!--<div class="btnbox"><button class="ripple">進入課程</button></div>-->
+				   </div>  
+                       
+                   <div class="grid-item">
+					<h3>今日訓練情況</h3>
+					<div class="subtext">今日閱讀訓練做了 2 篇</div>
+					<div class="subtext">今日聽力訓練做了 0 篇</div>
+					<div><small><i class="material-icons">lightbulb_outline</i> 訓練官的心在等待，永遠在等待... 你回來做訓練吧！</small></div>
+				   </div>    
+                           
+				   <div class="grid-item" >
+				   
+<ul class="nav nav-tabs">
+    <li class="active"><a data-toggle="tab" href="#home">閱讀成效</a></li>
+    <li><a data-toggle="tab" href="#menu1">聽力成效</a></li>
+    <!--<li><a data-toggle="tab" href="#menu2">成效成效</a></li>-->
+</ul>
+  
+<div class="tab-content">
+    <div id="home" class="tab-pane fade in active">
+       <div class="chart_t_icon " type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">整體答對率</div>
+			<div class="collapse in" id="collapseExample">
+			<div class="row">
+				<div class="col-xs-3 col-sm-3 col-md-3">
+				<div class="score ">魔鬼訓練營<br /><span>86</span> %</div>
+				</div>
+				<div class="col-xs-3 col-sm-3 col-md-3">
+				<div class="score">模考<br /><span>92</span> %</div>
+				</div>
+				<div class="col-xs-3 col-sm-3 col-md-3">
+				<div class="score">綜合<br /><span>30</span> %</div>
+				</div>
+				<div class="col-xs-12 col-sm-12 col-md-3 ">
+				<div class="comment"><div class="commentposi"><small>哎呦，不錯唷～ 請保持！</small></div></div>
+				</div>
+			</div></div>
+			
+			<div class="chart_t_icon collapsed" type="button" data-toggle="collapse" data-target="#collapseExample2" aria-expanded="false" aria-controls="collapseExample">主題答對率</div>
+			<div class="collapse circle" id="collapseExample2">
+			<div class="row">
+				<div class="col-xs-3 col-sm-3 col-md-3">
+				<div class="score pt">魔鬼訓練營<br />自然科學<br /><span>90</span> %</div>
+				</div>
+				<div class="col-xs-3 col-sm-3 col-md-3">
+				<div class="score pt">模考<br />自然科學<br /><span>30</span> %</div>
+				</div>
+				<div class="col-xs-3 col-sm-3 col-md-3">
+				<div class="score pt">綜合<br />自然科學<br /><span>50</span> %</div>
+				</div>
+				<div class="col-xs-12 col-sm-12 col-md-3">
+				<div class="comment"><div class="commentposi"><small>哎呦，不錯唷～ 請保持！</small></div></div>
+				</div>
+			</div>
+			
+			<div class="row">
+				<div class="col-xs-3 col-sm-3 col-md-3">
+				<div class="score pt">魔鬼訓練營<br />天文<br /><span>90</span> %</div>
+				</div>
+				<div class="col-xs-3 col-sm-3 col-md-3">
+				<div class="score pt">模考<br />天文<br /><span>30</span> %</div>
+				</div>
+				<div class="col-xs-3 col-sm-3 col-md-3">
+				<div class="score pt">綜合<br />天文<br /><span>50</span> %</div>
+				</div>
+				<div class="col-xs-12 col-sm-12 col-md-3">
+				<div class="comment"><div class="commentposi"><small>有點弱，再加把勁！</small></div></div>
+				</div>
+			</div>
+			
+			<div class="row">
+				<div class="col-xs-3 col-sm-3 col-md-3">
+				<div class="score pt">魔鬼訓練營<br />生物/生態學生態學XXXXXXX<br /><span>90</span> %</div>
+				</div>
+				<div class="col-xs-3 col-sm-3 col-md-3">
+				<div class="score pt">模考<br />生物/生態學<br /><span>30</span> %</div>
+				</div>
+				<div class="col-xs-3 col-sm-3 col-md-3">
+				<div class="score pt">綜合<br />生物/生態學<br /><span>50</span> %</div>
+				</div>
+				<div class="col-xs-12 col-sm-12 col-md-3">
+				<div class="comment"><div class="commentposi"><small>加油！你可以更好的～</small></div></div>
+				</div>
+			</div>
+			</div>
+			
+			<div class="chart_t_icon collapsed" type="button" data-toggle="collapse" data-target="#collapseExample22" aria-expanded="false" aria-controls="collapseExample">題型答對率</div>
+			<div class="collapse circle" id="collapseExample22">
+			<div class="row">
+				<div class="col-xs-3 col-sm-3 col-md-3">
+				<div class="score pt">魔鬼訓練營<br />推理<br /><span>90</span> %</div>
+				</div>
+				<div class="col-xs-3 col-sm-3 col-md-3">
+				<div class="score pt">模考<br />推理<br /><span>30</span> %</div>
+				</div>
+				<div class="col-xs-3 col-sm-3 col-md-3">
+				<div class="score pt">綜合<br />推理<br /><span>50</span> %</div>
+				</div>
+				<div class="col-xs-12 col-sm-12 col-md-3">
+				<div class="comment"><div class="commentposi"><small>哎呦，不錯唷～ 請保持！</small></div></div>
+				</div>
+			</div>
+			
+			<div class="row">
+				<div class="col-xs-3 col-sm-3 col-md-3">
+				<div class="score pt">魔鬼訓練營<br />詞彙<br /><span>90</span> %</div>
+				</div>
+				<div class="col-xs-3 col-sm-3 col-md-3">
+				<div class="score pt">模考<br />詞彙<br /><span>30</span> %</div>
+				</div>
+				<div class="col-xs-3 col-sm-3 col-md-3">
+				<div class="score pt">綜合<br />詞彙<br /><span>50</span> %</div>
+				</div>
+				<div class="col-xs-12 col-sm-12 col-md-3">
+				<div class="comment"><div class="commentposi"><small>有點弱，再加把勁！</small></div></div>
+				</div>
+			</div>
+			
+			</div>
+			
+			<div class="chart_t_icon collapsed" type="button" data-toggle="collapse" data-target="#collapseExample3" aria-expanded="false" aria-controls="collapseExample">作答時間掌控度 <small>- 平均一篇 </small>
+			<a id="popModal_ex23"><i class="material-icons">help</i></a>
+			<div style="display:none">
+			<div id="content23">平均一篇閱讀題須在 20 分鐘內完成，一篇聽力題須在 3 分鐘內完成。若沒達到，在正式考時可能就做不完囉！</div>
+			</div>
+			</div>
+			
+
+			
+			<div class="collapse" id="collapseExample3">
+			<div class="row">
+				<div class="col-xs-3 col-sm-3 col-md-3">
+				<div class="score ">魔鬼訓練營<br /><span>18</span>分 <span>45</span>秒</div>
+				</div>
+				<div class="col-xs-3 col-sm-3 col-md-3">
+				<div class="score">模考<br /><span>18</span>分 <span>45</span>秒</div>
+				</div>
+				<div class="col-xs-3 col-sm-3 col-md-3">
+				<div class="score">綜合<br /><span>18</span>分 <span>45</span>秒</div>
+				</div>
+				<div class="col-xs-12 col-sm-12 col-md-3 ">
+				<div class="comment"><div class="commentposi"><small>哎呦，不錯唷～ 請保持！</small></div></div>
+				</div>
+			</div></div>
+			
+			<div class="chart_t_icon" type="button" data-toggle="collapse" data-target="#collapseExample4" aria-expanded="false" aria-controls="collapseExample">單字背誦完成度
+			<a id="popModal_ex24"><i class="material-icons">help</i></a>
+			<div style="display:none">
+			<div id="content24">每一篇閱讀/聽力訓練亦提供「嚴選單字」背誦訓練，可從「訓練記錄」的列表，點選進入 背誦。</div>
+			</div>
+			</div>
+			
+			<div class="collapse in" id="collapseExample4">
+			<div class="row">
+				<div class="col-xs-12 col-sm-12 col-md-12 ">
+				
+				<div id="bar1" class="barfiller">
+					<div class="tipWrap">
+					<span class="tip"></span>
+					</div>
+					<span class="fill" data-percentage="55"></span>
+					<div class="barper_t"><span>0%</span><span style="float:right">100%</span></div>
+				</div>
+
+				<!--<div id="bar2" class="barfiller">
+				<div class="tipWrap">
+					<span class="tip"></span>
+					</div>
+					<span class="fill" data-percentage="50"></span>
+					<div class="barper_t"><span>0%</span><span style="float:right">100%</span></div>
+				</div>	-->
+				
+					<div><small>
+					<span>總字數 <span class="text_wh">7000</span> 字</span> 
+					<span>已背 <span class="text_wh">3500</span> 字</span> 
+					<span>未背 <span class="text_wh">3500</span> 字</span> 
+					<span>今日已背 <span class="text_wh">10</span> 字</span>
+					</small></div>
+				</div>
+			</div></div>
+			
+    </div>
+    <div id="menu1" class="tab-pane fade">
+      <div>聽力成效 - 內容放這裡</div>
+    </div>
+    <div id="menu2" class="tab-pane fade">
+      <h3>成效成效 - 內容放這裡</h3>
+    </div>
+</div>
+
+				   </div>
+			          
+			       <div class="grid-item">
+				   	<h3>考試日期 
+				   	<a id="popModal_ex12"><i class="material-icons">help</i></a>
+					<div style="display:none"><div id="content12">「訓練計劃書」會根據您設定的考試日期而制定練習的內容、數量和進度。</div></div> 
+					<i class="material-icons md-trigger" data-modal="modal-date" style="float: right;">settings</i>
+					</h3>
+					<!--<div>您尚未設定考試日期！請點選右上角編輯按鈕以設定。系統才能為您設計「訓練計劃書」制定練習的內容、數量和進度。</div>-->
+			   		<div class="subtext">2017 年 7 月 7 日</div>
+			   		<div class="subtext text_alert" >還剩 90 天！</div>
+				   </div>    
+				   
+				</div>   
+
+			
+				<div class="crbox">   
+				<div id="copyright" class="hidden-xs">Copyright &copy; 2017 by <a href="http://www.language-center.com.tw/" target="_blank">ELITE</a> International Education Services. All rights reserved.<br />為獲最佳訓練成效，建議使用 PC、最新版 Chrome 並用寬頻上網，不建議使用智慧手機和公用免費 wifi</div>
+        		<div class="copyright hidden-sm hidden-md hidden-lg">&copy; 2017 <a href="http://www.language-center.com.tw/" target="_blank">ELITE</a></div>
+        		</div>
+        		
+				</section>
+				</div>
+				</article>
+
+		</div>
+		</div><!-- /container -->
+		
+
+		<a href="#0" class="cd-top"><i class="material-icons">arrow_upward</i></a>
+		
+		<!--<div class="loader-container ball-pulse">
+			<div class="loader">
+				<div class="ball"></div>
+			</div>
+		</div>
+		
+		<div class="loader-container ball-pulse-double">
+			<div class="loader">
+				<div class="ball-1"></div>
+				<div class="ball-2"></div>
+			</div>
+		</div>-->
+		
+		<div class="itemloading"><div class="loader04"></div><div class="text">作答記錄上傳中請勿關閉視窗</div></div>
+		
+		<!--<p id="back-top"><a href="#top"><span><i class="material-icons iconbi">arrow_upward</i></span></a></p>-->
+		
+		<!-- Modal -->
+		<div class="md-modal md-effect-3 sm_modal" id="modal-level">
+			<div class="md-content">
+				<h3>設定我的程度</h3>
+				<div>
+					<form class="form-horizontal" role="form">
+					<div class="form-group">
+					  <label for="basic" class="col-lg-2 control-label">閱讀</label>
+					  <div class="col-lg-10">
+						<select id="reading" class="selectpicker show-tick form-control">
+						  <option>新兵訓練級 (0~14分)</option>
+						  <option>軍官挑戰級 (15~21分)</option>
+						  <option>司令鬥魂級 (22~30分)</option>
+						</select>						  
+					  </div>
+					</div>
+					</form>
+					
+					<form class="form-horizontal" role="form">
+					<div class="form-group">
+					  <label for="basic" class="col-lg-2 control-label">聽力</label>
+					  <div class="col-lg-10">
+						<select id="listening" class="selectpicker show-tick form-control">
+						  <option>新兵訓練級 (0~14分)</option>
+						  <option>軍官挑戰級 (15~21分)</option>
+						  <option>司令鬥魂級 (22~30分)</option>
+						</select>						  
+					  </div>
+					</div>
+					</form>
+					
+					<div class="modalbtn">
+					<button class="ripple md-close" data-ripple-color="#9e9e9e" style="background:white; color:black;">取消</button>
+					<button class="ripple">儲存</button>
+					</div>
+					
+				</div>
+			</div>
+		</div>
+		
+		<div class="md-modal md-effect-3 sm_modal" id="modal-date">
+			<div class="md-content">
+				<h3>設定我的考試日期</h3>
+				<div>
+				<div class="form-group dtpicker">
+					<label for="dtp_input1" class="control-label">DateTime Picking</label>
+					<div class="input-group date form_datetime" data-date="1979-09-16T05:25:07Z" data-date-format="dd MM yyyy - HH:ii p" data-link-field="dtp_input1">
+						<input class="form-control" size="16" type="text" value="" readonly>
+						<span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
+						<span class="input-group-addon"><span class="glyphicon glyphicon-th"></span></span>
+					</div>
+					<input type="hidden" id="dtp_input1" value="" /><br/>
+				</div>
+					您的課程權限至 2017-12-31 截止<br />
+					數位學習權限至 2018-01-30 截止<br />
+					<div class="alert-info">注意！若考試日期設在數位學習權限截止日後，則無法按進度完成所有練習，此時建議洽詢專員，或將考試日期設為數位學習權限截止日。</div>
+					<div class="modalbtn">
+					<button class="ripple md-close" data-ripple-color="#9e9e9e" style="background:white; color:black;">取消</button>
+					<button class="ripple">儲存</button>
+					</div>
+					
+				</div>
+			</div>
+		</div>
+		
+		
+		<div class="md-overlay"></div><!-- the overlay element -->
+		
+		
+<!--  Bootstrap -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<!-- Sortable -->
+<script src='https://unpkg.com/packery@2/dist/packery.pkgd.js'></script>
+<script src='https://unpkg.com/draggabilly@2/dist/draggabilly.pkgd.js'></script>
+<script src="assets/js/index_draggabilly.js"></script>
+		
+<!--  header 放大縮小  -->	
+<script src="assets/js/classie.js"></script>
+<!--  header text effect  -->
+<script>
+		(function() {
+			[].slice.call(document.querySelectorAll('.menu')).forEach(function(menu) {
+				var menuItems = menu.querySelectorAll('.menu__link'),
+					setCurrent = function(ev) {
+						ev.preventDefault();
+
+						var item = ev.target.parentNode; // li
+
+						// return if already current
+						if (classie.has(item, 'menu__item--current')) {
+							return false;
+						}
+						// remove current
+						classie.remove(menu.querySelector('.menu__item--current'), 'menu__item--current');
+						// set current
+						classie.add(item, 'menu__item--current');
+					};
+
+				[].slice.call(menuItems).forEach(function(el) {
+					el.addEventListener('click', setCurrent);
+				});
+			});
+
+			[].slice.call(document.querySelectorAll('.link-copy')).forEach(function(link) {
+				link.setAttribute('data-clipboard-text', location.protocol + '//' + location.host + location.pathname + '#' + link.parentNode.id);
+				new Clipboard(link);
+				link.addEventListener('click', function() {
+					classie.add(link, 'link-copy--animate');
+					setTimeout(function() {
+						classie.remove(link, 'link-copy--animate');
+					}, 300);
+				});
+			});
+		})(window);
+		</script>	
+		
+<!-- Modal -->
+<!--<script src="assets/js/classie.js"></script>-->
+<script src="assets/js/modalEffects.js"></script>
+		
+<!-- Select -->
+<!--<link rel="stylesheet" href="assets/css/bootstrap-select.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>-->
+<!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>-->
+<script src="assets/js/bootstrap-select.js"></script>		
+		
+<!-- Material btn -->		
+<script src="assets/js/btn_index.js"></script>					
+
+<!--  datetimepicker  -->
+<!--<script type="text/javascript" src="assets/jquery/jquery-1.8.3.min.js" charset="UTF-8"></script>
+<script type="text/javascript" src="assets/bootstrap/js/bootstrap.min.js"></script>-->
+<script type="text/javascript" src="assets/js/bootstrap-datetimepicker.js" charset="UTF-8"></script>
+<script type="text/javascript" src="assets/js/locales/bootstrap-datetimepicker.fr.js" charset="UTF-8"></script>
+<script type="text/javascript">
+    $('.form_datetime').datetimepicker({
+        //language:  'fr',
+        weekStart: 1,
+        todayBtn:  1,
+		autoclose: 1,
+		todayHighlight: 1,
+		startView: 2,
+		forceParse: 0,
+        showMeridian: 1
+    });
+	$('.form_date').datetimepicker({
+        language:  'fr',
+        weekStart: 1,
+        todayBtn:  1,
+		autoclose: 1,
+		todayHighlight: 1,
+		startView: 2,
+		minView: 2,
+		forceParse: 0
+    });
+	$('.form_time').datetimepicker({
+        language:  'fr',
+        weekStart: 1,
+        todayBtn:  1,
+		autoclose: 1,
+		todayHighlight: 1,
+		startView: 1,
+		minView: 0,
+		maxView: 1,
+		forceParse: 0
+    });
+</script>						
+
+
+																									
+																												
+<!-- import jQuery -->
+<!--<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<!-- write script to toggle class on scroll -->
+<!--<script>
+$(window).scroll(function() {
+    if ($(this).scrollTop() > 1){  
+        $('header').addClass("sticky");
+    }
+    else{
+        $('header').removeClass("sticky");
+    }
+});
+</script>																
+																																
+<script src="assets/js/sticky_main.js"></script>-->		
+		
+<script src="assets/js/cbpAnimatedHeader.js"></script>		
+							
+
+
+			
+				
+<!-- 置頂 btn -->
+<!--<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>-->
+<script src="assets/js/main_topbtn.js"></script> <!-- Gem jQuery -->
+
+<!-- hamburger btn -->
+<!--<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>-->
+<script src="assets/js/index_ham.js"></script>
+											
+<!-- popmodal -->			
+<!--<script src="https://cdn.jsdelivr.net/jquery/3.1.0/jquery.min.js"></script>-->
+<script src="assets/js/popModal.js"></script>
+<script src="assets/js/popmodal_javas.js"></script>
+
+<!-- bar -->
+<script src="http://code.jquery.com/jquery-3.1.0.slim.min.js" type="text/javascript"></script>
+<script src="assets/js/jquery.barfiller.js" type="text/javascript"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+
+	$('#bar1').barfiller();
+	$('#bar2').barfiller({ barColor: '#5329c7', duration: 1500 });
+	$('#bar3').barfiller({ barColor: '#000064', duration: 1500 });
+	$('#bar4').barfiller({ barColor: '#000064', duration: 3000 });
+	
+});
+</script>	
+					
+									
+<!--  smoke effect -->
+<script src="assets/js/smoke.js"></script>
+<script>
+	var canvas = document.getElementById('canvas')
+	var ctx = canvas.getContext('2d')
+	canvas.width = innerWidth
+	canvas.height = innerHeight
+
+	var party = smokemachine(ctx, [95, 48, 224])
+	party.start() // start animating
+
+	onmousemove = function (e) {
+		var x = e.clientX
+		var y = e.clientY
+		var n = .5
+		var t = Math.floor(Math.random() * 200) + 3800
+		party.addsmoke(x, y, n, t)
+	}
+
+	setInterval(function(){
+		party.addsmoke(innerWidth/2, innerHeight, 1)
+	}, 100)
+
+</script>	
+					
+
+<!--  ThumbNail hover effect - for mobile -->							
+<script>
+	// For Demo purposes only (show hover effect on mobile devices)
+	[].slice.call( document.querySelectorAll('a[href="#"') ).forEach( function(el) {
+		el.addEventListener( 'click', function(ev) { ev.preventDefault(); } );
+	} );
+</script>
+											
+
+								
+</body>
+</html>
