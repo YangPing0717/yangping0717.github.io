@@ -1,0 +1,63 @@
+/*
+body {
+  font-family: Arial;
+  background: #eee;
+}*/
+
+.barfiller {
+     width: 100%;
+        height: 1.8rem;
+    background: #eae9e7;
+    border: 1px solid #ccc;
+    position: relative;
+    margin-bottom: 60px;
+    box-shadow: inset 0px 0px 0px -6px rgba(0,0,0,0);
+  	-moz-box-shadow: inset 0px 0px 0px -6px rgba(0,0,0,0);
+}
+
+.barfiller .fill {
+  display: block;
+  position: relative;
+  width: 0px;
+  height: 100%;
+  background: #333;
+  z-index: 1;
+}
+
+.barfiller .tipWrap { display: none; }
+
+.barfiller .tip {
+    margin-top: -45px;
+    padding: .3rem .7rem;
+    font-size: 16px;
+    color: #fff;
+    left: 0px;
+    position: absolute;
+    z-index: 2;
+    background: #64001B;
+	font-weight: 700;
+}
+
+.barfiller .tip:after {
+  border: solid;
+  border-color: rgb(100, 0, 27) transparent;
+  border-width: 8px 8px 0 8px;
+  content: "";
+  display: block;
+  position: absolute;
+  left: 9px;
+  top: 100%;
+  z-index: 9
+}
+
+
+/*   bar percent   */
+.bar_title{
+	font-weight: 700;
+    font-size: 1.1rem;
+	color: #242546;
+	margin-top: .3rem;
+	}
+.barper_t{
+	font-size: .8rem;
+	}
