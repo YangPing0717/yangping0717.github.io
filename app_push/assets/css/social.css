@@ -1,0 +1,143 @@
+/*背景深色,按鈕小的社群分享按鈕*/
+.socialbtn{
+	display: inline-block;
+	float: left;
+}
+
+/* 快來分享字顏色在以下color修改 */
+.socialbtn ul {
+	margin-left: -3rem;
+	}
+.socialbtn ul li{
+    float: left;
+    list-style-type: none;
+	margin-right: .6rem;
+}
+.socialbtn ul li a{
+    text-decoration: none;
+    text-align: center;
+	}
+.socialbtn ul li a i,
+.socialbtn ul li a div {
+    font-size: 2rem;
+    width: 3.5rem;
+    height: 3.5rem;
+    background-color: #fff;
+    color: #492c80;
+    border-radius: 50%;
+    line-height: 3.5rem;
+    border: 1px solid #ccc;
+	}
+	
+.socialbtn ul li a div.addf {
+	border: 0px solid #ccc;
+	}
+
+.socialbtn ul li a div span {
+	color: #492c80;
+	}
+.socialbtn ul li:hover { 
+	transition: all .2s ease-in-out;
+	transform: scale(1.1);
+	}
+.socialbtn ul li:hover a span {
+	transition: all .2s ease-in-out;
+	transform: scale(.9) !important;
+	}
+
+.socialbtn ul li .fb {
+	_text-indent:-9999px;
+	background-image: url(../images/socialIcons28.png);
+	background-repeat: no-repeat;
+	background-color: #853B3C;
+	border-radius: 2px;
+	}
+	
+.socialbtn ul li .twitter{
+	_text-indent:-9999px;
+	background-image: url(../images/socialIcons28.png);
+	background-repeat: no-repeat;
+	background-position: -28px;
+	background-color: #853B3C;
+	border-radius: 2px;
+	}
+	
+.socialbtn ul li .pinterest{
+	_text-indent:-9999px;
+	background-image: url(../images/socialIcons28.png);
+	background-repeat: no-repeat;
+	background-position: -56px;
+	background-color: #853B3C;
+	border-radius: 2px;
+	}
+.socialbtn ul li .google{
+	_text-indent:-9999px;
+	background-image: url(../images/socialIcons28.png);
+	background-repeat: no-repeat;
+	background-color: #853B3C;
+	background-position: -86px;
+	border-radius: 2px;
+	}
+.socialbtn ul li .weibo{
+	_text-indent:-9999px;
+	background-image: url(../images/socialIcons28.png);
+	background-repeat: no-repeat;
+	background-color: #853B3C;
+	background-position: -168px;
+	border-radius: 2px;
+	}
+	
+.socialbtn .fb_like{
+	float:left; 
+	margin:0 0 0 2px;
+	padding-top: 5px;
+}
+	
+
+
+/*.socialbtn ul li a span {
+	visibility: hidden;
+	text-align: center;
+	width: 140px;
+	margin-left: -8.5rem;
+	position: absolute;
+	top: -3.5rem;
+	left: 6%;
+	background-color: #34b234;
+	color: #FFF;
+	padding: 3px 0px;
+	font-size: 1.25rem;
+	border-radius: 24px;
+	opacity: 0;
+	transform: translate3d(0px, 10px, 0px);
+	transition: all 0.15s ease-in-out 0s;
+	display: none;
+}*/
+.socialbtn  ul li a.aaddf span {  
+	margin-left: -4.8rem;
+}
+.socialbtn ul li a:hover span {
+    visibility: visible;
+	opacity: 1;
+	transition: all .2s ease-in-out;
+	transform: translate3d(0px, 0px, 0px);
+}
+.socialbtn ul li a:hover span :after{
+  content: "";
+  display: block;
+  border-width: 16px;
+  border-style: solid;
+  border-right: 16px solid transparent;
+  border-color: #34b234 transparent transparent;
+  -moz-border-top-colors: none;
+  -moz-border-right-colors: none;
+  -moz-border-bottom-colors: none;
+  -moz-border-left-colors: none;
+  border-image: none;
+  position: absolute;
+  bottom: -25px;
+  left: 42%;
+  margin-left: -8px;
+  
+}
+

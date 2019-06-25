@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<link rel="shortcut icon" href="assets/img/favicon.ico">
+<link rel="bookmark" href="assets/img/favicon.ico"/>
+<link rel="apple-touch-icon" href="assets/img/icon_SAT_2017.png">
+    
+<meta property="og:title" content="ELITE SAT Intensive Program" />
+<meta property="og:description" content="ELITE SAT Intensive Program" />
+<meta property="og:image" content="assets/img/share_img_sat.jpg">
+<meta name="keywords" content="ELITE, Education, SAT, 菁英" />
+<title>ELITE SAT Intensive Program</title>
+
+<!-- Bootstrap -->
+<link rel="stylesheet" href="assets/css/bootstrap.css" >
+<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>-->
+
+<!-- iconfont -->
+<link href="assets/css/font-awesome.min.css" rel="stylesheet">
+<link href="assets/css/style_icomoon.css" rel="stylesheet">
+<link href="assets/css/material-icons.css" rel="stylesheet">
+
+<!-- main menu -->
+<link rel="stylesheet" href="assets/css/reset.css"> <!-- CSS reset -->
+<link rel="stylesheet" href="assets/css/style.css"> <!-- Resource style -->
+<script src="assets/js/modernizr.js"></script> <!-- Modernizr -->
+
+<link rel="stylesheet" type="text/css" href="assets/css/btn_default.css" />
+<link rel="stylesheet" type="text/css" href="assets/css/btn_component.css" />
+
+<!-- progress bar -->
+<link rel="stylesheet" href="assets/css/style_bar4.css">
+
+<!-- 置頂 btn -->
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.3/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+
+	// hide #back-top first
+	$("#back-top").hide();
+	
+	// fade in #back-top
+	$(function () {
+		$(window).scroll(function () {
+			if ($(this).scrollTop() > 100) {
+				$('#back-top').fadeIn();
+			} else {
+				$('#back-top').fadeOut();
+			}
+		});
+
+		// scroll body to 0px on click
+		$('#back-top a').click(function () {
+			$('body,html').animate({
+				scrollTop: 0
+			}, 400);
+			return false;
+		});
+	});
+
+});
+</script>
+<!-- 置頂 btn 完 -->
+
+
+<!-- discussion -->
+<!--<link href="assets/css/sat_discu.css" rel="stylesheet">-->
+
+<!--  datetimepicker  -->
+<!--<link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">-->
+<link href="assets/css/bootstrap-datetimepicker.min.css" rel="stylesheet" media="screen">
+
+<!-- 題型 樣式 -->
+<link href="assets/css/sat_question.css" rel="stylesheet">
+<link href="assets/css/sat_pretest.css" rel="stylesheet">
+
+<!-- discussion -->
+<link href="assets/css/sat_reportcard.css" rel="stylesheet">
+<!-- customize -->
+<link href="assets/css/main_sat.css" rel="stylesheet">
+
+
+
+	
+</head>
+<body>
+
+<header>
+<a class="navbar-brand" href="index.html"><img src="assets/img/logo_elite_sat_tw.svg" alt=""/></a>
+		<div class="cd-dropdown-wrapper">
+			<a class="cd-dropdown-trigger" href="#0"><i class="material-icons iconbi icon_vam">menu</i><span>MENU</span></a>
+			<nav class="cd-dropdown">
+				<h2>SAT Intensive Program</h2>
+				<a href="#0" class="cd-close">Close</a>
+				<ul class="cd-dropdown-content">
+					<!--<li>
+						<form class="cd-search">
+							<input type="search" placeholder="Search...">
+						</form>
+					</li>-->
+				  <li class="has-children">
+						<a href="#"><i class="material-icons">home</i>Home</a>
+						<ul class="cd-secondary-dropdown is-hidden">
+							<li class="go-back"><a href="#0">Menu</a></li>
+							<li class="">
+                                <a href="index.html">Overview</a>
+                                <a href="h_wh.html">Weekly Homework</a>
+                                <a href="h_tt.html">Timetable</a>
+							</li>
+
+						</ul> <!-- .cd-secondary-dropdown -->
+					</li> <!-- .has-children -->
+                    
+                    <li class="has-children">
+						<a href="#"><i class="material-icons">devices</i>My e-Learning</a>
+						<ul class="cd-secondary-dropdown is-hidden">
+							<li class="go-back"><a href="#0">Menu</a></li>
+							<li class="">
+                                <a href="me_vq_v.html">Vocabulary</a>
+                                <a href="m_coursehome.html">Math</a>
+                                <a href="me_vq_tr.html">Test Review</a>
+                                <a href="me_vq_h.html">Homework</a>
+							</li>
+
+						</ul> <!-- .cd-secondary-dropdown -->
+					</li> <!-- .has-children -->
+                    
+                    <li class="has-children">
+						<a href="#"><i class="material-icons">assignment</i>Report Card</a>
+						<ul class="cd-secondary-dropdown is-hidden">
+							<li class="go-back"><a href="#0">Menu</a></li>
+							<li class="">
+                                <a href="rc_a.html">Attendance</a>
+                                <a href="rc_hr.html">Homework Report</a>
+                                <a href="rc_mtr.html">Test Report</a>
+                                <a href="rc_mer_voca.html">My e-Learning Report</a>
+							</li>
+
+						</ul> <!-- .cd-secondary-dropdown -->
+					</li> <!-- .has-children -->
+                    
+                    <li><a href="muw.html"><i class="material-icons">assignment_turned_in</i>Make-up Works</a></li>
+                    
+                    <li class="has-children" style="display: none;">
+						<a href="#"><i class="material-icons">assignment_turned_in</i>Make-up Works</a>
+						<ul class="cd-secondary-dropdown is-hidden">
+							<li class="go-back"><a href="#0">Menu</a></li>
+							<li class="">
+                                <a href="muw.html">Vocabulary</a>
+                                <a href="muw.html">Math</a>
+                                <a href="muw.html">Reading</a>
+                                <a href="muw.html">Writing</a>
+                                <a href="muw.html">Grammar</a>
+                                <a href="muw.html">MockTest</a>
+                                <a href="muw.html">TestReview</a>
+							</li>
+
+						</ul> <!-- .cd-secondary-dropdown -->
+					</li> <!-- .has-children -->
+
+					<li><a href="cm.html"><i class="material-icons">bookmark_border</i>Collected Mistakes</a></li>
+                    
+                    <li class="has-children">
+						<a href="#"><i class="material-icons">class</i>Vocabulary Lab</a>
+						<ul class="cd-secondary-dropdown is-hidden">
+							<li class="go-back"><a href="#0">Menu</a></li>
+							<li class="">
+                                <a href="#">Vocabulary</a>
+                                <a href="#">Math</a>
+							</li>
+
+						</ul> <!-- .cd-secondary-dropdown -->
+					</li> <!-- .has-children -->
+                    
+                    <li><a href="hc.html"><i class="material-icons">help_outline</i>Help Center</a></li>
+                    <li><a href="cr.html"><i class="material-icons">account_box</i>Contact Record</a></li>
+                    <li><a href="si.html"><i class="material-icons">info_outline</i>SAT Information</a></li>
+                    <!--<li><a href="#"><i class="material-icons">exit_to_app</i>Sign Out</a></li>-->
+                    
+                    
+				</ul> <!-- .cd-dropdown-content -->
+			</nav> <!-- .cd-dropdown -->
+		</div> <!-- .cd-dropdown-wrapper -->
+</header>
+
+
+   
+
+<main class="cd-main-content">
+    <div class="container-fluid">
+        <div class="row">
+
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item active">Collected Mistakes</li>
+                <li class="breadcrumb-item "></li>
+              </ol>
+            
+<nav class="navbar navbar-inverse">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">All Mistakes</a>
+    </div>
+    
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="active"><a data-toggle="tab" href="#home">All Mistakes <span class="badge">5</span></a></li>
+        <li><a data-toggle="tab" href="#menu1">You Should Review Now <span class="badge">10</span></a></li>
+        <li><a data-toggle="tab" href="#menu2">You Will Review <span class="badge">2</span></a></li>
+        <li><a data-toggle="tab" href="#menu3">Recycle Bin</a></li>
+        <li><a data-toggle="tab" href="#menu4">Export</a></li>
+      </ul>
+    </div>
+</nav>
+
+
+<div class="tab-content">
+<div id="home" class="tab-pane fade in active">
+    
+<div class="mmenua">
+<div class="cmq_area">
+<!--<a href="cm.html"><i class="material-icons iconback">arrow_back</i> Back to All Mistakes</a>-->
+
+<div class="exam_loader">
+<div class="row">
+<div class="col-md-12">insert iframe 內容放這裡 或 題型內容（如下）</div>
+
+	<div class="col-xs-6">
+	<div class="q2_box">
+	<h3>
+	<span class="q2_box">15.</span>
+	<span class="q2_box">
+	<img src="assets/img/M1-2015001-03-01.png" class="img-block" alt="">
+	A pediatrician uses the model above to <img src="assets/img/M1-2015001-02-05.png" class="img-inline" alt=""> estimate the height hhh of a boy, in inches, in terms of <img src="assets/img/M1-2015001-02-06.png" class="img-inline" alt=""> the boy’s age a, in years, between the ages of 2 
+	and 5. Based on the model, what is the estimated increase, in inches, of a boy’s height each year <img src="assets/img/M1-2015001-02-05.png" class="img-inline" alt="">?
+	<img src="assets/img/M1-2015001-01-01.jpg" class="img-block2" alt="">
+	</span>
+
+	</h3>
+	</div>					
+
+	</div>
+	<!--  題左 結束  -->
+	
+	<div class="col-xs-6 col-sm-5 col-md-5 col-lg-6 col-sm-offset-1 col-md-offset-1 col-lg-offset-0">
+		<div class="selection-area a_box_text_color">
+		<div class="radio">
+				<input name="choice" id="choiceA" value="" type="radio">
+				<label for="choiceA">
+					<span class="label label-primary label_s">A</span>
+					<span><img src="assets/img/M1-2015001-02-02.png" class="img-inline" alt=""></span>
+				</label>
+			</div>
+									<div class="radio">
+				<input name="choice" id="choiceB" value="" type="radio">
+				<label for="choiceB">
+					<span class="label label-primary label_s">B</span>
+					<span><img src="assets/img/M1-2015001-02-05.png" class="img-inline" alt=""></span>
+				</label>
+			</div>
+									<div class="radio">
+				<input name="choice" id="choiceC" value="" type="radio">
+				<label for="choiceC">
+					<span class="label label-primary label_s">C</span>
+					<span><img src="assets/img/M1-2015001-03-02.png" class="img-inline" alt=""></span>
+				</label>
+			</div>
+									<div class="radio">
+				<input name="choice" id="choiceD" value="" type="radio">
+				<label for="choiceD">
+					<span class="label label-primary label_s">D</span>
+					<span><img src="assets/img/M1-2015001-03-05.png" class="img-inline" alt=""></span>
+				</label>
+			</div>
+	</div>
+	</div>
+	<!--  題右 結束  -->
+	
+</div>
+
+<div class="clearfix"></div><hr>  
+
+<div class="btnboxquestion cm_btnboxquestion">
+<button class="btn btn-1c btn_s" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">Check Answer</button>
+</div>
+
+<div class="collapse" id="collapseExample">
+<div class="qa_block">
+	
+	
+	<div class="row">
+	<!--<div class="col-md-8 qabox">
+	<div><span class="answer_t1">Correct!!</span><br />You may watch the following video explanations, or click "Next" to continue.</div>
+	</div>
+	<div class="clearfix"></div>-->
+	<div class="col-md-8 qabox">
+	<div><span class="answer_t1">Answer</span> <span class="redstar">D</span></div>
+	</div>
+	<div class="col-md-8 cm_qvbox qabox">
+		<span class="answer_t1">Explanation</span>
+		<div class="clearfix"></div>
+		<div class="vbox">
+        <a href="javascript: void(0)" data-toggle="tooltip" data-placement="left" title="" class="cc" data-original-title="顯示中文字幕"><i class="fa fa-cc"></i></a>
+         <video muted controls autoplay>
+                <source src="assets/media/Introducing Material.io.mp4" type="video/mp4">
+                <source src="mov_bbb.ogg" type="video/ogg">
+                Your browser does not support HTML5 video.
+              </video>
+
+          </div> 
+	</div>
+	<div class="col-md-4 qabox">
+	<span class="answer_t1">題目翻譯</span><br />
+	SAT 数学词汇中为大家整理了数学中常用的基础词汇，考生可能非常清楚数学的考点，但是他们英文的表达方式你知道吗?这份词汇包含了代数部分的基本运算，集合，代数式，方程，不等式，分数，小数，基本数学概念，数论， 数列，几何部分有所有的角，三角形，平面图形，立体图形， 图形上的附属物，坐标。如果考生能够对这些词汇熟练掌握在数学的题目理解上没有问题，接下来就可以进行数学高分的冲刺啦!
+	</div>
+	</div>
+</div>  
+
+<div class="qa_block">
+	<div class="filterarea">
+	<!--<button class="btn" type="button"><i class="material-icons">arrow_back</i> Back</button>
+	<button class="btn" type="button">Next <i class="material-icons">arrow_forward</i></button>
+	<button class="btn" type="button"><i class="material-icons">print</i></button>-->
+	<button class="btn" type="button"><i class="material-icons">playlist_add</i> Add to Export</button>
+	</div>
+	
+	<div class="row">
+	<div class="col-md-8 qabox">
+	<div><span class="answer_t1">Plan to review</span></div>
+	<div class="form-group dtpicker">
+		<!--<label for="dtp_input1" class="col-md-2 control-label">DateTime Picking</label>-->
+		<div class="input-group date form_datetime col-md-5" data-date="1979-09-16T05:25:07Z" data-date-format="dd MM yyyy - HH:ii p" data-link-field="dtp_input1">
+			<input class="form-control" size="16" type="text" value="" readonly>
+			<span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
+			<span class="input-group-addon"><span class="glyphicon glyphicon-th"></span></span>
+		</div>
+		<input type="hidden" id="dtp_input1" value="" /><br/>
+	</div>
+	</div>
+	<div class="clearfix"></div>
+	<div class="col-md-8 qabox">
+	<span class="answer_t1">Added Time</span>2017-7-20<br />
+	<span class="answer_t1">Time to Review </span>2017-8-20<br />
+	<span class="answer_t1">Average Error Rate</span>70%<br />
+	<span class="answer_t1">Review Time(s)</span>3
+	</div>
+	</div>
+	
+	<div class="filterarea">
+	<button class="btn" type="button"><i class="material-icons">arrow_back</i> Back</button>
+	<button class="btn" type="button">Next <i class="material-icons">arrow_forward</i></button>
+	<!--<button class="btn" type="button"><i class="material-icons">print</i></button>
+	<button class="btn" type="button"><i class="material-icons">playlist_add</i> Add to Export</button>-->
+	</div>
+	
+</div>  
+
+
+	
+	
+	
+	
+</div> <!--  collapse 結束  -->
+
+</div> <!--  exam_loader 結束  -->
+
+
+	
+
+</div>  
+</div> <!--  mmenua 結束  -->
+  
+
+</div>
+  
+  <div id="menu1" class="tab-pane fade">
+    <div class="mmenua2">
+	<div class="row">
+		You Should Review Now 內容放這裡
+	</div>  
+	</div> <!--  mmenua2 結束  -->
+  </div>
+  
+  <div id="menu2" class="tab-pane fade">
+    <div class="mmenua2">
+	<div class="row">
+		You Will Review 內容放這裡
+	</div>  
+	</div> <!--  mmenua2 結束  -->
+  </div>
+  
+  <div id="menu3" class="tab-pane fade">
+    <div class="mmenua2">
+	<div class="row">
+	
+	<div class="filterarea col-md-12 col-lg-12">
+		<button class="btn" type="button">Recover</button>
+		<!--<button class="btn" type="button">Remove form Export</button>-->
+		</div>
+	
+		<div class="col-md-12 col-lg-12">
+		<div id="" class="table-responsive testreview_t tbyt filtertable">
+		  <table class="table col-md-12 table-bordered table-striped cf plrzero table-hover">
+		  <thead class="cf">
+			  <tr>
+				  <th width="15%">
+				  <div class="thead_radio_spot">
+					<input id="box11" type="checkbox">
+					<label for="box11" value=""></label>
+					</div>
+					</th>
+				  <th width="55%">Question Title</th>
+				  <th width="30%">
+					<div class="dropdown">
+					  <div class="dropdown-toggle" type="button" data-toggle="dropdown">Sort by
+					  <span class="caret"></span></div>
+					  <ul class="dropdown-menu">
+						<li><a href="#">Added Time</a></li>
+						<li><a href="#">Time to Review</a></li>
+						<li><a href="#">Average Error Rate</a></li>
+						<li><a href="#">Review Time(s)</a></li>
+					  </ul>
+					</div>
+				  </th>
+			  </tr>
+		  </thead>
+		  <tbody>
+			  <tr>
+				  <td>
+					<div class="radio_spot">
+					<input id="box12" type="checkbox">
+					<label for="box12" value=""></label>
+					</div>
+				  </td>
+				  <td>Fluency in Solving Linear Equations, Linear Inequalities, Fluency in Solving Linear Equations, and Systems of Linear Equations Linear Inequalities</td>
+				  <td>
+					<span>Added Time </span>2015-12-03<br>
+					<span>Time to Review </span>2015-12-03<br>
+					<span>Average Error Rate </span>90%<br>
+					<span>Review Time(s) </span>0
+				  </td>
+				</tr>
+
+				<tr>
+				  <td>
+					<div class="radio_spot">
+					<input id="box13" type="checkbox">
+					<label for="box13" value=""></label>
+					</div>
+				  </td>
+				  <td>Fluency in Solving Linear Equations, Linear Inequalities, Fluency in Solving Linear Equations, and Systems of Linear Equations Linear Inequalities</td>
+				  <td>
+					<span>Added Time </span>2015-12-03<br>
+					<span>Time to Review </span>2015-12-03<br>
+					<span>Average Error Rate </span>90%<br>
+					<span>Review Time(s) </span>0
+				  </td>
+				</tr>
+
+				<tr>
+				  <td>
+					<div class="radio_spot">
+					<input id="box14" type="checkbox">
+					<label for="box14" value=""></label>
+					</div>
+				  </td>
+				  <td>Fluency in Solving Linear Equations, Linear Inequalities, Fluency in Solving Linear Equations, and Systems of Linear Equations Linear Inequalities</td>
+			  <td>
+					<span>Added Time </span>2015-12-03<br>
+					<span>Time to Review </span>2015-12-03<br>
+					<span>Average Error Rate </span>90%<br>
+					<span>Review Time(s) </span>0
+				  </td>
+				</tr>
+		  </tbody>
+		  </table>
+		  </div> 
+		</div>
+	</div>  
+	</div> <!--  mmenua2 結束  -->
+  </div>
+  
+  <div id="menu4" class="tab-pane fade">
+    <div class="mmenua2">
+	<div class="row">
+	
+		<div class="filterarea col-md-12 col-lg-12">
+		<!--<button class="btn" type="button"><i class="material-icons">print</i></button>-->
+		<button class="btn" type="button">Get the printable file</button>
+		<button class="btn" type="button">Remove form Export</button>
+		</div>
+	
+		<div class="col-md-12 col-lg-12">
+		<div id="" class="table-responsive testreview_t tbyt filtertable">
+		  <table class="table col-md-12 table-bordered table-striped cf plrzero table-hover">
+		  <thead class="cf">
+			  <tr>
+				  <th width="15%">
+				  <div class="thead_radio_spot">
+					<input id="box21" type="checkbox">
+					<label for="box21" value=""></label>
+					</div>
+					</th>
+				  <th width="55%">Question Title</th>
+				  <th width="30%">
+					<div class="dropdown">
+					  <div class="dropdown-toggle" type="button" data-toggle="dropdown">Sort by
+					  <span class="caret"></span></div>
+					  <ul class="dropdown-menu">
+						<li><a href="#">Added Time</a></li>
+						<li><a href="#">Time to Review</a></li>
+						<li><a href="#">Average Error Rate</a></li>
+						<li><a href="#">Review Time(s)</a></li>
+					  </ul>
+					</div>
+				  </th>
+			  </tr>
+		  </thead>
+		  <tbody>
+			  <tr>
+				  <td>
+					<div class="radio_spot">
+					<input id="box22" type="checkbox">
+					<label for="box22" value=""></label>
+					</div>
+				  </td>
+				  <td>Fluency in Solving Linear Equations, Linear Inequalities, Fluency in Solving Linear Equations, and Systems of Linear Equations Linear Inequalities</td>
+				  <td>
+					<span>Added Time </span>2015-12-03<br>
+					<span>Time to Review </span>2015-12-03<br>
+					<span>Average Error Rate </span>90%<br>
+					<span>Review Time(s) </span>0
+				  </td>
+				</tr>
+
+				<tr>
+				  <td>
+					<div class="radio_spot">
+					<input id="box23" type="checkbox">
+					<label for="box23" value=""></label>
+					</div>
+				  </td>
+				  <td>Fluency in Solving Linear Equations, Linear Inequalities, Fluency in Solving Linear Equations, and Systems of Linear Equations Linear Inequalities</td>
+				  <td>
+					<span>Added Time </span>2015-12-03<br>
+					<span>Time to Review </span>2015-12-03<br>
+					<span>Average Error Rate </span>90%<br>
+					<span>Review Time(s) </span>0
+				  </td>
+				</tr>
+
+				<tr>
+				  <td>
+					<div class="radio_spot">
+					<input id="box24" type="checkbox">
+					<label for="box24" value=""></label>
+					</div>
+				  </td>
+				  <td>Fluency in Solving Linear Equations, Linear Inequalities, Fluency in Solving Linear Equations, and Systems of Linear Equations Linear Inequalities</td>
+				  <td>
+					<span>Added Time </span>2015-12-03<br>
+					<span>Time to Review </span>2015-12-03<br>
+					<span>Average Error Rate </span>90%<br>
+					<span>Review Time(s) </span>0
+				  </td>
+				</tr>
+		  </tbody>
+		  </table>
+		  </div> 
+		</div>
+	</div>  
+	</div> <!--  mmenua2 結束  -->
+  </div>
+  
+  <div id="menu5" class="tab-pane fade">
+    <div class="mmenua2">
+	<div class="row">
+		Mock Test 內容放這裡
+	</div>  
+	</div> <!--  mmenua2 結束  -->
+  </div>
+  
+  <div id="menu6" class="tab-pane fade">
+    <div class="mmenua2">
+	<div class="row">
+		Test Review 內容放這裡
+	</div>  
+	</div> <!--  mmenua2 結束  -->
+  </div>
+  
+</div>  <!--  tab-content 結束  -->
+
+</div>  
+
+<div class="clearfix"></div><hr>   
+
+</div>
+
+      
+        <div id="copyright" class="hidden-xs">Copyright &copy; 2017 by <a href="http://www.language-center.com.tw/" target="_blank">ELITE</a> International Education Services. All rights reserved.</div>
+        <div class="copyright hidden-sm hidden-md hidden-lg">&copy; 2017 <a href="http://www.language-center.com.tw/" target="_blank">ELITE</a></div>
+        
+        
+</main>
+
+
+<p id="back-top"><a href="#top"><span><i class="material-icons iconbi">arrow_upward</i></span></a></p>
+
+
+
+
+
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> 
+<!--<script src="assets/js/jquery-1.11.3.min.js"></script>-->
+<!-- Include all compiled plugins (below), or include individual files as needed --> 
+<script src="assets/js/bootstrap.js"></script>
+
+<!-- mainmenu -->
+<script src="assets/js/jquery-2.1.1.js"></script>
+<script src="assets/js/jquery.menu-aim.js"></script> <!-- menu aim -->
+<script src="assets/js/main.js"></script> <!-- Resource jQuery -->
+
+<!-- tooltip -->
+<!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<script>
+$(document).ready(function(){
+    $('[data-toggle="tooltip"]').tooltip();
+});
+</script>
+
+<!-- bar -->
+<!--<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>-->
+<script src="assets/js/index_bar.js"></script>
+
+
+<!-- A panel-group -->
+<script type="text/javascript">
+function toggleIcon(e) {
+    $(e.target)
+        .prev('.panel-heading')
+        .find(".more-less")
+        .toggleClass('glyphicon-plus glyphicon-minus');
+}
+$('.panel-group').on('hidden.bs.collapse', toggleIcon);
+$('.panel-group').on('shown.bs.collapse', toggleIcon);
+</script>
+
+<!--  datetimepicker  -->
+<!--<script type="text/javascript" src="assets/jquery/jquery-1.8.3.min.js" charset="UTF-8"></script>
+<script type="text/javascript" src="assets/bootstrap/js/bootstrap.min.js"></script>-->
+<script type="text/javascript" src="assets/js/bootstrap-datetimepicker.js" charset="UTF-8"></script>
+<script type="text/javascript" src="assets/js/locales/bootstrap-datetimepicker.fr.js" charset="UTF-8"></script>
+<script type="text/javascript">
+    $('.form_datetime').datetimepicker({
+        //language:  'fr',
+        weekStart: 1,
+        todayBtn:  1,
+		autoclose: 1,
+		todayHighlight: 1,
+		startView: 2,
+		forceParse: 0,
+        showMeridian: 1
+    });
+	$('.form_date').datetimepicker({
+        language:  'fr',
+        weekStart: 1,
+        todayBtn:  1,
+		autoclose: 1,
+		todayHighlight: 1,
+		startView: 2,
+		minView: 2,
+		forceParse: 0
+    });
+	$('.form_time').datetimepicker({
+        language:  'fr',
+        weekStart: 1,
+        todayBtn:  1,
+		autoclose: 1,
+		todayHighlight: 1,
+		startView: 1,
+		minView: 0,
+		maxView: 1,
+		forceParse: 0
+    });
+</script>
+
+
+</body>
+</html>

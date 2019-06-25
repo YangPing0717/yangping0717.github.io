@@ -1,0 +1,962 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<link rel="shortcut icon" href="assets/img/favicon.ico">
+<link rel="bookmark" href="assets/img/favicon.ico"/>
+<link rel="apple-touch-icon" href="assets/img/icon_SAT_2017.png">
+    
+<meta property="og:title" content="ELITE SAT Intensive Program" />
+<meta property="og:description" content="ELITE SAT Intensive Program" />
+<meta property="og:image" content="assets/img/share_img_sat.jpg">
+<meta name="keywords" content="ELITE, Education, SAT, 菁英" />
+<title>ELITE SAT Intensive Program</title>
+
+<!-- Bootstrap -->
+<link rel="stylesheet" href="assets/css/bootstrap.css" >
+<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>-->
+
+<!-- iconfont -->
+<link href="assets/css/font-awesome.min.css" rel="stylesheet">
+<link href="assets/css/style_icomoon.css" rel="stylesheet">
+<link href="assets/css/material-icons.css" rel="stylesheet">
+
+<!-- main menu -->
+<link rel="stylesheet" href="assets/css/reset.css"> <!-- CSS reset -->
+<link rel="stylesheet" href="assets/css/style.css"> <!-- Resource style -->
+<script src="assets/js/modernizr.js"></script> <!-- Modernizr -->
+
+<link rel="stylesheet" type="text/css" href="assets/css/btn_default.css" />
+<link rel="stylesheet" type="text/css" href="assets/css/btn_component.css" />
+
+<!-- progress bar -->
+<link rel="stylesheet" href="assets/css/style_bar4.css">
+
+<!-- 置頂 btn -->
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.3/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+
+	// hide #back-top first
+	$("#back-top").hide();
+	
+	// fade in #back-top
+	$(function () {
+		$(window).scroll(function () {
+			if ($(this).scrollTop() > 100) {
+				$('#back-top').fadeIn();
+			} else {
+				$('#back-top').fadeOut();
+			}
+		});
+
+		// scroll body to 0px on click
+		$('#back-top a').click(function () {
+			$('body,html').animate({
+				scrollTop: 0
+			}, 400);
+			return false;
+		});
+	});
+
+});
+</script>
+<!-- 置頂 btn 完 -->
+
+<!-- customize -->
+<link href="assets/css/main_sat.css" rel="stylesheet">
+
+
+	
+</head>
+<body>
+
+<header>
+<a class="navbar-brand" href="index.html"><img src="assets/img/logo_elite_sat_tw.svg" alt=""/></a>
+		<div class="cd-dropdown-wrapper">
+			<a class="cd-dropdown-trigger" href="#0"><i class="material-icons iconbi icon_vam">menu</i><span>MENU</span></a>
+			<nav class="cd-dropdown">
+				<h2>SAT Intensive Program</h2>
+				<a href="#0" class="cd-close">Close</a>
+				<ul class="cd-dropdown-content">
+					<!--<li>
+						<form class="cd-search">
+							<input type="search" placeholder="Search...">
+						</form>
+					</li>-->
+				  <li class="has-children">
+						<a href="#"><i class="material-icons">home</i>Home</a>
+						<ul class="cd-secondary-dropdown is-hidden">
+							<li class="go-back"><a href="#0">Menu</a></li>
+							<li class="">
+                                <a href="index.html">Overview</a>
+                                <a href="h_wh.html">Weekly Homework</a>
+                                <a href="h_tt.html">Timetable</a>
+							</li>
+
+						</ul> <!-- .cd-secondary-dropdown -->
+					</li> <!-- .has-children -->
+                    
+                    <li class="has-children">
+						<a href="#"><i class="material-icons">devices</i>My e-Learning</a>
+						<ul class="cd-secondary-dropdown is-hidden">
+							<li class="go-back"><a href="#0">Menu</a></li>
+							<li class="">
+                                <a href="me_vq_v.html">Vocabulary</a>
+                                <a href="m_coursehome.html">Math</a>
+                                <a href="me_vq_tr.html">Test Review</a>
+                                <a href="me_vq_h.html">Homework</a>
+							</li>
+
+						</ul> <!-- .cd-secondary-dropdown -->
+					</li> <!-- .has-children -->
+                    
+                    <li class="has-children">
+						<a href="#"><i class="material-icons">assignment</i>Report Card</a>
+						<ul class="cd-secondary-dropdown is-hidden">
+							<li class="go-back"><a href="#0">Menu</a></li>
+							<li class="">
+                                <a href="rc_a.html">Attendance</a>
+                                <a href="rc_hr.html">Homework Report</a>
+                                <a href="rc_mtr.html">Test Report</a>
+                                <a href="rc_mer_voca.html">My e-Learning Report</a>
+							</li>
+
+						</ul> <!-- .cd-secondary-dropdown -->
+					</li> <!-- .has-children -->
+                    
+                    <li><a href="muw.html"><i class="material-icons">assignment_turned_in</i>Make-up Works</a></li>
+                    
+                    <li class="has-children" style="display: none;">
+						<a href="#"><i class="material-icons">assignment_turned_in</i>Make-up Works</a>
+						<ul class="cd-secondary-dropdown is-hidden">
+							<li class="go-back"><a href="#0">Menu</a></li>
+							<li class="">
+                                <a href="muw.html">Vocabulary</a>
+                                <a href="muw.html">Math</a>
+                                <a href="muw.html">Reading</a>
+                                <a href="muw.html">Writing</a>
+                                <a href="muw.html">Grammar</a>
+                                <a href="muw.html">MockTest</a>
+                                <a href="muw.html">TestReview</a>
+							</li>
+
+						</ul> <!-- .cd-secondary-dropdown -->
+					</li> <!-- .has-children -->
+
+					<li><a href="cm.html"><i class="material-icons">bookmark_border</i>Collected Mistakes</a></li>
+                    
+                    <li class="has-children">
+						<a href="#"><i class="material-icons">class</i>Vocabulary Lab</a>
+						<ul class="cd-secondary-dropdown is-hidden">
+							<li class="go-back"><a href="#0">Menu</a></li>
+							<li class="">
+                                <a href="#">Vocabulary</a>
+                                <a href="#">Math</a>
+							</li>
+
+						</ul> <!-- .cd-secondary-dropdown -->
+					</li> <!-- .has-children -->
+                    
+                    <li><a href="hc.html"><i class="material-icons">help_outline</i>Help Center</a></li>
+                    <li><a href="cr.html"><i class="material-icons">account_box</i>Contact Record</a></li>
+                    <li><a href="si.html"><i class="material-icons">info_outline</i>SAT Information</a></li>
+                    <!--<li><a href="#"><i class="material-icons">exit_to_app</i>Sign Out</a></li>-->
+                    
+                    
+				</ul> <!-- .cd-dropdown-content -->
+			</nav> <!-- .cd-dropdown -->
+		</div> <!-- .cd-dropdown-wrapper -->
+</header>
+
+
+   
+
+<main class="cd-main-content">
+    <div class="container-fluid">
+        <div class="row">
+
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="#">My e-Learning</a></li>
+                <li class="breadcrumb-item active">Math</li>
+              </ol>
+            
+<nav class="navbar navbar-inverse">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="m_coursehome.html">Course Home</a>
+    </div>
+    
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="m_coursehome.html">Course Home</a></li>
+        <li><a href="m_discussion.html">Discussion Forums</a></li>
+      </ul>
+    </div>
+</nav>
+
+
+
+<div class="mmenua">
+<button type="button" class="btn collapsed m_btn" data-toggle="collapse" data-target="#boxvideo">How to Raise SAT Math Score by Using this Software?</button>
+<div id="boxvideo" class="collapse">
+<div class="mmenuv">
+<video loop controls>
+<source src="assets/media/SAT數學使用教學影片.mp4" type="video/mp4">
+Your browser does not support HTML5 video.
+</video>
+</div>
+</div>
+</div>
+
+<div class="mmenua">
+<button type="button" class="btn collapsed m_btn" data-toggle="collapse" data-target="#boxcalen">MATH Timetable</button>
+<div id="boxcalen" class="collapse">
+
+<div id="" class="table-responsive math_cal">
+  <table class="table col-md-12 table-bordered table-condensed cf plrzero">
+  <thead class="cf">
+      <tr>
+          <th>Week</th>
+          <th>Mon.</th>
+          <th>Tue.</th>
+          <th>Wed.</th>
+          <th>Thu.</th>
+          <th>Fri.</th>
+          <th>Sat.</th>
+          <th>Sun.</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td data-title="Week"></td>
+          <td data-title="Mon."><span class="caldate">31</span></td>
+          <td data-title="Tue."><span class="caldate">6 / 1</span></td>
+          <td data-title="Wed." class="ocu_a "><span class="caldate ">2</span>
+			  <div class="finish">Intro</div>
+			  <div class="unfinish_overdue">Unit 1</div>
+			  <div class="un_overdue">Unit 2</div>
+          </td>
+          <td data-title="Thu." class="ocu_a"><span class="caldate">3</span></td>
+          <td data-title="Fri." class="ocu_a"><span class="caldate">4</span></td>
+          <td data-title="Sat." class="ocu_a"><span class="caldate">5</span></td>
+          <td data-title="Sun." class="ocu_a"><span class="caldate">6</span></td>
+      </tr>
+      <tr>
+          <td data-title="Week">1</td>
+          <td data-title="Mon." class="ocu_aa"><span class="caldate today">7</span><br>Competition<br>Unit 1<br>Unit 2</td>
+          <td data-title="Tue." class="ocu_aa"><span class="caldate">8</span><br>Test<br>Unit 1<br>Unit 2</td>
+          <td data-title="Wed." class="ocu_b"><span class="caldate">9</span>
+			  <div class="un">Unit 3</div>
+			  <div class="un">Unit 4</div>
+          </td>
+          <td data-title="Thu." class="ocu_b"><span class="caldate">10</span></td>
+          <td data-title="Fri." class="ocu_b"><span class="caldate">11</span></td>
+          <td data-title="Sat." class="ocu_b"><span class="caldate">12</span></td>
+          <td data-title="Sun." class="ocu_b"><span class="caldate">13</span></td>
+      </tr>
+      <tr>
+          <td data-title="Week">2</td>
+          <td data-title="Mon." class="ocu_bb"><span class="caldate">14</span><br>Competition<br>Unit 3<br>Unit 4</td>
+          <td data-title="Tue." class="ocu_bb"><span class="caldate">15</span><br>Test<br>Unit 3<br>Unit 4</td>
+          <td data-title="Wed." class="ocu_a"><span class="caldate">16</span>
+			  <div class="un">Unit 5</div>
+			  <div class="un">Unit 6</div>
+         </td>
+          <td data-title="Thu." class="ocu_a"><span class="caldate">17</span></td>
+          <td data-title="Fri." class="ocu_a"><span class="caldate">18</span></td>
+          <td data-title="Sat." class="ocu_a"><span class="caldate">19</span></td>
+          <td data-title="Sun." class="ocu_a"><span class="caldate ">20</span></td>
+      </tr>
+      <tr>
+          <td data-title="Week">3</td>
+          <td data-title="Mon." class="ocu_aa"><span class="caldate">21</span><br>Competition<br>Unit 5<br>Unit 6</td>
+          <td data-title="Tue." class="ocu_aa"><span class="caldate">22</span><br>Test<br>Unit 5<br>Unit 6</td>
+          <td data-title="Wed." class="ocu_b"><span class="caldate">23</span>
+			  <div class="un">Unit 7</div>
+			  <div class="un">Unit 8</div>
+         </td>
+          <td data-title="Thu." class="ocu_b"><span class="caldate">24</span></td>
+          <td data-title="Fri." class="ocu_b"><span class="caldate">25</span></td>
+          <td data-title="Sat." class="ocu_b"><span class="caldate">26</span></td>
+          <td data-title="Sun." class="ocu_b"><span class="caldate">27</span></td>
+      </tr>
+      <tr>
+          <td data-title="Week">4</td>
+          <td data-title="Mon." class="ocu_bb"><span class="caldate">28</span><br>Competition<br>Unit 7<br>Unit 8</td>
+          <td data-title="Tue." class="ocu_bb"><span class="caldate">29</span><br>Test<br>Unit 7<br>Unit 8</td>
+          <td data-title="Wed."><span class="caldate">30</span></td>
+          <td data-title="Thu."><span class="caldate">7 / 1</span></td>
+          <td data-title="Fri."><span class="caldate">2</span></td>
+          <td data-title="Sat."><span class="caldate">3</span></td>
+          <td data-title="Sun."><span class="caldate">4</span></td>
+      </tr>
+      
+      
+  </tbody>
+  </table>
+  </div>
+  
+</div>
+</div>
+
+
+<!--  WEEK 1 開始  -->
+<div class="mmenua mmenua_mb3">
+<button type="button" class="btn collapsed m_btn" data-toggle="collapse" data-target="#mathmenu">
+<div class="row">
+<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">Week 1: Heart of Algebra</div>
+
+<div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 menu_bar">
+<div class="skillbar clearfix" data-percent="65%">
+	<!--<div class="skillbar-title"><span>Math-Unit 3</span></div>-->
+	<div class="skillbar-bar"></div>
+	<div class="skill-bar-percent">65% complete</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 menu_dueday">Due 6/6 (0 day left)</div>
+</div>
+
+
+
+</button>
+<div id="mathmenu" class="collapse">
+
+
+<!-- A panel-group -->
+<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+
+        <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="headingOne">
+                <h4 class="panel-title">
+                    <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        <i class="more-less glyphicon glyphicon-plus"></i>
+                        Introduction<div class="number"><span>2</span>/<span>2</span></div>
+                    </a>
+                </h4>
+            </div>
+            <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+                <div class="panel-body mathsubmenubox">
+                      <table class="table">
+                                <tbody>
+                                <tr>
+                                    <td onclick="document.location = 'm_videoplayer.html';"><i class="material-icons left">play_circle_filled</i> 
+                                     <a href="#" class="un">Linear Equations Linear Inequalities and Linear Functions in Context</a>
+                                      <div class="time">15:35</div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td onclick="document.location = 'm_videoplayer.html';">
+                                        <i class="material-icons left">play_circle_filled</i>
+                                        <a href="#" class="un">Systems of Linear Equations and Inequalities in Context</a>
+                                        <div class="time">09:12</div>
+                                    </td>
+                                </tr>
+                            </tbody></table>
+                </div>
+            </div>
+        </div>
+
+        <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="headingTwo">
+                <h4 class="panel-title">
+                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        <i class="more-less glyphicon glyphicon-plus"></i>
+                        Unit 1  Heart of Algebra I<div class="number"><span>1</span>/<span>4</span></div>
+                    </a>
+                </h4>
+            </div>
+            <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                <div class="panel-body mathsubmenubox">
+                      <table class="table">
+                                <tbody><tr>
+                                    <td onclick="document.location = 'm_videoplayer.html';">
+                                        <i class="material-icons left">description</i>
+                                        <a href="#" class="finish">SAT Math Reading Help</a>
+                                        <div class="time">25:35</div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td onclick="document.location = 'm_videoplayer.html';">
+                                        <i class="material-icons left">play_circle_filled</i>
+                                        <a href="#" class="unfinish">Fluency in Solving Linear Equations Linear Inequalities and Systems of Linear Equations</a>
+                                        <div class="time">05:35</div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td onclick="document.location = 'm_videoplayer.html';">
+                                        <i class="material-icons left">play_circle_filled</i>
+                                        <a href="#" class="unfinish_overdue">Linear Equations Linear Inequalities and Linear Functions in Context</a>
+                                        <div class="time">25:35</div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td onclick="document.location = 'm_videoplayer.html';">
+                                        <i class="material-icons left">play_circle_filled</i>
+                                        <a href="#" class="un_overdue">Systems of Linear Equations and Inequalities in Context</a>
+                                        <div class="time">25:35</div>
+                                    </td>
+                                </tr>
+                            </tbody></table>
+                </div>
+            </div>
+        </div>
+
+        <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="headingThree">
+                <h4 class="panel-title">
+                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        <i class="more-less glyphicon glyphicon-plus"></i>
+                        Unit 2  Heart of Algebra II<div class="number"><span>0</span>/<span>3</span></div>
+                    </a>
+                </h4>
+            </div>
+            <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                <div class="panel-body mathsubmenubox">
+                      <table class="table">
+                                <tbody>
+                                <tr>
+                                    <td onclick="document.location = 'm_videoplayer.html';">
+                                        <i class="material-icons left">play_circle_filled</i>
+                                        <a href="#" class="un_overdue">The Relationships among Linear Equations Lines in the Coordinate Plane and the Contexts</a>
+                                        <div class="time">05:35</div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td onclick="document.location = 'm_videoplayer.html';">
+                                        <i class="material-icons left">play_circle_filled</i>
+                                        <a href="#" class="un_overdue">The Graph of a System of Linear Inequalities</a>
+                                        <div class="time">25:35</div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td onclick="document.location = 'm_videoplayer.html';">
+                                        <i class="material-icons left">play_circle_filled</i>
+                                        <a href="#" class="un_overdue">Absolute Value</a>
+                                        <div class="time">25:35</div>
+                                    </td>
+                                </tr>
+                            </tbody></table>
+                </div>
+            </div>
+        </div>
+
+    </div>
+<!-- A panel-group 結束-->
+
+</div>
+</div>
+<!--  WEEK 1 結束  -->
+
+
+<!--  WEEK 2 開始  -->
+<div class="mmenua mmenua_mb3">
+<button type="button" class="btn collapsed m_btn" data-toggle="collapse" data-target="#mathmenu2">
+<div class="row">
+<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">Week 2: Problem Solving and Data Analysis</div>
+
+<div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 menu_bar">
+<div class="skillbar clearfix" data-percent="35%">
+	<!--<div class="skillbar-title"><span>Math-Unit 3</span></div>-->
+	<div class="skillbar-bar"></div>
+	<div class="skill-bar-percent">35% complete</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 menu_dueday">Due 06/13 (6 day left)</div>
+</div>
+</button>
+
+
+<div id="mathmenu2" class="collapse">
+
+
+<!-- B panel-group -->
+<div class="panel-group" id="accordion2" role="tablist" aria-multiselectable="true">
+
+        <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="headingOne2">
+                <h4 class="panel-title">
+                    <a role="button" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne2" aria-expanded="true" aria-controls="collapseOne2">
+                        <i class="more-less glyphicon glyphicon-plus"></i>
+                        Introduction<div class="number"><span>2</span> / <span>2</span></div>
+                    </a>
+                </h4>
+            </div>
+            <div id="collapseOne2" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+                <div class="panel-body mathsubmenubox">
+                      <table class="table">
+                                <tbody>
+                                <tr>
+                                    <td>
+                                        <i class="material-icons left">play_circle_filled</i>
+                                        <a href="#" class="un">Linear Equations Linear Inequalities and Linear Functions in Context</a>
+                                        <div class="time">15:35</div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <i class="material-icons left">play_circle_filled</i>
+                                        <a href="#" class="un">Systems of Linear Equations and Inequalities in Context</a>
+                                        <div class="time">09:12</div>
+                                    </td>
+                                </tr>
+                            </tbody></table>
+                </div>
+            </div>
+        </div>
+
+        <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="headingTwo2">
+                <h4 class="panel-title">
+                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo2" aria-expanded="false" aria-controls="collapseTwo2">
+                        <i class="more-less glyphicon glyphicon-plus"></i>
+                        Unit 1  Heart of Algebra I<div class="number"><span>5</span> / <span>7</span></div>
+                    </a>
+                </h4>
+            </div>
+            <div id="collapseTwo2" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                <div class="panel-body mathsubmenubox">
+                      <table class="table">
+                                <tbody><tr>
+                                    <td>
+                                        <i class="material-icons left">description</i>
+                                        <a href="#" class="un">SAT數學閱讀難點突破</a>
+                                        <div class="time">25:35</div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <i class="material-icons left">play_circle_filled</i>
+                                        <a href="#" class="un">Fluency in Solving Linear Equations Linear Inequalities and Systems of Linear Equations</a>
+                                        <div class="time">05:35</div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <i class="material-icons left">play_circle_filled</i>
+                                        <a href="#" class="un">Linear Equations Linear Inequalities and Linear Functions in Context</a>
+                                        <div class="time">25:35</div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <i class="material-icons left">play_circle_filled</i>
+                                        <a href="#" class="un">Systems of Linear Equations and Inequalities in Context</a>
+                                        <div class="time">25:35</div>
+                                    </td>
+                                </tr>
+                            </tbody></table>
+                </div>
+            </div>
+        </div>
+
+        <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="headingThree2">
+                <h4 class="panel-title">
+                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion2" href="#collapseThree2" aria-expanded="false" aria-controls="collapseThree2">
+                        <i class="more-less glyphicon glyphicon-plus"></i>
+                        Unit 2  Heart of Algebra II<div class="number"><span>1</span> / <span>2</span></div>
+                    </a>
+                </h4>
+            </div>
+            <div id="collapseThree2" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree2">
+                <div class="panel-body mathsubmenubox">
+                      <table class="table">
+                                <tbody>
+                                <tr>
+                                    <td>
+                                        <i class="material-icons left">play_circle_filled</i>
+                                        <a href="#" class="un">The Relationships among Linear Equations Lines in the Coordinate Plane and the Contexts</a>
+                                        <div class="time">05:35</div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <i class="material-icons left">play_circle_filled</i>
+                                        <a href="#" class="un">The Graph of a System of Linear Inequalities</a>
+                                        <div class="time">25:35</div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <i class="material-icons left">play_circle_filled</i>
+                                        <a href="#" class="un">Absolute Value</a>
+                                        <div class="time">25:35</div>
+                                    </td>
+                                </tr>
+                            </tbody></table>
+                </div>
+            </div>
+        </div>
+
+    </div><!-- B panel-group 結束-->
+
+</div>
+</div>
+<!--  WEEK 2 結束  -->
+
+
+<!--  WEEK 3 開始  -->
+<div class="mmenua mmenua_mb3">
+<button type="button" class="btn collapsed m_btn" data-toggle="collapse" data-target="#mathmenu3">
+<div class="row">
+<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">Week 3: Passport to Advanced Math</div>
+
+<div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 menu_bar">
+<div class="skillbar clearfix" data-percent="55%">
+	<!--<div class="skillbar-title"><span>Math-Unit 3</span></div>-->
+	<div class="skillbar-bar"></div>
+	<div class="skill-bar-percent">55% complete</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 menu_dueday">Due 06/20 (13 day left)</div>
+</div>
+</button>
+
+
+<div id="mathmenu3" class="collapse">
+
+
+<!-- C panel-group -->
+<div class="panel-group" id="accordion3" role="tablist" aria-multiselectable="true">
+
+        <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="headingOne3">
+                <h4 class="panel-title">
+                    <a role="button" data-toggle="collapse" data-parent="#accordion3" href="#collapseOne3" aria-expanded="true" aria-controls="collapseOne3">
+                        <i class="more-less glyphicon glyphicon-plus"></i>
+                        Introduction<div class="number"><span>2</span> / <span>2</span></div>
+                    </a>
+                </h4>
+            </div>
+            <div id="collapseOne3" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+                <div class="panel-body mathsubmenubox">
+                      <table class="table">
+                                <tbody>
+                                <tr>
+                                    <td>
+                                        <i class="material-icons left">play_circle_filled</i>
+                                        <a href="#" class="un">Linear Equations Linear Inequalities and Linear Functions in Context</a>
+                                        <div class="time">15:35</div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <i class="material-icons left">play_circle_filled</i>
+                                        <a href="#" class="un">Systems of Linear Equations and Inequalities in Context</a>
+                                        <div class="time">09:12</div>
+                                    </td>
+                                </tr>
+                            </tbody></table>
+                </div>
+            </div>
+        </div>
+
+        <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="headingTwo3">
+                <h4 class="panel-title">
+                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion3" href="#collapseTwo3" aria-expanded="false" aria-controls="collapseTwo2">
+                        <i class="more-less glyphicon glyphicon-plus"></i>
+                        Unit 1  Heart of Algebra I<div class="number"><span>5</span> / <span>7</span></div>
+                    </a>
+                </h4>
+            </div>
+            <div id="collapseTwo3" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                <div class="panel-body mathsubmenubox">
+                      <table class="table">
+                                <tbody><tr>
+                                    <td>
+                                        <i class="material-icons left">description</i>
+                                        <a href="#" class="un">SAT數學閱讀難點突破</a>
+                                        <div class="time">25:35</div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <i class="material-icons left">play_circle_filled</i>
+                                        <a href="#" class="un">Fluency in Solving Linear Equations Linear Inequalities and Systems of Linear Equations</a>
+                                        <div class="time">05:35</div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <i class="material-icons left">play_circle_filled</i>
+                                        <a href="#" class="un">Linear Equations Linear Inequalities and Linear Functions in Context</a>
+                                        <div class="time">25:35</div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <i class="material-icons left">play_circle_filled</i>
+                                        <a href="#" class="un">Systems of Linear Equations and Inequalities in Context</a>
+                                        <div class="time">25:35</div>
+                                    </td>
+                                </tr>
+                            </tbody></table>
+                </div>
+            </div>
+        </div>
+
+        <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="headingThree3">
+                <h4 class="panel-title">
+                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion3" href="#collapseThree3" aria-expanded="false" aria-controls="collapseThree3">
+                        <i class="more-less glyphicon glyphicon-plus"></i>
+                        Unit 2  Heart of Algebra II<div class="number"><span>1</span> / <span>2</span></div>
+                    </a>
+                </h4>
+            </div>
+            <div id="collapseThree3" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree3">
+                <div class="panel-body mathsubmenubox">
+                      <table class="table">
+                                <tbody>
+                                <tr>
+                                    <td>
+                                        <i class="material-icons left">play_circle_filled</i>
+                                        <a href="#" class="un">The Relationships among Linear Equations Lines in the Coordinate Plane and the Contexts</a>
+                                        <div class="time">05:35</div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <i class="material-icons left">play_circle_filled</i>
+                                        <a href="#" class="un">The Graph of a System of Linear Inequalities</a>
+                                        <div class="time">25:35</div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <i class="material-icons left">play_circle_filled</i>
+                                        <a href="#" class="un">Absolute Value</a>
+                                        <div class="time">25:35</div>
+                                    </td>
+                                </tr>
+                            </tbody></table>
+                </div>
+            </div>
+        </div>
+
+    </div><!-- C panel-group 結束-->
+
+</div>
+</div>
+<!--  WEEK 3 結束  -->
+
+
+<!--  WEEK 4 開始  -->
+<div class="mmenua mmenua_mb3">
+<button type="button" class="btn collapsed m_btn" data-toggle="collapse" data-target="#mathmenu4">
+<div class="row">
+<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">Week 4: Additional Topics in Math</div>
+
+<div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 menu_bar">
+<div class="skillbar clearfix" data-percent="25%">
+	<!--<div class="skillbar-title"><span>Math-Unit 3</span></div>-->
+	<div class="skillbar-bar"></div>
+	<div class="skill-bar-percent">25% complete</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 menu_dueday">Due 06/27 (20 day left)</div>
+</div>
+</button>
+
+
+<div id="mathmenu4" class="collapse">
+
+
+<!-- D panel-group -->
+<div class="panel-group" id="accordion4" role="tablist" aria-multiselectable="true">
+
+        <!--<div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="headingOne4">
+                <h4 class="panel-title">
+                    <a role="button" data-toggle="collapse" data-parent="#accordion4" href="#collapseOne4" aria-expanded="true" aria-controls="collapseOne4">
+                        <i class="more-less glyphicon glyphicon-plus"></i>
+                        Introduction<div class="number"><span>2</span> / <span>2</span></div>
+                    </a>
+                </h4>
+            </div>
+            <div id="collapseOne4" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+                <div class="panel-body mathsubmenubox">
+                      <table class="table">
+                                <tbody>
+                                <tr>
+                                    <td>
+                                        <i class="material-icons left">play_circle_filled</i>
+                                        <a href="#" class="un">Linear Equations Linear Inequalities and Linear Functions in Context</a>
+                                        <div class="time">15:35</div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <i class="material-icons left">play_circle_filled</i>
+                                        <a href="#" class="un">Systems of Linear Equations and Inequalities in Context</a>
+                                        <div class="time">09:12</div>
+                                    </td>
+                                </tr>
+                            </tbody></table>
+                </div>
+            </div>
+        </div>-->
+
+        <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="headingTwo4">
+                <h4 class="panel-title">
+                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion4" href="#collapseTwo4" aria-expanded="false" aria-controls="collapseTwo4">
+                        <i class="more-less glyphicon glyphicon-plus"></i>
+                        Unit 7 Additional Topics in Math I<div class="number"><span>0</span> / <span>3</span></div>
+                    </a>
+                </h4>
+            </div>
+            <div id="collapseTwo4" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                <div class="panel-body mathsubmenubox">
+                      <table class="table">
+                                <tbody>
+                                   <!--<tr>
+                                    <td>
+                                        <i class="material-icons left">description</i>
+                                        <a href="#" class="un">SAT數學閱讀難點突破</a>
+                                        <div class="time">25:35</div>
+                                    </td>
+                                </tr>-->
+                                <tr>
+                                    <td>
+                                        <i class="material-icons left">play_circle_filled</i>
+                                        <a href="#" class="un">Geometry I</a>
+                                        <div class="time">22:15</div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <i class="material-icons left">play_circle_filled</i>
+                                        <a href="#" class="un">Geometry II</a>
+                                        <div class="time">25:35</div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <i class="material-icons left">play_circle_filled</i>
+                                        <a href="#" class="un">Coordinate Geometry</a>
+                                        <div class="time">18:35</div>
+                                    </td>
+                                </tr>
+                            </tbody></table>
+                </div>
+            </div>
+        </div>
+
+        <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="headingThree4">
+                <h4 class="panel-title">
+                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion4" href="#collapseThree4" aria-expanded="false" aria-controls="collapseThree4">
+                        <i class="more-less glyphicon glyphicon-plus"></i>
+                        Unit 8 Additional Topics in Math II<div class="number"><span>1</span> / <span>2</span></div>
+                    </a>
+                </h4>
+            </div>
+            <div id="collapseThree4" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree3">
+                <div class="panel-body mathsubmenubox">
+                      <table class="table">
+                                <tbody>
+                                <tr>
+                                    <td>
+                                        <i class="material-icons left">play_circle_filled</i>
+                                        <a href="#" class="un">The Relationships among Linear Equations Lines in the Coordinate Plane and the Contexts</a>
+                                        <div class="time">05:35</div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <i class="material-icons left">play_circle_filled</i>
+                                        <a href="#" class="un">The Graph of a System of Linear Inequalities</a>
+                                        <div class="time">25:35</div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <i class="material-icons left">play_circle_filled</i>
+                                        <a href="#" class="un">Absolute Value</a>
+                                        <div class="time">25:35</div>
+                                    </td>
+                                </tr>
+                            </tbody></table>
+                </div>
+            </div>
+        </div>
+
+    </div><!-- D panel-group 結束-->
+
+</div>
+</div>
+<!--  WEEK 4 結束  -->
+
+
+</div>  
+
+<div class="clearfix"></div><hr>   
+
+</div>
+
+      
+        <div id="copyright" class="hidden-xs">Copyright &copy; 2017 by <a href="http://www.language-center.com.tw/" target="_blank">ELITE</a> International Education Services. All rights reserved.</div>
+        <div class="copyright hidden-sm hidden-md hidden-lg">&copy; 2017 <a href="http://www.language-center.com.tw/" target="_blank">ELITE</a></div>
+        
+        
+</main>
+
+
+<p id="back-top"><a href="#top"><span><i class="material-icons iconbi">arrow_upward</i></span></a></p>
+
+
+
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> 
+<!--<script src="assets/js/jquery-1.11.3.min.js"></script>-->
+<!-- Include all compiled plugins (below), or include individual files as needed --> 
+<script src="assets/js/bootstrap.js"></script>
+
+<!-- mainmenu -->
+<script src="assets/js/jquery-2.1.1.js"></script>
+<script src="assets/js/jquery.menu-aim.js"></script> <!-- menu aim -->
+<script src="assets/js/main.js"></script> <!-- Resource jQuery -->
+
+<!-- tooltip -->
+<!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<script>
+$(document).ready(function(){
+    $('[data-toggle="tooltip"]').tooltip();
+});
+</script>
+
+<!-- bar -->
+<!--<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>-->
+<script src="assets/js/index_bar.js"></script>
+
+
+<!-- A panel-group -->
+<script type="text/javascript">
+function toggleIcon(e) {
+    $(e.target)
+        .prev('.panel-heading')
+        .find(".more-less")
+        .toggleClass('glyphicon-plus glyphicon-minus');
+}
+$('.panel-group').on('hidden.bs.collapse', toggleIcon);
+$('.panel-group').on('shown.bs.collapse', toggleIcon);
+</script>
+
+
+</body>
+</html>

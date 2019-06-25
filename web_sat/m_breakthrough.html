@@ -1,0 +1,672 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<link rel="shortcut icon" href="assets/img/favicon.ico">
+	<link rel="bookmark" href="assets/img/favicon.ico"/>
+	<link rel="apple-touch-icon" href="assets/img/icon_SAT_2017.png">
+
+	<meta property="og:title" content="ELITE SAT Intensive Program" />
+	<meta property="og:description" content="ELITE SAT Intensive Program" />
+	<meta property="og:image" content="assets/img/share_img_sat.jpg">
+	<meta name="keywords" content="ELITE, Education, SAT, 菁英" />
+	<title>ELITE SAT Intensive Program</title>
+	
+	<!-- Bootstrap -->
+	<link rel="stylesheet" href="assets/css/bootstrap.css" >
+	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+	<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="assets/js/bootstrap.min.js"></script>-->
+
+	<!-- iconfont -->
+	<link href="assets/css/font-awesome.min.css" rel="stylesheet">
+	<link href="assets/css/style_icomoon.css" rel="stylesheet">
+	<link href="assets/css/material-icons.css" rel="stylesheet">
+	
+	<!-- sidebar -->
+	<link rel="stylesheet" href="assets/css/dist_sidebar.css">
+	
+	<!-- video Styles -->
+	<link rel="stylesheet" href="assets/dist_2/plyr.css">
+	<!-- video Docs styles -->
+	<link rel="stylesheet" href="assets/dist/demo.css">
+	
+	
+	<link rel="stylesheet" type="text/css" href="assets/css/btn_default.css" />
+	<link rel="stylesheet" type="text/css" href="assets/css/btn_component.css" />
+	<!-- progress bar -->
+	<link rel="stylesheet" href="assets/css/style_bar4.css">
+	
+	<!-- ModalWindow -->
+	<link rel="stylesheet" type="text/css" href="assets/css/component_modal.css" />
+	
+	<!-- checkbox -->
+	<link href="assets/css/index.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/checkbox.css" rel="stylesheet" type="text/css">
+    
+    <!-- alertStyle -->
+    <link rel="stylesheet" href="assets/css/alert.css">
+    <link rel="stylesheet" href="assets/css/effeckt.css">
+
+	<!-- customize -->
+	<link href="assets/css/main_sat.css" rel="stylesheet">
+	
+
+	<!-- video Styles 調整-->
+	<link rel="stylesheet" href="assets/css/math_video.css">
+	
+	
+</head>
+    
+    
+    
+    <body>
+      
+       <div id="main_content">
+       
+        <main role="main" id="main" >
+            <section>
+              
+               <div class="container-fluid">
+               <div class="row">
+               <div class="pdfbox">
+               
+               <!--<iframe src="http://docs.google.com/gview?url=http://infolab.stanford.edu/pub/papers/google.pdf&embedded=true" style="width:100%; height:100%;" frameborder="0"></iframe>-->
+               
+               <embed src="assets/img/S_M_01_R.pdf" height="100%" width="100%">
+               </div></div></div>
+                
+                
+            <div class="plyr--video">  
+            <div class="plyr__controls ex_controler excw ex_controler_pdf">
+            <button type="button" data-plyr="previous" data-toggle="tooltip" data-placement="top" title="previous"><span class="plyr__tooltip">previous</span></button>
+            <button type="button" data-plyr="next" data-toggle="tooltip" data-placement="top" title="next"><span class="plyr__tooltip">next</span></button>
+            
+            <div class="btn_right" style="display: none;">
+            <button type="button" data-plyr="question" data-toggle="tooltip" data-placement="top" title="發問和回答機制">發問和回答機制<span class="plyr__tooltip">發問和回答機制</span></button>
+            
+            <button type="button" data-plyr="question" data-toggle="tooltip" data-placement="top" title="feetback" class="md-trigger" data-modal="modal-12">反饋點我<span class="plyr__tooltip">feetback</span></button>
+            <button type="button" data-plyr="question" data-toggle="tooltip" data-placement="top" title="repeat/next" class="md-trigger" data-modal="modal-13">重播/跳下一支影片點我<span class="plyr__tooltip">repeat/next</span></button>
+            
+            <button type="button" data-plyr="question" data-toggle="tooltip" data-placement="top" title="repeat/next" class="md-trigger" data-modal="modal-14">專心測試點我<span class="plyr__tooltip">專心測試</span></button>
+            
+            </div>
+            
+            </div> 
+            </div> 
+            
+            </section>
+            
+        </main>
+        
+        
+    <div class="md-modal md-effect-12" id="modal-12">
+			<div class="md-content">
+				<h3>Was this video helpful?</h3>
+				<div>
+					<ul>
+						<li>
+							<div class="radio-btn">
+								<input type="radio" value="value-1" id="rc1" name="rc1" checked="checked" />
+								<label for="rc1" onclick>Yes</label>
+							</div>
+						</li>
+						<li>
+							<div class="radio-btn">
+								<input type="radio" value="value-2" id="rc2" name="rc1" data-toggle="collapse" data-target="#expandbox"/>
+								<label for="rc2" onclick >No</label>
+							</div>
+						</li>
+					</ul>
+					
+					<ul class="ml panel-collapse collapse" id="expandbox">
+						<li>
+							<div class="checkbox-btn">
+								<input type="checkbox" value="value-1" id="rc3" name="rc3" checked="checked" />
+								<label for="rc3" onclick>Too hard / fast</label>
+							</div>
+						</li>
+						<li>
+							<div class="checkbox-btn">
+								<input type="checkbox" value="value-2" id="rc4" name="rc4" />
+								<label for="rc4" onclick>Too easy / slow</label>
+							</div>
+						</li>
+						<li>
+							<div class="checkbox-btn">
+								<input type="checkbox" value="value-3" id="rc5" name="rc5"/>
+								<label for="rc5" onclick>Not clear</label>
+							</div>
+						</li>
+						<li>
+							<div class="checkbox-btn">
+								<input type="checkbox" value="value-5" id="rc6" name="rc6"/>
+								<label for="rc6" onclick>Something else:</label>
+							</div>
+						</li>
+						<li>
+							<textarea id="reportContent" name="reportContent" class="form-control valid-empty" rows="4" placeholder="500-character limit"></textarea>
+						</li>
+					</ul>
+					
+					
+					<div class="modal-footer">
+					<button type="button" class="btn md-close" data-dismiss="modal">Cancel</button>
+					<button type="button" class="btn effeckt-modal-button" data-effeckt-type="from-below">Submit</button>
+					
+<div class="effeckt-wrap effeckt-modal-wrap" id="effeckt-modal-wrap"> <!-- for centering transform -->
+    <div class="effeckt-content effeckt-modal" id="effeckt-modal">
+      <div class="effeckt-modal-content alertbox_v">
+       <i class="material-icons">warning</i>
+        <p>Please choose Yes/No. <br/>
+		If you choose No, please select the reason.<br/>
+		If you choose No and select "Something else", please type in your feedback. Thank you.</p>
+        <a href="#" class="close effeckt-modal-close" data-dismiss="alert" aria-label="close">×</a>
+        <!--<button class="effeckt-modal-close">Close</button>-->
+      </div>
+    </div>
+  </div>
+
+					</div>
+
+				</div>
+			</div>
+
+		</div>
+     
+    <div class="md-modal md-effect-12" id="modal-13">
+			<div class="md-content replay">
+				<div>
+					<ul>
+						<li><strong>Replay</strong></li>
+						<li><a href="#"><i class="material-icons">play_circle_filled</i>Replay: Fluency in Solving Linear Equations Linear Inequalities and Systems of Linear Equations</a></li>
+						<li><strong>Next</strong></li>
+						<li><a href="#"><i class="material-icons">play_circle_filled</i>The Graph of a System of Linear Inequalities</a></li>
+					</ul>
+					<div class="modal-footer">
+					<button type="button" class="btn md-close" data-dismiss="modal">Cancel</button>
+					</div>
+				</div>
+			</div>
+		</div>
+    
+    <div class="md-modal md-effect-12" id="modal-14">
+			<div class="md-content testbox">
+				<div class="timecount">
+				00 min 59 sec left <a href="#" onclick="$('#extend').toggle();"><i class="material-icons" >timer</i></a>
+				<button type="button" class="btn" id="extend" style="display: none;">Extend</button>			
+				</div>
+				<h3>Quiz <a href="javascript: void(0)" onclick="handler()" data-toggle="tooltip" data-placement="right" title="You must answer it right to continue the video. You can extend the countdown timer when "Extend" appears."><i class="material-icons" >help</i></a></h3>
+				<div>
+					<ul>
+						<li><strong>Which of the following represents the relationship between h and C?</strong></li>
+						<li>
+							<div class="radio-btn correct">
+								<input type="radio" value="value-11" id="rc11" name="rc1" />
+								<label for="rc11" onclick>C=5h</label>
+							</div>
+						</li>
+						<li>
+							<div class="radio-btn correct">
+								<input type="radio" value="value-12" id="rc12" name="rc1" />
+								<label for="rc12" onclick>C=6h Which of the following represents the relationship between h and C? Which of the following represents the relationship between h and C?</label>
+							</div>
+						</li>
+						<li>
+							<div class="radio-btn">
+								<input type="radio" value="value-13" id="rc13" name="rc1" />
+								<label for="rc13" onclick>C=7h</label>
+							</div>
+						</li>
+						<li>
+							<div class="radio-btn">
+								<input type="radio" value="value-14" id="rc14" name="rc1" />
+								<label for="rc14" onclick>C=8h</label>
+							</div>
+						</li>
+					</ul>
+					<div class="modal-footer">
+					<button type="button" class="btn md-close" data-dismiss="modal">Check Answer</button> or 
+					<button type="button" class="btn effeckt-modal-button" data-effeckt-type="from-below">Replay Video</button>
+										   
+<div class="effeckt-wrap effeckt-modal-wrap" id="effeckt-modal-wrap"> <!-- for centering transform -->
+    <div class="effeckt-content effeckt-modal" id="effeckt-modal">
+      <div class="effeckt-modal-content alertbox_v">
+       <i class="material-icons">warning</i>
+        <p>It seems that you have left the software idle for too long.<br/>
+		Please click "Next" to replay the video Please click "Next" to.</p>
+        <a href="#" class="close effeckt-modal-close" data-dismiss="alert" aria-label="close">×</a>
+        <div style="text-align: center;"><button type="button" class="btn">Next</button></div>
+        <!--<button class="effeckt-modal-close">Close</button>-->
+      </div>
+    </div>
+  </div>	
+					
+					</div>
+				</div>
+			</div>
+		</div>
+  
+<div class="off-screen-nav-cover"></div> 
+<div class="md-overlay"></div><!-- the overlay element -->
+        
+        
+  	<div class="topblock flyout hiddenall"><a href="#" onclick="$('.aside').asidebar('open')" class="btn_open"><i class="material-icons">format_list_bulleted</i></a>
+  	<div class="title">SAT數學閱讀難點突破</div>
+  	<div class="t_wu">Week 1, Unit 2</div>
+  	</div>
+  	
+
+ 	
+ 	
+  	
+    <!-- sidebar left 開始 -->
+    <div class="aside">
+      <div class="aside-header">
+        <a href="#"><i class="material-icons">keyboard_arrow_left</i> Course Home</a>
+        <span class="close" data-dismiss="aside" aria-hidden="true">&times;</span>
+      </div>
+      <div class="aside-contents">
+
+              
+<div class="mmenua mmenua_mb3">
+<button type="button" class="btn collapsed m_btn" data-toggle="collapse" data-target="#mathmenu">Week 1: Heart of Algebra
+
+<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 menu_bar asidebar">
+<div class="row">
+<div class="skillbar clearfix" data-percent="65%">
+	<!--<div class="skillbar-title"><span>Math-Unit 3</span></div>-->
+	<div class="skillbar-bar"></div>
+	<div class="skill-bar-percent">65% complete</div>
+</div></div></div>
+<div class=" menu_dueday">Due 06/25 (0 day left)</div>
+</button>
+<div id="mathmenu" class="collapse">
+
+
+<!-- A panel-group -->
+<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+
+        <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="headingOne">
+                <h4 class="panel-title">
+                    <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        <i class="more-less glyphicon glyphicon-plus"></i>
+                        Introduction<div class="number"><span>2</span>/<span>2</span></div>
+                    </a>
+                </h4>
+            </div>
+            <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+                <div class="panel-body mathsubmenubox">
+                      <table class="table">
+                                <tbody>
+                                <tr>
+                                    <td>
+                                        <a href="#" class="active un">
+                                        <i class="material-icons left">play_circle_filled</i>Linear Equations Linear Inequalities and Linear Functions in Context
+                                        <div class="time">15:35</div></a>
+                                        
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                       <a href="#" class="un">
+                                        <i class="material-icons left">play_circle_filled</i>
+                                        Systems of Linear Equations and Inequalities in Context
+                                        <div class="time">09:12</div></a>
+                                    </td>
+                                </tr>
+                            </tbody></table>
+                </div>
+            </div>
+        </div>
+
+        <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="headingTwo">
+                <h4 class="panel-title">
+                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        <i class="more-less glyphicon glyphicon-plus"></i>
+                        Unit 1  Heart of Algebra I<div class="number"><span>1</span>/<span>6</span></div>
+                    </a>
+                </h4>
+            </div>
+            <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                <div class="panel-body mathsubmenubox">
+                      <table class="table">
+                                <tbody>
+                                   <tr>
+                                    <td><a href="#" class="finish">
+                                        <i class="material-icons left">description</i>
+                                        SAT數學閱讀難點突破
+                                        <div class="time">25:35</div></a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><a href="#" class="unfinish">
+                                        <i class="material-icons left">play_circle_filled</i>
+                                        Fluency in Solving Linear Equations Linear Inequalities and Systems of Linear Equations
+                                        <div class="time">05:35</div></a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><a href="#" class="active unfinish_overdue">
+                                        <i class="material-icons left">play_circle_filled</i>
+                                        Linear Equations Linear Inequalities and Linear Functions in Context
+                                        <div class="time">25:35</div></a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><a href="#" class="un_overdue">
+                                        <i class="material-icons left">play_circle_filled</i>
+                                        Systems of Linear Equations and Inequalities in Context
+                                        <div class="time">25:35</div></a>
+                                    </td>
+                                </tr>
+                            </tbody></table>
+                </div>
+            </div>
+        </div>
+
+        <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="headingThree">
+                <h4 class="panel-title">
+                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        <i class="more-less glyphicon glyphicon-plus"></i>
+                        Unit 2  Heart of Algebra II<div class="number"><span>0</span>/<span>8</span></div>
+                    </a>
+                </h4>
+            </div>
+            <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                <div class="panel-body mathsubmenubox">
+                      <table class="table">
+                                <tbody>
+                                <tr>
+                                    <td><a href="#" class="un">
+                                        <i class="material-icons left">play_circle_filled</i>
+                                        The Relationships among Linear Equations Lines in the Coordinate Plane and the Contexts
+                                        <div class="time">05:35</div></a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><a href="#" class="un">
+                                        <i class="material-icons left">play_circle_filled</i>
+                                        The Graph of a System of Linear Inequalities
+                                        <div class="time">25:35</div></a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><a href="#" class="un">
+                                        <i class="material-icons left">play_circle_filled</i>
+                                        Absolute Value
+                                        <div class="time">25:35</div></a>
+                                    </td>
+                                </tr>
+                            </tbody></table>
+                </div>
+            </div>
+        </div>
+
+    </div>
+<!-- A panel-group 結束-->
+
+</div>
+</div>
+       
+       
+        
+<div class="mmenua">
+<button type="button" class="btn collapsed m_btn" data-toggle="collapse" data-target="#mathmenu2">Week 2: Problem Solving and Data Analysis
+
+<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 menu_bar asidebar">
+<div class="row">
+<div class="skillbar clearfix" data-percent="35%">
+	<!--<div class="skillbar-title"><span>Math-Unit 3</span></div>-->
+	<div class="skillbar-bar"></div>
+	<div class="skill-bar-percent">35% complete</div>
+</div></div></div>
+<div class=" menu_dueday">Due 06/25 (0 day left)</div>
+</button>
+<div id="mathmenu2" class="collapse">
+
+
+<!-- B panel-group -->
+<div class="panel-group" id="accordion2" role="tablist" aria-multiselectable="true">
+
+        <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="headingOne2">
+                <h4 class="panel-title">
+                    <a role="button" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne2" aria-expanded="true" aria-controls="collapseOne2">
+                        <i class="more-less glyphicon glyphicon-plus"></i>
+                        Introduction<div class="number"><span>2</span> / <span>2</span></div>
+                    </a>
+                </h4>
+            </div>
+            <div id="collapseOne2" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+                <div class="panel-body mathsubmenubox">
+                      <table class="table">
+                                <tbody>
+                                <tr>
+                                    <td><a href="#" class="un">
+                                        <i class="material-icons left">play_circle_filled</i>
+                                        Linear Equations Linear Inequalities and Linear Functions in Context
+                                        <div class="time">15:35</div></a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><a href="#" class="un">
+                                        <i class="material-icons left">play_circle_filled</i>
+                                        Systems of Linear Equations and Inequalities in Context
+                                        <div class="time">09:12</div></a>
+                                    </td>
+                                </tr>
+                            </tbody></table>
+                </div>
+            </div>
+        </div>
+
+        <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="headingTwo2">
+                <h4 class="panel-title">
+                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo2" aria-expanded="false" aria-controls="collapseTwo2">
+                        <i class="more-less glyphicon glyphicon-plus"></i>
+                        Unit 1  Heart of Algebra I<div class="number"><span>1</span>/<span>6</span></div>
+                    </a>
+                </h4>
+            </div>
+            <div id="collapseTwo2" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                <div class="panel-body mathsubmenubox">
+                      <table class="table">
+                                <tbody><tr>
+                                    <td><a href="#" class="un">
+                                        <i class="material-icons left">description</i>
+                                        SAT數學閱讀難點突破
+                                        <div class="time">25:35</div></a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><a href="#" class="un">
+                                        <i class="material-icons left">play_circle_filled</i>
+                                        Fluency in Solving Linear Equations Linear Inequalities and Systems of Linear Equations
+                                        <div class="time">05:35</div></a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><a href="#" class="un">
+                                        <i class="material-icons left">play_circle_filled</i>
+                                        Linear Equations Linear Inequalities and Linear Functions in Context
+                                        <div class="time">25:35</div></a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><a href="#" class="un">
+                                        <i class="material-icons left">play_circle_filled</i>
+                                        Systems of Linear Equations and Inequalities in Context
+                                        <div class="time">25:35</div></a>
+                                    </td>
+                                </tr>
+                            </tbody></table>
+                </div>
+            </div>
+        </div>
+
+        <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="headingThree2">
+                <h4 class="panel-title">
+                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion2" href="#collapseThree2" aria-expanded="false" aria-controls="collapseThree2">
+                        <i class="more-less glyphicon glyphicon-plus"></i>
+                        Unit 2  Heart of Algebra II<div class="number"><span>0</span>/<span>8</span></div>
+                    </a>
+                </h4>
+            </div>
+            <div id="collapseThree2" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree2">
+                <div class="panel-body mathsubmenubox">
+                      <table class="table">
+                                <tbody>
+                                <tr>
+                                    <td><a href="#" class="un">
+                                        <i class="material-icons left">play_circle_filled</i>
+                                        The Relationships among Linear Equations Lines in the Coordinate Plane and the Contexts
+                                        <div class="time">05:35</div></a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><a href="#" class="un">
+                                        <i class="material-icons left">play_circle_filled</i>
+                                        The Graph of a System of Linear Inequalities
+                                        <div class="time">25:35</div></a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><a href="#" class="un">
+                                        <i class="material-icons left">play_circle_filled</i>
+                                        Absolute Value
+                                        <div class="time">25:35</div></a>
+                                    </td>
+                                </tr>
+                            </tbody></table>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!-- B panel-group 結束-->
+
+</div>
+</div>
+        
+
+      </div>
+    </div> <!-- sidebar left 結束 -->
+    
+    <div class="aside-backdrop"></div>
+        
+</div>
+<!-- main_content 結束-->
+       
+       
+       
+       
+        <!-- Plyr core script -->
+        <script src="assets/dist_2/plyr.js"></script>
+
+        <!-- Docs script -->
+        <script src="assets/dist/demo.js"></script>
+
+        <!-- Rangetouch to fix <input type="range"> on touch devices (see https://rangetouch.com) -->
+        <script src="assets/dist/rangetouch.js" async></script>
+
+        <!-- Sharing libary (https://shr.one) -->
+        <script src="assets/dist/shr.js"></script>
+        <script>if(window.shr) { window.shr.setup({ count: { classname: 'btn__count' } }); }</script>
+        
+
+       
+       
+       
+
+
+		
+
+    
+
+
+
+		
+<!-- ModalWindow -->
+<script src="assets/js/classie.js"></script>
+<script src="assets/js/modalEffects.js"></script>
+
+		
+<!-- alertStyle -->
+<script src="assets/js_2/jquery.js"></script>
+<script src="assets/js_2/modernizr.js"></script>
+
+<script src="assets/js_2/core.js"></script>
+<script src="assets/js_2/modal.js"></script>
+<script src="assets/js_2/buttons.js"></script>
+		
+		
+<!-- bar -->
+<!--<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>-->
+<script src="assets/js/index_bar.js"></script>
+       
+        
+<!-- tooltip -->
+<!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	
+<script>
+	$(document).ready(function(){
+		$('[data-toggle="tooltip"]').tooltip();
+	});
+</script>
+
+<!-- hover_show&hide -->
+<!--<script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
+<script type="text/javascript">
+$("#main_content").on({
+    mouseover: function() {
+        $(".ex_controler, .topblock").stop().show(600);
+    },
+    
+    mouseout: function() {
+        $(".ex_controler, .topblock").stop().hide(600);
+    }
+})
+</script>-->
+
+<!-- hover_show&hide -->
+<script type="text/javascript">
+$("#main_content").hover(function(){
+    $('.flyout').fadeToggle();
+});
+</script>	
+
+
+<!-- A panel-group -->
+<script type="text/javascript">
+function toggleIcon(e) {
+    $(e.target)
+        .prev('.panel-heading')
+        .find(".more-less")
+        .toggleClass('glyphicon-plus glyphicon-minus');
+}
+$('.panel-group').on('hidden.bs.collapse', toggleIcon);
+$('.panel-group').on('shown.bs.collapse', toggleIcon);
+</script>
+
+
+<!-- sidebar -->  
+<!--<script type="text/javascript" src="https://code.jquery.com/jquery-3.0.0.min.js"></script>-->
+<script type="text/javascript" src="assets/js_2/jquery/asidebar.jquery.js"></script>
+	
+			
+		
+		
+		
+    </body>
+</html>

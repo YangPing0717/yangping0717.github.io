@@ -1,0 +1,107 @@
+
+
+.startbtnbox {
+	margin: 2em auto 4em;
+	}
+.startbtnbox2 {
+    margin: 1em auto 4em;
+}
+.btn_start {
+    color: #ffffff;
+    background-color: #492c80;
+    /* border: 3px solid #333; */
+    border-radius: 5em;
+    padding: .4em 3.2em;
+    font-size: 1.6rem;
+    font-weight: 700;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+    width: 100%;
+}
+.btn_start.selected {
+    color: #b6b6b6 !important;
+    background-color: #3d344d;
+	cursor: default;
+}
+/*.btn_start:hover, 
+.btn_start:active, 
+.btn_start:focus, 
+.btn_start.focus {
+	background-color: #ffffff;
+    border-color: #492c80;
+    color: #492c80;
+    text-decoration: none;
+    transition: all 250ms ease-out;
+    box-shadow: 0 8px 18px rgba(0, 0, 0, .3);
+}*/
+.btn_half {
+	width: 49%;
+    float: left;
+	padding: .7em .5em;
+	overflow-x: hidden;
+    font-size: 1.5rem;
+	}
+.btn_haml{
+	margin-left: 2%;
+	}
+
+.btn_sm {
+    /*border: 1px solid #333;*/
+    font-size: 1em;
+}
+.btn_sm2 {
+    border: 1px solid #dd0920;
+    font-size: .8em;
+    padding: .4em 2em;
+    background-color: #dd0920;
+    color: #fff;
+	text-decoration: none;
+	border-radius: 5em;
+}
+.btn_sm2:hover, 
+.btn_sm2:active, 
+.btn_sm2:focus, 
+.btn_sm2.focus{
+	color: #555;
+	border: 1px solid #555;
+	background-color: #fff;
+	transition: all 250ms ease-out;
+	}
+.lbbtnbox{
+	margin: .6em;
+	}
+.btn_table {
+    color: #492c80;
+    background-color: #ffffff;
+    border-radius: 5em;
+    padding: .3em 1.4em;
+    /*font-size: 1.5rem;*/
+    font-weight: 700;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+    display: inline-block;
+    position: absolute;
+    top: 1.5rem;
+    float: right;
+    right: 2rem;
+    border: 1px solid #9c8bbc;
+	width: initial;
+	}
+.btn_table:hover, 
+.btn_table:focus, 
+.btn_table.focus,
+.btn_table.active,
+.btn_table:active {
+	background-color: #a779ff;
+    color: #fff;
+    text-decoration: none;
+    transition: all 250ms ease-out;
+    box-shadow: 0 8px 18px rgba(0, 0, 0, .3);
+}
+
+
+.btn.focus, 
+.btn:focus, 
+.btn:hover {
+    color: #fff;
+    text-decoration: none;
+}
+
