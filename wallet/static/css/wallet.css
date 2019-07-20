@@ -314,8 +314,8 @@ time[data-v-8484e7a8] {
     -webkit-filter: drop-shadow(0 25px 15px rgba(0, 0, 0, 0.6));
             filter: drop-shadow(0 25px 15px rgba(0, 0, 0, 0.6));
     opacity: .8;
-    -webkit-transform: scale(1.02);
-            transform: scale(1.02);
+    -webkit-transform: scale(1.05);
+            transform: scale(1.05);
   }
   100% {
     -webkit-filter: drop-shadow(0 10px 2px rgba(0, 0, 0, 0.2));
@@ -334,8 +334,8 @@ time[data-v-8484e7a8] {
     -webkit-filter: drop-shadow(0 25px 15px rgba(0, 0, 0, 0.6));
             filter: drop-shadow(0 25px 15px rgba(0, 0, 0, 0.6));
     opacity: .8;
-    -webkit-transform: scale(1.02);
-            transform: scale(1.02);
+    -webkit-transform: scale(1.05);
+            transform: scale(1.05);
   }
   100% {
     -webkit-filter: drop-shadow(0 10px 2px rgba(0, 0, 0, 0.2));
