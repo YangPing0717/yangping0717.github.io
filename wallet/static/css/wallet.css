@@ -16,13 +16,27 @@
 }
 
 .ios .page {
-  background: #ebf4f9;
+  background: #fff;
 }
 
 .ios .navbar {
   height: 44px;
   font-size: 17px;
   background: linear-gradient(135deg, #9ce6ff 0%, #82b5ff 40%, #898ef7 100%);
+}
+
+.ios .navbar .title {
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  -ms-flex-negative: 10;
+  flex-shrink: 10;
+  font-weight: 500;
+  display: inline-block;
+  color: #fff;
+  font-weight: 700;
 }
 
 .ios .searchbar {
@@ -99,6 +113,11 @@ time[data-v-8484e7a8] {
 
 .group_header {
   background: linear-gradient(135deg, #e6f9ff 0%, #c6ddff 40%, #dedfff 100%) !important;
+  border-radius: 0;
+}
+
+.accordion-item-content {
+  background: #ebf4f9;
 }
 
 .fab-buttons a, .fab > a {
@@ -133,6 +152,7 @@ time[data-v-8484e7a8] {
 .ios .card .list .item-content {
   min-height: 44px;
   padding-left: 0;
+  background: #fff;
 }
 
 .ios .card .list .item-inner {
@@ -204,7 +224,15 @@ time[data-v-8484e7a8] {
 
 .ios .search-list.list .item-content {
   min-height: 44px;
-  padding: 0;
+  padding: 0 15px;
+}
+
+.ios .search-list.list .item-content .item-inner:after {
+  background-color: #ddd;
+}
+
+.ios .search-list.list ul {
+  background: #ffffff;
 }
 
 .button {
@@ -230,7 +258,7 @@ time[data-v-8484e7a8] {
   border-radius: 0;
   font-size: 16px;
   min-height: 42px;
-  line-height: 40px;
+  line-height: 42px;
   border: none !important;
 }
 
@@ -244,9 +272,25 @@ time[data-v-8484e7a8] {
   color: #fff !important;
 }
 
+.ios .segmented + ul {
+  background: #ffffff !important;
+}
+
+.page-content .list {
+  background: #ebf4f9;
+}
+
 .page-content .list ul {
-  background: #fff;
-  padding: 0 15px;
+  background: #ebf4f9;
+}
+
+.page-content .list ul li .card .card-header {
+  background: none !important;
+}
+
+.page-content .list ul li[data-v-a082cbd6] {
+  margin-left: 15px;
+  margin-right: 15px;
 }
 
 .page-content .list .item-content {
@@ -262,6 +306,60 @@ time[data-v-8484e7a8] {
   border-radius: 0px !important;
   border: 1px solid #51cbee !important;
   padding: 5px 15px !important;
+}
+
+.page-content .list .card-header {
+  background: linear-gradient(135deg, #e6f9ff 0%, #c6ddff 40%, #dedfff 100%) !important;
+  border-radius: 0;
+}
+
+.page-content .list .card-header i span[data-v-4bdc3f3e] {
+  font-family: 'Montserrat', "微軟正黑體", Helvetica, Arial, sans-serif !important;
+  font-weight: 700 !important;
+}
+
+.page-content .list .block.text-align-center {
+  background: linear-gradient(135deg, #9ce6ff 0%, #82b5ff 40%, #898ef7 100%) !important;
+  margin: 0 !important;
+  height: 44px;
+  line-height: 44px;
+  color: #fff;
+}
+
+.page-content .list .block.text-align-center + ul {
+  background: #ffffff;
+  padding: 0 15px;
+}
+
+.page-content .block .row:nth-child(1) {
+  margin-top: 25px;
+}
+
+.page-content .block a:after {
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  content: "\f054";
+  position: absolute;
+  right: 15px;
+}
+
+.page-content .block .button {
+  border-radius: 0;
+  font-size: 16px;
+  min-height: 42px;
+  line-height: 42px;
+  text-align: left;
+  border: 1px solid #ddd !important;
+}
+
+.page-content .block .button i.icon {
+  display: inline-block;
+  vertical-align: initial;
+  background-size: 100% auto;
+  background-position: 50%;
+  background-repeat: no-repeat;
+  font-style: normal;
+  position: relative;
 }
 
 .fa-minus-circle:before {
@@ -288,7 +386,7 @@ time[data-v-8484e7a8] {
 
 .ios .stepper-small {
   height: 30px;
-  margin-top: 8px;
+  margin-top: 6px;
 }
 
 .ios .stepper-small .stepper-button-minus, .ios .stepper-small .stepper-button-plus {
@@ -302,6 +400,102 @@ time[data-v-8484e7a8] {
 .ios .stepper-small .stepper-input-wrap {
   border-top-width: 1px;
   border-bottom-width: 1px;
+}
+
+.ios .calendar {
+  margin: -10px 0;
+}
+
+.ios .calendar .calendar-week-header {
+  background: #f7f7f8;
+  height: 22px;
+}
+
+.ios .calendar .calendar-week-header .calendar-week-day {
+  line-height: 22px;
+  font-weight: 700;
+}
+
+.ios .calendar .calendar-day.calendar-day-selected .calendar-day-number {
+  background: #008eff;
+  font-weight: 700;
+}
+
+.ios .calendar .calendar-day .calendar-day-events {
+  margin-top: 3px;
+}
+
+div[data-v-e198c4e8] .page-content {
+  background: #fff;
+}
+
+div[data-v-e198c4e8] .segmented .button {
+  font-size: 24px;
+  border: none !important;
+  line-height: 42px;
+  height: 42px;
+}
+
+div[data-v-e198c4e8] .segmented .icon {
+  font-size: 24px;
+}
+
+div[data-v-e198c4e8] .block {
+  background: #fff;
+  padding-bottom: 10px;
+}
+
+div[data-v-e198c4e8] i span[data-v-4bdc3f3e] {
+  font-family: 'Montserrat', "微軟正黑體", Helvetica, Arial, sans-serif !important;
+  font-weight: 700 !important;
+}
+
+.data-table tbody tr td:nth-child(2).numeric-cell {
+  background: -webkit-gradient(linear, left top, right top, color-stop(35%, #ffaec9), color-stop(35%, white)) !important;
+  background: linear-gradient(to right, #ffaec9 35%, white 35%) !important;
+}
+
+.data-table tbody tr td:nth-child(3).numeric-cell {
+  background: -webkit-gradient(linear, left top, right top, color-stop(28%, #a2bcff), color-stop(28%, white)) !important;
+  background: linear-gradient(to right, #a2bcff 28%, white 28%) !important;
+}
+
+i span[data-v-4bdc3f3e] {
+  font-family: 'Montserrat', "微軟正黑體", Helvetica, Arial, sans-serif !important;
+  font-weight: 700 !important;
+}
+
+div[data-v-89e694a6] {
+  background: #ebf4f9;
+  padding-bottom: 1px;
+}
+
+div[data-v-89e694a6] .card {
+  background: #fff;
+}
+
+.page-content .list.media-list .list-group ul {
+  background: #fff;
+}
+
+.page-content .list.media-list .list-group ul:before {
+  background-color: #fff;
+}
+
+.page-content .list.media-list .list-group .list-group-title {
+  padding: 22px 20px 10px;
+  background: #ececec;
+  color: #8e8e93;
+}
+
+.page-content .list.media-list .list-group .item-content {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.page-content .list.media-list .list-group .item-content .item-media {
+  padding-top: 13px;
+  padding-bottom: 10px;
 }
 
 @-webkit-keyframes float {
@@ -396,6 +590,7 @@ time[data-v-8484e7a8] {
   background: linear-gradient(155deg, #25c6fd 0%, #1c58de 40%, #7539ef 100%);
   height: 100vh;
   width: 100vw;
+  overflow: hidden;
 }
 
 .welcome div {
