@@ -1,0 +1,117 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,700);
+
+@-webkit-keyframes grow-width {
+  from {
+    width: 0;
+  }
+}
+@keyframes grow-width {
+  from {
+    width: 0;
+  }
+}
+body {
+  font-family: "Open Sans", Arial;
+  background: #EDEDED;
+}
+
+main {
+  width: 400px;
+  margin: 30px auto;
+  padding: 10px 40px 50px;
+  background: #FFF;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+}
+
+h1, h4 {
+  text-align: center;
+  color: #333;
+}
+
+p {
+  font-size: 13px;
+}
+
+section {
+  vertical-align: top;
+  margin-top: 20px;
+}
+
+section:nth-of-type(odd) {
+  /*margin-right: 20px;*/
+}
+
+.style-1 {
+  list-style-type: none;
+  padding: 0;
+  width: 350px;
+}
+.style-1 li {
+  position: relative;
+  height: 50px;
+}
+.style-1 li em, .style-1 li span {
+  display: block;
+  border-bottom: 5px solid #FFE5E5;
+  padding-bottom: 5px;
+}
+.style-1 li em {
+  font-style: normal;
+  border-bottom-color: #DB6B6B;
+  position: absolute;
+  overflow: visible;
+  -webkit-animation: grow-width 2s;
+          animation: grow-width 2s;
+}
+.style-1 li span {
+  text-align: right;
+}
+
+.style-2 {
+  list-style-type: none;
+  padding: 0;
+  width: 100%;
+}
+.style-2 li {
+  height: 65px;
+}
+.style-2 li em {
+  padding: 3px 0px;
+}
+.style-2 li em {
+/*  text-align: right;*/
+    font-style: normal;
+    float: left;
+    width: 100%;
+    font-weight: 700; 
+}
+.style-2 li span {
+  padding: 5px 10px;
+}
+.style-2 li span {
+  display: inline-block;
+    background: #561C1C;
+    overflow: visible;
+    -webkit-animation: grow-width 2s;
+    animation: grow-width 2s;
+    color: #fff;
+    font-weight: 700;
+}
+.style-2.analysis li em {
+	width: 100%;
+    padding: 3px 0px;
+}
+.style-2.analysis li span {
+	background: #9c000e;
+}
+.analysis .table>tbody>tr>td, .analysis .table>tbody>tr>th, .analysis .table>thead>tr>td, .analysis .table>thead>tr>th{
+	padding: 10px;
+    line-height: 1.42857143;
+    vertical-align: middle;
+    border-top: 1px solid #a5a5a5;
+}
+
+.analysis .table>thead>tr>th, .analysis .table>thead>tr>th {
+    padding: 16px 10px;
+}
+

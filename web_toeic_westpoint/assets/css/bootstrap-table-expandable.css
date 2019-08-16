@@ -1,0 +1,42 @@
+table.table-expandable > tbody > tr:nth-child(odd) {
+    cursor: pointer;
+}
+
+table.table-expandable.table-hover > tbody > tr:nth-child(even):hover td {
+    background-color: white;
+}
+
+table.table-expandable > tbody > tr div.table-expandable-arrow {
+    /*background:transparent url(../images/arrows.png) no-repeat scroll 0px -16px; 
+	width:16px; 
+	height:16px; 
+	display:block;*/
+}
+
+table.table-expandable > tbody > tr div.table-expandable-arrow.up {
+    /*background-position:0px 0px;*/
+}
+
+table.table-expandable > tbody > tr div.table-expandable-arrow:after {
+	font-family: 'Material Icons';
+	content: "\E313";
+	position: absolute;
+	display:block;
+	font-weight: 700;
+	font-size: 2.2rem;
+    line-height: 1;
+    right: 3rem;
+	    color: red;
+}
+table.table-expandable > tbody > tr div.table-expandable-arrow.up:after {
+    font-family: 'Material Icons';
+	content: "\E316";
+	position: absolute;
+	display:block;
+	font-weight: 700;
+	font-size: 2.2rem;
+    line-height: 1;
+    right: 3rem;
+	    color: red;
+}
+
