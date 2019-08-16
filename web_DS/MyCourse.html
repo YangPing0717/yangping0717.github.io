@@ -503,6 +503,28 @@
 
 	
 
+<!--  parallax BG -->
+<!-- <script src="https://code.jquery.com/jquery-1.11.3.min.js" type="text/javascript" charset="utf-8"></script> -->
+<!-- <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.17.0/TweenMax.min.js"></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script> -->
+
+<script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.2/TweenMax.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.2/utils/Draggable.min.js'></script>
+
+<script src="assets/js/jquery-parallax.js"></script>
+<script>
+	$( document ).mousemove( function( e ) {
+		$( '.background' ).parallax( -50, e );
+		$( '.cloud0' )	  .parallax( -50, e );
+		$( '.cloud1' )	  .parallax( 20	, e );
+		$( '.cloud2' )	  .parallax( 120, e );
+		$( '.cloud3' )	  .parallax( 160, e );
+		$( '.cloud4' )	  .parallax( 350, e );
+
+	});
+</script>
+
 
 <!-- hamburger btn -->
 <!--<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>-->
@@ -536,22 +558,7 @@ function hidecard(){
 }
 </script>
 
-<!--  parallax BG -->
-<!-- <script src="https://code.jquery.com/jquery-1.11.3.min.js" type="text/javascript" charset="utf-8"></script> -->
-<script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.17.0/TweenMax.min.js"></script>
-<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
-<script src="assets/js/jquery-parallax.js"></script>
-<script>
-	$( document ).mousemove( function( e ) {
-		$( '.background' ).parallax( -50, e );
-		$( '.cloud0' )	  .parallax( -50, e );
-		$( '.cloud1' )	  .parallax( 20	, e );
-		$( '.cloud2' )	  .parallax( 120, e );
-		$( '.cloud3' )	  .parallax( 160, e );
-		$( '.cloud4' )	  .parallax( 350, e );
 
-	});
-</script>
 
 
 
