@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]> <html class="ie ie6 no-js" lang="en"> <![endif]-->
+<!--[if IE 7 ]>    <html class="ie ie7 no-js" lang="en"> <![endif]-->
+<!--[if IE 8 ]>    <html class="ie ie8 no-js" lang="en"> <![endif]-->
+<!--[if IE 9 ]>    <html class="ie ie9 no-js" lang="en"> <![endif]-->
+<!--[if gt IE 9]><!--><html class="no-js" lang="en"><!--<![endif]-->
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+        <title>TOEIC :: DunHuang</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <meta name="description" content="" />
+        <meta name="keywords" content="TOEIC, dunhuang," />
+        <meta name="author" content="" />
+        <meta property="og:image" content="assets/images/share_img_toeic.jpg">
+        
+        <link rel="shortcut icon" href="assets/images/favicon.ico"> 
+        <link rel="apple-touch-icon" href="assets/images/icon_TOEIC.png">
+          
+
+		
+<!-- Bootstrap -->
+<link href="assets/bootstrap_3.3.7/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- iconfont -->
+<link href="assets/css/font-awesome.min.css" rel="stylesheet">
+<link href="assets/css/style_icomoon.css" rel="stylesheet">
+<link href="assets/css/material-icons.css" rel="stylesheet">		
+
+<!-- RD's -->	
+<link media="all" type="text/css" rel="stylesheet" href="http://elite.elitetest.com.tw/css/all.css">
+<link media="all" type="text/css" rel="stylesheet" href="assets/style.css">
+
+<!-- login -->
+<link rel="stylesheet" href="assets/css/toeic_login.css">
+<link rel="stylesheet" href="assets/css/main.css" />
+	
+<link rel="stylesheet" type="text/css" href="assets/css/demo.css" />
+<link rel="stylesheet" type="text/css" href="assets/css/toeic_style2.css" />
+		
+		
+<style>
+#showingdiv{
+    display:none;
+}
+</style>
+	
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $(".clickme").click(function(){
+  $("#hidediv").hide();
+  $("#showingdiv").show();
+  });
+
+});
+</script>
+   
+   
+    </head>
+    
+    
+    <body id="login">
+        <ul class="cb-slideshow">
+            <li><span>Image 01</span><div><h3>TOEIC·testing</h3></div></li>
+            <li><span>Image 02</span><div><h3>language·ability</h3></div></li>
+            <li><span>Image 03</span><div><h3>dynamic</h3></div></li>
+            <li><span>Image 04</span><div><h3>perseverance</h3></div></li>
+            <li><span>Image 05</span><div><h3>career·challenge</h3></div></li>
+            <li><span>Image 06</span><div><h3>determination</h3></div></li>
+        </ul>
+        
+<div class="row">        
+<div class="container-fluid">
+
+
+<div id="loginScreen" class="abm-login-screen">
+  
+  <div class="abm-agile-login-wrap">
+
+    <div class="abm-agile-logo-wrap log_anima">
+      <!--<img class="abm-agile-logo" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/t-285/agile.png" />-->
+      <header id="header">
+			<h1>菁英國際大學</h1>
+			<div class="schoollogo"><img src='assets/images/logo_elite_tw_w.svg' /></div>
+		    <p>多益線上模擬測驗系統</p>
+		</header>
+    </div>
+
+    <form class="abm-login-form log_anima_b" id="hidediv">
+      <div class="abm-input-group">      
+        <input class="amb-username" type="text" required>
+        <span class="abm-highlight"></span>
+        <span class="abm-input-bar"></span>
+        <label>場次代碼 <sup class="required">*</sup></label>
+      </div>
+
+      <div class="abm-input-group">      
+        <input class="abm-password" type="text" required>
+        <!--<div class="abm-hide-show">
+          <span class="abm-show">Show</span>
+        </div>-->
+        <span class="abm-highlight"></span>
+        <span class="abm-input-bar"></span>
+        <label>學號 <sup class="required">*</sup></label>
+      </div>
+      
+      <!--<div class="abm-checkbox-group cb">
+        <input class="abm-checkbox abm-checkbox--light-green" id="rememberMyLogin" type="checkbox">
+        <label for="rememberMyLogin">Remember Me</label>
+      </div>-->
+       
+      <button class="abm-login-button clickme" type="button">送 出
+        <div class="abm-loader"></div>
+      </button>
+      
+    </form>  
+    
+    
+<form class="abm-login-form log_anima_b" id="showingdiv">
+     
+<div class="table-responsive">
+  <table class="table text-center">
+    <tbody>
+      <tr>
+        <td>系所</td>
+        <td>學號</td>
+        <td>姓名</td>
+      </tr>
+      <tr>
+        <td>英文系</td>
+        <td>S1060001</td>
+        <td>謝雅雯</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+      <div style="font-size: 80%; color: #ACACAC; text-align: center;">資料確認無誤</div> 
+      <button class="abm-login-button" type="button" onclick="location.href='q_type.html'">開始測驗 <i class="material-icons">play_circle_outline</i>
+        <div class="abm-loader"></div>
+      </button>
+      <div style="font-size: 80%; text-align: center; margin-top: 1rem;">學號資料輸入錯誤，我要 <a href="index.html"> [ 重新登入 ] </a></div> 
+      
+    </form> 
+    
+    
+  </div>
+  
+</div>
+	           
+                      
+                                 
+                                            
+                                                       
+                                                                             
+<!--<div class='logoWrap'>
+    <div class='logo'>菁英國際大學<img src='assets/images/logo_elite_tw_w.svg' /></div>
+</div>-->
+
+<!--<section>
+    <div class='title'>多益線上模擬測驗系統</div>
+
+    <div class='body'>
+        <form accept-charset="utf-8" class="form-horizontal" method="POST">
+
+            <div class="form-group required"><label for="code" class="control-label col-lg-3 col-sm-4">場次代碼<sup class="required">*</sup></label><div class="col-lg-9 col-sm-8"><input class="form-control" autocomplete="off" autofocus required="true" id="code" type="text" name="code" value=""></div></div>
+            <div class="form-group required"><label for="studentId" class="control-label col-lg-3 col-sm-4">學號<sup class="required">*</sup></label><div class="col-lg-9 col-sm-8"><input class="form-control" required="true" id="studentId" type="text" name="studentId" value=""></div></div>
+
+            <input class="btn btn-primary btn-block btn-flat" type="submit" value="送出">
+
+        <input class="form-control" type="hidden" name="_token" value="toKxwVteXFdccQQkv48SnwcmKQ5ide7Rh5xGBHQk"></form>
+    </div>
+
+</section>-->
+       
+        
+        <!-- Codrops top bar -->
+            <!--<div class="codrops-top">
+               <a href="http://www.language-center.com.tw/"  class="hidden-xs">
+                    Copyright &copy; 2017 by <strong>ELITE</strong> International Education Services. All rights reserved.
+                </a>
+                <a href="http://www.language-center.com.tw/"  class="hidden-sm hidden-md hidden-lg">
+                    &copy; 2017 <strong>ELITE</strong>
+                </a>
+            </div>--><!--/ Codrops top bar -->
+
+
+        </div></div>
+
+		
+		
+		
+<!-- login -->
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
+<script src="assets/js/lms_login.js"></script>
+<!--<script src="assets/js/main.js"></script>-->
+		
+<script type="text/javascript" src="assets/js/modernizr.custom.86080.js"></script>	
+		
+</body>
+</html>

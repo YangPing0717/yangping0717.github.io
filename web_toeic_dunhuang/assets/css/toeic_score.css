@@ -1,0 +1,185 @@
+
+
+/*   score  */
+.scrbox {
+	font-weight: 700;
+	/*margin-top: 10px;*/
+	}
+.scrname {
+	font-size: 3.2rem;
+    color: #000064;
+	margin-top: 6px;
+	}
+.scrnum {
+    height: 12.5rem;
+    position: relative;
+	margin-top: 40px;
+	margin-bottom: 55px;
+	}
+.scrlenum {
+	font-size: 3rem; 
+	color: #64001B;
+	line-height: 3.2rem;
+	}
+.scrbox hr {
+    border: 0;
+    border-bottom: solid 1px rgb(221, 221, 221);
+    margin: 1em 0;
+}
+.bar_title{
+	font-weight: 700;
+    font-size: 1.8rem;
+    line-height: 1.1;
+    margin-bottom: 6px;
+	}
+.barper_t{
+	font-size: .9rem;
+	margin-top: 6px;
+	}
+.loading {
+	position: absolute;
+    left: 50%;
+    top: 50%;
+    margin: -75px 0 0 -70px;
+    background: #fff;
+    width: 150px;
+    height: 150px;
+    border-radius: 100%;
+    border: 12px solid #0097aa;
+    font-size: 5.4rem;
+    color: #000064;
+    line-height: 128px;
+    letter-spacing: -1px;
+}
+.loading:after {
+  content: '';
+  background: trasparent;
+  width: 140%;
+  height: 140%;
+  position: absolute;
+  border-radius: 100%;
+  top: -20%;
+  left: -20%;
+  /*opacity: 0.7;*/
+  box-shadow: rgba(0, 188, 209,1) -10px -8px 8px -4px; 
+  animation: rotate 2s infinite linear;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotateZ(0deg);
+  }
+  100% {
+    transform: rotateZ(360deg);
+  }
+  }
+  
+  
+  
+.sugbox {
+	font-size: .85rem;
+    margin-top: 1.8rem;
+	 }
+.sugbox_tebox{
+	margin-bottom: 2.8rem;
+    font-size: 85%;
+    line-height: 1.8;
+	padding-top: 1rem;
+	}
+.sugbox_tebox .tit {
+	font-size: 140%;
+    font-weight: 700;
+    color: #161671;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 10px;
+    padding-bottom: 3px;
+}
+.sugbox_tebox.po {
+	padding-top: 0rem;
+}
+.ratearea {
+	
+}
+.ratea_sub {
+	border: 1px solid #DDDDDD;
+	margin-bottom: 20px;
+	text-align: left;
+	padding: 18px;
+    line-height: 2;
+	font-weight: 700;
+	height: 200px;
+}
+.ratebox {
+	border: 1px solid #64001b;
+	padding: 20px;
+	height: 100%;
+	margin-right: 10px;
+}
+.ratebox .labt {
+    border-radius: 20px;
+    padding: 3px 15px;
+    font-size: 75%;
+    color: #ffffff;
+    background-color: #585858;
+    float: left;
+}
+.ratebox .percent {
+    color: #64001b;
+    font-size: 46px;
+    line-height: 1.4;
+}
+.ratebox .icon {
+	color: #64001b;
+	font-size: 18px;
+}
+.ratebox .unstandard {
+	color: red;
+    font-size: 16px;
+    line-height: 1;
+}
+.suggest_noneline {
+	border: 1px solid #fff;
+	font-size: 14px;
+	line-height: 1.7;
+	font-weight: normal;
+}
+.suggest_noneline .title{
+	font-weight: 700;
+    border-radius: 20px;
+    padding: 5px 15px;
+    font-size: 75%;
+    color: #585858;
+    float: left;
+    border: 1px solid #585858;
+    background-color: #fff;
+	margin-bottom: 12px;
+}
+.suggest_noneline span {
+	color: #64001b;
+    margin-left: 6px;
+    font-weight: 700;
+}
+.que_box h1 {
+	font-size: 150%;
+    font-weight: 700;
+    margin-bottom: 28px;
+    border-left: 8px solid #E91E63;
+    padding-left: 10px;
+}
+.userinfo {
+	color: #000064;
+    font-weight: 700;
+    text-align: left;
+    margin-top: 30px;
+	margin-bottom: -10px;
+}
+.userinfo span {
+	margin-left: 15px;
+}
+.userinfo i {
+	color: #516bf7;
+    margin-left: 4px;
+    margin-right: 4px;
+    vertical-align: sub;
+    font-size: larger;
+}
