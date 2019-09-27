@@ -23,7 +23,7 @@ body {
 
 .chart figcaption {
   width: 100%;
-  border: 8px solid #d2a7c2;
+  border: 8px solid #f5d0e7;
   border-radius: 100px;
   position: absolute;
   left: 0;
@@ -250,3 +250,91 @@ transition: all 400ms ease-out;
   }
 }
 /* END Keyframes for the initial animation */
+
+@media only screen and (max-width: 767px) {
+  .chart figcaption {
+    width: 220px;
+    border-radius: 50%;
+    height: 220px;
+    text-align: center;
+  }
+  .chart figcaption{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    border: 12px solid #f5d0e7;
+  }
+
+  figure{
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    height: 260px;
+
+  }
+  .chart .chart_title {
+    font-weight: bold;
+    font-size: 2.4rem;
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+    margin-top: 105px;
+    color: #5d4252;
+  }
+  .chart .chart_title br {
+    display: none;
+  }
+  
+}
+
+@media only screen and (max-width: 480px) {
+  .chart figcaption {
+    width: 220px;
+    border-radius: 50%;
+    height: 220px;
+    text-align: center;
+  }
+  .chart figcaption{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    border: 12px solid #f5d0e7;
+  }
+  /* .chart .chart_title {
+    font-weight: bold;
+    font-size: 2.2rem;
+    display: inline-block;
+    position: relative;
+    margin: auto;
+    left: 0;
+    right: 0;
+    margin-top: initial;
+    color: #5d4252;
+  } */
+  figure{
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    height: 260px;
+
+  }
+  .chart .chart_title {
+    font-weight: bold;
+    font-size: 2.4rem;
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+    margin-top: 105px;
+    color: #5d4252;
+  }
+  .chart .chart_title br {
+    display: none;
+  }
+  
+}
