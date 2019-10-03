@@ -41,10 +41,14 @@
    <!-- CSS circle -->
    <link rel="stylesheet" href="assets/css/style_circle.css">
 
+   <!-- lazy load -->
+   <link rel="stylesheet" href="assets/css/styles_lazy.css" />
+   <link rel="stylesheet" href="assets/dist/aos.css" />
+
    <!-- Script -->
    <script src="assets/js/modernizr.js"></script>
 
-   
+
 
 </head>
 
@@ -73,7 +77,7 @@
       </nav> <!-- end #nav-wrap -->
 
       <div class="row banner">
-         <div class="logo"><img src="assets/images/SE_logo_3.svg" alt="好学教育研究院" /></div>
+         <div class="logo"><img src="assets/images/SE_logo_4.svg" alt="好学教育研究院" /></div>
          <div class="banner-text">
             <h1 class="responsive-headline" id="elitetitle">
                好学教育研究院，起始于 2010 年，专注于 0-12 岁教育产品研发，<br>我们擅长于打造教育品牌，并精确地穿梭于线上线下。<br>
@@ -91,7 +95,7 @@
    <!-- About Section -->
    <section id="about">
 
-      <div class="row">
+      <div class="row product_block">
          <!-- <div class="about_title">
       	<h1>出版品研发</h1>
            <p>好学教育研究院，提供专为0-12岁孩子设计之教材、教案。目前针对0-2y/2-3y/3-6y/6-12y等年龄段孩子，设计符合医教保理念教材，并产出提供给教师们相应之教案，截至目前已累积了超过400本教材、上千份的教案。</p> 
@@ -112,27 +116,44 @@
                等年龄段孩子，设计符合医教保理念教材，并产出提供给教师们相应之教案，截至目前已累积了超过 400 本教材、上千份的教案。
                <!-- <span>TOEFL 50分</span> -->
             </h1>
-            <div class="video_w">
-               <video controls="" loop="" muted="" autoplay="" class="video_w" controlslist="nodownload">
-                  <source src="assets/media/2出版品_s.mp4" type="video/mp4">
-                  <source src="mov_bbb.ogg" type="video/ogg">
-                  Your browser does not support HTML5 video.
-               </video>
-               <div class="v_tag">
-                  <div class="text">教材簡介</div>
+            <div class="aos-item" data-aos="fade-down">
+               <div class="video_w">
+                  <video controls="" loop="" muted="" autoplay="" class="video_w" controlslist="nodownload">
+                     <source src="assets/media/2出版品_s.mp4" type="video/mp4">
+                     <source src="mov_bbb.ogg" type="video/ogg">
+                     Your browser does not support HTML5 video.
+                  </video>
+                  <div class="v_tag">
+                     <div class="text">教材簡介</div>
+                  </div>
                </div>
             </div>
-            <!-- <div class="bookimg"></div> -->
-            <!-- <div class="clearfix"></div>
-            <p>《Academic Connections》是由培生教育出版集团联合<span style="font-weight: 700; color: #575757;">
-                  托福官方机构美国教育考试中心（ETS）</span>倾力打造，是一套以提升学生学术英语（综合英语）能力为目的的互动英语教材。该教材具有以下特点<br />
-               1. 基于ETS教育研究数据设计开发<br />
-               2. 强调真实性和趣味性：涵盖美国真实课堂活动<br />
-               3. 学术能力培养<br />
-            </p> 
-            <div class="block_orange">
-               <span>时间</span> A班8周；B班8周 <span style="margin-left: 1em;">学费</span> ￥11800元 / 班
-            </div>-->
+
+            <div class="products">
+               <div class="text aos-item" data-aos="zoom-out-up">0-2 歲教材 - 前導預備課</div>
+               <div class="cover aos-item" data-aos="zoom-out-up"><img src="/assets/images/cover_0-2_前導預備課.png" alt="">
+               </div>
+
+               <div class="text aos-item" data-aos="zoom-out-down">0-2 歲教材 - 日托課</div>
+               <div class="cover aos-item" data-aos="zoom-out-down"><img src="/assets/images/cover_0-2_日托課.png" alt="">
+               </div>
+
+               <div class="text aos-item" data-aos="zoom-out-up">2-3 歲教材 - 中文</div>
+               <div class="cover aos-item" data-aos="zoom-out-up"><img src="/assets/images/cover_2-3_中文.png" alt="">
+               </div>
+
+               <div class="text aos-item" data-aos="zoom-out-down">2-3 歲教材 - 英文</div>
+               <div class="cover aos-item" data-aos="zoom-out-down"><img src="/assets/images/cover_2-3_英文.png" alt="">
+               </div>
+
+               <div class="text aos-item" data-aos="zoom-out-up">3-6 歲教材</div>
+               <div class="cover aos-item" data-aos="zoom-out-up"><img src="/assets/images/cover_3-6.png" alt=""></div>
+
+               <div class="text aos-item" data-aos="zoom-out-down">7-12 歲教材</div>
+               <div class="cover aos-item" data-aos="zoom-out-down"><img src="/assets/images/cover_7-12.png" alt="">
+               </div>
+            </div>
+
          </div> <!-- end .main-col -->
       </div>
    </section> <!-- About Section End-->
@@ -141,7 +162,7 @@
    <!-- Resume Section -->
    <section id="resume">
       <!-- Education -->
-      <div class="row education" style="padding-top: 0px;">
+      <div class="row education">
          <div class="three columns">
             <div class="classcircle ">
                <div class="tbox">线上线下<br>培训</div>
@@ -150,7 +171,21 @@
          </div>
          <div class="nine columns main-col">
             <h1>除了提供教材教案外，更提供各式形式的专家培训活动，为使医学、教育、保育概念更明确实践，培训内容之设计更是好学教育研究员的核心服务内容。</h1>
-            <div class="bookimg"></div>
+            <div class="clearfix"></div>
+            <div class="aos-item" data-aos="fade-up">
+               <div class="video_w">
+                  <video controls="" loop="" muted="" autoplay="" class="video_w" controlslist="nodownload">
+                     <source src="assets/media/好學培訓.mp4" type="video/mp4">
+                     <source src="mov_bbb.ogg" type="video/ogg">
+                     Your browser does not support HTML5 video.
+                  </video>
+               </div>
+            </div>
+            <div class="photo aos-item" data-aos="fade-up">
+               <img src="/assets/images/Photo_1.jpg" alt="">
+               <img src="/assets/images/Photo_2.jpg" alt="">
+            </div>
+
             <div class="clearfix"></div>
          </div>
       </div> <!-- End Education -->
@@ -165,7 +200,7 @@
          </div>
          <div class="nine columns main-col">
             <h1>好学教育研究院提供客制的品牌行销规划、各式产品研发及制作，透过严谨的研发流程、讲求落地实测，提供完整可执行、一条龙的品牌包套服务。</h1>
-
+<div class="aos-item" data-aos="fade-up">
             <figure class="three columns chart" data-percent="100">
                <figcaption><i class="fa fa-cogs"></i></figcaption>
                <!-- <img class="html">
@@ -175,7 +210,7 @@
                <div class="chart_title">POC<br>概念测试</div>
             </figure>
 
-            <figure class="three columns chart" data-percent="100">
+            <figure class="three columns chart " data-percent="100">
                <figcaption><i class="fa fa-map-marker"></i></figcaption>
                <img class="css">
                <svg width="200" height="200">
@@ -201,7 +236,7 @@
                </svg>
                <div class="chart_title">Marketing<br>品牌推广</div>
             </figure>
-
+</div>
 
             <div class="clearfix"></div>
          </div>
@@ -590,6 +625,8 @@
    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
 
+
+
    <!-- Java Script -->
    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
    <script>window.jQuery || document.write('<script src="assets/js/jquery-1.10.2.min.js"><\/script>')</script>
@@ -600,6 +637,14 @@
    <script src="assets/js/jquery.fittext.js"></script>
    <script src="assets/js/magnific-popup.js"></script>
    <script src="assets/js/init.js"></script>
+
+   <!-- LazyLoad -->
+   <script src="assets/dist/aos.js"></script>
+   <script>
+      AOS.init({
+         easing: 'ease-in-out-sine'
+      });
+   </script>
 
 </body>
 

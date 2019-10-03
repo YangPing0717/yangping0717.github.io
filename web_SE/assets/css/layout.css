@@ -23,7 +23,8 @@
 /* ------------------------------------------------------------------ */
 
 body {
-   background: #3c3639;
+   /* background: #3c3639; */
+   background: #ffffff;
    font-family: '微軟正黑體', '微软正黑体', 'Microsoft JhengHei', Helvetica, Arial, sans-serif;
 }
 
@@ -68,13 +69,13 @@ header .banner-text {
 }
 
 header .banner-text h1 {
-   font: 2.8rem/3rem '微軟正黑體', Helvetica, Arial, sans-serif;
+   font: 2.4rem/3.6rem '微軟正黑體', Helvetica, Arial, sans-serif !important;
    color: #fff;
    /* letter-spacing: -2px; */
    margin: 0 auto 18px auto;
    text-shadow: 0px 2px 2px rgba(0, 0, 0, 1), 0px 2px 8px rgba(0, 0, 0, .5);
    /* line-height: 3rem; */
-   font-weight: 700;
+   font-weight: 700 !important;
 }
 
 header .banner-text h3 {
@@ -93,7 +94,7 @@ header .banner-text h3 a {
 }
 
 header .banner-text hr {
-   width: 60%;
+   /* width: 60%; */
    margin: 30px auto 36px auto;
    border-color: #2F2D2E;
    border-color: rgba(255, 255, 255, 0.4);
@@ -408,7 +409,10 @@ header .scrolldown a:hover .icon-down-circle:before {
 }
 
 .logo img {
-   width: 20rem !important;
+   width: 56% !important;
+   /* width: 20rem !important; */
+   -webkit-filter: drop-shadow(0px 8px 2px rgba(0, 0, 0, 0.15)) !important;
+   filter: drop-shadow(0px 8px 2px rgba(0, 0, 0, 0.15)) !important;
 }
 
 header .scrolldown span {
@@ -427,7 +431,7 @@ header .scrolldown span {
    }
 
    .logo img {
-      width: 20rem !important;
+      width: 50% !important;
    }
 }
 
@@ -523,13 +527,13 @@ ul#nav li a:hover {
    /*background: rgba(255,222,173,0.6), url("../images/header-background_4.jpg");*/
    /*background: -webkit-linear-gradient(135deg, rgba(255,222,173,0.9) 0%, rgba(255,222,173,0.6) 100%), url("../images/header-background_4.jpg");*/
    background-image: url("../images/header_bg_1.jpg");
-   background-position: center center;
    background-repeat: no-repeat;
-   background-size: cover;
+   background-position: top left;
+   background-size: contain;
    /*padding-top: 130px;
    padding-bottom: 66px;*/
    padding-top: 150px;
-   padding-bottom: 150px;
+   /* padding-bottom: 120px; */
    overflow: hidden;
 }
 
@@ -733,6 +737,38 @@ ul#nav li a:hover {
    margin-left: 5px;
    /*border-radius: 5px;*/
 }
+#about .products .text{
+   color: #404040;
+   font-weight: 700;
+    line-height: 1.6em;
+    font-size: 1.8rem;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    background: rgba(250, 175, 64, .4);
+    padding: 3px 15px;
+}
+#about .products .cover {
+   /* background-repeat: no-repeat;
+   width: auto;
+   min-height: 230px;
+   background-size: contain; */
+   -webkit-filter: drop-shadow(5px 8px 2px rgba(0, 0, 0, 0.15));
+    filter: drop-shadow(5px 8px 2px rgba(0, 0, 0, 0.15));
+}
+#about .products .cover.p1{
+   background-image: url(../images/cover_0_2教材_前導-01.png) ;
+}
+#about .products .cover.p2{
+   background-image: url(../images/cover_0_2教材_日托課-02.png) ;
+}
+#about .products .cover.p3{
+   background-image: url(../images/cover_2_3_中文-03.png) ;
+}
+#about .products .cover.p4{
+   background-image: url(../images/cover_2_3_英文-04.png) ;
+}
+
+
 
 /* ------------------------------------------------------------------ */
 /* d. Resume Section
@@ -740,8 +776,8 @@ ul#nav li a:hover {
 
 #resume {
    background: #fff;
-   padding-top: 150px;
-   padding-bottom: 72px;
+   /* padding-top: 150px; */
+   /* padding-bottom: 72px; */
    overflow: hidden;
 }
 
@@ -760,7 +796,7 @@ ul#nav li a:hover {
    text-transform: uppercase;
    /* font-size: 2.4rem; */
    color: #4e4e4e;
-   margin-bottom: 0.8em;
+   margin-bottom: 30px;
    font-weight: 700;
    line-height: 1.6em;
 }
@@ -796,15 +832,27 @@ ul#nav li a:hover {
 #resume .main-col {
    padding-right: 2%;
 }
-
+.product_block {
+   padding-top: 0px;
+   padding-bottom: 100px;
+   border-bottom: 1px solid #E8E8E8;
+}
 .education,
 .work {
    /*margin-bottom: 48px;*/
-   padding-bottom: 40px;
+   padding-bottom: 100px;
    border-bottom: 1px solid #E8E8E8;
    padding-top: 100px;
 }
-
+.education .photo {
+   margin-top: 20px; 
+}
+.education .photo img{
+   width: 49%;
+}
+.education .photo img:last-child{
+   float: right;
+}
 .work.noline {
    border-bottom: 0px solid #E8E8E8;
 }
@@ -1911,11 +1959,13 @@ call-to-action .button {
 
 footer {
    padding-top: 78px;
-   margin-bottom: 48px;
+   /* margin-bottom: 48px; */
    color: #303030;
    font-size: 14px;
    text-align: center;
    position: relative;
+   background: #3c3639;
+   padding-bottom: 48px;
 }
 
 footer a,
