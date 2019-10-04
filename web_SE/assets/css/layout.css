@@ -642,8 +642,8 @@ ul#nav li a:hover {
 #resume .classcircle,
 #about .classcircle {
    position: relative;
-   width: 180px;
-   height: 180px;
+   width: 160px;
+   height: 160px;
    border-radius: 100%;
    background-color: rgba(0, 0, 0, 0.3);
    color: #FFFFFF;
@@ -660,14 +660,14 @@ ul#nav li a:hover {
 
 #resume .classcircle .tbox,
 #about .classcircle .tbox {
-   font-size: 2.8rem;
+   font-size: 2.4rem;
    position: absolute;
    margin: auto;
    top: 0;
    left: 0;
    height: fit-content;
    display: inline-block;
-   line-height: 36px;
+   line-height: 32px;
    right: 0;
    bottom: 0;
    text-shadow: 0px 2px 2px rgba(0, 0, 0, 1), 0px 4px 6px rgba(0, 0, 0, 0.7);
