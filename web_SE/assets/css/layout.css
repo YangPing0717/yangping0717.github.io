@@ -783,6 +783,11 @@ ul#nav li a:hover {
    /* padding-top: 150px; */
    /* padding-bottom: 72px; */
    overflow: hidden;
+   background-image: url(../images/header_bg_4.jpg);
+   background-repeat: no-repeat;
+   background-position: top left;
+   background-size: contain;
+   /* padding-top: 150px; */
 }
 
 #resume a,
@@ -1197,6 +1202,11 @@ ol {
    background-size: cover;
    padding-top: 90px;
    padding-bottom: 60px; */
+   background-image: url(../images/header_bg_5.jpg);
+   background-repeat: no-repeat;
+   background-position: 0% 0%;
+   background-size: cover;
+   padding-bottom: 180px;
 }
 
 /*#portfolio h1 {
