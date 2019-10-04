@@ -640,7 +640,8 @@ ul#nav li a:hover {
 }
 
 #resume .classcircle,
-#about .classcircle {
+#about .classcircle,
+#portfolio .classcircle {
    position: relative;
    width: 160px;
    height: 160px;
@@ -659,7 +660,8 @@ ul#nav li a:hover {
 }
 
 #resume .classcircle .tbox,
-#about .classcircle .tbox {
+#about .classcircle .tbox,
+#portfolio .classcircle .tbox {
    font-size: 2.4rem;
    position: absolute;
    margin: auto;
@@ -1187,12 +1189,12 @@ ol {
 
 #portfolio {
    /*background: #ebeeee;*/
-   background-image: url("../images/header_bg_2.jpg");
+   /* background-image: url("../images/header_bg_2.jpg");
    background-position: center center;
    background-repeat: no-repeat;
    background-size: cover;
    padding-top: 90px;
-   padding-bottom: 60px;
+   padding-bottom: 60px; */
 }
 
 /*#portfolio h1 {
@@ -1205,23 +1207,23 @@ ol {
 }*/
 
 #portfolio h1 {
-   font: 25px/30px '微軟正黑體', sans-serif;
-   color: #fff;
-   font-size: 2.3em;
-   margin-bottom: 0.7em;
-   text-align: center;
+   font: 18px/24px '微軟正黑體', sans-serif;
+   text-transform: uppercase;
+   /* font-size: 2.4rem; */
+   color: #4e4e4e;
+   margin-bottom: 30px;
    font-weight: 700;
-   text-shadow: 0px 4px 4px rgba(0, 0, 0, 1), 0px 0px 15px rgba(0, 0, 0, 0.5);
+   line-height: 1.6em;
 }
 
-#portfolio h1:after {
+/* #portfolio h1:after {
    font-family: 'FontAwesome';
    content: '\f073';
    color: #fff;
    font-size: 1em;
    margin-left: 0.3em;
    text-shadow: 0px 4px 4px rgba(0, 0, 0, 1), 0px 0px 15px rgba(0, 0, 0, 0.5);
-}
+} */
 
 #portfolio h4 {
    font: 25px/30px '微軟正黑體', sans-serif;
