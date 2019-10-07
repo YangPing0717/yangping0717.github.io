@@ -747,7 +747,6 @@ ul#nav li a:hover {
 #about .products .text {
    color: #777777;
    font-weight: 700;
-
    font-size: 1.8rem;
    margin-top: 48px;
    margin-bottom: 20px;
@@ -755,6 +754,8 @@ ul#nav li a:hover {
    padding: 3px 15px;
    padding: 3px 32px 12px;
    line-height: 1rem;
+   border-radius: 0 30px 30px 0;
+   position: relative;
 }
 
 #about .products .text:before {
@@ -766,8 +767,45 @@ ul#nav li a:hover {
    border-radius: 50%;
    top: -34px;
    left: -74px;
-
 }
+#about .products .text.title1 {
+   background: #d5f5da;
+}
+#about .products .text.title1:before {
+   background: #a7e2af;
+}
+#about .products .text.title2 {
+   background: #c2f5e7;
+}
+#about .products .text.title2:before {
+   background: #90d8c5;
+}
+#about .products .text.title3 {
+   background: #ffcfc9;
+}
+#about .products .text.title3:before {
+   background: #ff8678;
+}
+#about .products .text.title4 {
+   background: #ffecb0;
+}
+#about .products .text.title4:before {
+   background: #ffd24a;
+}
+#about .products .text.title5 {
+   background: #ffd2e0;
+}
+#about .products .text.title5:before {
+   background: #f5a3bc;
+}
+#about .products .text.title6 {
+   background: #ffdaaa;
+}
+#about .products .text.title6:before {
+   background: #ffa735;
+}
+
+
 
 #about .products .text span {
    line-height: 2rem;
@@ -803,15 +841,49 @@ ul#nav li a:hover {
 }
 
 #about .products .cover:after {
-   content: "";
+   
+}
+#about .products .text.addmb {
+   margin-bottom: 42px;
+}
+#about .products .text div {
    position: absolute;
-   background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='61' height='41' fill='@{bgColor}' stroke='none'><path d='M0,0 L30,40 L60,0 L0,0 Z'></path></svg>") no-repeat;
-   height: 80px;
-   width: 120px;
+   top: 52px;
+   /* left: 55px; */
+}
+#about .products ._text div:before {
+   font-family: 'FontAwesome';
+   content: "\f02e";
+   position: absolute;
    display: flex;
    align-items: center;
-   top: 0px;
+   top: -30px;
    left: 0px;
+   color: #e08248;
+   transform: rotate(90deg);
+   top: 0px;
+   left: -20px;
+}
+#about .products .text div i {
+   color: #f17363;
+   transform: rotate(90deg);
+   margin-right: 4px;
+}
+#about .products .text.title2 div i {
+   color: #5a9c8b;
+}
+
+#about .products .text div:nth-of-type(1) {
+   left: 1%;
+}
+#about .products .text div:nth-of-type(2) {
+   left: 26%;
+}
+#about .products .text div:nth-of-type(3) {
+   left: 51%;
+}
+#about .products .text div:nth-of-type(4) {
+   left: 77%;
 }
 
 
@@ -845,9 +917,12 @@ ul#nav li a:hover {
    -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
 }
-
+#about .products .cover svg.s_0 {
+   top: -10%;
+   left: 50%;
+}
 #about .products .cover svg.s_1 {
-   top: 80%;
+   top: 70%;
    left: -60%;
 }
 #about .products .cover svg.s_2 {
