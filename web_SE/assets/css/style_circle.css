@@ -23,7 +23,7 @@ body {
 
 .chart figcaption {
   width: 100%;
-  border: 8px solid #f5d0e7;
+  border: 8px solid #ffdfe3;
   border-radius: 100px;
   position: absolute;
   left: 0;
@@ -44,7 +44,7 @@ body {
 }
 .chart:hover figcaption{
   border: 16px solid #ffffff;
-  box-shadow: 0 0em 1.8em 0 rgba(236, 169, 223, .7);
+  box-shadow: 0 0em 1.8em 0 #ffa0ac;
   /* transform: scale(1.005, 1.005); */
   transition: all 400ms ease-out;
 }

@@ -304,7 +304,8 @@ header .banner-text hr {
    }
 }
 
-#socialtop, #topbtn {
+#socialtop,
+#topbtn {
    -webkit-animation: socialtop .8s ease-out;
    -webkit-animation-delay: 2.5s;
    animation: socialtop 0.8s ease-out;
@@ -321,12 +322,13 @@ header .banner-text hr {
 
 @media only screen and (max-width: 767px) {
    #topbtn {
-      bottom: 85px; 
+      bottom: 85px;
    }
 }
+
 @media only screen and (max-width: 480px) {
    #topbtn {
-      bottom: 0px; 
+      bottom: 0px;
    }
 }
 
@@ -657,7 +659,7 @@ ul#nav li a:hover {
    /* box-shadow: 0 0em 2em 0 rgb(236, 169, 223), 0 0em 8em 0 rgb(167, 26, 110); */
    font-weight: 700;
    /* text-shadow: 0px 2px 2px rgba(0, 0, 0, 1), 0px 4px 6px rgba(0, 0, 0, 0.7); */
-   background-color: rgba(179, 147, 164, 0.8);
+   background-color: rgba(238, 124, 141, 0.65);
 }
 
 #resume .classcircle .tbox,
@@ -741,35 +743,143 @@ ul#nav li a:hover {
    margin-left: 5px;
    /*border-radius: 5px;*/
 }
-#about .products .text{
-   color: #404040;
+
+#about .products .text {
+   color: #777777;
    font-weight: 700;
-    line-height: 1.6em;
-    font-size: 1.8rem;
-    margin-top: 40px;
-    margin-bottom: 20px;
-    background: rgba(250, 175, 64, .4);
-    padding: 3px 15px;
+
+   font-size: 1.8rem;
+   margin-top: 48px;
+   margin-bottom: 20px;
+   background: #ffe3d1;
+   padding: 3px 15px;
+   padding: 3px 32px 12px;
+   line-height: 1rem;
 }
-#about .products .cover {
+
+#about .products .text:before {
+   content: '';
+   height: 90px;
+   width: 90px;
+   background: #f9bf9b;
+   position: absolute;
+   border-radius: 50%;
+   top: -34px;
+   left: -74px;
+
+}
+
+#about .products .text span {
+   line-height: 2rem;
+   line-height: 20px;
+   text-align: center;
+   color: #fff;
+   /* color: #641343; */
+   position: absolute;
+   font-size: 2rem;
+   left: -62px;
+   text-align: center;
+   width: 90px;
+}
+
+#about .products .text span:first-child {
+   top: -6px;
+   font-size: 200%;
+}
+
+#about .products .text span.year {
+   top: 20px;
+   font-size: 90%;
+}
+
+
+#about .products .cover img {
    /* background-repeat: no-repeat;
    width: auto;
    min-height: 230px;
    background-size: contain; */
    -webkit-filter: drop-shadow(5px 8px 2px rgba(0, 0, 0, 0.15));
-    filter: drop-shadow(5px 8px 2px rgba(0, 0, 0, 0.15));
+   filter: drop-shadow(5px 8px 2px rgba(0, 0, 0, 0.15));
 }
-#about .products .cover.p1{
-   background-image: url(../images/cover_0_2教材_前導-01.png) ;
+
+#about .products .cover:after {
+   content: "";
+   position: absolute;
+   background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='61' height='41' fill='@{bgColor}' stroke='none'><path d='M0,0 L30,40 L60,0 L0,0 Z'></path></svg>") no-repeat;
+   height: 80px;
+   width: 120px;
+   display: flex;
+   align-items: center;
+   top: 0px;
+   left: 0px;
 }
-#about .products .cover.p2{
-   background-image: url(../images/cover_0_2教材_日托課-02.png) ;
+
+
+@-webkit-keyframes rotation {
+   0%   { 
+      -webkit-transform: rotate(0deg); 
+   }
+   100% { 
+      -webkit-transform: rotate(360deg); 
+   }
 }
-#about .products .cover.p3{
-   background-image: url(../images/cover_2_3_中文-03.png) ;
+@keyframes rotation {
+   0%   { 
+      transform: rotate(0deg); 
+   }
+   100% { 
+      transform: rotate(360deg); 
+   }
 }
-#about .products .cover.p4{
-   background-image: url(../images/cover_2_3_英文-04.png) ;
+
+#about .products .cover svg {
+   position: absolute;
+   z-index: -1;
+   top: 50%;
+   left: 50%;
+   /* -webkit-animation: rotation 5s linear infinite;
+   -moz-animation: rotation 5s linear infinite;
+   -ms-animation: rotation 5s linear infinite; */
+   -webkit-animation: rotation 5s ease-in-out infinite;
+          animation: rotation 5s ease-in-out infinite;
+   -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+#about .products .cover svg.s_1 {
+   top: 80%;
+   left: -60%;
+}
+#about .products .cover svg.s_2 {
+   top: 90%;
+   left: 50%;
+}
+#about .products .cover svg.s_3 {
+   top: 150%;
+   left: -60%;
+}
+#about .products .cover svg.s_4 {
+   top: 30%;
+   left: 50%;
+}
+
+
+
+
+#about .products .cover.p1 {
+   background-image: url(../images/cover_0_2教材_前導-01.png);
+}
+
+#about .products .cover.p2 {
+   background-image: url(../images/cover_0_2教材_日托課-02.png);
+}
+
+#about .products .cover.p3 {
+   background-image: url(../images/cover_2_3_中文-03.png);
+}
+
+#about .products .cover.p4 {
+   background-image: url(../images/cover_2_3_英文-04.png);
 }
 
 
@@ -841,11 +951,13 @@ ul#nav li a:hover {
 #resume .main-col {
    padding-right: 2%;
 }
+
 .product_block {
    padding-top: 0px;
    padding-bottom: 100px;
    border-bottom: 1px solid #E8E8E8;
 }
+
 .education,
 .work {
    /*margin-bottom: 48px;*/
@@ -853,15 +965,19 @@ ul#nav li a:hover {
    border-bottom: 1px solid #E8E8E8;
    padding-top: 100px;
 }
+
 .education .photo {
-   margin-top: 20px; 
+   margin-top: 20px;
 }
-.education .photo img{
+
+.education .photo img {
    width: 49%;
 }
-.education .photo img:last-child{
+
+.education .photo img:last-child {
    float: right;
 }
+
 .work.noline {
    border-bottom: 0px solid #E8E8E8;
 }
@@ -1205,7 +1321,7 @@ ol {
    background-image: url(../images/header_bg_5.jpg);
    background-repeat: no-repeat;
    background-position: 0% 0%;
-   background-size: cover;
+   background-size: contain;
    padding-bottom: 180px;
 }
 
@@ -2020,11 +2136,13 @@ footer .copyright li:before {
 footer .copyright li:first-child:before {
    display: none;
 }
-footer .copyright br{
+
+footer .copyright br {
    display: none;
 }
+
 @media only screen and (max-width: 480px) {
-   footer .copyright br{
+   footer .copyright br {
       display: initial;
    }
 }
@@ -2094,7 +2212,8 @@ footer .social-links li:first-child {
    /* margin-top: 30px; */
    overflow: hidden;
 }
-.video_w .v_tag { 
+
+.video_w .v_tag {
    position: absolute;
    top: 0;
    right: 0;
@@ -2103,6 +2222,7 @@ footer .social-links li:first-child {
    background: rgba(0, 0, 0, 0.65);
    /* transform:rotate(5deg); */
 }
+
 /* .video_w .v_tag:before {
    content: '';
    position: absolute;
@@ -2112,15 +2232,15 @@ footer .social-links li:first-child {
    height: 80px;
    background: rgba(0, 0, 0, 0.65);
 } */
-.video_w .v_tag .text{
+.video_w .v_tag .text {
    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 100%;
-    color: #fff;
-    font-weight: bold;
-    text-align: center;
-    height: 30px;
-    top: 0;
-    margin: auto;
+   bottom: 0;
+   width: 100%;
+   height: 100%;
+   color: #fff;
+   font-weight: bold;
+   text-align: center;
+   height: 30px;
+   top: 0;
+   margin: auto;
 }
