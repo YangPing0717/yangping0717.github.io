@@ -804,6 +804,13 @@ ul#nav li a:hover {
 #about .products .text.title6:before {
    background: #ffa735;
 }
+#about .products .text.title7 {
+   background: #f5dbfb;
+}
+#about .products .text.title7:before {
+   background: #cc9ed6;
+}
+
 
 
 
