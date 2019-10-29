@@ -401,7 +401,7 @@ header .scrolldown a {
 }
 
 header .scrolldown a:hover {
-   color: #ffeafb;
+   color: #ffffff;
    text-decoration: none;
 }
 
@@ -691,7 +691,7 @@ ul#nav li a:hover {
 }
 
 .blockline2 {
-   background-color: #651344;
+   background-color: #f9195b;
 }
 
 .class_a {
@@ -1954,7 +1954,7 @@ call-to-action .button {
 /* ------------------------------------------------------------------ */
 
 #contact {
-   background: #9e9e9e;
+   background: #f3a99f;
    padding-top: 96px;
    padding-bottom: 72px;
    color: #636363;
@@ -1994,7 +1994,7 @@ call-to-action .button {
    line-height: 0.7em;
    text-align: left;
    float: left;
-   color: #ebeeee;
+   color: #ffffff;
 }
 
 .titleicon:before {
@@ -2012,14 +2012,14 @@ call-to-action .button {
 
 #contact h3 {
    font: 25px/30px '微軟正黑體', sans-serif;
-   color: #ebeeee;
+   color: #ffffff;
    font-size: 1.2em;
    margin-bottom: 0.7em;
    letter-spacing: 0.05em;
 }
 
 #contact h3 span {
-   color: #41ffcf;
+   color: #ff2500;
 }
 
 #contact h4 {
@@ -2278,7 +2278,7 @@ footer .social-links li:first-child {
 }
 
 #go-top a:hover {
-   background-color: #bffff5;
+   background-color: #ffffff;
    box-shadow: 0 0em 0.8em rgba(255, 255, 255, .6), 0 0em 2em rgb(255, 255, 255);
 }
 

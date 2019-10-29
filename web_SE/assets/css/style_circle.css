@@ -49,7 +49,7 @@ body {
   transition: all 400ms ease-out;
 }
 .chart:hover figcaption i {
-color: #a71a6e;
+color: #f9195b;
 transform: scale(1.05, 1.05);
 transition: all 400ms ease-out;
 }
