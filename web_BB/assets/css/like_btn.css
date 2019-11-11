@@ -1,0 +1,38 @@
+.heart {
+  width: 100px;
+  height: 100px;
+  background: url("../images/heart.png") no-repeat;
+  background-position: 0 0;
+  cursor: pointer;
+  transition: background-position 1s steps(28);
+  transition-duration: 0s;
+  transform: scale(0.6, 0.6);
+  display: inline-block;
+  position: absolute;
+  left: -35px;
+  top: -38px;
+}
+.h_g{
+  background: url("../images/heart_2.png") no-repeat;
+}
+
+
+.heart.is-active {
+  transition-duration: 1s;
+  background-position: -2800px 0;
+}
+.btn_like {
+  position: relative;
+  /* height: 100px; */
+}
+/* body {
+  background: #000000;
+}
+
+.placement {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+} */
