@@ -12,6 +12,7 @@ $col_bri: #FF3700;
 $col_bri_dark: #a90300;
 $col_dark: #392F22;
 $col_dark_br_light: #9D9081;
+$col_dark_br_lighta: #C4B7A84D;
 $gary_light: #ddd;
 $gary_mid: #96989b;
 $gary_dark: #585858;
@@ -278,7 +279,7 @@ ul.cart-list > li > h6 > a > i {
       top: 8px;
       left: 8px;
       padding-left: 8px;
-      color: #392F22;
+      color: $col_dark;
       cursor: pointer;
       transition: $transition;
       i {
@@ -302,6 +303,25 @@ ul.cart-list > li > h6 > a > i {
     margin-bottom: 0px;
     line-height: 2.5rem;
     letter-spacing: 0px;
+    &.title_act:after {
+      content: 'S';
+      font-family: 'PWSmallIcons';
+      color: $col_dark_br_lighta;
+      font-size: 25rem;
+      font-weight: 100;
+      right: 0px;
+      position: absolute;
+    }
+    &.title_speech:after {
+      content: 'P';
+      font-family: 'PWSmallIcons';
+      color: $col_dark_br_lighta;
+      font-size: 25rem;
+      font-weight: 100;
+      right: 0px;
+      position: absolute;
+      top: 60px;
+    }
   }
   .post-meta.tag_box{
     margin-top: 10px;
@@ -366,21 +386,22 @@ ul.cart-list > li > h6 > a > i {
     margin-left: -20px;
     &:after{
       font-family: 'PWSmallIcons';
-      content: "3";
+      content: "w";
       display: inline-block;
       position: absolute;
-      right: 32px;
+      right: 50px;
       color: #fff;
-      font-size: 15rem;
+      font-size: 10rem;
       font-weight: 100;
-      top: 30px;
+      top: 19px;
+      transform:rotate(5deg);
     }
     .title {
       font-size: 1.8rem;
       color: #fff;
       padding-right: 0px;
       line-height: initial;
-      padding-right: 12rem;
+      padding-right: 11rem;
     }
   }
   .post.post-widget{
@@ -451,6 +472,31 @@ ul.cart-list > li > h6 > a > i {
   }
 }
 
+blockquote.blockquote{
+  margin: 20px 0px 20px;
+   p {
+    font-size: 1.7rem;
+    line-height: 2.6rem;
+  }
+  &:before {
+    // content: "\f10d";
+    // font-family: fontAwesome;
+    content: '*';
+    font-family: 'PWSmallIcons';
+    width: 90px;
+    height: 90px;
+    line-height: 90px;
+    text-align: center;
+    border-radius: 50%;
+    color: $col_bri;
+    font-size: 8rem;
+    background: #fff;
+    border: 2px solid #e8eaed;
+    float: left;
+    margin-right: 18px;
+    transform: rotate(50deg);
+  }
+}
 
 
 
@@ -484,7 +530,7 @@ ul.cart-list > li > h6 > a > i {
       font-size: 4rem;
       line-height: 6.8rem;
       width: 80px;
-      color: #fb5545;
+      color: $col_bri;
       &:hover{
         color: #fff;
       }
@@ -776,7 +822,7 @@ ul.cart-list > li > h6 > a > i {
               border-top: 4px solid\9;
               border-right: 6px solid transparent;
               border-left: 6px solid transparent;
-              color: #ff3700;
+              color: $col_bri;
             }
             &.dropdown-toggle::after{
               display: none;
@@ -826,6 +872,170 @@ ul.cart-list > li > h6 > a > i {
 
 
 
+/*=========================================================
+  category  
+===========================================================*/
+.category{
+  .category_title{
+    font-size: 2.8rem;
+    line-height: 36px;
+    text-align: center;
+    margin: 15px;
+    color: $col_dark;
+    font-weight: 700;
+  } 
+  &.blog3 {
+    .post .post-title.title-lg {
+      font-size: 2.3rem;
+      color: #fff;
+      line-height: 2.6rem;
+      margin-bottom: 0;
+    }
+    .post-category .photo {
+      float: left;
+      margin-right: 15px;
+      margin-top: 0px;
+      margin-bottom: 20px;
+    }
+  }
+}
+
+
+
+/*=========================================================
+  修改 slideShow    
+===========================================================*/
+.single-slide{
+  .blog-thumbnail {
+    display: block;
+    overflow: hidden;
+    a>img {
+      transition: 1.6s transform;
+    }
+    &:after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 40%;
+      background: -webkit-gradient(linear, left top, left bottom, from(rgba(27, 28, 30, 0)), color-stop(90%, rgba(27, 28, 30, 0.6)));
+      background: linear-gradient(180deg, rgba(27, 28, 30, 0) 0%, rgba(27, 28, 30, 0.6) 90%);
+    }
+    &:hover a>img {
+      transition: 1.6s transform;
+      transform: scale(1.2);
+    }
+  }
+  
+  .post-body {
+    position: absolute;
+    left: 0;
+    bottom: 3%;
+    margin: 0px;
+    padding: 0px 5%;
+    color: #fff;
+    .post-meta li {
+      display: inline-block;
+      color: inherit;
+      font-size: 1.4rem;
+      text-transform: uppercase;
+    }
+    h3 {
+      margin-top: 10px;
+      color: inherit;
+    }
+  }
+} 
+
+
+.responsive {
+  width: 100%;
+  height: auto;
+}
+
+.slideW100 {
+  .carousel-inner {
+    .post_body_text {
+      &.sty_a{
+        background: linear-gradient(0deg, #ff8572 0%, #ffc3b4 100%);
+      }
+      &.sty_b{
+        background: linear-gradient(0deg, #7CCED5 0%, #BEFCFF 100%);
+      }
+      &.sty_c{
+        background: linear-gradient(0deg, #ffb939 0%, #ffeeb4 100%);
+      }
+      &.sty_d{
+        background: linear-gradient(0deg, #72b954 0%, #c9ecad 100%);
+      }
+      .post-body {
+        padding: 8rem 6rem 6rem 10rem;
+        position: absolute;
+        bottom: 0;
+        color: #fff;
+        h3 {
+          margin-top: 16px;
+          color: inherit;
+          font-size: 3.6rem;
+          line-height: 3.8rem;
+        }
+        .post-meta li {
+          color: inherit;
+        }
+      }
+    }
+  }
+  .carousel-indicators li{
+    margin-right: 10px;
+    &.active {
+      margin-right: 10px;
+    }
+  }
+  .carousel-control{
+    width: 10%;
+    opacity: .3;
+    &:focus, &:hover{
+      opacity: .8;
+    }
+    i {
+      font-size: 4rem;
+      line-height: 4rem;
+      color: #392F22;
+      font-family: 'Font Awesome 5 Free';
+      width: 75px;
+      height: 75px;
+      top: 50%;
+      transform: translate(0%, -50%);
+      background-color: rgba(255, 255, 255, 0.8);
+      position: absolute;
+    }
+    &.left{
+      background-image: none;
+      text-shadow: none;
+      i {
+        left: 0;
+        &:before{
+          left: 22px;
+          position: absolute;
+          top: 14px;
+        }
+      }
+    }
+    &.right{
+      background-image: none;
+      text-shadow: none;
+      i {
+        right: 0;
+        &:before{
+          right: 22px;
+          position: absolute;
+          top: 14px;
+        }
+      }
+    }
+  }
+}
 
 
 

@@ -328,6 +328,27 @@ ul.cart-list > li > h6 > a > i {
   letter-spacing: 0px;
 }
 
+.actCard .post.post-row .post-title.title_act:after {
+  content: 'S';
+  font-family: 'PWSmallIcons';
+  color: #C4B7A84D;
+  font-size: 25rem;
+  font-weight: 100;
+  right: 0px;
+  position: absolute;
+}
+
+.actCard .post.post-row .post-title.title_speech:after {
+  content: 'P';
+  font-family: 'PWSmallIcons';
+  color: #C4B7A84D;
+  font-size: 25rem;
+  font-weight: 100;
+  right: 0px;
+  position: absolute;
+  top: 60px;
+}
+
 .actCard .post-meta.tag_box {
   margin-top: 10px;
 }
@@ -399,14 +420,16 @@ ul.cart-list > li > h6 > a > i {
 
 .tvBox .section-title:after {
   font-family: 'PWSmallIcons';
-  content: "3";
+  content: "w";
   display: inline-block;
   position: absolute;
-  right: 32px;
+  right: 50px;
   color: #fff;
-  font-size: 15rem;
+  font-size: 10rem;
   font-weight: 100;
-  top: 30px;
+  top: 19px;
+  -webkit-transform: rotate(5deg);
+          transform: rotate(5deg);
 }
 
 .tvBox .section-title .title {
@@ -414,7 +437,7 @@ ul.cart-list > li > h6 > a > i {
   color: #fff;
   padding-right: 0px;
   line-height: initial;
-  padding-right: 12rem;
+  padding-right: 11rem;
 }
 
 .tvBox .post.post-widget {
@@ -489,6 +512,33 @@ ul.cart-list > li > h6 > a > i {
   display: none;
 }
 
+blockquote.blockquote {
+  margin: 20px 0px 20px;
+}
+
+blockquote.blockquote p {
+  font-size: 1.7rem;
+  line-height: 2.6rem;
+}
+
+blockquote.blockquote:before {
+  content: '*';
+  font-family: 'PWSmallIcons';
+  width: 90px;
+  height: 90px;
+  line-height: 90px;
+  text-align: center;
+  border-radius: 50%;
+  color: #FF3700;
+  font-size: 8rem;
+  background: #fff;
+  border: 2px solid #e8eaed;
+  float: left;
+  margin-right: 18px;
+  -webkit-transform: rotate(50deg);
+          transform: rotate(50deg);
+}
+
 /*=========================================================
   button Sacnite
 ===========================================================*/
@@ -520,7 +570,7 @@ ul.cart-list > li > h6 > a > i {
   font-size: 4rem;
   line-height: 6.8rem;
   width: 80px;
-  color: #fb5545;
+  color: #FF3700;
 }
 
 .button_round i:hover {
@@ -883,7 +933,7 @@ ul.cart-list > li > h6 > a > i {
   border-top: 4px solid\9;
   border-right: 6px solid transparent;
   border-left: 6px solid transparent;
-  color: #ff3700;
+  color: #FF3700;
 }
 
 .signIn .login_info_box .login_sign .form-horizontal .form-group .btn.dropdown-toggle::after {
@@ -932,6 +982,192 @@ ul.cart-list > li > h6 > a > i {
 
 .signIn .login_info_box .login_sign .text_s .login_info.pw {
   float: right;
+}
+
+/*=========================================================
+  category  
+===========================================================*/
+.category .category_title {
+  font-size: 2.8rem;
+  line-height: 36px;
+  text-align: center;
+  margin: 15px;
+  color: #392F22;
+  font-weight: 700;
+}
+
+.category.blog3 .post .post-title.title-lg {
+  font-size: 2.3rem;
+  color: #fff;
+  line-height: 2.6rem;
+  margin-bottom: 0;
+}
+
+.category.blog3 .post-category .photo {
+  float: left;
+  margin-right: 15px;
+  margin-top: 0px;
+  margin-bottom: 20px;
+}
+
+/*=========================================================
+  修改 slideShow    
+===========================================================*/
+.single-slide .blog-thumbnail {
+  display: block;
+  overflow: hidden;
+}
+
+.single-slide .blog-thumbnail a > img {
+  -webkit-transition: 1.6s -webkit-transform;
+  transition: 1.6s -webkit-transform;
+  transition: 1.6s transform;
+  transition: 1.6s transform, 1.6s -webkit-transform;
+}
+
+.single-slide .blog-thumbnail:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 40%;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(27, 28, 30, 0)), color-stop(90%, rgba(27, 28, 30, 0.6)));
+  background: linear-gradient(180deg, rgba(27, 28, 30, 0) 0%, rgba(27, 28, 30, 0.6) 90%);
+}
+
+.single-slide .blog-thumbnail:hover a > img {
+  -webkit-transition: 1.6s -webkit-transform;
+  transition: 1.6s -webkit-transform;
+  transition: 1.6s transform;
+  transition: 1.6s transform, 1.6s -webkit-transform;
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+.single-slide .post-body {
+  position: absolute;
+  left: 0;
+  bottom: 3%;
+  margin: 0px;
+  padding: 0px 5%;
+  color: #fff;
+}
+
+.single-slide .post-body .post-meta li {
+  display: inline-block;
+  color: inherit;
+  font-size: 1.4rem;
+  text-transform: uppercase;
+}
+
+.single-slide .post-body h3 {
+  margin-top: 10px;
+  color: inherit;
+}
+
+.responsive {
+  width: 100%;
+  height: auto;
+}
+
+.slideW100 .carousel-inner .post_body_text.sty_a {
+  background: -webkit-gradient(linear, left bottom, left top, from(#ff8572), to(#ffc3b4));
+  background: linear-gradient(0deg, #ff8572 0%, #ffc3b4 100%);
+}
+
+.slideW100 .carousel-inner .post_body_text.sty_b {
+  background: -webkit-gradient(linear, left bottom, left top, from(#7CCED5), to(#BEFCFF));
+  background: linear-gradient(0deg, #7CCED5 0%, #BEFCFF 100%);
+}
+
+.slideW100 .carousel-inner .post_body_text.sty_c {
+  background: -webkit-gradient(linear, left bottom, left top, from(#ffb939), to(#ffeeb4));
+  background: linear-gradient(0deg, #ffb939 0%, #ffeeb4 100%);
+}
+
+.slideW100 .carousel-inner .post_body_text.sty_d {
+  background: -webkit-gradient(linear, left bottom, left top, from(#72b954), to(#c9ecad));
+  background: linear-gradient(0deg, #72b954 0%, #c9ecad 100%);
+}
+
+.slideW100 .carousel-inner .post_body_text .post-body {
+  padding: 8rem 6rem 6rem 10rem;
+  position: absolute;
+  bottom: 0;
+  color: #fff;
+}
+
+.slideW100 .carousel-inner .post_body_text .post-body h3 {
+  margin-top: 16px;
+  color: inherit;
+  font-size: 3.6rem;
+  line-height: 3.8rem;
+}
+
+.slideW100 .carousel-inner .post_body_text .post-body .post-meta li {
+  color: inherit;
+}
+
+.slideW100 .carousel-indicators li {
+  margin-right: 10px;
+}
+
+.slideW100 .carousel-indicators li.active {
+  margin-right: 10px;
+}
+
+.slideW100 .carousel-control {
+  width: 10%;
+  opacity: .3;
+}
+
+.slideW100 .carousel-control:focus, .slideW100 .carousel-control:hover {
+  opacity: .8;
+}
+
+.slideW100 .carousel-control i {
+  font-size: 4rem;
+  line-height: 4rem;
+  color: #392F22;
+  font-family: 'Font Awesome 5 Free';
+  width: 75px;
+  height: 75px;
+  top: 50%;
+  -webkit-transform: translate(0%, -50%);
+          transform: translate(0%, -50%);
+  background-color: rgba(255, 255, 255, 0.8);
+  position: absolute;
+}
+
+.slideW100 .carousel-control.left {
+  background-image: none;
+  text-shadow: none;
+}
+
+.slideW100 .carousel-control.left i {
+  left: 0;
+}
+
+.slideW100 .carousel-control.left i:before {
+  left: 22px;
+  position: absolute;
+  top: 14px;
+}
+
+.slideW100 .carousel-control.right {
+  background-image: none;
+  text-shadow: none;
+}
+
+.slideW100 .carousel-control.right i {
+  right: 0;
+}
+
+.slideW100 .carousel-control.right i:before {
+  right: 22px;
+  position: absolute;
+  top: 14px;
 }
 
 @media (max-width: 992px) {
