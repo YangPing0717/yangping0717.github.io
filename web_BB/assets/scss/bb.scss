@@ -472,7 +472,7 @@ ul.cart-list > li > h6 > a > i {
   }
 }
 
-blockquote.blockquote{
+blockquote.blockquote {
   margin: 20px 0px 20px;
    p {
     font-size: 1.7rem;
@@ -495,6 +495,9 @@ blockquote.blockquote{
     float: left;
     margin-right: 18px;
     transform: rotate(50deg);
+  }
+  @media screen and (max-width: $break-small) {
+    margin: 0px 0px 0px;
   }
 }
 
@@ -974,11 +977,22 @@ blockquote.blockquote{
         position: absolute;
         bottom: 0;
         color: #fff;
+        @media screen and (max-width: $break-small) {
+          padding: 3rem 4rem 2rem 4rem;
+          position: relative;
+          bottom: 0;
+          color: #fff;
+          height: 22rem;
+        }
         h3 {
           margin-top: 16px;
           color: inherit;
           font-size: 3.6rem;
           line-height: 3.8rem;
+          @media screen and (max-width: $break-small) {
+            font-size: 3rem;
+            line-height: 3.2rem;
+          }
         }
         .post-meta li {
           color: inherit;
@@ -1038,7 +1052,41 @@ blockquote.blockquote{
 }
 
 
-
+/*=========================================================
+	修改 PAGE HEADER
+===========================================================*/
+#post-header {
+  padding-top: 36rem;
+  padding-bottom: 12rem;
+  min-height: calc(100vh - 100px);
+  position: relative;
+  .page-header-bg {
+    background: url(../images/article_img_0.jpg) no-repeat center center;
+    background-size: cover;
+    // background-position: 94px 0%;
+    // background-position: center;
+    // background-attachment: fixed;
+    &:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: linear-gradient(180deg, rgba(27, 28, 30, 0) 0%, rgba(27, 28, 30, 0.55) 90%);
+    }
+  }
+  .container {
+    position: absolute;
+    margin: auto;
+    top: 50%;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    height: fit-content;
+    text-align: center;
+  }
+}
 
 
 @media (max-width: 992px){

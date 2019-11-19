@@ -413,6 +413,12 @@ img {
   color: #ffffff; 
 }
 
+@media only screen and (max-width: 767px) {
+  #scrollUp {
+    right: 28px; 
+  } 
+}
+
 /* :: 3.7.0 bueno Button */
 .bueno-btn {
   background-color: #fe9384;

@@ -539,6 +539,12 @@ blockquote.blockquote:before {
           transform: rotate(50deg);
 }
 
+@media screen and (max-width: 576px) {
+  blockquote.blockquote {
+    margin: 0px 0px 0px;
+  }
+}
+
 /*=========================================================
   button Sacnite
 ===========================================================*/
@@ -1098,11 +1104,28 @@ blockquote.blockquote:before {
   color: #fff;
 }
 
+@media screen and (max-width: 576px) {
+  .slideW100 .carousel-inner .post_body_text .post-body {
+    padding: 3rem 4rem 2rem 4rem;
+    position: relative;
+    bottom: 0;
+    color: #fff;
+    height: 22rem;
+  }
+}
+
 .slideW100 .carousel-inner .post_body_text .post-body h3 {
   margin-top: 16px;
   color: inherit;
   font-size: 3.6rem;
   line-height: 3.8rem;
+}
+
+@media screen and (max-width: 576px) {
+  .slideW100 .carousel-inner .post_body_text .post-body h3 {
+    font-size: 3rem;
+    line-height: 3.2rem;
+  }
 }
 
 .slideW100 .carousel-inner .post_body_text .post-body .post-meta li {
@@ -1168,6 +1191,45 @@ blockquote.blockquote:before {
   right: 22px;
   position: absolute;
   top: 14px;
+}
+
+/*=========================================================
+	修改 PAGE HEADER
+===========================================================*/
+#post-header {
+  padding-top: 36rem;
+  padding-bottom: 12rem;
+  min-height: calc(100vh - 100px);
+  position: relative;
+}
+
+#post-header .page-header-bg {
+  background: url(../images/article_img_0.jpg) no-repeat center center;
+  background-size: cover;
+}
+
+#post-header .page-header-bg:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(27, 28, 30, 0)), color-stop(90%, rgba(27, 28, 30, 0.55)));
+  background: linear-gradient(180deg, rgba(27, 28, 30, 0) 0%, rgba(27, 28, 30, 0.55) 90%);
+}
+
+#post-header .container {
+  position: absolute;
+  margin: auto;
+  top: 50%;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  text-align: center;
 }
 
 @media (max-width: 992px) {
