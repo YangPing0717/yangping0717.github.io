@@ -13,6 +13,9 @@ $col_bri: #FF3700;
   margin-bottom: 20px;
   display: flex;
   justify-content: center;
+  @media (max-width: 767px){
+    display: block;
+  }
 }
 .nav-tabs {
   border-bottom: 1px solid rgba(224, 224, 224, 0.45);
@@ -96,6 +99,7 @@ $col_bri: #FF3700;
     }
 }
  
+
 @media screen and (max-width: 480px) { 
   .nav-tabs>li.active>a, 
     .nav-tabs>li.active>a:focus, 
