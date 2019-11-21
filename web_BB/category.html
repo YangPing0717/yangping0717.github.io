@@ -80,37 +80,6 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 
-    
-<!-- 置頂 btn -->
-<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.3/jquery.min.js"></script>
-<script>
-$(document).ready(function(){
-
-	// hide #back-top first
-	$("#back-top").hide();
-	
-	// fade in #back-top
-	$(function () {
-		$(window).scroll(function () {
-			if ($(this).scrollTop() > 100) {
-				$('#back-top').fadeIn();
-			} else {
-				$('#back-top').fadeOut();
-			}
-		});
-
-		// scroll body to 0px on click
-		$('#back-top a').click(function () {
-			$('body,html').animate({
-				scrollTop: 0
-			}, 400);
-			return false;
-		});
-	});
-
-});
-</script>
-<!-- 置頂 btn 完 -->
 
     <style>
         .modal-dialog{
@@ -1456,7 +1425,7 @@ $('.wechatLink').on('click', function(){
 </script>
 
 
-
+<!--  Scroll to anchor on another page  -->
 <script>
 $(document).ready(function() {
     if (window.location.hash) {
@@ -1467,6 +1436,38 @@ $(document).ready(function() {
     };
 });
 </script>
+
+
+<!-- 置頂 btn -->
+<!-- <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.3/jquery.min.js"></script> -->
+<script>
+    $(document).ready(function(){
+    
+        // hide #back-top first
+        $("#back-top").hide();
+        
+        // fade in #back-top
+        $(function () {
+            $(window).scroll(function () {
+                if ($(this).scrollTop() > 100) {
+                    $('#back-top').fadeIn();
+                } else {
+                    $('#back-top').fadeOut();
+                }
+            });
+    
+            // scroll body to 0px on click
+            $('#back-top a').click(function () {
+                $('body,html').animate({
+                    scrollTop: 0
+                }, 400);
+                return false;
+            });
+        });
+    
+    });
+</script>
+<!-- 置頂 btn 完 -->
 
 
 </body>
