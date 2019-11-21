@@ -61,17 +61,16 @@
 .button.btn_buy:after {
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
-  content: "R";
-  font-family: 'PWSmallIcons';
-  margin-left: -25px;
+  content: "\f061";
+  font-family: FontAwesome;
+  margin-left: -10px;
   opacity: 0;
-  vertical-align: middle;
-  font-size: 8rem;
-  font-weight: 100;
+  vertical-align: top;
+  font-size: 2rem;
 }
 
 .button.btn_buy:hover:after {
-  margin-left: 6px;
+  margin-left: 10px;
   opacity: 1;
 }
 

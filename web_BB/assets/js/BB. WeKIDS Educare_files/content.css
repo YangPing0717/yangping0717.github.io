@@ -899,8 +899,6 @@ textarea.input {
 
 .hot-post .post {
   margin-bottom: 25px;
-  cursor: pointer;
-  /* z-index: 20; */
 }
 
 .hot-post {
@@ -927,7 +925,7 @@ textarea.input {
   position: absolute;
   margin: 0px;
   padding: 0px 5%;
-  /* z-index: 21; */
+  /* z-index: 20; */
   bottom: 5%;
   background-color: transparent;
 }
@@ -1171,7 +1169,7 @@ textarea.input {
 
 .author .author-social li a {
   display: block;
-  font-size: 2rem;
+  font-size: 2.4rem;
   color: #96989b;
 }
 .author .author-social li a:focus, 

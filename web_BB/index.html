@@ -55,6 +55,7 @@
     <link rel="stylesheet" href="assets/build/css/demo.css">
     <!-- select  -->
     <link rel="stylesheet" href="assets/dist/css/bootstrap-select.css">
+
     <!-- blog_content -->
     <link href="assets/css/content.css" rel="stylesheet">
 
@@ -64,6 +65,39 @@
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
+
+
+<!-- 置頂 btn -->
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.3/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+
+	// hide #back-top first
+	$("#back-top").hide();
+	
+	// fade in #back-top
+	$(function () {
+		$(window).scroll(function () {
+			if ($(this).scrollTop() > 100) {
+				$('#back-top').fadeIn();
+			} else {
+				$('#back-top').fadeOut();
+			}
+		});
+
+		// scroll body to 0px on click
+		$('#back-top a').click(function () {
+			$('body,html').animate({
+				scrollTop: 0
+			}, 400);
+			return false;
+		});
+	});
+
+});
+</script>
+<!-- 置頂 btn 完 -->
+
 
 </head>
 
@@ -101,7 +135,7 @@
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
                     <i class="fa fa-bars"></i>
                 </button>
-                <a class="navbar-brand" href="#category.html">
+                <a class="navbar-brand" href="index.html">
                     <img src="assets/images/logo.svg" class="logo logo-display" alt="">
                     <img src="assets/images/logo.svg" class="logo logo-scrolled" alt="">
                 </a>
@@ -161,7 +195,7 @@
         <div class="collapse navbar-collapse" id="navbar-menu">
             <ul class="nav navbar-nav navbar-center" data-in="fadeInDown" data-out="fadeOutUp">
                 <li class="active dropdown megamenu-fw">
-                    <a "javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown">Workshop</a>
+                    <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown">Workshop</a>
                     <ul class="dropdown-menu megamenu-content" role="menu">
                         <li>
                             <div class="row menu_flex">
@@ -188,7 +222,7 @@
                     </ul>
                 </li>
                 <li class="dropdown megamenu-fw">
-                    <a "javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown">communicate</a>
+                    <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown">communicate</a>
                     <ul class="dropdown-menu megamenu-content" role="menu">
                         <li>
                             <div class="row menu_flex">
@@ -215,7 +249,7 @@
                     </ul>
                 </li>
                 <li class="dropdown megamenu-fw">
-                    <a "javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown">learn&teach</a>
+                    <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown">learn&teach</a>
                     <ul class="dropdown-menu megamenu-content" role="menu">
                         <li>
                             <div class="row menu_flex">
@@ -356,7 +390,7 @@
                     <div class="col-md-8 hot-post-left">
                         <!-- post -->
                         <div class="post post-thumb" >
-                            <div class="post-img" href="javascript:void(0);"><img src="assets/images/blog_img_1.jpg" alt=""></div>
+                            <div class="post-img" onclick="location.href='article.html'"><img src="assets/images/blog_img_1.jpg" alt=""></div>
                             <div class="post-body">
                                 <div class="post-category">
                                     <div class="photo"><img src="assets/images/photo_dr.jpg" alt=""></div>
@@ -373,7 +407,7 @@
                                         <li class="tag sty_2"><a href="javascript:void(0);" >认知探索</a></li>
                                     </ul>
                                 </div>
-                                <h3 class="post-title title-lg">[新锐品鉴官] 宝宝的玩具多种多样，这几种一定不能少</h3>
+                                <h3 class="post-title title-lg" onclick="location.href='article.html'">[新锐品鉴官] 宝宝的玩具多种多样，这几种一定不能少</h3>
                             </div>
                         </div>
                         <!-- /post -->
@@ -382,7 +416,7 @@
                     <div class="col-md-4 hot-post-right blog_second">
                         <!-- post -->
                         <div class="post post-thumb" >
-                            <div class="post-img" href="javascript:void(0);"><img src="assets/images/blog_img_2.jpg" alt=""></div>
+                            <div class="post-img" onclick="location.href='article.html'"><img src="assets/images/blog_img_2.jpg" alt=""></div>
                             <div class="btn_play"><i class="material-icons">play_arrow</i></div>
                             <div class="post-body">
                                 <div class="post-category">
@@ -402,14 +436,14 @@
                                         <li class="tag sty_3"><a href="javascript:void(0);" >认知探索</a></li>
                                     </ul>
                                 </div>
-                                <h3 class="post-title title-lg">宝宝肌肤的保护伞 七色蝴蝶婴幼儿保湿霜</h3>
+                                <h3 class="post-title title-lg" onclick="location.href='article.html'">宝宝肌肤的保护伞 七色蝴蝶婴幼儿保湿霜</h3>
                             </div>
                         </div>
                         <!-- /post -->
     
                         <!-- post -->
                         <div class="post post-thumb" >
-                            <div class="post-img" href="javascript:void(0);"><img src="assets/images/blog_img_3.jpg" alt=""></div>
+                            <div class="post-img" onclick="location.href='article.html'"><img src="assets/images/blog_img_3.jpg" alt=""></div>
                             <div class="post-body">
                                 <div class="post-category">
                                     <div class="photo"><img src="assets/images/photo_3.jpg" alt=""></div>
@@ -428,7 +462,7 @@
                                         <li class="tag sty_3"><a href="javascript:void(0);" >讲座活动</a></li>
                                     </ul>
                                 </div>
-                                <h3 class="post-title title-lg">怎样避免怎样避免由批评带给孩子的伤害？</h3>
+                                <h3 class="post-title title-lg" onclick="location.href='article.html'">怎样避免怎样避免由批评带给孩子的伤害？</h3>
                             </div>
                         </div>
                         <!-- /post -->
@@ -576,7 +610,7 @@
                     <!-- /post -->
 
                     <!-- post -->
-                    <div class="post post-thumb " >
+                    <div class="post post-thumb actCard_big" >
                         <div class="post-img" href="javascript:void(0);"><img src="assets/images/act_img_3.jpg" alt=""></div>
                         <div class="post-body">
                             <div class="post-category">
@@ -914,6 +948,9 @@
 	<!-- /FOOTER -->
 
 
+    <p id="back-top"><a href="#top"><span><i class="fa fa-angle-up iconbi"></i></span></a></p>
+
+
     <!-- Modal - 登錄 -->
     <div class="modal fade signIn" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
@@ -1172,6 +1209,7 @@ window.intlTelInput(input, {
 
 <!-- select  -->
 <script src="assets/dist/js/bootstrap-select.js"></script>
+
 
 
 <script>

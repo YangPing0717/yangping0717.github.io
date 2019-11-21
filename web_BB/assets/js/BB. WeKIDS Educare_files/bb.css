@@ -203,7 +203,7 @@ ul.cart-list > li > h6 > a > i {
   transition: all 0.3s ease-out;
 }
 
-.hot_search .tag div:hover, .hot_search .tag div:focus {
+.hot_search .tag div:hover {
   color: #fff;
   background: #F56F4A;
 }
@@ -211,21 +211,6 @@ ul.cart-list > li > h6 > a > i {
 /*=========================================================
 	POST 修改
 ===========================================================*/
-.hot-post .blog_second .post-title.title-lg {
-  font-size: 2.6rem;
-  line-height: 2.8rem;
-}
-
-.hot-post .post .post-body .post-title {
-  -webkit-transition: all 0.3s ease-out;
-  transition: all 0.3s ease-out;
-  color: rgba(255, 255, 255, 0.55);
-}
-
-.hot-post .post:hover .post-body .post-title, .hot-post .post:focus .post-body .post-title {
-  color: #fff;
-}
-
 .post .btn_play {
   background: #fff;
   width: 45px;
@@ -240,7 +225,7 @@ ul.cart-list > li > h6 > a > i {
   transition: all 0.3s ease-out;
 }
 
-.post .btn_play:hover, .post .btn_play:focus {
+.post .btn_play:hover {
   color: #fff;
   background: rgba(0, 0, 0, 0.4);
 }
@@ -416,16 +401,6 @@ ul.cart-list > li > h6 > a > i {
 .actCard .post-thumb .post-meta li.tag a {
   padding: 5px 12px;
   font-size: 11px;
-}
-
-.actCard .post-thumb.actCard_big .post-body .post-title {
-  -webkit-transition: all 0.3s ease-out;
-  transition: all 0.3s ease-out;
-  color: rgba(255, 255, 255, 0.55);
-}
-
-.actCard .post-thumb.actCard_big:hover .post-body .post-title, .actCard .post-thumb.actCard_big:focus .post-body .post-title {
-  color: #fff;
 }
 
 .tvBox {
@@ -1395,11 +1370,6 @@ blockquote.blockquote:before {
 /*=========================================================
 	修改 Content - article
 ===========================================================*/
-.article h3 {
-  font-size: 3rem;
-  line-height: 3.5rem;
-}
-
 .article h5 span {
   color: #FF3700;
   margin-left: 10px;
@@ -1424,20 +1394,8 @@ blockquote.blockquote:before {
   padding-left: 3px;
 }
 
-@media screen and (max-width: 576px) {
-  .article .post-tags li {
-    margin-bottom: 8px;
-  }
-}
-
 .article .post-tags li:first-child {
   margin-left: 0px;
-}
-
-@media screen and (max-width: 576px) {
-  .article .post-tags li:first-child {
-    display: none;
-  }
 }
 
 .article .post-tags li:after {
@@ -1477,13 +1435,6 @@ blockquote.blockquote:before {
   background: #F56F4A;
 }
 
-@media screen and (max-width: 576px) {
-  .article .author {
-    float: left !important;
-    margin-left: 10px;
-  }
-}
-
 .prev-post .post-title, .next-post .post-title {
   line-height: 18px;
 }
@@ -1495,26 +1446,22 @@ blockquote.blockquote:before {
 /*=========================================================
 	Shopping List
 ===========================================================*/
+#mainbar {
+  width: 660px;
+  float: left;
+}
+
 #sidebar {
   float: right;
 }
 
 #scroller {
-  width: 300px;
-  z-index: 1;
-}
-
-@media screen and (max-width: 576px) {
-  #scroller {
-    width: 360px;
-    z-index: 109;
-  }
+  width: 270px;
 }
 
 .shopBox {
   padding: 0 20px 25px;
   border: 1px solid #F7D0CB;
-  background: white;
 }
 
 .shopBox .section-title {
@@ -1598,60 +1545,6 @@ blockquote.blockquote:before {
 
 .shopBox .post.post-widget .post-body .post-category a:hover {
   color: #392F22;
-}
-
-/*=========================================================
-	置頂 btn - Back top btn
-===========================================================*/
-#back-top {
-  position: fixed;
-  bottom: 50px;
-  right: 50px;
-  z-index: 110;
-}
-
-@media screen and (max-width: 576px) {
-  #back-top {
-    right: 28px;
-  }
-}
-
-#back-top a {
-  width: 4.2rem;
-  display: block;
-  text-align: center;
-  text-transform: uppercase;
-  text-decoration: none;
-  color: #bbb;
-  -webkit-transition: 1s;
-  transition: 1s;
-}
-
-#back-top a:hover {
-  color: #000;
-}
-
-/* arrow icon (span tag) */
-#back-top span {
-  width: 5rem;
-  height: 5rem;
-  display: block;
-  background-color: #fe9384;
-  -webkit-transition: 1s;
-  transition: 1s;
-  color: #fff;
-  -webkit-box-shadow: 0 0px 16px 5px rgba(254, 147, 132, 0.4);
-          box-shadow: 0 0px 16px 5px rgba(254, 147, 132, 0.4);
-  border-radius: 50%;
-}
-
-#back-top a:hover span {
-  background-color: rgba(211, 131, 120, 0.4);
-}
-
-.iconbi {
-  font-size: 3.4rem;
-  line-height: 4.8rem;
 }
 
 @media (max-width: 992px) {

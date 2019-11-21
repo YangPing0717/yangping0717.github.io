@@ -392,7 +392,7 @@ img {
   background-attachment: fixed !important; }
 
 /* :: 3.6.0 ScrollUp */
-#scrollUp {
+#scrollUp_ {
   background-color: #fe9384;
   border-radius: 0;
   bottom: 50px;
@@ -408,13 +408,13 @@ img {
   transition-duration: 300ms;
   box-shadow: 0 0px 16px 5px rgba(254, 147, 132, 0.4);
 }
-#scrollUp:hover, #scrollUp:focus {
+#scrollUp_:hover, #scrollUp_:focus {
   background-color: rgba(171, 101, 91, 0.45);
   color: #ffffff; 
 }
 
 @media only screen and (max-width: 767px) {
-  #scrollUp {
+  #scrollUp_ {
     right: 28px; 
   } 
 }
