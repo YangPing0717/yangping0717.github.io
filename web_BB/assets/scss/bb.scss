@@ -6,10 +6,13 @@ $break-small: 576px;
 $break-large: 1200px;
 
 $transition: all 0.3s ease-out;
+$col_light_a: #ffbbb1;
 $col_light: #FE979C;
 $col_light_2: #F56F4A;
 $col_bri: #FF3700;
 $col_bri_dark: #a90300;
+$col_bri_dark_text: #750505;
+
 $col_dark: #392F22;
 $col_dark_br_light: #9D9081;
 $col_dark_br_lighta: #C4B7A84D;
@@ -19,6 +22,7 @@ $gary_dark: #585858;
 
 $blue_dark: #003a65;
 $blue_light: #3E90A8;
+
 
 
 .hhide{
@@ -1115,7 +1119,7 @@ blockquote.blockquote {
   min-height: calc(100vh - 185px);
   position: relative;
   .page-header-bg {
-    background: url(../images/article_img_9.jpg) no-repeat center center;
+    background: url(../images/article_img_c_main_2.jpg) no-repeat center center;
     // background: url(../images/article_img_9.jpg);
     // background-size: cover;
     // background-size: 106%;
@@ -1492,6 +1496,473 @@ blockquote.blockquote {
 
 
 
+/*=========================================================
+	accountBox 個人帳戶
+===========================================================*/
+
+.sidebar .userid {
+  padding: 20px 30px;
+  // margin-bottom: 20px;
+  @media screen and (max-width: $break-small) {
+    margin-top: -58px;
+    padding: 20px 30px 0px;
+    border-bottom: 1px solid #eee;
+  }
+  .userinfo {
+    margin-top: 20px;
+    color: #989898;
+    /*border-bottom: 1px solid rgba(255, 255, 255, 0.25);*/
+    padding-bottom: 15px;
+    /*margin-bottom: 20px;*/
+    font-weight: 700;
+    div {
+      margin-bottom: 8px;
+      span {
+        color: $col_bri;
+        position: absolute;
+        left: 100px;
+      }
+    }
+  }
+}
+.sidebar .userphoto {
+  width: 70px;
+  height: 70px;
+  overflow: hidden;
+  border-radius: 50%;
+  background-color: $col_light_a;
+  display: inline-block;
+  margin-right: 8px;
+  vertical-align: middle;
+  text-align: center;
+	color: #fff;
+  box-shadow: 0px 8px 10px rgba(126, 74, 74, 0.15);
+  i {
+    line-height: 64px;
+    font-size: 60px;
+  }
+  .badge{
+    display: inline-block;
+    min-width: 10px;
+    padding: 5px 6px;
+    font-weight: 700;
+    line-height: 1;
+    color: #fff;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    background-color: $col_light_2;
+    border-radius: 50%;
+    position: absolute;
+    margin-top: 3.4rem;
+    margin-left: -1rem;
+    i {
+      font-size: 1.6rem;
+      line-height: 1.6rem;
+    }
+  }
+}
+
+
+
+
+.accountBox .container {
+  overflow-y: hidden;
+  position: relative;
+}
+.menu_toggle_btn{
+  position: absolute;
+  border-radius: 50%;
+  background: #fff; 
+  top: 20px;
+  right: 0px;
+  border: 1px solid $col_light;
+  @media screen and (max-width: $break-small) {
+    top: 0px;
+    right: 15px;
+    z-index: 100;
+  }
+}
+
+
+.accountBox{
+  margin-top: 125px;
+  @media screen and (max-width: $break-small) {
+    margin-top: 46px;
+  }
+  .infoBox{
+    .login_sign {
+      margin-top: 30px;
+      .form-horizontal{
+        display: flex;
+        flex-direction: row;
+        margin-bottom: 20px;
+        @media screen and (max-width: $break-small) {
+          display: contents;
+        }
+        .checkbox{
+          .checkbox-btn{
+            margin-right: 20px;
+            label{
+              font-size: 100%;
+              padding-left: 8px;
+            }
+          }
+        }
+        label {
+          display: inline-block;
+          max-width: 100%;
+          margin-bottom: 5px;
+          font-weight: normal;
+          font-size: 12px;
+          padding-left: 0px;
+          @media screen and (max-width: $break-small) {
+            margin-top: 10px;
+            padding-left: 0px;
+          }
+        }
+        input {
+          width: 100%;
+          &.fix_content{
+            width: initial;
+          }
+        }
+        .form-group {
+          margin-right: 0px;
+          margin-left: 0px;
+          margin-bottom: 0px;
+          width: 100% !important;
+          .bootstrap-select:not([class*="col-"]):not([class*="form-control"]):not(.input-group-btn) {
+            width: 100%;
+          }
+          .btn{
+            border-radius: 2px;
+            // width: 30%;
+            .caret {
+              display: inline-block;
+              width: 0;
+              height: 0;
+              margin-left: 2px;
+              vertical-align: middle;
+              border-top: 6px dashed;
+              border-top: 4px solid\9;
+              border-right: 6px solid transparent;
+              border-left: 6px solid transparent;
+              color: $col_bri;
+            }
+            &.dropdown-toggle::after{
+              display: none;
+            }
+          }
+          .form-control{
+            border-radius: 0px;
+            &:focus {
+              border-color: #fe9384;
+              outline: 0;
+              box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(255, 152, 137, 0.5);
+            }
+          }
+          .dropdown-menu>.active>a, .dropdown-menu>.active>a:focus, .dropdown-menu>.active>a:hover {
+            color: #fff;
+            text-decoration: none;
+            background-color: #ff7e6c;
+            outline: 0;
+          }
+        }
+      }
+      
+      .text_s{
+        text-align: left;
+        .login_info {
+          display: block;
+          a {
+            color: $col_bri;
+            cursor: pointer;
+            font-weight: 700;
+          }
+          .pw{
+            float: right;
+          }
+          &.mt_70{
+            margin-top: 80px;
+          }
+          &.pw{
+            float: right;
+          }
+        }
+      }
+    } 
+  }
+
+  .pointsTable {
+    #example_length{
+      display: none !important;
+    }
+
+    // 修改 table 樣式
+    .dataTables_wrapper, table.dataTable {
+      clear: initial;
+      @media screen and (max-width: $break-small) {
+        width: max-content;
+        clear: left;
+      }
+    }
+    .dataTables_wrapper .dataTables_filter {
+      float: left;
+      text-align: left;
+      label {
+        display: inline-block;
+        max-width: 100%;
+        margin-bottom: 1.2rem;
+        font-weight: 700;
+      }
+    }
+    table.dataTable thead th, 
+    table.dataTable thead td {
+      padding: 10px 18px;
+      border-bottom: 1px solid $col_light_2;
+      position: relative;
+      @media screen and (max-width: $break-small) {
+        padding: 10px 44px 10px 18px;
+      }
+    }
+    table.dataTable.no-footer {
+      border-bottom: 3px solid $col_light_2;
+    }
+    table.dataTable.stripe tbody tr.odd, 
+    table.dataTable.display tbody tr.odd {
+      background-color: #fff6f6;
+    }
+    table.dataTable.display tbody tr.odd>.sorting_1, 
+    table.dataTable.order-column.stripe tbody tr.odd>.sorting_1 {
+      background-color: #ffe7e4;
+    }
+    table.dataTable.display tbody tr.even>.sorting_1, 
+    table.dataTable.order-column.stripe tbody tr.even>.sorting_1 {
+      background-color: #fef6f5;
+    }
+    table.dataTable.hover tbody tr:hover, 
+    table.dataTable.display tbody tr:hover {
+      background-color: #ffebe9 !important;
+    }
+    table.dataTable thead .sorting_asc, 
+    table.dataTable thead .sorting_desc,
+    table.dataTable thead .sorting {
+      background-image: none;
+    }
+    table.dataTable thead .sorting_asc:after {
+      content: "\E313";
+      font-family: 'Material Icons';
+      color: $col_bri;
+      vertical-align: middle;
+      position: absolute;
+      right: 15px;
+      font-size: 2rem;
+      @media screen and (max-width: $break-small) {
+        right: 0px;
+      }
+    }
+    table.dataTable thead .sorting_desc:after {
+      content: "\E316";
+      font-family: 'Material Icons';
+      color: $col_bri;
+      vertical-align: middle;
+      position: absolute;
+      right: 15px;
+      font-size: 2rem;
+    }
+    table.dataTable thead .sorting:after {
+      content: "\E313";
+      font-family: 'Material Icons';
+      color: $col_bri;
+      vertical-align: middle;
+      position: absolute;
+      right: 15px;
+      font-size: 2rem;
+      @media screen and (max-width: $break-small) {
+        right: 0px;
+      }
+    }
+    .dataTables_wrapper .dataTables_paginate .paginate_button {
+      border-radius: 12px;
+      &.next, &.previous {
+        border: 0px solid $col_bri !important;
+        background: none !important;
+        color: #333 !important;
+        &:hover {
+          color: $col_bri !important;
+        }
+      }
+    }
+    .dataTables_wrapper .dataTables_paginate .paginate_button:hover {
+      border: 1px solid $col_bri;
+      background: linear-gradient(to bottom, $col_bri 0%, $col_light 100%);
+    }
+    .dataTables_wrapper .dataTables_paginate .paginate_button.current, 
+    .dataTables_wrapper .dataTables_paginate .paginate_button.current:hover {
+      color: $col_bri !important;
+      border: 1px solid $col_bri;
+      background: none;
+    }
+    .dataTables_wrapper .dataTables_paginate .paginate_button.disabled, 
+    .dataTables_wrapper .dataTables_paginate .paginate_button.disabled:hover, 
+    .dataTables_wrapper .dataTables_paginate .paginate_button.disabled:active {
+      cursor: default;
+      color: #666 !important;
+      border: 1px solid transparent;
+      background: transparent;
+      box-shadow: none;
+    }
+    .dataTables_wrapper .dataTables_paginate {
+      padding-top: 0.8rem;
+      @media screen and (max-width: 767px){
+        padding-top: 1.2rem;
+        float: left;
+      }
+    }
+  }
+
+  .id_classCard {
+    .related {
+      .post.post-sm {
+        .post-title.title-sm{
+          font-size: 2rem;
+          line-height: 2.4rem;
+          margin-bottom: 10px;
+        }
+        .post-meta a{
+          color: #96989b;
+          font-size: 1.5rem;
+          text-transform: uppercase;
+          &:hover, &:focus {
+            color: $col_bri !important;
+          }
+        }
+        .post-body {
+          margin: 0px 0px 0px;
+          background: transparent;
+          padding: 20px 15px 30px;
+          border: 1px solid #ddd;
+        }
+      }
+      .post-meta {
+        &.tag_box {
+          margin-top: 6px;
+          li.tag a {
+            font-size: 10px;
+            border-radius: 30px;
+            margin-right: 3px;
+            padding: 5px 12px;
+            color: #fff;
+            &:hover, &:focus {
+              color: rgba(255, 255, 255, 0.5) !important;
+            }
+            &:after{
+              display: none;
+            }
+          }
+        }
+        &.act_info {
+          margin-top: 10px;
+          li {
+            display: block;
+            color: $gary_mid;
+            font-weight: bold;
+            span {
+              color: #333;
+              margin-left: 6px;
+            }
+            &:after {
+              content: '';
+            }
+          }
+        }
+      }
+    }
+    .isOpen {
+      overflow-x: hidden;
+      &:after {
+        content: '開放報名';
+        position: absolute;
+        line-height: 32px;
+        width: 150px;
+        height: 32px;
+        transform: rotate(45deg);
+        color: #fff;
+        background-color: $col_bri;
+        text-align: center;
+        right: -38px;
+        top: 18px;
+        font-size: 16px;
+        font-weight: 700;
+        box-shadow: 0px 5px 10px 0px rgb(163, 163, 163);
+      }
+    }
+    .overDue {
+      overflow-x: hidden;
+      &:after {
+        content: '報名截止';
+        position: absolute;
+        line-height: 32px;
+        width: 150px;
+        height: 32px;
+        transform: rotate(45deg);
+        color: #fff;
+        background-color: $gary_mid;
+        text-align: center;
+        right: -38px;
+        top: 18px;
+        font-size: 16px;
+        font-weight: 700;
+        box-shadow: 0px 5px 10px 0px rgb(163, 163, 163);
+      }
+      .act_book {
+        display: none;
+      }
+    }
+    .isBooked {
+      overflow-x: hidden;
+      &:after {
+        content: '已報名';
+        position: absolute;
+        line-height: 32px;
+        width: 150px;
+        height: 32px;
+        transform: rotate(45deg);
+        color: #fff;
+        background-color: $col_light;
+        text-align: center;
+        right: -38px;
+        top: 18px;
+        font-size: 16px;
+        font-weight: 700;
+        box-shadow: 0px 5px 10px 0px rgb(163, 163, 163);
+      }
+      .act_book {
+        display: none;
+      }
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 @media (max-width: 992px){
   nav.navbar.bootsnav.no-full .navbar-collapse {
@@ -1576,7 +2047,9 @@ blockquote.blockquote {
       padding: 15px;
     }
   }
-  
+  nav.navbar.bootsnav{
+    z-index: 200;
+  }
 
 }
 

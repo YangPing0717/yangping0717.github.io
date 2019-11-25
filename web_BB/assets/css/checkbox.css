@@ -101,3 +101,9 @@ body{-webkit-animation:bugfix infinite 1s}@-webkit-keyframes bugfix{from{padding
   -webkit-transform: rotate(0deg);
   transform: rotate(0deg);
 }
+
+@media only screen and (max-width: 767px) {
+  .checkbox-btn, .radio-btn {
+    display: inline-block;
+  }
+}

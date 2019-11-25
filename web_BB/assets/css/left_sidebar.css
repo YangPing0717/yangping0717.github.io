@@ -1,0 +1,832 @@
+
+.btn.active.focus, .btn.active:focus, .btn.focus, .btn:active.focus, .btn:active:focus, .btn:focus {
+    outline: 0px auto -webkit-focus-ring-color;
+    outline-offset: -2px;
+}
+.mmenua{
+	/*background-color: #FFFFFF;*/
+	display: block;
+	margin-left: 15px;
+    margin-right: 15px;
+	margin-bottom: 15px;
+}
+
+.m_btn {
+	width: 100%;
+}
+.m_btn.btn {
+	margin: 0px 0px 0px 0px;
+	text-align: left;
+	white-space: initial;
+  	overflow: hidden;
+  	text-overflow: ellipsis;
+	padding: 12px 80px 12px 24px;
+	line-height: 25px;
+}
+/* Icon when the collapsible content is shown */
+.m_btn.btn:after {
+    font-family: "Material Icons";
+    content: "\E316";
+    float: right;
+    margin-left: 15px;
+	z-index: 1;
+	position: absolute;
+	right: 24px;
+	font-size: 2.6rem;
+	height: 2rem; 
+	margin: auto;
+    top: 0;
+    bottom: 0;
+	
+  }
+  /* Icon when the collapsible content is hidden */
+.m_btn.btn.collapsed:after {
+    content: "\E313";
+  }
+
+.mmenuv {
+	text-align: center;
+	padding-bottom: 0px;
+}
+.mmenuv video {
+	border: 1px solid #111433;
+	max-height: 450px;
+	/*width: 100%;*/
+}
+
+.mmenua .m_btn.btn {
+	margin: 0px 0px 0px 0px;
+	text-align: left;
+	line-height: 25px;
+	position: relative;
+	/* background-color: #21143a;
+    color: #fff; */
+    font-weight: 700;
+    border-radius: 0px;
+/*	padding: 12px 80px 12px 24px;*/
+    background-color: #fff;
+}
+.mmenua .m_btn.btn:hover, .mmenua .m_btn.btn:focus {
+    background: #ffe7e8;
+}
+
+.mmenua .m_btn.btn i {
+    margin-right: 8px;
+    font-size: 1.8rem;
+}
+.mmenua .btn.btn_back {
+	margin: 0px 0px 0px 0px;
+	text-align: left;
+	line-height: 25px;
+	position: relative;
+	background-color: #21143a;
+    color: #fff;
+    font-weight: 700;
+    border-radius: 0px;
+	padding: 18px 24px 12px 42px;
+    width: 100%;
+	border-bottom: 1px solid #362851;
+}
+.mmenua .btn.btn_back:before {
+	font-family: "Material Icons";
+    content: "\E317"; 
+    margin-left: 15px;
+    z-index: 1;
+    position: absolute;
+    left: 15px;
+    font-size: 2.2rem;
+    height: 2rem;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    line-height: 2.6rem;
+}
+.mmenua .btn.btn_back:hover, .mmenua .btn.btn_back:focus {
+	color: #aea2ff;
+}
+
+.mmenua .panel-group {
+    margin-bottom: 0px;
+}
+.mmenua .panel-group .panel {
+    margin-bottom: 0;
+    border-radius: 0px;
+    margin-top: 0px;
+    /* border-bottom: 1px solid #ddd;
+    border-top: 1px solid #ddd;
+    margin-bottom: -1px; */
+}
+.mmenua .panel-default>.panel-heading {
+    color: #750505;
+    background-color: #fff;
+    border-color: rgba(255, 255, 255, 0);
+	border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    padding: 0px 0px;
+    /* padding-left: 30px; */
+}
+.mmenua .panel {
+    margin-bottom: 0px;
+    background-color: #fff;
+    border: 0px solid transparent;
+    border-radius: 0px;
+    -webkit-box-shadow: 0 0px 0px rgba(0,0,0,0);
+    box-shadow: 0 0px 0px rgba(0,0,0,0);
+}
+.mmenua a {
+    font-size: 1.4rem;
+    text-align: left !important;
+	padding: 12px 44px 12px 20px !important;
+	font-weight: 700;
+}
+.mmenua .panel-body {
+    padding: 0px;
+}
+.mmenua .panel-group .panel-heading+.panel-collapse>.list-group, 
+.mmenua .panel-group .panel-heading+.panel-collapse>.panel-body {
+    border-top: 0px solid #ddd;
+}
+
+/*  sidebar menu 調整  */
+.mmenua {
+    /*background-color: #FFFFFF;*/
+    display: block;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+}
+.menu_bar .skillbar {
+    margin-bottom: 3px;
+    margin-top: 7px;
+	height: 25px;
+    right: 0rem;
+}
+.menu_dueday {
+    margin-bottom: 0px;
+    font-size: .7rem;
+    font-weight: 700;
+    float: left;
+    line-height: 25px;
+    position: relative;
+    right: 0rem;
+    top: 0rem;
+}
+.m_btn.btn {
+    margin: 0px 0px 0px 0px;
+    text-align: left;
+    white-space: inherit;;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding: 12px 44px 12px 20px;
+    line-height: 20px;
+}
+.m_btn.btn:after {
+    content: "";
+    float: right;
+    margin-left: 15px;
+    z-index: 1;
+    position: absolute;
+    right: 12px;
+    font-size: 1.6rem;
+    height: 2rem;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+	line-height: 2rem;
+}
+.m_btn.btn[aria-expanded=false]:after{
+    font-family: "Material Icons";
+    content: "\E313";
+}
+.m_btn.btn[aria-expanded=true]:after {
+    font-family: "Material Icons";
+    content: "\E316";
+}
+
+.close {
+	font-size: 1.6em;
+    color: #fff !important;
+    line-height: 2.6rem;
+}
+.panel-title {
+    font-size: initial;
+    /* padding-left: 29px; */
+}
+.panel-title > a {
+    display: block;
+    padding: 12px 75px 12px 25px;
+    text-decoration: none;
+    line-height: initial;
+    position: relative;
+}
+.panel-heading .panel-title .number {
+	float: none;
+    /* margin-right: 28px; */
+    position: absolute;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    height: 20px;
+    right: 45px;
+	font-size: .8rem;
+}
+.more-less {
+	float: none;
+    color: #fff;
+    font-family: "Material Icons";
+    font-size: 1.2rem;
+    line-height: 12px;
+    right: 17px;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    height: 20px;
+}
+
+.mathsubmenubox .table {
+	width: 100%;
+    max-width: 100%;
+    margin-bottom: 0px;
+    background-color: #1c1f22;
+}
+.mathsubmenubox .table>tbody>tr>td>i.right {
+    vertical-align: bottom;
+    margin-right: .6rem;
+    position: absolute;
+    right: 14px;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    height: 20px;
+	line-height: 20px;
+    color: #724ebf;
+}
+
+.mathsubmenubox .table>tbody>tr>td:hover i.left,
+.mathsubmenubox .table>tbody>tr>td:focus i.left,
+.mathsubmenubox .table>tbody>tr>td:hover a,
+.mathsubmenubox .table>tbody>tr>td:focus a {
+	color: #aea2ff;
+}
+.mathsubmenubox .table>tbody>tr>td:hover,
+.mathsubmenubox .table>tbody>tr>td:focus {
+	background-color: #33383e;
+	color: #aea2ff;
+}
+.mathsubmenubox .table>tbody>tr>td:hover a.finish:after,
+.mathsubmenubox .table>tbody>tr>td:focus a.finish:after,
+.mathsubmenubox .table>tbody>tr>td:hover a.unfinish:after,
+.mathsubmenubox .table>tbody>tr>td:focus a.unfinish:after,
+.mathsubmenubox .table>tbody>tr>td:hover a.un:after,
+.mathsubmenubox .table>tbody>tr>td:focus a.un:after {
+	color: #aea2ff;
+}
+
+.mathsubmenubox .table>tbody>tr>td {
+    padding: 0px;
+    position: relative;
+    line-height: 25px;
+	border-top: 0px solid #ddd;
+}
+
+.mathsubmenubox .table>tbody>tr>td>a {
+    padding: 15px 35px 15px 55px !important;
+    position: initial;
+    line-height: 20px;
+    font-weight: 500;
+	display: inline-block;
+	    width: 100%;
+	color: #ddd;
+}
+.mathsubmenubox .table>tbody>tr>td>a i.left {
+    vertical-align: bottom;
+    margin-right: .6rem;
+    position: absolute;
+    left: 23px;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    height: 20px;
+	line-height: 20px;
+    color: #9a9a9a;
+}
+.mathsubmenubox .table>tbody>tr>td>a .time {
+    float: none;
+    /* margin-right: 3rem; */
+    color: #9E9E9E;
+    font-size: .8rem;
+    line-height: 25px;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    height: 20px;
+    right: 45px;
+}
+.mathsubmenubox .table>tbody>tr>td>a.finish:after{
+	font-family: 'FontAwesome';
+    content: "\f058";
+	/*color: #7864ff !important;*/
+	float: right;
+	font-size: 1.2em;
+    line-height: 30px;
+    position: absolute;
+    right: 14px;
+    height: 30px;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+.mathsubmenubox .table>tbody>tr>td>a.unfinish:after{
+	font-family: 'FontAwesome';
+	content: "\f042";
+	color: #9e9e9e;
+	float: right;
+	font-size: 1.2em;
+    line-height: 30px;
+    position: absolute;
+    right: 14px;
+    height: 30px;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+.mathsubmenubox .table>tbody>tr>td>a.unfinish_overdue:after{
+	font-family: 'FontAwesome';
+	content: "\f28d";
+	color: red;
+	float: right;
+	font-size: 1.2em;
+    line-height: 30px;
+    position: absolute;
+    right: 14px;
+    height: 30px;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+.mathsubmenubox .table>tbody>tr>td>a.un:after{
+	font-family: 'FontAwesome';
+	content: "\f056";
+	color: #9E9E9E;
+	float: right;
+	font-size: 1.2em;
+    line-height: 30px;
+    position: absolute;
+    right: 14px;
+    height: 30px;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+.mathsubmenubox .table>tbody>tr>td>a.un_overdue:after{
+	font-family: "Material Icons";
+	content: "\E836";
+	color: red;
+	float: right;
+	font-size: 1.2em;
+    line-height: 30px;
+    position: absolute;
+    right: 14px;
+    height: 30px;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+.mathsubmenubox .table>tbody>tr>td>a.active,
+.mathsubmenubox .table>tbody>tr>td>a.active{
+	background-color: #121415;
+    color: #fff;
+	font-weight: 700;
+	box-shadow: inset 4px 0 0 #7864ff;
+}
+.mathsubmenubox .table>tbody>tr>td>a.active i.left {
+	color: #fff;
+}
+.mathsubmenubox .table>tbody>tr>td>a.active.finish:after,
+.mathsubmenubox .table>tbody>tr>td>a.active.unfinish:after,
+.mathsubmenubox .table>tbody>tr>td>a.active.un:after {
+	/*background-color: #2f1957;*/
+    color: #ffffff;
+}
+.mathsubmenubox .table>tbody>tr>td>a.active.unfinish_overdue:after,
+.mathsubmenubox .table>tbody>tr>td>a.active.un_overdue:after {
+	background-color: #2f1957;
+    color: red;
+}
+
+
+
+
+
+
+/*  i 開合按鍵  */
+.iconsl {
+    position: absolute;
+    display: block;
+    bottom: 100px;
+    left: 30px;
+}
+
+.iconsl .expander {
+	position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 300px;
+    margin-left: 70px;
+    overflow-y: auto;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    color: #ffffff;
+    text-align: left;
+    font-size: .8rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+	padding: 15px 45px 15px 15px;
+	background-color: rgba(0, 0, 0, 0.35);
+}
+.iconsl .expander span {
+    font-size: .95rem;
+    font-weight: 700;
+	line-height: 1;
+}
+.iconsl:hover .expander,
+.iconsl:focus .expander {
+	color: #6733d7;
+	transition: all 300ms ease-out;
+}
+    
+.iconsl button {
+	box-shadow: 0 0px 0px rgba(0,0,0,0);
+    text-shadow: 0 0px 0px rgba(0,0,0,0);
+	width: 70px;
+	height: 70px;	
+	background-color: rgba(0, 0, 0, 0.5);
+	text-transform: initial;
+    font-weight: normal;
+	margin: 0px;
+}
+.iconsl button:hover,
+.iconsl button:focus {
+	background-color: rgba(0, 0, 0, 0.65);
+}
+.iconsl i {
+	position: absolute;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    line-height: 70px;
+    font-size: 38px;
+    color: #ffffff;
+}
+.iconsl .in.collapse .expander:after {
+	content: "\E14C";
+    font-family: 'Material Icons';
+    font-size: 1rem;
+    color: #ffffff;
+    cursor: pointer;
+    position: absolute;
+    height: 30px;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    right: 15px;
+	line-height: 30px;
+}
+.iconsl .in.collapse .expander:hover:after {
+	content: "\E15B";
+	transition: all 300ms ease-out;
+}
+.iconsl .collapse .expander:after {
+	content: "\E15B";
+    font-family: 'Material Icons';
+    font-size: 1rem;
+    color: #ffffff;
+    cursor: pointer;
+    position: absolute;
+    height: 30px;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    right: 15px;
+	line-height: 30px;
+}
+
+.toslvideo {
+	height: 70px;
+    position: absolute;
+    top: 0;
+    left: 70px;
+    width: 250px;
+	display: block;
+	z-index: 999999;
+	cursor: pointer;
+}
+
+.alert_sl {
+    color: #ffffff;
+    background-color: rgba(0, 0, 0, 0.4);
+    margin-bottom: 5px;
+    padding: 0px;
+    width: 350px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: left;
+    height: 70px;
+    border: 0px solid transparent;
+	display: block;
+	position: relative;
+}
+.alert_sl .sl_text {
+	position: absolute;
+    padding: 15px;
+    width: 250px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+	color: #ffffff;
+}
+.alert_sl:hover .sl_text,
+.alert_sl:focus .sl_text {
+	color: #6733d7;
+	transition: all 300ms ease-out;
+}
+
+.iconsl_b i {
+    position: relative;
+    line-height: 70px;
+    font-size: 38px;
+    color: #ffffff;
+	width: 70px;
+    height: 70px;
+    background-color: rgba(0, 0, 0, 0.5);
+    text-transform: initial;
+    font-weight: normal;
+	text-align: center;
+}
+.alert_sl .close, 
+.alert_sl .close {
+    position: relative;
+    right: 0px;
+    color: inherit;
+    line-height: 70px;
+    top: 0px;
+    height: 70px;
+}
+
+
+
+
+
+/*  置入 PDF 頁面  */
+.ex_controler.excw {
+	left: 0px;
+    right: 0px;
+    background: linear-gradient(rgba(0,0,0,0),rgba(0,0,0,.7));
+    padding: 15px 50px 15px 50px;
+}
+.pdfbox {
+	min-height: 100%;
+    position: absolute;
+    width: 100%;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+.pdfbox embed {
+	position: absolute;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+	width: 100%;
+	height: 100%;
+}
+.plyr__controls.ex_controler_pdf>button[data-plyr=previous],
+.plyr__controls.ex_controler_pdf>button[data-plyr=next]	{
+    display: inline-block;
+}
+
+
+
+
+
+@media screen and (min-width: 768px) and (max-width: 979px) {
+
+}
+
+@media screen and (max-width: 768px){
+.topblock {
+    padding: 20px 20px 10px 78px;
+}
+.btn_open {
+	z-index: 9999;
+	position: absolute;
+	color: #fff;
+	border-bottom: none;
+	left: 20px;
+	background: rgba(0, 0, 0, 0.3);
+}
+.plyr--video .ex_controler {
+    /*display: none;*/
+	right: 0px;
+    bottom: 110px;
+    width: 250px;
+	left: auto;
+}
+.plyr .plyr__progress {
+    display: inline-block;
+    margin-top: 0px;
+    margin-left: 0px;
+    width: 100%;
+}
+.plyr__controls>button[data-plyr=mute] {
+    margin-top: 0px;
+}
+.plyr__controls>button[data-plyr=previous],
+.plyr__controls>button[data-plyr=next]	{
+    display: none;
+}
+.plyr--captions-active .plyr__captions {
+    display: block;
+    z-index: 101;
+    margin-bottom: 0px;
+}
+.plyr .plyr__time, .plyr .plyr__volume {
+    margin-top: 0px;
+	display: none;
+}
+.topblock .title {
+    font-size: 1rem;
+    line-height: 1.2;
+}
+.btn_open i {
+    font-size: 2rem;
+    vertical-align: middle;
+    padding: 3px 5px;
+}
+.plyr--video .plyr__controls {
+    padding: 10px 15px 10px;
+}
+	
+.iconsl {
+    position: absolute;
+    display: block;
+    bottom: 55px;
+    left: 25px;
+}
+.iconsl button {
+    width: 50px;
+	height: 50px;
+}
+.iconsl .expander {
+    margin-left: 50px;
+	font-size: .6rem;
+	padding: 8px 45px 8px 15px;
+	}
+.iconsl .expander span {
+    font-size: .8rem;
+    font-weight: 700;
+    line-height: 1;
+}
+.iconsl i {
+    line-height: 50px;
+    font-size: 30px;
+}
+.toslvideo {
+  height: 40px;
+    position: absolute;
+    top: 0;
+    left: 40px;
+    width: 280px;
+    display: block;
+    z-index: 999999;
+    cursor: pointer;
+}
+.alert_sl {
+    color: #ffffff;
+    background-color: rgba(0, 0, 0, 0.4);
+    margin-bottom: 5px;
+    padding: 0px;
+    width: 350px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: left;
+    height: 40px;
+    border: 0px solid transparent;
+    display: block;
+    position: relative;
+}
+	
+.iconsl_b i {
+    position: relative;
+    line-height: 40px;
+    font-size: 28px;
+    color: #ffffff;
+    width: 40px;
+    height: 40px;
+    background-color: rgba(0, 0, 0, 0.5);
+    text-transform: initial;
+    font-weight: normal;
+    text-align: center;
+}
+.alert_sl .sl_text {
+	position: absolute;
+    padding: 5px 0px 5px 8px;
+    width: 280px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: #ffffff;
+    height: 40px;
+    line-height: 15px;
+    font-size: 12px;
+}	
+.alert_sl .close, .alert_sl .close {
+    position: relative;
+    right: 0px;
+    color: inherit;
+    line-height: 40px;
+    top: 0px;
+    height: 40px;
+}
+.plyr--video .ex_controler_pdf {
+	display: inline-block;
+    right: 0px;
+    bottom: 0px;
+    width: 100%;
+    left: 0px;
+
+}
+    
+
+	
+	
+	
+}
+
+
+@media screen and (max-width: 480px) {
+.aside.in {
+	min-width: 350px;
+	width: 100%;
+}
+.topblock .title {
+    font-size: 1.4rem;
+    line-height: 1.2;
+}
+.btn_open i {
+    font-size: 2.6rem;
+    vertical-align: middle;
+    padding: 3px 5px;
+}
+.iconsl {
+    position: absolute;
+    display: block;
+    bottom: 45px;
+    left: 15px;
+}
+.iconsl button {
+    width: 40px;
+    height: 50px;
+}
+.iconsl .expander {
+    margin-left: 40px;
+    padding: 8px 45px 8px 15px;
+	width: 320px;
+}
+
+	
+	
+}
+
+
+
+
+
+
+.btn.active.focus, 
+.btn.active:focus, 
+.btn.focus, 
+.btn:active.focus, 
+.btn:active:focus, 
+.btn:focus {
+    background-color: #fff;
+    -webkit-box-shadow: inset 0 0px 0px rgba(0,0,0,0);
+    box-shadow: inset 0 0px 0px rgba(0,0,0,0);
+    color: #21143a;
+}
+
+
+
+
+
+

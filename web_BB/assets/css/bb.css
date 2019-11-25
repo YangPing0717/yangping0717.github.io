@@ -1236,7 +1236,7 @@ blockquote.blockquote:before {
 }
 
 .page-header .page-header-bg {
-  background: url(../images/article_img_9.jpg) no-repeat center center;
+  background: url(../images/article_img_c_main_2.jpg) no-repeat center center;
   background-size: cover;
 }
 
@@ -1654,6 +1654,547 @@ blockquote.blockquote:before {
   line-height: 4.8rem;
 }
 
+/*=========================================================
+	accountBox 個人帳戶
+===========================================================*/
+.sidebar .userid {
+  padding: 20px 30px;
+}
+
+@media screen and (max-width: 576px) {
+  .sidebar .userid {
+    margin-top: -58px;
+    padding: 20px 30px 0px;
+    border-bottom: 1px solid #eee;
+  }
+}
+
+.sidebar .userid .userinfo {
+  margin-top: 20px;
+  color: #989898;
+  /*border-bottom: 1px solid rgba(255, 255, 255, 0.25);*/
+  padding-bottom: 15px;
+  /*margin-bottom: 20px;*/
+  font-weight: 700;
+}
+
+.sidebar .userid .userinfo div {
+  margin-bottom: 8px;
+}
+
+.sidebar .userid .userinfo div span {
+  color: #FF3700;
+  position: absolute;
+  left: 100px;
+}
+
+.sidebar .userphoto {
+  width: 70px;
+  height: 70px;
+  overflow: hidden;
+  border-radius: 50%;
+  background-color: #ffbbb1;
+  display: inline-block;
+  margin-right: 8px;
+  vertical-align: middle;
+  text-align: center;
+  color: #fff;
+  -webkit-box-shadow: 0px 8px 10px rgba(126, 74, 74, 0.15);
+          box-shadow: 0px 8px 10px rgba(126, 74, 74, 0.15);
+}
+
+.sidebar .userphoto i {
+  line-height: 64px;
+  font-size: 60px;
+}
+
+.sidebar .userphoto .badge {
+  display: inline-block;
+  min-width: 10px;
+  padding: 5px 6px;
+  font-weight: 700;
+  line-height: 1;
+  color: #fff;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  background-color: #F56F4A;
+  border-radius: 50%;
+  position: absolute;
+  margin-top: 3.4rem;
+  margin-left: -1rem;
+}
+
+.sidebar .userphoto .badge i {
+  font-size: 1.6rem;
+  line-height: 1.6rem;
+}
+
+.accountBox .container {
+  overflow-y: hidden;
+  position: relative;
+}
+
+.menu_toggle_btn {
+  position: absolute;
+  border-radius: 50%;
+  background: #fff;
+  top: 20px;
+  right: 0px;
+  border: 1px solid #FE979C;
+}
+
+@media screen and (max-width: 576px) {
+  .menu_toggle_btn {
+    top: 0px;
+    right: 15px;
+    z-index: 100;
+  }
+}
+
+.accountBox {
+  margin-top: 125px;
+}
+
+@media screen and (max-width: 576px) {
+  .accountBox {
+    margin-top: 46px;
+  }
+}
+
+.accountBox .infoBox .login_sign {
+  margin-top: 30px;
+}
+
+.accountBox .infoBox .login_sign .form-horizontal {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin-bottom: 20px;
+}
+
+@media screen and (max-width: 576px) {
+  .accountBox .infoBox .login_sign .form-horizontal {
+    display: contents;
+  }
+}
+
+.accountBox .infoBox .login_sign .form-horizontal .checkbox .checkbox-btn {
+  margin-right: 20px;
+}
+
+.accountBox .infoBox .login_sign .form-horizontal .checkbox .checkbox-btn label {
+  font-size: 100%;
+  padding-left: 8px;
+}
+
+.accountBox .infoBox .login_sign .form-horizontal label {
+  display: inline-block;
+  max-width: 100%;
+  margin-bottom: 5px;
+  font-weight: normal;
+  font-size: 12px;
+  padding-left: 0px;
+}
+
+@media screen and (max-width: 576px) {
+  .accountBox .infoBox .login_sign .form-horizontal label {
+    margin-top: 10px;
+    padding-left: 0px;
+  }
+}
+
+.accountBox .infoBox .login_sign .form-horizontal input {
+  width: 100%;
+}
+
+.accountBox .infoBox .login_sign .form-horizontal input.fix_content {
+  width: initial;
+}
+
+.accountBox .infoBox .login_sign .form-horizontal .form-group {
+  margin-right: 0px;
+  margin-left: 0px;
+  margin-bottom: 0px;
+  width: 100% !important;
+}
+
+.accountBox .infoBox .login_sign .form-horizontal .form-group .bootstrap-select:not([class*="col-"]):not([class*="form-control"]):not(.input-group-btn) {
+  width: 100%;
+}
+
+.accountBox .infoBox .login_sign .form-horizontal .form-group .btn {
+  border-radius: 2px;
+}
+
+.accountBox .infoBox .login_sign .form-horizontal .form-group .btn .caret {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  margin-left: 2px;
+  vertical-align: middle;
+  border-top: 6px dashed;
+  border-top: 4px solid\9;
+  border-right: 6px solid transparent;
+  border-left: 6px solid transparent;
+  color: #FF3700;
+}
+
+.accountBox .infoBox .login_sign .form-horizontal .form-group .btn.dropdown-toggle::after {
+  display: none;
+}
+
+.accountBox .infoBox .login_sign .form-horizontal .form-group .form-control {
+  border-radius: 0px;
+}
+
+.accountBox .infoBox .login_sign .form-horizontal .form-group .form-control:focus {
+  border-color: #fe9384;
+  outline: 0;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(255, 152, 137, 0.5);
+          box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(255, 152, 137, 0.5);
+}
+
+.accountBox .infoBox .login_sign .form-horizontal .form-group .dropdown-menu > .active > a, .accountBox .infoBox .login_sign .form-horizontal .form-group .dropdown-menu > .active > a:focus, .accountBox .infoBox .login_sign .form-horizontal .form-group .dropdown-menu > .active > a:hover {
+  color: #fff;
+  text-decoration: none;
+  background-color: #ff7e6c;
+  outline: 0;
+}
+
+.accountBox .infoBox .login_sign .text_s {
+  text-align: left;
+}
+
+.accountBox .infoBox .login_sign .text_s .login_info {
+  display: block;
+}
+
+.accountBox .infoBox .login_sign .text_s .login_info a {
+  color: #FF3700;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.accountBox .infoBox .login_sign .text_s .login_info .pw {
+  float: right;
+}
+
+.accountBox .infoBox .login_sign .text_s .login_info.mt_70 {
+  margin-top: 80px;
+}
+
+.accountBox .infoBox .login_sign .text_s .login_info.pw {
+  float: right;
+}
+
+.accountBox .pointsTable #example_length {
+  display: none !important;
+}
+
+.accountBox .pointsTable .dataTables_wrapper, .accountBox .pointsTable table.dataTable {
+  clear: initial;
+}
+
+@media screen and (max-width: 576px) {
+  .accountBox .pointsTable .dataTables_wrapper, .accountBox .pointsTable table.dataTable {
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+    clear: left;
+  }
+}
+
+.accountBox .pointsTable .dataTables_wrapper .dataTables_filter {
+  float: left;
+  text-align: left;
+}
+
+.accountBox .pointsTable .dataTables_wrapper .dataTables_filter label {
+  display: inline-block;
+  max-width: 100%;
+  margin-bottom: 1.2rem;
+  font-weight: 700;
+}
+
+.accountBox .pointsTable table.dataTable thead th,
+.accountBox .pointsTable table.dataTable thead td {
+  padding: 10px 18px;
+  border-bottom: 1px solid #F56F4A;
+  position: relative;
+}
+
+@media screen and (max-width: 576px) {
+  .accountBox .pointsTable table.dataTable thead th,
+  .accountBox .pointsTable table.dataTable thead td {
+    padding: 10px 44px 10px 18px;
+  }
+}
+
+.accountBox .pointsTable table.dataTable.no-footer {
+  border-bottom: 3px solid #F56F4A;
+}
+
+.accountBox .pointsTable table.dataTable.stripe tbody tr.odd,
+.accountBox .pointsTable table.dataTable.display tbody tr.odd {
+  background-color: #fff6f6;
+}
+
+.accountBox .pointsTable table.dataTable.display tbody tr.odd > .sorting_1,
+.accountBox .pointsTable table.dataTable.order-column.stripe tbody tr.odd > .sorting_1 {
+  background-color: #ffe7e4;
+}
+
+.accountBox .pointsTable table.dataTable.display tbody tr.even > .sorting_1,
+.accountBox .pointsTable table.dataTable.order-column.stripe tbody tr.even > .sorting_1 {
+  background-color: #fef6f5;
+}
+
+.accountBox .pointsTable table.dataTable.hover tbody tr:hover,
+.accountBox .pointsTable table.dataTable.display tbody tr:hover {
+  background-color: #ffebe9 !important;
+}
+
+.accountBox .pointsTable table.dataTable thead .sorting_asc,
+.accountBox .pointsTable table.dataTable thead .sorting_desc,
+.accountBox .pointsTable table.dataTable thead .sorting {
+  background-image: none;
+}
+
+.accountBox .pointsTable table.dataTable thead .sorting_asc:after {
+  content: "\E313";
+  font-family: 'Material Icons';
+  color: #FF3700;
+  vertical-align: middle;
+  position: absolute;
+  right: 15px;
+  font-size: 2rem;
+}
+
+@media screen and (max-width: 576px) {
+  .accountBox .pointsTable table.dataTable thead .sorting_asc:after {
+    right: 0px;
+  }
+}
+
+.accountBox .pointsTable table.dataTable thead .sorting_desc:after {
+  content: "\E316";
+  font-family: 'Material Icons';
+  color: #FF3700;
+  vertical-align: middle;
+  position: absolute;
+  right: 15px;
+  font-size: 2rem;
+}
+
+.accountBox .pointsTable table.dataTable thead .sorting:after {
+  content: "\E313";
+  font-family: 'Material Icons';
+  color: #FF3700;
+  vertical-align: middle;
+  position: absolute;
+  right: 15px;
+  font-size: 2rem;
+}
+
+@media screen and (max-width: 576px) {
+  .accountBox .pointsTable table.dataTable thead .sorting:after {
+    right: 0px;
+  }
+}
+
+.accountBox .pointsTable .dataTables_wrapper .dataTables_paginate .paginate_button {
+  border-radius: 12px;
+}
+
+.accountBox .pointsTable .dataTables_wrapper .dataTables_paginate .paginate_button.next, .accountBox .pointsTable .dataTables_wrapper .dataTables_paginate .paginate_button.previous {
+  border: 0px solid #FF3700 !important;
+  background: none !important;
+  color: #333 !important;
+}
+
+.accountBox .pointsTable .dataTables_wrapper .dataTables_paginate .paginate_button.next:hover, .accountBox .pointsTable .dataTables_wrapper .dataTables_paginate .paginate_button.previous:hover {
+  color: #FF3700 !important;
+}
+
+.accountBox .pointsTable .dataTables_wrapper .dataTables_paginate .paginate_button:hover {
+  border: 1px solid #FF3700;
+  background: -webkit-gradient(linear, left top, left bottom, from(#FF3700), to(#FE979C));
+  background: linear-gradient(to bottom, #FF3700 0%, #FE979C 100%);
+}
+
+.accountBox .pointsTable .dataTables_wrapper .dataTables_paginate .paginate_button.current,
+.accountBox .pointsTable .dataTables_wrapper .dataTables_paginate .paginate_button.current:hover {
+  color: #FF3700 !important;
+  border: 1px solid #FF3700;
+  background: none;
+}
+
+.accountBox .pointsTable .dataTables_wrapper .dataTables_paginate .paginate_button.disabled,
+.accountBox .pointsTable .dataTables_wrapper .dataTables_paginate .paginate_button.disabled:hover,
+.accountBox .pointsTable .dataTables_wrapper .dataTables_paginate .paginate_button.disabled:active {
+  cursor: default;
+  color: #666 !important;
+  border: 1px solid transparent;
+  background: transparent;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.accountBox .pointsTable .dataTables_wrapper .dataTables_paginate {
+  padding-top: 0.8rem;
+}
+
+@media screen and (max-width: 767px) {
+  .accountBox .pointsTable .dataTables_wrapper .dataTables_paginate {
+    padding-top: 1.2rem;
+    float: left;
+  }
+}
+
+.accountBox .id_classCard .related .post.post-sm .post-title.title-sm {
+  font-size: 2rem;
+  line-height: 2.4rem;
+  margin-bottom: 10px;
+}
+
+.accountBox .id_classCard .related .post.post-sm .post-meta a {
+  color: #96989b;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+}
+
+.accountBox .id_classCard .related .post.post-sm .post-meta a:hover, .accountBox .id_classCard .related .post.post-sm .post-meta a:focus {
+  color: #FF3700 !important;
+}
+
+.accountBox .id_classCard .related .post.post-sm .post-body {
+  margin: 0px 0px 0px;
+  background: transparent;
+  padding: 20px 15px 30px;
+  border: 1px solid #ddd;
+}
+
+.accountBox .id_classCard .related .post-meta.tag_box {
+  margin-top: 6px;
+}
+
+.accountBox .id_classCard .related .post-meta.tag_box li.tag a {
+  font-size: 10px;
+  border-radius: 30px;
+  margin-right: 3px;
+  padding: 5px 12px;
+  color: #fff;
+}
+
+.accountBox .id_classCard .related .post-meta.tag_box li.tag a:hover, .accountBox .id_classCard .related .post-meta.tag_box li.tag a:focus {
+  color: rgba(255, 255, 255, 0.5) !important;
+}
+
+.accountBox .id_classCard .related .post-meta.tag_box li.tag a:after {
+  display: none;
+}
+
+.accountBox .id_classCard .related .post-meta.act_info {
+  margin-top: 10px;
+}
+
+.accountBox .id_classCard .related .post-meta.act_info li {
+  display: block;
+  color: #96989b;
+  font-weight: bold;
+}
+
+.accountBox .id_classCard .related .post-meta.act_info li span {
+  color: #333;
+  margin-left: 6px;
+}
+
+.accountBox .id_classCard .related .post-meta.act_info li:after {
+  content: '';
+}
+
+.accountBox .id_classCard .isOpen {
+  overflow-x: hidden;
+}
+
+.accountBox .id_classCard .isOpen:after {
+  content: '開放報名';
+  position: absolute;
+  line-height: 32px;
+  width: 150px;
+  height: 32px;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  color: #fff;
+  background-color: #FF3700;
+  text-align: center;
+  right: -38px;
+  top: 18px;
+  font-size: 16px;
+  font-weight: 700;
+  -webkit-box-shadow: 0px 5px 10px 0px #a3a3a3;
+          box-shadow: 0px 5px 10px 0px #a3a3a3;
+}
+
+.accountBox .id_classCard .overDue {
+  overflow-x: hidden;
+}
+
+.accountBox .id_classCard .overDue:after {
+  content: '報名截止';
+  position: absolute;
+  line-height: 32px;
+  width: 150px;
+  height: 32px;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  color: #fff;
+  background-color: #96989b;
+  text-align: center;
+  right: -38px;
+  top: 18px;
+  font-size: 16px;
+  font-weight: 700;
+  -webkit-box-shadow: 0px 5px 10px 0px #a3a3a3;
+          box-shadow: 0px 5px 10px 0px #a3a3a3;
+}
+
+.accountBox .id_classCard .overDue .act_book {
+  display: none;
+}
+
+.accountBox .id_classCard .isBooked {
+  overflow-x: hidden;
+}
+
+.accountBox .id_classCard .isBooked:after {
+  content: '已報名';
+  position: absolute;
+  line-height: 32px;
+  width: 150px;
+  height: 32px;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  color: #fff;
+  background-color: #FE979C;
+  text-align: center;
+  right: -38px;
+  top: 18px;
+  font-size: 16px;
+  font-weight: 700;
+  -webkit-box-shadow: 0px 5px 10px 0px #a3a3a3;
+          box-shadow: 0px 5px 10px 0px #a3a3a3;
+}
+
+.accountBox .id_classCard .isBooked .act_book {
+  display: none;
+}
+
 @media (max-width: 992px) {
   nav.navbar.bootsnav.no-full .navbar-collapse {
     max-height: calc(100vh - 57px);
@@ -1728,5 +2269,8 @@ blockquote.blockquote:before {
     margin: 0px 0px 0px;
     background: transparent;
     padding: 15px;
+  }
+  nav.navbar.bootsnav {
+    z-index: 200;
   }
 }
