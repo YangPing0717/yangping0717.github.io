@@ -53,11 +53,6 @@
   padding: 8px 24px;
 }
 
-.button.btn_buy {
-  padding: 14px 120px;
-  font-weight: 700;
-}
-
 .button.btn_buy:after {
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
@@ -66,7 +61,7 @@
   margin-left: -25px;
   opacity: 0;
   vertical-align: middle;
-  font-size: 8rem;
+  font-size: 5rem;
   font-weight: 100;
 }
 

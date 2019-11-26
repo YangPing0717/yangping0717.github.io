@@ -12,6 +12,8 @@ $col_light_2: #F56F4A;
 $col_bri: #FF3700;
 $col_bri_dark: #a90300;
 $col_bri_dark_text: #750505;
+$col_bri_text: #942c2c;
+
 
 $col_dark: #392F22;
 $col_dark_br_light: #9D9081;
@@ -1119,7 +1121,7 @@ blockquote.blockquote {
   min-height: calc(100vh - 185px);
   position: relative;
   .page-header-bg {
-    background: url(../images/article_img_c_main_3.jpg) no-repeat center center;
+    background: url(../images/article_img_c_main_4.jpg) no-repeat center center;
     // background: url(../images/article_img_9.jpg);
     // background-size: cover;
     // background-size: 106%;
@@ -1256,28 +1258,47 @@ blockquote.blockquote {
 ===========================================================*/
 .article {
   h3 {
-    font-size: 3rem;
-    line-height: 3.5rem;
+    font-size: 2.8rem;
+    line-height: 3.2rem;
+    color: #6f6f6f;
   }
   h5 {
+    font-size: 1.8rem;
+    line-height: 2.2rem;
+    margin-top: 2rem;
     span{
       color: $col_bri;
       margin-left: 10px;
     }
   }
+  h6 {
+    font-size: 1.6rem;
+    line-height: 2.2rem;
+    margin-bottom: 2.4rem;
+    border-left: 9px solid $col_light_2;
+    padding-left: 20px;
+  }
+  .subtitle {
+    font-size: 1.8rem;
+    line-height: 2.2rem;
+    margin-top: 2rem;
+    color: $col_bri_text;
+    margin-bottom: 0.6rem;
+    font-weight: 700;
+  }
   .blockquote:before{
     content: 'o';
     font-family: 'PWSmallIcons';
-    width: 90px;
-    height: 90px;
-    line-height: 100px;
+    width: 66px;
+    height: 66px;
+    line-height: 6.2rem;
     text-align: center;
     border-radius: 50%;
-    color: $col_bri;
-    font-size: 8rem;
+    color: #FF3700;
+    font-size: 6rem;
     background: #fff;
     border: 2px solid #e8eaed;
-    float: left;
+    // float: left;
     margin-right: 15px;
     transform: rotate(30deg);
     padding-left: 3px;
@@ -1357,7 +1378,7 @@ blockquote.blockquote {
   float: right;
 }
 #scroller {
-  width: 300px;
+  width: 270px;
   z-index: 1;
   // margin-top: 76px;
   @media screen and (max-width: $break-small) {

@@ -1236,7 +1236,7 @@ blockquote.blockquote:before {
 }
 
 .page-header .page-header-bg {
-  background: url(../images/article_img_c_main_3.jpg) no-repeat center center;
+  background: url(../images/article_img_c_main_4.jpg) no-repeat center center;
   background-size: cover;
 }
 
@@ -1396,8 +1396,15 @@ blockquote.blockquote:before {
 	修改 Content - article
 ===========================================================*/
 .article h3 {
-  font-size: 3rem;
-  line-height: 3.5rem;
+  font-size: 2.8rem;
+  line-height: 3.2rem;
+  color: #6f6f6f;
+}
+
+.article h5 {
+  font-size: 1.8rem;
+  line-height: 2.2rem;
+  margin-top: 2rem;
 }
 
 .article h5 span {
@@ -1405,19 +1412,35 @@ blockquote.blockquote:before {
   margin-left: 10px;
 }
 
+.article h6 {
+  font-size: 1.6rem;
+  line-height: 2.2rem;
+  margin-bottom: 2.4rem;
+  border-left: 9px solid #F56F4A;
+  padding-left: 20px;
+}
+
+.article .subtitle {
+  font-size: 1.8rem;
+  line-height: 2.2rem;
+  margin-top: 2rem;
+  color: #942c2c;
+  margin-bottom: 0.6rem;
+  font-weight: 700;
+}
+
 .article .blockquote:before {
   content: 'o';
   font-family: 'PWSmallIcons';
-  width: 90px;
-  height: 90px;
-  line-height: 100px;
+  width: 66px;
+  height: 66px;
+  line-height: 6.2rem;
   text-align: center;
   border-radius: 50%;
   color: #FF3700;
-  font-size: 8rem;
+  font-size: 6rem;
   background: #fff;
   border: 2px solid #e8eaed;
-  float: left;
   margin-right: 15px;
   -webkit-transform: rotate(30deg);
           transform: rotate(30deg);
@@ -1500,7 +1523,7 @@ blockquote.blockquote:before {
 }
 
 #scroller {
-  width: 300px;
+  width: 270px;
   z-index: 1;
 }
 

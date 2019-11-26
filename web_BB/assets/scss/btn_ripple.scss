@@ -44,8 +44,8 @@ $transition: all 0.3s ease-out;
     padding: 8px 24px;
   }
   &.btn_buy{
-    padding: 14px 120px;
-    font-weight: 700;
+    // padding: 14px 120px;
+    // font-weight: 700;
     &:after{
       transition: all 0.3s ease;
       // content: "\f061";
@@ -56,7 +56,7 @@ $transition: all 0.3s ease-out;
       opacity: 0;
       vertical-align: middle;
       // font-size: 2rem;
-      font-size: 8rem;
+      font-size: 5rem;
       font-weight: 100;
     }
     &:hover:after {
