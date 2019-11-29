@@ -563,6 +563,13 @@ ul.cart-list > li > h6 > a > i {
           transform: rotate(5deg);
 }
 
+@media screen and (max-width: 576px) {
+  .tvBox .section-title:after {
+    font-size: 12rem;
+    top: 22px;
+  }
+}
+
 .tvBox .section-title .title {
   font-size: 1.8rem;
   color: #fff;
@@ -570,6 +577,14 @@ ul.cart-list > li > h6 > a > i {
   line-height: initial;
   padding-right: 11rem;
   font-weight: 700;
+}
+
+@media screen and (max-width: 576px) {
+  .tvBox .section-title .title {
+    font-size: 2.4rem;
+    text-align: left;
+    padding-left: 1rem;
+  }
 }
 
 .tvBox .post.post-widget {
@@ -593,6 +608,7 @@ ul.cart-list > li > h6 > a > i {
   background: transparent;
   margin: 0px 0px 0px 95px;
   padding: 0;
+  height: 80px;
 }
 
 .tvBox .post.post-widget .post-body .post-title {
@@ -600,9 +616,12 @@ ul.cart-list > li > h6 > a > i {
   margin-bottom: 0px;
   position: absolute;
   margin: auto;
-  top: 28px;
+  top: 0;
   bottom: 0px;
   line-height: 2.2rem;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
 }
 
 .tvBox .post.post-widget:hover .post-body .post-title {
@@ -1759,14 +1778,9 @@ blockquote.blockquote:before {
   transition: 1s;
 }
 
-#back-top a:hover {
-  color: #000;
-}
-
-/* arrow icon (span tag) */
-#back-top span {
-  width: 5rem;
-  height: 5rem;
+#back-top a span {
+  width: 4.5rem;
+  height: 4.5rem;
   display: block;
   background-color: #fe9384;
   -webkit-transition: 1s;
@@ -1777,13 +1791,17 @@ blockquote.blockquote:before {
   border-radius: 50%;
 }
 
+#back-top a:hover {
+  color: #000;
+}
+
 #back-top a:hover span {
   background-color: rgba(211, 131, 120, 0.4);
 }
 
-.iconbi {
+#back-top a .iconbi {
   font-size: 3.4rem;
-  line-height: 4.8rem;
+  line-height: 4.4rem;
 }
 
 /*=========================================================

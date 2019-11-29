@@ -524,6 +524,9 @@ ul.cart-list > li > h6 > a > i {
     overflow: hidden;
     margin-right: -20px;
     margin-left: -20px;
+    @media screen and (max-width: $break-small) {
+
+    }
     &:after{
       font-family: 'PWSmallIcons';
       content: "w";
@@ -535,6 +538,10 @@ ul.cart-list > li > h6 > a > i {
       font-weight: 100;
       top: 19px;
       transform:rotate(5deg);
+      @media screen and (max-width: $break-small) {
+        font-size: 12rem;
+        top: 22px;
+      }
     }
     .title {
       font-size: 1.8rem;
@@ -543,6 +550,11 @@ ul.cart-list > li > h6 > a > i {
       line-height: initial;
       padding-right: 11rem;
       font-weight: 700;
+      @media screen and (max-width: $break-small) {
+        font-size: 2.4rem;
+        text-align: left;
+        padding-left: 1rem;
+      }
     }
   }
   .post.post-widget{
@@ -562,14 +574,16 @@ ul.cart-list > li > h6 > a > i {
       background: transparent;
       margin: 0px 0px 0px 95px;
       padding: 0;
+      height: 80px;
       .post-title{
         font-size: 16px;
         margin-bottom: 0px;
         position: absolute;
         margin: auto;
-        top: 28px;
+        top: 0;
         bottom: 0px;
         line-height: 2.2rem;
+        height: fit-content;
       }
     }
     &:hover {
@@ -1573,37 +1587,37 @@ blockquote.blockquote {
   @media screen and (max-width: $break-small) {
     right: 28px;
   }
+  a {
+    width: 4.2rem;
+    display: block;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #bbb;
+    transition: 1s;
+    span {
+      width: 4.5rem;
+      height: 4.5rem;
+      display: block;
+      background-color: #fe9384;
+      transition: 1s;
+      color: #fff;
+      box-shadow: 0 0px 16px 5px rgba(254, 147, 132, 0.4);
+      border-radius: 50%;
+    }
+    &:hover {
+      color: #000;
+      span {
+        background-color: hsla(7, 51%, 65%, 0.4);
+      }	
+    }
+    .iconbi {
+      font-size: 3.4rem;
+      line-height: 4.4rem;
+    }
+  }
 }
-#back-top a {
-  width: 4.2rem;
-  display: block;
-  text-align: center;
-  text-transform: uppercase;
-  text-decoration: none;
-  color: #bbb;
-  transition: 1s;
-}
-#back-top a:hover {
-  color: #000;
-}
-/* arrow icon (span tag) */
-#back-top span {
-  width: 5rem;
-  height: 5rem;
-  display: block;
-  background-color: #fe9384;
-  transition: 1s;
-  color: #fff;
-  box-shadow: 0 0px 16px 5px rgba(254, 147, 132, 0.4);
-  border-radius: 50%;
-}
-#back-top a:hover span {
-  background-color: hsla(7, 51%, 65%, 0.4);
-}	
-.iconbi {
-  font-size: 3.4rem;
-  line-height: 4.8rem;
-}
+
 
 
 
