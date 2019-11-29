@@ -1978,7 +1978,7 @@ blockquote.blockquote:before {
 }
 
 .accountBox .infoBox .login_sign .form-horizontal .form-group .btn {
-  border-radius: 2px;
+  border-radius: 0px;
 }
 
 .accountBox .infoBox .login_sign .form-horizontal .form-group .btn .caret {
@@ -2464,6 +2464,10 @@ blockquote.blockquote:before {
 .period .dash {
   margin-left: 10px;
   font-size: 2rem;
+}
+
+.period input {
+  width: 200px;
 }
 
 @media (max-width: 992px) {

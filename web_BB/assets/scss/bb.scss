@@ -1762,7 +1762,7 @@ blockquote.blockquote {
             width: 100%;
           }
           .btn{
-            border-radius: 2px;
+            border-radius: 0px;
             // width: 30%;
             .caret {
               display: inline-block;
@@ -2168,6 +2168,9 @@ blockquote.blockquote {
   .dash {
     margin-left: 10px;
     font-size: 2rem;
+  }
+  input {
+    width: 200px;
   }
 }
 
