@@ -1,0 +1,120 @@
+@charset "UTF-8";
+body {
+  width: 100%;
+  height: 100%;
+  font-family: 微軟正黑體, 微软正黑体, Montserrat, "Open Sans", sans-serif;
+}
+
+.zjy .logo .logoimg {
+  margin: 0.5rem auto 0.3rem auto;
+  width: auto;
+  height: 2rem;
+  background: url("../img/logo.svg") no-repeat center center;
+  background-size: 100% 100%;
+  margin-left: -.2rem;
+}
+
+.zjy .top-tab .tabs-bg .left-tab {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  height: 1.4rem;
+  background-color: #9defae;
+}
+
+.zjy .top-tab .tabs-bg .right-tab {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  height: 1.4rem;
+  background-color: #ffd582;
+}
+
+.zjy .top-tab .tabs {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 0.4rem;
+  color: #FFFFFFA7;
+  width: 100%;
+  letter-spacing: -1px;
+}
+
+.zjy .top-tab .tabs .left-tab {
+  padding: 0.44rem 0.4rem;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  text-align: right;
+  line-height: 0.5rem;
+}
+
+.zjy .top-tab .tabs .right-tab {
+  padding: 0.44rem 0.4rem;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  text-align: left;
+  line-height: 0.5rem;
+}
+
+.zjy .top-tab .tabs .left-tab a,
+.zjy .top-tab .tabs .right-tab a {
+  color: #ffffff !important;
+  font-weight: bold;
+}
+
+.zjy .top-tab .tabs .left-tab.active {
+  font-size: 0.6rem;
+  color: #ffffff !important;
+  background: #58ca70;
+  line-height: 0.5rem;
+}
+
+.zjy .top-tab .tabs .right-tab.active {
+  font-size: 0.6rem;
+  color: #ffffff !important;
+  background: #ffba4d;
+  line-height: 0.5rem;
+}
+
+.zjy .top-tab .tabs .right-tab.active a,
+.zjy .top-tab .tabs .left-tab.active a {
+  color: #ffffff !important;
+}
+
+.zjy .top-tab .left-pic {
+  position: absolute;
+  width: 3.2rem;
+  top: -1.5rem;
+  height: 3.2rem;
+  background: url(../img/bear_left.svg) no-repeat center center;
+  background-size: 100% 100%;
+  z-index: 1;
+  left: -.8rem;
+}
+
+.zjy .top-tab .right-pic {
+  position: absolute;
+  top: -1.2rem;
+  width: 3.2rem;
+  height: 2.8rem;
+  background: url("../img/bear_right.png") no-repeat center center;
+  background-size: 100% 100%;
+  z-index: 1;
+  right: -.8rem;
+}
+
+.zjy .videolist .video-contanier .img-box .time {
+  padding: 0 0.16rem .12rem;
+  position: absolute;
+  right: .85rem;
+  bottom: 0.4rem;
+  text-align: center;
+  color: #FFFFFF;
+  font-size: 0.36rem;
+  background-color: rgba(0, 0, 0, 0.7);
+}
