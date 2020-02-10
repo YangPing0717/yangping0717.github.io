@@ -109,16 +109,6 @@ body {
   z-index: 1;
 }
 
-.zjy .videolist .video-contanier .img-box .time {
-  padding: 0 0.16rem .12rem;
-  position: absolute;
-  bottom: 0.35rem;
-  text-align: center;
-  color: #FFFFFF;
-  font-size: 0.36rem;
-  background-color: rgba(0, 0, 0, 0.7);
-}
-
 .zjy .top-row .top-tit {
   font-weight: bold;
   -webkit-box-flex: 2;
@@ -234,6 +224,60 @@ body {
   line-height: 10px;
 }
 
-.zjy .videolist .video-contanier .img-box img {
+.zjy .videos1 .videolist .video-contanier .img-box {
+  overflow: hidden;
+  border-radius: 5px;
+}
+
+.zjy .videos1 .videolist .video-contanier .img-box img {
   width: 100% !important;
+}
+
+.zjy .videos1 .videolist .video-contanier .img-box .time {
+  padding: 0 0.16rem .12rem;
+  position: absolute;
+  bottom: 0.35rem;
+  text-align: center;
+  color: #FFFFFF;
+  font-size: 10px;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.zjy .videos2 .videolist .video-contanier {
+  margin-left: 0.4rem;
+  width: 13rem;
+  display: inline-block;
+}
+
+.zjy .videos2 .videolist .video-contanier .img-box {
+  width: 100%;
+  height: 7rem;
+  position: relative;
+  overflow: hidden;
+  border-radius: 5px;
+}
+
+.zjy .videos2 .videolist .video-contanier .img-box img {
+  height: 7rem !important;
+}
+
+.zjy .videos2 .videolist .video-contanier .img-box .time {
+  padding: 0 0.16rem .12rem;
+  position: absolute;
+  bottom: 0.35rem;
+  text-align: center;
+  color: #FFFFFF;
+  font-size: 10px;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.zjy .top-swiper .img-box .time {
+  padding: 0 0.16rem .12rem;
+  position: absolute;
+  right: 0.5rem;
+  bottom: 0.5rem;
+  text-align: center;
+  color: #FFFFFF;
+  font-size: 10px;
+  background-color: rgba(0, 0, 0, 0.7);
 }
