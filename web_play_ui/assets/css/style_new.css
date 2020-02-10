@@ -282,7 +282,7 @@ body {
 }
 
 .detail2 .details-info .video-tit {
-  color: #4B4B4B;
+  color: #545454;
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
@@ -290,11 +290,16 @@ body {
   -webkit-line-clamp: 2;
   font-size: 0.8rem;
   line-height: 1.1rem;
+  font-weight: bold;
+}
+
+.detail2 .details-info .video-tit a {
+  color: #545454;
 }
 
 .detail2 .details-info .tit-detail {
   font-size: 0.55rem;
-  color: #4B4B4B;
+  color: #545454;
   margin-top: 4px;
 }
 
