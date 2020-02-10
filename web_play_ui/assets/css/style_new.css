@@ -245,20 +245,20 @@ body {
 
 .zjy .videos2 .videolist .video-contanier {
   margin-left: 0.4rem;
-  width: 13rem;
+  width: 12rem;
   display: inline-block;
 }
 
 .zjy .videos2 .videolist .video-contanier .img-box {
   width: 100%;
-  height: 7rem;
+  height: 6.5rem;
   position: relative;
   overflow: hidden;
   border-radius: 5px;
 }
 
 .zjy .videos2 .videolist .video-contanier .img-box img {
-  height: 7rem !important;
+  height: 6.5rem !important;
 }
 
 .zjy .videos2 .videolist .video-contanier .img-box .time {
