@@ -149,7 +149,8 @@ body {
   height: 0.6rem;
   background: url(../img/arrow.png) no-repeat center center;
   background-size: 100% 100%;
-  vertical-align: text-bottom;
+  // vertical-align: text-bottom;
+  vertical-align: middle;
 }
 .zjy .videolist .video-contanier .title {
   width: 100%;
@@ -182,7 +183,7 @@ body {
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
-    line-height: 12px;
+    // line-height: 12px;
   }
 }
 
