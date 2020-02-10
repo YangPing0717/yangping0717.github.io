@@ -341,7 +341,7 @@ body {
   display: -ms-flexbox;
   display: flex;
   width: 100%;
-  height: 22px;
+  height: 24px;
   -ms-flex-wrap: nowrap;
       flex-wrap: nowrap;
   overflow: hidden;
@@ -349,11 +349,11 @@ body {
 
 .detail2 .tags .tag {
   margin: 0 0.16rem 0 0;
-  padding: 0.1rem 0.4rem;
+  padding: 0.15rem 0.4rem;
   border-radius: 0.6rem;
   color: #fff;
   font-size: 12px;
-  line-height: 16px;
+  line-height: 14px;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
