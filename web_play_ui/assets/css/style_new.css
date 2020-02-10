@@ -40,7 +40,6 @@ body {
   font-size: 0.4rem;
   color: #FFFFFFA7;
   width: 100%;
-  letter-spacing: -1px;
 }
 
 .zjy .top-tab .tabs .left-tab {
@@ -72,6 +71,7 @@ body {
   color: #ffffff !important;
   background: #58ca70;
   line-height: 0.5rem;
+  letter-spacing: -1px;
 }
 
 .zjy .top-tab .tabs .right-tab.active {
@@ -79,6 +79,7 @@ body {
   color: #ffffff !important;
   background: #ffba4d;
   line-height: 0.5rem;
+  letter-spacing: -1px;
 }
 
 .zjy .top-tab .tabs .right-tab.active a,
@@ -92,29 +93,145 @@ body {
   top: -1.5rem;
   height: 3.2rem;
   background: url(../img/bear_left.svg) no-repeat center center;
-  background-size: 100% 100%;
+  background-size: cover;
   z-index: 1;
-  left: -.8rem;
+  left: -1rem;
 }
 
 .zjy .top-tab .right-pic {
   position: absolute;
   top: -1.2rem;
-  width: 3.2rem;
-  height: 2.8rem;
-  background: url("../img/bear_right.png") no-repeat center center;
-  background-size: 100% 100%;
+  width: 2.8rem;
+  height: 3.2rem;
+  background: url(../img/bear_right.png) no-repeat left center;
+  background-size: cover;
   z-index: 1;
-  right: -.8rem;
 }
 
 .zjy .videolist .video-contanier .img-box .time {
   padding: 0 0.16rem .12rem;
   position: absolute;
-  right: .85rem;
-  bottom: 0.4rem;
+  bottom: 0.35rem;
   text-align: center;
   color: #FFFFFF;
   font-size: 0.36rem;
   background-color: rgba(0, 0, 0, 0.7);
+}
+
+.zjy .top-row .top-tit {
+  font-weight: bold;
+  -webkit-box-flex: 2;
+      -ms-flex: 2;
+          flex: 2;
+  font-size: 0.7rem;
+  color: #FF3F24;
+}
+
+.zjy .top-row .icon {
+  margin-right: 0.2rem;
+  width: 1.1rem;
+  height: 0.98rem;
+  background: url(../img/icon2.png) no-repeat center center;
+  background-size: 100% 100%;
+}
+
+.zjy .top-row .icon2 {
+  margin-right: 0.2rem;
+  width: 1.02rem;
+  height: 0.92rem;
+  background: url(../img/icon2.svg) no-repeat center center;
+  background-size: 100% 100%;
+}
+
+.zjy .top-row .icon3 {
+  margin-right: 0.2rem;
+  width: 1.3rem;
+  height: 0.76rem;
+  background: url(../img/icon1.png) no-repeat center center;
+  background-size: 100% 100%;
+}
+
+.zjy .top-row .icon4 {
+  margin-right: 0.2rem;
+  width: 1rem;
+  height: 1.22rem;
+  background: url(../img/icon3.svg) no-repeat center center;
+  background-size: 100% 100%;
+}
+
+.zjy .top-row .icon6 {
+  margin-right: 0.2rem;
+  width: 1.1rem;
+  height: 0.98rem;
+  background: url(../img/abc.svg) no-repeat center center;
+  background-size: 100% 100%;
+}
+
+.zjy .top-row .more {
+  font-weight: bold;
+  font-size: 0.55rem;
+  color: #5F5F5F;
+}
+
+.zjy .top-row .more .arrow {
+  display: inline-block;
+  margin-left: 0.2rem;
+  width: 0.18rem;
+  height: 0.34rem;
+  background: url(../img/arrow.png) no-repeat center center;
+  background-size: 100% 100%;
+}
+
+.zjy .top-row .more .arrow {
+  display: inline-block;
+  margin-left: 0.2rem;
+  width: 0.35rem;
+  height: 0.6rem;
+  background: url(../img/arrow.png) no-repeat center center;
+  background-size: 100% 100%;
+  vertical-align: text-top;
+}
+
+.zjy .videolist .video-contanier .title {
+  width: 100%;
+  font-size: 0.65rem;
+  color: #545454;
+  padding: 0.36rem 0;
+  word-break: break-all;
+  word-wrap: break-word;
+  font-weight: bold;
+  height: 40px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.zjy .videolist .video-contanier .title a {
+  color: #545454;
+}
+
+.zjy .videolist .video-contanier .tags {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  width: 100%;
+  height: 26px;
+  overflow: hidden;
+}
+
+.zjy .videolist .video-contanier .tags .tag {
+  margin: 0 0.16rem 0.16rem 0;
+  padding: 0.05rem 0.4rem 0.2rem;
+  border-radius: 0.6rem;
+  color: #fff;
+  font-size: 0.3rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.zjy .videolist .video-contanier .img-box img {
+  width: 100% !important;
 }
