@@ -223,14 +223,15 @@ body {
 }
 
 .zjy .videolist .video-contanier .tags .tag {
-  margin: 0 0.16rem 0.16rem 0;
-  padding: 0.05rem 0.4rem 0.2rem;
+  margin: 0 0.16rem 0 0;
+  padding: 0.2rem 0.4rem;
   border-radius: 0.6rem;
   color: #fff;
   font-size: 12px;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+  line-height: 12px;
 }
 
 .zjy .videolist .video-contanier .img-box img {
