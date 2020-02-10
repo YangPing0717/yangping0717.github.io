@@ -160,7 +160,7 @@ body {
 
 .zjy .top-row .more {
   font-weight: bold;
-  font-size: 0.55rem;
+  font-size: 0.6rem;
   color: #5F5F5F;
 }
 
@@ -171,7 +171,7 @@ body {
   height: 0.55rem;
   background: url(../img/arrow.png) no-repeat center center;
   background-size: 100% 100%;
-  vertical-align: middle;
+  vertical-align: text-bottom;
 }
 
 .zjy .videolist .video-contanier .title {
@@ -205,7 +205,7 @@ body {
 
 .zjy .videolist .video-contanier .tags .tag {
   margin: 0 0.16rem 0 0;
-  padding: 0.13rem 0.4rem 0.1rem;
+  padding: 0.12rem 0.4rem 0.1rem;
   border-radius: 0.6rem;
   color: #fff;
   font-size: 10px;
