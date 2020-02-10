@@ -162,6 +162,8 @@ body {
   font-weight: bold;
   font-size: 0.6rem;
   color: #5F5F5F;
+  position: relative;
+  padding-right: 18px;
 }
 
 .zjy .top-row .more .arrow {
@@ -171,7 +173,9 @@ body {
   height: 0.55rem;
   background: url(../img/arrow.png) no-repeat center center;
   background-size: 100% 100%;
-  vertical-align: middle;
+  position: absolute;
+  top: 4px;
+  right: 2px;
 }
 
 .zjy .videolist .video-contanier .title {
@@ -208,7 +212,7 @@ body {
   padding: 0 0.4rem 0;
   border-radius: 0.6rem;
   color: #fff;
-  font-size: 10px;
+  font-size: 12px;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
