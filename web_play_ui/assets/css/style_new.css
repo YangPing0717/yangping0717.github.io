@@ -174,8 +174,8 @@ body {
   background: url(../img/arrow.png) no-repeat center center;
   background-size: 100% 100%;
   position: absolute;
-  top: 4px;
-  right: 2px;
+  top: 2px;
+  right: 4px;
 }
 
 .zjy .videolist .video-contanier .title {
