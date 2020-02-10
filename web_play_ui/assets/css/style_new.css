@@ -293,9 +293,9 @@ body {
 }
 
 .detail2 .details-info .tit-detail {
-  font-size: 0.52rem;
+  font-size: 0.55rem;
   color: #4B4B4B;
-  margin-top: 6px;
+  margin-top: 4px;
 }
 
 .detail2 .top-row .back {
@@ -336,7 +336,7 @@ body {
 }
 
 .detail2 .tags {
-  margin-top: 0.4rem;
+  margin-top: 8px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
