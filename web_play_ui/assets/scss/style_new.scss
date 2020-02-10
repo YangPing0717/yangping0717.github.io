@@ -150,7 +150,7 @@ body {
   background: url(../img/arrow.png) no-repeat center center;
   background-size: 100% 100%;
   // vertical-align: text-bottom;
-  vertical-align: middle;
+  vertical-align: text-top;
 }
 .zjy .videolist .video-contanier .title {
   width: 100%;
@@ -176,7 +176,7 @@ body {
   overflow: hidden;
   .tag{
     margin: 0 0.16rem 0 0;
-    padding: 0.2rem 0.4rem;
+    padding: 0.2rem 0.4rem 0.1rem;
     border-radius: 0.6rem;
     color: #fff;
     font-size: 10px;
