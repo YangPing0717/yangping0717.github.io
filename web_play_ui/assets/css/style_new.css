@@ -19,17 +19,24 @@ body {
 .zjy .logo .logoimg {
   margin: 0.5rem auto 0.3rem auto;
   width: auto;
-  height: 2rem;
+  height: 56px;
   background: url("../img/logo.svg") no-repeat center center;
   background-size: 100% 100%;
   margin-left: -.2rem;
+}
+
+.zjy .top-tab .tabs-bg {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 40px;
 }
 
 .zjy .top-tab .tabs-bg .left-tab {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
-  height: 1.4rem;
+  height: 40px;
   background-color: #9defae;
 }
 
@@ -37,7 +44,7 @@ body {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
-  height: 1.4rem;
+  height: 40px;
   background-color: #ffd582;
 }
 
@@ -51,24 +58,27 @@ body {
   font-size: 0.4rem;
   color: #FFFFFFA7;
   width: 100%;
+  height: 40px;
 }
 
 .zjy .top-tab .tabs .left-tab {
-  padding: 0.44rem 0.4rem;
+  padding: 0;
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
   text-align: right;
-  line-height: 0.5rem;
+  line-height: 40px;
+  padding-right: 12px;
 }
 
 .zjy .top-tab .tabs .right-tab {
-  padding: 0.44rem 0.4rem;
+  padding: 0;
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
   text-align: left;
-  line-height: 0.5rem;
+  line-height: 40px;
+  padding-left: 12px;
 }
 
 .zjy .top-tab .tabs .left-tab a,
@@ -78,18 +88,18 @@ body {
 }
 
 .zjy .top-tab .tabs .left-tab.active {
-  font-size: 0.6rem;
+  font-size: 17px;
   color: #ffffff !important;
   background: #58ca70;
-  line-height: 0.5rem;
+  line-height: 40px;
   letter-spacing: -1px;
 }
 
 .zjy .top-tab .tabs .right-tab.active {
-  font-size: 0.6rem;
+  font-size: 17px;
   color: #ffffff !important;
   background: #ffba4d;
-  line-height: 0.5rem;
+  line-height: 40px;
   letter-spacing: -1px;
 }
 
@@ -100,9 +110,9 @@ body {
 
 .zjy .top-tab .left-pic {
   position: absolute;
-  width: 3.2rem;
-  top: -1.5rem;
-  height: 3.2rem;
+  width: 96px;
+  top: -40px;
+  height: 96px;
   background: url(../img/bear_left.svg) no-repeat center center;
   background-size: cover;
   z-index: 1;
@@ -111,9 +121,9 @@ body {
 
 .zjy .top-tab .right-pic {
   position: absolute;
-  top: -1.2rem;
-  width: 2.8rem;
-  height: 3.2rem;
+  top: -36px;
+  width: 78px;
+  height: 96px;
   background: url(../img/bear_right.png) no-repeat left center;
   background-size: cover;
   z-index: 1;
@@ -124,53 +134,63 @@ body {
   -webkit-box-flex: 2;
       -ms-flex: 2;
           flex: 2;
-  font-size: 0.8rem;
+  font-size: 22px;
   color: #FF3F24;
 }
 
 .zjy .top-row .icon {
-  margin-right: 0.2rem;
-  width: 1.1rem;
-  height: 0.98rem;
+  margin-right: 6px;
+  width: 40px;
+  height: 32px;
   background: url(../img/icon2.png) no-repeat center center;
   background-size: 100% 100%;
 }
 
 .zjy .top-row .icon2 {
-  margin-right: 0.2rem;
-  width: 1.02rem;
-  height: 0.92rem;
+  margin-right: 6px;
+  width: 38px;
+  height: 38px;
   background: url(../img/icon2.svg) no-repeat center center;
   background-size: 100% 100%;
 }
 
 .zjy .top-row .icon3 {
-  margin-right: 0.2rem;
-  width: 1.3rem;
-  height: 0.76rem;
+  margin-right: 6px;
+  width: 58px;
+  height: 38px;
   background: url(../img/icon1.png) no-repeat center center;
   background-size: 100% 100%;
 }
 
 .zjy .top-row .icon4 {
-  margin-right: 0.2rem;
-  width: 1rem;
-  height: 1.22rem;
+  margin-right: 6px;
+  width: 32px;
+  height: 40px;
   background: url(../img/icon3.svg) no-repeat center center;
   background-size: 100% 100%;
 }
 
 .zjy .top-row .icon6 {
-  margin-right: 0.2rem;
-  width: 1.1rem;
-  height: 0.98rem;
+  margin-right: 6px;
+  width: 38px;
+  height: 36px;
   background: url(../img/abc.svg) no-repeat center center;
   background-size: 100% 100%;
 }
 
+.zjy .top-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 12px 24px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 .zjy .top-row .more {
   font-weight: bold;
-  font-size: 0.6rem;
+  font-size: 18px;
   color: #5F5F5F;
   position: relative;
   padding-right: 18px;
@@ -178,9 +198,9 @@ body {
 
 .zjy .top-row .more .arrow {
   display: inline-block;
-  margin-left: 0.2rem;
-  width: 0.35rem;
-  height: 0.55rem;
+  margin-left: 8px;
+  width: 10px;
+  height: 16px;
   background: url(../img/arrow.png) no-repeat center center;
   background-size: 100% 100%;
   position: absolute;
@@ -190,9 +210,9 @@ body {
 
 .zjy .videolist .video-contanier .title {
   width: 100%;
-  font-size: 0.65rem;
+  font-size: 18px;
   color: #545454;
-  padding: 0.36rem 0;
+  padding: 8px 0;
   word-break: break-all;
   word-wrap: break-word;
   font-weight: bold;
@@ -218,15 +238,16 @@ body {
 }
 
 .zjy .videolist .video-contanier .tags .tag {
-  margin: 0 0.16rem 0 0;
-  padding: 0 0.4rem 0;
+  margin: 0 4px 0 0;
+  padding: 4px 12px;
   border-radius: 0.6rem;
   color: #fff;
   font-size: 12px;
+  line-height: 14px;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-  line-height: 24px;
+  line-height: normal;
 }
 
 .zjy .videos1 .videolist .video-contanier .img-box {
@@ -268,30 +289,32 @@ body {
 }
 
 .zjy .videos2 .videolist .video-contanier .img-box .time {
-  padding: 0 0.16rem .12rem;
+  padding: 0 8px;
   position: absolute;
-  bottom: 0.35rem;
+  bottom: 16px;
   text-align: center;
   color: #FFFFFF;
   font-size: 14px;
   background-color: rgba(0, 0, 0, 0.7);
   border-radius: 4px;
+  line-height: 24px;
 }
 
 .zjy .top-swiper .img-box .time {
-  padding: 0 0.16rem .12rem;
+  padding: 0 8px;
   position: absolute;
-  right: 0.5rem;
-  bottom: 0.5rem;
+  right: 16px;
+  bottom: 16px;
   text-align: center;
   color: #FFFFFF;
   font-size: 14px;
   background-color: rgba(0, 0, 0, 0.7);
   border-radius: 4px;
+  line-height: 24px;
 }
 
 .detail2 .details-info {
-  padding: 0.4rem 0.8rem .6rem;
+  padding: 12px 24px 16px;
 }
 
 .detail2 .details-info .video-tit {
@@ -301,8 +324,8 @@ body {
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
-  font-size: 22px;
-  line-height: 1.1rem;
+  font-size: 18px;
+  line-height: 28px;
   font-weight: bold;
 }
 
@@ -311,15 +334,19 @@ body {
 }
 
 .detail2 .details-info .tit-detail {
-  font-size: 0.55rem;
+  font-size: 15px;
   color: #545454;
   margin-top: 4px;
 }
 
+.detail2 .top-row {
+  padding: 12px 24px;
+}
+
 .detail2 .top-row .back {
   margin-left: 0.6rem;
-  width: 0.76rem;
-  height: 0.86rem;
+  width: 26px;
+  height: 24px;
   background: url(../img/btn_left.svg) no-repeat center center;
   background-size: 100% 100%;
   -webkit-transform: rotate(90deg);
@@ -330,15 +357,15 @@ body {
 
 .detail2 .top-row .icon6 {
   margin-right: 0.2rem;
-  width: 1.1rem;
-  height: 0.98rem;
+  width: 38px;
+  height: 36px;
   background: url(../img/abc.svg) no-repeat center center;
   background-size: 100% 100%;
 }
 
 .detail2 .top-row .share {
-  width: 0.8rem;
-  height: 0.8rem;
+  width: 28px;
+  height: 28px;
   background: url(../img/btn_more.svg) no-repeat center center;
   background-size: 100% 100%;
 }
@@ -350,7 +377,7 @@ body {
           flex: 2;
   font-size: 0.8rem;
   color: #FF3F24;
-  font-size: 0.7rem;
+  font-size: 22px;
 }
 
 .detail2 .tags {
@@ -366,8 +393,8 @@ body {
 }
 
 .detail2 .tags .tag {
-  margin: 0 0.16rem 0 0;
-  padding: 0.15rem 0.4rem;
+  margin: 0 4px 0 0;
+  padding: 4px 12px;
   border-radius: 0.6rem;
   color: #fff;
   font-size: 12px;
@@ -377,17 +404,25 @@ body {
   white-space: nowrap;
 }
 
+.detail2 .video-box {
+  position: relative;
+  width: 100%;
+  height: initial;
+  background-color: #000000;
+  overflow: hidden;
+}
+
 .detail2 .video-box .time {
-  padding: .12rem .16rem;
   position: absolute;
-  right: 0.5rem;
-  bottom: 0.5rem;
+  right: 16px;
+  bottom: 16px;
   text-align: center;
   color: #FFFFFF;
   font-size: 14px;
   background-color: rgba(0, 0, 0, 0.7);
-  padding: 0 0.16rem .12rem;
+  padding: 0 8px;
   border-radius: 4px;
+  line-height: 24px;
 }
 
 .video-js {
@@ -522,15 +557,15 @@ body {
 }
 
 .detailsvideo .tuijie-list .imgbox .time {
-  padding: 0 0.16rem;
+  padding: 0 8px;
   position: absolute;
-  right: 10px;
-  bottom: 10px;
+  bottom: 16px;
   text-align: center;
   color: #FFFFFF;
   font-size: 14px;
   background-color: rgba(0, 0, 0, 0.7);
   border-radius: 4px;
+  line-height: 24px;
 }
 
 .detailsvideo .tuijie-list .info {
