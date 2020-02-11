@@ -6,6 +6,16 @@ body {
   font-size: 16px;
 }
 
+.zjy, .detail2, .detailsvideo {
+  position: relative;
+  min-width: 320px;
+  max-width: 500PX;
+  margin: 0 auto;
+  height: 100%;
+  color: #333;
+  background-color: #fff;
+}
+
 .zjy .logo .logoimg {
   margin: 0.5rem auto 0.3rem auto;
   width: auto;
@@ -291,7 +301,7 @@ body {
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
-  font-size: 0.8rem;
+  font-size: 22px;
   line-height: 1.1rem;
   font-weight: bold;
 }
@@ -380,12 +390,16 @@ body {
   border-radius: 4px;
 }
 
+.video-js {
+  width: 100%;
+}
+
 #topvideobox .back {
   position: absolute;
-  top: 0.8rem;
-  left: 0.8rem;
-  width: 0.8rem;
-  height: 0.8rem;
+  top: 24px;
+  left: 24px;
+  width: 28px;
+  height: 28px;
   background: url(../img/btn_down.svg) no-repeat center center;
   background-size: 100% 100%;
   -webkit-filter: drop-shadow(0px 0px 6px rgba(133, 38, 27, 0.9));
@@ -423,10 +437,17 @@ body {
   position: relative;
 }
 
+.detailsvideo .video-tit {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 12px 24px;
+}
+
 .detailsvideo .video-tit .arrow {
   display: inline-block;
-  width: 0.96rem;
-  height: 0.8rem;
+  width: 26px;
+  height: 22px;
   background: url(../img/arrow1.svg) no-repeat center center;
   background-size: 100% 100%;
 }
@@ -436,7 +457,7 @@ body {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
-  font-size: 0.8rem;
+  font-size: 22px;
   color: #545454;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -447,15 +468,16 @@ body {
 }
 
 .detailsvideo .details {
-  padding: 0.4rem 0.8rem;
+  padding: 12px 24px;
   font-size: 15px;
+  line-height: 22px;
   color: rgba(38, 23, 15, 0.75);
   -webkit-transition: all 0.3s ease-out;
   transition: all 0.3s ease-out;
 }
 
 .detailsvideo .tags {
-  margin-top: 0.4rem;
+  margin-top: 12px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -465,8 +487,8 @@ body {
 }
 
 .detailsvideo .tags .tag {
-  margin: 0 0.16rem 0 0;
-  padding: 0.15rem 0.4rem;
+  margin: 0 4px 0 0;
+  padding: 4px 12px;
   border-radius: 0.6rem;
   color: #fff;
   font-size: 12px;
@@ -477,8 +499,8 @@ body {
 }
 
 .detailsvideo .tuijie {
-  padding: 0.6rem 0.8rem;
-  font-size: 0.72rem;
+  padding: 16px 22px;
+  font-size: 20px;
   color: #4B4B4B;
   font-weight: bold;
 }
@@ -486,12 +508,15 @@ body {
 .detailsvideo .tuijie-list {
   overflow: hidden;
   padding: 0rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .detailsvideo .tuijie-list .imgbox {
   position: relative;
   float: left;
-  width: 6rem;
+  width: 50%;
   height: auto;
   overflow: hidden;
 }
@@ -499,8 +524,8 @@ body {
 .detailsvideo .tuijie-list .imgbox .time {
   padding: 0 0.16rem;
   position: absolute;
-  right: 0.4rem;
-  bottom: 0.4rem;
+  right: 10px;
+  bottom: 10px;
   text-align: center;
   color: #FFFFFF;
   font-size: 14px;
@@ -509,9 +534,7 @@ body {
 }
 
 .detailsvideo .tuijie-list .info {
-  float: right;
-  width: 8.58rem;
-  font-size: 0.54rem;
+  font-size: 15px;
   color: #545454;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -520,6 +543,7 @@ body {
   -webkit-line-clamp: 3;
   font-weight: bold;
   line-height: 1.4;
+  margin-left: 20px;
 }
 
 .detailsvideo .tuijie-list .info a {
@@ -534,7 +558,14 @@ body {
 }
 
 .detailsvideo .tuijie-list .count {
-  font-size: 0.4rem;
+  font-size: 12px;
   color: #6C7B8A;
   margin-top: 4px;
+}
+
+.detailsvideo .tit-detail {
+  padding: 0 24px 12px;
+  font-size: 14px;
+  color: #4B4B4B;
+  border-bottom: 1px solid #eeeeee;
 }
