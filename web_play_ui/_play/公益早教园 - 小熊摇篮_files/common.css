@@ -1,0 +1,62 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "Microsoft YaHei";
+}
+div {
+  box-sizing: border-box;
+}
+a {
+	
+	color:#0D1904;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+.clearfix:after {
+  display: block;
+  content: ".";
+  visibility: hidden;
+  height: 0;
+  clear: both;
+}
+.fl {
+  float: left;
+}
+.fr {
+  float: right;
+}
+button {
+  outline: none !important;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+button:focus {
+  outline: none !important;
+}
+.row-line {
+  z-index: 2;
+  background: transparent;
+  border-width: 0;
+  border-image: none;
+  position: relative;
+}
+.row-line:before {
+  content: " ";
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  height: 1px;
+  border-top: 1px solid #bfbfbf;
+  color: #bfbfbf;
+  -webkit-transform-origin: 0 0;
+  transform-origin: 0 0;
+  -webkit-transform: scaleY(0.5);
+  transform: scaleY(0.5);
+}

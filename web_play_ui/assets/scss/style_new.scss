@@ -94,7 +94,7 @@ body {
 .zjy .top-row .top-tit {
   font-weight: bold;
   flex: 2;
-  font-size: 0.7rem;
+  font-size: 0.8rem;
   color: #FF3F24;
 }
 .zjy .top-row {
@@ -207,8 +207,9 @@ body {
         bottom: 0.35rem;
         text-align: center;
         color: #FFFFFF;
-        font-size: 10px;
+        font-size: 14px;
         background-color: rgba(0, 0, 0, 0.7);
+        border-radius: 4px;
       }
     }
   }
@@ -231,8 +232,9 @@ body {
         bottom: 0.35rem;
         text-align: center;
         color: #FFFFFF;
-        font-size: 10px;
+        font-size: 14px;
         background-color: rgba(0, 0, 0, 0.7);
+        border-radius: 4px;
       }
     }
   }
@@ -246,8 +248,9 @@ body {
   bottom: 0.5rem;
   text-align: center;
   color: #FFFFFF;
-  font-size: 10px;
+  font-size: 14px;
   background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 4px;
 }
 
 
@@ -303,7 +306,7 @@ body {
     .top-tit {
       font-weight: bold;
       flex: 2;
-      font-size: 0.6rem;
+      font-size: 0.8rem;
       color: #FF3F24;
       font-size: 0.7rem;
     }
@@ -312,7 +315,7 @@ body {
     margin-top: 8px;
     display: flex;
     width: 100%;
-    height: 24px;
+    height: 26px;
     flex-wrap: nowrap;
     overflow: hidden;
     .tag {
@@ -338,9 +341,10 @@ body {
       bottom: 0.5rem;
       text-align: center;
       color: #FFFFFF;
-      font-size: 0.36rem;
+      font-size: 14px;
       background-color: rgba(0, 0, 0, 0.7);
       padding: 0 0.16rem .12rem;
+      border-radius: 4px;
     }
   }
 }
