@@ -22,7 +22,7 @@ body {
   height: 56px;
   background: url("../img/logo.svg") no-repeat center center;
   background-size: 100% 100%;
-  margin-left: -.2rem;
+  margin-left: -.5rem;
 }
 
 .zjy .top-tab .tabs-bg {
@@ -111,7 +111,7 @@ body {
 .zjy .top-tab .left-pic {
   position: absolute;
   width: 96px;
-  top: -40px;
+  top: -58px;
   height: 96px;
   background: url(../img/bear_left.svg) no-repeat center center;
   background-size: cover;
@@ -121,7 +121,7 @@ body {
 
 .zjy .top-tab .right-pic {
   position: absolute;
-  top: -36px;
+  top: -60px;
   width: 78px;
   height: 96px;
   background: url(../img/bear_right.png) no-repeat left center;
@@ -250,9 +250,26 @@ body {
   line-height: normal;
 }
 
+.zjy .videos1 .videolist .video-contanier {
+  width: 6.5rem;
+}
+
+@media only screen and (max-width: 575.98px) {
+  .zjy .videos1 .videolist .video-contanier {
+    width: 7.5rem;
+  }
+}
+
 .zjy .videos1 .videolist .video-contanier .img-box {
   overflow: hidden;
   border-radius: 5px;
+  height: 3.65rem;
+}
+
+@media only screen and (max-width: 575.98px) {
+  .zjy .videos1 .videolist .video-contanier .img-box {
+    height: 4.22rem;
+  }
 }
 
 .zjy .videos1 .videolist .video-contanier .img-box img {
@@ -272,20 +289,32 @@ body {
 
 .zjy .videos2 .videolist .video-contanier {
   margin-left: 0.4rem;
-  width: 12rem;
+  width: 8rem;
   display: inline-block;
+}
+
+@media only screen and (max-width: 575.98px) {
+  .zjy .videos2 .videolist .video-contanier {
+    width: 11rem;
+  }
 }
 
 .zjy .videos2 .videolist .video-contanier .img-box {
   width: 100%;
-  height: 6.5rem;
+  height: 4.5rem;
   position: relative;
   overflow: hidden;
   border-radius: 5px;
 }
 
+@media only screen and (max-width: 575.98px) {
+  .zjy .videos2 .videolist .video-contanier .img-box {
+    height: 6.188rem;
+  }
+}
+
 .zjy .videos2 .videolist .video-contanier .img-box img {
-  height: 6.5rem !important;
+  height: auto;
 }
 
 .zjy .videos2 .videolist .video-contanier .img-box .time {
@@ -311,6 +340,22 @@ body {
   background-color: rgba(0, 0, 0, 0.7);
   border-radius: 4px;
   line-height: 24px;
+}
+
+.zjy .top-swiper {
+  height: 5.6rem;
+}
+
+@media only screen and (max-width: 575.98px) {
+  .zjy .top-swiper {
+    height: 8.45rem;
+  }
+  .zjy .top-swiper .img-box {
+    position: relative;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+  }
 }
 
 .detail2 .details-info {

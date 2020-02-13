@@ -19,7 +19,7 @@ body {
   height: 56px;
   background: url('../img/logo.svg') no-repeat center center;
   background-size: 100% 100%;
-  margin-left: -.2rem;
+  margin-left: -.5rem;
 }
 .zjy .top-tab .tabs-bg {
   display: flex;
@@ -87,7 +87,7 @@ body {
   .left-pic {
     position: absolute;
     width: 96px;
-    top: -40px;
+    top: -58px;
     height: 96px;
     background: url(../img/bear_left.svg) no-repeat center center;
     background-size: cover;
@@ -96,7 +96,7 @@ body {
   }
   .right-pic {
     position: absolute;
-    top: -36px;
+    top: -60px;
     width: 78px;
     height: 96px;
     background: url(../img/bear_right.png) no-repeat left center;
@@ -215,9 +215,17 @@ body {
 
 .zjy {
   .videos1 .videolist .video-contanier {
+    width: 6.5rem;
+    @media only screen and (max-width: 575.98px){
+      width: 7.5rem;
+    }
     .img-box {
       overflow: hidden;
       border-radius: 5px;
+      height: 3.65rem;
+      @media only screen and (max-width: 575.98px){
+        height: 4.22rem;
+      }
       img {
         width: 100% !important;
       }
@@ -235,16 +243,22 @@ body {
   }
   .videos2 .videolist .video-contanier {
     margin-left: 0.4rem;
-    width: 12rem;
+    width: 8rem;
     display: inline-block;
+    @media only screen and (max-width: 575.98px){
+      width: 11rem;
+    }
     .img-box{
       width: 100%;
-      height: 6.5rem;
+      height: 4.5rem;
       position: relative;
       overflow: hidden;
       border-radius: 5px;
+      @media only screen and (max-width: 575.98px){
+        height: 6.188rem;
+      }
       img {
-        height: 6.5rem !important;
+        height: auto;
       }
       .time {
         padding: 0 8px;
@@ -262,6 +276,7 @@ body {
 }
 
 
+
 .zjy .top-swiper .img-box .time {
   padding: 0 8px;
   position: absolute;
@@ -275,7 +290,18 @@ body {
   line-height: 24px;
 }
 
-
+.zjy .top-swiper {
+  height: 5.6rem;
+  @media only screen and (max-width: 575.98px){
+    height: 8.45rem;
+    .img-box {
+      position: relative;
+      width: 100%;
+      height: auto;
+      overflow: hidden;
+    }
+  }
+}
 
 
 // page_more
