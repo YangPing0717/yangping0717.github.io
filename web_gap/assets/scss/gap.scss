@@ -1,0 +1,141 @@
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,400i,700,700i,900,900i|Open+Sans:400,700,700i,800,800i&display=swap');
+
+
+$break-small: 576px;
+$break-large: 1200px;
+
+$transition: all 0.3s ease-out;
+$col_light_a: #ffbbb1;
+$col_light_b: #ffc7d1;
+$col_light: #FE979C;
+$col_light_2: #F56F4A;
+$col_bri: #FF3700;
+$col_bri_dark: #a90300;
+$col_bri_dark_text: #750505;
+$col_bri_text: #942c2c;
+
+
+$col_dark: #392F22;
+$col_dark_br_light: #9D9081;
+$col_dark_br_lighta: #C4B7A84D;
+$gary_light: #ddd;
+$gary_mid: #96989b;
+$gary_dark: #585858;
+
+$blue_dark: #003a65;
+$blue_light: #3E90A8;
+
+$line: #acbeca;
+
+
+.hhide{
+  display: none;
+}
+
+
+body {
+  background-color: $gary_light;
+  color: $gary_dark;
+  font-size: 62.5%;
+  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+h1 {
+  color: $col_dark;
+  font-size: 36px;
+  font-weight: 700;
+  margin: 0;
+}
+h2 {
+  font-size: 22px;
+  font-weight: 700;
+  margin: 5px 0;
+  letter-spacing: .1em;
+}
+
+.timeline-container {
+  background-color: $col_light_b;
+  border-left: .3rem solid $line;
+  margin: 20px auto;
+  width: 900px;
+  .timeline-wrapper{
+    h2 {
+      background: none;
+      position: relative;
+      &:before{
+        content: '';
+        display: inline-block;
+        width: 1.2rem;
+        height: .2rem;
+        position: absolute;
+        top: 25px;
+        left: 0;
+        background: $line;
+      }
+      span {
+        background: #fff;
+        border-radius: 50px;
+        color: #131313;
+        letter-spacing: 0.1em;
+        line-height: 1.7em;
+        padding: 8px 20px 6px;
+      }
+    } 
+    .timeline-series {
+      clear: left;
+      float: left;
+      margin: 0 12px 0 0;
+      padding: 8px 8px 8px 0;
+      position: relative;
+      width: initial;
+      dt {
+        background: none;
+        position: relative;
+        &:before{
+          content: '';
+          display: inline-block;
+          width: 1rem;
+          height: .12rem;
+          position: absolute;
+          top: 10px;
+          left: 0;
+          background: $line;
+        }
+      }
+      dd {
+        width: initial;
+        &.timeline-event-content {
+          p {
+            clear: left;
+            float: none;
+            line-height: 1.5em;
+            margin: 10px 0 16px;
+            width: initial;
+          }
+          .media {
+            float: right;
+            padding: 0 0 12px;
+            width: initial;
+            img {
+              border: 2px solid #ffffff;
+              margin: 0;
+              height: auto;
+            }
+          }
+        } 
+      } 
+      &.sub {
+        border-left: 0.15rem solid $line;
+        padding: 0;
+        margin: 0 0 20px 0;
+      } 
+    }
+  } 
+}
+
+
+
+
+

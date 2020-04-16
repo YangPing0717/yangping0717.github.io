@@ -1,0 +1,114 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,400i,700,700i,900,900i|Open+Sans:400,700,700i,800,800i&display=swap");
+.hhide {
+  display: none;
+}
+
+body {
+  background-color: #ddd;
+  color: #585858;
+  font-size: 62.5%;
+  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  color: #392F22;
+  font-size: 36px;
+  font-weight: 700;
+  margin: 0;
+}
+
+h2 {
+  font-size: 22px;
+  font-weight: 700;
+  margin: 5px 0;
+  letter-spacing: .1em;
+}
+
+.timeline-container {
+  background-color: #ffc7d1;
+  border-left: 0.3rem solid #acbeca;
+  margin: 20px auto;
+  width: 900px;
+}
+
+.timeline-container .timeline-wrapper h2 {
+  background: none;
+  position: relative;
+}
+
+.timeline-container .timeline-wrapper h2:before {
+  content: '';
+  display: inline-block;
+  width: 1.2rem;
+  height: .2rem;
+  position: absolute;
+  top: 25px;
+  left: 0;
+  background: #acbeca;
+}
+
+.timeline-container .timeline-wrapper h2 span {
+  background: #fff;
+  border-radius: 50px;
+  color: #131313;
+  letter-spacing: 0.1em;
+  line-height: 1.7em;
+  padding: 8px 20px 6px;
+}
+
+.timeline-container .timeline-wrapper .timeline-series {
+  clear: left;
+  float: left;
+  margin: 0 12px 0 0;
+  padding: 8px 8px 8px 0;
+  position: relative;
+  width: initial;
+}
+
+.timeline-container .timeline-wrapper .timeline-series dt {
+  background: none;
+  position: relative;
+}
+
+.timeline-container .timeline-wrapper .timeline-series dt:before {
+  content: '';
+  display: inline-block;
+  width: 1rem;
+  height: .12rem;
+  position: absolute;
+  top: 10px;
+  left: 0;
+  background: #acbeca;
+}
+
+.timeline-container .timeline-wrapper .timeline-series dd {
+  width: initial;
+}
+
+.timeline-container .timeline-wrapper .timeline-series dd.timeline-event-content p {
+  clear: left;
+  float: none;
+  line-height: 1.5em;
+  margin: 10px 0 16px;
+  width: initial;
+}
+
+.timeline-container .timeline-wrapper .timeline-series dd.timeline-event-content .media {
+  float: right;
+  padding: 0 0 12px;
+  width: initial;
+}
+
+.timeline-container .timeline-wrapper .timeline-series dd.timeline-event-content .media img {
+  border: 2px solid #ffffff;
+  margin: 0;
+  height: auto;
+}
+
+.timeline-container .timeline-wrapper .timeline-series.sub {
+  border-left: 0.15rem solid #acbeca;
+  padding: 0;
+  margin: 0 0 20px 0;
+}
