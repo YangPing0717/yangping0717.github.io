@@ -13,17 +13,22 @@ body {
   padding: 0;
 }
 
+body .h1, body .h2, body .h3, body .h4, body .h5, body .h6, body h1, body h2, body h3, body h4, body h5, body h6 {
+  font-family: inherit;
+  font-weight: 700;
+  line-height: 1.5;
+  color: inherit;
+}
+
 h1 {
   color: #392F22;
   font-size: 4.2rem;
-  font-weight: 700;
   margin: 1.6rem 0 1rem 0;
   text-align: center;
 }
 
 h2 {
   font-size: 2.2rem;
-  font-weight: 700;
   margin: 5px 0;
   letter-spacing: .1em;
 }
@@ -154,6 +159,12 @@ p {
   width: 280px;
   margin-left: 20px;
   margin-top: 15px;
+}
+
+@media screen and (max-width: 576px) {
+  .timeline-container .timeline-wrapper .timeline-series dd.timeline-event-content .media {
+    width: 100%;
+  }
 }
 
 .timeline-container .timeline-wrapper .timeline-series dd.timeline-event-content .media img {
