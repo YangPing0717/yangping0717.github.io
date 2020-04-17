@@ -292,16 +292,14 @@ p{
   margin-right: 10px;
 }
 
-#scroller {
-  // width: 270px;
-  z-index: 999;
-  // margin-top: 76px;
-  @media screen and (max-width: $break-small) {
-    // margin-top: -20px;
-    // width: 100%;
-    // margin-right: 15px;
-    // width: 360px;
-    z-index: 999;
-  }
-}
 
+div.sticky {
+  position: sticky !important;
+  top: 50px;
+  z-index: 1;
+  // background-color: yellow;
+  // padding: 50px;
+  // font-size: 20px;
+  // height: 100px;
+  // width: 100%;
+}

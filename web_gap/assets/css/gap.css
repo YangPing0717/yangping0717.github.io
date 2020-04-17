@@ -279,12 +279,9 @@ p {
   margin-right: 10px;
 }
 
-#scroller {
-  z-index: 999;
-}
-
-@media screen and (max-width: 576px) {
-  #scroller {
-    z-index: 999;
-  }
+div.sticky {
+  position: -webkit-sticky !important;
+  position: sticky !important;
+  top: 50px;
+  z-index: 1;
 }
