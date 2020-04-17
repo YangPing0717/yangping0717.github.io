@@ -5,7 +5,7 @@
 }
 
 body {
-  background-color: #ffc7d1;
+  background-color: #fff;
   color: #585858;
   font-size: 1rem;
   font-family: 'Montserrat', Arial, Helvetica, sans-serif;
@@ -47,7 +47,7 @@ p {
 
 .timeline-container {
   position: relative;
-  background-color: #ffc7d1;
+  background-color: #fff;
   border-left: 0.5rem solid #acbeca;
   margin: 20px auto;
   width: 900px;
@@ -84,7 +84,7 @@ p {
 }
 
 .timeline-container .timeline-wrapper h2 span {
-  background: #fff;
+  background: #ffc7d1;
   border-radius: 50px;
   color: #131313;
   letter-spacing: 0.1em;
@@ -97,9 +97,7 @@ p {
 }
 
 .timeline-container .timeline-wrapper h2 span:hover {
-  color: #fff;
-  background: #f7647e;
-  color: #fff;
+  background: #C4B7A84D;
 }
 
 .timeline-container .timeline-wrapper .timeline-series {
@@ -134,10 +132,10 @@ p {
 }
 
 .timeline-container .timeline-wrapper .timeline-series dd h3 {
-  color: #FFF;
+  color: #9D9081;
   clear: both;
   float: left;
-  font-size: 1.5em;
+  font-size: 1.6rem;
   margin: 0;
   white-space: normal;
   margin-bottom: 8px;

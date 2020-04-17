@@ -37,8 +37,8 @@ $line: #acbeca;
 
 
 body {
-  // background-color: $gary_light;
-  background-color: $col_light_b;
+  // background-color: $gary_light $col_light_b;
+  background-color: #fff;
   color: $gary_dark;
   font-size: 1rem;
   font-family: 'Montserrat', Arial, Helvetica, sans-serif;
@@ -75,7 +75,8 @@ p {
 
 .timeline-container {
   position: relative;
-  background-color: $col_light_b;
+  // background-color: $col_light_b;
+  background-color: #fff;
   border-left: .5rem solid $line;
   margin: 20px auto;
   width: 900px;
@@ -102,7 +103,7 @@ p {
         transform: scale(1.01);
       }
       span {
-        background: #fff;
+        background: $col_light_b;
         border-radius: 50px;
         color: #131313;
         letter-spacing: 0.1em;
@@ -113,9 +114,8 @@ p {
         cursor: pointer;
         transition: $transition;
         &:hover {
-          color: #fff;
-          background: $col_light_2;
-          color: #fff;
+          background: $col_dark_br_lighta;
+          // color: #fff;
         }
       }
     } 
@@ -144,10 +144,10 @@ p {
       }
       dd {
         h3 {
-          color: #FFF;
+          color: $col_dark_br_light;
           clear: both;
           float: left;
-          font-size: 1.5em;
+          font-size: 1.6rem;
           margin: 0;
           // white-space: nowrap;
           white-space: normal;
