@@ -71,9 +71,10 @@
 
 
 
+
 </head>
 
-<body>
+<body >
 
     <!-- Start Navigation -->
     <nav class="navbar navbar-default navbar-fixed navbar-transparent bootsnav">
@@ -911,9 +912,9 @@
 						<li><a href="javascript:void(0);">Privacy</a></li>
 					</ul>
 				</div>
-				<div class="col-md-6 col-md-pull-6">
+				<div class="col-md-6 col-md-pull-6" id="app">
 					<div class="footer-copyright">
-                        &copy; BB.WeKIDS EDUCARE. All Rights Reserved.<br>未經合法授權，請勿轉載本站，版權所有轉載必究 ICP 备 11022389 号 - 11
+                        &copy; {{ new Date().getFullYear() }} BB.WeKIDS EDUCARE. All Rights Reserved.<br>未經合法授權，請勿轉載本站，版權所有轉載必究 ICP 备 11022389 号 - 11
 					</div>
 				</div>
 			</div>
@@ -1148,8 +1149,7 @@
 
 
 
-
-
+    
 
     <!-- btn_ripple -->
     <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
@@ -1261,10 +1261,16 @@ $('.wechatLink').on('click', function(){
 //     $(".menu_signUp").hide();
 //     $(".id_user").fadeIn(300); 
 // }); 
-
-
 </script>
-    
+
+
+<!-- vue -->
+<script src="https://unpkg.com/vue/dist/vue.min.js"></script>
+<script>
+    new Vue({
+        el: '#app',
+    });
+</script>
 
 </body>
 

@@ -878,9 +878,9 @@
 						<li><a href="#">Privacy</a></li>
 					</ul>
 				</div>
-				<div class="col-md-6 col-md-pull-6">
+				<div class="col-md-6 col-md-pull-6" id="app">
 					<div class="footer-copyright">
-                        &copy; BB.WeKIDS EDUCARE. All Rights Reserved.<br>未經合法授權，請勿轉載本站，版權所有轉載必究 ICP 备 11022389 号 - 11
+                        &copy; {{ new Date().getFullYear() }} BB.WeKIDS EDUCARE. All Rights Reserved.<br>未經合法授權，請勿轉載本站，版權所有轉載必究 ICP 备 11022389 号 - 11
 					</div>
 				</div>
 			</div>
@@ -1270,7 +1270,13 @@ $('.wechatLink').on('click', function(){
     
 
 
-
+<!-- vue -->
+<script src="https://unpkg.com/vue/dist/vue.min.js"></script>
+<script>
+    new Vue({
+        el: '#app',
+    });
+</script>
     
 
 </body>

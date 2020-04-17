@@ -494,10 +494,10 @@ ul.cart-list > li > h6 > a > i {
   left: 0;
   right: 0;
   margin: auto;
-  margin-top: 26px;
+  margin-top: 30px;
   -webkit-transform: rotate(10deg);
           transform: rotate(10deg);
-  line-height: 2.6rem;
+  line-height: 2.8rem;
   text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.6), 4px 4px 0px rgba(0, 0, 0, 0.15);
 }
 
@@ -725,7 +725,7 @@ blockquote.blockquote:before {
 .button_round i {
   text-align: center;
   font-size: 4rem;
-  line-height: 2.9rem;
+  line-height: 3rem;
   width: 80px;
   color: #FF3700;
 }

@@ -26,7 +26,7 @@
 </head>
 
 <body>
-	<div class="container">
+	<div class="container" id="app">
 		<h1>托幼衔接</h1>
 		<p class="lead">
 			托幼衔接產品說明大綱文字放這裡，托幼衔接產品說明大綱文字放這裡，托幼衔接產品說明大綱文字放這裡，托幼衔接產品說明大綱文字放這裡，托幼衔接產品說明大綱文字放這裡，托幼衔接產品說明大綱文字放這裡，随时给予宝宝刺激 <a
@@ -531,7 +531,7 @@
 		</div>
 		<div class="col-md-6 col-md-pull-6">
 			<div class="footer-copyright">
-				&copy; BB.WeKIDS EDUCARE. All Rights Reserved.<br>未經合法授權，請勿轉載本站，版權所有轉載必究 ICP 备 11022389 号 - 11
+				&copy; {{ new Date().getFullYear() }} BB.WeKIDS EDUCARE. All Rights Reserved.<br>未經合法授權，請勿轉載本站，版權所有轉載必究 ICP 备 11022389 号 - 11
 			</div>
 		</div>
 	</div>
@@ -574,7 +574,13 @@
 		});
 	</script>
 
-	
+<!-- vue -->
+<script src="https://unpkg.com/vue/dist/vue.min.js"></script>
+<script>
+    new Vue({
+        el: '#app',
+    });
+</script>
 
 </body>
 
