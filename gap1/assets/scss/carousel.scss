@@ -307,7 +307,8 @@ $main_light: #ff5d79;
 	}
 	.hs-item {
 		padding: 250px 15px;
-		height: auto;
+		// height: auto;
+		height: 100vh;
 	}
 	.hs-item h2 {
 		font-size: 50px;

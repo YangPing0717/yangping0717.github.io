@@ -296,7 +296,7 @@
   }
   .hs-item {
     padding: 250px 15px;
-    height: auto;
+    height: 100vh;
   }
   .hs-item h2 {
     font-size: 50px;
