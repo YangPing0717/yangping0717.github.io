@@ -1217,7 +1217,7 @@ input::-moz-focus-inner {
 }
 
 .display-1 i {
-  color: #26bfb5;
+  color: #003a65;
 }
 
 .display-1--light {
@@ -3025,7 +3025,7 @@ html.no-csstransitions .home-content__main {
   padding-bottom: 10.2rem;
   color: rgba(255, 255, 255, 0.3);
   position: relative;
-  background-image: linear-gradient(25deg, #d9b7b8, #d0b6a8, #c7b598, #bdb488);
+  background-image: linear-gradient(25deg, #c18782, #c9a39e, #cfc0bc, #d2ddda);
 }
 
 .s-contact a {

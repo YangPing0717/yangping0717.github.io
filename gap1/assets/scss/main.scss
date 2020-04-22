@@ -5,6 +5,8 @@ $main_liht: #1dff93;
 $main_liht_2: #26bfb5;
 $btn_text: #585858;
 $main_light: #ff5d79;
+$main_light_2: #ffd2eb;
+
 
 $col_dark: #392F22;
 $col_dark_br_light: #9D9081;
@@ -1205,7 +1207,7 @@ input::-moz-focus-inner {
   margin-top: 0;
   margin-bottom: 4.8rem;
   i {
-    color: $main_liht_2;
+    color: $blue_dark;
   }
 }
 .display-1--light {
@@ -2990,7 +2992,7 @@ html.no-csstransitions .home-content__main {
   // background-color: #111111;
   color: rgba(255, 255, 255, 0.3);
   position: relative;
-  background-image: linear-gradient(25deg, #d9b7b8, #d0b6a8, #c7b598, #bdb488);
+  background-image: linear-gradient(25deg, #c18782, #c9a39e, #cfc0bc, #d2ddda);
 }
 .s-contact a {
   color: #ffffff;
