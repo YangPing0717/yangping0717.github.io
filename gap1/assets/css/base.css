@@ -30,9 +30,10 @@
  * # imports 
  *
  * ------------------------------------------------------------------- */
-@import url("font-awesome/css/fontawesome-all.css");
+/* @import url("font-awesome/css/fontawesome-all.css"); */
+@import url("font-awesome/css/all.css");
 @import url("micons/micons.css");
-@import url("fonts.css");
+@import url("fonts.css");   
 
 
 /* ===================================================================
