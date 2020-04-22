@@ -133,7 +133,6 @@ p img {
 }
 
 p.lead {
-  font-family: "metropolis-regular", sans-serif;
   font-size: 2.4rem;
   line-height: 1.75;
   margin-bottom: 3.6rem;
@@ -309,6 +308,7 @@ ul {
 
 ul li {
   padding-left: 0.4rem;
+  list-style: none;
 }
 
 ul ul,
@@ -1216,6 +1216,10 @@ input::-moz-focus-inner {
   margin-bottom: 4.8rem;
 }
 
+.display-1 i {
+  color: #9D9081;
+}
+
 .display-1--light {
   color: #ffffff;
 }
@@ -1226,7 +1230,7 @@ input::-moz-focus-inner {
   line-height: 1.3125;
   text-transform: uppercase;
   letter-spacing: 0.25rem;
-  color: #cc147f;
+  color: #ff5d79;
   margin-top: 0;
   margin-bottom: 2.1rem;
 }
@@ -2419,8 +2423,22 @@ html.no-csstransitions .home-content__main {
 }
 
 .services-list .service-icon {
-  color: #26bfb5;
+  color: #ff5d79;
   font-size: 4.8rem;
+}
+
+.services-list .service-item ul {
+  margin-left: 0;
+  font-size: 2rem;
+}
+
+.services-list .service-item ul li {
+  padding-left: 0rem;
+}
+
+.services-list .service-item ul li i {
+  font-size: 2.6rem;
+  color: #ff5d79;
 }
 
 /* ------------------------------------------------------------------- 

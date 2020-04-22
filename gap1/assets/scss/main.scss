@@ -1,8 +1,22 @@
 
+$transition: all 0.3s ease-out;
+
 $main_liht: #1dff93;
 $main_liht_2: #26bfb5;
 $btn_text: #585858;
 $main_light: #ff5d79;
+
+$col_dark: #392F22;
+$col_dark_br_light: #9D9081;
+$col_dark_br_lighta: #C4B7A84D;
+$gary_light: #ddd;
+$gary_mid: #96989b;
+$gary_dark: #585858;
+$gary_mid_2: #b5b5b5;
+
+
+$blue_dark: #003a65;
+$blue_light: #3E90A8;
 
 
 
@@ -144,7 +158,7 @@ p img {
 }
 
 p.lead {
-  font-family: "metropolis-regular", sans-serif;
+  // font-family: "metropolis-regular", sans-serif;
   font-size: 2.4rem;
   line-height: 1.75;
   margin-bottom: 3.6rem;
@@ -318,6 +332,7 @@ ul {
 
 ul li {
   padding-left: 0.4rem;
+  list-style: none;
 }
 
 ul ul,
@@ -1188,6 +1203,9 @@ input::-moz-focus-inner {
   letter-spacing: -0.3rem;
   margin-top: 0;
   margin-bottom: 4.8rem;
+  i {
+    color: $col_dark_br_light;
+  }
 }
 .display-1--light {
   color: #ffffff;
@@ -1199,7 +1217,7 @@ input::-moz-focus-inner {
   line-height: 1.3125;
   text-transform: uppercase;
   letter-spacing: 0.25rem;
-  color: #cc147f;
+  color: $main_light;
   margin-top: 0;
   margin-bottom: 2.1rem;
 }
@@ -2369,8 +2387,23 @@ html.no-csstransitions .home-content__main {
   margin-bottom: 1.8rem;
 }
 .services-list .service-icon {
-  color: #26bfb5;
+  color: $main_light;
   font-size: 4.8rem;
+}
+.services-list {
+  .service-item {
+    ul {
+      margin-left: 0;
+      font-size: 2rem;
+      li {
+        padding-left: 0rem;
+        i {
+          font-size: 2.6rem;
+          color: $main_light;
+        }
+      }
+    }
+  }
 }
 
 
