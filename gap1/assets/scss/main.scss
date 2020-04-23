@@ -1,3 +1,4 @@
+@import url(https://fonts.googleapis.com/earlyaccess/cwtexyen.css);
 
 $transition: all 0.3s ease-out;
 
@@ -5,8 +6,8 @@ $main_liht: #1dff93;
 $main_liht_2: #26bfb5;
 $btn_text: #585858;
 $main_light: #ff5d79;
+$main_light_1: #fc193f;
 $main_light_2: #ffd2eb;
-
 
 $col_dark: #392F22;
 $col_dark_br_light: #9D9081;
@@ -45,6 +46,9 @@ body {
   font-family: PingFangSC-Medium, arial, "Hiragino Sans GB", "Microsoft Yahei", 微软雅黑, 宋体, Tahoma, Arial, Helvetica, STHeiti;
   /* font-family: "metropolis-regular", sans-serif; */
   // font-family: PingFangSC-Medium;
+
+  // google font:
+  // font-family: cwTeXYen, sans-serif;  
   font-size: 1.7rem;
   font-style: normal;
   font-weight: normal;
@@ -82,7 +86,7 @@ a:active {
  * ------------------------------------------------------------------- */
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
   /* font-family: "metropolis-semibold", sans-serif; */
-  font-family: PingFangSC-Medium, arial, "Hiragino Sans GB", "Microsoft Yahei", 微软雅黑, 宋体, Tahoma, Arial, Helvetica, STHeiti;
+  // font-family: PingFangSC-Medium, arial, "Hiragino Sans GB", "Microsoft Yahei", 微软雅黑, 宋体, Tahoma, Arial, Helvetica, STHeiti;
   color: #000000;
   font-style: normal;
   font-weight: bold;
@@ -166,19 +170,83 @@ p.lead {
   margin-bottom: 3.6rem;
   color: rgba(85, 85, 85, 0.95);
 }
+
+.lead {
+  // font-family: "metropolis-regular", sans-serif;
+  font-size: 1.8rem;
+  line-height: 1.4;
+  margin-bottom: 3.6rem;
+  color: rgba(85, 85, 85, 0.95);
+  font-weight: bold;
+  dt {
+    font-size: 2.2rem;
+    color: $col_dark;
+    margin: 0 0 2rem 10rem;
+    position: relative;
+    &:before {
+      font-family: "domine-bold", sans-serif;
+      content: 'Q';
+      color: #ffffff;
+      font-size: 3.6rem;
+      font-weight: bold;
+      margin: 0 2rem 0 -10rem;
+      background: #d8d4cc;
+      padding: 17px 30px;
+      border-radius: 50%;
+      position: absolute;
+      bottom: -20px;
+    }
+  }
+  dd {
+    margin: 0 0 4.6rem 10rem;
+    &:before {
+      content: 'A:';
+      font-family: "domine-bold", sans-serif;
+      color: $main_light_1;
+      font-size: 2rem;
+      font-weight: bold;
+      // background: $main_light_2;
+      margin: 0 1rem 0 -3rem;
+      // padding: 12px 15px;
+      border-radius: 50%;
+    }
+  }
+  table {
+    margin-bottom: 4rem;
+    border-top: .3rem solid $col_dark_br_lighta;
+    border-bottom: .8rem solid $col_dark_br_lighta;
+    box-shadow: 0px 10px 18px 0px $gary_mid_2;
+    th{
+      font-weight: bold;
+      padding: 1.5rem 3rem 1.5rem 3rem;
+    }
+  }
+}
+
+
+
 @media only screen and (max-width: 1200px) {
   p.lead {
     font-size: 2.2rem;
+  }
+  .lead {
+    font-size: 2rem;
   }
 }
 @media only screen and (max-width: 1000px) {
   p.lead {
     font-size: 2.1rem;
   }
+  .lead {
+    font-size: 1.8rem;
+  }
 }
 @media only screen and (max-width: 800px) {
   p.lead {
     font-size: 1.9rem;
+  }
+  .lead {
+    font-size: 1.6rem;
   }
 }
 
@@ -413,7 +481,7 @@ table {
   border-width: 0;
   width: 100%;
   max-width: 100%;
-  font-family: "metropolis-regular", sans-serif;
+  // font-family: "metropolis-regular", sans-serif;
 }
 
 th,
@@ -447,7 +515,6 @@ td:last-child {
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
 }
-
 
 /* ------------------------------------------------------------------- 
  * ## Spacing 
@@ -1209,6 +1276,10 @@ input::-moz-focus-inner {
   i {
     color: $blue_dark;
   }
+  span {
+    font-size: 5rem;
+    color: $blue_dark;
+  }
 }
 .display-1--light {
   color: #ffffff;
@@ -1519,8 +1590,8 @@ input::-moz-focus-inner {
   right: 110px;
   top: 42px;
   width: 48px;
-  height: 45px;
-  line-height: 45px;
+  height: 47px;
+  line-height: 47px;
   font-family: "metropolis-regular", sans-serif;
   font-size: 1.4rem;
   text-transform: uppercase;
@@ -2469,7 +2540,15 @@ html.no-csstransitions .home-content__main {
   background: #ffffff;
   padding: 18rem 0 24rem;
   position: relative;
+  &.pb{
+    padding-bottom: 14rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+  }
+  &.bg_color {
+    // background-image: linear-gradient(25deg, #d3b2b9, #d7c2cb, #dad3de, #dde3f1);
+  }
 }
+
 
 
 /* ------------------------------------------------------------------- 
