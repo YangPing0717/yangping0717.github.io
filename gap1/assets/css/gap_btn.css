@@ -20,7 +20,7 @@ html section button, body section button {
   cursor: pointer;
   font-weight: bold;
   height: 8rem;
-  line-height: 8rem;
+  line-height: 6rem;
   /*
       Above is shorthand for:
       border-top-left-radius: 255px 15px;
