@@ -182,24 +182,24 @@ p.lead {
   border-radius: 50%;
 }
 
-.lead table {
+.lead .table-responsive table {
   margin-bottom: 4rem;
   border-top: 0.3rem solid #C4B7A84D;
   border-bottom: 0.8rem solid #C4B7A84D;
 }
 
-.lead table th {
+.lead .table-responsive table th {
   font-weight: bold;
   padding: 1rem 2rem 1rem 2rem;
   border: 1px solid #e8e8e8;
 }
 
-.lead table th:nth-child(1) {
+.lead .table-responsive table th:nth-child(1) {
   width: 20%;
 }
 
 @media screen and (max-width: 576px) {
-  .lead table th {
+  .lead .table-responsive table th {
     padding: 1rem .3rem 1rem .8rem;
   }
 }
@@ -504,6 +504,42 @@ td:last-child {
 .table-responsive {
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
+}
+
+.table-responsive table {
+  margin-bottom: 4rem;
+  border-top: 0.3rem solid #C4B7A84D;
+  border-bottom: 0.8rem solid #C4B7A84D;
+  -webkit-box-shadow: 0px 10px 18px 0px rgba(0, 0, 0, 0.15);
+          box-shadow: 0px 10px 18px 0px rgba(0, 0, 0, 0.15);
+  background: #fff;
+}
+
+@media screen and (max-width: 576px) {
+  .table-responsive table {
+    padding-top: 10rem;
+  }
+}
+
+.table-responsive table th, .table-responsive table td {
+  font-weight: bold;
+  padding: 1rem 2rem 1rem 2rem;
+  border: 1px solid #e8e8e8;
+}
+
+@media screen and (max-width: 576px) {
+  .table-responsive table th, .table-responsive table td {
+    padding: 1rem 1rem 1rem 1.6rem;
+  }
+}
+
+.table_title {
+  font-size: 2.8rem;
+  background-image: linear-gradient(25deg, #ce715f, #cb818e, #c191bf, #aea1f1);
+  color: #fff;
+  text-align: center;
+  -webkit-box-shadow: 0px 10px 18px 0px rgba(0, 0, 0, 0.15);
+          box-shadow: 0px 10px 18px 0px rgba(0, 0, 0, 0.15);
 }
 
 /* ------------------------------------------------------------------- 
