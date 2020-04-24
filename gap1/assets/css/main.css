@@ -204,6 +204,17 @@ p.lead {
   }
 }
 
+.services-list.ability .service-item .service-text ul {
+  margin-left: 2rem;
+}
+
+.services-list.ability .service-item .service-text ul li {
+  list-style: decimal;
+  line-height: 1.6;
+  margin-bottom: 1.4rem;
+  letter-spacing: -.1rem;
+}
+
 @media only screen and (max-width: 1200px) {
   p.lead {
     font-size: 2.2rem;
@@ -467,6 +478,7 @@ td {
   padding: 1.5rem 3rem;
   text-align: left;
   border-bottom: 1px solid #e8e8e8;
+  vertical-align: top;
 }
 
 th {
