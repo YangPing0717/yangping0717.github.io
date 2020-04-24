@@ -2339,6 +2339,37 @@ html.no-csstransitions .home-content__main {
   position: relative;
 }
 
+.s-about .about_bg {
+  position: absolute;
+  margin: auto;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+}
+
+.s-about .about_bg:before {
+  content: '';
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size: cover;
+  background-image: url(../images/bg_5.jpg);
+  width: 100vw;
+  z-index: 0;
+  position: absolute;
+  /* top: 0; */
+  /* left: 0; */
+  bottom: 0;
+  padding-bottom: 90%;
+}
+
+@media screen and (max-width: 576px) {
+  .s-about .about_bg:before {
+    background-position: -800px bottom;
+    padding-bottom: 250%;
+  }
+}
+
 /* ------------------------------------------------------------------- 
  * ## about process
  * ------------------------------------------------------------------- */

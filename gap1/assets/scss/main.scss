@@ -2313,6 +2313,36 @@ html.no-csstransitions .home-content__main {
   padding-bottom: 18rem;
   background-color: #ffffff;
   position: relative;
+  .about_bg{
+    position: absolute;
+    margin: auto;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    // background: linear-gradient(155deg, #25c6fd 0%, #1c58de 40%, #7539ef 100%);
+    // height: 100vh;
+    // width: 100vw;
+    // overflow: hidden;
+    &:before {
+      content: '';
+      background-repeat: no-repeat;
+      background-position: center bottom;
+      background-size: cover;
+      background-image: url(../images/bg_5.jpg);
+      width: 100vw;
+      z-index: 0;
+      position: absolute;
+      /* top: 0; */
+      /* left: 0; */
+      bottom: 0;
+      padding-bottom: 90%;
+      @media screen and (max-width: $break-small) {
+        background-position: -800px bottom;
+        padding-bottom: 250%;
+      }
+    }
+  }
 }
 
 
