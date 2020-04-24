@@ -3,7 +3,12 @@
 ---------------------*/
 @import url(https://fonts.googleapis.com/css?family=Patrick+Hand+SC);
 
+
+$break-small: 576px;
+$break-large: 1200px;
+
 $main_light: #ff5d79;
+
 
 
 .hero-section {
@@ -22,27 +27,54 @@ $main_light: #ff5d79;
 }
 
 .hs-item {
+	br {
+		// display: none;
+	}
+	@media screen and (max-width: $break-small) {
+		letter-spacing: -.2rem;
+	}
 	h2 {
 		font-size: 6rem;
 		color: #fff;
 		font-weight: bold;
-		margin-bottom: 1.4rem;
+		margin-bottom: 2.2rem;
 		position: relative;
 		top: 50px;
 		opacity: 0;
 		line-height: 1.1;
+		@media screen and (max-width: $break-small) {
+			line-height: 1.15;
+			margin-bottom: 1.3rem;
+			br {
+				// display: none;
+			}
+		}
 	}
 	h3 {
 		font-size: 3.2rem;
 		color: #fff;
 		font-weight: bold;
 		margin-top: 1.2rem;
-    margin-bottom: .8rem;
+		margin-bottom: .2rem;
+		@media screen and (max-width: $break-small) {
+			font-size: 2.2rem;
+			margin-bottom: 1.5rem;
+			br {
+				display: none;
+			}
+		}
 	}
 	p { 
-		font-size: 1.8rem;
+		font-size: 2rem;
 		color: #fff;
 		font-weight: bold;
+		@media screen and (max-width: $break-small) {
+			font-size: 1.6rem;
+			letter-spacing: -.1rem;
+			line-height: 1.6;
+			width: 50%;
+			display: none;
+		}
 	}
 }
 
@@ -121,6 +153,10 @@ $main_light: #ff5d79;
 	border-radius: 0 0 6rem 6rem;
 	// border: dotted 4px #ffffff;
 	margin-bottom: 5rem;
+	@media screen and (max-width: $break-small) {
+		border-radius: 0;
+		margin-bottom: 0;
+	}
 }
 
 .hero-social-warp p {
@@ -241,7 +277,13 @@ $main_light: #ff5d79;
 .set-bg {
 	background-repeat: no-repeat;
 	background-size: cover;
-	background-position: top center;
+	background-position: center bottom;
+	@media screen and (max-width: $break-small) {
+		background-position: 60% bottom;
+		&.bg_posi {
+			background-position: 60% top;
+		}
+	}
 }
 
 
@@ -300,7 +342,7 @@ $main_light: #ff5d79;
 		margin-left: 0;
 	}
 	.hero-slider .owl-dots {
-		right: 100px;
+		right: 125px;
 	}
 	.hero-slider .owl-nav {
 		right: 15px;
