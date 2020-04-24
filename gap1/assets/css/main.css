@@ -2355,10 +2355,7 @@ html.no-csstransitions .home-content__main {
   background-size: cover;
   background-image: url(../images/bg_5.jpg);
   width: 100vw;
-  z-index: 0;
   position: absolute;
-  /* top: 0; */
-  /* left: 0; */
   bottom: 0;
   padding-bottom: 90%;
 }
@@ -2555,6 +2552,10 @@ html.no-csstransitions .home-content__main {
 .services-list .service-icon {
   color: #ff5d79;
   font-size: 4.8rem;
+}
+
+.services-list .service-item {
+  z-index: 1;
 }
 
 .services-list .service-item ul {
