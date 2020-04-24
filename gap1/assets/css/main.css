@@ -2340,7 +2340,6 @@ html.no-csstransitions .home-content__main {
 }
 
 .s-about .about_bg {
-  position: absolute;
   margin: auto;
   top: 0px;
   right: 0px;
