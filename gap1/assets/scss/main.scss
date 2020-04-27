@@ -557,6 +557,16 @@ td:last-child {
       }
     }
   }
+  &.bg_color {
+    table {
+      th:nth-child(1), td:nth-child(1) {
+        background: #faeed8;
+      }
+      th:nth-child(2), td:nth-child(2) {
+        background: #fbe4c1;
+      }
+    }
+  }
 }
 .table_title {
   font-size: 2.8rem;
