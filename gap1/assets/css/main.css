@@ -183,6 +183,7 @@ p.lead {
 }
 
 .lead .table-responsive table {
+  text-align: center;
   margin-bottom: 4rem;
   border-top: 0.3rem solid #C4B7A84D;
   border-bottom: 0.8rem solid #C4B7A84D;
@@ -504,6 +505,7 @@ td:last-child {
 .table-responsive {
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
+  text-align: center;
 }
 
 .table-responsive table {
@@ -2677,6 +2679,7 @@ html.no-csstransitions .home-content__main {
   margin-top: 6rem;
   max-width: none;
   width: 1380px;
+  margin: 0 auto;
 }
 
 .masonry:after {
@@ -2972,11 +2975,11 @@ html.no-csstransitions .home-content__main {
 
 .testimonials__slider .slick-dots li button {
   display: block;
-  width: 10px;
-  height: 10px;
+  width: 15px;
+  height: 15px;
   line-height: 10px;
   border-radius: 50%;
-  background: rgba(0, 0, 0, 0.4);
+  background: #fff;
   border: none;
   padding: 0;
   margin: 0;
@@ -2993,13 +2996,58 @@ html.no-csstransitions .home-content__main {
 
 .testimonials__slider .slick-dots li.slick-active button,
 .testimonials__slider .slick-dots li:hover button {
-  background: #000000;
+  background: #fc193f;
+}
+
+.testimonials__slider .slick-dots li {
+  padding: 22px;
+}
+
+.testimonials__slider .slick-dots li button {
+  border: 3px solid #ff5d79;
+  position: relative;
+}
+
+.testimonials__slider .slick-dots li button:after {
+  content: '';
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  width: 20px;
+  height: 20px;
+  visibility: hidden;
+  background: #ff5d79;
+  border-radius: 50%;
+  -webkit-box-shadow: 0 0 1px #ff5d79;
+          box-shadow: 0 0 1px #ff5d79;
+  opacity: 0;
+  -webkit-transform: scale(3);
+          transform: scale(3);
+  -webkit-transition: opacity 0.3s ease, visibility 0s 0.3s, -webkit-transform 0.3s ease;
+  transition: opacity 0.3s ease, visibility 0s 0.3s, -webkit-transform 0.3s ease;
+  transition: opacity 0.3s ease, transform 0.3s ease, visibility 0s 0.3s;
+  transition: opacity 0.3s ease, transform 0.3s ease, visibility 0s 0.3s, -webkit-transform 0.3s ease;
+}
+
+.testimonials__slider .slick-dots li button:hover, .testimonials__slider .slick-dots li button:focus {
+  border: 3px solid #ffd2eb;
+}
+
+.testimonials__slider .slick-dots li.slick-active button:after {
+  visibility: visible;
+  opacity: 1;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition: opacity 0.3s ease, -webkit-transform 0.3s ease;
+  transition: opacity 0.3s ease, -webkit-transform 0.3s ease;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  transition: opacity 0.3s ease, transform 0.3s ease, -webkit-transform 0.3s ease;
 }
 
 .testimonials__slide {
   position: relative;
-  padding-top: 4.5rem;
-  padding-left: 12rem;
+  padding-top: 0rem;
+  padding-left: 3rem;
   padding-right: 3rem;
 }
 

@@ -215,6 +215,7 @@ p.lead {
     }
   }
   .table-responsive table {
+    text-align: center;
     margin-bottom: 4rem;
     border-top: .3rem solid $col_dark_br_lighta;
     border-bottom: .8rem solid $col_dark_br_lighta;
@@ -536,6 +537,7 @@ td:last-child {
 .table-responsive {
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
+  text-align: center;
   table {
     margin-bottom: 4rem;
     border-top: 0.3rem solid $col_dark_br_lighta;
@@ -549,6 +551,7 @@ td:last-child {
       font-weight: bold;
       padding: 1rem 2rem 1rem 2rem;
       border: 1px solid #e8e8e8;
+      // text-align: center;
       @media screen and (max-width: $break-small) {
         padding: 1rem 1rem 1rem 1.6rem;
       }
@@ -2644,6 +2647,7 @@ html.no-csstransitions .home-content__main {
   margin-top: 6rem;
   max-width: none;
   width: 1380px;
+  margin: 0 auto;
 }
 
 .masonry:after {
@@ -2933,11 +2937,11 @@ html.no-csstransitions .home-content__main {
 }
 .testimonials__slider .slick-dots li button {
   display: block;
-  width: 10px;
-  height: 10px;
+  width: 15px;
+  height: 15px;
   line-height: 10px;
   border-radius: 50%;
-  background: rgba(0, 0, 0, 0.4);
+  background: #fff;
   border: none;
   padding: 0;
   margin: 0;
@@ -2946,19 +2950,53 @@ html.no-csstransitions .home-content__main {
   text-shadow: none;
   color: transparent;
 }
+
 .testimonials__slider .slick-dots li button:hover,
 .testimonials__slider .slick-dots li button:focus {
   outline: none;
 }
 .testimonials__slider .slick-dots li.slick-active button,
 .testimonials__slider .slick-dots li:hover button {
-  background: #000000;
+  background: $main_light_1;
 }
+.testimonials__slider .slick-dots li {
+  padding: 22px;
+  button {
+    border: 3px solid $main_light;
+    position: relative;
+    &:after {
+      content: '';
+      position: absolute;
+      top: -5px;
+      left: -5px;
+      width: 20px;
+      height: 20px;
+      visibility: hidden;
+      background: $main_light;
+      border-radius: 50%;
+      box-shadow: 0 0 1px $main_light;
+      opacity: 0;
+      transform: scale(3);
+      transition: opacity 0.3s ease, transform 0.3s ease, visibility 0s 0.3s;
+    }
+    &:hover, &:focus {
+      border: 3px solid $main_light_2;
+    }
+  }
+}
+.testimonials__slider .slick-dots li.slick-active button:after {
+  visibility: visible;
+  opacity: 1;
+  transform: scale(1);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+
 
 .testimonials__slide {
   position: relative;
-  padding-top: 4.5rem;
-  padding-left: 12rem;
+  padding-top: 0rem;
+  padding-left: 3rem;
   padding-right: 3rem;
 }
 .testimonials__slide::before {
