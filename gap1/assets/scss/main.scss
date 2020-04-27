@@ -217,8 +217,8 @@ p.lead {
   .table-responsive table {
     text-align: center;
     margin-bottom: 4rem;
-    border-top: .3rem solid $col_dark_br_lighta;
-    border-bottom: .8rem solid $col_dark_br_lighta;
+    border-top: .3rem solid #fff;
+    border-bottom: .8rem solid rgba(255, 255, 255, 0.35);
     // box-shadow: 0px 10px 18px 0px $gary_mid_2;
     th {
       font-weight: bold;
@@ -540,10 +540,9 @@ td:last-child {
   text-align: center;
   table {
     margin-bottom: 4rem;
-    border-top: 0.3rem solid $col_dark_br_lighta;
-    border-bottom: 0.8rem solid $col_dark_br_lighta;
+    border-top: 0.3rem solid #fff;
+    border-bottom: .8rem solid rgba(255, 255, 255, 0.35);
     box-shadow: 0px 10px 18px 0px rgba(0, 0, 0, 0.15);
-    background: #fff;
     @media screen and (max-width: $break-small) {
       padding-top: 10rem;
     }
@@ -551,6 +550,7 @@ td:last-child {
       font-weight: bold;
       padding: 1rem 2rem 1rem 2rem;
       border: 1px solid #e8e8e8;
+      background: #fff;
       // text-align: center;
       @media screen and (max-width: $break-small) {
         padding: 1rem 1rem 1rem 1.6rem;
@@ -1350,6 +1350,10 @@ input::-moz-focus-inner {
 }
 .subhead::before {
   content: "/ ";
+}
+
+.section-header.mt {
+  margin-top: 6rem;
 }
 
 /* ------------------------------------------------------------------- 
@@ -2529,7 +2533,7 @@ html.no-csstransitions .home-content__main {
  * ------------------------------------------------------------------- */
 .s-services {
   padding-top: 18rem;
-  padding-bottom: 18rem;
+  padding-bottom: 10rem;
   color: #555555;
   position: relative;
   background-image: linear-gradient(25deg, #d5b8ba, #e3cfd1, #f1e7e8, #ffffff);
