@@ -3101,6 +3101,7 @@ html.no-csstransitions .home-content__main {
   background-size: cover;
   overflow: hidden;
   position: relative;
+  background-attachment: fixed;
 }
 .s-stats::before {
   display: block;
