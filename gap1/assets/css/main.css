@@ -536,11 +536,11 @@ td:last-child {
 }
 
 .table-responsive.bg_color table th:nth-child(1), .table-responsive.bg_color table td:nth-child(1) {
-  background: #faeed8;
+  background: #f8d1d5;
 }
 
 .table-responsive.bg_color table th:nth-child(2), .table-responsive.bg_color table td:nth-child(2) {
-  background: #fbe4c1;
+  background: #fad9bf;
 }
 
 .table_title {
@@ -1593,7 +1593,7 @@ input::-moz-focus-inner {
 .header-nav__social {
   list-style: none;
   display: inline-block;
-  font-size: 1.8rem;
+  font-size: 2.4rem;
   margin: 0;
 }
 

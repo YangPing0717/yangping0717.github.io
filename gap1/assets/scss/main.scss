@@ -560,10 +560,10 @@ td:last-child {
   &.bg_color {
     table {
       th:nth-child(1), td:nth-child(1) {
-        background: #faeed8;
+        background: #f8d1d5;
       }
       th:nth-child(2), td:nth-child(2) {
-        background: #fbe4c1;
+        background: #fad9bf;
       }
     }
   }
@@ -1569,7 +1569,7 @@ input::-moz-focus-inner {
 .header-nav__social {
   list-style: none;
   display: inline-block;
-  font-size: 1.8rem;
+  font-size: 2.4rem;
   margin: 0;
 }
 .header-nav__social li {

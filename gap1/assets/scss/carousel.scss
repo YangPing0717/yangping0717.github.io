@@ -72,8 +72,8 @@ $main_light: #ff5d79;
 			font-size: 1.6rem;
 			letter-spacing: -.1rem;
 			line-height: 1.6;
-			width: 50%;
-			display: none;
+			width: 60%;
+			// display: none;
 		}
 	}
 }
@@ -177,8 +177,7 @@ $main_light: #ff5d79;
 .hero-social-warp .hero-social-links a {
 	color: #000;
 	margin-left: 35px;
-	font-size: 17px;
-	-webkit-transition: all 0.3s;
+	font-size: 2rem;
 	transition: all 0.3s;
 }
 
@@ -371,6 +370,8 @@ $main_light: #ff5d79;
 		z-index: 9;
 		text-align: center;
 		background: #f8f9fb;
+		border-radius: 0;
+    margin-bottom: 0;
 	}
 	.hero-social-warp p {
 		padding-bottom: 15px;
@@ -485,4 +486,14 @@ $main_light: #ff5d79;
 	.blog-item .blog-head.bh-sm h2 {
 		font-size: 24px;
 	}
+	.hs-item {
+		padding: 250px 15px;
+		// height: auto;
+		height: 100vh;
+		&.txt_pt{
+			padding: 0 15px 200px;
+		}
+	}
 }
+
+

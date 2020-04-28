@@ -76,8 +76,7 @@
     font-size: 1.6rem;
     letter-spacing: -.1rem;
     line-height: 1.6;
-    width: 50%;
-    display: none;
+    width: 60%;
   }
 }
 
@@ -180,7 +179,7 @@
 .hero-social-warp .hero-social-links a {
   color: #000;
   margin-left: 35px;
-  font-size: 17px;
+  font-size: 2rem;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
@@ -366,6 +365,8 @@
     z-index: 9;
     text-align: center;
     background: #f8f9fb;
+    border-radius: 0;
+    margin-bottom: 0;
   }
   .hero-social-warp p {
     padding-bottom: 15px;
@@ -477,5 +478,12 @@
   }
   .blog-item .blog-head.bh-sm h2 {
     font-size: 24px;
+  }
+  .hs-item {
+    padding: 250px 15px;
+    height: 100vh;
+  }
+  .hs-item.txt_pt {
+    padding: 0 15px 200px;
   }
 }
