@@ -468,9 +468,13 @@ dd {
  * ------------------------------------------------------------------- */
 .video-container {
   position: relative;
-  padding-bottom: 56.25%;
+  // padding-bottom: 56.25%;
+  padding-bottom: 68%;
   height: 0;
   overflow: hidden;
+  @media screen and (max-width: $break-small) {
+    padding-bottom: 100%;
+  }
 }
 .video-container iframe,
 .video-container object,
@@ -551,9 +555,31 @@ td:last-child {
       padding: 1rem 2rem 1rem 2rem;
       border: 1px solid #e8e8e8;
       background: #fff;
-      // text-align: center;
       @media screen and (max-width: $break-small) {
         padding: 1rem 1rem 1rem 1.6rem;
+      }
+      div {
+        margin: 1rem 0;
+        span {
+          font-size: 1.6rem;
+          color: #ffffff;
+          background-color: #a68cf9;
+          padding: 0.6rem 1.6rem;
+          border-radius: 50px;
+          @media screen and (max-width: $break-small) {
+            font-size: 1.3rem;
+          }
+        }
+      }
+      img {
+        width: 22%;
+        height: auto;
+        margin: 1rem .8rem;
+        border-radius: 30px;
+        @media screen and (max-width: $break-small) {
+          width: 90%;
+          margin: 1rem .8rem 1rem 0;
+        }
       }
     }
   }
@@ -565,6 +591,11 @@ td:last-child {
       th:nth-child(2), td:nth-child(2) {
         background: #fad9bf;
       }
+    }
+  }
+  &.txt_center {
+    th, td {
+      text-align: center;
     }
   }
 }
@@ -1318,6 +1349,10 @@ input::-moz-focus-inner {
 .narrow {
   max-width: 800px;
 }
+.narrow_x {
+  max-width: 800px !important;
+  margin: auto !important;
+}
 
 .light-gray {
   background-color: #f1f1f1;
@@ -1885,8 +1920,8 @@ input::-moz-focus-inner {
  * ------------------------------------------------------------------- */
 .home-sidelinks {
   list-style: none;
-  font-family: "metropolis-regular", sans-serif;
-  font-size: 1.4rem;
+  // font-family: "metropolis-regular", sans-serif;
+  font-size: 1.6rem;
   line-height: 1.714;
   text-transform: uppercase;
   letter-spacing: 0.3rem;
@@ -1920,11 +1955,11 @@ input::-moz-focus-inner {
   border-radius: 50%;
   position: absolute;
   top: 3rem;
-  left: 2rem;
+  left: 2.8rem;
 }
 .home-sidelinks a {
   display: block;
-  padding: 2.1rem 15rem 2.1rem 4rem;
+  padding: 2.1rem 12rem 2.1rem 5rem;
   color: #ffffff;
 }
 .home-sidelinks span {
@@ -2139,7 +2174,7 @@ html.no-csstransitions .home-content__main {
   }
 
   .home-sidelinks {
-    font-size: 1.3rem;
+    font-size: 1.6rem;
   }
 
   .home-scroll {
@@ -2750,6 +2785,7 @@ html.no-csstransitions .home-content__main {
   color: #000000;
   font-size: 1.8rem;
   margin: 0;
+  display: none;
 }
 
 .item-folio__cat {
@@ -2766,11 +2802,12 @@ html.no-csstransitions .home-content__main {
 .item-folio__project-link {
   z-index: 500;
   display: block;
-  font-family: "metropolis-semibold", sans-serif;
-  font-size: 1.3rem;
+  // font-family: "metropolis-semibold", sans-serif;
+  font-size: 1.6rem;
+  font-weight: bold;
   color: #ffffff;
-  background-color: #000000;
-  padding: 0.6rem 1.6rem;
+  // background-color: hsla(0, 0%, 0%, 0.7);
+  padding: 0.7rem 2rem;
   position: absolute;
   top: 3rem;
   left: 3rem;
@@ -2780,6 +2817,7 @@ html.no-csstransitions .home-content__main {
   -ms-transform: translate3d(-100%, 0, 0);
   transform: translate3d(-100%, 0, 0);
   border-radius: 50px;
+  background-image: linear-gradient(25deg, #e72a4e, #f05961, #f97b75, #ff9b89);
 }
 .item-folio__project-link::before {
   display: block;
@@ -2872,7 +2910,7 @@ html.no-csstransitions .home-content__main {
 }
 @media only screen and (max-width: 1100px) {
   .masonry-wrap {
-    width: 90%;
+    width: 85%;
     max-width: 800px;
   }
 
@@ -3083,7 +3121,7 @@ html.no-csstransitions .home-content__main {
   }
 
   .testimonials__slide {
-    padding: 13.2rem 0 0;
+    padding: 0rem 0 0;
     text-align: center;
   }
   .testimonials__slide::before {
@@ -3266,7 +3304,7 @@ html.no-csstransitions .home-content__main {
   position: relative;
   color: #fff;
   padding-top: 3.6rem;
-  &::before {
+  &:before {
     content: "";
     display: block;
     height: 1px;
@@ -3275,6 +3313,19 @@ html.no-csstransitions .home-content__main {
     position: absolute;
     top: 0;
     left: 0;
+  }
+  &.non_line{
+    padding-top: 0rem;
+    &:before {
+      content: "";
+      display: block;
+      height: 0px;
+      width: 60px;
+      background-color: $main_light_1;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
   }
   img {
     margin-top: 3.6rem;

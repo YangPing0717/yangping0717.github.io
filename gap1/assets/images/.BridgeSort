@@ -1,21 +1,31 @@
 <?xml version='1.0' encoding='UTF-8' standalone='yes' ?>
 <dirinfo>
 <files>
-<item key='bg_5.jpg20200424160603' />
-<item key='Ｃ端公眾號.jpg20191024131636' />
-<item key='Ｃ端客服號.jpeg20191211160952' />
 <item key='icons20180319113512' />
-<item key='img_a.png20200424181647' />
-<item key='img_b.png20200427101759' />
-<item key='logo.svg20191106180705' />
 <item key='photoswipe20180319113512' />
 <item key='portfolio20180319113838' />
+<item key='slider20191207020626' />
+<item key='Ｃ端客服號.jpeg20191211160952' />
+<item key='bg_5.jpg20200424160603' />
+<item key='Ｃ端公眾號.jpg20191024131636' />
+<item key='sample-image.jpg20180103055224' />
 <item key='sh_1.jpg20200421152544' />
 <item key='sh_2.jpg20200422165408' />
 <item key='sh_3.jpg20200422170300' />
-<item key='slider20191207020626' />
 <item key='share_img_BB.jpg20191111174958' />
 <item key='icon_BB.png20191111174703' />
+<item key='img_a.png20200424181647' />
+<item key='img_b.png20200427101759' />
 <item key='img_c.png20200428113543' />
+<item key='logo.svg20191106180705' />
+<item key='pack_01.jpg20200429131704' />
+<item key='pack_02.jpg20200429131845' />
+<item key='pack_03.jpg20200429131910' />
+<item key='pack_04.jpg20200429131943' />
+<item key='pack_05.jpg20200429132004' />
+<item key='pack_06.jpg20200429132034' />
+<item key='pack_07.jpg20200429132055' />
+<item key='pack_08.jpg20200429132112' />
+<item key='pack_09.jpg20200429132126' />
 </files>
 </dirinfo>

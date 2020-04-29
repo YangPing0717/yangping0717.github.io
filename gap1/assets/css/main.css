@@ -438,9 +438,15 @@ dd {
  * ------------------------------------------------------------------- */
 .video-container {
   position: relative;
-  padding-bottom: 56.25%;
+  padding-bottom: 68%;
   height: 0;
   overflow: hidden;
+}
+
+@media screen and (max-width: 576px) {
+  .video-container {
+    padding-bottom: 100%;
+  }
 }
 
 .video-container iframe,
@@ -535,12 +541,48 @@ td:last-child {
   }
 }
 
+.table-responsive table th div, .table-responsive table td div {
+  margin: 1rem 0;
+}
+
+.table-responsive table th div span, .table-responsive table td div span {
+  font-size: 1.6rem;
+  color: #ffffff;
+  background-color: #a68cf9;
+  padding: 0.6rem 1.6rem;
+  border-radius: 50px;
+}
+
+@media screen and (max-width: 576px) {
+  .table-responsive table th div span, .table-responsive table td div span {
+    font-size: 1.3rem;
+  }
+}
+
+.table-responsive table th img, .table-responsive table td img {
+  width: 22%;
+  height: auto;
+  margin: 1rem .8rem;
+  border-radius: 30px;
+}
+
+@media screen and (max-width: 576px) {
+  .table-responsive table th img, .table-responsive table td img {
+    width: 90%;
+    margin: 1rem .8rem 1rem 0;
+  }
+}
+
 .table-responsive.bg_color table th:nth-child(1), .table-responsive.bg_color table td:nth-child(1) {
   background: #f8d1d5;
 }
 
 .table-responsive.bg_color table th:nth-child(2), .table-responsive.bg_color table td:nth-child(2) {
   background: #fad9bf;
+}
+
+.table-responsive.txt_center th, .table-responsive.txt_center td {
+  text-align: center;
 }
 
 .table_title {
@@ -1331,6 +1373,11 @@ input::-moz-focus-inner {
   max-width: 800px;
 }
 
+.narrow_x {
+  max-width: 800px !important;
+  margin: auto !important;
+}
+
 .light-gray {
   background-color: #f1f1f1;
 }
@@ -1920,8 +1967,7 @@ input::-moz-focus-inner {
  * ------------------------------------------------------------------- */
 .home-sidelinks {
   list-style: none;
-  font-family: "metropolis-regular", sans-serif;
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   line-height: 1.714;
   text-transform: uppercase;
   letter-spacing: 0.3rem;
@@ -1957,12 +2003,12 @@ input::-moz-focus-inner {
   border-radius: 50%;
   position: absolute;
   top: 3rem;
-  left: 2rem;
+  left: 2.8rem;
 }
 
 .home-sidelinks a {
   display: block;
-  padding: 2.1rem 15rem 2.1rem 4rem;
+  padding: 2.1rem 12rem 2.1rem 5rem;
   color: #ffffff;
 }
 
@@ -2179,7 +2225,7 @@ html.no-csstransitions .home-content__main {
     padding-top: 18rem;
   }
   .home-sidelinks {
-    font-size: 1.3rem;
+    font-size: 1.6rem;
   }
   .home-scroll {
     right: 60px;
@@ -2783,6 +2829,7 @@ html.no-csstransitions .home-content__main {
   color: #000000;
   font-size: 1.8rem;
   margin: 0;
+  display: none;
 }
 
 .item-folio__cat {
@@ -2799,11 +2846,10 @@ html.no-csstransitions .home-content__main {
 .item-folio__project-link {
   z-index: 500;
   display: block;
-  font-family: "metropolis-semibold", sans-serif;
-  font-size: 1.3rem;
+  font-size: 1.6rem;
+  font-weight: bold;
   color: #ffffff;
-  background-color: #000000;
-  padding: 0.6rem 1.6rem;
+  padding: 0.7rem 2rem;
   position: absolute;
   top: 3rem;
   left: 3rem;
@@ -2812,6 +2858,7 @@ html.no-csstransitions .home-content__main {
   -webkit-transform: translate3d(-100%, 0, 0);
   transform: translate3d(-100%, 0, 0);
   border-radius: 50px;
+  background-image: linear-gradient(25deg, #e72a4e, #f05961, #f97b75, #ff9b89);
 }
 
 .item-folio__project-link::before {
@@ -2906,7 +2953,7 @@ html.no-csstransitions .home-content__main {
 
 @media only screen and (max-width: 1100px) {
   .masonry-wrap {
-    width: 90%;
+    width: 85%;
     max-width: 800px;
   }
   .masonry .grid-sizer,
@@ -3131,7 +3178,7 @@ html.no-csstransitions .home-content__main {
     margin-top: 3rem;
   }
   .testimonials__slide {
-    padding: 13.2rem 0 0;
+    padding: 0rem 0 0;
     text-align: center;
   }
   .testimonials__slide::before {
@@ -3318,10 +3365,25 @@ html.no-csstransitions .home-content__main {
   padding-top: 3.6rem;
 }
 
-.contact_qr::before {
+.contact_qr:before {
   content: "";
   display: block;
   height: 1px;
+  width: 60px;
+  background-color: #fc193f;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.contact_qr.non_line {
+  padding-top: 0rem;
+}
+
+.contact_qr.non_line:before {
+  content: "";
+  display: block;
+  height: 0px;
   width: 60px;
   background-color: #fc193f;
   position: absolute;
