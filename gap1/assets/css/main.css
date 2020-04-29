@@ -564,6 +564,7 @@ td:last-child {
   height: auto;
   margin: 1rem .8rem;
   border-radius: 30px;
+  border: 6px solid rgba(255, 255, 255, 0.5);
 }
 
 @media screen and (max-width: 576px) {
