@@ -494,6 +494,16 @@ $main_light: #ff5d79;
 			padding: 0 15px 200px;
 		}
 	}
+	.hero-social-warp {
+		p {
+			padding-right: 0px;
+		}
+		.hero-social-links {
+			padding: 0; 
+			display: block;
+			margin: auto;
+		}
+	} 
 }
 
 

@@ -486,4 +486,12 @@
   .hs-item.txt_pt {
     padding: 0 15px 200px;
   }
+  .hero-social-warp p {
+    padding-right: 0px;
+  }
+  .hero-social-warp .hero-social-links {
+    padding: 0;
+    display: block;
+    margin: auto;
+  }
 }

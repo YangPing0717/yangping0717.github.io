@@ -3151,6 +3151,17 @@ html.no-csstransitions .home-content__main {
   letter-spacing: 0;
 }
 
+.testimonials__slide h3 div {
+  font-size: 1.5rem;
+  color: #ffffff;
+  background-image: linear-gradient(25deg, #d90048, #e8366e, #f55495, #ff6ebe);
+  padding: 0.5rem 1.6rem;
+  border-radius: 50px;
+  vertical-align: middle;
+  display: inline-block;
+  margin: -5px 0 0 10px;
+}
+
 /* ------------------------------------------------------------------- 
  * responsive:
  * testimonials
@@ -3766,4 +3777,7 @@ html.no-csstransitions .home-content__main {
   .cl-go-top::after {
     display: none;
   }
+}
+.video-container iframe .bilibili-player-video-pause-panel-container-mini-screen-title {
+  display: none !important;
 }
