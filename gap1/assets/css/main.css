@@ -1396,7 +1396,7 @@ input::-moz-focus-inner {
 }
 
 .display-1 i {
-  color: #003a65;
+  color: #9D9081;
 }
 
 .display-1 span {
@@ -3154,12 +3154,19 @@ html.no-csstransitions .home-content__main {
 .testimonials__slide h3 div {
   font-size: 1.5rem;
   color: #ffffff;
-  background-image: linear-gradient(25deg, #d90048, #e8366e, #f55495, #ff6ebe);
   padding: 0.5rem 1.6rem;
   border-radius: 50px;
   vertical-align: middle;
   display: inline-block;
   margin: -5px 0 0 10px;
+}
+
+.testimonials__slide h3 div.sty_a {
+  background-image: linear-gradient(25deg, #d90048, #e8366e, #f55495, #ff6ebe);
+}
+
+.testimonials__slide h3 div.sty_b {
+  background-image: linear-gradient(25deg, #382aff, #475de9, #4183d2, #0aa6ba);
 }
 
 /* ------------------------------------------------------------------- 
