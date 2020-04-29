@@ -2770,7 +2770,7 @@ html.no-csstransitions .home-content__main {
   font-size: 1.3rem;
   color: #ffffff;
   background-color: #000000;
-  padding: 0.6rem 1.2rem;
+  padding: 0.6rem 1.6rem;
   position: absolute;
   top: 3rem;
   left: 3rem;
@@ -2779,6 +2779,7 @@ html.no-csstransitions .home-content__main {
   -webkit-transform: translate3d(-100%, 0, 0);
   -ms-transform: translate3d(-100%, 0, 0);
   transform: translate3d(-100%, 0, 0);
+  border-radius: 50px;
 }
 .item-folio__project-link::before {
   display: block;
