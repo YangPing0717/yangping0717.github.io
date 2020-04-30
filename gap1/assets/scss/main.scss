@@ -3820,3 +3820,13 @@ html.no-csstransitions .home-content__main {
     }
   }
 }
+.header-nav__social .tooltip_qr {
+  .tooltiptext{
+    background-color: hsla(0, 0%, 0%, 0.7);
+    width: 130px;
+    padding: 8px;
+    img {
+      margin-bottom: 0rem;
+    }
+  }
+}

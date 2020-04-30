@@ -3873,3 +3873,13 @@ html.no-csstransitions .home-content__main {
   -webkit-transform: rotate(90deg);
           transform: rotate(90deg);
 }
+
+.header-nav__social .tooltip_qr .tooltiptext {
+  background-color: rgba(0, 0, 0, 0.7);
+  width: 130px;
+  padding: 8px;
+}
+
+.header-nav__social .tooltip_qr .tooltiptext img {
+  margin-bottom: 0rem;
+}
