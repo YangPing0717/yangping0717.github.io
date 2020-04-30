@@ -3226,6 +3226,12 @@ html.no-csstransitions .home-content__main {
   background-attachment: fixed;
 }
 
+@media screen and (max-width: 576px) {
+  .s-stats {
+    background-attachment: initial;
+  }
+}
+
 .s-stats::before {
   display: block;
   content: "";

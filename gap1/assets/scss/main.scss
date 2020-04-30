@@ -3172,6 +3172,9 @@ html.no-csstransitions .home-content__main {
   overflow: hidden;
   position: relative;
   background-attachment: fixed;
+  @media screen and (max-width: $break-small) {
+    background-attachment: initial;
+  }
 }
 .s-stats::before {
   display: block;
