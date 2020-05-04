@@ -2253,10 +2253,10 @@ html.no-csstransitions .home-content__main {
 
 @media only screen and (max-width: 1400px) {
   .home-content h1 {
-    font-size: 7.8rem;
+    font-size: 6rem;
   }
   .home-content h1 + p {
-    font-size: 3rem;
+    font-size: 2.6rem;
   }
   .home-content h1 + p::before {
     top: 2.4rem;

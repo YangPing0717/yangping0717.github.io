@@ -6,6 +6,12 @@
   position: relative;
 }
 
+@media screen and (max-width: 1400px) {
+  .hero-section .container {
+    margin-right: 18rem;
+  }
+}
+
 .hs-item {
   /* height: 974px; */
   height: 100vh;
