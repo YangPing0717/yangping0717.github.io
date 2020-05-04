@@ -2053,6 +2053,9 @@ input::-moz-focus-inner {
   font-size: 2rem;
   vertical-align: middle;
   margin-right: 8px;
+  @media screen and (max-width: $break-small) {
+    margin-right: 0px;
+  }
 }
 .home-social .home-social-title {
   font-family: "metropolis-semibold", sans-serif;
@@ -3722,7 +3725,7 @@ html.no-csstransitions .home-content__main {
 @media only screen and (max-width: 400px) {
   .s-contact {
     padding-top: 9.6rem;
-    padding-bottom: 3rem;
+    padding-bottom: 6rem;
   }
 
   .contact-main {
@@ -3742,9 +3745,10 @@ html.no-csstransitions .home-content__main {
   }
 
   .cl-copyright {
-    margin-top: 9rem;
+    // margin-top: 9rem;
     padding: 0;
-    text-align: center;
+    padding-right: 7.8rem;
+    // text-align: center;
   }
 
   .cl-copyright span {
@@ -3755,13 +3759,16 @@ html.no-csstransitions .home-content__main {
   }
 
   .cl-go-top {
-    bottom: 12rem;
-    right: 50%;
-    margin-right: -24px;
+    // bottom: 12rem;
+    // right: 50%;
+    right: 25px;
+    bottom: 7.2rem;
+    // margin-right: -24px;
+
   }
   .cl-go-top::before,
   .cl-go-top::after {
-    display: none;
+    // display: none;
   }
 }
 
@@ -3820,6 +3827,21 @@ html.no-csstransitions .home-content__main {
       border-style: solid;
       border-color: rgb(255, 255, 255) transparent transparent transparent;
       transform: rotate(90deg);
+    }
+    @media screen and (max-width: $break-small) {
+      transform: rotate(0deg);
+      left: 50%;
+      &:after {
+        content: "";
+        position: absolute;
+        top: -10%;
+        left: 50%;
+        margin-left: -8px;
+        border-width: 8px;
+        border-style: solid;
+        border-color: rgb(255, 255, 255) transparent transparent transparent;
+        transform: rotate(-180deg);
+      }
     }
   }
 }

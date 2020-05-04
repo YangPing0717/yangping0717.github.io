@@ -2109,6 +2109,12 @@ input::-moz-focus-inner {
   margin-right: 8px;
 }
 
+@media screen and (max-width: 576px) {
+  .home-social i {
+    margin-right: 0px;
+  }
+}
+
 .home-social .home-social-title {
   font-family: "metropolis-semibold", sans-serif;
   padding-right: 4rem;
@@ -3786,7 +3792,7 @@ html.no-csstransitions .home-content__main {
 @media only screen and (max-width: 400px) {
   .s-contact {
     padding-top: 9.6rem;
-    padding-bottom: 3rem;
+    padding-bottom: 6rem;
   }
   .contact-main {
     margin-top: 9.6rem;
@@ -3801,9 +3807,8 @@ html.no-csstransitions .home-content__main {
     font-size: 1.6rem;
   }
   .cl-copyright {
-    margin-top: 9rem;
     padding: 0;
-    text-align: center;
+    padding-right: 7.8rem;
   }
   .cl-copyright span {
     font-size: 14px;
@@ -3812,13 +3817,8 @@ html.no-csstransitions .home-content__main {
     display: none;
   }
   .cl-go-top {
-    bottom: 12rem;
-    right: 50%;
-    margin-right: -24px;
-  }
-  .cl-go-top::before,
-  .cl-go-top::after {
-    display: none;
+    right: 25px;
+    bottom: 7.2rem;
   }
 }
 .tooltip_qr {
@@ -3878,6 +3878,26 @@ html.no-csstransitions .home-content__main {
   border-color: white transparent transparent transparent;
   -webkit-transform: rotate(90deg);
           transform: rotate(90deg);
+}
+
+@media screen and (max-width: 576px) {
+  .hero-social-warp .tooltip_qr .tooltiptext {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+    left: 50%;
+  }
+  .hero-social-warp .tooltip_qr .tooltiptext:after {
+    content: "";
+    position: absolute;
+    top: -10%;
+    left: 50%;
+    margin-left: -8px;
+    border-width: 8px;
+    border-style: solid;
+    border-color: white transparent transparent transparent;
+    -webkit-transform: rotate(-180deg);
+            transform: rotate(-180deg);
+  }
 }
 
 .header-nav__social .tooltip_qr .tooltiptext {
