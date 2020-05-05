@@ -4,9 +4,15 @@
 @import url(https://fonts.googleapis.com/css?family=Patrick+Hand+SC);
 
 
-$break-small: 576px;
-$break-large: 1200px;
-$break-large-2: 1400px;
+@function pxToVw($px) { 
+  @return $px * 100 / 1400 + vw; 
+}
+
+$mq576: 576px;
+$mq1200: 1200px;
+$mq1400: 1400px;
+
+
 $main_light: #ff5d79;
 
 
@@ -14,8 +20,11 @@ $main_light: #ff5d79;
 .hero-section {
 	position: relative;
 	.container{
-		@media screen and (max-width: $break-large-2) {
+		@media screen and (max-width: $mq1400) {
 			margin-right: 18rem;
+		}
+		@media screen and (max-width: $mq576) {
+			margin-right: 0;
 		}
 	}
 }
@@ -35,11 +44,12 @@ $main_light: #ff5d79;
 	br {
 		// display: none;
 	}
-	@media screen and (max-width: $break-small) {
+	@media screen and (max-width: $mq576) {
 		letter-spacing: -.2rem;
 	}
 	h2 {
-		font-size: 6rem;
+		// font-size: 6rem;
+		font-size: pxToVw(60);
 		color: #fff;
 		font-weight: bold;
 		margin-bottom: 2.2rem;
@@ -47,7 +57,7 @@ $main_light: #ff5d79;
 		top: 50px;
 		opacity: 0;
 		line-height: 1.1;
-		@media screen and (max-width: $break-small) {
+		@media screen and (max-width: $mq576) {
 			line-height: 1.15;
 			margin-bottom: 1.3rem;
 			br {
@@ -56,13 +66,13 @@ $main_light: #ff5d79;
 		}
 	}
 	h3 {
-		font-size: 3.2rem;
+		font-size: pxToVw(32);
 		color: #fff;
 		font-weight: bold;
 		margin-top: 1.2rem;
 		margin-bottom: .2rem;
-		@media screen and (max-width: $break-small) {
-			font-size: 2.2rem;
+		@media screen and (max-width: $mq576) {
+			font-size: 2.4rem;
 			margin-bottom: 1.5rem;
 			br {
 				display: none;
@@ -70,10 +80,11 @@ $main_light: #ff5d79;
 		}
 	}
 	p { 
-		font-size: 2rem;
+		// font-size: 2rem;
+		font-size: pxToVw(20);
 		color: #fff;
 		font-weight: bold;
-		@media screen and (max-width: $break-small) {
+		@media screen and (max-width: $mq576) {
 			font-size: 1.6rem;
 			letter-spacing: -.1rem;
 			line-height: 1.6;
@@ -158,7 +169,7 @@ $main_light: #ff5d79;
 	border-radius: 0 0 6rem 6rem;
 	// border: dotted 4px #ffffff;
 	margin-bottom: 5rem;
-	@media screen and (max-width: $break-small) {
+	@media screen and (max-width: $mq576) {
 		border-radius: 0;
 		margin-bottom: 0;
 	}
@@ -282,7 +293,7 @@ $main_light: #ff5d79;
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center bottom;
-	@media screen and (max-width: $break-small) {
+	@media screen and (max-width: $mq576) {
 		background-position: 60% bottom;
 		&.bg_posi {
 			background-position: 60% top;
