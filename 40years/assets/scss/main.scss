@@ -1,0 +1,81 @@
+
+@import url(https://fonts.googleapis.com/earlyaccess/cwtexyen.css);
+
+$mq576: 576px;
+$mq768: 768px;
+$mq1200: 1200px;
+$mq1400: 1400px;
+$mq1600: 1600px;
+
+$mainBlue_or:#A8D9D1;
+$mainBlue:#96dfd2;
+$mainBlueLight:#26bfb5;
+
+
+
+
+body {
+  background: #a5a5a5;
+  /* background: #111111; */
+  font-family: PingFangSC-Medium, arial, "Hiragino Sans GB", "Microsoft Yahei", 微软雅黑, 宋体, Tahoma, Arial, Helvetica, STHeiti;
+  /* font-family: "metropolis-regular", sans-serif; */
+  // font-family: PingFangSC-Medium;
+
+  // google font:
+  // font-family: cwTeXYen, sans-serif;  
+}
+
+@media (min-width: $mq1600){
+
+}
+  .container-fluid.slide0 {
+    padding-left: 0rem;
+    padding-right: 0rem;
+  }
+
+@media (min-width: $mq576){
+  .project-carousel-3d .owl-carousel {
+    width: 100%;
+    position: static;
+  }
+}
+
+@media (min-width: $mq768){
+
+}
+  .project-carousel-3d{
+    background: $mainBlue;
+    // background: radial-gradient(ellipse farthest-corner at right bottom, #FEDB37 0%, #FDB931 8%, #9f7928 30%, #8A6E2F 40%, transparent 80%), radial-gradient(ellipse farthest-corner at left top, #FFFFFF 0%, #FFFFAC 8%, #D1B464 25%, #5d4a1f 62.5%, #5d4a1f 100%);
+    .project-carousel-item {
+      padding-bottom: 100vh;
+    }
+    .owl-item {
+      // margin-right: 0px !important;
+    }
+  } 
+  .owl-carousel.owl-drag .owl-item {
+    // 
+  }
+
+  
+
+  .project-carousel-3d 
+
+#gradient {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  padding: 0px;
+  margin: 0px;
+  opacity: .6;
+  z-index: 3;
+  top: 0px;
+  left: 0px;
+}
+.home-piling .slide0 .slide-bg > .inside {
+  background-image: url(../../img/bg-piling0.png);
+}
+
+
+
+

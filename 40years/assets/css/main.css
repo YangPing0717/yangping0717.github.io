@@ -1,0 +1,45 @@
+@charset "UTF-8";
+@import url(https://fonts.googleapis.com/earlyaccess/cwtexyen.css);
+body {
+  background: #a5a5a5;
+  /* background: #111111; */
+  font-family: PingFangSC-Medium, arial, "Hiragino Sans GB", "Microsoft Yahei", 微软雅黑, 宋体, Tahoma, Arial, Helvetica, STHeiti;
+  /* font-family: "metropolis-regular", sans-serif; */
+}
+
+.container-fluid.slide0 {
+  padding-left: 0rem;
+  padding-right: 0rem;
+}
+
+@media (min-width: 576px) {
+  .project-carousel-3d .owl-carousel {
+    width: 100%;
+    position: static;
+  }
+}
+
+.project-carousel-3d {
+  background: #96dfd2;
+}
+
+.project-carousel-3d .project-carousel-item {
+  padding-bottom: 100vh;
+}
+
+.project-carousel-3d
+#gradient {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  padding: 0px;
+  margin: 0px;
+  opacity: .6;
+  z-index: 3;
+  top: 0px;
+  left: 0px;
+}
+
+.home-piling .slide0 .slide-bg > .inside {
+  background-image: url(../../img/bg-piling0.png);
+}
