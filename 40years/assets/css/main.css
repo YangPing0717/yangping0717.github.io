@@ -73,6 +73,8 @@ body {
 
 .brand .brand-name.text-texture {
   width: initial;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#4bdda1), to(#229436));
+  background-image: linear-gradient(to bottom, #4bdda1, #229436);
 }
 
 .brand .brand-text {
@@ -165,8 +167,8 @@ body {
 
 .home-piling .slide1 .horizontal-service-list .horizontal-service-item {
   background: #22c3b1;
-  background: radial-gradient(circle, rgba(34, 195, 177, 0.358981) 0%, rgba(253, 125, 45, 0.213323) 100%);
-  padding: 3.5vmin 2.125rem 5vmin;
+  background: radial-gradient(circle, rgba(34, 195, 177, 0.5) 0%, rgba(253, 125, 45, 0.3) 100%);
+  padding: 3.5vmin 1.125rem 4vmin;
 }
 
 .home-piling .slide1 .horizontal-service-list .horizontal-service-item .num {
@@ -182,13 +184,17 @@ body {
 }
 
 .home-piling .slide1 .horizontal-service-list .horizontal-service-item .horizontal-service-item-title {
-  margin-bottom: 1.59259259vmin;
+  margin-bottom: .8vmin;
+}
+
+.home-piling .slide1 .horizontal-service-list .horizontal-service-item .horizontal-service-item-photo {
+  margin-bottom: 0vmin;
 }
 
 .home-piling .slide1 .flash-video-container {
   position: relative;
   padding-right: 0;
-  padding-top: 8.54700855%;
+  padding-top: 6.54700855%;
 }
 
 .home-piling .slide1 .flash-video-container .video-border {
@@ -196,7 +202,7 @@ body {
   background: -webkit-gradient(linear, left top, right top, from(#ffce00), to(#00ffbf));
   background: linear-gradient(to right, #ffce00, #00ffbf);
   padding: 3px;
-  margin-bottom: 1.6rem;
+  margin-bottom: 1.3rem;
 }
 
 .home-piling .slide1 .flash-video-container .video-border .flash-video img {

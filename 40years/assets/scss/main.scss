@@ -118,6 +118,7 @@ body {
     line-height: 1.1;
     &.text-texture {
       width: initial;
+      background-image: linear-gradient(to bottom, #4bdda1, #229436);
     }
   }
   .brand-text {
@@ -205,9 +206,9 @@ body {
     margin-top: 0vmin;
     .horizontal-service-item {
       background: rgb(34,195,177);
-      background: radial-gradient(circle, rgba(34,195,177,0.35898109243697474) 0%, rgba(253,125,45,0.21332282913165268) 100%);    // 金色漸層
+      background: radial-gradient(circle, rgba(34,195,177,0.5) 0%, rgba(253,125,45,0.3) 100%);    // 金色漸層
       // background: radial-gradient(ellipse farthest-corner at right bottom, #FEDB37 0%, #FDB931 8%, #9f7928 30%, #8A6E2F 40%, transparent 80%), radial-gradient(ellipse farthest-corner at left top, #FFFFFF 0%, #FFFFAC 8%, #D1B464 25%, #5d4a1f 62.5%, #5d4a1f 100%);
-      padding: 3.5vmin 2.125rem 5vmin;
+      padding: 3.5vmin 1.125rem 4vmin;
       .num {
         color: #ffffff;
         font-weight: normal;
@@ -219,19 +220,22 @@ body {
         line-height: 1.625rem;
       }
       .horizontal-service-item-title {
-        margin-bottom: 1.59259259vmin;
+        margin-bottom: .8vmin;
+      }
+      .horizontal-service-item-photo {
+        margin-bottom: 0vmin;
       }
     }
   }
   .flash-video-container {
     position: relative;
     padding-right: 0;
-    padding-top: 8.54700855%;
+    padding-top: 6.54700855%;
     .video-border {
       position: relative;
       background: linear-gradient(to right, #ffce00, #00ffbf);
       padding: 3px;
-      margin-bottom: 1.6rem;
+      margin-bottom: 1.3rem;
       .flash-video img {
         border: 0px;
       }
