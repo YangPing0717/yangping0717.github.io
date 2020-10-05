@@ -112,6 +112,10 @@ body {
   display: block;
 }
 
+.home-piling .slide0 .article-carousel-promo .owl-dots {
+  display: none;
+}
+
 .home-piling .slide0 .article-carousel-promo .article-promo-item {
   min-height: 100vh;
   min-width: 100vw;
@@ -155,6 +159,7 @@ body {
 
 .home-piling .slide1 {
   font-weight: 700;
+  background: #ebd9cd;
 }
 
 .home-piling .slide1 .slide-container .slide-descr {
@@ -301,6 +306,14 @@ body {
   top: 1rem;
   left: -2rem;
   float: right;
+}
+
+@media (max-width: 575px) {
+  .rounded-icon.down {
+    top: -2rem;
+    right: -10rem;
+    float: left;
+  }
 }
 
 .rounded-icon .icon-quote {
