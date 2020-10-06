@@ -231,9 +231,9 @@ body {
 
 @media (max-width: 575px) {
   .home-piling .slide1 .horizontal-service-list .horizontal-service-item .horizontal-service-item-photo img.photo-position {
-    top: -2rem;
+    top: -3rem;
     left: 42%;
-    max-width: 60%;
+    max-width: 62%;
     height: auto;
   }
 }
@@ -342,15 +342,37 @@ body {
   left: 1.4rem;
 }
 
+@media (max-width: 575px) {
+  .home-piling .slide2 .project-item .project-metro-date {
+    top: 2.2rem;
+    left: 2.4rem;
+    font-size: 1.75rem;
+  }
+}
+
 .home-piling .slide2 .project-item .project-metro-detail {
-  padding-left: 1.2rem;
-  padding-right: 1.2rem;
-  padding-bottom: 1.4rem;
+  padding: 0 1.2rem 1.4rem;
+}
+
+@media (max-width: 575px) {
+  .home-piling .slide2 .project-item .project-metro-detail {
+    padding: 0 2.2rem 2.4rem;
+    font-size: 1.5rem;
+    line-height: 1.2;
+  }
 }
 
 .home-piling .slide2 .project-item .project-metro-detail h2.project-metro-title {
   font-size: 3.5vmin;
   font-weight: 700;
+}
+
+@media (max-width: 575px) {
+  .home-piling .slide2 .project-item .project-metro-detail h2.project-metro-title {
+    font-size: 7.5vmin;
+    margin-bottom: .6rem;
+    line-height: 1.1;
+  }
 }
 
 @media (min-width: 1400px) {

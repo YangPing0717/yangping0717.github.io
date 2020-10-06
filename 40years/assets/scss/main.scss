@@ -270,9 +270,9 @@ body {
         margin-bottom: 0vmin;
         img.photo-position {
           @media (max-width: $mq575){
-            top: -2rem;
+            top: -3rem;
             left: 42%; 
-            max-width: 60%;
+            max-width: 62%;
             height: auto;
           }
         }
@@ -354,14 +354,27 @@ body {
     .project-metro-date{
       top: 1.2rem;
       left: 1.4rem;
+      @media (max-width: $mq575){
+        top: 2.2rem;
+        left: 2.4rem;
+        font-size: 1.75rem;
+      }
     }
     .project-metro-detail {
-      padding-left: 1.2rem;
-      padding-right: 1.2rem;
-      padding-bottom: 1.4rem;
+      padding: 0 1.2rem 1.4rem;
+      @media (max-width: $mq575){
+        padding: 0 2.2rem 2.4rem;
+        font-size: 1.5rem;
+        line-height: 1.2;
+      }
       h2.project-metro-title {
         font-size: 3.5vmin;
         font-weight: 700;
+        @media (max-width: $mq575){
+          font-size: 7.5vmin;
+          margin-bottom: .6rem;
+          line-height: 1.1;
+        }
       }
     }
   }
