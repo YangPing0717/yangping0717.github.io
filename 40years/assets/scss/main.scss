@@ -181,7 +181,42 @@ body {
         }
       }
     }
+    .article-promo-item {
+      .slide-video-container{
+        .container{
+          @media (max-width: $mq575){
+            padding-right: 58px;
+            padding-top: 3rem;
+            padding-bottom: 2.6rem;
+            &.t1_bg {
+              background: rgba(255, 255, 255, 0);
+            }
+            &.t2_bg {
+              // background: rgba(90, 197, 166, .6);
+              background: rgb(255,250,243);
+              background: linear-gradient(0deg, rgba(255,250,243,0) 0%, rgba(116,255,205,0.5) 30%, rgba(90,197,166,.7) 100%);
+            }
+            &.t3_bg {
+              // background: rgba(218, 138, 92, 0.5);
+              background: rgb(255,250,243);
+              background: linear-gradient(0deg, rgba(255,250,243,0) 0%, rgba(255,224,211,1) 30%, rgba(255, 160, 131, 0.9) 100%);
+            }
+          }
+        }
+      }
+      .video-container[style]{display: block;}+.slide-video-container{
+        background: #00ffbf;
+        .container {
+          @media (max-width: $mq575){
+            &.t1_bg, &.t2_bg, &.t3_bg {
+              background: none;
+            }
+          }
+        }
+      }
+    }
   }
+
   .slide-bg > .inside { 
     &.bg1 {
       background-image: url(../../img/bg-piling0_1.png);
@@ -190,13 +225,21 @@ body {
     &.bg2 {
       background-image: url(../../img/bg-piling0_2.jpg);
       opacity: 1;
+      @media (max-width: $mq575){
+        background-position: 42% 50%;
+      }
     }
     &.bg3 {
       background-image: url(../../img/bg-piling0_3.jpg);
       opacity: 1;
+      @media (max-width: $mq575){
+        background-position: 95% 50%;
+      }
     }
-  }  
+  }
 }
+
+
 
 .home-piling .slide1 {
   font-weight: 700;
@@ -228,6 +271,14 @@ body {
       }
       .horizontal-service-item-photo {
         margin-bottom: 0vmin;
+        img.photo-position {
+          @media (max-width: $mq575){
+            top: -4rem;
+            left: 42%; 
+            max-width: 60%;
+            height: auto;
+          }
+        }
       }
     }
   }
@@ -470,7 +521,6 @@ input:checked + .kalp{
     background-position: -2800px 0;
     transition: background 0.8s steps(28);
 }
-
 
 
 
