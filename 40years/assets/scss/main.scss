@@ -376,6 +376,9 @@ body {
   }
   .piling-project-list-title {
     margin-bottom: 2.777778vmin;
+    @media (max-width: $mq575){
+      font-size: 5.222222vmin;
+    }
   }
   .piling-project-item {
     margin-bottom: -0.777778vmin;
@@ -384,6 +387,9 @@ body {
       font-size: 3.6vmin;
       font-weight: 700;
       line-height: 1.2;
+      @media (max-width: $mq575){
+        font-size: 5.6vmin;
+      }
     }
   }
 }
@@ -397,14 +403,17 @@ body {
 }
 
 .rounded-icon {
+  @media (max-width: $mq575){
+    min-width: 4rem;
+    min-height: 4rem;
+  }
   &.down {
-    top: 1rem;
+    top: -2rem;
     left: -2rem;
     float: right;
     @media (max-width: $mq575){
       top: -2rem;
-      right: -10rem;
-      float: left;
+      left: -8rem;
     }
   }
   .icon-quote {
@@ -488,7 +497,7 @@ body {
       border-color: rgb(255, 255, 255) transparent transparent transparent;
       transform: rotate(90deg);
     }
-    @media screen and (max-width: $mq576) {
+    @media screen and (max-width: $mq575) {
       transform: rotate(0deg);
       left: 50%;
       &:after {
@@ -525,6 +534,9 @@ body {
   height: 100px;
   cursor: pointer;
   transform: scale(.8);
+  @media (max-width: $mq575){
+    margin-left: -3.2rem;
+  }
 }
 .kalp{
     background-image: url('../img/aM8UN.png');

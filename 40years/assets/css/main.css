@@ -363,6 +363,12 @@ body {
   margin-bottom: 2.777778vmin;
 }
 
+@media (max-width: 575px) {
+  .home-piling .slide3 .piling-project-list-title {
+    font-size: 5.222222vmin;
+  }
+}
+
 .home-piling .slide3 .piling-project-item {
   margin-bottom: -0.777778vmin;
 }
@@ -374,12 +380,25 @@ body {
   line-height: 1.2;
 }
 
+@media (max-width: 575px) {
+  .home-piling .slide3 .piling-project-item .piling-project-title {
+    font-size: 5.6vmin;
+  }
+}
+
 .home-piling .slide-bg-circle > .inside {
   background-image: linear-gradient(16deg, rgba(255, 250, 243, 0.7) 0%, rgba(255, 226, 223, 0.8) 50%, rgba(255, 226, 209, 0.8) 100%), url("../../img/piling-pic2.png");
 }
 
+@media (max-width: 575px) {
+  .rounded-icon {
+    min-width: 4rem;
+    min-height: 4rem;
+  }
+}
+
 .rounded-icon.down {
-  top: 1rem;
+  top: -2rem;
   left: -2rem;
   float: right;
 }
@@ -387,8 +406,7 @@ body {
 @media (max-width: 575px) {
   .rounded-icon.down {
     top: -2rem;
-    right: -10rem;
-    float: left;
+    left: -8rem;
   }
 }
 
@@ -486,7 +504,7 @@ body {
           transform: rotate(90deg);
 }
 
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 575px) {
   .hero-social-warp .tooltip_qr .tooltiptext {
     -webkit-transform: rotate(0deg);
             transform: rotate(0deg);
@@ -524,6 +542,12 @@ body {
   cursor: pointer;
   -webkit-transform: scale(0.8);
           transform: scale(0.8);
+}
+
+@media (max-width: 575px) {
+  .kalp {
+    margin-left: -3.2rem;
+  }
 }
 
 .kalp {
