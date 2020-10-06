@@ -333,6 +333,11 @@ body {
 }
 
 .home-piling .slide2 {
+  .solution-num {
+    @media (max-width: $mq575){
+      font-size: 48.037037vmin;
+    }
+  }
   .solution-num-title {
     margin-top: -3.6vmin;
     font-size: 1rem;
@@ -341,6 +346,9 @@ body {
   }
   .project-list-metro .project-item {
     height: 19.5rem;
+    @media (max-width: $mq575){
+      height: 30rem;
+    }
   }
   .project-item {
     .project-metro-date{

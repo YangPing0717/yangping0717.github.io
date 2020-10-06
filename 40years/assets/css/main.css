@@ -314,6 +314,12 @@ body {
   margin-bottom: .6rem;
 }
 
+@media (max-width: 575px) {
+  .home-piling .slide2 .solution-num {
+    font-size: 48.037037vmin;
+  }
+}
+
 .home-piling .slide2 .solution-num-title {
   margin-top: -3.6vmin;
   font-size: 1rem;
@@ -323,6 +329,12 @@ body {
 
 .home-piling .slide2 .project-list-metro .project-item {
   height: 19.5rem;
+}
+
+@media (max-width: 575px) {
+  .home-piling .slide2 .project-list-metro .project-item {
+    height: 30rem;
+  }
 }
 
 .home-piling .slide2 .project-item .project-metro-date {
