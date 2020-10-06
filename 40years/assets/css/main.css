@@ -231,7 +231,7 @@ body {
 
 @media (max-width: 575px) {
   .home-piling .slide1 .horizontal-service-list .horizontal-service-item .horizontal-service-item-photo img.photo-position {
-    top: -4rem;
+    top: -2rem;
     left: 42%;
     max-width: 60%;
     height: auto;
