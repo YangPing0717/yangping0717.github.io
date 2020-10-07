@@ -581,7 +581,7 @@ body {
 
 // like button heart
 .kalp{
-  margin-left: -2.6rem;
+  margin-left: -2.4rem;
   margin-top: -2rem;
   width: 100px;
   height: 100px;
@@ -598,6 +598,57 @@ input:checked + .kalp{
     background-position: -2800px 0;
     transition: background 0.8s steps(28);
 }
+
+
+// 改 bootstrap 
+.btn-primary:not(:disabled):not(.disabled).active, 
+.btn-primary:not(:disabled):not(.disabled):active, 
+.show>.btn-primary.dropdown-toggle {
+  color: #fff;
+  background-color: $main_light_2;
+  border-color: $main_light_2;
+}
+.fancybox-show-thumbs .fancybox-thumbs {
+  display: block;
+  background: rgba(0, 0, 0, .6);
+}
+
+
+
+
+// 改列表頁
+.h2-flash {
+  font-weight: 700;
+}
+.article-item-masonry {
+  .article-item-detail {
+    .article-item-category-dark {
+      display: inline-block;
+      vertical-align: top;
+      margin-bottom: 10px;
+      background: $main_light_2;
+      padding: 2px 10px 3px;
+      color: #ffffff;
+      font-size: .75rem;
+      text-transform: uppercase;
+      letter-spacing: .025em;
+      font-weight: bold;
+      border-radius: 50px;
+    }
+    .article-item-title {
+      line-height: 1.2;
+    }
+    .article-item-date {
+      margin-top: .7rem;
+      .divider {
+        margin-left: .625rem;
+        margin-right: .625rem;
+      }
+    }
+  }
+}
+
+
 
 
 // footer 
@@ -617,18 +668,11 @@ input:checked + .kalp{
 }
 
 
-// 改 bootstrap 
-.btn-primary:not(:disabled):not(.disabled).active, 
-.btn-primary:not(:disabled):not(.disabled):active, 
-.show>.btn-primary.dropdown-toggle {
-  color: #fff;
-  background-color: $main_light_2;
-  border-color: $main_light_2;
-}
-.fancybox-show-thumbs .fancybox-thumbs {
-  display: block;
-  background: rgba(0, 0, 0, .6);
-}
+
+
+
+
+
 
 
 // 好像是開頭的
