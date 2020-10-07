@@ -12,14 +12,17 @@ $mq1200: 1200px;
 $mq1400: 1400px;
 $mq1600: 1600px;
 
-$mainBlue_or:#A8D9D1;
-$mainBlue:#96dfd2;
+$mainBlue_or:#b2ece3;
+$mainBlue:#7cffe7;
 $mainBlueLight:#26bfb5;
+$mainBlueLight_trans:rgba(70, 255, 243, 0.2);
 
 $textmain:#666666;
+$textmain_dark:#4d4d4d;
 
 $main_light: #ff6f4f;
 $main_light_2: #ff3d2f;
+$main_light_trans: rgba(255, 164, 79, 0.5);
 
 
 
@@ -211,6 +214,9 @@ body {
     &.bg1 {
       background-image: url(../../img/bg-piling0_1.png);
       opacity: .5;
+      @media (max-width: $mq575){
+        background-position: 70% 60px;
+      }
     }
     &.bg2 {
       background-image: url(../../img/bg-piling0_2.jpg);
@@ -244,17 +250,18 @@ body {
     margin-top: 0vmin;
     .horizontal-service-item {
       background: rgb(34,195,177);
-      background: radial-gradient(circle, rgba(34,195,177,0.5) 0%, rgba(253,125,45,0.3) 100%);    // 金色漸層
+      background: radial-gradient(circle, rgba(34,195,177,0.5) 0%, rgba(253,125,45,0.3) 100%);    
+      // 金色漸層
       // background: radial-gradient(ellipse farthest-corner at right bottom, #FEDB37 0%, #FDB931 8%, #9f7928 30%, #8A6E2F 40%, transparent 80%), radial-gradient(ellipse farthest-corner at left top, #FFFFFF 0%, #FFFFAC 8%, #D1B464 25%, #5d4a1f 62.5%, #5d4a1f 100%);
       padding: 3.5vmin 1.125rem 4vmin;
-      @media (max-width: $mq575){
-        padding: 5vmin 1.125rem 9vmin;
+      @media (max-width: $mq767){
+        padding: 5vmin 1.8rem 8vmin;
       }
       .num {
         color: #ffffff;
         font-weight: normal;
         margin-bottom: 1rem;
-        @media (max-width: $mq575){
+        @media (max-width: $mq767){
           font-size: 8.55555556vmin;
         }
       }
@@ -265,15 +272,28 @@ body {
       }
       .horizontal-service-item-title {
         margin-bottom: .8vmin;
+        br{
+          @media (max-width: $mq767){
+            display: none;
+          }
+          @media (max-width: $mq575){
+            display: initial;
+          }
+        }
       }
       .horizontal-service-item-photo {
         margin-bottom: 0vmin;
         img.photo-position {
+          @media (max-width: $mq767){
+            top: -6rem;
+            left: 60%; 
+            max-width: 44%;
+            height: auto;
+          }
           @media (max-width: $mq575){
             top: -3rem;
-            left: 42%; 
-            max-width: 62%;
-            height: auto;
+            left: 40%; 
+            max-width: 64%;
           }
         }
       }
@@ -306,7 +326,7 @@ body {
     line-height: 1.2;
     letter-spacing: -4px;
     font-weight: 700;
-    @media (max-width: $mq575){
+    @media (max-width: $mq767){
       letter-spacing: -2px;
       font-size: 8vmin;
       br{
@@ -322,13 +342,21 @@ body {
 }
 
 .home-piling {
-  .btn-xs {
-    border-color: $textmain;
-    padding: 3px 7px 3px;
-    font-size: .75rem;
-    color: $textmain;
-    letter-spacing: .025em;
-    margin-bottom: .6rem;
+  .horizontal-service-item {
+    .btn-xs {
+      border-color: $mainBlue_or;
+      padding: 3px 7px 3px;
+      font-size: .75rem;
+      color: $textmain;
+      letter-spacing: .025em;
+      margin-bottom: .6rem;
+      background: $mainBlueLight_trans;
+      &:hover {
+        border-color: $mainBlue !important;
+        background: $mainBlueLight_trans !important;
+        color: $textmain_dark !important;
+      }
+    }
   }
 }
 
@@ -346,6 +374,9 @@ body {
   }
   .project-list-metro .project-item {
     height: 19.5rem;
+    @media (max-width: $mq767){
+      height: 25rem;
+    }
     @media (max-width: $mq575){
       height: 30rem;
     }
@@ -354,7 +385,7 @@ body {
     .project-metro-date{
       top: 1.2rem;
       left: 1.4rem;
-      @media (max-width: $mq575){
+      @media (max-width: $mq767){
         top: 2.2rem;
         left: 2.4rem;
         font-size: 1.75rem;
@@ -362,7 +393,7 @@ body {
     }
     .project-metro-detail {
       padding: 0 1.2rem 1.4rem;
-      @media (max-width: $mq575){
+      @media (max-width: $mq767){
         padding: 0 2.2rem 2.4rem;
         font-size: 1.5rem;
         line-height: 1.2;
@@ -370,7 +401,7 @@ body {
       h2.project-metro-title {
         font-size: 3.5vmin;
         font-weight: 700;
-        @media (max-width: $mq575){
+        @media (max-width: $mq767){
           font-size: 7.5vmin;
           margin-bottom: .6rem;
           line-height: 1.1;
@@ -389,7 +420,7 @@ body {
   }
   .piling-project-list-title {
     margin-bottom: 2.777778vmin;
-    @media (max-width: $mq575){
+    @media (max-width: $mq767){
       font-size: 5.222222vmin;
     }
   }
@@ -400,7 +431,7 @@ body {
       font-size: 3.6vmin;
       font-weight: 700;
       line-height: 1.2;
-      @media (max-width: $mq575){
+      @media (max-width: $mq767){
         font-size: 5.6vmin;
       }
     }
@@ -416,7 +447,7 @@ body {
 }
 
 .rounded-icon {
-  @media (max-width: $mq575){
+  @media (max-width: $mq767){
     min-width: 4rem;
     min-height: 4rem;
   }
@@ -424,7 +455,7 @@ body {
     top: -2rem;
     left: -2rem;
     float: right;
-    @media (max-width: $mq575){
+    @media (max-width: $mq767){
       top: -2rem;
       left: -8rem;
     }
@@ -547,7 +578,7 @@ body {
   height: 100px;
   cursor: pointer;
   transform: scale(.8);
-  @media (max-width: $mq575){
+  @media (max-width: $mq767){
     margin-left: -3.2rem;
   }
 }

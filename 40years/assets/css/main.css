@@ -155,6 +155,12 @@ body {
   opacity: .5;
 }
 
+@media (max-width: 575px) {
+  .home-piling .slide0 .slide-bg > .inside.bg1 {
+    background-position: 70% 60px;
+  }
+}
+
 .home-piling .slide0 .slide-bg > .inside.bg2 {
   background-image: url(../../img/bg-piling0_2.jpg);
   opacity: 1;
@@ -197,9 +203,9 @@ body {
   padding: 3.5vmin 1.125rem 4vmin;
 }
 
-@media (max-width: 575px) {
+@media (max-width: 767px) {
   .home-piling .slide1 .horizontal-service-list .horizontal-service-item {
-    padding: 5vmin 1.125rem 9vmin;
+    padding: 5vmin 1.8rem 8vmin;
   }
 }
 
@@ -209,7 +215,7 @@ body {
   margin-bottom: 1rem;
 }
 
-@media (max-width: 575px) {
+@media (max-width: 767px) {
   .home-piling .slide1 .horizontal-service-list .horizontal-service-item .num {
     font-size: 8.55555556vmin;
   }
@@ -225,16 +231,36 @@ body {
   margin-bottom: .8vmin;
 }
 
+@media (max-width: 767px) {
+  .home-piling .slide1 .horizontal-service-list .horizontal-service-item .horizontal-service-item-title br {
+    display: none;
+  }
+}
+
+@media (max-width: 575px) {
+  .home-piling .slide1 .horizontal-service-list .horizontal-service-item .horizontal-service-item-title br {
+    display: initial;
+  }
+}
+
 .home-piling .slide1 .horizontal-service-list .horizontal-service-item .horizontal-service-item-photo {
   margin-bottom: 0vmin;
+}
+
+@media (max-width: 767px) {
+  .home-piling .slide1 .horizontal-service-list .horizontal-service-item .horizontal-service-item-photo img.photo-position {
+    top: -6rem;
+    left: 60%;
+    max-width: 44%;
+    height: auto;
+  }
 }
 
 @media (max-width: 575px) {
   .home-piling .slide1 .horizontal-service-list .horizontal-service-item .horizontal-service-item-photo img.photo-position {
     top: -3rem;
-    left: 42%;
-    max-width: 62%;
-    height: auto;
+    left: 40%;
+    max-width: 64%;
   }
 }
 
@@ -271,7 +297,7 @@ body {
   font-weight: 700;
 }
 
-@media (max-width: 575px) {
+@media (max-width: 767px) {
   .home-piling .slide1 h1, .home-piling .slide1 .h1,
   .home-piling .slide2 h1,
   .home-piling .slide2 .h1,
@@ -305,13 +331,20 @@ body {
   font-weight: 700;
 }
 
-.home-piling .btn-xs {
-  border-color: #666666;
+.home-piling .horizontal-service-item .btn-xs {
+  border-color: #b2ece3;
   padding: 3px 7px 3px;
   font-size: .75rem;
   color: #666666;
   letter-spacing: .025em;
   margin-bottom: .6rem;
+  background: rgba(70, 255, 243, 0.2);
+}
+
+.home-piling .horizontal-service-item .btn-xs:hover {
+  border-color: #7cffe7 !important;
+  background: rgba(70, 255, 243, 0.2) !important;
+  color: #4d4d4d !important;
 }
 
 @media (max-width: 575px) {
@@ -331,6 +364,12 @@ body {
   height: 19.5rem;
 }
 
+@media (max-width: 767px) {
+  .home-piling .slide2 .project-list-metro .project-item {
+    height: 25rem;
+  }
+}
+
 @media (max-width: 575px) {
   .home-piling .slide2 .project-list-metro .project-item {
     height: 30rem;
@@ -342,7 +381,7 @@ body {
   left: 1.4rem;
 }
 
-@media (max-width: 575px) {
+@media (max-width: 767px) {
   .home-piling .slide2 .project-item .project-metro-date {
     top: 2.2rem;
     left: 2.4rem;
@@ -354,7 +393,7 @@ body {
   padding: 0 1.2rem 1.4rem;
 }
 
-@media (max-width: 575px) {
+@media (max-width: 767px) {
   .home-piling .slide2 .project-item .project-metro-detail {
     padding: 0 2.2rem 2.4rem;
     font-size: 1.5rem;
@@ -367,7 +406,7 @@ body {
   font-weight: 700;
 }
 
-@media (max-width: 575px) {
+@media (max-width: 767px) {
   .home-piling .slide2 .project-item .project-metro-detail h2.project-metro-title {
     font-size: 7.5vmin;
     margin-bottom: .6rem;
@@ -385,7 +424,7 @@ body {
   margin-bottom: 2.777778vmin;
 }
 
-@media (max-width: 575px) {
+@media (max-width: 767px) {
   .home-piling .slide3 .piling-project-list-title {
     font-size: 5.222222vmin;
   }
@@ -402,7 +441,7 @@ body {
   line-height: 1.2;
 }
 
-@media (max-width: 575px) {
+@media (max-width: 767px) {
   .home-piling .slide3 .piling-project-item .piling-project-title {
     font-size: 5.6vmin;
   }
@@ -412,7 +451,7 @@ body {
   background-image: linear-gradient(16deg, rgba(255, 250, 243, 0.7) 0%, rgba(255, 226, 223, 0.8) 50%, rgba(255, 226, 209, 0.8) 100%), url("../../img/piling-pic2.png");
 }
 
-@media (max-width: 575px) {
+@media (max-width: 767px) {
   .rounded-icon {
     min-width: 4rem;
     min-height: 4rem;
@@ -425,7 +464,7 @@ body {
   float: right;
 }
 
-@media (max-width: 575px) {
+@media (max-width: 767px) {
   .rounded-icon.down {
     top: -2rem;
     left: -8rem;
@@ -566,7 +605,7 @@ body {
           transform: scale(0.8);
 }
 
-@media (max-width: 575px) {
+@media (max-width: 767px) {
   .kalp {
     margin-left: -3.2rem;
   }
