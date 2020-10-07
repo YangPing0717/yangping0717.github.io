@@ -7,6 +7,8 @@
 $main_light: #ff6f4f;
 $main_light_2: #ff3d2f;
 
+$selection:#ffb6a9;
+
 
 
 
@@ -139,19 +141,19 @@ html > body .underline:hover {
 }
 
 ::selection {
-  background-color: #2d1a6a;
+  background-color: $selection;
   color: #ffffff;
   text-shadow: none;
 }
 
 -webkit-::selection {
-  background-color: #2d1a6a;
+  background-color: $selection;
   color: #ffffff;
   text-shadow: none;
 }
 
 ::-moz-selection {
-  background-color: #2d1a6a;
+  background-color: $selection;
   color: #ffffff;
   text-shadow: none;
 }

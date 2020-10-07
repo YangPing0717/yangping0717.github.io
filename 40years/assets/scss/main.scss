@@ -23,6 +23,7 @@ $textmain_dark:#4d4d4d;
 $main_light: #ff6f4f;
 $main_light_2: #ff3d2f;
 $main_light_trans: rgba(255, 164, 79, 0.5);
+$selection:#ffb795;
 
 
 
@@ -443,7 +444,7 @@ body {
     // background-image: url(../../img/piling-pic2.png);
     // background-color: #ddcccc;
     // background-color: rgb(232,217,242);
-    background-image: linear-gradient(16deg, rgba(255,250,243,.7) 0%, rgba(255, 226, 223, 0.8) 50%, rgba(255, 226, 209, 0.8) 100%), url("../../img/piling-pic2.png");
+    background-image: linear-gradient(16deg, rgba(255,250,243,.7) 0%, rgba(255, 226, 223, 0.8) 50%, rgba(255, 204, 173, 0.8) 100%), url("../../img/piling-pic2.png");
     // background-color: linear-gradient(16deg, rgba(232,217,242,1) 0%, rgba(255,241,247,1) 50%, rgba(255,250,243,1) 100%), url(../../img/piling-pic2.png);
   }
   &.cir_sec {
@@ -599,6 +600,21 @@ input:checked + .kalp{
 }
 
 
+// footer 
+.home-flash-dark {
+  background: rgb(210,184,148);
+  background-image: linear-gradient(180deg, rgba(92, 255, 229, 0.35) 0%, rgba(255, 207, 76, 0.55) 50%, rgba(255, 145, 145, 0.5) 100%), url("../../img/bg-piling1.jpg");
+  color: $textmain;
+}
+.footer-content-flash {
+  h5 {
+    margin-bottom: 2.25rem;
+    font-size: .875rem;
+    color: $textmain_dark;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+}
 
 
 // 改 bootstrap 
@@ -630,6 +646,5 @@ input:checked + .kalp{
   -webkit-transform: scale(1);
   transform: scale(1);
 }
-
 
 

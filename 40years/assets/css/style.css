@@ -106,31 +106,31 @@ html > body .underline:hover {
 }
 
 ::-moz-selection {
-  background-color: #2d1a6a;
+  background-color: #ffb6a9;
   color: #ffffff;
   text-shadow: none;
 }
 
 ::selection {
-  background-color: #2d1a6a;
+  background-color: #ffb6a9;
   color: #ffffff;
   text-shadow: none;
 }
 
 -webkit-::-moz-selection {
-  background-color: #2d1a6a;
+  background-color: #ffb6a9;
   color: #ffffff;
   text-shadow: none;
 }
 
 -webkit-::selection {
-  background-color: #2d1a6a;
+  background-color: #ffb6a9;
   color: #ffffff;
   text-shadow: none;
 }
 
 ::-moz-selection {
-  background-color: #2d1a6a;
+  background-color: #ffb6a9;
   color: #ffffff;
   text-shadow: none;
 }
