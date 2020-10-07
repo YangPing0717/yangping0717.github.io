@@ -439,6 +439,19 @@ body {
   }
 }
 
+.home-piling .slide6 {
+ .slide-body {
+   .tags {
+     li {
+        margin-right: 10px;
+        margin-bottom: 8px;
+      }
+     a span {
+       color: $main_light_2;
+     }
+   }
+ }
+}
 .home-piling .slide-bg-circle{
   .inside {
     // background-image: url(../../img/piling-pic2.png);
