@@ -448,7 +448,8 @@ body {
 }
 
 .home-piling .slide5 .slide-descr .gift {
-  background: #ff6f4f;
+  background: #ff5d3a;
+  background: linear-gradient(62deg, #ff5d3a 0%, #00ebff 100%);
   color: #fff;
   padding: 2px 15px;
   font-size: 120%;
@@ -863,6 +864,16 @@ input:checked + .kalp {
 .article-item-masonry .article-item-detail .article-item-date .divider {
   margin-left: .625rem;
   margin-right: .625rem;
+}
+
+.flash_photo {
+  -webkit-animation: flash;
+          animation: flash;
+  /* referring directly to the animation's @keyframe declaration */
+  -webkit-animation-duration: 1.5s;
+          animation-duration: 1.5s;
+  /* don't forget to set a duration! */
+  --animate-repeat: 3;
 }
 
 .home-flash-dark {

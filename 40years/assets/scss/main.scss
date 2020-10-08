@@ -442,7 +442,9 @@ body {
 .home-piling .slide5 {
   .slide-descr {
     .gift {
-      background: $main_light;
+      // background: $main_light;
+      background: rgb(255, 93, 58);
+      background: linear-gradient(62deg, rgb(255, 93, 58) 0%, rgb(0, 235, 255) 100%);
       color: #fff;
       padding: 2px 15px;
       font-size: 120%;
@@ -656,6 +658,12 @@ input:checked + .kalp{
 
 
 
+
+
+
+
+
+
 /* score number effect 開始 */
 .result_box .resultlevel {
   font-size: 5rem;
@@ -812,7 +820,7 @@ input:checked + .kalp{
 
 
 
-// 改列表頁
+// 列表頁
 .h2-flash {
   font-weight: 700;
 }
@@ -842,6 +850,12 @@ input:checked + .kalp{
       }
     }
   }
+}
+
+.flash_photo {
+  animation: flash; /* referring directly to the animation's @keyframe declaration */
+  animation-duration: 1.5s; /* don't forget to set a duration! */
+  --animate-repeat: 3;
 }
 
 
