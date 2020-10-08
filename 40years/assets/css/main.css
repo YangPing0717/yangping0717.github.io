@@ -661,6 +661,154 @@ input:checked + .kalp {
   transition: background 0.8s steps(28);
 }
 
+/* score number effect 開始 */
+.result_box .resultlevel {
+  font-size: 5rem;
+  position: relative;
+  color: #ff3d2f;
+}
+
+.result_box:after {
+  content: 'transcript';
+  font-size: 11rem;
+  color: rgba(255, 255, 255, 0.4);
+  line-height: 10rem;
+  -webkit-transform: rotate(7deg);
+          transform: rotate(7deg);
+  position: absolute;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  margin-left: -30px;
+  z-index: -1;
+  letter-spacing: -6px;
+}
+
+/* score number effect */
+#loading-text {
+  display: block;
+  position: absolute;
+  color: #999;
+  width: 115px;
+  height: 115px;
+  margin: 13px 13px 0 0;
+  text-align: center;
+  color: #ffffff;
+  background: #ff3d2f;
+  border-radius: 50%;
+  left: 28px;
+  top: 14px;
+}
+
+#loading-text div:nth-child(1) {
+  font-size: 4.5rem;
+  margin-top: -5px;
+  margin-left: -6px;
+  font-weight: 700;
+  letter-spacing: -3px;
+}
+
+#loading-text div:nth-child(2) {
+  font-size: 1rem;
+  position: relative;
+  bottom: 20px;
+  font-weight: 700;
+  text-align: center;
+}
+
+#loading-content {
+  display: block;
+  position: relative;
+  /* left: 50%;
+  top: 50%; */
+  width: 170px;
+  height: 170px;
+  margin: -15px -15px 0 0;
+  border: 3px solid #ff3d2f;
+}
+
+#loading-content:after {
+  content: "";
+  position: absolute;
+  border: 3px solid #0F0;
+  left: 15px;
+  right: 15px;
+  top: 15px;
+  bottom: 15px;
+}
+
+#loading-content:before {
+  content: "";
+  position: absolute;
+  border: 3px solid #00F;
+  left: 5px;
+  right: 5px;
+  top: 5px;
+  bottom: 5px;
+}
+
+#loading-content {
+  border: 3px solid transparent;
+  border-top-color: #FF5722;
+  border-bottom-color: #cf3200;
+  border-radius: 50%;
+  -webkit-animation: loader 2s linear infinite;
+  animation: loader 2s linear infinite;
+}
+
+#loading-content:before {
+  border: 3px solid transparent;
+  border-top-color: #ffb200;
+  border-bottom-color: #FF9800;
+  border-radius: 50%;
+  -webkit-animation: loader 3s linear infinite;
+  animation: loader 3s linear infinite;
+}
+
+#loading-content:after {
+  border: 5px solid transparent;
+  border-top-color: #ff0000;
+  border-bottom-color: #ff0069;
+  border-radius: 50%;
+  -webkit-animation: loader 1.5s linear infinite;
+  animation: loader 1.5s linear infinite;
+  -moz-animation: loader 2s linear infinite;
+  -o-animation: loader 2s linear infinite;
+}
+
+@-webkit-keyframes loaders {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes loader {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes loader {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
 .btn-primary:not(:disabled):not(.disabled).active,
 .btn-primary:not(:disabled):not(.disabled):active,
 .show > .btn-primary.dropdown-toggle {
