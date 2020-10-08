@@ -441,16 +441,25 @@ body {
 
 .home-piling .slide5 {
   .slide-descr {
-    span {
-      background: $main_light_2;
+    .gift {
+      background: $main_light;
       color: #fff;
       padding: 2px 15px;
       font-size: 120%;
       line-height: 2.6;
       border-radius: 50px;
+      text-align: center;
+      margin-top: .8rem;
+    }
+    .notifi {
+      font-weight: bold;
+      color: $main_light_2;
+      margin-top: 2rem;
     }
   }
 }
+
+
 
 .home-piling .slide6 {
   .slide-body {
@@ -483,7 +492,15 @@ body {
   }
   &.cir_sec {
     .inside {
-      background-image: linear-gradient(180deg, rgba(255, 245, 223, 0.2) 0%, rgba(255, 239, 223, 0.6) 50%, rgba(209, 255, 241, 0.8) 100%), url("../../img/piling-pic2_2.png");
+      background-image: linear-gradient(180deg, rgba(220, 202, 158, .7) 0%, rgba(255, 239, 223, .4) 50%, rgba(209, 255, 241, .8) 100%), url("../../img/piling-pic2_2.png");
+    }
+  }
+}
+
+.dark-horizontal .slide6 {
+  .tags {
+    a {
+      color: inherit;
     }
   }
 }
@@ -495,8 +512,8 @@ body {
     min-height: 4rem;
   }
   &.down {
-    top: -2rem;
-    left: -2rem;
+    top: -3.5rem;
+    left: -1.6rem;
     float: right;
     @media (max-width: $mq767){
       top: -2rem;

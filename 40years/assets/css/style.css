@@ -636,7 +636,7 @@ input:focus {
 }
 
 .btn-rounded {
-  border-radius: 30px;
+  border-radius: 120px;
 }
 
 .btn-link.text-black:hover {
