@@ -591,8 +591,8 @@
                 <div class="col-lg-3">
                   <div class="h1"><span class="rounded-icon"><i class="icon-quote"></i></span></div>
                   <h1 class="slide-title "><span class="text-primary">WeKIDS</span><br /> 創作區</h1>
-                  <div class="slide-descr text-grey">慶祝屬於自己的回憶</div>
-                  <span class="rounded-icon down"><i class="icon-quote flip"></i></span>
+                  <span class="rounded-icon down"><i class="icon-quote flip"></i></span><br >
+                  <div class="slide-descr text-grey">慶祝屬於自己的回憶！<br >上傳祝福，有機會獲得<br ><span>惠文 40 園遊會電子票卷</span></div>
                 </div>
                 
                 <div class="col-lg-5 col-10">
@@ -603,9 +603,19 @@
                           <label for="inputName">姓名</label>
                           <input type="text" class="form-control" id="inputName" placeholder="姓名">
                         </div>
-                        <div class="form-group col-md-4">
+                        <!-- <div class="form-group col-md-4">
                           <label for="inputName2">老師姓名</label>
                           <input type="text" class="form-control" id="inputName2" placeholder="老師姓名">
+                        </div> -->
+                        <div class="form-group col-md-4">
+                          <label for="inputState">畢業年份</label>
+                          <select id="inputState" class="form-control">
+                            <option selected>1980</option>
+                            <option>1981</option>
+                            <option>1982</option>
+                            <option>1983</option>
+                            <option>...</option>
+                          </select>
                         </div>
                         <div class="form-group col-md-4">
                           <label for="inputState">園區</label>
@@ -618,17 +628,10 @@
                       </div>
                       
                       <div class="form-group">
-                        <label for="inputAddress2">最想說的話</label>
-                        <input type="text" class="form-control" id="inputAddress2" placeholder="最想說的話">
+                        <label for="inputAddress2">惠文 40 祝福的話</label>
+                        <input type="text" class="form-control" id="inputAddress2" placeholder="我想說...">
                       </div>
-                      <div class="form-group">
-                        <label for="inputCity">印象深刻的事</label>
-                        <input type="text" class="form-control" id="inputCity" placeholder="印象深刻的事">
-                      </div>
-                      <!-- <div class="form-group">
-                        <label for="exampleFormControlFile1">上傳照片</label>
-                        <input type="file" class="form-control-file" id="exampleFormControlFile1">
-                      </div> -->
+                      
                       <div class="form-group">
                         <label for="">上傳照片</label>
                         <div class="custom-file">
@@ -637,7 +640,16 @@
                         </div>
                       </div>
                       <div class="form-group">
-                        <label for="inputAddress">目前居住地</label>
+                        <label for="inputCity">照片標題</label>
+                        <input type="text" class="form-control" id="inputCity" placeholder="照片標題">
+                      </div>
+                      <div class="form-group">
+                        <label for="inputMemo">印象最深刻的是..</label>
+                        <input type="text" class="form-control" id="inputMemo" placeholder="我想說...">
+                      </div>
+
+                      <div class="form-group">
+                        <label for="inputAddress">目前居住地 ＊累積對惠文 40 的幸福里程＊</label>
                         <input type="text" class="form-control" id="inputAddress" placeholder="Apartment, studio, or floor">
                       </div>
                       <div class="form-group">
@@ -648,8 +660,10 @@
                           </label>
                         </div>
                       </div>
-                      <button type="submit" class="btn btn-primary mb80">送出祝福</button>
+                      <button type="button" class="btn btn-primary mb80" data-toggle="modal" data-target="#staticBackdrop">送出祝福</button>
+                      
                     </form>
+
                   </div>
 
                 </div>
@@ -699,6 +713,37 @@
     </div>
 
 
+    <!-- Modal -->
+    <div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="staticBackdropLabel">預覽我的祝福</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="grid-item">
+              <a href="#" class="article-item-masonry">
+                <div class="article-item-photo"><img src="img/pic69.jpg" alt="" class="img-fluid" /></div>
+                <div class="article-item-mask"></div>
+                <div class="article-item-detail">
+                  <div class="article-item-category-dark">1988</div>
+                  <div class="article-item-title">慶國百年共創希望未來</div>
+                  <div class="article-item-date">張小方 同學<span class="divider">•</span>畢業於三重園區</div>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">取消</button>
+            <button type="button" class="btn btn-primary">確定送出</button>
+            <button type="button" class="btn btn-primary" onclick="window.location.href='list-photo.html';">去看更多</button> 
+          </div>
+        </div>
+      </div>
+    </div>
 
     <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
     <script>window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')</script>
@@ -722,6 +767,8 @@
     <script src="assets/js/index.js"></script>
     <!-- like button heart -->
     <script src="assets/js/like_button.js"></script>
+
+
 
     <script>
       $(document).ready(function() {
@@ -754,6 +801,8 @@
         });
       });
     </script>
+
+
 
 
 

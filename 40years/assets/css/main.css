@@ -447,6 +447,15 @@ body {
   }
 }
 
+.home-piling .slide5 .slide-descr span {
+  background: #ff3d2f;
+  color: #fff;
+  padding: 2px 15px;
+  font-size: 120%;
+  line-height: 2.6;
+  border-radius: 50px;
+}
+
 .home-piling .slide6 .slide-body .tags li {
   margin-right: 10px;
   margin-bottom: 8px;
@@ -481,7 +490,14 @@ body {
 @media (max-width: 767px) {
   .rounded-icon.down {
     top: -2rem;
-    left: -8rem;
+    left: -18rem;
+  }
+}
+
+@media (max-width: 575px) {
+  .rounded-icon.down {
+    top: -2rem;
+    left: -6rem;
   }
 }
 
@@ -501,8 +517,8 @@ body {
 .rounded-icon .icon-quote.flip {
   -webkit-transform: scaleX(-1);
           transform: scaleX(-1);
-  left: 23%;
-  top: 20%;
+  left: 25%;
+  top: 25%;
 }
 
 .tooltip_qr {
@@ -657,7 +673,7 @@ input:checked + .kalp {
   vertical-align: top;
   margin-bottom: 10px;
   background: #ff3d2f;
-  padding: 2px 10px 3px;
+  padding: 2px 10px 2px;
   color: #ffffff;
   font-size: .75rem;
   text-transform: uppercase;

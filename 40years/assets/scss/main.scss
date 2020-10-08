@@ -439,6 +439,19 @@ body {
   }
 }
 
+.home-piling .slide5 {
+  .slide-descr {
+    span {
+      background: $main_light_2;
+      color: #fff;
+      padding: 2px 15px;
+      font-size: 120%;
+      line-height: 2.6;
+      border-radius: 50px;
+    }
+  }
+}
+
 .home-piling .slide6 {
  .slide-body {
    .tags {
@@ -479,7 +492,11 @@ body {
     float: right;
     @media (max-width: $mq767){
       top: -2rem;
-      left: -8rem;
+      left: -18rem;
+    }
+    @media (max-width: $mq575){
+      top: -2rem;
+      left: -6rem;
     }
   }
   .icon-quote {
@@ -494,8 +511,8 @@ body {
     transform: translate(-50%, -50%);
     &.flip {
       transform: scaleX(-1);
-      left: 23%;
-      top: 20%;
+      left: 25%;
+      top: 25%;
     }
   }
 }
@@ -640,7 +657,7 @@ input:checked + .kalp{
       vertical-align: top;
       margin-bottom: 10px;
       background: $main_light_2;
-      padding: 2px 10px 3px;
+      padding: 2px 10px 2px;
       color: #ffffff;
       font-size: .75rem;
       text-transform: uppercase;
