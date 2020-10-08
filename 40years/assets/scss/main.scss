@@ -336,7 +336,7 @@ body {
     }
   }
   h2, .h2 {
-    margin-bottom: 1.111111vmin;
+    margin-bottom: 2.111111vmin;
     line-height: 1.05;
     font-weight: 700;
   }
@@ -453,17 +453,25 @@ body {
 }
 
 .home-piling .slide6 {
- .slide-body {
-   .tags {
-     li {
-        margin-right: 10px;
-        margin-bottom: 8px;
+  .slide-body {
+    .tags {
+      li {
+          margin-right: 10px;
+          margin-bottom: 8px;
+        }
+      a span {
+        color: $main_light_2;
       }
-     a span {
-       color: $main_light_2;
-     }
-   }
- }
+    }
+  }
+  .slide-bg > .inside {
+    background-image: none;
+    background-position: initial;
+  }
+  .slide-bg {
+    background-image: url(../../img/bg-piling6.jpg);
+    background-position: 75% -280px;
+  }
 }
 .home-piling .slide-bg-circle{
   .inside {

@@ -326,7 +326,7 @@ body {
 .home-piling .slide5 .h2,
 .home-piling .slide6 h2,
 .home-piling .slide6 .h2 {
-  margin-bottom: 1.111111vmin;
+  margin-bottom: 2.111111vmin;
   line-height: 1.05;
   font-weight: 700;
 }
@@ -463,6 +463,16 @@ body {
 
 .home-piling .slide6 .slide-body .tags a span {
   color: #ff3d2f;
+}
+
+.home-piling .slide6 .slide-bg > .inside {
+  background-image: none;
+  background-position: initial;
+}
+
+.home-piling .slide6 .slide-bg {
+  background-image: url(../../img/bg-piling6.jpg);
+  background-position: 75% -280px;
 }
 
 .home-piling .slide-bg-circle .inside {
