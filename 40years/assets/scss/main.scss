@@ -444,7 +444,7 @@ body {
     .gift {
       // background: $main_light;
       background: rgb(255, 93, 58);
-      background: linear-gradient(62deg, rgb(255, 93, 58) 0%, rgb(0, 235, 255) 100%);
+      background: linear-gradient(62deg, #00c49e 0%, #00eaff 100%);
       color: #fff;
       padding: 2px 15px;
       font-size: 120%;
@@ -452,6 +452,7 @@ body {
       border-radius: 50px;
       text-align: center;
       margin-top: .8rem;
+      // border: 5px solid linear-gradient(-62deg, #00c49e 0%, #00eaff 100%);
     }
     .notifi {
       font-weight: bold;
