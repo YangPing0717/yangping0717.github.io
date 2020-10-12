@@ -65,8 +65,8 @@ body {
 
 .brand .brand-name {
   margin-right: .5rem;
-  font-family: 'Butler', Serif;
-  font-size: 2.875rem;
+  font-family: initial;
+  font-size: 1.875rem;
   font-weight: 900;
   line-height: 1.1;
 }
@@ -132,6 +132,30 @@ body {
   min-width: 100vw;
 }
 
+@media (min-width: 992px) {
+  .home-piling .slide0 .article-carousel-promo .article-promo-item .slide-container {
+    padding-top: 22vmin;
+    padding-bottom: 7vmin;
+    padding-left: 16vmin;
+  }
+}
+
+@media (min-width: 1400px) {
+  .home-piling .slide0 .article-carousel-promo .article-promo-item .slide-container {
+    padding-top: 25vmin;
+    padding-bottom: 7vmin;
+    padding-left: 16vmin;
+  }
+}
+
+@media (min-width: 1600px) {
+  .home-piling .slide0 .article-carousel-promo .article-promo-item .slide-container {
+    padding-top: 25vmin;
+    padding-bottom: 7vmin;
+    padding-left: initial;
+  }
+}
+
 .home-piling .slide0 .article-carousel-promo .article-promo-item .slide-container .slide-descr {
   color: #666666;
 }
@@ -181,6 +205,56 @@ body {
   .home-piling .slide0 .slide-bg > .inside.bg3 {
     background-position: 95% 50%;
     background-image: url(../../img/bg-piling0_3_2.jpg);
+  }
+}
+
+.slide-container {
+  min-height: 100vh;
+  min-width: 100vw;
+}
+
+@media (min-width: 992px) {
+  .slide-container {
+    padding-top: 16vmin;
+    padding-bottom: 7vmin;
+    padding-left: 8vmin;
+  }
+}
+
+@media (min-width: 1400px) {
+  .slide-container {
+    padding-top: 20vmin;
+    padding-bottom: 7vmin;
+    padding-left: initial;
+  }
+}
+
+@media (min-width: 1600px) {
+  .slide-container {
+    padding-top: 25vmin;
+    padding-bottom: 7vmin;
+    padding-left: initial;
+  }
+}
+
+.slide-container .slide-content {
+  min-height: 50vmin;
+  margin-bottom: -8vmin;
+}
+
+.slide-container .slide-content .slide-descr {
+  color: #666666;
+}
+
+@media (max-width: 767px) {
+  .slide-container .slide-content .slide-body .slide-descr br {
+    display: none;
+  }
+}
+
+@media (min-width: 992px) {
+  .home-piling .slide0 .slide-container {
+    padding-left: 16vmin;
   }
 }
 

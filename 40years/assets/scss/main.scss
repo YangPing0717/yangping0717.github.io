@@ -8,6 +8,8 @@ $mq576: 576px;
 $mq767: 767px;
 $mq768: 768px;
 
+$mq992: 992px;
+
 $mq1200: 1200px;
 $mq1400: 1400px;
 $mq1600: 1600px;
@@ -116,8 +118,10 @@ body {
 .brand {
   .brand-name {
     margin-right: .5rem;
-    font-family: 'Butler', Serif;
-    font-size: 2.875rem;
+    // font-family: 'Butler', Serif;
+    // font-size: 2.875rem;
+    font-family: initial;
+    font-size: 1.875rem;
     font-weight: 900;
     line-height: 1.1;
     &.text-texture {
@@ -175,6 +179,21 @@ body {
       .slide-container {
         min-height: 100vh;
         min-width: 100vw;
+        @media (min-width: $mq992) {
+          padding-top: 22vmin;
+          padding-bottom: 7vmin;
+          padding-left: 16vmin;
+        }
+        @media (min-width: $mq1400) {
+          padding-top: 25vmin;
+          padding-bottom: 7vmin;
+          padding-left: 16vmin;
+        }
+        @media (min-width: $mq1600) {
+          padding-top: 25vmin;
+          padding-bottom: 7vmin;
+          padding-left: initial;
+        }
         .slide-descr {
           color: $textmain;
         }
@@ -210,7 +229,6 @@ body {
       }
     }
   }
-
   .slide-bg > .inside { 
     &.bg1 {
       background-image: url(../../img/bg-piling0_1.png);
@@ -233,6 +251,47 @@ body {
         background-position: 95% 50%;
         background-image: url(../../img/bg-piling0_3_2.jpg);
       }
+    }
+  }
+}
+
+
+.slide-container {
+  min-height: 100vh;
+  min-width: 100vw;
+  @media (min-width: $mq992) {
+    padding-top: 16vmin;
+    padding-bottom: 7vmin;
+    padding-left: 8vmin;
+  }
+  @media (min-width: $mq1400) {
+    padding-top: 20vmin;
+    padding-bottom: 7vmin;
+    padding-left: initial;
+  }
+  @media (min-width: $mq1600) {
+    padding-top: 25vmin;
+    padding-bottom: 7vmin;
+    padding-left: initial;
+  }
+  .slide-content {
+    min-height: 50vmin;
+    margin-bottom: -8vmin;
+    .slide-descr {
+      color: $textmain;
+    }
+  }
+  @media (max-width: $mq767){
+    .slide-content .slide-body .slide-descr br {
+      display: none;
+    }
+  }
+}
+
+.home-piling .slide0 {
+  .slide-container {
+    @media (min-width: $mq992) {
+      padding-left: 16vmin;
     }
   }
 }
