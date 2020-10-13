@@ -925,6 +925,7 @@ input:checked + .kalp{
       padding: 1rem 0;
       .modal-title {
         color: #fff;
+        font-weight: 700;
       }
       .close {
         color: #fff;
@@ -934,6 +935,7 @@ input:checked + .kalp{
     }
     .modal-body {
       padding: 0;
+
     }
     .modal-footer {
       display: flex;
@@ -971,9 +973,21 @@ input:checked + .kalp{
     }
     .article-item-title {
       line-height: 1.2;
+      font-size: 2.6vmin;
+      font-weight: 700;
+      margin-bottom: .6rem;
+    }
+    .txt_sub {
+      font-size: 1.8vmin;
+      line-height: 1.15;
+      margin-bottom: .6rem;
+      @media (min-width: $mq1400){
+        font-size: 2.2vmin;
+      }
     }
     .article-item-date {
       margin-top: .7rem;
+      font-size: 90%;
       .divider {
         margin-left: .625rem;
         margin-right: .625rem;

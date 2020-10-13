@@ -980,6 +980,7 @@ input:checked + .kalp {
 
 .modal.prephoto .modal-content .modal-header .modal-title {
   color: #fff;
+  font-weight: 700;
 }
 
 .modal.prephoto .modal-content .modal-header .close {
@@ -1029,10 +1030,26 @@ input:checked + .kalp {
 
 .article-item-masonry .article-item-detail .article-item-title {
   line-height: 1.2;
+  font-size: 2.6vmin;
+  font-weight: 700;
+  margin-bottom: .6rem;
+}
+
+.article-item-masonry .article-item-detail .txt_sub {
+  font-size: 1.8vmin;
+  line-height: 1.15;
+  margin-bottom: .6rem;
+}
+
+@media (min-width: 1400px) {
+  .article-item-masonry .article-item-detail .txt_sub {
+    font-size: 2.2vmin;
+  }
 }
 
 .article-item-masonry .article-item-detail .article-item-date {
   margin-top: .7rem;
+  font-size: 90%;
 }
 
 .article-item-masonry .article-item-detail .article-item-date .divider {
