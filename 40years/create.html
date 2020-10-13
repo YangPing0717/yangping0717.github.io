@@ -94,7 +94,7 @@
                       <div class="form-row">
                         <div class="form-group col-md-4">
                           <label for="inputName">姓名</label>
-                          <input type="text" class="form-control" id="inputName" placeholder="姓名">
+                          <input type="text" class="form-control" id="inputName" placeholder="姓名" required>
                         </div>
                         <!-- <div class="form-group col-md-4">
                           <label for="inputName2">老師姓名</label>
@@ -121,8 +121,12 @@
                       </div>
                       
                       <div class="form-group">
-                        <label for="inputAddress2">惠文 40 祝福的話</label>
-                        <input type="text" class="form-control" id="inputAddress2" placeholder="我想說...">
+                        <label for="photoTitle">照片標題</label>
+                        <input type="text" class="form-control" id="photoTitle" placeholder="照片標題" required>
+                      </div>
+                      <div class="form-group">
+                        <label for="word">惠文 40 祝福的話</label>
+                        <input type="text" class="form-control" id="word" placeholder="我想說..." required>
                       </div>
                       
                       <div class="form-group">
@@ -132,18 +136,19 @@
                           <label class="custom-file-label" for="customFile">Choose file</label>
                         </div>
                       </div>
-                      <div class="form-group">
-                        <label for="inputCity">照片標題</label>
-                        <input type="text" class="form-control" id="inputCity" placeholder="照片標題">
-                      </div>
-                      <div class="form-group">
-                        <label for="inputMemo">印象最深刻的是..</label>
-                        <input type="text" class="form-control" id="inputMemo" placeholder="我想說...">
-                      </div>
 
-                      <div class="form-group">
-                        <label for="inputAddress">目前居住地 ＊累積對惠文 40 的幸福里程＊</label>
-                        <input type="text" class="form-control" id="inputAddress" placeholder="Apartment, studio, or floor">
+                      <div class="form-row">
+                        <div class="col-md-12"><label for="countryName">居住地 <span class="small notifi">＊累積惠文 40 的幸福里程＊</span></label></div>
+                        <div class="form-group col-md-4">
+                          <input type="text" class="form-control" id="countryName" placeholder="國家" required>
+                        </div>
+                        <div class="form-group col-md-4">
+                          <input type="text" class="form-control" id="cityName" placeholder="城市" required>
+                        </div>
+                        <div class="form-group col-md-12">
+                          
+                          <input type="text" class="form-control" id="inputAddress" placeholder="詳細地址" required>
+                        </div>
                       </div>
                       <div class="form-group">
                         <div class="form-check">
