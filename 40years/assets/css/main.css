@@ -192,7 +192,7 @@ body {
 
 @media (max-width: 575px) {
   .home-piling .slide0 .slide-bg > .inside.bg2 {
-    background-position: 42% 50%;
+    background-position: 65% 50%;
   }
 }
 
@@ -504,7 +504,7 @@ body {
 
 .home-piling .slide2 .project-item .project-metro-detail .txt_sub {
   font-size: 2.1vmin;
-  line-height: 1.05;
+  line-height: 1.15;
   margin-bottom: .6rem;
 }
 
@@ -592,6 +592,19 @@ body {
   }
 }
 
+.home-piling .slide6 .slide-body {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  max-height: 15.6rem;
+  overflow: hidden;
+}
+
+@media (max-width: 767px) {
+  .home-piling .slide6 .slide-body {
+    max-height: 30.6rem;
+  }
+}
+
 .home-piling .slide6 .slide-body .tags li {
   margin-right: 10px;
   margin-bottom: 8px;
@@ -613,7 +626,7 @@ body {
 
 @media (max-width: 767px) {
   .home-piling .slide6 .slide-bg {
-    background-position: 70% -280px;
+    background-position: 70% -50px;
   }
 }
 
@@ -975,7 +988,6 @@ input:checked + .kalp {
 
 .modal.prephoto .modal-content .modal-header {
   border-bottom: none;
-  padding: 1rem 0;
 }
 
 .modal.prephoto .modal-content .modal-header .modal-title {
@@ -987,10 +999,6 @@ input:checked + .kalp {
   color: #fff;
   text-shadow: none;
   opacity: 1;
-}
-
-.modal.prephoto .modal-content .modal-body {
-  padding: 0;
 }
 
 .modal.prephoto .modal-content .modal-footer {
@@ -1030,20 +1038,20 @@ input:checked + .kalp {
 
 .article-item-masonry .article-item-detail .article-item-title {
   line-height: 1.2;
-  font-size: 2.6vmin;
+  font-size: 3.6vmin;
   font-weight: 700;
   margin-bottom: .6rem;
 }
 
 .article-item-masonry .article-item-detail .txt_sub {
-  font-size: 1.8vmin;
+  font-size: 2.1vmin;
   line-height: 1.15;
   margin-bottom: .6rem;
 }
 
 @media (min-width: 1400px) {
   .article-item-masonry .article-item-detail .txt_sub {
-    font-size: 2.2vmin;
+    font-size: 2.1vmin;
   }
 }
 

@@ -29,6 +29,19 @@ $selection:#ffb795;
 
 
 
+// max-width: 575px
+// max-width: 767px
+// max-width: 991px
+// max-width: 960px
+
+// min-width: 576px
+// min-width: 768px
+// min-width: 992px
+// min-width: 1200px
+// min-width: 1400px
+// min-width: 1600px
+
+
 body {
   // background: #a5a5a5;
   /* background: #111111; */
@@ -241,7 +254,7 @@ body {
       background-image: url(../../img/bg-piling0_2.jpg);
       opacity: 1;
       @media (max-width: $mq575){
-        background-position: 42% 50%;
+        background-position: 65% 50%;
       }
     }
     &.bg3 {
@@ -475,7 +488,7 @@ body {
       }
       .txt_sub{
         font-size: 2.1vmin;
-        line-height: 1.05;
+        line-height: 1.15;
         margin-bottom: .6rem;
         @media (max-width: $mq767){
           font-size: 5vmin;
@@ -561,6 +574,13 @@ body {
 
 .home-piling .slide6 {
   .slide-body {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    max-height: 15.6rem;
+    overflow: hidden;
+    @media (max-width: $mq767){
+      max-height: 30.6rem;
+    }
     .tags {
       li {
           margin-right: 10px;
@@ -579,7 +599,7 @@ body {
     background-image: url(../../img/bg-piling6.jpg);
     background-position: 80% 50%;
     @media (max-width: $mq767){ 
-      background-position: 70% -280px;
+      background-position: 70% -50px;
     }
 
   }
@@ -922,7 +942,7 @@ input:checked + .kalp{
     border: none;
     .modal-header {
       border-bottom: none;
-      padding: 1rem 0;
+      // padding: 1rem 0;
       .modal-title {
         color: #fff;
         font-weight: 700;
@@ -934,7 +954,7 @@ input:checked + .kalp{
       }
     }
     .modal-body {
-      padding: 0;
+      // padding: 0;
 
     }
     .modal-footer {
@@ -973,16 +993,16 @@ input:checked + .kalp{
     }
     .article-item-title {
       line-height: 1.2;
-      font-size: 2.6vmin;
+      font-size: 3.6vmin;
       font-weight: 700;
       margin-bottom: .6rem;
     }
     .txt_sub {
-      font-size: 1.8vmin;
+      font-size: 2.1vmin;
       line-height: 1.15;
       margin-bottom: .6rem;
       @media (min-width: $mq1400){
-        font-size: 2.2vmin;
+        font-size: 2.1vmin;
       }
     }
     .article-item-date {
