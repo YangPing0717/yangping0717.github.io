@@ -1090,6 +1090,11 @@ input:checked + .kalp {
   font-weight: bold;
 }
 
+.footer-content-flash .social-rounded a {
+  border: #76c967 1px solid;
+  background: #76c967;
+}
+
 .slide-bg > .inside.bg1 {
   -webkit-transition: -webkit-transform .8s ease-in-out;
   transition: -webkit-transform .8s ease-in-out;
