@@ -1065,6 +1065,21 @@ input:checked + .kalp {
   margin-right: .625rem;
 }
 
+.list-video .flash-video-container {
+  margin-bottom: 2rem;
+  padding-right: 0;
+  padding-top: 0;
+}
+
+.list-video .flash-video-container .flash-video img {
+  border: #ffffff 0px solid;
+  max-width: 100%;
+}
+
+.list-video .article-item-date {
+  margin-top: 1.175rem;
+}
+
 .flash_photo {
   -webkit-animation: flash;
           animation: flash;

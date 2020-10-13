@@ -972,7 +972,7 @@ input:checked + .kalp{
 
 
 
-// 列表頁
+// 列表頁 - 照片
 .h2-flash {
   font-weight: 700;
 }
@@ -1015,6 +1015,25 @@ input:checked + .kalp{
     }
   }
 }
+
+// 列表頁 - 影片
+.list-video {
+  .flash-video-container{
+    margin-bottom: 2rem;
+    padding-right: 0;
+    padding-top: 0;
+    .flash-video img {
+      border: #ffffff 0px solid;
+      max-width: 100%;
+    }
+  }
+  .article-item-date {
+    margin-top: 1.175rem;
+  }
+}
+
+
+
 
 .flash_photo {
   animation: flash; /* referring directly to the animation's @keyframe declaration */
