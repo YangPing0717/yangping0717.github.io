@@ -103,6 +103,10 @@ body {
   .container-fluid{
     padding-right: 2rem;
     padding-left: 2rem;
+    @media (max-width: $mq575){
+      padding-right: 15px;
+      padding-left: 15px; 
+    }
   }
 }
 .social-rounded-fixed {
@@ -114,6 +118,9 @@ body {
 .copyright-fixed {
   left: 2rem;
   font-size: .8rem;
+  @media (max-width: $mq575){
+    left: 15px; 
+  }
 }
 .establised {
   left: 3rem;
@@ -1061,23 +1068,26 @@ input:checked + .kalp{
       max-width: 100%;
     }
   }
-  .article-item-title {
-    font-size: 1.575rem;
-    @media (max-width: $mq767){
-      font-size: 7.5vmin;
-      margin-bottom: .8rem;
-      line-height: 1.1;
+  .article-item{
+    margin-bottom: 2.125rem;
+    .article-item-title {
+      font-size: 1.575rem;
+      @media (max-width: $mq767){
+        font-size: 7.5vmin;
+        margin-bottom: .8rem;
+        line-height: 1.1;
+      }
     }
-  }
-  .article-item-date {
-    margin-top: 0.675rem;
-    @media (max-width: $mq767){
-      margin-top: 0rem;
-      font-size: 3.6vmin;
-      line-height: 1.4;
-      margin-bottom: .8rem;
+    .article-item-date {
+      margin-top: 0.675rem;
+      @media (max-width: $mq767){
+        margin-top: 0rem;
+        font-size: 3.6vmin;
+        line-height: 1.4;
+        margin-bottom: .8rem;
+      }
     }
-  }
+  }    
 }
 
 
