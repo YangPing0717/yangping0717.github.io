@@ -18,6 +18,7 @@ $mainBlue_or:#b2ece3;
 $mainBlue:#7cffe7;
 $mainBlueLight:#26bfb5;
 $mainBlueLight_trans:rgba(70, 255, 243, 0.2);
+$mainBlue_high: #00fff2;
 
 $textmain:#666666;
 $textmain_dark:#4d4d4d;
@@ -575,7 +576,119 @@ body {
       margin-top: 1rem;
     }
   }
+  .slide-title {
+    .cloud {
+      position: relative;
+      height: 2.5vmin;
+      .icon {
+        position: absolute;
+        font-size: 15vmin;
+        top: -5vmin;
+        left: 0;
+        color: #03a9f4;
+      }
+      .online {
+        position: absolute;
+        font-size: 3vmin;
+        top: 44px;
+        left: 17px;
+        color: $mainBlue_high;
+        letter-spacing: 0;
+      }
+    }
+  }
 }
+
+.cloud {
+  // text-align: center;
+  // position: absolute;
+  // right: -20px;
+  // top: 0;
+  z-index: 300;
+  // width: 120px;
+  // height: 120px;
+  // margin-top: 15px;
+  i {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    &:before{
+      font-size: 10rem;
+      right: 0;
+      color: #03a9f4;
+    }
+    &:after {
+      font-size: 10rem;
+      font-family: "Ionicons";
+      content: "\f37a";
+      border-radius: 50%;
+      position: absolute;
+      left: 0;
+      margin: auto;
+      right: 0;
+      text-shadow: 0px 0px 5px #00ffb3, 0px 0px 30px #07cdff;;
+      z-index: -1;
+      -webkit-text-stroke: 0px #fff;
+      animation: icon-pulse 2s 0s infinite ease-out;
+      color: transparent;
+    }
+  }
+  &:after {
+    content: "";
+    border-radius: 50%;
+    height: 75px;
+    width: 75px;
+    position: absolute;
+    // background: #ff3f00;
+    left: 0;
+    top: 18px;
+    margin: auto;
+    right: 0;
+  }
+  .text{
+    position: absolute;
+    color: #fff;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    font-size: .8rem;
+    margin-top: 16px;
+    line-height: initial;
+    padding-top: 0px;
+    padding-bottom: 0px;
+  }
+  .num{
+    position: absolute;
+    color: #fff;
+    top: 0;
+    font-size: 3.9rem;
+    left: 0;
+    right: 0;
+    margin: auto;
+    margin-top: 12px;
+    span{
+      font-size: .6rem;
+      margin-right: -10px;
+      padding-left: 0px;
+    }
+  }
+}
+@keyframes icon-pulse {
+  50% {
+    text-shadow: 0px 0px 15px #FFF435;
+  }
+  100% {
+      transform: scale(1.4);
+      opacity: 0;
+      text-shadow: 0px 0px 40px rgba(255, 244, 53, 0.85), 0px 0px 60px rgba(255, 244, 53, 0.85);
+  }
+}
+
 
 
 
