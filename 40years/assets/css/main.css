@@ -359,6 +359,19 @@ body {
   }
 }
 
+.home-piling .slide1 .horizontal-service-list .horizontal-service-item .tags {
+  height: 5.6vmin;
+  overflow: auto;
+}
+
+@media (max-width: 767px) {
+  .home-piling .slide1 .horizontal-service-list .horizontal-service-item .tags {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+}
+
 .home-piling .slide1 .flash-video-container {
   position: relative;
   padding-right: 0;
@@ -821,7 +834,7 @@ body {
 }
 
 .tooltip_qr .tooltiptext {
-  padding: .4rem !important;
+  padding: .6rem !important;
   visibility: hidden;
   width: -webkit-fit-content;
   width: -moz-fit-content;
@@ -833,7 +846,7 @@ body {
   padding: 5px 0;
   position: absolute;
   z-index: 2;
-  bottom: 125%;
+  bottom: 100%;
   left: 50%;
   margin-left: -60px;
   opacity: 0;

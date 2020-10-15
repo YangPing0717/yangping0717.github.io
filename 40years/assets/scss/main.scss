@@ -381,6 +381,14 @@ body {
           }
         }
       }
+      .tags {
+        height: 5.6vmin;
+        overflow: auto;
+        // max-height: 5.6rem;
+        @media (max-width: $mq767){
+          height: fit-content;
+        }
+      }
     }
   }
   .flash-video-container {
@@ -763,7 +771,7 @@ body {
   display: inline-block;
   border-bottom: 0px dotted black;
   .tooltiptext {
-    padding: .4rem !important;
+    padding: .6rem !important;
     visibility: hidden;
     width: fit-content;
     background: rgba(255, 255, 255, .5);
@@ -773,7 +781,7 @@ body {
     padding: 5px 0;
     position: absolute;
     z-index: 2;
-    bottom: 125%;
+    bottom: 100%;
     left: 50%;
     margin-left: -60px;
     opacity: 0;
