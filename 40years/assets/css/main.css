@@ -1248,6 +1248,7 @@ input:checked + .kalp {
 
 .list-video .article-item .tags {
   margin-bottom: .5rem;
+  height: 3.6vmin;
   overflow: auto;
 }
 

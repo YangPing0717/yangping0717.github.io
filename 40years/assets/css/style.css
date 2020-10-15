@@ -142,7 +142,10 @@ html > body .underline:hover {
 
 ::-webkit-scrollbar-thumb {
   cursor: pointer;
-  background: #2e2e2e;
+  border-radius: 20px;
+  background: #21cb85;
+  background: -webkit-gradient(linear, left bottom, left top, from(#21cb85), to(#78ffae));
+  background: linear-gradient(0deg, #21cb85 0%, #78ffae 100%);
 }
 
 .container-fluid-md {

@@ -161,11 +161,15 @@ html > body .underline:hover {
 ::-webkit-scrollbar {
   width: 5px;
   height: 5px;
+  
 }
 
 ::-webkit-scrollbar-thumb {
   cursor: pointer;
-  background: #2e2e2e;
+  // background: #2e2e2e;
+  border-radius: 20px;
+  background: rgb(33,203,133);
+  background: linear-gradient(0deg, rgba(33,203,133,1) 0%, rgba(120,255,174,1) 100%);
 }
 
 .container-fluid-md {
