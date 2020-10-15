@@ -856,12 +856,13 @@ body {
   padding: 5px 0;
   position: absolute;
   z-index: 2;
-  bottom: 100%;
-  left: 47%;
+  bottom: 105%;
+  left: 48%;
   margin-left: -60px;
   opacity: 0;
   -webkit-transition: opacity 0.3s;
   transition: opacity 0.3s;
+  border-radius: 120px;
 }
 
 .tooltip_qr .tooltiptext img {
@@ -879,7 +880,7 @@ body {
   content: "";
   position: absolute;
   top: 100%;
-  left: 20%;
+  left: 31%;
   margin-left: -8px;
   border-width: 8px;
   border-style: solid;
@@ -1131,6 +1132,16 @@ input:checked + .kalp {
   color: #fff;
 }
 
+.custom-file-label {
+  border-radius: 1rem;
+}
+
+.custom-file-label:after {
+  color: #ffffff;
+  background-color: #ff6f4f;
+  border-radius: 0 1rem 1rem 0;
+}
+
 .h2-flash {
   font-weight: 700;
 }
@@ -1263,6 +1274,12 @@ input:checked + .kalp {
 .list-video .article-item .tags li a.btn-xs:hover {
   color: #ff6f4f !important;
   border-color: #ff6f4f !important;
+}
+
+.list-video .tooltiptext {
+  padding: .5rem !important;
+  background: rgba(255, 162, 125, 0.25);
+  left: 50%;
 }
 
 .flash_photo {

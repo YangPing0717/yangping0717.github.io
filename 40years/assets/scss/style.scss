@@ -679,12 +679,14 @@ input:focus {
   border-radius: 0;
   padding: .625rem 1.25rem .625rem;
   height: calc(1.5em + 1.25rem + 2px);
+  border-radius: 120px;
 }
 
 .form-control-lg {
   padding: .875rem 1.25rem .9375rem;
   height: calc(1.5em + 1.8125rem + 2px);
   font-size: 1rem;
+  border-radius: 120px;
 }
 
 .control-with-icon {
