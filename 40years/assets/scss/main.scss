@@ -382,11 +382,14 @@ body {
         }
       }
       .tags {
-        height: 5.6vmin;
+        height: 6vmin;
         overflow: auto;
         // max-height: 5.6rem;
         @media (max-width: $mq767){
           height: fit-content;
+        }
+        li {
+          margin-right: 8px;
         }
       }
     }
@@ -437,7 +440,7 @@ body {
   .horizontal-service-item {
     .btn-xs {
       border-color: $mainBlue_or;
-      padding: 3px 7px 3px;
+      padding: 2px 5px 2px;
       font-size: .75rem;
       color: $textmain;
       letter-spacing: .025em;
@@ -702,7 +705,9 @@ body {
     @media (max-width: $mq767){ 
       background-position: 70% -50px;
     }
-
+    @media (max-width: $mq575){ 
+      background-position: 72% -260px;
+    }
   }
 }
 .home-piling .slide-bg-circle{
@@ -782,7 +787,7 @@ body {
     position: absolute;
     z-index: 2;
     bottom: 100%;
-    left: 50%;
+    left: 47%;
     margin-left: -60px;
     opacity: 0;
     transition: opacity 0.3s;
@@ -812,49 +817,7 @@ body {
   }
 }
 
-.hero-social-warp .tooltip_qr {
-  .tooltiptext {
-    bottom: -400%;
-    left: 90%;
-    transform: rotate(-270deg);
-    &:after {
-      content: "";
-      position: absolute;
-      top: 50%;
-      left: -10%;
-      margin-left: -8px;
-      border-width: 8px;
-      border-style: solid;
-      border-color: rgb(255, 255, 255) transparent transparent transparent;
-      transform: rotate(90deg);
-    }
-    @media screen and (max-width: $mq575) {
-      transform: rotate(0deg);
-      left: 50%;
-      &:after {
-        content: "";
-        position: absolute;
-        top: -10%;
-        left: 50%;
-        margin-left: -8px;
-        border-width: 8px;
-        border-style: solid;
-        border-color: rgb(255, 255, 255) transparent transparent transparent;
-        transform: rotate(-180deg);
-      }
-    }
-  }
-}
-.header-nav__social .tooltip_qr {
-  .tooltiptext{
-    background-color: hsla(0, 0%, 0%, 0.7);
-    width: 130px;
-    padding: 8px;
-    img {
-      margin-bottom: 0rem;
-    }
-  }
-}
+
 
 
 // like button heart
@@ -1174,11 +1137,35 @@ input:checked + .kalp{
     }
     .article-item-date {
       margin-top: 0.675rem;
+      margin-bottom: 1rem;
       @media (max-width: $mq767){
         margin-top: 0rem;
         font-size: 3.6vmin;
         line-height: 1.4;
         margin-bottom: .8rem;
+      }
+    }
+    .tags {
+      margin-bottom: .5rem;
+      // height: 6.4vmin;
+      overflow: auto;
+      @media (max-width: $mq767){
+        height: fit-content;
+      }
+      li {
+        margin-right: 8px;
+        margin-bottom: 6px;
+        a.btn-xs {
+          font-size: .6rem;
+          padding: 2px 6px 2px;
+          color: #ffa48e;
+          border-color: #ffc9bc;
+          &:hover{
+            color: $main_light !important;
+            border-color: $main_light !important;
+          }
+
+        }
       }
     }
   }    
