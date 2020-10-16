@@ -73,9 +73,9 @@ body {
 }
 .tags {
   .btn {
-    font-size: 1.05rem;
+    // font-size: 1.05rem;
     @media (max-width: $mq767){
-      // font-size: 1.25rem;
+      font-size: 1.05rem;
     }
   }
 }
@@ -170,6 +170,9 @@ body {
     &.text-texture {
       width: initial;
       background-image: linear-gradient(to bottom, #4bdda1, #229436);
+    }
+    @media (max-width: $mq575){
+      font-size: 2.2rem;
     }
   }
   .brand-text {
@@ -715,6 +718,12 @@ body {
 
 
 .home-piling .slide6 {
+  h2, .h2 {
+    margin-bottom: 2.111111vmin;
+    line-height: 1.05;
+    font-weight: 700;
+    font-size: 8vmin;
+  }
   .slide-body {
     margin-top: 2rem;
     margin-bottom: 2rem;
@@ -1169,6 +1178,7 @@ input:checked + .kalp{
     .article-item-date {
       margin-top: .7rem;
       font-size: 90%;
+      line-height: 1.4;
       .divider {
         margin-left: .625rem;
         margin-right: .625rem;
@@ -1264,20 +1274,34 @@ input:checked + .kalp{
   background: rgb(210,184,148);
   background-image: linear-gradient(180deg, rgba(92, 255, 229, 0.35) 0%, rgba(255, 207, 76, 0.55) 50%, rgba(255, 145, 145, 0.5) 100%), url("../../img/bg-piling1.jpg");
   color: $textmain;
+  .footer-content-flash {
+    h5 {
+      margin-bottom: 2.25rem;
+      font-size: .875rem;
+      color: $textmain_dark;
+      text-transform: uppercase;
+      font-weight: bold;
+    }
+    .social-rounded a {
+      width: 3rem;
+      height: 3rem;
+      border: #76c967 1px solid;
+      background: #76c967;
+      line-height: 1.5;
+      i {
+        font-size: 1.8rem;
+      }
+    }
+  }
 }
-.footer-content-flash {
-  h5 {
-    margin-bottom: 2.25rem;
+.footer { 
+  .site-info {
     font-size: .875rem;
-    color: $textmain_dark;
-    text-transform: uppercase;
-    font-weight: bold;
-  }
-  .social-rounded a {
-    border: #76c967 1px solid;
-    background: #76c967;
   }
 }
+
+
+
 
 
 // 置頂 btn top_btn
