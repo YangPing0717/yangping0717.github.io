@@ -58,21 +58,43 @@ body {
   font-weight: 700;
 }
 
+body {
+  font-size: 1rem;
+  @media (max-width: $mq767){
+    font-size: 1.25rem;
+    line-height: 1.8;
+  }
+}
+.btn {
+  // font-size: 1.05rem;
+  @media (max-width: $mq767){
+    font-size: 1.25rem;
+  }
+}
+.tags {
+  .btn {
+    font-size: 1.05rem;
+    @media (max-width: $mq767){
+      // font-size: 1.25rem;
+    }
+  }
+}
+
+
+.container-fluid.slide0 {
+  // padding-left: 0rem;
+  // padding-right: 0rem;
+}
 @media (min-width: $mq1600){
 
 }
-  .container-fluid.slide0 {
-    // padding-left: 0rem;
-    // padding-right: 0rem;
-  }
+@media (min-width: $mq768){
 
+}
 @media (min-width: $mq576){
 
 }
 
-@media (min-width: $mq768){
-
-}
 
 // dark-horizontal - fixed
 .dark-horizontal .header, 
@@ -352,10 +374,16 @@ body {
       .horizontal-service-item-descr {
         height: 100%;
         padding-bottom: 0;
-        line-height: 1.625rem;
+        @media (max-width: $mq575){
+          line-height: 2rem;
+        }
       }
       .horizontal-service-item-title {
         margin-bottom: .8vmin;
+        @media (max-width: $mq575){
+          line-height: 1.25;
+          font-size: 2.5rem;
+        }
         br{
           @media (max-width: $mq767){
             display: none;
@@ -446,6 +474,9 @@ body {
       letter-spacing: .025em;
       margin-bottom: .6rem;
       background: $mainBlueLight_trans;
+      @media (max-width: $mq575){
+        font-size: 1.05rem;
+      }
       &:hover {
         border-color: $mainBlue !important;
         background: $mainBlueLight_trans !important;
@@ -548,6 +579,12 @@ body {
         font-size: 5.6vmin;
       }
     }
+    .piling-project-detail{
+      @media (max-width: $mq767){
+        font-size: 1.25rem;
+        line-height: 1.5;
+      }
+    }
   }
 }
 
@@ -585,7 +622,8 @@ body {
     color: $main_light_2;
     margin-bottom: 2rem;
     @media (max-width: $mq767){
-      margin-top: 1rem;
+      margin-top: 2.5rem;
+      margin-bottom: 1rem;
     }
   }
   h1, .h1 {
@@ -683,7 +721,7 @@ body {
     max-height: 15.6rem;
     overflow: hidden;
     @media (max-width: $mq767){
-      max-height: 30.6rem;
+      max-height: 26.6rem;
     }
     .tags {
       li {
@@ -1007,10 +1045,11 @@ input:checked + .kalp{
     border: none;
     .modal-header {
       border-bottom: none;
-      // padding: 1rem 0;
+      padding: 1rem 1rem 0;
       .modal-title {
         color: #fff;
         font-weight: 700;
+        font-size: 1.8rem;
       }
       .close {
         color: #fff;
@@ -1034,7 +1073,7 @@ input:checked + .kalp{
         }
         .txt_sub {
           @media (max-width: $mq767){
-            font-size: 4vmin;
+            font-size: 5vmin;
             line-height: 1.1;
             margin-bottom: .8rem;
           }
@@ -1058,11 +1097,26 @@ input:checked + .kalp{
   }
 }
 .custom-file-label {
-  border-radius: 1rem;
+  border-radius: 120px;
   &:after{
     color: #ffffff;
     background-color: $main_light;
-    border-radius: 0 1rem 1rem 0;
+    border-radius: 0 120px 120px 0;
+  }
+}
+.form-check-input {
+  margin-top: .8rem;
+  transform: scale(1.5);
+  margin-left: -4px;
+}
+.form-check-label {
+  padding-left: 20px;
+  margin-bottom: 0px;
+  line-height: 2.2;
+}
+.form-control {
+  @media (max-width: $mq767){
+    font-size: 1.25rem;
   }
 }
 
@@ -1107,7 +1161,7 @@ input:checked + .kalp{
         font-size: 2.1vmin;
       }
       @media (max-width: $mq767){
-        font-size: 4.2vmin;
+        font-size: 5vmin;
         line-height: 1.1;
         margin-bottom: .8rem;
       }
@@ -1136,6 +1190,14 @@ input:checked + .kalp{
   }
   .article-item{
     margin-bottom: 2.125rem;
+    @media (max-width: $mq575){ 
+      margin-bottom: 3rem;
+    }
+    .article-item-category {
+      @media (max-width: $mq575){ 
+        font-size: initial;
+      }
+    }
     .article-item-title {
       font-size: 1.575rem;
       @media (max-width: $mq767){
@@ -1216,9 +1278,58 @@ input:checked + .kalp{
 }
 
 
-
-
-
+// 置頂 btn top_btn
+.cd-top {
+  display: inline-block;
+  height: 4rem;
+  width: 4rem;
+  position: fixed;
+  bottom: 6rem;
+  right: 3rem;
+  box-shadow: 0 0 25px rgba(58, 255, 88, 0.7);
+  opacity: 0;
+  -webkit-transition: opacity .3s 0s, visibility 0s .3s;
+  -moz-transition: opacity .3s 0s, visibility 0s .3s;
+  transition: opacity .3s 0s, visibility 0s .3s;
+  background: rgba(58, 255, 88, 0.5); 
+  color: #fff;
+  text-align: center;
+  border-radius: 50%;
+  z-index: 2000;
+  @media (max-width: $mq767){
+    height: 5rem;
+    width: 5rem;
+  }
+}
+.cd-top i {
+  font-family: "Ionicons";
+	font-size: 4rem;
+  line-height: 5rem;
+	font-weight: 700;
+}
+.cd-top.cd-is-visible, .cd-top.cd-fade-out, .no-touch .cd-top:hover {
+  -webkit-transition: opacity .3s 0s, visibility 0s 0s;
+  -moz-transition: opacity .3s 0s, visibility 0s 0s;
+  transition: opacity .3s 0s, visibility 0s 0s;
+}
+.cd-top.cd-is-visible {
+  /* the button becomes visible */
+  visibility: visible;
+  opacity: 1;
+}
+.cd-top.cd-fade-out {
+  /* if the user keeps scrolling down, the button is out of focus and becomes less visible */
+  opacity: 1;
+}
+.no-touch .cd-top:hover {
+  background-color: #261556;
+  opacity: 1;
+}
+.cd-top:hover, .cd-top:focus {
+	color: #fff;
+  background-color: #76ec5f;
+	transition: all 250ms ease-out;
+}
 
 
 

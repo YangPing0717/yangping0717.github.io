@@ -60,7 +60,7 @@
         </ul>
 
         <div class="establised">establised 1980</div>
-        <div class="copyright-fixed">&copy; 2020 WeKIDS. ALL RIGHTS RESERVED.</div>
+        <div class="copyright-fixed">&copy; <span id="year"></span> WeKIDS. ALL RIGHTS RESERVED.</div>
 
 
         <div class="home-piling a-pagepiling full-height">
@@ -93,6 +93,7 @@
                     <!-- <div class="gift">惠文 40 園遊會電子票卷</div>  -->
                   </div>
                 </div>
+                
                 
                 <div class="col-lg-5 col-10">
                   <div class="small notifi">依據個資法，本人同意將此資料授權給惠文集團學校使用。</div>
@@ -212,6 +213,7 @@
       </div>
     </div>
 
+
     <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
     <script>window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')</script>
     <script src="js/smoothscroll.js"></script>
@@ -229,8 +231,6 @@
     <script src="js/jquery.viewport.js"></script>
     <script src="js/jquery.countdown.min.js"></script>
     <script src="js/script.js"></script>
-
-
 
 
 
@@ -277,7 +277,9 @@
       });
     </script>
 
-
+    <script>
+      document.getElementById("year").innerHTML = new Date().getFullYear();
+    </script>
 
 
 

@@ -154,7 +154,8 @@
         </ul>
 
         <div class="establised">establised 1980</div>
-        <div class="copyright-fixed">&copy; 2020 WeKIDS. ALL RIGHTS RESERVED.</div>
+        <div class="copyright-fixed">&copy; <span id="year"></span> WeKIDS. ALL RIGHTS RESERVED.</div>
+        
 
 
         <div class="home-piling a-pagepiling full-height">
@@ -804,6 +805,8 @@
       </div>
     </div>
 
+
+
     <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
     <script>window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')</script>
     <script src="js/smoothscroll.js"></script>
@@ -826,6 +829,7 @@
     <script src="assets/js/index.js"></script>
     <!-- like button heart -->
     <script src="assets/js/like_button.js"></script>
+
 
 
 
@@ -862,7 +866,9 @@
     </script>
 
 
-
+    <script>
+      document.getElementById("year").innerHTML = new Date().getFullYear();
+    </script>
 
 
 
