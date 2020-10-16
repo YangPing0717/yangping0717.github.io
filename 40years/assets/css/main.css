@@ -1328,7 +1328,7 @@ input:checked + .kalp {
 
 .list-video .article-item .tags {
   margin-bottom: .5rem;
-  height: 3.6vmin;
+  height: 4vmin;
   overflow: auto;
 }
 
@@ -1346,7 +1346,7 @@ input:checked + .kalp {
 }
 
 .list-video .article-item .tags li a.btn-xs {
-  font-size: .6rem;
+  font-size: .75rem;
   padding: 2px 6px 2px;
   color: #ffa48e;
   border-color: #ffc9bc;
@@ -1355,6 +1355,12 @@ input:checked + .kalp {
 .list-video .article-item .tags li a.btn-xs:hover {
   color: #ff6f4f !important;
   border-color: #ff6f4f !important;
+}
+
+@media (max-width: 767px) {
+  .list-video .article-item .tags li a.btn-xs {
+    font-size: 1rem;
+  }
 }
 
 .list-video .tooltiptext {
@@ -1395,8 +1401,8 @@ input:checked + .kalp {
 
 .cd-top {
   display: inline-block;
-  height: 4rem;
-  width: 4rem;
+  height: 3.6rem;
+  width: 3.6rem;
   position: fixed;
   bottom: 6rem;
   right: 3rem;
@@ -1414,16 +1420,23 @@ input:checked + .kalp {
 
 @media (max-width: 767px) {
   .cd-top {
-    height: 5rem;
-    width: 5rem;
+    height: 4.2rem;
+    width: 4.2rem;
   }
 }
 
 .cd-top i {
   font-family: "Ionicons";
-  font-size: 4rem;
-  line-height: 5rem;
+  font-size: 3.6rem;
+  line-height: 3.6rem;
   font-weight: 700;
+}
+
+@media (max-width: 767px) {
+  .cd-top i {
+    line-height: 4.2rem;
+    font-size: 4rem;
+  }
 }
 
 .cd-top.cd-is-visible, .cd-top.cd-fade-out, .no-touch .cd-top:hover {

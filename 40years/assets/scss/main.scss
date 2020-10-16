@@ -1218,7 +1218,7 @@ input:checked + .kalp{
     }
     .tags {
       margin-bottom: .5rem;
-      height: 3.6vmin;
+      height: 4vmin;
       overflow: auto;
       @media (max-width: $mq767){
         height: fit-content;
@@ -1227,7 +1227,7 @@ input:checked + .kalp{
         margin-right: 8px;
         margin-bottom: 6px;
         a.btn-xs {
-          font-size: .6rem;
+          font-size: .75rem;
           padding: 2px 6px 2px;
           color: #ffa48e;
           border-color: #ffc9bc;
@@ -1235,7 +1235,9 @@ input:checked + .kalp{
             color: $main_light !important;
             border-color: $main_light !important;
           }
-
+          @media (max-width: $mq767){
+            font-size: 1rem;
+          }
         }
       }
     }
@@ -1281,8 +1283,8 @@ input:checked + .kalp{
 // 置頂 btn top_btn
 .cd-top {
   display: inline-block;
-  height: 4rem;
-  width: 4rem;
+  height: 3.6rem;
+  width: 3.6rem;
   position: fixed;
   bottom: 6rem;
   right: 3rem;
@@ -1297,15 +1299,19 @@ input:checked + .kalp{
   border-radius: 50%;
   z-index: 2000;
   @media (max-width: $mq767){
-    height: 5rem;
-    width: 5rem;
+    height: 4.2rem;
+    width: 4.2rem;
   }
 }
 .cd-top i {
   font-family: "Ionicons";
-	font-size: 4rem;
-  line-height: 5rem;
-	font-weight: 700;
+	font-size: 3.6rem;
+  line-height: 3.6rem;
+  font-weight: 700;
+  @media (max-width: $mq767){
+    line-height: 4.2rem;
+    font-size: 4rem;
+  }
 }
 .cd-top.cd-is-visible, .cd-top.cd-fade-out, .no-touch .cd-top:hover {
   -webkit-transition: opacity .3s 0s, visibility 0s 0s;
