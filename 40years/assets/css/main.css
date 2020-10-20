@@ -960,6 +960,15 @@ body {
   border-color: white transparent transparent transparent;
 }
 
+.tooltip_qr .tooltiptext .input-group {
+  border-radius: 100px;
+  overflow: hidden;
+}
+
+.tooltip_qr .tooltiptext .input-group .btn-primary {
+  padding: 0 12px 0 8px;
+}
+
 .tooltip_qr:hover .tooltiptext {
   visibility: visible;
   opacity: 1;
@@ -1411,6 +1420,11 @@ input:checked + .kalp {
   background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(92, 255, 229, 0.35)), color-stop(50%, rgba(255, 207, 76, 0.55)), to(rgba(255, 145, 145, 0.5))), url("../../img/bg-piling1.jpg");
   background-image: linear-gradient(180deg, rgba(92, 255, 229, 0.35) 0%, rgba(255, 207, 76, 0.55) 50%, rgba(255, 145, 145, 0.5) 100%), url("../../img/bg-piling1.jpg");
   color: #666666;
+}
+
+.home-flash-dark .footer-flash-about {
+  padding-top: 7vmin;
+  padding-bottom: 7vmin;
 }
 
 .home-flash-dark .footer-content-flash h5 {
