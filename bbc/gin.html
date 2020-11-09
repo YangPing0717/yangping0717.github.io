@@ -2,22 +2,16 @@
 <html>
 
 <head>
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
-    <!-- <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet"> -->
-    <!-- <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;700;900&display=swap" rel="stylesheet"> -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/@mdi/font@4.x/css/materialdesignicons.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.min.css" rel="stylesheet">
-
-    <link rel="stylesheet" href="assets/css/main.css">
-    <link rel="stylesheet" href="assets/css/bbc.css">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
 </head>
 
 <body>
     <div id="app">
         <v-app>
-            <div class="bg"></div>
-            <v-navigation-drawer v-model="drawer" app color='var(--primary-color)'>
+            <v-navigation-drawer v-model="drawer" app>
                 <v-list dense>
                     <v-list-item link href="#/">
                         <v-list-item-action>
@@ -37,54 +31,49 @@
                     </v-list-item>
                 </v-list>
             </v-navigation-drawer>
-            <v-app-bar app dark style="
-                background-color: rgba(255, 255, 255, 0);
-                box-shadow: none;
-            ">
+            <v-app-bar app color="primary" dark>
                 <v-app-bar-nav-icon @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
-                <!-- <v-spacer></v-spacer>
-                <div class="d-flex align-center justify-center">
-                    <v-img alt="babybearcare" class="shrink mr-5" contain 
-                        src="assets/images/logo_ww.svg" transition="scale-transition"
-                        width="120" />
+                <div class="d-flex align-center">
+                    <v-img alt="Vuetify Logo" class="shrink mr-2" contain
+                        src="https://cdn.vuetifyjs.com/images/logos/vuetify-logo-dark.png" transition="scale-transition"
+                        width="40" />
+
+                    <v-img alt="Vuetify Name" class="shrink mt-1 hidden-sm-and-down" contain min-width="100"
+                        src="https://cdn.vuetifyjs.com/images/logos/vuetify-name-dark.png" width="100" />
                 </div>
-                <v-spacer></v-spacer> -->
             </v-app-bar>
 
             <v-main>
                 <v-container fluid>
-                    <div class="d-flex justify-center ma-4">
+                    <div class="d-flex justify-center">
                         <!-- Insert Page Code Here -->
                         <v-hover v-slot="{ hover }">
-                            <v-sheet id="formSheet" :width="sheetWidth" class="pa-4 mt-4 pt-8 pb-8"
-                                :class="{'isFocus':sheetFocus|| hover}" :rounded="'xl'" @click="sheetFocus= true"
+                            <v-sheet id="formSheet" :width="sheetWidth" class="pa-4 mt-8"
+                                :class="{'isFocus':sheetFocus|| hover}" :rounded="'lg'"
+                                :elevation="(sheetFocus|| hover)?4:0" @click="sheetFocus= true"
                                 v-click-outside="onClickOutside">
-                                <img src="assets/images/icon.svg" width="80" class="d-flex ml-auto mr-auto pb-2" alt="">
-                                <div class="login_title text-center pb-2 ">小熊摇篮智能教育系统</div>
-                                <div class="text text-center login_t pb-3">Login to your account</div>
+                                <img src="assets/images/icon.svg" width="50" class="d-inline-block align-top mr-2"
+                                    alt="">
+                                <div class="text-h5">小熊摇篮智能教育系统</div>
+                                <div class="text">Login to your account</div>
                                 <form>
                                     <v-text-field v-model="email" :error-messages="emailErrors" label="E-mail" required
-                                        @input="$v.email.$touch()" @blur="$v.email.$touch()" color="var(--white-color)">
-                                    </v-text-field>
+                                        @input="$v.email.$touch()" @blur="$v.email.$touch()"></v-text-field>
 
                                     <v-text-field v-model="password" :error-messages="passwordErrors" :counter="10"
                                         label="Password" required @input="$v.password.$touch()"
-                                        @blur="$v.password.$touch()" color="var(--white-color)"></v-text-field>
+                                        @blur="$v.password.$touch()"></v-text-field>
 
                                     <v-checkbox v-model="rememberme" :error-messages="remembermeErrors"
                                         label="Remember Me?" required @change="$v.rememberme.$touch()"
-                                        @blur="$v.rememberme.$touch()" color="var(--white-color)">
+                                        @blur="$v.rememberme.$touch()">
                                     </v-checkbox>
 
-                                    <v-btn block class="mr-4" color="var(--gradient-3)" text-color="black" rounded large
-                                        style="
-                                    background: #f96968;
-                                    background: linear-gradient(-70deg, #FFA19C 0%, #ff4b4a 100%);
-                                    " @click="submit">
+                                    <v-btn block class="white--text" color="black" text-color="white" class="mr-4"
+                                        @click="submit">
                                         Login
                                     </v-btn>
                                 </form>
-
                             </v-sheet>
                         </v-hover>
                     </div>
@@ -116,18 +105,7 @@
     <script>
         new Vue({
             el: '#app',
-            vuetify: new Vuetify({
-                theme: {
-                    themes: {
-                        light: {
-                            primary: '#ffffff',
-                            secondary: '#b0bec5',
-                            accent: '#8c9eff',
-                            error: '#b71c1c',
-                        },
-                    },
-                },
-            }),
+            vuetify: new Vuetify(),
             data: {
                 // Form Sheet
                 sheetFocus: false,
@@ -136,7 +114,7 @@
                 rememberme: false,
 
                 // drawer control model
-                drawer: false,
+                drawer: false
             },
             computed: {
                 sheetWidth() {
@@ -154,7 +132,7 @@
                 onClickOutside() {
                     this.sheetFocus = false
                 }
-            },
+            }
         })
     </script>
     <style>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"></html>
+
+    <head>
+        <link rel="icon" href="favicon.ico" type="image/x-icon">
+        <!-- <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet"> -->
+        <!-- <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;700;900&display=swap" rel="stylesheet"> -->
+        <link href="https://cdn.jsdelivr.net/npm/@mdi/font@4.x/css/materialdesignicons.min.css" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.min.css" rel="stylesheet">
+        
+        <link rel="stylesheet" href="assets/css/main.css">
+        <link rel="stylesheet" href="assets/css/bbc.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+    </head>
+
+<body>
+
+  <div id="app" class="theme-blush">
+    <v-btn color="#ff0">TEST</v-btn>
+    <v-btn color="var(--secondary-color2)">TESTTESTTEST</v-btn>
+    <v-checkbox
+      :label="'test'"
+      color="primary"
+    ></v-checkbox>
+
+
+    :elevation="(sheetFocus|| hover)?24:0"
+    :elevation="(sheetFocus|| hover)?24:0"
+
+    color="var(--primary-gradient-d)"
+    
+  </div>
+    
+
+
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.js"></script>
+  <script>
+      new Vue({
+          el: '#app',
+          vuetify: new Vuetify({
+              theme: {
+                  themes: {
+                      light: {
+                          primary: '#ffffff',
+                          secondary: '#b0bec5',
+                          accent: '#8c9eff',
+                          error: '#b71c1c',
+                      },
+                  },
+              },
+          }),
+          data: {
+              // Form Sheet
+              sheetFocus: false,
+              email: '',
+              password: '',
+              rememberme: false,
+
+              // drawer control model
+              drawer: false,
+          },
+          computed: {
+              sheetWidth() {
+                  switch (this.$vuetify.breakpoint.name) {
+                      case 'lg': return 600
+                      case 'xl': return 800
+                      default: return 400
+                      // case 'xs': return 220
+                      // case 'sm': return 400
+                      // case 'md': return 500
+                  }
+              }
+          },
+          methods: {
+              onClickOutside() {
+                  this.sheetFocus = false
+              }
+          },
+      })
+  </script>
+  <style>
+      .v-sheet.isFocus {
+          transform: matrix(1, 0, 0, 1, 0, 0);
+          transition-delay: 0s;
+          transition-duration: 0.2s;
+          transition-property: all;
+          transition-timing-function: ease-in-out;
+      }
+  </style>
+</body>
+</html>
