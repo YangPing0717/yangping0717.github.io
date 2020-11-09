@@ -207,7 +207,7 @@ body.is-loading #bg {
   left: 0;
   width: 100vw;
   height: 100vh;
-  opacity: .4;
+  opacity: .3;
 }
 
 .v-application .login_title {
