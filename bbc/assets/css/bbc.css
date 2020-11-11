@@ -247,6 +247,18 @@ body.is-loading #bg {
           transform: translateY(-5px) !important;
 }
 
+.v-sheet.isFocus.change_color {
+  background-color: #000;
+}
+
 .theme--light.v-navigation-drawer {
   background-color: var(linear-gradient(45deg, #e76f73, #ffd3c8)) !important;
+}
+
+.text_co {
+  color: var(--brandtxt-dark2) !important;
+}
+
+.text_fff {
+  color: var(--font-fff) !important;
 }

@@ -8,6 +8,8 @@
     <link href="https://cdn.jsdelivr.net/npm/@mdi/font@4.x/css/materialdesignicons.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.min.css" rel="stylesheet">
 
+    <link rel="stylesheet" href="https://i.icomoon.io/public/temp/7bfec62e24/UntitledProject/style.css">
+
     <link rel="stylesheet" href="assets/css/main.css">
     <link rel="stylesheet" href="assets/css/bbc.css">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
@@ -17,11 +19,43 @@
     <div id="app">
         <v-app>
             <div class="bg"></div>
-            <v-navigation-drawer v-model="drawer" app style="background: #f96968;
-            background: linear-gradient(-70deg, #FFA19C 0%, #ffdfdf 100%);">
+            <v-navigation-drawer v-model="drawer" app v-background="'var(--gradient-4)'">
                 <v-list dense>
+                    <v-row no-gutters class="mt-8">
+                        <v-col cols="auto">
+                            <v-avatar color="primary" size="58" class="ml-7 mb-5 "><img src="/assets/images/user.png"
+                                alt="user">
+                            </v-avatar>
+                        </v-col>
+                        <v-col cols="8">
+                            <v-col cols="" class="text_fff pa-0 ml-4">
+                                園長-這裡放職稱
+                            </v-col>
+                            <v-col cols="" class="pa-0">
+                                <v-menu transition="slide-y-transition" offset-y>
+                                    <template v-slot:activator="{ on, attrs }">
+                                        <v-btn text rounded class="text_fff font-weight-black" v-bind="attrs" v-on="on" value="left">
+                                            Catherine Lee
+                                            <v-icon right dark >
+                                                mdi-chevron-down
+                                            </v-icon>
+                                        </v-btn>
+                                    </template>
+                                    <v-list v-background="'var(--gradient-0)'" dense>
+                                        <v-list-item v-for="n in 4" :key="n" link>
+                                            <v-list-item-title v-text="'Item ' + n" class="text_co"></v-list-item-title>
+                                        </v-list-item>
+                                    </v-list>
+                                </v-menu>
+                            </v-col>
+                            
+                        </v-col>
+                    </v-row>
+
+
+                    
                     <v-list-item link href="#/">
-                        <v-list-item-action>
+                        <v-list-item-action class="mr-4 ml-3">
                             <v-icon>mdi-home</v-icon>
                         </v-list-item-action>
                         <v-list-item-content>
@@ -29,11 +63,19 @@
                         </v-list-item-content>
                     </v-list-item>
                     <v-list-item link href="#/About">
-                        <v-list-item-action>
+                        <v-list-item-action class="mr-4 ml-3">
                             <v-icon>mdi-email</v-icon>
                         </v-list-item-action>
                         <v-list-item-content>
                             <v-list-item-title>Contact</v-list-item-title>
+                        </v-list-item-content>
+                    </v-list-item>
+                    <v-list-item link href="#/">
+                        <v-list-item-action class="mr-4 ml-3">
+                            <v-icon>mdi-file-video</v-icon>
+                        </v-list-item-action>
+                        <v-list-item-content>
+                            <v-list-item-title>0-3 課程</v-list-item-title>
                         </v-list-item-content>
                     </v-list-item>
                 </v-list>
@@ -57,12 +99,13 @@
                     <div class="d-flex justify-center ma-4">
                         <!-- Insert Page Code Here -->
                         <v-hover v-slot="{ hover }">
-                            <v-sheet id="formSheet" :width="sheetWidth" class="pa-4 mt-4 pt-8 pb-8"
-                                :class="{'isFocus':sheetFocus|| hover}" :rounded="'xl'" @click="sheetFocus= true"
+                            <v-sheet id="formSheet" :width="sheetWidth" class="pr-4 pl-4" :rounded="'xl'"
+                                @click="sheetFocus= true" :class="{'isFocus':sheetFocus|| hover}"
                                 v-click-outside="onClickOutside">
                                 <img src="assets/images/icon.svg" width="80" class="d-flex ml-auto mr-auto pb-2" alt="">
                                 <div class="login_title text-center pb-2 ">小熊摇篮智能教育系统</div>
                                 <div class="text text-center login_t pb-3">Login to your account</div>
+
                                 <form>
                                     <v-text-field v-model="email" :error-messages="emailErrors" label="E-mail" required
                                         @input="$v.email.$touch()" @blur="$v.email.$touch()" color="var(--white-color)">
@@ -77,14 +120,28 @@
                                         @blur="$v.rememberme.$touch()" color="var(--white-color)">
                                     </v-checkbox>
 
-                                    <v-btn block class="mr-4" color="var(--gradient-3)" text-color="black" rounded large
-                                        style="
-                                    background: #f96968;
-                                    background: linear-gradient(-70deg, #FFA19C 0%, #ff4b4a 100%);
-                                    " @click="submit">
+                                    <v-btn block class="" v-background="'var(--gradient-red-d)'" text-color="black"
+                                        rounded large @click="submit">
+                                        <v-icon class="icon icon-pacifier"></v-icon>
+                                        <v-icon class="icon icon-baby-boy-1 mr-2"></v-icon>
                                         Login
                                     </v-btn>
+                                    <v-row>
+                                        <v-col>
+                                            <v-divider style="margin-top: 13px;"></v-divider>
+                                        </v-col>
+                                        <v-col cols="2" class="text-center">or</v-col>
+                                        <v-col>
+                                            <v-divider style="margin-top: 13px;"></v-divider>
+                                        </v-col>
+                                    </v-row>
+                                    <v-btn block class="" v-background="'var(--gradient-0)'" text-color="black" rounded
+                                        large @click="submit" >
+                                        <v-icon class="fab fa-weixin mr-2"></v-icon>
+                                        Login with WeChat
+                                    </v-btn>
                                 </form>
+
 
                             </v-sheet>
                         </v-hover>
@@ -112,16 +169,22 @@
         </v-app>
     </div>
 
+    <script src="https://kit.fontawesome.com/3b082112b1.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.js"></script>
     <script>
+        Vue.directive('background', {
+            bind: function (el, binding, vnode) {
+                el.style.backgroundImage = binding.value
+            }
+        });
         new Vue({
             el: '#app',
             vuetify: new Vuetify({
                 theme: {
                     themes: {
                         light: {
-                            primary: '#ffffff',
+                            primary: '#3c3a47',
                             secondary: '#b0bec5',
                             accent: '#8c9eff',
                             error: '#b71c1c',
@@ -132,12 +195,19 @@
             data: {
                 // Form Sheet
                 sheetFocus: false,
+                btnFocus: false,
                 email: '',
                 password: '',
                 rememberme: false,
 
                 // drawer control model
                 drawer: false,
+                items: [
+                    { title: 'Click Me' },
+                    { title: 'Click Me' },
+                    { title: 'Click Me' },
+                    { title: 'Click Me 2' },
+                ],
             },
             computed: {
                 sheetWidth() {

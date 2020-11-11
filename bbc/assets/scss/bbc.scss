@@ -321,6 +321,7 @@ $gradient-red-d2: linear-gradient(65deg, #795548, #ff6a6a);
     box-shadow: 0 11px 15px -7px rgba(255, 255, 255, .8),0 24px 38px 3px rgba(255, 255, 255, .5),0 12px 70px 8px rgba(255, 255, 255, .3) !important;
   }
 }
+
 .v-sheet {
   transform: translate3d(0px, 0px, 0px);
   transition: $transition;
@@ -330,9 +331,19 @@ $gradient-red-d2: linear-gradient(65deg, #795548, #ff6a6a);
   }
   &.isFocus {
     transform: translateY(-5px) !important;
+    &.change_color {
+      background-color: #000;
+      
+    }
   }
-  
 }
+
+// .isFocus {
+//   transform: translateY(-5px) !important;
+//   &.change_color {
+//     background-color: #000;
+//   }
+// }
 
 .v-toolbar__content {
   // background-image: var(--gradient-red-d2); 
@@ -340,4 +351,15 @@ $gradient-red-d2: linear-gradient(65deg, #795548, #ff6a6a);
 .theme--light.v-navigation-drawer {
   background-color: var($gradient-red-d) !important;
 }
+
+.text_co {
+  color: var(--brandtxt-dark2) !important;
+}
+.text_fff {
+  color: var(--font-fff) !important;
+}
+
+
+
+
 
