@@ -2,7 +2,18 @@
 <html>
 
 <head>
+    <!-- Favicons -->
     <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <meta name="msapplication-TileColor" content="#000">
+    <meta name="theme-color" content="#ffffff">
+
+    <meta property="og:title"              content="小熊摇篮" />
+    <meta property="og:description"        content="小熊摇篮，小熊摇篮小熊摇篮，小熊摇篮小熊摇篮小熊摇篮。" />
+    <meta property="og:image"              content="assets/images/icon_BB.jpg" />
+
     <!-- <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet"> -->
     <!-- <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;700;900&display=swap" rel="stylesheet"> -->
     <link href="https://cdn.jsdelivr.net/npm/@mdi/font@4.x/css/materialdesignicons.min.css" rel="stylesheet">
@@ -23,37 +34,48 @@
                 <v-list dense>
                     <v-row no-gutters class="mt-8">
                         <v-col cols="auto">
-                            <v-avatar color="primary" size="58" class="ml-7 mb-5 "><img src="/assets/images/user.png"
-                                alt="user">
+                            <v-avatar color="primary" size="58" class="ml-7 mb-5 "><img src="assets/images/user.png"
+                                    alt="user">
                             </v-avatar>
                         </v-col>
                         <v-col cols="8">
                             <v-col cols="" class="text_fff pa-0 ml-4">
-                                園長-這裡放職稱
+                                園長 - 職稱這裡放
                             </v-col>
                             <v-col cols="" class="pa-0">
                                 <v-menu transition="slide-y-transition" offset-y>
                                     <template v-slot:activator="{ on, attrs }">
-                                        <v-btn text rounded class="text_fff font-weight-black" v-bind="attrs" v-on="on" value="left">
+                                        <v-btn text rounded class="text_fff font-weight-black" v-bind="attrs" v-on="on"
+                                            value="left">
                                             Catherine Lee
-                                            <v-icon right dark >
+                                            <v-icon right dark>
                                                 mdi-chevron-down
                                             </v-icon>
                                         </v-btn>
                                     </template>
+                                    
                                     <v-list v-background="'var(--gradient-0)'" dense>
-                                        <v-list-item v-for="n in 4" :key="n" link>
-                                            <v-list-item-title v-text="'Item ' + n" class="text_co"></v-list-item-title>
-                                        </v-list-item>
+                                        <v-list-item-group v-model="model" color="indigo">
+                                            <v-list-item v-for="(item, i) in items" :key="i" link>
+                                                <v-divider 
+                                                v-if="!item.title"
+                                                :key="`divider-${i}`"
+                                                >
+                                                </v-divider>
+                                                <v-list-item-icon class="mr-2">
+                                                    <v-icon class="text_co">{{ item.icon }}</v-icon>
+                                                </v-list-item-icon>
+                                                <v-list-item-title class="text_co">{{ item.title }}</v-list-item-title>
+                                            </v-list-item>
+                                        </v-list-item-group>
                                     </v-list>
                                 </v-menu>
                             </v-col>
-                            
                         </v-col>
                     </v-row>
 
 
-                    
+
                     <v-list-item link href="#/">
                         <v-list-item-action class="mr-4 ml-3">
                             <v-icon>mdi-home</v-icon>
@@ -136,7 +158,7 @@
                                         </v-col>
                                     </v-row>
                                     <v-btn block class="" v-background="'var(--gradient-0)'" text-color="black" rounded
-                                        large @click="submit" >
+                                        large @click="submit">
                                         <v-icon class="fab fa-weixin mr-2"></v-icon>
                                         Login with WeChat
                                     </v-btn>
@@ -148,6 +170,7 @@
                     </div>
                 </v-container>
             </v-main>
+
             <!-- <v-footer app>
             </v-footer> -->
             <v-bottom-navigation app>
@@ -195,7 +218,6 @@
             data: {
                 // Form Sheet
                 sheetFocus: false,
-                btnFocus: false,
                 email: '',
                 password: '',
                 rememberme: false,
@@ -203,11 +225,29 @@
                 // drawer control model
                 drawer: false,
                 items: [
-                    { title: 'Click Me' },
-                    { title: 'Click Me' },
-                    { title: 'Click Me' },
-                    { title: 'Click Me 2' },
+                    {
+                        title: 'My Profile',
+                        icon: 'mdi-account',
+                    },
+                    {
+                        title: 'Messages',
+                        icon: 'mdi-email',
+                    },
+                    {
+                        title: 'Settings',
+                        icon: 'mdi-settings',
+                    },
+                    {
+                        title: '',
+                        // icon: '',
+                        // divider: true,
+                    },
+                    {
+                        title: 'logout',
+                        icon: 'mdi-power',
+                    },
                 ],
+                model: 2,
             },
             computed: {
                 sheetWidth() {
