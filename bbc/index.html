@@ -4,7 +4,7 @@
 <head>
     <!-- Favicons -->
     <link rel="icon" href="favicon.ico" type="image/x-icon">
-    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/icon_BB.jpg">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
     <meta name="msapplication-TileColor" content="#000">
@@ -39,13 +39,13 @@
                             </v-avatar>
                         </v-col>
                         <v-col cols="8">
-                            <v-col cols="" class="text_fff pa-0 ml-4">
+                            <v-col cols="auto" class="text_fff pa-0 ml-2 pt-1">
                                 園長 - 職稱這裡放
                             </v-col>
                             <v-col cols="" class="pa-0">
                                 <v-menu transition="slide-y-transition" offset-y>
                                     <template v-slot:activator="{ on, attrs }">
-                                        <v-btn text rounded class="text_fff font-weight-black" v-bind="attrs" v-on="on"
+                                        <v-btn text rounded class="text_fff font-weight-black pl-2" v-bind="attrs" v-on="on"
                                             value="left">
                                             Catherine Lee
                                             <v-icon right dark>
@@ -54,12 +54,13 @@
                                         </v-btn>
                                     </template>
                                     
-                                    <v-list v-background="'var(--gradient-0)'" dense>
+                                    <v-list v-background="'var(--gradient-0)'" dense class="pt-3 pb-3">
                                         <v-list-item-group v-model="model" color="indigo">
                                             <v-list-item v-for="(item, i) in items" :key="i" link>
                                                 <v-divider 
                                                 v-if="!item.title"
                                                 :key="`divider-${i}`"
+                                                style="flex: 1 0 100%; border-color: rgba(0,0,0,.15);"
                                                 >
                                                 </v-divider>
                                                 <v-list-item-icon class="mr-2">
@@ -238,7 +239,7 @@
                         icon: 'mdi-settings',
                     },
                     {
-                        title: '',
+                        // title: '',
                         // icon: '',
                         // divider: true,
                     },
