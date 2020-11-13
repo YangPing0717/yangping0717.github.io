@@ -10,16 +10,17 @@
     <meta name="msapplication-TileColor" content="#000">
     <meta name="theme-color" content="#ffffff">
 
-    <meta property="og:title"              content="小熊摇篮" />
-    <meta property="og:description"        content="小熊摇篮，小熊摇篮小熊摇篮，小熊摇篮小熊摇篮小熊摇篮。" />
-    <meta property="og:image"              content="assets/images/icon_BB.jpg" />
+    <meta property="og:title" content="小熊摇篮" />
+    <meta property="og:description" content="小熊摇篮，小熊摇篮小熊摇篮，小熊摇篮小熊摇篮小熊摇篮。" />
+    <meta property="og:image" content="assets/images/icon_BB.jpg" />
 
     <!-- <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet"> -->
     <!-- <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;700;900&display=swap" rel="stylesheet"> -->
     <link href="https://cdn.jsdelivr.net/npm/@mdi/font@4.x/css/materialdesignicons.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.min.css" rel="stylesheet">
 
-    <link rel="stylesheet" href="https://i.icomoon.io/public/temp/7bfec62e24/UntitledProject/style.css">
+    <!-- <link rel="stylesheet" href="https://i.icomoon.io/public/temp/7bfec62e24/UntitledProject/style.css"> -->
+    <link rel="stylesheet" href="https://i.icomoon.io/public/temp/5e93369ad8/UntitledProject/style.css">
 
     <link rel="stylesheet" href="assets/css/main.css">
     <link rel="stylesheet" href="assets/css/bbc.css">
@@ -45,23 +46,20 @@
                             <v-col cols="" class="pa-0">
                                 <v-menu transition="slide-y-transition" offset-y>
                                     <template v-slot:activator="{ on, attrs }">
-                                        <v-btn text rounded class="text_fff font-weight-black pl-2" v-bind="attrs" v-on="on"
-                                            value="left">
+                                        <v-btn text rounded class="text_fff font-weight-black pl-2" v-bind="attrs"
+                                            v-on="on" value="left">
                                             Catherine Lee
                                             <v-icon right dark>
                                                 mdi-chevron-down
                                             </v-icon>
                                         </v-btn>
                                     </template>
-                                    
+
                                     <v-list v-background="'var(--gradient-0)'" dense class="pt-3 pb-3">
                                         <v-list-item-group v-model="model" color="indigo">
                                             <v-list-item v-for="(item, i) in items" :key="i" link>
-                                                <v-divider 
-                                                v-if="!item.title"
-                                                :key="`divider-${i}`"
-                                                style="flex: 1 0 100%; border-color: rgba(0,0,0,.15);"
-                                                >
+                                                <v-divider v-if="!item.title" :key="`divider-${i}`"
+                                                    style="flex: 1 0 100%; border-color: rgba(0,0,0,.15);">
                                                 </v-divider>
                                                 <v-list-item-icon class="mr-2">
                                                     <v-icon class="text_co">{{ item.icon }}</v-icon>
@@ -74,8 +72,6 @@
                             </v-col>
                         </v-col>
                     </v-row>
-
-
 
                     <v-list-item link href="#/">
                         <v-list-item-action class="mr-4 ml-3">
@@ -160,7 +156,7 @@
                                     </v-row>
                                     <v-btn block class="" v-background="'var(--gradient-0)'" text-color="black" rounded
                                         large @click="submit">
-                                        <v-icon class="fab fa-weixin mr-2"></v-icon>
+                                        <v-icon class="fab fa-weixin mr-2"></v-icon> 
                                         Login with WeChat
                                     </v-btn>
                                 </form>
@@ -189,6 +185,34 @@
                     <span>Nearby</span>
                     <v-icon>mdi-map-marker</v-icon>
                 </v-btn>
+
+                <v-menu >
+                    <template v-slot:activator="{ on, attrs }">
+                    <v-btn
+                        dark
+                        icon
+                        v-bind="attrs"
+                        v-on="on"
+                        
+                        class="v-btn--example"
+                        style="position: absolute; right:-18px;"
+                    >
+                        <v-icon>mdi-dots-vertical</v-icon>
+                    </v-btn>
+                    </template>
+
+                    <v-list v-background="'var(--gradient-0)'" dense>
+                    <v-list-item
+                        v-for="(item, i) in dotmenus"
+                        :key="i"
+                    >
+                        <v-list-item-icon class="mr-2">
+                            <v-icon class="text_co">{{ item.icon }}</v-icon>
+                        </v-list-item-icon>
+                        <v-list-item-title>{{ item.title }}</v-list-item-title>
+                    </v-list-item>
+                    </v-list>
+                </v-menu>
             </v-bottom-navigation>
         </v-app>
     </div>
@@ -248,6 +272,24 @@
                         icon: 'mdi-power',
                     },
                 ],
+                dotmenus: [
+                    {
+                        title: 'My Profile',
+                        icon: 'mdi-account',
+                    },
+                    {
+                        title: 'Messages',
+                        icon: 'mdi-email',
+                    },
+                    {
+                        title: 'Settings',
+                        icon: 'mdi-settings',
+                    },
+                    {
+                        title: 'logout',
+                        icon: 'mdi-power',
+                    },
+                ],
                 model: 2,
             },
             computed: {
@@ -277,6 +319,8 @@
             transition-property: all;
             transition-timing-function: ease-in-out;
         }
+        
+        
     </style>
 </body>
 
