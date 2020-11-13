@@ -98,6 +98,27 @@
                         </v-list-item-content>
                     </v-list-item>
                 </v-list>
+
+                <v-list>
+                    <v-list-group v-model="item.active" v-for="item in accors" :key="item.title"
+                        :prepend-icon="item.action" no-action>
+                        <v-list-tile slot="activator">
+                            <v-list-tile-content>
+                                <v-list-tile-title>{{ item.title }}</v-list-tile-title>
+                            </v-list-tile-content>
+                        </v-list-tile>
+                        <v-list-tile v-for="subItem in item.items" :key="subItem.title" ripple @click="close">
+                            <v-list-tile-content>
+                                <v-list-tile-title>{{ subItem.title }}</v-list-tile-title>
+                            </v-list-tile-content>
+                            <v-list-tile-action>
+                                <v-icon>{{ subItem.action }}</v-icon>
+                            </v-list-tile-action>
+                        </v-list-tile>
+                    </v-list-group>
+                </v-list>
+
+
             </v-navigation-drawer>
             <v-app-bar app dark style="
                 background-color: rgba(255, 255, 255, 0);
@@ -156,7 +177,7 @@
                                     </v-row>
                                     <v-btn block class="" v-background="'var(--gradient-0)'" text-color="black" rounded
                                         large @click="submit">
-                                        <v-icon class="fab fa-weixin mr-2"></v-icon> 
+                                        <v-icon class="fab fa-weixin mr-2"></v-icon>
                                         Login with WeChat
                                     </v-btn>
                                 </form>
@@ -186,31 +207,19 @@
                     <v-icon>mdi-map-marker</v-icon>
                 </v-btn>
 
-                <v-menu >
+                <v-menu>
                     <template v-slot:activator="{ on, attrs }">
-                    <v-btn
-                        dark
-                        icon
-                        v-bind="attrs"
-                        v-on="on"
-                        
-                        class="v-btn--example"
-                        style="position: absolute; right:-18px;"
-                    >
-                        <v-icon>mdi-dots-vertical</v-icon>
-                    </v-btn>
+                        <v-btn dark icon v-bind="attrs" v-on="on" style="position: absolute; right:-18px;">
+                            <v-icon>mdi-dots-vertical</v-icon>
+                        </v-btn>
                     </template>
-
                     <v-list v-background="'var(--gradient-0)'" dense>
-                    <v-list-item
-                        v-for="(item, i) in dotmenus"
-                        :key="i"
-                    >
-                        <v-list-item-icon class="mr-2">
-                            <v-icon class="text_co">{{ item.icon }}</v-icon>
-                        </v-list-item-icon>
-                        <v-list-item-title>{{ item.title }}</v-list-item-title>
-                    </v-list-item>
+                        <v-list-item v-for="(item, i) in dotmenus" :key="i">
+                            <v-list-item-icon class="mr-2">
+                                <v-icon class="text_co">{{ item.icon }}</v-icon>
+                            </v-list-item-icon>
+                            <v-list-item-title>{{ item.title }}</v-list-item-title>
+                        </v-list-item>
                     </v-list>
                 </v-menu>
             </v-bottom-navigation>
@@ -220,6 +229,10 @@
     <script src="https://kit.fontawesome.com/3b082112b1.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.js"></script>
+
+    <!-- <script src='https://unpkg.com/vue/dist/vue.js'></script> -->
+    <!-- <script src='https://unpkg.com/vuetify@1.0.13/dist/vuetify.min.js'></script> -->
+
     <script>
         Vue.directive('background', {
             bind: function (el, binding, vnode) {
@@ -291,6 +304,75 @@
                     },
                 ],
                 model: 2,
+
+
+                accors: [
+                    {
+                        action: 'local_activity',
+                        title: 'Attractions',
+                        active: false,
+                        items: [
+                            { title: 'List Item' }]
+                    },
+
+
+                    {
+                        action: 'restaurant',
+                        title: 'Dining',
+                        active: true,
+                        items: [
+                            { title: 'Breakfast & brunch' },
+                            { title: 'New American' },
+                            { title: 'Sushi' }]
+                    },
+
+
+                    {
+                        action: 'school',
+                        title: 'Education',
+                        active: false,
+                        items: [
+                            { title: 'List Item' }]
+                    },
+
+
+                    {
+                        action: 'directions_run',
+                        title: 'Family',
+                        active: false,
+                        items: [
+                            { title: 'List Item' }]
+                    },
+
+
+                    {
+                        action: 'healing',
+                        title: 'Health',
+                        active: false,
+                        items: [
+                            { title: 'List Item' }]
+                    },
+
+
+                    {
+                        action: 'content_cut',
+                        title: 'Office',
+                        active: false,
+                        items: [
+                            { title: 'List Item' }]
+                    },
+
+
+                    {
+                        action: 'local_offer',
+                        title: 'Promotions',
+                        active: false,
+                        items: [
+                            { title: 'List Item' }]
+                    }
+                ]
+
+
             },
             computed: {
                 sheetWidth() {
@@ -307,6 +389,16 @@
             methods: {
                 onClickOutside() {
                     this.sheetFocus = false
+                },
+                close() {
+                    this.accors.forEach(item => {
+                        if (item.active) {
+                            _.delay(function () {
+                                item.active = false;
+                            }, 300);
+                            return false;
+                        }
+                    });
                 }
             },
         })
@@ -319,8 +411,6 @@
             transition-property: all;
             transition-timing-function: ease-in-out;
         }
-        
-        
     </style>
 </body>
 
