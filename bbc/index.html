@@ -102,7 +102,7 @@
 
                 <v-list dense expand rounded>
                     <v-subheader>管理者</v-subheader>
-                    <v-list-group v-model="item.active" v-for="(item, i) in accors" :key="i"
+                    <v-list-group v-model="item.active" v-for="item in accors" :key="item.title"
                         :prepend-icon="item.action" no-action>
                         <v-list-item slot="activator">
                             <v-list-item-content>
