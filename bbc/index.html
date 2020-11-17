@@ -42,7 +42,7 @@
                         </v-col>
                         <v-col cols="8">
                             <v-col cols="auto" class="text_fff pa-0 ml-2 pt-1">
-                                園長 - 職稱這裡放
+                                園長 - 職稱放這裡
                             </v-col>
                             <v-col cols="" class="pa-0">
                                 <v-menu transition="slide-y-transition" offset-y>
@@ -100,10 +100,11 @@
                     </v-list-item>
                 </v-list>
 
-                <v-list dense>
+                <v-list dense expand rounded>
+                    <v-subheader>管理者</v-subheader>
                     <v-list-group v-model="item.active" v-for="(item, i) in accors" :key="i"
                         :prepend-icon="item.action" no-action>
-                        <v-list-item >
+                        <v-list-item slot="activator">
                             <v-list-item-content>
                                 <v-list-item-title>{{ item.title }}</v-list-item-title>
                             </v-list-item-content>
@@ -306,7 +307,6 @@
                 ],
                 model: 2,
 
-
                 accors: [
                     {
                         action: 'local_activity',
@@ -386,7 +386,7 @@
                             return false;
                         }
                     });
-                }
+                },
             },
         })
     </script>
