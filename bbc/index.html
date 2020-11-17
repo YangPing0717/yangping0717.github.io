@@ -3,10 +3,10 @@
 
 <head>
     <!-- Favicons -->
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="assets/favicon/favicon.ico" type="image/x-icon">
     <link rel="apple-touch-icon" sizes="180x180" href="assets/images/icon_BB.jpg">
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
     <meta name="msapplication-TileColor" content="#000">
     <meta name="theme-color" content="#ffffff">
 
@@ -20,7 +20,8 @@
     <link href="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.min.css" rel="stylesheet">
 
     <!-- <link rel="stylesheet" href="https://i.icomoon.io/public/temp/7bfec62e24/UntitledProject/style.css"> -->
-    <link rel="stylesheet" href="https://i.icomoon.io/public/temp/5e93369ad8/UntitledProject/style.css">
+    <link rel="stylesheet" href="https://i.icomoon.io/public/temp/ba2be0e0a0/UntitledProject/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Material+Icons" rel="stylesheet">
 
     <link rel="stylesheet" href="assets/css/main.css">
     <link rel="stylesheet" href="assets/css/bbc.css">
@@ -99,27 +100,27 @@
                     </v-list-item>
                 </v-list>
 
-                <v-list>
-                    <v-list-group v-model="item.active" v-for="item in accors" :key="item.title"
+                <v-list dense>
+                    <v-list-group v-model="item.active" v-for="(item, i) in accors" :key="i"
                         :prepend-icon="item.action" no-action>
-                        <v-list-tile slot="activator">
-                            <v-list-tile-content>
-                                <v-list-tile-title>{{ item.title }}</v-list-tile-title>
-                            </v-list-tile-content>
-                        </v-list-tile>
-                        <v-list-tile v-for="subItem in item.items" :key="subItem.title" ripple @click="close">
-                            <v-list-tile-content>
-                                <v-list-tile-title>{{ subItem.title }}</v-list-tile-title>
-                            </v-list-tile-content>
-                            <v-list-tile-action>
+                        <v-list-item >
+                            <v-list-item-content>
+                                <v-list-item-title>{{ item.title }}</v-list-item-title>
+                            </v-list-item-content>
+                        </v-list-item>
+                        <v-list-item v-for="subItem in item.items" :key="subItem.title" ripple @click="close">
+                            <v-list-item-content>
+                                <v-list-item-title>{{ subItem.title }}</v-list-item-title>
+                            </v-list-item-content>
+                            <v-list-item-action>
                                 <v-icon>{{ subItem.action }}</v-icon>
-                            </v-list-tile-action>
-                        </v-list-tile>
+                            </v-list-item-action>
+                        </v-list-item>
                     </v-list-group>
                 </v-list>
 
-
             </v-navigation-drawer>
+
             <v-app-bar app dark style="
                 background-color: rgba(255, 255, 255, 0);
                 box-shadow: none;
@@ -314,8 +315,6 @@
                         items: [
                             { title: 'List Item' }]
                     },
-
-
                     {
                         action: 'restaurant',
                         title: 'Dining',
@@ -325,8 +324,6 @@
                             { title: 'New American' },
                             { title: 'Sushi' }]
                     },
-
-
                     {
                         action: 'school',
                         title: 'Education',
@@ -334,8 +331,6 @@
                         items: [
                             { title: 'List Item' }]
                     },
-
-
                     {
                         action: 'directions_run',
                         title: 'Family',
@@ -343,8 +338,6 @@
                         items: [
                             { title: 'List Item' }]
                     },
-
-
                     {
                         action: 'healing',
                         title: 'Health',
@@ -352,8 +345,6 @@
                         items: [
                             { title: 'List Item' }]
                     },
-
-
                     {
                         action: 'content_cut',
                         title: 'Office',
@@ -361,8 +352,6 @@
                         items: [
                             { title: 'List Item' }]
                     },
-
-
                     {
                         action: 'local_offer',
                         title: 'Promotions',
@@ -371,8 +360,6 @@
                             { title: 'List Item' }]
                     }
                 ]
-
-
             },
             computed: {
                 sheetWidth() {
