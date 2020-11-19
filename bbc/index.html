@@ -31,6 +31,9 @@
 <body>
     <div id="app">
         <v-app>
+            <!-- <v-carousel style="height:100%">
+                <v-carousel-item v-for="(item,i) in carousel" v-bind:src="item.src" :key="i"></v-carousel-item>
+            </v-carousel> -->
             <div class="bg"></div>
             <v-navigation-drawer v-model="drawer" app v-background="'var(--gradient-4)'">
                 <v-list dense>
@@ -48,7 +51,7 @@
                                 <v-menu transition="slide-y-transition" offset-y>
                                     <template v-slot:activator="{ on, attrs }">
                                         <v-btn text rounded class="text_fff font-weight-black pl-2" v-bind="attrs"
-                                            v-on="on" value="left">
+                                            v-on="on" value="left" :ripple="{ class: 'red--text' }">
                                             Catherine Lee
                                             <v-icon right dark>
                                                 mdi-chevron-down
@@ -100,9 +103,9 @@
                     </v-list-item>
                 </v-list>
 
-                <v-list dense expand rounded>
+                <v-list dense rounded>
                     <v-subheader>管理者</v-subheader>
-                    <v-list-group v-model="item.active" v-for="item in accors" :key="item.title"
+                    <v-list-group v-model="item.active" v-for="(item, i) in accors" :key="i"
                         :prepend-icon="item.action" no-action>
                         <v-list-item slot="activator">
                             <v-list-item-content>
@@ -358,6 +361,20 @@
                         active: false,
                         items: [
                             { title: 'List Item' }]
+                    }
+                ],
+                carousel: [
+                    {
+                    src: 'assets/images/baby_1.jpg'
+                    },
+                    {
+                    src: 'assets/images/baby_2.jpg'
+                    },
+                    {
+                    src: 'assets/images/baby_3.jpg'
+                    },
+                    {
+                    src: 'assets/images/baby_bg.jpg'
                     }
                 ]
             },
