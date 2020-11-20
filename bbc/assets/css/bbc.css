@@ -244,26 +244,6 @@ body.is-loading #bg {
           box-shadow: 0 11px 15px -7px rgba(255, 255, 255, 0.8), 0 24px 38px 3px rgba(255, 255, 255, 0.5), 0 12px 70px 8px rgba(255, 255, 255, 0.3) !important;
 }
 
-.v-sheet {
-  -webkit-transform: translate3d(0px, 0px, 0px);
-          transform: translate3d(0px, 0px, 0px);
-  -webkit-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
-}
-
-.v-sheet.theme--light {
-  background-color: rgba(255, 255, 255, 0);
-}
-
-.v-sheet.isFocus {
-  -webkit-transform: translateY(-5px) !important;
-          transform: translateY(-5px) !important;
-}
-
-.v-sheet.isFocus.change_color {
-  background-color: #000;
-}
-
 .theme--light.v-navigation-drawer {
   background-color: var(linear-gradient(45deg, #e76f73, #ffd3c8)) !important;
 }
@@ -274,4 +254,12 @@ body.is-loading #bg {
 
 .text_fff {
   color: var(--font-fff) !important;
+}
+
+.v-carousel {
+  height: 100vh !important;
+}
+
+.v-carousel .theme--dark.v-image {
+  height: 100vh !important;
 }

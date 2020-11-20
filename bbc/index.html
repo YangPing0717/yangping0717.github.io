@@ -2,420 +2,420 @@
 <html>
 
 <head>
-    <!-- Favicons -->
-    <link rel="icon" href="assets/favicon/favicon.ico" type="image/x-icon">
-    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/icon_BB.jpg">
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
-    <meta name="msapplication-TileColor" content="#000">
-    <meta name="theme-color" content="#ffffff">
+  <!-- Favicons -->
+  <link rel="icon" href="assets/favicon/favicon.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/images/icon_BB.jpg">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+  <meta name="msapplication-TileColor" content="#000">
+  <meta name="theme-color" content="#ffffff">
 
-    <meta property="og:title" content="小熊摇篮" />
-    <meta property="og:description" content="小熊摇篮，小熊摇篮小熊摇篮，小熊摇篮小熊摇篮小熊摇篮。" />
-    <meta property="og:image" content="assets/images/icon_BB.jpg" />
+  <meta property="og:title" content="小熊摇篮" />
+  <meta property="og:description" content="小熊摇篮，小熊摇篮小熊摇篮，小熊摇篮小熊摇篮小熊摇篮。" />
+  <meta property="og:image" content="assets/images/icon_BB.jpg" />
 
-    <!-- <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet"> -->
-    <!-- <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;700;900&display=swap" rel="stylesheet"> -->
-    <link href="https://cdn.jsdelivr.net/npm/@mdi/font@4.x/css/materialdesignicons.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.min.css" rel="stylesheet">
+  <!-- <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet"> -->
+  <!-- <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;700;900&display=swap" rel="stylesheet"> -->
+  <link href="https://cdn.jsdelivr.net/npm/@mdi/font@4.x/css/materialdesignicons.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.min.css" rel="stylesheet">
 
-    <!-- <link rel="stylesheet" href="https://i.icomoon.io/public/temp/7bfec62e24/UntitledProject/style.css"> -->
-    <link rel="stylesheet" href="https://i.icomoon.io/public/temp/ba2be0e0a0/UntitledProject/style.css">
-    <link href="https://fonts.googleapis.com/css?family=Material+Icons" rel="stylesheet">
+  <!-- <link rel="stylesheet" href="https://i.icomoon.io/public/temp/7bfec62e24/UntitledProject/style.css"> -->
+  <link rel="stylesheet" href="assets/css/icomoon.css">
+  <link href="https://fonts.googleapis.com/css?family=Material+Icons" rel="stylesheet">
 
-    <link rel="stylesheet" href="assets/css/main.css">
-    <link rel="stylesheet" href="assets/css/bbc.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="stylesheet" href="assets/css/bbc.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
 </head>
 
 <body>
-    <div id="app">
-        <v-app>
-            <!-- <v-carousel style="height:100%">
-                <v-carousel-item v-for="(item,i) in carousel" v-bind:src="item.src" :key="i"></v-carousel-item>
-            </v-carousel> -->
-            <div class="bg"></div>
-            <v-navigation-drawer v-model="drawer" app v-background="'var(--gradient-4)'">
-                <v-list dense>
-                    <v-row no-gutters class="mt-8">
-                        <v-col cols="auto">
-                            <v-avatar color="primary" size="58" class="ml-7 mb-5 "><img src="assets/images/user.png"
-                                    alt="user">
-                            </v-avatar>
+  <div id="app">
+    <v-app>
+        <v-carousel style="height:100%; opacity: .3; position: absolute; top: 0; left: 0;" :show-arrows="false" cycle hide-delimiters>
+            <v-carousel-item v-for="(item,i) in carousel" v-bind:src="item.src" :key="i" style="height:100%;"></v-carousel-item>
+        </v-carousel>
+        <!-- <div class="bg"></div> -->
+        <v-navigation-drawer v-model="drawer" app v-background="'var(--gradient-4)'">
+            <v-list dense>
+                <v-row no-gutters class="mt-8">
+                    <v-col cols="auto">
+                        <v-avatar color="primary" size="58" class="ml-7 mb-5 "><img src="assets/images/user.png"
+                                alt="user">
+                        </v-avatar>
+                    </v-col>
+                    <v-col cols="8">
+                        <v-col cols="auto" class="text_fff pa-0 ml-2 pt-1">
+                            園長 - 職稱放這裡
                         </v-col>
-                        <v-col cols="8">
-                            <v-col cols="auto" class="text_fff pa-0 ml-2 pt-1">
-                                園長 - 職稱放這裡
-                            </v-col>
-                            <v-col cols="" class="pa-0">
-                                <v-menu transition="slide-y-transition" offset-y>
-                                    <template v-slot:activator="{ on, attrs }">
-                                        <v-btn text rounded class="text_fff font-weight-black pl-2" v-bind="attrs"
-                                            v-on="on" value="left" :ripple="{ class: 'red--text' }">
-                                            Catherine Lee
-                                            <v-icon right dark>
-                                                mdi-chevron-down
-                                            </v-icon>
-                                        </v-btn>
-                                    </template>
+                        <v-col cols="" class="pa-0">
+                            <v-menu transition="slide-y-transition" offset-y>
+                                <template v-slot:activator="{ on, attrs }">
+                                    <v-btn text rounded class="text_fff font-weight-black pl-2" v-bind="attrs"
+                                        v-on="on" value="left" :ripple="{ class: 'red--text' }">
+                                        Catherine Lee
+                                        <v-icon right dark>
+                                            mdi-chevron-down
+                                        </v-icon>
+                                    </v-btn>
+                                </template>
 
-                                    <v-list v-background="'var(--gradient-0)'" dense class="pt-3 pb-3">
-                                        <v-list-item-group v-model="model" color="indigo">
-                                            <v-list-item v-for="(item, i) in items" :key="i" link>
-                                                <v-divider v-if="!item.title" :key="`divider-${i}`"
-                                                    style="flex: 1 0 100%; border-color: rgba(0,0,0,.15);">
-                                                </v-divider>
-                                                <v-list-item-icon class="mr-2">
-                                                    <v-icon class="text_co">{{ item.icon }}</v-icon>
-                                                </v-list-item-icon>
-                                                <v-list-item-title class="text_co">{{ item.title }}</v-list-item-title>
-                                            </v-list-item>
-                                        </v-list-item-group>
-                                    </v-list>
-                                </v-menu>
-                            </v-col>
+                                <v-list v-background="'var(--gradient-0)'" dense class="pt-3 pb-3">
+                                    <v-list-item-group v-model="model" color="indigo">
+                                        <v-list-item v-for="(item, i) in items" :key="i" link>
+                                            <v-divider v-if="!item.title" :key="`divider-${i}`"
+                                                style="flex: 1 0 100%; border-color: rgba(0,0,0,.15);">
+                                            </v-divider>
+                                            <v-list-item-icon class="mr-2">
+                                                <v-icon class="text_co">{{ item.icon }}</v-icon>
+                                            </v-list-item-icon>
+                                            <v-list-item-title class="text_co">{{ item.title }}</v-list-item-title>
+                                        </v-list-item>
+                                    </v-list-item-group>
+                                </v-list>
+                            </v-menu>
                         </v-col>
-                    </v-row>
+                    </v-col>
+                </v-row>
 
-                    <v-list-item link href="#/">
-                        <v-list-item-action class="mr-4 ml-3">
-                            <v-icon>mdi-home</v-icon>
-                        </v-list-item-action>
+                <v-list-item link href="#/">
+                    <v-list-item-action class="mr-4 ml-3">
+                        <v-icon>mdi-home</v-icon>
+                    </v-list-item-action>
+                    <v-list-item-content>
+                        <v-list-item-title>Home</v-list-item-title>
+                    </v-list-item-content>
+                </v-list-item>
+                <v-list-item link href="#/About">
+                    <v-list-item-action class="mr-4 ml-3">
+                        <v-icon>mdi-email</v-icon>
+                    </v-list-item-action>
+                    <v-list-item-content>
+                        <v-list-item-title>Contact</v-list-item-title>
+                    </v-list-item-content>
+                </v-list-item>
+                <v-list-item link href="#/">
+                    <v-list-item-action class="mr-4 ml-3">
+                        <v-icon>mdi-file-video</v-icon>
+                    </v-list-item-action>
+                    <v-list-item-content>
+                        <v-list-item-title>0-3 課程</v-list-item-title>
+                    </v-list-item-content>
+                </v-list-item>
+            </v-list>
+
+            <v-list dense rounded>
+                <v-subheader>管理者</v-subheader>
+                <v-list-group v-model="item.active" v-for="(item, i) in accors" :key="i"
+                    :prepend-icon="item.action" no-action>
+                    <v-list-item slot="activator">
                         <v-list-item-content>
-                            <v-list-item-title>Home</v-list-item-title>
-                        </v-list-item-content>
-                    </v-list-item>
-                    <v-list-item link href="#/About">
-                        <v-list-item-action class="mr-4 ml-3">
-                            <v-icon>mdi-email</v-icon>
-                        </v-list-item-action>
-                        <v-list-item-content>
-                            <v-list-item-title>Contact</v-list-item-title>
-                        </v-list-item-content>
-                    </v-list-item>
-                    <v-list-item link href="#/">
-                        <v-list-item-action class="mr-4 ml-3">
-                            <v-icon>mdi-file-video</v-icon>
-                        </v-list-item-action>
-                        <v-list-item-content>
-                            <v-list-item-title>0-3 課程</v-list-item-title>
-                        </v-list-item-content>
-                    </v-list-item>
-                </v-list>
-
-                <v-list dense rounded>
-                    <v-subheader>管理者</v-subheader>
-                    <v-list-group v-model="item.active" v-for="(item, i) in accors" :key="i"
-                        :prepend-icon="item.action" no-action>
-                        <v-list-item slot="activator">
-                            <v-list-item-content>
-                                <v-list-item-title>{{ item.title }}</v-list-item-title>
-                            </v-list-item-content>
-                        </v-list-item>
-                        <v-list-item v-for="subItem in item.items" :key="subItem.title" ripple @click="close">
-                            <v-list-item-content>
-                                <v-list-item-title>{{ subItem.title }}</v-list-item-title>
-                            </v-list-item-content>
-                            <v-list-item-action>
-                                <v-icon>{{ subItem.action }}</v-icon>
-                            </v-list-item-action>
-                        </v-list-item>
-                    </v-list-group>
-                </v-list>
-
-            </v-navigation-drawer>
-
-            <v-app-bar app dark style="
-                background-color: rgba(255, 255, 255, 0);
-                box-shadow: none;
-            ">
-                <v-app-bar-nav-icon @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
-                <!-- <v-spacer></v-spacer>
-                <div class="d-flex align-center justify-center">
-                    <v-img alt="babybearcare" class="shrink mr-5" contain 
-                        src="assets/images/logo_ww.svg" transition="scale-transition"
-                        width="120" />
-                </div>
-                <v-spacer></v-spacer> -->
-            </v-app-bar>
-
-            <v-main>
-                <v-container fluid>
-                    <div class="d-flex justify-center ma-4">
-                        <!-- Insert Page Code Here -->
-                        <v-hover v-slot="{ hover }">
-                            <v-sheet id="formSheet" :width="sheetWidth" class="pr-4 pl-4" :rounded="'xl'"
-                                @click="sheetFocus= true" :class="{'isFocus':sheetFocus|| hover}"
-                                v-click-outside="onClickOutside">
-                                <img src="assets/images/icon.svg" width="80" class="d-flex ml-auto mr-auto pb-2" alt="">
-                                <div class="login_title text-center pb-2 ">小熊摇篮智能教育系统</div>
-                                <div class="text text-center login_t pb-3">Login to your account</div>
-
-                                <form>
-                                    <v-text-field v-model="email" :error-messages="emailErrors" label="E-mail" required
-                                        @input="$v.email.$touch()" @blur="$v.email.$touch()" color="var(--white-color)">
-                                    </v-text-field>
-
-                                    <v-text-field v-model="password" :error-messages="passwordErrors" :counter="10"
-                                        label="Password" required @input="$v.password.$touch()"
-                                        @blur="$v.password.$touch()" color="var(--white-color)"></v-text-field>
-
-                                    <v-checkbox v-model="rememberme" :error-messages="remembermeErrors"
-                                        label="Remember Me?" required @change="$v.rememberme.$touch()"
-                                        @blur="$v.rememberme.$touch()" color="var(--white-color)">
-                                    </v-checkbox>
-
-                                    <v-btn block class="" v-background="'var(--gradient-red-d)'" text-color="black"
-                                        rounded large @click="submit">
-                                        <v-icon class="icon icon-pacifier"></v-icon>
-                                        <v-icon class="icon icon-baby-boy-1 mr-2"></v-icon>
-                                        Login
-                                    </v-btn>
-                                    <v-row>
-                                        <v-col>
-                                            <v-divider style="margin-top: 13px;"></v-divider>
-                                        </v-col>
-                                        <v-col cols="2" class="text-center">or</v-col>
-                                        <v-col>
-                                            <v-divider style="margin-top: 13px;"></v-divider>
-                                        </v-col>
-                                    </v-row>
-                                    <v-btn block class="" v-background="'var(--gradient-0)'" text-color="black" rounded
-                                        large @click="submit">
-                                        <v-icon class="fab fa-weixin mr-2"></v-icon>
-                                        Login with WeChat
-                                    </v-btn>
-                                </form>
-
-
-                            </v-sheet>
-                        </v-hover>
-                    </div>
-                </v-container>
-            </v-main>
-
-            <!-- <v-footer app>
-            </v-footer> -->
-            <v-bottom-navigation app>
-                <v-btn value="recent">
-                    <span>Recent</span>
-                    <v-icon>mdi-history</v-icon>
-                </v-btn>
-
-                <v-btn value="favorites">
-                    <span>Favorites</span>
-                    <v-icon>mdi-heart</v-icon>
-                </v-btn>
-
-                <v-btn value="nearby">
-                    <span>Nearby</span>
-                    <v-icon>mdi-map-marker</v-icon>
-                </v-btn>
-
-                <v-menu>
-                    <template v-slot:activator="{ on, attrs }">
-                        <v-btn dark icon v-bind="attrs" v-on="on" style="position: absolute; right:-18px;">
-                            <v-icon>mdi-dots-vertical</v-icon>
-                        </v-btn>
-                    </template>
-                    <v-list v-background="'var(--gradient-0)'" dense>
-                        <v-list-item v-for="(item, i) in dotmenus" :key="i">
-                            <v-list-item-icon class="mr-2">
-                                <v-icon class="text_co">{{ item.icon }}</v-icon>
-                            </v-list-item-icon>
                             <v-list-item-title>{{ item.title }}</v-list-item-title>
-                        </v-list-item>
-                    </v-list>
-                </v-menu>
-            </v-bottom-navigation>
-        </v-app>
-    </div>
+                        </v-list-item-content>
+                    </v-list-item>
+                    <v-list-item v-for="subItem in item.items" :key="subItem.title" ripple @click="close">
+                        <v-list-item-content>
+                            <v-list-item-title>{{ subItem.title }}</v-list-item-title>
+                        </v-list-item-content>
+                        <v-list-item-action>
+                            <v-icon>{{ subItem.action }}</v-icon>
+                        </v-list-item-action>
+                    </v-list-item>
+                </v-list-group>
+            </v-list>
 
-    <script src="https://kit.fontawesome.com/3b082112b1.js" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.js"></script>
+        </v-navigation-drawer>
 
-    <!-- <script src='https://unpkg.com/vue/dist/vue.js'></script> -->
-    <!-- <script src='https://unpkg.com/vuetify@1.0.13/dist/vuetify.min.js'></script> -->
+        <v-app-bar app dark style="
+            background-color: rgba(255, 255, 255, 0);
+            box-shadow: none;
+        ">
+            <v-app-bar-nav-icon @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
+            <!-- <v-spacer></v-spacer>
+            <div class="d-flex align-center justify-center">
+                <v-img alt="babybearcare" class="shrink mr-5" contain 
+                    src="assets/images/logo_ww.svg" transition="scale-transition"
+                    width="120" />
+            </div>
+            <v-spacer></v-spacer> -->
+        </v-app-bar>
 
-    <script>
-        Vue.directive('background', {
-            bind: function (el, binding, vnode) {
-                el.style.backgroundImage = binding.value
-            }
-        });
-        new Vue({
-            el: '#app',
-            vuetify: new Vuetify({
-                theme: {
-                    themes: {
-                        light: {
-                            primary: '#3c3a47',
-                            secondary: '#b0bec5',
-                            accent: '#8c9eff',
-                            error: '#b71c1c',
-                        },
-                    },
-                },
-            }),
-            data: {
-                // Form Sheet
-                sheetFocus: false,
-                email: '',
-                password: '',
-                rememberme: false,
+        <v-main>
+            <v-container fluid>
+                <div class="d-flex justify-center ma-4">
+                    <!-- Insert Page Code Here -->
+                    <v-hover v-slot="{ hover }">
+                        <v-sheet id="formSheet" :width="sheetWidth" class="pr-4 pl-4" :rounded="'xl'"
+                            @click="sheetFocus= true" :class="{'isFocus':sheetFocus|| hover}"
+                            v-click-outside="onClickOutside" color="transparent">
+                            <img src="assets/images/icon.svg" width="80" class="d-flex ml-auto mr-auto pb-2" alt="">
+                            <div class="login_title text-center pb-2 ">小熊摇篮智能教育系统</div>
+                            <div class="text text-center login_t pb-3">Login to your account</div>
 
-                // drawer control model
-                drawer: false,
-                items: [
-                    {
-                        title: 'My Profile',
-                        icon: 'mdi-account',
-                    },
-                    {
-                        title: 'Messages',
-                        icon: 'mdi-email',
-                    },
-                    {
-                        title: 'Settings',
-                        icon: 'mdi-settings',
-                    },
-                    {
-                        // title: '',
-                        // icon: '',
-                        // divider: true,
-                    },
-                    {
-                        title: 'logout',
-                        icon: 'mdi-power',
-                    },
-                ],
-                dotmenus: [
-                    {
-                        title: 'My Profile',
-                        icon: 'mdi-account',
-                    },
-                    {
-                        title: 'Messages',
-                        icon: 'mdi-email',
-                    },
-                    {
-                        title: 'Settings',
-                        icon: 'mdi-settings',
-                    },
-                    {
-                        title: 'logout',
-                        icon: 'mdi-power',
-                    },
-                ],
-                model: 2,
+                            <form>
+                                <v-text-field v-model="email" :error-messages="emailErrors" label="E-mail" required
+                                    @input="$v.email.$touch()" @blur="$v.email.$touch()" color="var(--white-color)">
+                                </v-text-field>
 
-                accors: [
-                    {
-                        action: 'local_activity',
-                        title: 'Attractions',
-                        active: false,
-                        items: [
-                            { title: 'List Item' }]
-                    },
-                    {
-                        action: 'restaurant',
-                        title: 'Dining',
-                        active: true,
-                        items: [
-                            { title: 'Breakfast & brunch' },
-                            { title: 'New American' },
-                            { title: 'Sushi' }]
-                    },
-                    {
-                        action: 'school',
-                        title: 'Education',
-                        active: false,
-                        items: [
-                            { title: 'List Item' }]
-                    },
-                    {
-                        action: 'directions_run',
-                        title: 'Family',
-                        active: false,
-                        items: [
-                            { title: 'List Item' }]
-                    },
-                    {
-                        action: 'healing',
-                        title: 'Health',
-                        active: false,
-                        items: [
-                            { title: 'List Item' }]
-                    },
-                    {
-                        action: 'content_cut',
-                        title: 'Office',
-                        active: false,
-                        items: [
-                            { title: 'List Item' }]
-                    },
-                    {
-                        action: 'local_offer',
-                        title: 'Promotions',
-                        active: false,
-                        items: [
-                            { title: 'List Item' }]
-                    }
-                ],
-                carousel: [
-                    {
-                    src: 'assets/images/baby_1.jpg'
-                    },
-                    {
-                    src: 'assets/images/baby_2.jpg'
-                    },
-                    {
-                    src: 'assets/images/baby_3.jpg'
-                    },
-                    {
-                    src: 'assets/images/baby_bg.jpg'
-                    }
-                ]
-            },
-            computed: {
-                sheetWidth() {
-                    switch (this.$vuetify.breakpoint.name) {
-                        case 'lg': return 600
-                        case 'xl': return 800
-                        default: return 400
-                        // case 'xs': return 220
-                        // case 'sm': return 400
-                        // case 'md': return 500
-                    }
-                }
-            },
-            methods: {
-                onClickOutside() {
-                    this.sheetFocus = false
-                },
-                close() {
-                    this.accors.forEach(item => {
-                        if (item.active) {
-                            _.delay(function () {
-                                item.active = false;
-                            }, 300);
-                            return false;
-                        }
-                    });
-                },
-            },
-        })
-    </script>
-    <style>
-        .v-sheet.isFocus {
-            transform: matrix(1, 0, 0, 1, 0, 0);
-            transition-delay: 0s;
-            transition-duration: 0.2s;
-            transition-property: all;
-            transition-timing-function: ease-in-out;
-        }
-    </style>
+                                <v-text-field v-model="password" :error-messages="passwordErrors" :counter="10"
+                                    label="Password" required @input="$v.password.$touch()"
+                                    @blur="$v.password.$touch()" color="var(--white-color)"></v-text-field>
+
+                                <v-checkbox v-model="rememberme" :error-messages="remembermeErrors"
+                                    label="Remember Me?" required @change="$v.rememberme.$touch()"
+                                    @blur="$v.rememberme.$touch()" color="var(--white-color)">
+                                </v-checkbox>
+
+                                <v-btn block class="" v-background="'var(--gradient-red-d)'" text-color="black"
+                                    rounded large @click="submit">
+                                    <v-icon class="icon icon-pacifier"></v-icon>
+                                    <v-icon class="icon icon-baby-boy-1 mr-2"></v-icon>
+                                    Login
+                                </v-btn>
+                                <v-row>
+                                    <v-col>
+                                        <v-divider style="margin-top: 13px;"></v-divider>
+                                    </v-col>
+                                    <v-col cols="2" class="text-center">or</v-col>
+                                    <v-col>
+                                        <v-divider style="margin-top: 13px;"></v-divider>
+                                    </v-col>
+                                </v-row>
+                                <v-btn block class="" v-background="'var(--gradient-0)'" text-color="black" rounded
+                                    large @click="submit">
+                                    <v-icon class="fab fa-weixin mr-2"></v-icon>
+                                    Login with WeChat
+                                </v-btn>
+                            </form>
+
+
+                        </v-sheet>
+                    </v-hover>
+                </div>
+            </v-container>
+        </v-main>
+
+        <!-- <v-footer app>
+        </v-footer> -->
+        <v-bottom-navigation app>
+            <v-btn value="recent">
+                <span>Recent</span>
+                <v-icon>mdi-history</v-icon>
+            </v-btn>
+
+            <v-btn value="favorites">
+                <span>Favorites</span>
+                <v-icon>mdi-heart</v-icon>
+            </v-btn>
+
+            <v-btn value="nearby">
+                <span>Nearby</span>
+                <v-icon>mdi-map-marker</v-icon>
+            </v-btn>
+
+            <v-menu>
+                <template v-slot:activator="{ on, attrs }">
+                    <v-btn dark icon v-bind="attrs" v-on="on" style="position: absolute; right:-18px;">
+                        <v-icon>mdi-dots-vertical</v-icon>
+                    </v-btn>
+                </template>
+                <v-list v-background="'var(--gradient-0)'" dense>
+                    <v-list-item v-for="(item, i) in dotmenus" :key="i">
+                        <v-list-item-icon class="mr-2">
+                            <v-icon class="text_co">{{ item.icon }}</v-icon>
+                        </v-list-item-icon>
+                        <v-list-item-title>{{ item.title }}</v-list-item-title>
+                    </v-list-item>
+                </v-list>
+            </v-menu>
+        </v-bottom-navigation>
+    </v-app>
+  </div>
+
+  <script src="https://kit.fontawesome.com/3b082112b1.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.js"></script>
+
+  <!-- <script src='https://unpkg.com/vue/dist/vue.js'></script> -->
+  <!-- <script src='https://unpkg.com/vuetify@1.0.13/dist/vuetify.min.js'></script> -->
+
+  <script>
+      Vue.directive('background', {
+          bind: function (el, binding, vnode) {
+              el.style.backgroundImage = binding.value
+          }
+      });
+      new Vue({
+          el: '#app',
+          vuetify: new Vuetify({
+              theme: {
+                  themes: {
+                      light: {
+                          primary: '#3c3a47',
+                          secondary: '#b0bec5',
+                          accent: '#8c9eff',
+                          error: '#b71c1c',
+                      },
+                  },
+              },
+          }),
+          data: {
+              // Form Sheet
+              sheetFocus: false,
+              email: '',
+              password: '',
+              rememberme: false,
+
+              // drawer control model
+              drawer: false,
+              items: [
+                  {
+                      title: 'My Profile',
+                      icon: 'mdi-account',
+                  },
+                  {
+                      title: 'Messages',
+                      icon: 'mdi-email',
+                  },
+                  {
+                      title: 'Settings',
+                      icon: 'mdi-settings',
+                  },
+                  {
+                      // title: '',
+                      // icon: '',
+                      // divider: true,
+                  },
+                  {
+                      title: 'logout',
+                      icon: 'mdi-power',
+                  },
+              ],
+              dotmenus: [
+                  {
+                      title: 'My Profile',
+                      icon: 'mdi-account',
+                  },
+                  {
+                      title: 'Messages',
+                      icon: 'mdi-email',
+                  },
+                  {
+                      title: 'Settings',
+                      icon: 'mdi-settings',
+                  },
+                  {
+                      title: 'logout',
+                      icon: 'mdi-power',
+                  },
+              ],
+              model: 2,
+
+              accors: [
+                  {
+                      action: 'local_activity',
+                      title: 'Attractions',
+                      active: false,
+                      items: [
+                          { title: 'List Item' }]
+                  },
+                  {
+                      action: 'restaurant',
+                      title: 'Dining',
+                      active: true,
+                      items: [
+                          { title: 'Breakfast & brunch' },
+                          { title: 'New American' },
+                          { title: 'Sushi' }]
+                  },
+                  {
+                      action: 'school',
+                      title: 'Education',
+                      active: false,
+                      items: [
+                          { title: 'List Item' }]
+                  },
+                  {
+                      action: 'directions_run',
+                      title: 'Family',
+                      active: false,
+                      items: [
+                          { title: 'List Item' }]
+                  },
+                  {
+                      action: 'healing',
+                      title: 'Health',
+                      active: false,
+                      items: [
+                          { title: 'List Item' }]
+                  },
+                  {
+                      action: 'content_cut',
+                      title: 'Office',
+                      active: false,
+                      items: [
+                          { title: 'List Item' }]
+                  },
+                  {
+                      action: 'local_offer',
+                      title: 'Promotions',
+                      active: false,
+                      items: [
+                          { title: 'List Item' }]
+                  }
+              ],
+              carousel: [
+                  {
+                  src: 'assets/images/baby_1.jpg'
+                  },
+                  {
+                  src: 'assets/images/baby_2.jpg'
+                  },
+                  {
+                  src: 'assets/images/baby_3.jpg'
+                  },
+                  {
+                  src: 'assets/images/baby_bg.jpg'
+                  }
+              ]
+          },
+          computed: {
+              sheetWidth() {
+                  switch (this.$vuetify.breakpoint.name) {
+                      case 'lg': return 600
+                      case 'xl': return 800
+                      default: return 400
+                      // case 'xs': return 220
+                      // case 'sm': return 400
+                      // case 'md': return 500
+                  }
+              }
+          },
+          methods: {
+              onClickOutside() {
+                  this.sheetFocus = false
+              },
+              close() {
+                  this.accors.forEach(item => {
+                      if (item.active) {
+                          _.delay(function () {
+                              item.active = false;
+                          }, 300);
+                          return false;
+                      }
+                  });
+              },
+          },
+      })
+  </script>
+  <style>
+    .v-sheet.isFocus {
+        transform: matrix(1, 0, 0, 1, 0, 0);
+        transition-delay: 0s;
+        transition-duration: 0.2s;
+        transition-property: all;
+        transition-timing-function: ease-in-out;
+    }
+  </style>
 </body>
 
 </html>
