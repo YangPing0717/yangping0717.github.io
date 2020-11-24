@@ -2,7 +2,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;700;900&display=swap');
 
 
-$font-family: 微軟正黑體, 微软正黑体, Montserrat, "Open Sans", sans-serif;
+// $font-family: 微軟正黑體, 微软正黑体, Montserrat, "Open Sans", sans-serif;
+// $font-family: 'Microsoft JhengHei', 'Montserrat', sans-serif;
+$font-family: PingFangSC-Medium,PingFang SC,pingfang, 'Montserrat', sans-serif;
+// $font-family: Microsoft YaHei, sans-serif;
 
 $transition: all 0.2s ease-in-out;
 $col_light_a: #ffbbb1;
@@ -301,9 +304,8 @@ $gradient-red-d2: linear-gradient(65deg, #795548, #ff6a6a);
 }
 
 .v-application {
-  font-family: $font-family;
-  font-weight: 700;
-  
+  font-family: $font-family !important;
+  font-weight: 700 !important;
 
   // background: linear-gradient(45deg, rgba(231, 111, 115, 0.8), rgba(255, 210, 198, 0.6)), url(../images/baby_2.jpg) !important;
   // background-image: url(../images/baby_2.jpg);
@@ -386,6 +388,7 @@ $gradient-red-d2: linear-gradient(65deg, #795548, #ff6a6a);
     }
   }
 }
+
 .red_gradient {
   background: var(--gradient-red-d) !important;
 }
@@ -395,6 +398,19 @@ $gradient-red-d2: linear-gradient(65deg, #795548, #ff6a6a);
 
 
 body {
-  background-color: var(--body-color) !important;
+  font-family: $font-family !important;
   font-weight: 700 !important;
+}
+.v-application {
+  font-family: $font-family !important;
+  font-weight: 700 !important;
+}
+
+.v-btn {
+  padding-right: 20px!important;
+  padding-left: 20px!important;
+  &.primary {
+    // background-color: linear-gradient(90deg, #ff7370, #ffd4d3) !important;
+    background-color: var(--gc-primary) !important;
+  }
 }
