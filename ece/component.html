@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet"> -->
+  <link rel="stylesheet" href="https://i.icomoon.io/public/temp/ba2be0e0a0/UntitledProject/style.css">
+  <link href="https://fonts.googleapis.com/css?family=Material+Icons" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/@mdi/font@4.x/css/materialdesignicons.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.min.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="stylesheet" href="assets/css/bbc.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+</head>
+
+<body>
+  <div id="app">
+    <v-app class="component" v-background="'var(--gradient-red-d)'">
+      
+      <v-container
+        fluid
+      >
+        <v-card>
+          <v-card-text class="pt-0">
+            <v-row>
+              <v-col
+                cols="12"
+              >
+                <base-subheading>
+                  <h5>
+                    Pick Color
+                  </h5>
+                </base-subheading>
+                
+                <v-btn 
+                  depressed rounded class="ma-1 px-5"
+                  v-background="'var(--gc-default)'"
+                  >
+                  default
+                </v-btn>
+                <v-btn
+                  depressed rounded class="ma-1 px-5"
+                  color="primary"
+                  v-background="'var(--gc-primary)'"
+                  
+                >
+                  Primary
+                </v-btn>
+                <v-btn
+                  depressed rounded class="ma-1 px-5"
+                  color="secondary"
+                  v-background="'var(--gc-secondary)'"
+                >
+                  secondary
+                </v-btn>
+                <v-btn
+                  depressed rounded class="ma-1 px-5" 
+                  color="info"
+                  v-background="'var(--gc-info)'"
+                >
+                  info
+                </v-btn>
+                <v-btn
+                  depressed rounded class="ma-1 px-5"
+                  color="success"
+                  v-background="'var(--gc-success)'"
+                >
+                  success
+                </v-btn>
+                <v-btn
+                  depressed rounded class="ma-1 px-5"
+                  color="accent"
+                  v-background="'var(--gc-accent)'"
+                >
+                  accent
+                </v-btn>
+                <v-btn
+                  depressed rounded class="ma-1 px-5"
+                  color="warning"
+                  v-background="'var(--gc-warning)'"
+                >
+                  warning
+                </v-btn>
+                <v-btn
+                  depressed rounded class="ma-1 px-5"
+                  color="error"
+                  v-background="'var(--gc-error)'"
+                >
+                  Error
+                </v-btn>
+                <v-btn
+                  depressed rounded class="ma-1 px-5"
+                  disabled
+                >
+                  Disabled
+                </v-btn>
+              </v-col>
+
+
+
+
+
+
+              <v-col
+                cols="12"
+              >
+                <base-subheading>
+                  <h5>
+                    Pick Color
+                  </h5>
+                </base-subheading>
+
+                <div>
+                  <v-btn
+                    v-for="(color, i) in colors"
+                    :key="i"
+                    depressed
+                    :color="color === 'default' ? undefined : color"
+                    class="ma-1 px-5"
+                    rounded 
+                  >
+                    {{ color }}
+                  </v-btn>
+                </div>
+              </v-col>
+
+              <v-col
+                cols="12"
+              >
+                <base-subheading>
+                  <h5>
+                    Pick Color - Outline
+                  </h5>
+                </base-subheading>
+
+                <div>
+                  <v-btn
+                    v-for="(color, i) in colors"
+                    :key="i"
+                    :color="color === 'default' ? undefined : color"
+                    class="ma-1 px-5"
+                    rounded 
+                    outlined
+                  >
+                    {{ color }}
+                  </v-btn>
+                </div>
+              </v-col>
+
+
+
+              <v-col
+                class="pt-0"
+                cols="12"
+                md="12"
+                sm="6"
+              >
+                <base-subheading>
+                  <h5>
+                    Buttons with Label
+                  </h5>
+                </base-subheading>
+
+                <div>
+                  <v-btn
+                    v-for="(dir, i) in ['left', 'right']"
+                    :key="i"
+                    depressed
+                    class="ma-1"
+                  >
+                    <v-icon
+                      :left="dir === 'left'"
+                      :right="dir === 'right'"
+                      :class="dir === 'right' && 'order-last'"
+                      v-text="icons[dir]"
+                    />
+                    {{ dir }}
+                  </v-btn>
+
+                  <v-btn
+                    v-for="(color, i) in colors.slice(2)"
+                    :key="`btn-${i}`"
+                    depressed
+                    :color="color === 'default' ? undefined : color"
+                    class="ma-1"
+                  >
+                    <v-icon
+                      left
+                      v-text="icons[color]"
+                    />
+                    {{ color }} 
+                  </v-btn>
+                </div>
+              </v-col>
+
+              <v-col
+                cols="12"
+                md="12"
+                sm="6"
+              >
+                <base-subheading>
+                  <h5>
+                    Pick Size
+                  </h5>
+                </base-subheading>
+
+                <v-btn
+                  v-for="n in 3"
+                  :key="n"
+                  depressed
+                  :small="n === 1"
+                  :large="n === 3"
+                  class="ma-1 px-5"
+                  color="primary"
+                  rounded
+                >
+                  {{ n === 1 ? 'small' : n === 2 ? 'regular' : 'large' }}
+                </v-btn>
+              </v-col>
+
+              <v-col
+                cols="12"
+                md="12"
+                sm="6"
+              >
+                <base-subheading>
+                  <h5>
+                    Pick Style
+                  </h5>
+                </base-subheading>
+
+                <v-btn
+                  class="ma-1 px-5"
+                  color="secondary"
+                  rounded
+                  depressed
+                >
+                  Default
+                </v-btn>
+
+                <v-btn
+                  class="ma-1 px-5"
+                  color="secondary"
+                  depressed
+                  rounded
+                >
+                  <v-icon left>
+                    mdi-heart
+                  </v-icon>
+                  With Icon
+                </v-btn>
+
+                <v-btn
+                  class="ma-1"
+                  color="secondary"
+                  elevation="0"
+                  fab
+                  small
+                >
+                  <v-icon>
+                    mdi-heart
+                  </v-icon>
+                </v-btn>
+
+                <v-btn
+                  class="ma-1"
+                  color="secondary"
+                  text
+                  :ripple="{ class: 'red--text' }"
+                >
+                  Simple
+                </v-btn>
+              </v-col>
+
+              <v-col
+                cols="12"
+                md="12"
+                sm="6"
+              >
+                <base-subheading>
+                  <h5>
+                    Pagination
+                  </h5>
+                </base-subheading>
+
+                <v-pagination
+                  :length="5"
+                  :value="2"
+                  circle
+                  class="d-flex justify-end float-right"
+                  depressed
+                />
+
+                <!-- <v-pagination
+                  :length="3"
+                  :value="1"
+                  circle
+                  class="justify-start"
+                  next-icon="mdi-menu-right"
+                  prev-icon="mdi-menu-left"
+                /> -->
+              </v-col>
+
+              <v-col
+                cols="12"
+                md="12"
+                sm="6"
+                
+                
+              >
+                <base-subheading>
+                  <h5>
+                    Button Group
+                  </h5>
+                </base-subheading>
+
+                <v-sheet class="d-flex justify-start">
+                  <v-btn-toggle color="secondary" class="ma-1" rounded>
+                    <v-btn
+                      v-for="dir in ['left', 'middle', 'right']"
+                      :key="dir" 
+                      
+                    >
+                      {{ dir }}
+                    </v-btn>
+                  </v-btn-toggle>
+               
+                  <v-btn-toggle
+                    color="secondary"
+                    rounded
+                    class="ma-1"
+                  >
+                    <v-btn
+                      v-for="n in 4"
+                      :key="n"
+                    >
+                      {{ n }}
+                    </v-btn>
+                  </v-btn-toggle>
+
+                  <v-btn-toggle
+                    color="teal"
+                    rounded
+                    class="ma-1"
+                    :ripple="{ class: 'red--text' }"
+                  >
+                    <v-btn
+                      v-for="n in 3"
+                      :key="n"
+                      class="px-10"
+                    >
+                      {{ n + 4 }}
+                    </v-btn>
+                  </v-btn-toggle>
+                </v-sheet>
+              </v-col>
+
+            </v-row>
+          </v-card-text>
+        </v-card>
+      </v-container>
+
+
+      <!-- typography -->
+      <v-container
+        fluid
+      >
+        <v-card class="pt-0">
+          <v-row
+            align="center"
+            justify="center"
+          >
+            <v-col cols="12">
+              <base-material-card
+                color="green"
+              >
+                <template v-slot:heading>
+                  <div class="display-2 font-weight-light">
+                    Material Dashboard Heading
+                  </div>
+
+                  <div class="subtitle-1 font-weight-light">
+                    Created using Roboto Font Family
+                  </div>
+                </template>
+
+                <v-card-text>
+                  <v-container
+                    class="pa-0"
+                    fluid
+                  >
+                    <v-row
+                      v-for="(t, i) in typography"
+                      :key="i"
+                      align="center"
+                    >
+                      <v-col
+                        cols="1"
+                        md="3"
+                      >
+                        <span
+                          class="tim-note"
+                          v-text="t[0]"
+                        />
+                      </v-col>
+
+                      <v-col cols="8">
+                        <component
+                          :is="t[2]"
+                          :class="i"
+                        >
+                          <template v-if="i !== 'quote'">
+                            {{ t[1] }}
+                          </template>
+
+                          <p v-if="i === 'quote'">
+                            {{ t[1] }}
+                          </p>
+                          <small v-if="i === 'quote'">Kanye West, Musician</small>
+
+                          <template v-if="i === 'small'">
+                            <br>
+                            <small>Use 'small' tag for the headers</small>
+                          </template>
+                        </component>
+                      </v-col>
+                    </v-row>
+                  </v-container>
+                </v-card-text>
+              </base-material-card>
+            </v-col>
+          </v-row>
+        </v-card>
+      </v-container>
+
+
+      <!-- Notifications -->
+
+
+
+
+
+
+      
+      <v-container v-for="align in alignments" :key="align" class="grey lighten-5" >
+        <div>
+          <h2 class="mb-5">Basic Elements</h2>
+          <h3> Buttons <br><small>Style</small></h3>
+        </div>
+
+        <v-row class="" justify="end" no-gutters>
+          <v-col md="10">
+            <v-btn color="primary" dark v-background="'var(--gradient-red-d)'">
+              Default Button
+            </v-btn>
+            <v-btn rounded color="primary" dark v-background="'var(--gradient-red-d)'">
+              Rounded Button
+            </v-btn>
+            <v-btn rounded color="primary" dark v-background="'var(--gradient-red-d)'">
+                <v-icon left>
+                  mdi-pencil
+                </v-icon> With Icon
+            </v-btn>
+
+
+            <v-card class="pa-2" outlined tile>
+              1 of 3
+            </v-card>
+          </v-col>
+        </v-row>
+      </v-container>
+
+    </v-app>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.js"></script>
+  <script>
+
+    const leader = '家長完成一個寶寶資料編寫後，系統隨即詢問是否進行測評，並將依照寶寶所設定的年齡推送評測題目，好學可藉此獲得兒童相關資訊以利進行課程研發，未來也可作為商城推薦教材的評斷'
+    const leaderShort = leader.slice(0, 105) + '...'
+    const material = '好學可藉此獲得兒童相關資訊以利進行課程研發，未來也可作為商城推薦教材的評斷'
+    const small = '好學可藉此獲得兒童相關資訊以利進行課程研發'
+      
+    Vue.directive('background', {
+      bind: function (el, binding, vnode) {
+        el.style.backgroundImage = binding.value
+      }
+    });
+    new Vue({
+      el: '#app',
+      vuetify: new Vuetify({
+        theme: {
+          themes: {
+            light: {
+              default: '#FFA19F',
+              primary: '#FFA19F',
+              secondary: '#9e8888',
+              info: '#00cae3',
+              success: '#3fbe8f',
+              accent: '#8c9eff',
+              warning: '#ff9563',
+              error: '#ff5252',
+            },
+          },
+        },
+      }),
+      data: {
+        alignments: [
+          'start',
+          'center',
+          'end',
+        ],
+        colors: [
+          'default',
+          'primary',
+          'secondary',
+          'info',
+          'success',
+          'accent',
+          'warning',
+          'error',
+        ],
+        icons: {
+          left: 'mdi-chevron-left',
+          right: 'mdi-chevron-right',
+          secondary: 'mdi-account',
+          info: 'mdi-exclamation',
+          success: 'mdi-check',
+          accent: 'mdi-alarm',
+          warning: 'mdi-alert',
+          error: 'mdi-close',
+        },
+        social: [
+          {
+            color: '#55ACEE',
+            icon: 'mdi-twitter',
+            text: 'Connect with Twitter',
+          },
+          {
+            color: '#3B5998',
+            icon: 'mdi-facebook',
+            text: 'Share - 2.2K',
+          },
+          {
+            color: '#DD4b39',
+            icon: 'mdi-google-plus',
+            text: 'Share on Google+',
+          },
+          {
+            color: '#0976B4',
+            icon: 'mdi-linkedin',
+            text: 'Connect with LinkedIn',
+          },
+          {
+            color: '#CC2127',
+            icon: 'mdi-pinterest',
+            text: 'Pint It - 212',
+          },
+          {
+            color: '#E52D27',
+            icon: 'mdi-youtube',
+            text: 'View on Youtube',
+          },
+          {
+            color: '#35465C',
+            icon: 'mdi-tumblr',
+            text: 'Repost',
+          },
+          {
+            color: '#333333',
+            icon: 'mdi-github-circle',
+            text: 'Connect with Github',
+          },
+          {
+            color: '#1769FF',
+            icon: 'mdi-behance',
+            text: 'Follow Us',
+          },
+          {
+            color: '#EA4C89',
+            icon: 'mdi-dribbble',
+            text: 'Follow us on Dribbble',
+          },
+          {
+            color: '#FF4500',
+            icon: 'mdi-reddit',
+            text: 'Repost - 232',
+          },
+        ],
+        
+        typography: {
+          'display-4': ['Headline 1', material, 'h1'],
+          'display-3': ['Headline 2', material, 'h2'],
+          'display-2': ['Headline 3', material, 'h3'],
+          'display-1': ['Headline 4', material, 'h4'],
+          headline: ['Headline 5', material, 'h5'],
+          'title text-uppercase': ['Title', material, 'h6'],
+          '': ['Paragraph', leader, 'p'],
+          blockquote: ['Quote', leader, 'blockquote'],
+          'text--disabled': ['Muted Text', leaderShort, 'p'],
+          'primary--text': ['Primary Text', leaderShort, 'p'],
+          'info--text': ['Info Text', leaderShort, 'p'],
+          'success--text': ['Success Text', leaderShort, 'p'],
+          'warning--text': ['Warning Text', leaderShort, 'p'],
+          'error--text': ['Error Text', leaderShort, 'p'],
+          small: ['Small Tag', small, 'h2'],
+        },
+      },
+    })
+  </script>
+  <style>
+
+  </style>
+
+
+
+
+
+</body>
+
+</html>

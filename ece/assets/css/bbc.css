@@ -1,0 +1,273 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;700;900&display=swap");
+.hhide {
+  display: none;
+}
+
+.sidebar .navbar-brand .logo {
+  width: 36px;
+}
+
+.sidebar .navbar-brand span {
+  font-size: 17px;
+  margin-left: 8px;
+  color: var(--brandtxt);
+}
+
+.sidebar .metismenu li.active ul li.active a {
+  color: var(--blush-high) !important;
+}
+
+.sidebar.light_active .navbar-brand span {
+  color: var(--font-777);
+}
+
+.sidebar.light_active .metismenu li.header {
+  color: var(--font-333);
+}
+
+.sidebar.light_active .metismenu li.active ul li.active a {
+  color: #F56F4A !important;
+}
+
+.auth-main {
+  background: var(--primary-gradient-d);
+}
+
+.auth-main .auth_div {
+  border-radius: 12px;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  -webkit-transform: translate3d(0px, 0px, 0px);
+          transform: translate3d(0px, 0px, 0px);
+  background: rgba(245, 245, 245, 0);
+}
+
+.auth-main .auth_div .card .body .c_form_group {
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  border: 1px solid var(--font-ccc);
+}
+
+.auth-main .auth_div .auth_brand {
+  margin-bottom: 30px;
+  margin-top: 46px;
+}
+
+.auth-main .auth_div .auth_brand .navbar-brand {
+  color: var(--font-eee);
+  font-size: 22px;
+  line-height: 50px;
+  font-weight: 700;
+}
+
+.auth-main .auth_div .auth_brand .navbar-brand:hover {
+  color: var(--white-color) !important;
+}
+
+.auth-main .auth_div .helper-text {
+  color: var(--white-color);
+}
+
+.auth-main .auth_div:hover {
+  -webkit-box-shadow: 0 20px 70px 0 var(--white-color);
+          box-shadow: 0 20px 70px 0 var(--white-color);
+  -webkit-transform: translateY(-5px) !important;
+          transform: translateY(-5px) !important;
+  background: rgba(255, 255, 255, 0);
+}
+
+.auth-main .auth_div:hover .auth_brand .navbar-brand {
+  color: var(--white-color);
+}
+
+.auth-main .auth_div:hover .card .body .c_form_group {
+  border: 1px solid var(--white-color);
+}
+
+.auth-main .auth_div:hover .card .body .c_form_group label {
+  color: var(--white-color);
+}
+
+.auth-main .auth_div:hover .card .body .form-control:focus {
+  color: var(--card-color);
+}
+
+.auth-main .auth_div .fancy-checkbox input[type="checkbox"]:checked + span:before {
+  color: var(--white-color);
+  border-color: var(--white-color);
+  line-height: 19px;
+  font-size: 15px;
+}
+
+.auth-main .auth_div .fancy-checkbox input[type="checkbox"]:checked + span {
+  color: var(--white-color);
+}
+
+.auth-main .auth_div .btn:hover {
+  -webkit-box-shadow: 0 5px 12px 0 var(--white-color);
+          box-shadow: 0 5px 12px 0 var(--white-color);
+}
+
+/* BG - login */
+#bg {
+  -webkit-transition: opacity 2s ease-in-out;
+  transition: opacity 2s ease-in-out;
+  height: 100%;
+  left: 0;
+  opacity: 0.25;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+#bg div {
+  -webkit-transition: opacity 3s ease, visibility 3s;
+  transition: opacity 3s ease, visibility 3s;
+  background-size: cover;
+  height: 100%;
+  left: 0;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  visibility: hidden;
+  width: 120%;
+}
+
+#bg div.visible {
+  -webkit-animation: bg 45s linear infinite;
+  animation: bg 45s linear infinite;
+  opacity: 1;
+  visibility: visible;
+  z-index: 1;
+}
+
+#bg div.visible.top {
+  z-index: 2;
+}
+
+@media screen and (max-width: 1280px) {
+  #bg div.visible {
+    -webkit-animation: bg 29.25s linear infinite;
+    animation: bg 29.25s linear infinite;
+  }
+}
+
+@media screen and (max-width: 736px) {
+  #bg div.visible {
+    -webkit-animation: bg 18s linear infinite;
+    animation: bg 18s linear infinite;
+  }
+}
+
+#bg div:only-child {
+  -webkit-animation-direction: alternate !important;
+  animation-direction: alternate !important;
+}
+
+body.is-loading #bg {
+  opacity: 0;
+}
+
+@-webkit-keyframes bg {
+  0% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(-25%);
+    transform: translateX(-25%);
+  }
+}
+
+@keyframes bg {
+  0% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(-25%);
+    transform: translateX(-25%);
+  }
+}
+
+#inspire {
+  height: 100vh;
+}
+
+.bg_v {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: .3;
+}
+
+.v-application {
+  font-family: 微軟正黑體, 微软正黑体, Montserrat, "Open Sans", sans-serif;
+  font-weight: 700;
+}
+
+.v-application .bg {
+  background-image: url(../images/baby_2.jpg);
+  background-position: center center;
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: .3;
+}
+
+.v-application .login_title {
+  color: var(--white-color);
+  font-weight: 700;
+  font-size: 1.8rem;
+  letter-spacing: -1px;
+}
+
+.v-application .login_t {
+  color: var(--brandtxt-dark2);
+}
+
+.v-application .elevation-0 {
+  -webkit-box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.2), 0 0 0 0 rgba(255, 255, 255, 0.14), 0 0 0 0 rgba(255, 255, 255, 0.12) !important;
+          box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.2), 0 0 0 0 rgba(255, 255, 255, 0.14), 0 0 0 0 rgba(255, 255, 255, 0.12) !important;
+}
+
+.v-application .elevation-24 {
+  -webkit-box-shadow: 0 11px 15px -7px rgba(255, 255, 255, 0.8), 0 24px 38px 3px rgba(255, 255, 255, 0.5), 0 12px 70px 8px rgba(255, 255, 255, 0.3) !important;
+          box-shadow: 0 11px 15px -7px rgba(255, 255, 255, 0.8), 0 24px 38px 3px rgba(255, 255, 255, 0.5), 0 12px 70px 8px rgba(255, 255, 255, 0.3) !important;
+}
+
+.theme--light.v-navigation-drawer {
+  background-color: var(linear-gradient(45deg, #e76f73, #ffd3c8)) !important;
+}
+
+.text_co {
+  color: var(--brandtxt-dark2) !important;
+}
+
+.text_fff {
+  color: var(--font-fff) !important;
+}
+
+.page_login .v-carousel {
+  height: 100vh !important;
+}
+
+.page_login .v-carousel .theme--dark.v-image {
+  height: 100vh !important;
+}
+
+.red_gradient {
+  background: var(--gradient-red-d) !important;
+}
+
+body {
+  background-color: var(--body-color) !important;
+  font-weight: 700 !important;
+}
