@@ -274,6 +274,7 @@ body {
 .v-application {
   font-family: PingFangSC-Medium, PingFang SC, pingfang, "Montserrat", sans-serif !important;
   font-weight: 700 !important;
+  color: var(--brandtxt-dark2) !important;
 }
 
 .v-btn {
