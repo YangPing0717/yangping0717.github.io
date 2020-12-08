@@ -9,14 +9,20 @@
   <link href="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.min.css" rel="stylesheet">
 
   <link rel="stylesheet" href="assets/css/main.css">
-  <link rel="stylesheet" href="assets/css/bbc.css">
+  <link rel="stylesheet" href="assets/css/ece.css">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+
+  <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+  
+  <script src="assets/dist/lib/modernizr.touch.js"></script>
+  <link href="assets/css/mfb.css" rel="stylesheet">
 </head>
 
 <body>
   <div id="app">
     <v-app class="component" v-background="'var(--gradient-red-d)'">
       
+      <!-- Buttons -->
       <v-container
         fluid
       >
@@ -33,69 +39,77 @@
                 </base-subheading>
                 
                 <v-btn 
-                  depressed rounded class="ma-1 "
+                  depressed rounded 
+                  class="ma-1 "
                   v-background="'var(--gc-default)'"
                   >
                   default
                 </v-btn>
+
                 <v-btn
-                  depressed rounded class="ma-1 px-5"
-                  color="primary"
-                  v-background="'var(--gc-primary)'"
+                  depressed rounded 
+                  class="ma-1 primary_r"
                 >
                   Primary
                 </v-btn>
+
                 <v-btn
-                  depressed rounded class="ma-1 px-5"
+                  depressed rounded 
+                  class="ma-1 secondary_r"
+                >
+                  secondary_XX
+                </v-btn>
+
+                <v-btn
+                  depressed rounded 
+                  class="ma-1 "
                   color="secondary"
                   v-background="'var(--gc-secondary)'"
                 >
                   secondary
                 </v-btn>
                 <v-btn
-                  depressed rounded class="ma-1 px-5" 
-                  color="info"
+                  depressed rounded 
+                  class="ma-1 info_r" 
                   v-background="'var(--gc-info)'"
                 >
                   info
                 </v-btn>
                 <v-btn
-                  depressed rounded class="ma-1 px-5"
+                  depressed rounded class="ma-1 "
                   color="success"
                   v-background="'var(--gc-success)'"
                 >
                   success
                 </v-btn>
                 <v-btn
-                  depressed rounded class="ma-1 px-5"
+                  depressed rounded class="ma-1 "
                   color="accent"
                   v-background="'var(--gc-accent)'"
                 >
                   accent
                 </v-btn>
                 <v-btn
-                  depressed rounded class="ma-1 px-5"
+                  depressed rounded class="ma-1 "
                   color="warning"
                   v-background="'var(--gc-warning)'"
                 >
                   warning
                 </v-btn>
                 <v-btn
-                  depressed rounded class="ma-1 px-5"
+                  depressed rounded class="ma-1 "
                   color="error"
                   v-background="'var(--gc-error)'"
                 >
                   Error
                 </v-btn>
                 <v-btn
-                  depressed rounded class="ma-1 px-5"
+                  depressed rounded class="ma-1 "
                   disabled
                 >
                   Disabled
                 </v-btn>
               </v-col>
-
-
 
 
 
@@ -266,6 +280,7 @@
                   color="secondary"
                   text
                   :ripple="{ class: 'red--text' }"
+                  rounded
                 >
                   Simple
                 </v-btn>
@@ -288,6 +303,7 @@
                   circle
                   class="d-flex justify-end float-right"
                   depressed
+                  color="secondary"
                 />
 
                 <!-- <v-pagination
@@ -359,7 +375,6 @@
         </v-card>
       </v-container>
 
-
       <!-- typography -->
       <v-container
         fluid
@@ -383,57 +398,58 @@
                   </div>
                 </template>
 
-                <v-card-text>
-                  <v-container
-                    class="pa-0"
-                    fluid
-                  >
-                    <v-row
-                      v-for="(t, i) in typography"
-                      :key="i"
-                      align="center"
-                    >
-                      <v-col
-                        cols="1"
-                        md="3"
-                      >
-                        <span
-                          class="tim-note"
-                          v-text="t[0]"
-                        />
-                      </v-col>
-
-                      <v-col cols="8">
-                        <component
-                          :is="t[2]"
-                          :class="i"
-                        >
-                          <template v-if="i !== 'quote'">
-                            {{ t[1] }}
-                          </template>
-
-                          <p v-if="i === 'quote'">
-                            {{ t[1] }}
-                          </p>
-                          <small v-if="i === 'quote'">Kanye West, Musician</small>
-
-                          <template v-if="i === 'small'">
-                            <br>
-                            <small>Use 'small' tag for the headers</small>
-                          </template>
-                        </component>
-                      </v-col>
-                    </v-row>
-                  </v-container>
-                </v-card-text>
               </base-material-card>
+
+              <v-card-text>
+                <v-container
+                  class="pa-0"
+                  fluid
+                >
+                  <v-row
+                    v-for="(t, i) in typography"
+                    :key="i"
+                    align="center"
+                  >
+                    <v-col
+                      cols="2"
+                    >
+                      <span
+                        class=""
+                        v-text="t[0]"
+                      />
+                    </v-col>
+
+                    <v-col cols="8">
+                      <component
+                        :is="t[2]"
+                        :class="i"
+                      >
+                        <template v-if="i !== 'quote'">
+                          {{ t[1] }}
+                        </template>
+
+                        <p v-if="i === 'quote'">
+                          {{ t[1] }}
+                        </p>
+                        <small v-if="i === 'quote'">Kanye West, Musician</small>
+
+                        <template v-if="i === 'small'">
+                          <br>
+                          <small>Use 'small' tag for the headers</small>
+                        </template>
+                      </component>
+                    </v-col>
+                  </v-row>
+                </v-container>
+              </v-card-text>
+              
             </v-col>
           </v-row>
         </v-card>
       </v-container>
 
 
-      <!-- UserProfile -->
+      <!-- input -->
       <v-container
         fluid
       >
@@ -453,134 +469,157 @@
                     Complete your profile
                   </div>
                 </template>
-
-                <v-form>
-                  <v-container class="py-0">
-                    <v-row>
-                      <v-col
-                        cols="12"
-                        md="4"
-                      >
-                        <v-text-field
-                          label="Company (disabled)"
-                          disabled
-                        />
-                      </v-col>
-
-                      <v-col
-                        cols="12"
-                        md="4"
-                      >
-                        <v-text-field
-                          class="purple-input"
-                          label="User Name"
-                        />
-                      </v-col>
-
-                      <v-col
-                        cols="12"
-                        md="4"
-                      >
-                        <v-text-field
-                          label="Email Address"
-                          class="purple-input"
-                        />
-                      </v-col>
-
-                      <v-col
-                        cols="12"
-                        md="6"
-                      >
-                        <v-text-field
-                          label="First Name"
-                          class="purple-input"
-                        />
-                      </v-col>
-
-                      <v-col
-                        cols="12"
-                        md="6"
-                      >
-                        <v-text-field
-                          label="Last Name"
-                          class="purple-input"
-                        />
-                      </v-col>
-
-                      <v-col cols="12">
-                        <v-text-field
-                          label="Adress"
-                          class="purple-input"
-                        />
-                      </v-col>
-
-                      <v-col
-                        cols="12"
-                        md="4"
-                      >
-                        <v-text-field
-                          label="City"
-                          class="purple-input"
-                        />
-                      </v-col>
-
-                      <v-col
-                        cols="12"
-                        md="4"
-                      >
-                        <v-text-field
-                          label="Country"
-                          class="purple-input"
-                        />
-                      </v-col>
-
-                      <v-col
-                        cols="12"
-                        md="4"
-                      >
-                        <v-text-field
-                          class="purple-input"
-                          label="Postal Code"
-                          type="number"
-                        />
-                      </v-col>
-
-                      <v-col cols="12">
-                        <v-textarea
-                          class="purple-input"
-                          label="About Me"
-                          value="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-                        />
-                      </v-col>
-
-                      <v-col
-                        cols="12"
-                        class="text-right"
-                      >
-                      <v-btn
-                          depressed
-                          class="mr-1 font-weight-black"
-                          rounded
-                          color="secondary"
-                          outlined
-                        
-                        >
-                          取 消
-                        </v-btn>
-                        <v-btn
-                          depressed
-                          color="success"
-                          class="mr-0 font-weight-black"
-                          rounded
-                          v-background="'var(--gc-primary)'"
-                        >
-                          儲存個人基本資料
-                        </v-btn>
-                      </v-col>
-                    </v-row>
-                  </v-container>
-                </v-form>
               </base-material-card>
+
+              <v-form>
+                <v-container class="py-0">
+                  <v-row>
+                    <v-col
+                      cols="12"
+                      md="4"
+                    >
+                      <v-text-field
+                        label="Company (disabled)"
+                        disabled
+                        outlined
+                        rounded
+                        dense
+                      />
+
+                    </v-col>
+
+                    <v-col
+                      cols="12"
+                      md="4"
+                    >
+                      <v-text-field
+                        class="purple-input"
+                        label="User Name"
+                        outlined
+                        rounded
+                      >
+                        <v-icon
+                          slot="prepend"
+                          color="error"
+                        >
+                          mdi-checkbox-marked-circle-outline
+                        </v-icon>
+                        <v-icon
+                          slot="append"
+                          color="success"
+                          class="icon icon-pacifier"
+                        >
+                          mdi-minus
+                        </v-icon>
+                        
+                      </v-text-field>
+                    </v-col>
+
+                    <v-col
+                      cols="12"
+                      md="4"
+                    >
+                      <v-text-field
+                        label="Email Address"
+                        class="purple-input"
+                      />
+                    </v-col>
+
+                    <v-col
+                      cols="12"
+                      md="6"
+                    >
+                      <v-text-field
+                        label="First Name"
+                        class="purple-input"
+                      />
+                    </v-col>
+
+                    <v-col
+                      cols="12"
+                      md="6"
+                    >
+                      <v-text-field
+                        label="Last Name"
+                        class="purple-input"
+                      />
+                    </v-col>
+
+                    <v-col cols="12">
+                      <v-text-field
+                        label="Adress"
+                        class="purple-input"
+                      />
+                    </v-col>
+
+                    <v-col
+                      cols="12"
+                      md="4"
+                    >
+                      <v-text-field
+                        label="City"
+                        class="purple-input"
+                      />
+                    </v-col>
+
+                    <v-col
+                      cols="12"
+                      md="4"
+                    >
+                      <v-text-field
+                        label="Country"
+                        class="purple-input"
+                      />
+                    </v-col>
+
+                    <v-col
+                      cols="12"
+                      md="4"
+                    >
+                      <v-text-field
+                        class="purple-input"
+                        label="Postal Code"
+                        type="number"
+                      />
+                    </v-col>
+
+                    <v-col cols="12" class="mb-0">
+                      <v-textarea
+                        class="purple-input"
+                        label="About Me"
+                        value="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+                        outlined
+                        rounded
+                      />
+                    </v-col>
+
+                    <v-col
+                      cols="12"
+                      class="text-right"
+                    >
+                    <v-btn
+                        depressed
+                        class="mr-1 font-weight-black"
+                        rounded
+                        color="secondary"
+                        outlined
+                      >
+                        取 消
+                      </v-btn>
+                      <v-btn
+                        depressed
+                        color="primary"
+                        class="mr-0 font-weight-black"
+                        rounded
+                        v-background="'var(--gc-primary)'"
+                      >
+                        儲存個人基本資料
+                      </v-btn>
+                    </v-col>
+                  </v-row>
+                </v-container>
+              </v-form>
+              
             </v-col>
 
             <v-col
@@ -614,16 +653,73 @@
                 </v-card-text>
               </base-material-card>
             </v-col>
+
+
+            <v-col>
+              <v-checkbox
+                class="md-checkbox"
+                v-model="checkbox"
+                :label="`Checkbox 1: ${checkbox.toString()}`"
+              ></v-checkbox>
+
+              <div class="text-center">
+                <v-btn
+                  dark
+                  color="secondary"
+                  rounded
+                  @click="snackbar = true"
+                >
+                  Open Snackbar
+                </v-btn>
+            
+                <v-snackbar
+                  v-model="snackbar"
+                  :vertical="vertical"     
+                  color="deep-purple accent-4"
+                  rounded="pill"
+                  :timeout="timeout"
+                >
+                  {{ text }}
+                  <template v-slot:action="{ attrs }">
+                    <v-btn
+                      color="primary"
+                      text
+                      rounded
+                      v-bind="attrs"
+                      @click="snackbar = false"
+                    >
+                      Close
+                    </v-btn>
+                  </template>
+                </v-snackbar>
+              </div>
+            </v-col>
+            
           </v-row>
         </v-card>
       </v-container>
 
 
 
+      <v-container
+        class="px-0"
+        fluid
+      >
+        <v-checkbox
+          class="md-checkbox"
+          v-model="checkbox"
+          :label="`Checkbox 1: ${checkbox.toString()}`"
+        ></v-checkbox>
+
+        
+
+      </v-container>
+
+      
 
 
       
-      <v-container v-for="align in alignments" :key="align" class="grey lighten-5" >
+      <!-- <v-container v-for="align in alignments" :key="align" class="grey lighten-5" >
         <div>
           <h2 class="mb-5">Basic Elements</h2>
           <h3> Buttons <br><small>Style</small></h3>
@@ -649,7 +745,111 @@
             </v-card>
           </v-col>
         </v-row>
-      </v-container>
+      </v-container> -->
+
+
+      <!-- <v-btn depressed fab large fixed right bottom 
+        class="ma-5 primary_r" >
+        <v-icon >add</v-icon>
+      </v-btn> -->
+
+      <v-card >
+        <v-speed-dial
+          v-model="fab"
+          :top="top"
+          :bottom="bottom"
+          :right="right"
+          :left="left"
+          :direction="direction"
+          :open-on-hover="hover"
+          :transition="transition"
+        >
+          <template v-slot:activator>
+            <v-btn
+              depressed fab large fixed right bottom 
+              class="ma-16 primary_r"
+            >
+              <v-icon v-if="fab" >mdi-close</v-icon>
+              <v-icon v-else >mdi-plus</v-icon>
+            </v-btn>
+          </template>
+          <v-btn
+            fab
+            small
+            depressed
+            class="primary_r"
+          >
+            <v-icon>mdi-pencil</v-icon>
+          </v-btn>
+          <v-btn
+            fab
+            small
+            depressed
+            class="primary_r"
+          >
+            <v-icon>mdi-plus</v-icon>
+          </v-btn>
+          <v-btn
+            fab
+            small
+            depressed
+            class="primary_r"
+          >
+            <v-icon>mdi-delete</v-icon>
+          </v-btn>
+        </v-speed-dial>
+
+
+
+
+        <ul id="menu" class="mfb-component--br mfb-fountain" data-mfb-toggle="hover">
+          <li class="mfb-component__wrap">
+            <a href="#" class="mfb-component__button--main ">
+              <i class="mfb-component__main-icon--resting ion-plus-round"></i>
+              <i class="mfb-component__main-icon--active ion-close-round"></i>
+            </a>
+            <ul class="mfb-component__list">
+              <li>
+                <a href="#" data-mfb-label="View on Github"
+                  class="mfb-component__button--child">
+                  <i class="mfb-component__child-icon ion-social-github"></i>
+                </a>
+              </li>
+              <li>
+                <a href="#" data-mfb-label="Follow me on Github"
+                  class="mfb-component__button--child">
+                  <i class="mfb-component__child-icon ion-social-octocat"></i>
+                </a>
+              </li>
+      
+              <li>
+                <a href="#"
+                  data-mfb-label="Share on Twitter" class="mfb-component__button--child">
+                  <i class="mfb-component__child-icon ion-social-twitter"></i>
+                </a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+
+
+
+
+      </v-card>
+
+      <template>
+        <v-icon>{{ svgPath }}</v-icon>
+        
+        <icon-one></icon-one>
+
+        <img
+          class="LogoAnimation"
+          src="/assets/images/icon_a.svg"
+        >
+
+      </template>
+      
+      
 
     </v-app>
   </div>
@@ -657,12 +857,15 @@
   <script src="https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.js"></script>
   <script>
-
     const leader = '家長完成一個寶寶資料編寫後，系統隨即詢問是否進行測評，並將依照寶寶所設定的年齡推送評測題目，好學可藉此獲得兒童相關資訊以利進行課程研發，未來也可作為商城推薦教材的評斷'
     const leaderShort = leader.slice(0, 105) + '...'
     const material = '好學可藉此獲得兒童相關資訊以利進行課程研發，未來也可作為商城推薦教材的評斷'
     const small = '好學可藉此獲得兒童相關資訊以利進行課程研發'
-      
+
+
+    // import iconOne from '/assets/images/icon_a.svg'
+
+
     Vue.directive('background', {
       bind: function (el, binding, vnode) {
         el.style.backgroundImage = binding.value
@@ -674,7 +877,7 @@
         theme: {
           themes: {
             light: {
-              default: '#FFA19F',
+              default: '#7e6d61',
               primary: '#FFA19F',
               secondary: '#9e8888',
               info: '#00cae3',
@@ -686,7 +889,12 @@
           },
         },
       }),
+      
       data: {
+        svgPath: 'mdi-close',
+        // svgPath: '/assets/images/icon_a.svg',
+        // iconOne,
+
         alignments: [
           'start',
           'center',
@@ -711,7 +919,11 @@
           accent: 'mdi-alarm',
           warning: 'mdi-alert',
           error: 'mdi-close',
+          
         },
+        
+        
+
         social: [
           {
             color: '#55ACEE',
@@ -787,11 +999,39 @@
           'error--text': ['Error Text', leaderShort, 'p'],
           small: ['Small Tag', small, 'h2'],
         },
+
+        checkbox: false,
+
+        snackbar: false,
+        text: 'Lorem ipsum dolor sit amet',
+        vertical: true,
       },
     })
-  </script>
-  <style>
 
+
+  </script>
+
+
+
+  
+
+  <link rel="stylesheet" href="assets/js/script_2.js">
+
+  <script src="assets/dist/mfb.js"></script>
+
+  <style>
+    .LogoAnimation {
+      width: 100px;
+      height: 100px;
+      transform: rotateY(560deg);
+      animation: turn 3.5s ease-out forwards 1s;
+    }
+    
+    @keyframes turn {
+      100% {
+        transform: rotateY(0deg);
+      }
+    }
   </style>
 
 

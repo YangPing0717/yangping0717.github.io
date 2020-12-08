@@ -54,6 +54,12 @@
 	--gradient-red-d: linear-gradient(45deg, #e2353b, #ffd3c8);
 	--gradient-red-d2: linear-gradient(65deg, #795548, #ff6a6a);
 
+	--pink: #febbbb;
+	--txt-dark: #532E07;
+	--txt-dark1: rgba(83, 46, 7, 0.75);
+
+	--gradient-red-d3: linear-gradient(135deg, #febbbb 0%, #fe9090 45%, #ff5c5c 100%);
+
 	--primary-gradient: linear-gradient(45deg, #e4989a, #ffb4a1);
 	--primary-gradient-d: linear-gradient(45deg, #e76f73, #ffd3c8); 
 
@@ -62,7 +68,7 @@
 	--gradient-4: linear-gradient(155deg, #ecc7ff 0%, #FFAFBD 35%, #FFFFBF 100%);
 	
 
-
+	
 	
 	
 	--gc-default: linear-gradient(90deg, #e0e0e0, #fafafa);
@@ -74,6 +80,9 @@
 	--gc-warning: linear-gradient(90deg, #ff7a3c, #ffd3be);
 	--gc-error: linear-gradient(90deg, #fa3232, #ffb4b3);
 	
+	--gc-active: linear-gradient(90deg, #ff8288, #ffc1a8);
+	
+
 }
 
 

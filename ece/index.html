@@ -2,6 +2,7 @@
 <html>
 
 <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
   <!-- Favicons -->
   <link rel="icon" href="assets/favicon/favicon.ico" type="image/x-icon">
   <link rel="apple-touch-icon" sizes="180x180" href="assets/images/icon_BB.jpg">
@@ -24,33 +25,34 @@
   <link href="https://fonts.googleapis.com/css?family=Material+Icons" rel="stylesheet">
 
   <link rel="stylesheet" href="assets/css/main.css">
-  <link rel="stylesheet" href="assets/css/bbc.css">
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="assets/css/ece.css">
+  
 </head>
 
 <body>
   <div id="app">
-    <v-app class="page_login" v-background="'var(--gradient-red-d)'">
+    <v-app class="page_login" v-background="'var(--gradient-red-d3)'">
         <v-carousel style="height:100%; opacity: .3; position: absolute; top: 0; left: 0;" :show-arrows="false" cycle hide-delimiters>
             <v-carousel-item v-for="(item,i) in carousel" v-bind:src="item.src" :key="i" style="height:100%;"></v-carousel-item>
         </v-carousel>
         <!-- <div class="bg"></div> -->
-        <v-navigation-drawer v-model="drawer" app v-background="'var(--gradient-4)'">
-            <v-list dense>
-                <v-row no-gutters class="mt-8">
-                    <v-col cols="auto">
-                        <v-avatar color="primary" size="58" class="ml-7 mb-5 "><img src="assets/images/user.png"
-                                alt="user">
+        <v-navigation-drawer v-model="drawer" app v-background="'var(--gradient-4)'"
+        src="assets/images/close-up-of-happy-little-baby-boy-with-father-PCB8CX6.png"> 
+            <v-list dense rounded>
+                <v-row class="mt-8">
+                    <v-col cols="3">
+                        <v-avatar size="58" class="ml-3 mb-2"><img src="assets/images/user.png"
+                            alt="user">
                         </v-avatar>
                     </v-col>
-                    <v-col cols="">
-                        <v-col cols="auto" class="text_fff pa-0 ml-2 pt-1">
-                            園長 - 職稱放這裡
+                    <v-col cols="9" class="pl-4">
+                        <v-col class="body-2 white--text font-weight-bold pa-0 ml-2 pt-1">
+                            園長 職稱放這裡
                         </v-col>
                         <v-col cols="" class="pa-0">
                             <v-menu transition="slide-y-transition" offset-y>
                                 <template v-slot:activator="{ on, attrs }">
-                                    <v-btn text rounded class="text_fff font-weight-black pl-2" v-bind="attrs"
+                                    <v-btn text rounded class="font-weight-black pl-2 txt_w_btn" v-bind="attrs" 
                                         v-on="on" value="left" :ripple="{ class: 'red--text' }">
                                         Catherine Lee
                                         <v-icon right dark>
@@ -65,7 +67,7 @@
                                             <v-divider v-if="!item.title" :key="`divider-${i}`"
                                                 style="flex: 1 0 100%; border-color: rgba(0,0,0,.15);">
                                             </v-divider>
-                                            <v-list-item-icon class="mr-2">
+                                            <v-list-item-icon class="mr-2 pl-0">
                                                 <v-icon class="text_co">{{ item.icon }}</v-icon>
                                             </v-list-item-icon>
                                             <v-list-item-title class="text_co">{{ item.title }}</v-list-item-title>
@@ -78,7 +80,7 @@
                 </v-row>
 
                 <v-list-item link href="#/">
-                    <v-list-item-action class="mr-4 ml-3">
+                    <v-list-item-action class="">
                         <v-icon>mdi-home</v-icon>
                     </v-list-item-action>
                     <v-list-item-content>
@@ -86,18 +88,18 @@
                     </v-list-item-content>
                 </v-list-item>
                 <v-list-item link href="#/About">
-                    <v-list-item-action class="mr-4 ml-3">
+                    <v-list-item-action class="">
                         <v-icon>mdi-email</v-icon>
                     </v-list-item-action>
                     <v-list-item-content>
                         <v-list-item-title>Contact</v-list-item-title>
                     </v-list-item-content>
                 </v-list-item>
-                <v-list-item link href="#/">
-                    <v-list-item-action class="mr-4 ml-3">
+                <v-list-item link href="#/" >
+                    <v-list-item-action class="">
                         <v-icon>mdi-file-video</v-icon>
                     </v-list-item-action>
-                    <v-list-item-content>
+                    <v-list-item-content >
                         <v-list-item-title>0-3 課程</v-list-item-title>
                     </v-list-item-content>
                 </v-list-item>
@@ -129,7 +131,7 @@
             background-color: rgba(255, 255, 255, 0);
             box-shadow: none;
         ">
-            <v-app-bar-nav-icon @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
+            <v-app-bar-nav-icon @click.stop="drawer = !drawer" class="txt_w_btn" :ripple="{ class: 'red--text' }"></v-app-bar-nav-icon>
             <!-- <v-spacer></v-spacer>
             <div class="d-flex align-center justify-center">
                 <v-img alt="babybearcare" class="shrink mr-5" contain 
@@ -139,51 +141,54 @@
             <v-spacer></v-spacer> -->
         </v-app-bar>
 
-        <v-main>
+        <v-main class="align-end align-md-center">
             <v-container fluid>
-                <div class="d-flex justify-center ma-4">
+                <div class="d-flex justify-center ma-2 mb-16 mb-md-2">
                     <!-- Insert Page Code Here -->
-                    <v-hover v-slot="{ hover }">
-                        <v-sheet id="formSheet" :width="sheetWidth" class="pr-4 pl-4" :rounded="'xl'"
+                    <v-hover v-slot="{ hover }" >
+                        <v-sheet id="formSheet" :width="sheetWidth" class="pr-4 pl-4" :rounded="'xl'" 
                             @click="sheetFocus= true" :class="{'isFocus':sheetFocus|| hover}"
                             v-click-outside="onClickOutside" color="transparent">
-                            <img src="assets/images/icon.svg" width="80" class="d-flex ml-auto mr-auto pb-2" alt="">
-                            <div class="login_title text-center pb-2 ">小熊摇篮智能教育系统</div>
-                            <div class="text text-center login_t pb-3">Login to your account</div>
-
-                            <form>
-                                <v-text-field v-model="email" :error-messages="emailErrors" label="E-mail" required
+                            <img src="assets/images/logo_w.svg" width="80" class="d-flex ml-auto mr-auto pb-2" alt="">
+                            <div class="login_title text-center pb-2 ">Early Child Education</div>
+                            <!-- <div class="text text-center login_t pb-3">Login to your account</div> -->
+                            
+                            <form class="mt-16" >
+                                <v-text-field rounded filled style="margin-bottom: -1rem;" v-model="email" :error-messages="emailErrors" label="輸入手機號" required 
                                     @input="$v.email.$touch()" @blur="$v.email.$touch()" color="var(--white-color)">
                                 </v-text-field>
-
-                                <v-text-field v-model="password" :error-messages="passwordErrors" :counter="10"
+                                
+                                <v-text-field rounded filled style="margin-bottom: -1rem;" v-model="password" :error-messages="passwordErrors" :counter="10"
                                     label="Password" required @input="$v.password.$touch()"
-                                    @blur="$v.password.$touch()" color="var(--white-color)"></v-text-field>
+                                    @blur="$v.password.$touch()" color="var(--white-color)">
+                                </v-text-field>
 
                                 <v-checkbox v-model="rememberme" :error-messages="remembermeErrors"
                                     label="Remember Me?" required @change="$v.rememberme.$touch()"
-                                    @blur="$v.rememberme.$touch()" color="var(--white-color)">
+                                    @blur="$v.rememberme.$touch()"  dark
+                                    :ripple="{ class: 'red--text' }"
+                                    class="ma-0 ml-4" >
                                 </v-checkbox>
 
-                                <v-btn block class="" v-background="'var(--gradient-red-d)'" text-color="black"
-                                    rounded large @click="submit">
-                                    <v-icon class="icon icon-pacifier"></v-icon>
-                                    <v-icon class="icon icon-baby-boy-1 mr-2"></v-icon>
-                                    Login
+                                <v-btn depressed block class="border" v-background="'var(--gc-primary)'" text-color="black"
+                                    rounded large @click="submit" :ripple="{ class: 'red--text' }">
+                                    <!-- <v-icon class="icon icon-pacifier" color="success"></v-icon>
+                                    <v-icon class="icon icon-baby-boy-1 mr-2"></v-icon> -->
+                                    手机号码登录
                                 </v-btn>
-                                <v-row>
-                                    <v-col>
-                                        <v-divider style="margin-top: 13px;"></v-divider>
+                                <v-row justify="center" align="center" style="margin: -.4rem;">
+                                    <v-col cols="3" >
+                                        <v-divider color="white" style="opacity:.5;"></v-divider>
                                     </v-col>
-                                    <v-col cols="2" class="text-center">or</v-col>
-                                    <v-col>
-                                        <v-divider style="margin-top: 13px;"></v-divider>
+                                    <v-col cols="1" class="text-center white--text text--lighten-5 text-overline" >or</v-col>
+                                    <v-col cols="3" >
+                                        <v-divider color="white" style="opacity:.5;" ></v-divider>
                                     </v-col>
                                 </v-row>
-                                <v-btn block class="" v-background="'var(--gradient-0)'" text-color="black" rounded
-                                    large @click="submit">
+                                <v-btn depressed block class="border" v-background="'var(--gradient-0)'" text-color="black" rounded
+                                    large @click="submit" :ripple="{ class: 'red--text' }">
                                     <v-icon class="fab fa-weixin mr-2"></v-icon>
-                                    Login with WeChat
+                                    微信一键登录
                                 </v-btn>
                             </form>
 
@@ -196,25 +201,25 @@
 
         <!-- <v-footer app>
         </v-footer> -->
-        <v-bottom-navigation app>
-            <v-btn value="recent">
+        <v-bottom-navigation app class="blur" style="display: none;">
+            <v-btn value="recent" :ripple="{ class: 'red--text' }">
                 <span>Recent</span>
                 <v-icon>mdi-history</v-icon>
             </v-btn>
 
-            <v-btn value="favorites">
+            <v-btn value="favorites" :ripple="{ class: 'red--text' }">
                 <span>Favorites</span>
                 <v-icon>mdi-heart</v-icon>
             </v-btn>
 
-            <v-btn value="nearby">
+            <v-btn value="nearby" :ripple="{ class: 'red--text' }">
                 <span>Nearby</span>
                 <v-icon>mdi-map-marker</v-icon>
             </v-btn>
 
             <v-menu>
                 <template v-slot:activator="{ on, attrs }">
-                    <v-btn dark icon v-bind="attrs" v-on="on" style="position: absolute; right:-18px;">
+                    <v-btn dark icon fab v-bind="attrs" v-on="on" style="position: absolute; right:-18px;" :ripple="{ class: 'red--text' }">
                         <v-icon>mdi-dots-vertical</v-icon>
                     </v-btn>
                 </template>
@@ -235,9 +240,6 @@
   <script src="https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.js"></script>
 
-  <!-- <script src='https://unpkg.com/vue/dist/vue.js'></script> -->
-  <!-- <script src='https://unpkg.com/vuetify@1.0.13/dist/vuetify.min.js'></script> -->
-
   <script>
       Vue.directive('background', {
           bind: function (el, binding, vnode) {
@@ -248,15 +250,21 @@
           el: '#app',
           vuetify: new Vuetify({
               theme: {
-                  themes: {
+                themes: {
                     light: {
-                        default: '#b71c1c',
-                        primary: '#3c3a47',
-                        secondary: '#b0bec5',
+                        default: '#7e6d61',
+                        primary: '#FFA19F',
+                        secondary: '#9e8888',
+                        info: '#00cae3',
+                        success: '#3fbe8f',
                         accent: '#8c9eff',
-                        error: '#b71c1c',
+                        warning: '#ff9563',
+                        error: '#ff5252',
+                        // primary: colors.purple,
+                        // accent: colors.shades.black,
                     },
-                  },
+                },
+                // dark: true,
               },
           }),
           data: {
