@@ -252,6 +252,14 @@ body.is-loading #bg {
   color: var(--brandtxt-dark2);
 }
 
+.page_login .icon_color {
+  color: var(--link-color);
+}
+
+.page_login a {
+  text-decoration: none;
+}
+
 .navbar_title {
   color: var(--txt-dark);
 }

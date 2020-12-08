@@ -1570,6 +1570,7 @@
   --pink: #febbbb;
   --txt-dark: #532E07;
   --txt-dark1: rgba(83, 46, 7, 0.75);
+  --link-color: #09efff;
   --gradient-red-d3: linear-gradient(135deg, #febbbb 0%, #fe9090 45%, #ff5c5c 100%);
   --primary-gradient: linear-gradient(45deg, #e4989a, #ffb4a1);
   --primary-gradient-d: linear-gradient(45deg, #e76f73, #ffd3c8);
@@ -1623,7 +1624,6 @@
   --primary-color3: 	#940b3f;
   --secondary-color: 	#0f4b88;
   --secondary-color2:	#3e6994;
-  --link-color: 		#55bbc4;
   --primary-gradient: linear-gradient(45deg, #ff7321, #fdb528);
 }
 

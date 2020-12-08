@@ -354,6 +354,13 @@ $gradient-red-d2: linear-gradient(65deg, #795548, #ff6a6a);
   .login_t {
     color: var(--brandtxt-dark2);
   }
+  .icon_color {
+    color: var(--link-color);
+  }
+  a {
+    text-decoration: none;
+  }
+  
 }
 
 .navbar_title {
