@@ -140,37 +140,82 @@
             <v-spacer></v-spacer> -->
         </v-app-bar>
 
-        <v-main class="align-end align-center align-center ">
+        <v-main class="align-end align-center align-center">
             <v-container fluid>
-                <div class="d-flex justify-center ma-2 mb-16 mb-md-2">
+                <div class="d-flex justify-center ma-2 mb-16 mb-md-2 " >
 
-                    <v-sheet id="formSheet" :width="sheetWidth" class="px-4 loginstep" 
-                        color="transparent">
-                        <v-col class="d-flex justify-center align-center" style="margin-top: -3rem;" >
-                        <h1 class="brown--text text--lighten-1 mr-2 ">我是</h1>
-                        <v-select
-                            :items="selectitems"
-                            :label="none"
-                            class="d-inline-block "
-                        ></v-select>
+                    <v-sheet id="formSheet" :width="sheetWidth" 
+                        class="px-4 loginstep" 
+                        color="transparent" >
+                        
+                        <transition name="slide-fade">
+                            <div v-if="showMessage">
+                                <v-col class="d-flex justify-center align-center" style="margin-top: -3rem;" >
+                                    <h1 class="brown--text text--lighten-1 mr-2 ">我是</h1>
+                                    <v-select
+                                        :items="selectitems"
+                                        :label="none"
+                                        class="d-inline-block "
+                                    ></v-select>
+                                </v-col>
+                                <v-col class="d-flex justify-center align-center " style="margin-top: -3rem;" >
+                                    <h1 class="brown--text text--lighten-1 mr-2">我想</h1>
+                                    <v-select
+                                    :items="selectitems2"
+                                    :label="none"
+                                    class="d-inline-block"
+                                    ></v-select>
+                                </v-col>
+
+                                <v-btn depressed block class="border mt-2" v-background="'var(--gc-primary)'" 
+                                rounded large :ripple="{ class: 'red--text' }"
+                                v-on:click="showMessage = false, showMessage2 = true" > 
+                                下一步
+                                </v-btn>
+                            </div>
+                        </transition>
+
+                        
+                        <transition name="slide-fade">
+                            <div v-if="showMessage2"> 
+                                <v-col class="" style="margin-top: -3rem;" >
+                                    <h1 class="brown--text text--lighten-1 mr-2 text-center">请输入邀请码</h1>
+                                    <v-select
+                                        :items="selectitems"
+                                        :label="none"
+                                        class=""
+                                    ></v-select>
+                                </v-col>
+
+                                <v-btn depressed block class="border mt-2" v-background="'var(--gc-primary)'" 
+                                rounded large :ripple="{ class: 'red--text' }"
+                                > 開始
+                                </v-btn>
+                            </div>
+                        </transition>
+
+                        <v-col class="d-flex align-end align-md-center" style="height: 150px;"  >
+                            <v-col class="d-flex pa-0 " >
+                                <v-avatar size="48" class="d-inline-block ">
+                                    <img
+                                    src="assets/images/user-small.png"
+                                    >
+                                </v-avatar>
+                                <div class="ml-2">
+                                    <span class="subtitle-1 brown--text text--darken-3 font-weight-bold" >李开 Catherine Lee </span>
+                                    <span class="caption d-block brown--text text--darken-1 font-weight-bold" ><span >園長</span> 來自 <span>北京幼兒所</span></span>
+                                </div>  
+                            </v-col> 
                         </v-col>
-                        <v-col class="d-flex justify-center align-center " style="margin-top: -3rem;" >
-                            <h1 class="brown--text text--lighten-1 mr-2">我想</h1>
-                            <v-select
-                            :items="selectitems2"
-                            :label="none"
-                            class="d-inline-block"
-                            
-                            ></v-select>
-                        </v-col>
-                        <v-btn depressed block class="border mt-2" v-background="'var(--gc-primary)'"
-                            rounded large :ripple="{ class: 'red--text' }">
-                            下一步
-                        </v-btn>
+   
                     </v-sheet>
                 
+                    </div>
 
-                </div>
+                    
+                    
+                    
+                
             </v-container>
         </v-main>
 
@@ -363,6 +408,9 @@
               ],
               selectitems: ['家长', '老师'],
               selectitems2: ['添加宝宝', '关注宝宝'],
+
+                showMessage: true,
+                showMessage2: false,
           },
           computed: {
               sheetWidth() {
@@ -401,6 +449,7 @@
         transition-property: all;
         transition-timing-function: ease-in-out;
     }
+    
   </style>
 </body>
 

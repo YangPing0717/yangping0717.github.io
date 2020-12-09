@@ -367,7 +367,7 @@ $gradient-red-d2: linear-gradient(65deg, #795548, #ff6a6a);
         color: var(--txt-dark) !important;
       }
       .v-select__selection--comma {
-        font-size: 2rem;
+        font-size: 1.9rem;
         color: var(--txt-light1) !important;
       }
     }
@@ -747,5 +747,25 @@ body {
 
 
 
+.fade-enter-active, .fade-leave-active {
+  transition: opacity .3s;
+}
+.fade-enter, .fade-leave-to {
+  opacity: 0;
+}
+
+
+
+.slide-fade-enter-active {
+  transition: all .3s ease;
+}
+.slide-fade-leave-active {
+  transition: all .5s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+}
+
+.slide-fade-enter, .slide-fade-leave-to {
+  transform: translateX(10px);
+  opacity: 0;
+}
     
 
