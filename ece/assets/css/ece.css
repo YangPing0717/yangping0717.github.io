@@ -222,16 +222,6 @@ body.is-loading #bg {
   opacity: .3;
 }
 
-.page_login_x .elevation-0 {
-  -webkit-box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.2), 0 0 0 0 rgba(255, 255, 255, 0.14), 0 0 0 0 rgba(255, 255, 255, 0.12) !important;
-          box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.2), 0 0 0 0 rgba(255, 255, 255, 0.14), 0 0 0 0 rgba(255, 255, 255, 0.12) !important;
-}
-
-.page_login_x .elevation-24 {
-  -webkit-box-shadow: 0 11px 15px -7px rgba(255, 255, 255, 0.8), 0 24px 38px 3px rgba(255, 255, 255, 0.5), 0 12px 70px 8px rgba(255, 255, 255, 0.3) !important;
-          box-shadow: 0 11px 15px -7px rgba(255, 255, 255, 0.8), 0 24px 38px 3px rgba(255, 255, 255, 0.5), 0 12px 70px 8px rgba(255, 255, 255, 0.3) !important;
-}
-
 .page_login .v-carousel {
   height: 100vh !important;
 }
@@ -260,8 +250,48 @@ body.is-loading #bg {
   text-decoration: none;
 }
 
+.loginstep .v-select__slot {
+  height: 3.6rem;
+}
+
+.loginstep .v-select__slot .v-select__selections {
+  display: block;
+  text-align: center;
+  line-height: 2.2rem;
+}
+
+.loginstep .v-select__slot .v-select__selections input {
+  display: none;
+}
+
+.loginstep .v-select__slot .v-select__selections .v-list .v-list-item--active {
+  color: var(--txt-dark) !important;
+}
+
+.loginstep .v-select__slot .v-select__selections .v-select__selection--comma {
+  font-size: 2rem;
+  color: var(--txt-light1) !important;
+}
+
+.loginstep .v-select__slot .v-icon.v-icon {
+  margin-top: 1rem;
+  font-size: 2.2rem;
+}
+
+.menuable__content__active:not(.v-menu__content--fixed) .v-list-item .v-list-item__title {
+  font-size: 1.4rem !important;
+}
+
 .navbar_title {
   color: var(--txt-dark);
+}
+
+.mdi-checkbox-blank-outline::before {
+  content: "\f765";
+}
+
+.mdi-checkbox-marked::before {
+  content: "\f133";
 }
 
 .theme--light.v-navigation-drawer {
@@ -314,10 +344,8 @@ body {
 }
 
 .v-btn.txt_w_btn:focus, .v-btn.txt_w_btn:active, .v-btn.txt_w_btn:hover {
-  -webkit-box-shadow: 0px 0px 0px 10px rgba(255, 255, 255, 0.2) !important;
-          box-shadow: 0px 0px 0px 10px rgba(255, 255, 255, 0.2) !important;
   color: #795548 !important;
-  background: #fff !important;
+  background: none !important;
 }
 
 .v-btn.txt_w_btn:focus:before, .v-btn.txt_w_btn:active:before, .v-btn.txt_w_btn:hover:before {

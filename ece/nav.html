@@ -27,7 +27,7 @@
 
 <body>
   <div id="app"> 
-    <v-app class="" >
+    <v-app class="">
         <v-navigation-drawer v-model="drawer" app v-background="'var(--gradient-4)'" 
         src="assets/images/close-up-of-happy-little-baby-boy-with-father-PCB8CX6.png"> 
             <v-list dense rounded>
@@ -119,7 +119,7 @@
 
         </v-navigation-drawer>
 
-        <v-app-bar app style="box-shadow: none;" class="blur">
+        <v-app-bar app flat class="blur">
             <v-app-bar-nav-icon @click.stop="drawer = !drawer" class="border" :ripple="{ class: 'red--text' }" dark></v-app-bar-nav-icon>
             <v-spacer></v-spacer>
             <!-- <div class="d-flex align-center justify-center">
@@ -152,8 +152,9 @@
         </v-app-bar>
 
 
-        <v-main class="brown lighten-5 ">
-            <v-container fluid class="pt-0 " >
+        <v-main class="brown lighten-5 " 
+            >
+            <v-container fluid class="pt-0" >
                 <v-row class="d-flex justify-center" >
                     <template >
                         <v-card tile :width="sheetWidth" elevation="0" >
@@ -350,16 +351,10 @@
                     </template>
                 </v-row>
                 
-
-
-
-
-
-
             </v-container>
         </v-main>
 
-        
+
 
         <!-- <v-footer app>
         </v-footer> -->

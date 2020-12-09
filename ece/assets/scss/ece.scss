@@ -327,15 +327,6 @@ $gradient-red-d2: linear-gradient(65deg, #795548, #ff6a6a);
 
 
 // page_login
-.page_login_x {
-  .elevation-0 {
-    box-shadow: 0 0 0 0 rgba(255, 255, 255,.2),0 0 0 0 rgba(255, 255, 255,.14),0 0 0 0 rgba(255, 255, 255,.12)!important;
-  }
-  .elevation-24 {
-    box-shadow: 0 11px 15px -7px rgba(255, 255, 255, .8),0 24px 38px 3px rgba(255, 255, 255, .5),0 12px 70px 8px rgba(255, 255, 255, .3) !important;
-  }
-}
-
 .page_login {
   .v-carousel {
     height: 100vh !important;
@@ -360,35 +351,53 @@ $gradient-red-d2: linear-gradient(65deg, #795548, #ff6a6a);
   a {
     text-decoration: none;
   }
-  
 }
+
+.loginstep {
+  .v-select__slot {
+    height: 3.6rem;
+    .v-select__selections {
+      display: block;
+      text-align: center;
+      line-height: 2.2rem;
+      input {
+        display: none;
+      }
+      .v-list .v-list-item--active {
+        color: var(--txt-dark) !important;
+      }
+      .v-select__selection--comma {
+        font-size: 2rem;
+        color: var(--txt-light1) !important;
+      }
+    }
+    .v-icon.v-icon {
+      margin-top: 1rem;
+      font-size: 2.2rem;
+    }
+  }
+}
+
+.menuable__content__active:not(.v-menu__content--fixed) {
+  .v-list-item .v-list-item__title {
+    font-size: 1.4rem !important;
+  }
+}
+
+
+// v-menu__content theme--light menuable__content__active
+// v-menu__content theme--light v-menu__content--fixed menuable__content__active
+
 
 .navbar_title {
   color: var(--txt-dark);
 }
-
-// .v-sheet {
-//   transform: translate3d(0px, 0px, 0px);
-//   transition: $transition;
-//   &.theme--light{
-//     background-color: rgba(255, 255, 255, 0);
-//     // color: var(---brandtxt-dark2) !important;
-//   }
-//   &.isFocus {
-//     transform: translateY(-5px) !important;
-//     &.change_color {
-//       background-color: #000;
-//     }
-//   }
-// }
-
-// .isFocus {
-//   transform: translateY(-5px) !important;
-//   &.change_color {
-//     background-color: #000;
-//   }
-// }
-
+.mdi-checkbox-blank-outline::before {
+  content: "\f765";
+}
+.mdi-checkbox-marked::before {
+  content: "\f133"; 
+}
 
 
 .v-toolbar__content {
@@ -450,9 +459,9 @@ body {
     color: #fff !important;
     &:focus, &:active, &:hover {
       // box-shadow: 0 14px 26px -12px rgba(255, 112, 109, 0.6), 0 4px 23px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(255, 114, 112, 0.2) !important;
-      box-shadow: 0px 0px 0px 10px rgba(255, 255, 255, 0.2) !important;
+      // box-shadow: 0px 0px 0px 10px rgba(255, 255, 255, 0.2) !important;
       color: #795548 !important;
-      background: #fff !important;
+      background: none !important;
       &:before {
         opacity: 0;
       }

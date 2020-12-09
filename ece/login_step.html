@@ -31,11 +31,7 @@
 
 <body>
   <div id="app">
-    <v-app class="page_login" v-background="'var(--gradient-red-d3)'">
-        <v-carousel style="height:100%; opacity: .3; position: absolute; top: 0; left: 0;" :show-arrows="false" cycle hide-delimiters>
-            <v-carousel-item v-for="(item,i) in carousel" v-bind:src="item.src" :key="i" style="height:100%;"></v-carousel-item>
-        </v-carousel>
-        <!-- <div class="bg"></div> -->
+    <v-app class="page_login" v-background="'var(--gradient-5)'">
         <v-navigation-drawer v-model="drawer" app v-background="'var(--gradient-4)'"
         src="assets/images/close-up-of-happy-little-baby-boy-with-father-PCB8CX6.png"> 
             <v-list dense rounded>
@@ -127,84 +123,53 @@
 
         </v-navigation-drawer>
 
-        <v-app-bar app dark flat color="transparent" >
-            <v-app-bar-nav-icon @click.stop="drawer = !drawer" class="txt_w_btn" :ripple="{ class: 'red--text' }"></v-app-bar-nav-icon>
+        <v-app-bar app dark flat color="transparent">
+            <v-btn  text rounded class="font-weight-black mt-3"  
+            v-on="on" value="left" :ripple="{ class: 'red--text' }"
+            href="index.html">
+            <v-icon left dark>mdi-arrow-left</v-icon> 上一步
+            </v-btn>
+
+            <!-- <v-app-bar-nav-icon @click.stop="drawer = !drawer" class="txt_w_btn" :ripple="{ class: 'red--text' }"></v-app-bar-nav-icon> -->
             <!-- <v-spacer></v-spacer>
             <div class="d-flex align-center justify-center">
                 <v-img alt="babybearcare" class="shrink mr-5" contain 
-                    src="assets/images/logo_ww.svg" transition="scale-transition"
-                    width="120" />
+                    src="assets/images/logo_w.svg" transition="scale-transition"
+                    width="40" />
             </div>
             <v-spacer></v-spacer> -->
         </v-app-bar>
 
-        <v-main class="align-end align-md-center">
+        <v-main class="align-end align-center align-center ">
             <v-container fluid>
                 <div class="d-flex justify-center ma-2 mb-16 mb-md-2">
-                    <!-- Insert Page Code Here -->
-                    <v-hover v-slot="{ hover }" >
-                        <v-sheet id="formSheet" :width="sheetWidth" class="px-4" :rounded="'xl'" 
-                            @click="sheetFocus= true" :class="{'isFocus':sheetFocus|| hover}"
-                            v-click-outside="onClickOutside" color="transparent">
-                            <img src="assets/images/logo_w.svg" width="80" class="d-flex ml-auto mr-auto pb-2" alt="">
-                            <div class="login_title text-center pb-2 ">Early Child Education</div>
-                            <!-- <div class="text text-center login_t pb-3">Login to your account</div> -->
+
+                    <v-sheet id="formSheet" :width="sheetWidth" class="px-4 loginstep" 
+                        color="transparent">
+                        <v-col class="d-flex justify-center align-center" style="margin-top: -3rem;" >
+                        <h1 class="brown--text text--lighten-1 mr-2 ">我是</h1>
+                        <v-select
+                            :items="selectitems"
+                            :label="none"
+                            class="d-inline-block "
+                        ></v-select>
+                        </v-col>
+                        <v-col class="d-flex justify-center align-center " style="margin-top: -3rem;" >
+                            <h1 class="brown--text text--lighten-1 mr-2">我想</h1>
+                            <v-select
+                            :items="selectitems2"
+                            :label="none"
+                            class="d-inline-block"
                             
-                            <form class="mt-16" >
-                                <v-text-field rounded filled style="margin-bottom: -1rem;" v-model="email" :error-messages="emailErrors" label="輸入手機號" required 
-                                    @input="$v.email.$touch()" @blur="$v.email.$touch()" color="var(--white-color)">
-                                </v-text-field>
-                                
-                                <v-text-field rounded filled style="margin-bottom: -1rem;" v-model="password" :error-messages="passwordErrors" :counter="10"
-                                    label="Password" required @input="$v.password.$touch()"
-                                    @blur="$v.password.$touch()" color="var(--white-color)">
-                                </v-text-field>
+                            ></v-select>
+                        </v-col>
+                        <v-btn depressed block class="border mt-2" v-background="'var(--gc-primary)'"
+                            rounded large :ripple="{ class: 'red--text' }">
+                            下一步
+                        </v-btn>
+                    </v-sheet>
+                
 
-                                <v-checkbox v-model="rememberme" :error-messages="remembermeErrors"
-                                    label="Remember Me?" required @change="$v.rememberme.$touch()"
-                                    @blur="$v.rememberme.$touch()"  dark
-                                    :ripple="{ class: 'red--text' }"
-                                    class="ma-0 ml-4" >
-                                </v-checkbox>
-
-                                <v-btn depressed block class="border" v-background="'var(--gc-primary)'" text-color="black"
-                                    href="login_step.html"
-                                    rounded large @click="submit" :ripple="{ class: 'red--text' }">
-                                    <!-- <v-icon class="icon icon-pacifier" color="success"></v-icon>
-                                    <v-icon class="icon icon-baby-boy-1 mr-2"></v-icon> -->
-                                    手机号码登录
-                                </v-btn>
-                                <v-row justify="center" align="center" style="margin: -.4rem;">
-                                    <v-col cols="3" >
-                                        <v-divider color="white" style="opacity:.5;"></v-divider>
-                                    </v-col>
-                                    <v-col cols="1" class="text-center white--text text--lighten-5 text-overline" >or</v-col>
-                                    <v-col cols="3" >
-                                        <v-divider color="white" style="opacity:.5;" ></v-divider>
-                                    </v-col>
-                                </v-row>
-                                <v-btn depressed block class="border" v-background="'var(--gradient-0)'" text-color="black" rounded
-                                    large @click="submit" :ripple="{ class: 'red--text' }"
-                                    href="login_step.html">
-                                    <v-icon class="fab fa-weixin mr-2"></v-icon>
-                                    微信一键登录
-                                </v-btn>
-                            </form>
-                            <div class="d-flex justify-center caption brown--text text--lighten-4 mt-3 font-weight-bold">
-                                <v-icon small class="mr-2 teal--text text--accent-2  " >mdi-checkbox-marked-circle</v-icon>
-                                <span> 阅读并接受 
-                                    <a href="#" class="white--text ">用户服务协议</a> 和 
-                                    <a href="#"  class="white--text ">隐私政策</a>
-                                </span>
-                            </div>
-                            <div class="d-flex justify-space-between caption mt-4 font-weight-bold">
-                                <a href="#"  class="brown--text text--lighten-4 ">切换帐号登录?</a>  
-                                <a href="#"  class="brown--text text--lighten-4">登录遇到问题？</a>
-                            </div>
-
-
-                        </v-sheet>
-                    </v-hover>
                 </div>
             </v-container>
         </v-main>
@@ -395,7 +360,9 @@
                   {
                   src: 'assets/images/baby_bg.jpg'
                   }
-              ]
+              ],
+              selectitems: ['家长', '老师'],
+              selectitems2: ['添加宝宝', '关注宝宝'],
           },
           computed: {
               sheetWidth() {
