@@ -169,7 +169,7 @@
 
                                 <v-btn depressed block class="border mt-2" v-background="'var(--gc-primary)'" 
                                 rounded large :ripple="{ class: 'red--text' }"
-                                v-on:click="showMessage = false, showMessage2 = true" > 
+                                v-on:click="showMessage = false, showMessage2 = true" >
                                 下一步
                                 </v-btn>
                             </div>
@@ -180,16 +180,12 @@
                             <div v-if="showMessage2"> 
                                 <v-col class="" style="margin-top: -3rem;" >
                                     <h1 class="brown--text text--lighten-1 mr-2 text-center">请输入邀请码</h1>
-                                    <v-select
-                                        :items="selectitems"
-                                        :label="none"
-                                        class=""
-                                    ></v-select>
+                                    <v-text-field ></v-text-field>
                                 </v-col>
 
                                 <v-btn depressed block class="border mt-2" v-background="'var(--gc-primary)'" 
                                 rounded large :ripple="{ class: 'red--text' }"
-                                > 開始
+                                >开 始
                                 </v-btn>
                             </div>
                         </transition>
