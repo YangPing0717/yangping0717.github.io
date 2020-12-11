@@ -696,3 +696,7 @@ body {
           transform: translateX(10px);
   opacity: 0;
 }
+
+.v-application a {
+  text-decoration: none;
+}

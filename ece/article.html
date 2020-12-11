@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+  <!-- Favicons -->
+  <link rel="icon" href="assets/favicon/favicon.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/images/icon_BB.jpg">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+  <meta name="msapplication-TileColor" content="#000">
+  <meta name="theme-color" content="#ffffff">
+
+  <meta property="og:title" content="小熊摇篮" />
+  <meta property="og:description" content="小熊摇篮，小熊摇篮小熊摇篮，小熊摇篮小熊摇篮小熊摇篮。" />
+  <meta property="og:image" content="assets/images/icon_BB.jpg" />
+
+  <link href="https://cdn.jsdelivr.net/npm/@mdi/font@4.x/css/materialdesignicons.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.min.css" rel="stylesheet">
+
+  <link href="https://fonts.googleapis.com/css?family=Material+Icons" rel="stylesheet">
+
+  <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="stylesheet" href="assets/css/ece.css">
+  
+</head>
+
+<body>
+  <div id="app"> 
+    <v-app class="">
+        
+        <v-app-bar app flat class="blur">
+                <v-btn icon
+                v-on="on" :ripple="{ class: 'red--text' }"
+                href="nav.html">
+                <v-icon dark>mdi-close</v-icon>
+                </v-btn>
+            <v-spacer></v-spacer>
+            <div class="font-weight-black brown--text text--darken-3"></div>
+            <v-spacer></v-spacer>
+            
+            <!-- <v-btn dark icon v-on="on" class="border" :ripple="{ class: 'red--text' }"  >
+                <v-icon>mdi-yeast</v-icon>
+            </v-btn> -->
+
+            <v-menu transition="slide-y-transition" offset-y>
+                <template v-slot:activator="{ on, attrs }">
+                    <v-btn dark icon v-bind="attrs" v-on="on" class="border" :ripple="{ class: 'red--text' }"  >
+                        <v-icon>mdi-dots-vertical</v-icon>
+                    </v-btn>
+                </template>
+                <v-list v-background="'var(--gradient-0)'" dense>
+                    <v-list-item v-for="(item, i) in articledotmenus" :key="i">
+                        <v-list-item-icon class="mr-2">
+                            <v-icon class="text_co">{{ item.icon }}</v-icon>
+                        </v-list-item-icon>
+                        <v-list-item-title>{{ item.title }}</v-list-item-title>
+                    </v-list-item>
+                </v-list>
+            </v-menu>
+
+
+        </v-app-bar>
+
+
+        <v-main class="brown lighten-5 " 
+            >
+            <v-container fluid class="pt-0" >
+                <v-row class="d-flex justify-center" >
+                    <template >
+
+                        <!-- card -->
+                        <v-card tile flat :width="sheetWidth" class="pb-1 mb-3">
+                            <v-card-title class="brown--text text--darken-4 font-weight-bold card_title_lh">{{ tabtext }}</v-card-title>
+                            <v-col class="d-flex align-center pt-0 ">
+                                    <v-avatar size="48" class="d-inline-block ">
+                                        <img
+                                        src="assets/images/user-small.png"
+                                        >
+                                    </v-avatar>
+                                    <div class="ml-2">
+                                        <span class="subtitle-2 brown--text text--darken-4 font-weight-bold" >顾兹莹老師</span>
+                                        <span class="caption d-block brown--text text--lighten-2 font-weight-bold" ><span >5</span> 小時 來自 <span>北京幼兒所</span></span>
+                                    </div>
+                                    
+                                    <!-- <div class="ml-auto">
+                                        <v-menu transition="slide-y-transition" offset-y >
+                                            <template v-slot:activator="{ on, attrs }">
+                                                <v-btn dark icon v-bind="attrs" v-on="on" class="border" :ripple="{ class: 'red--text' }"  >
+                                                    <v-icon>mdi-dots-vertical</v-icon>
+                                                </v-btn>
+                                            </template>
+                                            <v-list v-background="'var(--gradient-0)'" dense>
+                                                <v-list-item v-for="(item, i) in articledotmenus" :key="i">
+                                                    <v-list-item-icon class="mr-2">
+                                                        <v-icon class="text_co">{{ item.icon }}</v-icon>
+                                                    </v-list-item-icon>
+                                                    <v-list-item-title>{{ item.title }}</v-list-item-title>
+                                                </v-list-item>
+                                            </v-list>
+                                        </v-menu>
+                                    </div> -->
+                            </v-col>      
+
+                            <v-card-text class="pt-0 brown--text text--lighten-2">{{ tabtext2 }}</v-card-text>
+                            <v-img
+                            src="assets/images/baby_1.jpg"
+                            ></v-img>
+                            <v-card-text class="brown--text text--lighten-2">{{ tabtext2 }}</v-card-text>
+
+                            <template>
+                                <div class="d-flex justify-start pb-1 ">
+                                    <div>
+                                        <v-btn
+                                            class="ml-2"
+                                            text
+                                            icon
+                                            color="brown darken-1"
+                                            :ripple="{ class: 'red--text' }"
+                                            class="brown--text text--darken-4"
+                                        >
+                                            <v-icon>mdi-share-variant</v-icon>
+                                        </v-btn>
+                                        <span class="brown--text text--lighten-2 font-weight-bold">分享 30</span>
+                                    
+                                        <v-btn
+                                            class="ml-2"
+                                            text
+                                            icon
+                                            color="brown darken-1"
+                                            :ripple="{ class: 'red--text' }"
+                                        >
+                                            <v-icon>mdi-thumb-up</v-icon>
+                                        </v-btn>
+                                        <span class="brown--text text--lighten-2 font-weight-bold">讚 10</span>
+
+                                        <v-btn
+                                            class="ml-2"
+                                            text
+                                            icon
+                                            color="brown darken-1"
+                                            :ripple="{ class: 'red--text' }"
+                                            class="brown--text text--darken-4"
+                                        >
+                                            <v-icon>mdi-eye</v-icon>
+                                        </v-btn>
+                                        <span class="brown--text text--lighten-2 font-weight-bold">已看 45</span>
+                                    </div>
+                                </div>
+                            </template>
+                        </v-card>
+
+                        
+                    </template>
+                </v-row>
+                
+            </v-container>
+        </v-main>
+
+
+
+        <!-- <v-footer app>
+        </v-footer> -->
+        <v-bottom-navigation app class="blur" >
+            <v-spacer></v-spacer>
+            <v-btn value="recent" :ripple="{ class: 'red--text' }" >
+                <span>任務</span>
+                <v-icon>mdi-format-list-bulleted-type</v-icon>
+            </v-btn>
+            <v-btn value="favorites" :ripple="{ class: 'red--text' }" class="mr-10">
+                <span>成就</span>
+                <v-icon>mdi-trophy-variant</v-icon>
+            </v-btn>
+
+            
+            <v-btn value="nearby" :ripple="{ class: 'red--text' }" class="ml-10">
+                <span>社群</span>
+                <v-icon>mdi-account-multiple</v-icon>
+            </v-btn>
+            <v-btn value="nearby" :ripple="{ class: 'red--text' }" >
+                <span>我的</span>
+                <v-icon>mdi-account-circle</v-icon>
+            </v-btn>
+            <v-spacer></v-spacer>
+
+            <!-- <div class="gooey">
+                <span class="goo-index "></span>
+            </div> -->
+            
+
+        </v-bottom-navigation>
+
+        <div class="text-center home_posi" >
+            <v-btn 
+                fab depressed dark 
+                color='error'
+                v-background="'var(--gc-error)'"
+                class="home_btn"
+                >
+                <v-icon dark>mdi-home-outline</v-icon>
+            </v-btn>
+        </div>
+
+        <div class="float_posi">
+            <v-speed-dial
+            v-model="fab"
+            :top="top"
+            :bottom="bottom"
+            :right="right"
+            :left="left"
+            :direction="direction"
+            :open-on-hover="hover"
+            :transition="transition"
+            class="anima"
+            >
+            <template v-slot:activator >
+                <v-btn
+                depressed fab fixed right bottom small
+                class="info_r float_btn mr-0"
+                >
+                <v-icon v-if="fab" class="" >mdi-close</v-icon>
+                <v-icon v-else class="" >mdi-plus</v-icon>
+                </v-btn>
+            </template>
+
+            <v-tooltip left :value="true">
+                <template v-slot:activator="{ on, attrs }">
+                    <v-btn
+                        fab
+                        small
+                        depressed
+                        class="info_r"
+                        v-on="on"
+                        href="creat.html"
+                    >
+                        <v-icon>mdi-plus</v-icon>
+                    </v-btn>
+                </template>
+                <span>攥寫貼文</span>
+            </v-tooltip>
+
+            <v-tooltip left :value="true">
+                <template v-slot:activator="{ on, attrs }">
+                    <v-btn
+                        fab
+                        small
+                        depressed
+                        class="info_r"
+                        v-on="on"
+                        
+                    >
+                        <v-icon>mdi-pencil</v-icon>
+                    </v-btn>
+                </template>
+                <span >編輯貼文</span>
+            </v-tooltip>
+
+            <v-tooltip left :value="true">
+                <template v-slot:activator="{ on, attrs }">
+                    <v-btn
+                        fab
+                        small
+                        depressed
+                        class="info_r"
+                        v-on="on"
+                    >
+                        <v-icon>mdi-delete</v-icon>
+                    </v-btn>
+                </template>
+                <span class="">刪除貼文</span>
+            </v-tooltip>
+            </v-speed-dial>
+        </div>
+
+    </v-app>
+  </div>
+
+
+
+  <script src="https://kit.fontawesome.com/3b082112b1.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.js"></script>
+
+
+  <script>
+      Vue.directive('background', {
+          bind: function (el, binding, vnode) {1
+              el.style.backgroundImage = binding.value
+          }
+      });
+      new Vue({
+          el: '#app',
+          vuetify: new Vuetify({
+              theme: {
+                themes: {
+                    light: {
+                        default: '#7e6d61',
+                        primary: '#FFA19F',
+                        secondary: '#9e8888',
+                        info: '#00cae3',
+                        success: '#3fbe8f',
+                        accent: '#8c9eff',
+                        warning: '#ff9563',
+                        error: '#ff5252',
+                        // primary: colors.purple,
+                        // accent: colors.shades.black,
+                    },
+                },
+                // dark: true,
+              },
+          }),
+          data: {
+              // Form Sheet
+              sheetFocus: false,
+              email: '',
+              password: '',
+              rememberme: false,
+
+              // drawer control model
+              drawer: false,
+              items: [
+                  {
+                      title: 'My Profile',
+                      icon: 'mdi-account',
+                  },
+                  {
+                      title: 'Messages',
+                      icon: 'mdi-email',
+                  },
+                  {
+                      title: 'Settings',
+                      icon: 'mdi-settings',
+                  },
+                  {
+                      // title: '',
+                      // icon: '',
+                      // divider: true,
+                  },
+                  {
+                      title: 'logout',
+                      icon: 'mdi-power',
+                  },
+              ],
+              dotmenus: [
+                {
+                      title: '搜尋文章',
+                      icon: 'mdi-magnify',
+                  },
+                  {
+                      title: 'My Profile',
+                      icon: 'mdi-account',
+                  },
+                  {
+                      title: 'Messages',
+                      icon: 'mdi-email',
+                  },
+                  {
+                      title: 'Settings',
+                      icon: 'mdi-settings',
+                  },
+                  {
+                      title: 'logout',
+                      icon: 'mdi-power',
+                  },
+              ],
+              model: 2,
+
+              accors: [
+                  {
+                      action: 'local_activity',
+                      title: 'Attractions',
+                      active: false,
+                      items: [
+                          { title: 'List Item' }]
+                  },
+                  {
+                      action: 'restaurant',
+                      title: 'Dining',
+                      active: true,
+                      items: [
+                          { title: 'Breakfast & brunch' },
+                          { title: 'New American' },
+                          { title: 'Sushi' }]
+                  },
+                  {
+                      action: 'school',
+                      title: 'Education',
+                      active: false,
+                      items: [
+                          { title: 'List Item' }]
+                  },
+                  {
+                      action: 'directions_run',
+                      title: 'Family',
+                      active: false,
+                      items: [
+                          { title: 'List Item' }]
+                  },
+                  {
+                      action: 'healing',
+                      title: 'Health',
+                      active: false,
+                      items: [
+                          { title: 'List Item' }]
+                  },
+                  {
+                      action: 'content_cut',
+                      title: 'Office',
+                      active: false,
+                      items: [
+                          { title: 'List Item' }]
+                  },
+                  {
+                      action: 'local_offer',
+                      title: 'Promotions',
+                      active: false,
+                      items: [
+                          { title: 'List Item' }]
+                  }
+              ],
+             
+              articledotmenus: [
+                {
+                      title: '編輯貼文',
+                      icon: 'mdi-pencil-box-outline',
+                  },
+                  {
+                      title: '刪除貼文',
+                      icon: 'mdi-delete',
+                  },
+                  {
+                      title: '轉發',
+                      icon: 'mdi-share-variant',
+                  }
+              ],
+               
+            //   float_btn
+                direction: 'top',
+                fab: false,
+                fling: false,
+                hover: false,
+                tabs: null,
+                top: false,
+                right: true,
+                bottom: true,
+                left: false,
+                transition: 'scale-transition',
+
+                tab: null,
+                tabitems: [
+                    '育兒專欄', '家園消息', '話題交流', '其他','育兒專欄', '家園消息', '話題交流', '其他',
+                ],
+                tabtext: '寶寶愛磨牙，要怎麼處理? 孩子在初本度过的一日时光，更是他一天中最宝贵的成长黄金时间。',
+                tabtext2: '更是他一天中最宝贵的成长黄金时间。我们不希望初本幼园仅仅是一个托管孩子的地方，我们更希望它有生命力的，是一个可以让孩子感到舒适安全、可以充分自我探索、可以与他人建立链接的地方。我们的环境就是要让这里成为孩子的第二个家。孩子在初本度过的一日时光，更是他一天中最宝贵的成长黄金时间。更是他一天中最宝贵的成长黄金时间。我们不希望初本幼园仅仅是一个托管孩子的地方，我们更希望它有生命力的，是一个可以让孩子感到舒适安全、可以充分自我探索、可以与他人建立链接的地方。我们的环境就是要让这里成为孩子的第二个家。',
+          },
+          computed: {
+              sheetWidth() {
+                  switch (this.$vuetify.breakpoint.name) {
+                      case 'lg': return 600
+                      case 'xl': return 800
+                      default: return 414
+                      // case 'xs': return 220
+                      // case 'sm': return 400
+                      // case 'md': return 500
+                  }
+              },
+
+          },
+          methods: {
+              onClickOutside() {
+                  this.sheetFocus = false
+              },
+              close() {
+                  this.accors.forEach(item => {
+                      if (item.active) {
+                          _.delay(function () {
+                              item.active = false;
+                          }, 300);
+                          return false;
+                      }
+                  });
+              },
+          },
+
+          
+      })
+  </script>
+  <style>
+    .v-sheet.isFocus {
+        transform: matrix(1, 0, 0, 1, 0, 0);
+        transition-delay: 0s;
+        transition-duration: 0.2s;
+        transition-property: all;
+        transition-timing-function: ease-in-out;
+    }
+  </style>
+</body>
+
+</html>
