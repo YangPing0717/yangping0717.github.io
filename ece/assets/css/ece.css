@@ -303,8 +303,8 @@ body {
 }
 
 .v-btn:focus.border, .v-btn:active.border, .v-btn:hover.border {
-  -webkit-box-shadow: 0px 0px 0px 10px rgba(255, 255, 255, 0.2) !important;
-          box-shadow: 0px 0px 0px 10px rgba(255, 255, 255, 0.2) !important;
+  -webkit-box-shadow: 0px 0px 0px 8px rgba(255, 255, 255, 0.2) !important;
+          box-shadow: 0px 0px 0px 8px rgba(255, 255, 255, 0.2) !important;
 }
 
 .v-btn.txt_w_btn {
@@ -330,8 +330,8 @@ body {
 }
 
 .v-btn.primary_r:focus, .v-btn.primary_r:active, .v-btn.primary_r:hover {
-  -webkit-box-shadow: 0px 0px 0px 10px rgba(255, 112, 109, 0.2) !important;
-          box-shadow: 0px 0px 0px 10px rgba(255, 112, 109, 0.2) !important;
+  -webkit-box-shadow: 0px 0px 0px 8px rgba(255, 112, 109, 0.2) !important;
+          box-shadow: 0px 0px 0px 8px rgba(255, 112, 109, 0.2) !important;
   color: #e94f4c !important;
   background: #fff !important;
 }
@@ -342,8 +342,8 @@ body {
 }
 
 .v-btn.secondary_r:focus, .v-btn.secondary_r:active, .v-btn.secondary_r:hover {
-  -webkit-box-shadow: 0px 0px 0px 10px rgba(163, 123, 123, 0.2) !important;
-          box-shadow: 0px 0px 0px 10px rgba(163, 123, 123, 0.2) !important;
+  -webkit-box-shadow: 0px 0px 0px 8px rgba(163, 123, 123, 0.2) !important;
+          box-shadow: 0px 0px 0px 8px rgba(163, 123, 123, 0.2) !important;
   color: #5f3e32 !important;
   background: #fff !important;
 }
@@ -354,8 +354,8 @@ body {
 }
 
 .v-btn.info_r:focus, .v-btn.info_r:active, .v-btn.info_r:hover {
-  -webkit-box-shadow: 0px 0px 0px 10px rgba(0, 200, 227, 0.2) !important;
-          box-shadow: 0px 0px 0px 10px rgba(0, 200, 227, 0.2) !important;
+  -webkit-box-shadow: 0px 0px 0px 8px rgba(0, 200, 227, 0.2) !important;
+          box-shadow: 0px 0px 0px 8px rgba(0, 200, 227, 0.2) !important;
   color: #0ca5b9 !important;
   background: #fff !important;
 }

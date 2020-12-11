@@ -43,23 +43,12 @@
                 <v-icon>mdi-yeast</v-icon>
             </v-btn> -->
 
-            <v-menu transition="slide-y-transition" offset-y>
-                <template v-slot:activator="{ on, attrs }">
-                    <v-btn dark icon v-bind="attrs" v-on="on" class="border" :ripple="{ class: 'red--text' }"  >
-                        <v-icon>mdi-dots-vertical</v-icon>
-                    </v-btn>
-                </template>
-                <v-list v-background="'var(--gradient-0)'" dense>
-                    <v-list-item v-for="(item, i) in dotmenus" :key="i">
-                        <v-list-item-icon class="mr-2">
-                            <v-icon class="text_co">{{ item.icon }}</v-icon>
-                        </v-list-item-icon>
-                        <v-list-item-title>{{ item.title }}</v-list-item-title>
-                    </v-list-item>
-                </v-list>
-            </v-menu>
-
-
+            <v-btn
+                depressed rounded small
+                class="primary_r"
+                >
+                發佈
+            </v-btn>
         </v-app-bar>
 
 
@@ -77,23 +66,23 @@
                                 </v-avatar>
                                 <div class="ml-2">
                                     <span class="subtitle-2 brown--text text--darken-4 font-weight-bold" >顾兹莹老師
-                                        <span class="caption brown--text text--lighten-2 font-weight-bold" >來自 <span >北京幼兒所</span></span>
+                                        <span class="caption brown--text text--lighten-2" >來自 <span class="font-weight-bold">北京幼兒所</span></span>
                                     </span>
                                     <div>
                                         <v-btn
                                         x-small
-                                        color="secondary"
+                                        color="primary"  
                                         outlined
                                         rounded
                                       >
                                       <v-icon left small >
-                                            mdi-earth
-                                          </v-icon>
+                                        mdi-earth
+                                        </v-icon>
                                         公開
-                                      </v-btn>
+                                        </v-btn>
                                       <v-btn
                                         x-small
-                                        color="secondary"
+                                        color="primary"
                                         outlined
                                         rounded
                                       >
