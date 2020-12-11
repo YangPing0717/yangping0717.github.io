@@ -28,107 +28,6 @@
 <body>
   <div id="app"> 
     <v-app class="">
-        <v-navigation-drawer v-model="drawer" app v-background="'var(--gradient-4)'" 
-        src="assets/images/close-up-of-happy-little-baby-boy-with-father-PCB8CX6.png"> 
-
-            <v-list class="">
-                <v-list-item class="pl-6 pt-4" style="margin-bottom: -.6rem;">
-                  <v-list-item-avatar size="58" >
-                    <v-img src="assets/images/user.png"></v-img>
-                  </v-list-item-avatar>
-                </v-list-item>
-        
-                <v-list-item link :ripple="{ class: 'red--text' }" >
-                  <v-list-item-content class="pl-2">
-                    <v-list-item-title class="title white--text mb-1" >
-                        Catherine Lee
-                    </v-list-item-title>
-                    <v-list-item-subtitle class="white--text">園長 職稱放這裡</v-list-item-subtitle>
-                  </v-list-item-content>
-        
-                  <v-list-item-action >
-                    <v-menu transition="slide-y-transition" offset-y>
-                        <template v-slot:activator="{ on, attrs }">
-                            <!-- <v-btn text rounded class="font-weight-black pl-2 txt_w_btn" v-bind="attrs" 
-                                v-on="on" value="left" :ripple="{ class: 'red--text' }">
-                                Catherine Lee
-                                <v-icon right dark>
-                                    mdi-chevron-down
-                                </v-icon>
-                            </v-btn> -->
-                            <v-icon class="white--text" v-bind="attrs" v-on="on" value="left" >mdi-chevron-down</v-icon>
-                        </template>
-
-                        <v-list v-background="'var(--gradient-0)'" dense class="pt-3 pb-3">
-                            <v-list-item-group v-model="model" color="indigo">
-                                <v-list-item v-for="(item, i) in items" :key="i" link :ripple="{ class: 'red--text' }" >
-                                    <v-divider v-if="!item.title" :key="`divider-${i}`"
-                                        style="flex: 1 0 100%; border-color: rgba(0,0,0,.15);">
-                                    </v-divider>
-                                    <v-list-item-icon class="mr-2">
-                                        <v-icon class="text_co">{{ item.icon }}</v-icon>
-                                    </v-list-item-icon>
-                                    <v-list-item-title class="text_co">{{ item.title }}</v-list-item-title>
-                                </v-list-item>
-                            </v-list-item-group>
-                        </v-list>
-                    </v-menu>
-
-                  </v-list-item-action>
-                </v-list-item>
-              </v-list>
-
-              <v-divider color="#FFAB91"></v-divider>
-
-            <v-list dense rounded>
-                <v-list-item link href="#/">
-                    <v-list-item-action>
-                        <v-icon>mdi-home</v-icon>
-                    </v-list-item-action>
-                    <v-list-item-content>
-                        <v-list-item-title>Home</v-list-item-title>
-                    </v-list-item-content>
-                </v-list-item>
-                <v-list-item link href="#/About">
-                    <v-list-item-action >
-                        <v-icon>mdi-email</v-icon>
-                    </v-list-item-action>
-                    <v-list-item-content>
-                        <v-list-item-title>Contact</v-list-item-title>
-                    </v-list-item-content>
-                </v-list-item>
-                <v-list-item link href="#/">
-                    <v-list-item-action >
-                        <v-icon>mdi-file-video</v-icon>
-                    </v-list-item-action>
-                    <v-list-item-content >
-                        <v-list-item-title>0-3 課程</v-list-item-title>
-                    </v-list-item-content>
-                </v-list-item>
-            </v-list>
-
-            <v-list dense rounded>
-                <v-subheader>管理者</v-subheader>
-                <v-list-group v-model="item.active" v-for="(item, i) in accors" :key="i"
-                    :prepend-icon="item.action" no-action>
-                    <v-list-item slot="activator">
-                        <v-list-item-content>
-                            <v-list-item-title>{{ item.title }}</v-list-item-title>
-                        </v-list-item-content>
-                    </v-list-item>
-                    <v-list-item v-for="subItem in item.items" :key="subItem.title" ripple @click="close">
-                        <v-list-item-content>
-                            <v-list-item-title>{{ subItem.title }}</v-list-item-title>
-                        </v-list-item-content>
-                        <v-list-item-action>
-                            <v-icon>{{ subItem.action }}</v-icon>
-                        </v-list-item-action>
-                    </v-list-item>
-                </v-list-group>
-            </v-list>
-
-        </v-navigation-drawer>
-
         <v-app-bar app flat class="blur">
                 <v-btn icon
                 v-on="on" :ripple="{ class: 'red--text' }"
@@ -169,7 +68,7 @@
             <v-container fluid class="pt-0" >
                 <v-row class="d-flex justify-center" >
                     <template >
-                        <v-card tile flat :width="sheetWidth" style="padding-bottom: calc(100vh - 500px);" >
+                        <v-card tile flat :width="sheetWidth" style="padding-bottom: calc(100vh - 417px);" >
                             <v-col class="d-flex align-center">
                                 <v-avatar size="48" class="d-inline-block ">
                                     <img
@@ -177,9 +76,33 @@
                                     >
                                 </v-avatar>
                                 <div class="ml-2">
-                                    <span class="subtitle-2 brown--text text--darken-4 font-weight-bold" >顾兹莹老師</span>
-                                    <span class="caption d-block brown--text text--lighten-2 font-weight-bold" ><span >5</span> 小時 來自 <span>北京幼兒所</span></span>
+                                    <span class="subtitle-2 brown--text text--darken-4 font-weight-bold" >顾兹莹老師
+                                        <span class="caption brown--text text--lighten-2 font-weight-bold" >來自 <span >北京幼兒所</span></span>
+                                    </span>
+                                    <div>
+                                        <v-btn
+                                        x-small
+                                        color="secondary"
+                                        outlined
+                                        rounded
+                                      >
+                                      <v-icon left small >
+                                            mdi-earth
+                                          </v-icon>
+                                        公開
+                                      </v-btn>
+                                      <v-btn
+                                        x-small
+                                        color="secondary"
+                                        outlined
+                                        rounded
+                                      >
+                                        <v-icon left x-small class="fas fa-images"></v-icon>
+                                        建立相冊
+                                      </v-btn>
+                                    </div>
                                 </div>
+                                
 
                                 <div class="ml-auto">
                                     <v-menu transition="slide-y-transition" offset-y >
