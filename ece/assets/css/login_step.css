@@ -59,3 +59,8 @@
 .v-text-field > .v-input__control > .v-input__slot:after {
   border-color: var(--txt-light1);
 }
+
+.v-application .primary--text {
+  color: #fff !important;
+  caret-color: #fff !important;
+}
