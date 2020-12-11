@@ -146,7 +146,7 @@
                                         v-for="tile in tiles"
                                         :key="tile.title"
                                         @click="sheet = false" 
-                                        
+                                        :ripple="{ class: 'red--text' }"  
                                         >
                                         <v-list-item-avatar>
                                             <v-avatar
