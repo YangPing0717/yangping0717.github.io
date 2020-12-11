@@ -1,0 +1,61 @@
+.loginstep .v-select__slot {
+  height: 3.6rem;
+}
+
+.loginstep .v-select__slot .v-select__selections {
+  display: block;
+  text-align: center;
+  line-height: 2rem;
+}
+
+.loginstep .v-select__slot .v-select__selections input {
+  display: none;
+}
+
+.loginstep .v-select__slot .v-select__selections .v-list .v-list-item--active {
+  color: var(--txt-dark) !important;
+}
+
+.loginstep .v-select__slot .v-select__selections .v-select__selection--comma {
+  font-size: 1.9rem;
+  color: var(--txt-light1) !important;
+}
+
+.loginstep .v-select__slot .v-icon.v-icon {
+  margin-top: 1.4rem;
+  font-size: 2.2rem;
+}
+
+.loginstep .v-text-field__slot {
+  height: 2.8rem;
+}
+
+.loginstep .v-text-field__slot input {
+  font-size: 1.8rem;
+  color: var(--txt-light1) !important;
+}
+
+.menuable__content__active:not(.v-menu__content--fixed) .v-list-item .v-list-item__title {
+  font-size: 1.4rem !important;
+}
+
+.theme--light.v-list-item--active:before {
+  opacity: 1;
+}
+
+.v-list-item__content {
+  z-index: 1;
+}
+
+.v-application .primary--text {
+  color: #fff !important;
+  caret-color: var(--txt-dark2) !important;
+}
+
+.mdi-menu-down::before {
+  color: var(--txt-light1);
+}
+
+.v-text-field > .v-input__control > .v-input__slot:after {
+  border-color: var(--txt-light1);
+}

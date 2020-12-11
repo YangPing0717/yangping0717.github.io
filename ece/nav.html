@@ -30,8 +30,58 @@
     <v-app class="">
         <v-navigation-drawer v-model="drawer" app v-background="'var(--gradient-4)'" 
         src="assets/images/close-up-of-happy-little-baby-boy-with-father-PCB8CX6.png"> 
+
+            <v-list class="">
+                <v-list-item class="pl-6 pt-4" style="margin-bottom: -.6rem;">
+                  <v-list-item-avatar size="58" >
+                    <v-img src="assets/images/user.png"></v-img>
+                  </v-list-item-avatar>
+                </v-list-item>
+        
+                <v-list-item link :ripple="{ class: 'red--text' }" >
+                  <v-list-item-content class="pl-2">
+                    <v-list-item-title class="title white--text mb-1" >
+                        Catherine Lee
+                    </v-list-item-title>
+                    <v-list-item-subtitle class="white--text">園長 職稱放這裡</v-list-item-subtitle>
+                  </v-list-item-content>
+        
+                  <v-list-item-action >
+                    <v-menu transition="slide-y-transition" offset-y>
+                        <template v-slot:activator="{ on, attrs }">
+                            <!-- <v-btn text rounded class="font-weight-black pl-2 txt_w_btn" v-bind="attrs" 
+                                v-on="on" value="left" :ripple="{ class: 'red--text' }">
+                                Catherine Lee
+                                <v-icon right dark>
+                                    mdi-chevron-down
+                                </v-icon>
+                            </v-btn> -->
+                            <v-icon class="white--text" v-bind="attrs" v-on="on" value="left" >mdi-chevron-down</v-icon>
+                        </template>
+
+                        <v-list v-background="'var(--gradient-0)'" dense class="pt-3 pb-3">
+                            <v-list-item-group v-model="model" color="indigo">
+                                <v-list-item v-for="(item, i) in items" :key="i" link :ripple="{ class: 'red--text' }" >
+                                    <v-divider v-if="!item.title" :key="`divider-${i}`"
+                                        style="flex: 1 0 100%; border-color: rgba(0,0,0,.15);">
+                                    </v-divider>
+                                    <v-list-item-icon class="mr-2">
+                                        <v-icon class="text_co">{{ item.icon }}</v-icon>
+                                    </v-list-item-icon>
+                                    <v-list-item-title class="text_co">{{ item.title }}</v-list-item-title>
+                                </v-list-item>
+                            </v-list-item-group>
+                        </v-list>
+                    </v-menu>
+
+                  </v-list-item-action>
+                </v-list-item>
+              </v-list>
+
+              <v-divider color="#FFAB91"></v-divider>
+
             <v-list dense rounded>
-                <v-row class="mt-8">
+                <!-- <v-row class="mt-8">
                     <v-col cols="3">
                         <v-avatar size="58" class="ml-3 mb-5"><img src="assets/images/user.png"
                             alt="user">
@@ -69,7 +119,7 @@
                             </v-menu>
                         </v-col>
                     </v-col>
-                </v-row>
+                </v-row> -->
 
                 <v-list-item link href="#/">
                     <v-list-item-action>
@@ -127,7 +177,7 @@
                     src="assets/images/logo_h.svg" transition="scale-transition"
                     width="120" />
             </div> -->
-            <div class="font-weight-black navbar_title">社群</div>
+            <div class="font-weight-black brown--text text--darken-3">社群</div>
             <v-spacer></v-spacer>
             
             <!-- <v-btn dark icon v-on="on" class="border" :ripple="{ class: 'red--text' }"  >
@@ -149,6 +199,8 @@
                     </v-list-item>
                 </v-list>
             </v-menu>
+
+
         </v-app-bar>
 
 
@@ -191,6 +243,9 @@
                                                 <span class="subtitle-2 brown--text text--darken-4 font-weight-bold" >顾兹莹老師</span>
                                                 <span class="caption d-block brown--text text--lighten-2 font-weight-bold" ><span >5</span> 小時 來自 <span>北京幼兒所</span></span>
                                             </div>
+
+
+                                            
                                             <div class="ml-auto">
                                                 <v-menu transition="slide-y-transition" offset-y >
                                                     <template v-slot:activator="{ on, attrs }">
@@ -370,7 +425,6 @@
             </v-btn>
 
             
-
             <v-btn value="nearby" :ripple="{ class: 'red--text' }" class="ml-10">
                 <span>社群</span>
                 <v-icon>mdi-account-multiple</v-icon>
@@ -381,9 +435,9 @@
             </v-btn>
             <v-spacer></v-spacer>
 
-            <div class="gooey">
+            <!-- <div class="gooey">
                 <span class="goo-index "></span>
-            </div>
+            </div> -->
             
 
         </v-bottom-navigation>
@@ -393,12 +447,13 @@
                 fab depressed dark 
                 color='error'
                 v-background="'var(--gc-error)'"
+                class="home_btn"
                 >
                 <v-icon dark>mdi-home-outline</v-icon>
             </v-btn>
         </div>
 
-        <v-card class="float_posi">
+        <div class="float_posi">
             <v-speed-dial
             v-model="fab"
             :top="top"
@@ -428,6 +483,7 @@
                         depressed
                         class="info_r"
                         v-on="on"
+                        href="creat.html"
                     >
                         <v-icon>mdi-plus</v-icon>
                     </v-btn>
@@ -443,6 +499,7 @@
                         depressed
                         class="info_r"
                         v-on="on"
+                        
                     >
                         <v-icon>mdi-pencil</v-icon>
                     </v-btn>
@@ -465,7 +522,7 @@
                 <span class="">刪除貼文</span>
             </v-tooltip>
             </v-speed-dial>
-        </v-card>
+        </div>
 
     </v-app>
   </div>

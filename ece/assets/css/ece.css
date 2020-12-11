@@ -250,47 +250,6 @@ body.is-loading #bg {
   text-decoration: none;
 }
 
-.loginstep .v-select__slot {
-  height: 3.6rem;
-}
-
-.loginstep .v-select__slot .v-select__selections {
-  display: block;
-  text-align: center;
-  line-height: 2.2rem;
-}
-
-.loginstep .v-select__slot .v-select__selections input {
-  display: none;
-}
-
-.loginstep .v-select__slot .v-select__selections .v-list .v-list-item--active {
-  color: var(--txt-dark) !important;
-}
-
-.loginstep .v-select__slot .v-select__selections .v-select__selection--comma {
-  font-size: 1.9rem;
-  color: var(--txt-light1) !important;
-}
-
-.loginstep .v-select__slot .v-icon.v-icon {
-  margin-top: 1rem;
-  font-size: 2.2rem;
-}
-
-.loginstep .v-text-field__slot {
-  height: 2.8rem;
-}
-
-.loginstep .v-text-field__slot input {
-  font-size: 1.9rem;
-  color: var(--txt-light1) !important;
-}
-
-.menuable__content__active:not(.v-menu__content--fixed) .v-list-item .v-list-item__title {
-  font-size: 1.4rem !important;
-}
-
 .navbar_title {
   color: var(--txt-dark);
 }
@@ -454,10 +413,11 @@ body {
   left: 0;
   right: 0;
   bottom: 1.8rem;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  margin: auto;
+}
+
+.home_posi .home_btn {
+  -webkit-box-shadow: 0 0 12px 12px #fff, 0 0 20px 0px rgba(255, 255, 255, 0.15), 0 0 30px 10px rgba(255, 255, 255, 0.4) !important;
+          box-shadow: 0 0 12px 12px #fff, 0 0 20px 0px rgba(255, 255, 255, 0.15), 0 0 30px 10px rgba(255, 255, 255, 0.4) !important;
 }
 
 .v-tooltip__content {
@@ -704,6 +664,12 @@ body {
 
 .theme--light.v-tabs-items {
   background-color: #efebe9 !important;
+}
+
+.v-text-field__slot textarea {
+  color: var(--txt-dark1) !important;
+  font-size: 1.2rem;
+  font-weight: bold;
 }
 
 .fade-enter-active, .fade-leave-active {
