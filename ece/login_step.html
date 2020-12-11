@@ -51,7 +51,7 @@
                         class="px-4 loginstep" 
                         color="transparent" >
                         
-                        <transition name="slide-fade">
+                        <transition name="fade">
                             <div v-if="showMessage">
                                 <v-col class="d-flex justify-center align-center" style="margin-top: -3rem;" >
                                     <h1 class="brown--text text--lighten-1 mr-2 ">我是</h1>
@@ -63,9 +63,7 @@
                                     >
                                     </v-select>
                                 </v-col>
-                                <v-col class="d-flex justify-center align-center " style="margin-top: -3rem;" 
-
-                                >
+                                <v-col class="d-flex justify-center align-center " style="margin-top: -3rem;" >
                                     <h1 class="brown--text text--lighten-1 mr-2">我想</h1>
                                     <v-select
                                     :items="selectitems2"
@@ -82,8 +80,7 @@
                             </div>
                         </transition>
 
-                        
-                        <transition name="slide-fade">
+                        <transition name="">
                             <div v-if="showMessage2" > 
                                 <v-col class="" style="margin-top: -3rem;" >
                                     <h1 class="brown--text text--lighten-1 mr-2 text-center">请输入邀请码</h1>

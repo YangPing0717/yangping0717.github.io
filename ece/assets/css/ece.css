@@ -672,13 +672,8 @@ body {
   font-weight: bold;
 }
 
-.fade-enter-active, .fade-leave-active {
-  -webkit-transition: opacity .3s;
-  transition: opacity .3s;
-}
-
-.fade-enter, .fade-leave-to {
-  opacity: 0;
+.v-application a {
+  text-decoration: none;
 }
 
 .slide-fade-enter-active {
@@ -691,12 +686,87 @@ body {
   transition: all 0.5s cubic-bezier(1, 0.5, 0.8, 1);
 }
 
-.slide-fade-enter, .slide-fade-leave-to {
-  -webkit-transform: translateX(10px);
-          transform: translateX(10px);
+.slide-fade-enter {
+  -webkit-transform: translateX(-10px);
+          transform: translateX(-10px);
   opacity: 0;
 }
 
-.v-application a {
-  text-decoration: none;
+.slide-fade-leave-to {
+  -webkit-transform: translateX(-100px);
+          transform: translateX(-100px);
+  opacity: 0;
+}
+
+.animation {
+  opacity: 1;
+  -webkit-animation-name: fadeInOpacity;
+          animation-name: fadeInOpacity;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-timing-function: ease-in;
+          animation-timing-function: ease-in;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+}
+
+@-webkit-keyframes fadeInOpacity {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInOpacity {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.dummy-wrap {
+  -webkit-animation: slideup 2s;
+          animation: slideup 2s;
+}
+
+@-webkit-keyframes slideup {
+  0% {
+    top: 0px;
+  }
+  75% {
+    top: 0px;
+  }
+  100% {
+    top: -20px;
+  }
+}
+
+@keyframes slideup {
+  0% {
+    top: 0px;
+  }
+  75% {
+    top: 0px;
+  }
+  100% {
+    top: -20px;
+  }
+}
+
+.fade-enter, .fade-enter-active {
+  visibility: visible;
+  opacity: 1;
+  -webkit-transition: opacity .3s ease-in-out;
+  transition: opacity .3s ease-in-out;
+}
+
+.fade-leave-to, .fade-leave-active {
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: visibility 0s .3s, opacity .2s ease-in-out;
+  transition: visibility 0s .3s, opacity .2s ease-in-out;
 }
