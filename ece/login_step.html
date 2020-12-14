@@ -94,18 +94,6 @@
                                 </v-btn>
                             </div>
                         </transition>
-
-
-                        <select v-model="product.selectedCarrier">
-                            <option v-bind:value="{id: carrier.id, name: carrier.name}" v-for="carrier in carriers">{{ carrier.name }}</option>
-                        </select>
-                          
-                        <div v-if="product.selectedCarrier.name === 'Custom'"> <!-- only display if 'Custom' option selected -->
-                        <label>Enter Custom Carrier Name:</label>
-                        <input type="text" v-model="customCarrierName">
-                        </div>
-                        
-                        <!-- <pre>Selected Value: {{ product.selectedCarrier }}</pre> -->
                         
                         <pre v-if="product.selectedCarrier.name === 'Custom'">Custom name: {{ customCarrierName }}</pre>
                         
@@ -118,7 +106,7 @@
                                     dot
                                     offset-x="2"
                                     offset-y="2"
-                                    color="pink accent-3"
+                                    color="red accent-3"
                                 >
                                     <v-avatar size="48">
                                     <v-img src="assets/images/user-small.png"></v-img>
