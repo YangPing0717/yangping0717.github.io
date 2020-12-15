@@ -200,7 +200,6 @@
                 </v-list>
             </v-menu>
 
-
         </v-app-bar>
 
 
@@ -216,12 +215,19 @@
                             color="error"
                             show-arrows
                             >
+
                             <v-tab
                                 v-for="item in tabitems"
                                 :key="item"
                             >
-                                {{ item }}
+                                <v-badge
+                                    color="red accent-2"
+                                    content="2"
+                                >
+                                {{ item }} 
+                                </v-badge>
                             </v-tab>
+
                             </v-tabs>
                             <v-divider ></v-divider>
                             <v-tabs-items v-model="tab" >
@@ -272,7 +278,7 @@
                                     
 
                                     <v-img
-                                    src="assets/images/baby_1.jpg"
+                                        src="assets/images/baby_1.jpg"
                                     ></v-img>
                                     <!-- <v-card-text class="brown--text text--lighten-2">{{ tabtext2 }}<a color="primary" href="article.html"> … 全文</a></v-card-text> -->
 
@@ -407,9 +413,112 @@
                             </v-tabs-items>
                         </v-card>
 
-                        
                     </template>
+
                 </v-row>
+
+                <!-- <template>
+                    <v-row justify="center">
+                        <v-dialog
+                        v-model="dialog"
+                        fullscreen
+                        hide-overlay
+                        transition="dialog-bottom-transition"
+                        >
+                        <template v-slot:activator="{ on, attrs }">
+                            <v-btn
+                            color="primary"
+                            dark
+                            v-bind="attrs"
+                            v-on="on"
+                            >
+                            Open Dialog
+                            </v-btn>
+                        </template>
+                        <v-card>
+                            <v-toolbar
+                            dark
+                            color="primary"
+                            >
+                            <v-btn
+                                icon
+                                dark
+                                @click="dialog = false"
+                            >
+                                <v-icon>mdi-close</v-icon>
+                            </v-btn>
+                            <v-toolbar-title>Settings</v-toolbar-title>
+                            <v-spacer></v-spacer>
+                            <v-toolbar-items>
+                                <v-btn
+                                dark
+                                text
+                                @click="dialog = false"
+                                >
+                                Save
+                                </v-btn>
+                            </v-toolbar-items>
+                            </v-toolbar>
+                            <v-list
+                            three-line
+                            subheader
+                            >
+                            <v-subheader>User Controls</v-subheader>
+                            <v-list-item>
+                                <v-list-item-content>
+                                <v-list-item-title>Content filtering</v-list-item-title>
+                                <v-list-item-subtitle>Set the content filtering level to restrict apps that can be downloaded</v-list-item-subtitle>
+                                </v-list-item-content>
+                            </v-list-item>
+                            <v-list-item>
+                                <v-list-item-content>
+                                <v-list-item-title>Password</v-list-item-title>
+                                <v-list-item-subtitle>Require password for purchase or use password to restrict purchase</v-list-item-subtitle>
+                                </v-list-item-content>
+                            </v-list-item>
+                            </v-list>
+                            <v-divider></v-divider>
+                            <v-list
+                            three-line
+                            subheader
+                            >
+                            <v-subheader>General</v-subheader>
+                            <v-list-item>
+                                <v-list-item-action>
+                                <v-checkbox v-model="notifications"></v-checkbox>
+                                </v-list-item-action>
+                                <v-list-item-content>
+                                <v-list-item-title>Notifications</v-list-item-title>
+                                <v-list-item-subtitle>Notify me about updates to apps or games that I downloaded</v-list-item-subtitle>
+                                </v-list-item-content>
+                            </v-list-item>
+                            <v-list-item>
+                                <v-list-item-action>
+                                <v-checkbox v-model="sound"></v-checkbox>
+                                </v-list-item-action>
+                                <v-list-item-content>
+                                <v-list-item-title>Sound</v-list-item-title>
+                                <v-list-item-subtitle>Auto-update apps at any time. Data charges may apply</v-list-item-subtitle>
+                                </v-list-item-content>
+                            </v-list-item>
+                            <v-list-item>
+                                <v-list-item-action>
+                                <v-checkbox v-model="widgets"></v-checkbox>
+                                </v-list-item-action>
+                                <v-list-item-content>
+                                <v-list-item-title>Auto-add widgets</v-list-item-title>
+                                <v-list-item-subtitle>Automatically add home screen widgets</v-list-item-subtitle>
+                                </v-list-item-content>
+                            </v-list-item>
+                            </v-list>
+                        </v-card>
+                        </v-dialog>
+                    </v-row>
+                </template> -->
+
+
+
+
                 
             </v-container>
         </v-main>
@@ -458,6 +567,9 @@
             </v-btn>
         </div>
 
+
+
+        
         <div class="float_posi">
             <v-speed-dial
             v-model="fab"
@@ -480,21 +592,200 @@
                 </v-btn>
             </template>
 
-            <v-tooltip left :value="true">
+
+            <!-- dialogs full -->
+            <template>
+            <v-row justify="center">
+            <v-dialog
+            v-model="dialog"
+            fullscreen
+            hide-overlay
+            transition="dialog-bottom-transition"
+            >
                 <template v-slot:activator="{ on, attrs }">
                     <v-btn
                         fab
                         small
                         depressed
                         class="info_r"
+                        v-bind="attrs"
                         v-on="on"
-                        href="creat.html"
                     >
                         <v-icon>mdi-plus</v-icon>
                     </v-btn>
+                    <span>攥寫貼文</span>
                 </template>
-                <span>攥寫貼文</span>
-            </v-tooltip>
+                
+            <!-- <v-tooltip left value="true"></v-tooltip> -->
+
+            <!-- <template v-slot:activator="{ on, attrs }">
+                <v-btn
+                color="primary"
+                dark
+                v-bind="attrs"
+                v-on="on"
+                >
+                Open Dialog
+                </v-btn>
+            </template> -->
+
+            <v-card flat>
+                <v-toolbar
+                class="blur"
+                flat
+                tile
+                >
+                <v-btn
+                    icon
+                    :ripple="{ class: 'red--text' }"
+                    @click="dialog = false"
+
+                >
+                    <v-icon>mdi-close</v-icon>
+                </v-btn>
+                <v-spacer></v-spacer>
+                <v-toolbar-title class="body-1 font-weight-black brown--text text--darken-3">建立貼文</v-toolbar-title>
+                <v-spacer></v-spacer>
+                <v-btn
+                depressed rounded small
+                class="primary_r"
+                @click="dialog = false"
+                >
+                發佈
+                </v-btn>
+                </v-toolbar>
+                <v-divider></v-divider>
+
+
+                <!-- dialogs content -->
+                <div class="brown lighten-5 " 
+                >
+                <v-container fluid class="pt-0" >
+                    <v-row class="d-flex justify-center" >
+                        <template >
+                            <v-card tile flat :width="sheetWidth" style="padding-bottom: calc(100vh - 510px);" >
+                                <v-col class="d-flex align-center">
+                                    <v-avatar size="48" class="d-inline-block ">
+                                        <img
+                                        src="assets/images/user-small.png"
+                                        >
+                                    </v-avatar>
+                                    <div class="ml-2">
+                                        <span class="subtitle-2 brown--text text--darken-4 font-weight-bold" >顾兹莹老師
+                                            <span class="caption brown--text text--lighten-2" >來自 <span class="font-weight-bold">北京幼兒所</span></span>
+                                        </span>
+                                        <div>
+                                            <v-btn
+                                            x-small
+                                            color="primary"  
+                                            outlined
+                                            rounded
+                                        >
+                                        <v-icon left small >
+                                            mdi-earth
+                                            </v-icon>
+                                            公開
+                                            </v-btn>
+                                        <v-btn
+                                            x-small
+                                            color="primary"
+                                            outlined
+                                            rounded
+                                        >
+                                            <v-icon left x-small class="fas fa-images"></v-icon>
+                                            建立相冊
+                                        </v-btn>
+                                        </div>
+                                    </div>
+                                    
+
+                                    <div class="ml-auto">
+                                        <v-menu transition="slide-y-transition" offset-y >
+                                            <template v-slot:activator="{ on, attrs }">
+                                                <v-btn dark icon v-bind="attrs" v-on="on" class="border" :ripple="{ class: 'red--text' }"  >
+                                                    <v-icon>mdi-dots-vertical</v-icon>
+                                                </v-btn>
+                                            </template>
+                                            <v-list v-background="'var(--gradient-0)'" dense>
+                                                <v-list-item v-for="(item, i) in articledotmenus" :key="i">
+                                                    <v-list-item-icon class="mr-2">
+                                                        <v-icon class="text_co">{{ item.icon }}</v-icon>
+                                                    </v-list-item-icon>
+                                                    <v-list-item-title>{{ item.title }}</v-list-item-title>
+                                                </v-list-item>
+                                            </v-list>
+                                        </v-menu>
+                                    </div>
+                                </v-col> 
+
+                                <template>
+                                    <div class="text-center" style="z-index: 1000;"
+                                    >
+                                        <v-bottom-sheet 
+                                        v-model="sheet"
+                                        hide-overlay
+                                        scrollable
+                                        >
+                                            <template v-slot:activator="{ on, attrs }">
+                                                <v-container fluid>
+                                                    <v-textarea style="margin-top: -1.2rem;"
+                                                    solo
+                                                    flat
+                                                    counter
+                                                    clearable
+                                                    no-resize
+                                                    rows="10"
+                                                    clear-icon="mdi-close-circle-outline" 
+                                                    :label="none"
+                                                    value="顾兹莹，分享些什麼..."
+                                                    v-bind="attrs"
+                                                    v-on="on"
+                                                    ></v-textarea>
+                                                </v-container>
+                                            </template>
+                                        
+                                        <v-list 
+                                        height="400px"
+                                        >
+                                            <v-list-item
+                                            v-for="tile in tiles"
+                                            :key="tile.title"
+                                            @click="sheet = false" 
+                                            :ripple="{ class: 'red--text' }"  
+                                            >
+                                            <v-list-item-avatar>
+                                                <v-avatar
+                                                size="32px"
+                                                tile
+                                                >
+                                                <img
+                                                    :src="`assets/images/icons/${tile.img}`"
+                                                    :alt="tile.title"
+                                                >
+                                                </v-avatar>
+                                            </v-list-item-avatar>
+                                            <v-list-item-title>{{ tile.title }}</v-list-item-title>
+                                            </v-list-item>
+                                        </v-list>
+                                        </v-bottom-sheet>
+                                    </div>
+                                </template>
+
+
+                            </v-card>
+                        </template>
+                    </v-row>
+
+                </v-container>
+                </div>
+
+            </v-card>
+
+            </v-dialog>
+
+            </v-row>
+            </template>
+            
 
             <v-tooltip left :value="true">
                 <template v-slot:activator="{ on, attrs }">
@@ -504,7 +795,7 @@
                         depressed
                         class="info_r"
                         v-on="on"
-                        
+                        href="creat.html"
                     >
                         <v-icon>mdi-pencil</v-icon>
                     </v-btn>
@@ -526,8 +817,18 @@
                 </template>
                 <span class="">刪除貼文</span>
             </v-tooltip>
+
             </v-speed-dial>
         </div>
+
+        
+
+
+
+
+
+
+
 
     </v-app>
   </div>
@@ -709,6 +1010,31 @@
                 ],
                 tabtext: '寶寶愛磨牙，要怎麼處理? 孩子在初本度过的一日时光，更是他一天中最宝贵的成长黄金时间。',
                 tabtext2: '孩子在初本度过的一日时光，更是他一天中最宝贵的成长黄金时间。更是他一天中最宝贵的成长黄金时间。我们不希望初本幼园仅仅是一个托管孩子的地方，我们更希望它有生命力的，是一个可以让孩子感到舒适安全、可以充分自我探索、可以与他人建立链接的地方。我们的环境就是要让这里成为孩子的第二个家。',
+          
+                // dialogs
+                dialog: false,
+                notifications: false,
+                sound: true,
+                widgets: false,
+
+                // bottom sheet
+                sheet: true,
+                tiles: [
+                    { img: 'user-friends-solid.svg', title: '建立朋友圈' }, 
+                    { img: 'photo-video-solid.svg', title: '相片/影片' },
+                    { img: 'alternate_email-24px.svg', title: '標註朋友' },
+                    { img: 'smile-regular.svg', title: '感受 / 活動' },
+                    { img: 'map-marker-alt-solid.svg', title: '你在哪裡？' },
+                    { img: 'camera-solid.svg', title: '取用你的相機' },
+                    { img: 'alternate_email-24px.svg', title: '標註朋友' },
+                    { img: 'smile-regular.svg', title: '感受 / 活動' },
+                    { img: 'map-marker-alt-solid.svg', title: '你在哪裡？' },
+                    { img: 'camera-solid.svg', title: '取用你的相機' },
+                ],
+
+                
+
+                
           },
           computed: {
               sheetWidth() {

@@ -51,7 +51,7 @@
                         class="px-4 loginstep" 
                         color="transparent" >
                         
-                        <transition name="fade">
+                        <transition name="slide-fade">
                             <div v-if="showMessage">
                                 <v-col class="d-flex justify-center align-center" style="margin-top: -3rem;" >
                                     <h1 class="brown--text text--lighten-1 mr-2 ">我是</h1>
@@ -94,8 +94,7 @@
                                 </v-btn>
                             </div>
                         </transition>
-                        
-                        <pre v-if="product.selectedCarrier.name === 'Custom'">Custom name: {{ customCarrierName }}</pre>
+
                         
                         <v-col class="d-flex align-end align-md-center" style="height: 150px;"  >
                             <v-col class="d-flex pa-0 " >

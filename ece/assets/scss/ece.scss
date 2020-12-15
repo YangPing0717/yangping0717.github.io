@@ -519,7 +519,12 @@ body {
   right: 0;
   bottom: 1.8rem;
   .home_btn {
-    box-shadow: 0 0 12px 12px #fff, 0 0 20px 0px rgba(255, 255, 255, 0.15),0 0 30px 10px rgba(255, 255, 255, 0.4) !important;
+    box-shadow: 0 0 15px 12px #ffffff, 0 0 20px 0px rgba(255, 255, 255, 0.15),0 0 30px 10px rgba(255, 169, 169, 0.4) !important;
+    border: 5px solid #fff;
+    color: #fff !important;
+    &:focus, &:active, &:hover{
+      background: var(--blush-high) !important; 
+    }
   }
 }
 
@@ -721,6 +726,34 @@ body {
   text-decoration: none;
 }
 
+// .v-dialog__content {
+//   z-index: 6 !important;
+// }
+
+
+// .v-bottom-sheet {
+//   // z-index: 203 !important;
+// }
+// .v-dialog.v-dialog--active.v-bottom-sheet {
+//   z-index: 500 !important;
+//   .v-list.v-sheet {
+//     z-index: 500 !important;
+//   }
+// }
+
+// .v-bottom-sheet {
+//   z-index: 206; 
+// }
+
+.v-dialog__content {
+  // z-index: initial !important;
+  &.v-dialog__content--active {
+    .v-bottom-sheet {
+      z-index: 206 !important;
+    }
+  }
+}
+
 
 
 
@@ -734,21 +767,42 @@ body {
 // }
 
 
+// fade
+.fade-enter, .fade-enter-active {
+  visibility: visible;
+  opacity: 1;
+  transition: opacity .3s ease-in-out;
+}
+.fade-leave-to, .fade-leave-active {
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s .3s, opacity .2s ease-in-out;
+
+}
+
+
+
 // slide-fade
 .slide-fade-enter-active {
   transition: all .3s ease;
 }
 .slide-fade-leave-active {
-  transition: all .5s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+  transition: all .5s cubic-bezier(.15, .8, 0.7, .4); 
+  
 }
+// cubic-bezier(.11,.94,.68,.36)
+// transition: all .5s cubic-bezier(1.0, 0.5, 0.8, 1.0);  原
+// cubic-bezier 漸變樣式 動畫時間 延遲時間
+
 .slide-fade-enter {
-  transform: translateX(-10px);
+  transform: translateX(20px);
   opacity: 0;
 }
 .slide-fade-leave-to {
-  transform: translateX(-100px);
+  transform: translateY(-60px);
   opacity: 0;
 }
+
 
     
 .animation {
@@ -777,13 +831,5 @@ body {
 }
 
 
-.fade-enter, .fade-enter-active {
-  visibility: visible;
-  opacity: 1;
-  transition: opacity .3s ease-in-out;
-}
-.fade-leave-to, .fade-leave-active {
-  visibility: hidden;
-  opacity: 0;
-  transition: visibility 0s .3s, opacity .2s ease-in-out;
-}
+
+

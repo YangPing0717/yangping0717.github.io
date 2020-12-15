@@ -119,7 +119,7 @@
                                     v-model="sheet"
                                     hide-overlay
                                     scrollable
-                                    
+                                    z-index="1000"
                                     >
                                         <template v-slot:activator="{ on, attrs }">
                                             <v-container fluid>
@@ -175,6 +175,9 @@
                         
                     </template>
                 </v-row>
+
+                
+
                 
             </v-container>
         </v-main>
