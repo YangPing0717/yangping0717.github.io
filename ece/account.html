@@ -341,9 +341,11 @@
                                         <v-card 
                                           flat
                                           tile 
-                                          v-background="'var(--gradient-0)'"
-                                          class="px-4 py-2 mb-2"
+                                          class="mb-2"
                                         >
+                                        <v-img 
+                                          src="assets/images/user_header_bg-13.png">
+                                          <div class="px-4 py-2">
                                           <v-card-title class="h6 brown--text text--darken-4 mb-2">
                                             <v-icon class="fas fa-clipboard-list mr-3 red--text "></v-icon> 訂單資訊 
                                           </v-card-title>
@@ -354,6 +356,8 @@
                                             狀態 <span class="brown--text text--lighten-1">已出貨</span><br>
                                             總金額 <span class="brown--text text--lighten-1">¥8888</span>
                                           </v-card-subtitle>
+                                        </div>
+                                        </v-img>
                                         </v-card>
 
                                         <!-- table -->
@@ -364,13 +368,13 @@
                                             <template v-slot:default>
                                               <thead >
                                                 <tr>
-                                                  <th class="text-left brown lighten-5">
+                                                  <th class="text-left yellow lighten-5">
                                                     產品
                                                   </th>
-                                                  <th class="text-left brown lighten-5">
+                                                  <th class="text-left yellow lighten-5">
                                                     明細
                                                   </th>
-                                                  <th class="text-left brown lighten-5">
+                                                  <th class="text-left yellow lighten-5">
                                                     價格
                                                   </th>
                                                 </tr>
@@ -404,10 +408,6 @@
                               </v-tabs-items>
                             </v-card>
                           </v-row>
-
-
-
-
 
                           </v-navigation-drawer>
 
@@ -1100,6 +1100,11 @@
                 img: '袋.jpg',
                 name: '包袋 一书三册的环保包袋', 
                 calories: 308,
+              },
+              {
+                img: '音樂01_卡農-閱讀_封面.jpg',
+                name: '0-2岁成长故事精装版(展示书)',
+                calories: 680,
               },
             ],
 
