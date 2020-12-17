@@ -203,7 +203,7 @@
                           <v-card tile flat>
                             <v-img
                               height="200px"
-                              src="assets/images/user_header_bg-12.png"
+                              src="assets/images/user_header_bg-12.jpg"
                             >
                               <v-card-title class="white--text mt-8 d-flex align-center">
 
@@ -245,7 +245,7 @@
                                   v-for="file in files"
                                   :key="file.title"
                                   :ripple="{ class: 'cyan--text' }"
-                                  @click.stop="drawer_2 = !drawer_2"
+                                  @click.stop="drawer_a = !drawer_a"
                                 >
                                   <v-list-item-avatar class="ml-3">
                                     <v-icon
@@ -268,23 +268,24 @@
                             </v-card>
                           </template>
                                   
-
+                          <!-- right-drawer-a -->
                           <v-navigation-drawer
-                            v-model="drawer_2"
+                            v-model="drawer_a"
                             app 
                             right
                             width="100%"
                             class="brown lighten-5 "
                           >
                           <v-toolbar
-                          flat
-                          tile 
-                          v-background="'var(--gradient-0)'"
+                            flat
+                            tile 
+                            fixed
+                            v-background="'var(--gradient-0)'"
                           >
                           <v-btn
                               icon
                               :ripple="{ class: 'red--text' }"
-                              @click.stop="drawer_2 = !drawer_2"
+                              @click.stop="drawer_a = !drawer_a"
                           >
                               <v-icon>mdi-close</v-icon>
                           </v-btn>
@@ -314,7 +315,7 @@
 
                           <v-row class="d-flex justify-center" >
                             <v-card tile flat :width="sheetWidth" >
-                            
+
                               <v-tabs
                                 v-model="tab"
                                 background-color="transparent"
@@ -344,13 +345,14 @@
                                           class="mb-2"
                                         >
                                         <v-img 
-                                          src="assets/images/user_header_bg-13.png">
+                                          height="180px"
+                                          src="assets/images/user_header_bg-13.jpg">
                                           <div class="px-4 py-2">
                                           <v-card-title class="h6 brown--text text--darken-4 mb-2">
                                             <v-icon class="fas fa-clipboard-list mr-3 red--text "></v-icon> 訂單資訊 
                                           </v-card-title>
                               
-                                          <v-card-subtitle class="body-1 brown--text text--darken-4 font-weight-bold">
+                                          <v-card-subtitle class="body-2 brown--text text--darken-4 font-weight-bold">
                                             訂單編號 <span class="brown--text text--lighten-1">1234567890</span><br>
                                             訂購日 <span class="brown--text text--lighten-1">2025/08/09</span><br>
                                             狀態 <span class="brown--text text--lighten-1">已出貨</span><br>
@@ -411,13 +413,10 @@
 
                           </v-navigation-drawer>
 
+                          <!-- right-drawer-b -->
+                          
 
-                          <v-col></v-col>
-                          <v-col></v-col>
-                          <v-col></v-col>
-                          <v-col></v-col>
-                          <v-col></v-col>
-                          <v-col></v-col>
+
 
                             
                         </v-card>
@@ -1066,14 +1065,8 @@
                 },
               ],
 
-              // right - drawer
-              drawer_2: false,
-              rightitems: [
-                { title: 'Home', icon: 'mdi-view-dashboard' },
-                { title: 'About', icon: 'mdi-forum' },
-              ],
-
-
+              // right - drawer_a
+              drawer_a: false,
               // table 
               products: [
               {
@@ -1085,6 +1078,26 @@
                 img: '幼幼中文第一階-封面-轉框.jpg',
                 name: '0-2岁成长故事精装版(个人书)',
                 calories: 238,
+              },
+              {
+                img: 'LV1幼幼英文Textbook-封面.jpg',
+                name: '2-3岁中文一阶(一书三册 - 展示书)',
+                calories: 268,
+              }, 
+              {
+                img: 'LV1幼幼英文Workbook-封面.jpg',
+                name: '前导课程精装版(6本/套)', 
+                calories: 3088,
+              },
+              {
+                img: '袋.jpg',
+                name: '包袋 一书三册的环保包袋', 
+                calories: 308,
+              },
+              {
+                img: '音樂01_卡農-閱讀_封面.jpg',
+                name: '0-2岁成长故事精装版(展示书)',
+                calories: 680,
               },
               {
                 img: 'LV1幼幼英文Textbook-封面.jpg',
