@@ -54,7 +54,7 @@
 
         <v-main class="brown lighten-5 " 
             >
-            <v-container fluid class="pt-0" >
+            <v-container fluid class="py-0" >
                 <v-row class="d-flex justify-center" >
                     <template >
                         <v-card tile flat :width="sheetWidth" style="padding-bottom: calc(100vh - 510px);" >
@@ -75,7 +75,7 @@
                                         outlined
                                         rounded
                                       >
-                                      <v-icon left small >
+                                      <v-icon left small class="mr-0">
                                         mdi-earth
                                         </v-icon>
                                         公開
@@ -86,7 +86,7 @@
                                         outlined
                                         rounded
                                       >
-                                        <v-icon left x-small class="fas fa-images"></v-icon>
+                                        <v-icon left x-small class="fas fa-images mr-0"></v-icon>
                                         建立相冊
                                       </v-btn>
                                     </div>
@@ -119,7 +119,7 @@
                                     v-model="sheet"
                                     hide-overlay
                                     scrollable
-                                    z-index="1000"
+                                    
                                     >
                                         <template v-slot:activator="{ on, attrs }">
                                             <v-container fluid>
