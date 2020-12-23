@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+  <!-- Favicons -->
+  <link rel="icon" href="assets/favicon/favicon.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/images/icon_BB.jpg">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+  <meta name="msapplication-TileColor" content="#000">
+  <meta name="theme-color" content="#ffffff">
+
+  <meta property="og:title" content="小熊摇篮" />
+  <meta property="og:description" content="小熊摇篮，小熊摇篮小熊摇篮，小熊摇篮小熊摇篮小熊摇篮。" />
+  <meta property="og:image" content="assets/images/icon_BB.jpg" />
+
+  <!-- <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet"> -->
+  <!-- <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;700;900&display=swap" rel="stylesheet"> -->
+  <link href="https://cdn.jsdelivr.net/npm/@mdi/font@4.x/css/materialdesignicons.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.min.css" rel="stylesheet">
+
+  <!-- <link rel="stylesheet" href="https://i.icomoon.io/public/temp/7bfec62e24/UntitledProject/style.css"> -->
+  <link rel="stylesheet" href="assets/css/icomoon.css">
+  <link href="https://fonts.googleapis.com/css?family=Material+Icons" rel="stylesheet">
+
+  <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="stylesheet" href="assets/css/ece.css">
+  
+</head>
+
+<body>
+  <div id="app">
+    <v-app class="page_login" v-background="'var(--gradient-red-d3)'">
+        <v-carousel style="height:100%; opacity: .3; position: absolute; top: 0; left: 0;" :show-arrows="false" cycle hide-delimiters>
+            <v-carousel-item v-for="(item,i) in carousel" v-bind:src="item.src" :key="i" style="height: 100vh;"></v-carousel-item>
+        </v-carousel>
+        <!-- <div class="bg"></div> -->
+        <v-navigation-drawer v-model="drawer" app v-background="'var(--gradient-4)'"
+        src="assets/images/close-up-of-happy-little-baby-boy-with-father-PCB8CX6.png"> 
+
+        <v-list class="">
+                <v-list-item class="pl-6 pt-4" style="margin-bottom: -.6rem;">
+                  <v-list-item-avatar size="58" >
+                    <v-img src="assets/images/user.png"></v-img>
+                  </v-list-item-avatar>
+                </v-list-item>
+        
+                <v-list-item link :ripple="{ class: 'red--text' }" >
+                  <v-list-item-content class="pl-2">
+                    <v-list-item-title class="title white--text mb-1" >
+                        Catherine Lee
+                    </v-list-item-title>
+                    <v-list-item-subtitle class="white--text">園長 職稱放這裡</v-list-item-subtitle>
+                  </v-list-item-content>
+        
+                  <v-list-item-action >
+                    <v-menu transition="slide-y-transition" offset-y>
+                        <template v-slot:activator="{ on, attrs }">
+                            <!-- <v-btn text rounded class="font-weight-black pl-2 txt_w_btn" v-bind="attrs" 
+                                v-on="on" value="left" :ripple="{ class: 'red--text' }">
+                                Catherine Lee
+                                <v-icon right dark>
+                                    mdi-chevron-down
+                                </v-icon>
+                            </v-btn> -->
+                            <v-icon class="white--text" v-bind="attrs" v-on="on" value="left" >mdi-chevron-down</v-icon>
+                        </template>
+
+                        <v-list v-background="'var(--gradient-0)'" dense class="pt-3 pb-3">
+                            <v-list-item-group v-model="model" color="indigo">
+                                <v-list-item v-for="(item, i) in items" :key="i" link :ripple="{ class: 'red--text' }" >
+                                    <v-divider v-if="!item.title" :key="`divider-${i}`"
+                                        style="flex: 1 0 100%; border-color: rgba(0,0,0,.15);">
+                                    </v-divider>
+                                    <v-list-item-icon class="mr-2">
+                                        <v-icon class="text_co">{{ item.icon }}</v-icon>
+                                    </v-list-item-icon>
+                                    <v-list-item-title class="text_co">{{ item.title }}</v-list-item-title>
+                                </v-list-item>
+                            </v-list-item-group>
+                        </v-list>
+                    </v-menu>
+
+                  </v-list-item-action>
+                </v-list-item>
+              </v-list>
+
+            <v-divider color="#FFAB91"></v-divider>
+            
+            <v-list dense rounded>
+                <v-row class="mt-8">
+                    <v-col cols="3">
+                        <v-avatar size="58" class="ml-3 mb-2"><img src="assets/images/user.png"
+                            alt="user">
+                        </v-avatar>
+                    </v-col>
+                    <v-col cols="9" class="pl-4">
+                        <v-col class="body-2 white--text font-weight-bold pa-0 ml-2 pt-1">
+                            園長 職稱放這裡
+                        </v-col>
+                        <v-col cols="" class="pa-0">
+                            <v-menu transition="slide-y-transition" offset-y>
+                                <template v-slot:activator="{ on, attrs }">
+                                    <v-btn text rounded class="font-weight-black pl-2 txt_w_btn" v-bind="attrs" 
+                                        v-on="on" value="left" :ripple="{ class: 'red--text' }">
+                                        Catherine Lee
+                                        <v-icon right dark>
+                                            mdi-chevron-down
+                                        </v-icon>
+                                    </v-btn>
+                                </template>
+
+                                <v-list v-background="'var(--gradient-0)'" dense class="pt-3 pb-3">
+                                    <v-list-item-group v-model="model" color="indigo">
+                                        <v-list-item v-for="(item, i) in items" :key="i" link>
+                                            <v-divider v-if="!item.title" :key="`divider-${i}`"
+                                                style="flex: 1 0 100%; border-color: rgba(0,0,0,.15);">
+                                            </v-divider>
+                                            <v-list-item-icon class="mr-2 pl-0">
+                                                <v-icon class="text_co">{{ item.icon }}</v-icon>
+                                            </v-list-item-icon>
+                                            <v-list-item-title class="text_co">{{ item.title }}</v-list-item-title>
+                                        </v-list-item>
+                                    </v-list-item-group>
+                                </v-list>
+                            </v-menu>
+                        </v-col>
+                    </v-col>
+                </v-row>
+
+                <v-list-item link href="#/">
+                    <v-list-item-action class="">
+                        <v-icon>mdi-home</v-icon>
+                    </v-list-item-action>
+                    <v-list-item-content>
+                        <v-list-item-title>Home</v-list-item-title>
+                    </v-list-item-content>
+                </v-list-item>
+                <v-list-item link href="#/About">
+                    <v-list-item-action class="">
+                        <v-icon>mdi-email</v-icon>
+                    </v-list-item-action>
+                    <v-list-item-content>
+                        <v-list-item-title>Contact</v-list-item-title>
+                    </v-list-item-content>
+                </v-list-item>
+                <v-list-item link href="#/" >
+                    <v-list-item-action class="">
+                        <v-icon>mdi-file-video</v-icon>
+                    </v-list-item-action>
+                    <v-list-item-content >
+                        <v-list-item-title>0-3 課程</v-list-item-title>
+                    </v-list-item-content>
+                </v-list-item>
+            </v-list>
+
+            <v-list dense rounded>
+                <v-subheader>管理者</v-subheader>
+                <v-list-group v-model="item.active" v-for="(item, i) in accors" :key="i"
+                    :prepend-icon="item.action" no-action>
+                    <v-list-item slot="activator">
+                        <v-list-item-content>
+                            <v-list-item-title>{{ item.title }}</v-list-item-title>
+                        </v-list-item-content>
+                    </v-list-item>
+                    <v-list-item v-for="subItem in item.items" :key="subItem.title" ripple @click="close">
+                        <v-list-item-content>
+                            <v-list-item-title>{{ subItem.title }}</v-list-item-title>
+                        </v-list-item-content>
+                        <v-list-item-action>
+                            <v-icon>{{ subItem.action }}</v-icon>
+                        </v-list-item-action>
+                    </v-list-item>
+                </v-list-group>
+            </v-list>
+
+        </v-navigation-drawer>
+
+        <v-app-bar app dark flat color="transparent" >
+            <v-app-bar-nav-icon @click.stop="drawer = !drawer" class="txt_w_btn" :ripple="{ class: 'red--text' }"></v-app-bar-nav-icon>
+            <!-- <v-spacer></v-spacer>
+            <div class="d-flex align-center justify-center">
+                <v-img alt="babybearcare" class="shrink mr-5" contain 
+                    src="assets/images/logo_ww.svg" transition="scale-transition"
+                    width="120" />
+            </div>
+            <v-spacer></v-spacer> -->
+        </v-app-bar>
+
+        <v-main class="align-end align-md-center">
+            <v-container fluid>
+                <div class="d-flex justify-center ma-2 mb-4 mb-md-2">
+                    <!-- Insert Page Code Here -->
+                    <v-hover v-slot="{ hover }" >
+                        <v-sheet id="formSheet" :width="sheetWidth" class="px-4" :rounded="'xl'" 
+                            @click="sheetFocus= true" :class="{'isFocus':sheetFocus|| hover}"
+                            v-click-outside="onClickOutside" color="transparent">
+                            <img src="assets/images/logo_w.svg" width="80" class="d-flex ml-auto mr-auto pb-2" alt="">
+                            <div class="login_title text-center pb-2 ">Early Child Education</div>
+                            <!-- <div class="text text-center login_t pb-3">Login to your account</div> -->
+                            
+                            <form class="mt-16" >
+                                <v-text-field rounded filled style="margin-bottom: -1rem;" v-model="email" :error-messages="emailErrors" label="輸入手機號" required 
+                                    @input="$v.email.$touch()" @blur="$v.email.$touch()" color="var(--white-color)">
+                                </v-text-field>
+                                
+                                <v-text-field rounded filled style="margin-bottom: -1rem;" v-model="password" :error-messages="passwordErrors" :counter="10"
+                                    label="Password" required @input="$v.password.$touch()"
+                                    @blur="$v.password.$touch()" color="var(--white-color)">
+                                </v-text-field>
+
+                                <v-checkbox v-model="rememberme" :error-messages="remembermeErrors"
+                                    label="Remember Me?" required @change="$v.rememberme.$touch()"
+                                    @blur="$v.rememberme.$touch()"  dark
+                                    :ripple="{ class: 'red--text' }"
+                                    class="ma-0 ml-4" >
+                                </v-checkbox>
+
+                                <v-btn depressed block class="border" v-background="'var(--gc-primary)'" text-color="black"
+                                    href="login_step.html"
+                                    rounded large @click="submit" :ripple="{ class: 'red--text' }">
+                                    <!-- <v-icon class="icon icon-pacifier" color="success"></v-icon>
+                                    <v-icon class="icon icon-baby-boy-1 mr-2"></v-icon> -->
+                                    手机号码登录
+                                </v-btn>
+                                <v-row justify="center" align="center" style="margin: -.4rem;">
+                                    <v-col cols="3" >
+                                        <v-divider color="white" style="opacity:.5;"></v-divider>
+                                    </v-col>
+                                    <v-col cols="1" class="text-center white--text text--lighten-5 text-overline" >or</v-col>
+                                    <v-col cols="3" >
+                                        <v-divider color="white" style="opacity:.5;" ></v-divider>
+                                    </v-col>
+                                </v-row>
+                                <v-btn depressed block class="border" v-background="'var(--gradient-0)'" text-color="black" rounded
+                                    large @click="submit" :ripple="{ class: 'red--text' }"
+                                    href="login_step.html">
+                                    <v-icon class="fab fa-weixin mr-2"></v-icon>
+                                    微信一键登录
+                                </v-btn>
+                            </form>
+                            <div class="d-flex justify-center caption brown--text text--lighten-4 mt-3 font-weight-bold">
+                                <v-icon small class="mr-2 teal--text text--accent-2  " >mdi-checkbox-marked-circle</v-icon>
+                                <span> 阅读并接受 
+                                    <a href="#" class="white--text ">用户服务协议</a> 和 
+                                    <a href="#" class="white--text ">隐私政策</a>
+                                </span>
+                            </div>
+                            <div class="d-flex justify-space-between caption mt-10 font-weight-bold">
+                                <a href="#"  class="brown--text text--lighten-4 ">切换帐号登录?</a>  
+                                <a href="#"  class="brown--text text--lighten-4">登录遇到问题？</a>
+                            </div>
+
+
+                        </v-sheet>
+                    </v-hover>
+                </div>
+            </v-container>
+        </v-main>
+
+        <!-- <v-footer app>
+        </v-footer> -->
+        <v-bottom-navigation app class="blur" style="display: none;">
+            <v-btn value="recent" :ripple="{ class: 'red--text' }">
+                <span>Recent</span>
+                <v-icon>mdi-history</v-icon>
+            </v-btn>
+
+            <v-btn value="favorites" :ripple="{ class: 'red--text' }">
+                <span>Favorites</span>
+                <v-icon>mdi-heart</v-icon>
+            </v-btn>
+
+            <v-btn value="nearby" :ripple="{ class: 'red--text' }">
+                <span>Nearby</span>
+                <v-icon>mdi-map-marker</v-icon>
+            </v-btn>
+
+            <v-menu>
+                <template v-slot:activator="{ on, attrs }">
+                    <v-btn dark icon fab v-bind="attrs" v-on="on" style="position: absolute; right:-18px;" :ripple="{ class: 'red--text' }">
+                        <v-icon>mdi-dots-vertical</v-icon>
+                    </v-btn>
+                </template>
+                <v-list v-background="'var(--gradient-0)'" dense>
+                    <v-list-item v-for="(item, i) in dotmenus" :key="i">
+                        <v-list-item-icon class="mr-2">
+                            <v-icon class="text_co">{{ item.icon }}</v-icon>
+                        </v-list-item-icon>
+                        <v-list-item-title>{{ item.title }}</v-list-item-title>
+                    </v-list-item>
+                </v-list>
+            </v-menu>
+        </v-bottom-navigation>
+    </v-app>
+  </div>
+
+  <script src="https://kit.fontawesome.com/3b082112b1.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.js"></script>
+
+  <script>
+      Vue.directive('background', {
+          bind: function (el, binding, vnode) {
+              el.style.backgroundImage = binding.value
+          }
+      });
+      new Vue({
+          el: '#app',
+          vuetify: new Vuetify({
+              theme: {
+                themes: {
+                    light: {
+                        default: '#7e6d61',
+                        primary: '#FFA19F',
+                        secondary: '#9e8888',
+                        info: '#00cae3',
+                        success: '#3fbe8f',
+                        accent: '#8c9eff',
+                        warning: '#ff9563',
+                        error: '#ff5252',
+                        // primary: colors.purple,
+                        // accent: colors.shades.black,
+                    },
+                },
+                // dark: true,
+              },
+          }),
+          data: {
+              // Form Sheet
+              sheetFocus: false,
+              email: '',
+              password: '',
+              rememberme: false,
+
+              // drawer control model
+              drawer: false,
+              items: [
+                  {
+                      title: 'My Profile',
+                      icon: 'mdi-account',
+                  },
+                  {
+                      title: 'Messages',
+                      icon: 'mdi-email',
+                  },
+                  {
+                      title: 'Settings',
+                      icon: 'mdi-settings',
+                  },
+                  {
+                      // title: '',
+                      // icon: '',
+                      // divider: true,
+                  },
+                  {
+                      title: 'logout',
+                      icon: 'mdi-power',
+                  },
+              ],
+              dotmenus: [
+                  {
+                      title: 'My Profile',
+                      icon: 'mdi-account',
+                  },
+                  {
+                      title: 'Messages',
+                      icon: 'mdi-email',
+                  },
+                  {
+                      title: 'Settings',
+                      icon: 'mdi-settings',
+                  },
+                  {
+                      title: 'logout',
+                      icon: 'mdi-power',
+                  },
+              ],
+              model: 2,
+
+              accors: [
+                  {
+                      action: 'local_activity',
+                      title: 'Attractions',
+                      active: false,
+                      items: [
+                          { title: 'List Item' }]
+                  },
+                  {
+                      action: 'restaurant',
+                      title: 'Dining',
+                      active: true,
+                      items: [
+                          { title: 'Breakfast & brunch' },
+                          { title: 'New American' },
+                          { title: 'Sushi' }]
+                  },
+                  {
+                      action: 'school',
+                      title: 'Education',
+                      active: false,
+                      items: [
+                          { title: 'List Item' }]
+                  },
+                  {
+                      action: 'directions_run',
+                      title: 'Family',
+                      active: false,
+                      items: [
+                          { title: 'List Item' }]
+                  },
+                  {
+                      action: 'healing',
+                      title: 'Health',
+                      active: false,
+                      items: [
+                          { title: 'List Item' }]
+                  },
+                  {
+                      action: 'content_cut',
+                      title: 'Office',
+                      active: false,
+                      items: [
+                          { title: 'List Item' }]
+                  },
+                  {
+                      action: 'local_offer',
+                      title: 'Promotions',
+                      active: false,
+                      items: [
+                          { title: 'List Item' }]
+                  }
+              ],
+              carousel: [
+                  {
+                  src: 'assets/images/baby_1.jpg'
+                  },
+                  {
+                  src: 'assets/images/baby_2.jpg'
+                  },
+                  {
+                  src: 'assets/images/baby_3.jpg'
+                  },
+                  {
+                  src: 'assets/images/baby_bg.jpg'
+                  }
+              ]
+          },
+          computed: {
+              sheetWidth() {
+                  switch (this.$vuetify.breakpoint.name) {
+                      case 'lg': return 600
+                      case 'xl': return 800
+                      default: return 400
+                      // case 'xs': return 220
+                      // case 'sm': return 400
+                      // case 'md': return 500
+                  }
+              }
+          },
+          methods: {
+              onClickOutside() {
+                  this.sheetFocus = false
+              },
+              close() {
+                  this.accors.forEach(item => {
+                      if (item.active) {
+                          _.delay(function () {
+                              item.active = false;
+                          }, 300);
+                          return false;
+                      }
+                  });
+              },
+          },
+      })
+  </script>
+  <style>
+    .v-sheet.isFocus {
+        transform: matrix(1, 0, 0, 1, 0, 0);
+        transition-delay: 0s;
+        transition-duration: 0.2s;
+        transition-property: all;
+        transition-timing-function: ease-in-out;
+    }
+  </style>
+</body>
+
+</html>
