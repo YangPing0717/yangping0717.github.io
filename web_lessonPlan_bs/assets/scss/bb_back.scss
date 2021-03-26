@@ -1,0 +1,170 @@
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,400i,700,700i,900,900i|Open+Sans:400,700,700i,800,800i&display=swap');
+
+body {
+  font-family: '微軟正黑體', 'Montserrat', Helvetica, Arial, sans-serif;
+}
+h1 {
+  font-family: 'Montserrat', Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  color: hsla(0, 0%, 0%, 0.3);
+}
+.hide{
+  display: none;
+}
+.unvisible{
+  visibility: hidden;
+}
+
+.table > tbody td.open {
+  .fa.file:before {
+    content: "收合";
+    font-size: .9rem;
+    line-height: 22px;
+    font-weight: bold;
+    color: #ff4c13;
+    background: #ffeae3;
+    padding: 4px 10px;
+    border-radius: 20px !important;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  &.collapsed .fa.file:before {
+    content: "上傳檔案";
+    color: #ffffff;
+    background: #ff4c13;
+  }
+  .fa.item:before {
+    content: "收合";
+    font-size: .9rem;
+    line-height: 22px;
+    font-weight: bold;
+    color: #a50a98;
+    background: #fadff8;
+    padding: 4px 10px;
+    border-radius: 20px !important;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  &.collapsed .fa.item:before {
+    content: "選擇教案內容";
+    color: #fff;
+    background: #a50a98;
+  }
+  .fa.dealer:before {
+    content: "收合";
+    font-size: .9rem;
+    line-height: 22px;
+    font-weight: bold;
+    color: #006de2;
+    background: #dbecff;
+    padding: 4px 10px;
+    border-radius: 20px !important;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  &.collapsed .fa.dealer:before {
+    content: "操作產品序號";
+    color: #fff;
+    background: #006de2;
+  }
+}
+
+
+.hw_upload .discrip {
+  font-weight: bold;
+  font-size: .85rem;
+  margin-bottom: 10px;
+  padding-left: 3rem;
+  line-height: 18px;
+  position: relative;
+  color: #3a3a3a;
+  &:before {
+    font-family: 'Font Awesome 5 Free';
+    content: '\f05a';
+    margin-right: 10px;
+    color: #ff4b00;
+    font-size: 2.2rem;
+    position: absolute;
+    top: 10px;
+    left: 0;
+  }
+}
+
+.btn.rounded {
+  border-radius: 1.5rem !important;
+  padding: .375rem 1.25rem;
+}
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #fff;
+  background-clip: border-box;
+  border: 0px solid rgba(255, 255, 255, 0.125);
+  border-radius: 0rem;
+  .card-body {
+    padding: 0;
+  }
+}
+.tab-pane{
+  padding: 2rem 0;
+}
+
+.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
+  color: #ff4c13;
+  background-color: #fff;
+  border-color: #ffffff #ffffff #f44336;
+}
+.nav-tabs .nav-link:focus, .nav-tabs .nav-link:hover {
+  color: #f44336;
+  border-color: #ffffff #ffffff #ff4c13;
+}
+.table {
+  margin-bottom: 0rem;
+  &.sub tr th:nth-child(1), &.sub tr td:nth-child(1){
+    text-align: center;
+    padding-bottom: 1.25rem;
+  }
+  &.sub thead tr th:nth-child(1) {
+    .checkbox-btn, .radio-btn {
+      margin-bottom: -16px;
+    }
+  }
+  &.sub tbody tr td:nth-child(1) {
+    .checkbox-btn, .radio-btn {
+      margin-top: -12px;
+    }
+  }
+  &.sub tr td i {
+    background-color: rgba(255, 74, 19, 0.1);
+    padding: 6px 10px;
+    color: #651600;
+    border-radius: 2rem;
+    cursor: pointer;
+  }
+} 
+.table [name=buttons] .btn {
+  background-color: rgba(255, 74, 19, 0.15);
+  color: #4e0000;
+}
+.collapse [name=buttons]{
+  display: none;
+}
+.collapse{
+  background: #f8eaef;
+}
+.serial_no {
+  font-size: 1.2rem;
+  color: #004c9e;
+  font-weight: 700;
+  border: 1px solid rgba(12, 129, 255, 0.4);
+  padding: 5px 12px 5px 16px;
+  vertical-align: middle;
+  .btn {
+    font-size: .7rem;
+    padding: .25rem .75rem;
+  }
+}
