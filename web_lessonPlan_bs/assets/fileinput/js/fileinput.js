@@ -674,7 +674,7 @@
                 '    </div>\n' +
                 '</div>';
             tClose = $h.closeButton('fileinput-remove');
-            tFileIcon = '<i class="glyphicon glyphicon-file"></i>';
+            tFileIcon = '<i class="fas fa-file"></i>'; 
             // noinspection HtmlUnknownAttribute
             tCaption = '<div class="file-caption form-control {class}" tabindex="500">\n' +
                 '  <span class="file-caption-icon"></span>\n' +
@@ -900,11 +900,11 @@
                     showDownload: true,
                     showZoom: true,
                     showDrag: true,
-                    removeIcon: '<i class="glyphicon glyphicon-trash"></i>',
+                    removeIcon: '<i class="fas fa-trash"></i>',
                     removeClass: 'btn btn-sm btn-kv btn-default btn-outline-secondary',
                     removeErrorClass: 'btn btn-sm btn-kv btn-danger',
                     removeTitle: 'Remove file',
-                    uploadIcon: '<i class="glyphicon glyphicon-upload"></i>',
+                    uploadIcon: '<i class="fas fa-upload"></i>', 
                     uploadClass: 'btn btn-sm btn-kv btn-default btn-outline-secondary',
                     uploadTitle: 'Upload file',
                     uploadRetryIcon: '<i class="glyphicon glyphicon-repeat"></i>',
@@ -4354,18 +4354,18 @@
         defaultPreviewContent: null,
         customLayoutTags: {},
         customPreviewTags: {},
-        previewFileIcon: '<i class="glyphicon glyphicon-file"></i>',
+        previewFileIcon: '<i class="fas fa-file"></i>', 
         previewFileIconClass: 'file-other-icon',
         previewFileIconSettings: {},
         previewFileExtSettings: {},
         buttonLabelClass: 'hidden-xs',
-        browseIcon: '<i class="glyphicon glyphicon-folder-open"></i>&nbsp;',
+        browseIcon: '<i class="fas fa-folder-open"></i>&nbsp;', 
         browseClass: 'btn btn-primary',
-        removeIcon: '<i class="glyphicon glyphicon-trash"></i>',
+        removeIcon: '<i class="fas fa-trash"></i>', 
         removeClass: 'btn btn-default btn-secondary',
         cancelIcon: '<i class="glyphicon glyphicon-ban-circle"></i>',
         cancelClass: 'btn btn-default btn-secondary',
-        uploadIcon: '<i class="glyphicon glyphicon-upload"></i>',
+        uploadIcon: '<i class="fas fa-upload"></i>',
         uploadClass: 'btn btn-default btn-secondary',
         uploadUrl: null,
         uploadUrlThumb: null,

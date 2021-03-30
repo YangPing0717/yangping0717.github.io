@@ -26,15 +26,15 @@
 	overflow: hidden;
 	margin: .75rem 1%;
 	min-width: 200px;
-    max-width: 480px;
-    max-height: 360px;
-    /*width: 23%;*/
+  max-width: 480px;
+  max-height: 360px;
+  /*width: 23%;*/
 	background: #3085a3;
 	text-align: center;
 	cursor: pointer;
 	
 	width: 48%;
-	height: 120px;
+	height: 80px;
 	border-radius: .25rem;
 }
 
@@ -266,7 +266,7 @@ figure.effect-roxy figcaption::before {
 }
 
 figure.effect-roxy figcaption {
-	padding: 2em;
+	padding: 0rem 3.8rem;
 	text-align: left;
 }
 
@@ -305,13 +305,13 @@ figure.effect-roxy:hover p {
 	transform: translate3d(0,0,0);
 }
 figure.effect-roxy .filename {
-	line-height: 3.8rem;
+	line-height: 80px;
 	color: #7a3b25;
 	font-weight: 700;
 	overflow:hidden;
 	white-space: nowrap;
 	text-overflow: ellipsis;
-	padding-right: 40px;
+	padding-right: 46px;
 }
 figure.effect-roxy:hover .filename {
 	color: #fff;

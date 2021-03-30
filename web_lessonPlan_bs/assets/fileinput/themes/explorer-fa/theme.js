@@ -72,7 +72,7 @@
         previewZoomButtonIcons: {
             prev: '<i class="fa fa-caret-left fa-lg"></i>',
             next: '<i class="fa fa-caret-right fa-lg"></i>',
-            toggleheader: '<i class="fa fa-fw fa-arrows-v"></i>',
+            toggleheader: '<i class="fa fa-fw fa-arrows-v"></i>', 
             fullscreen: '<i class="fa fa-fw fa-arrows-alt"></i>',
             borderless: '<i class="fa fa-fw fa-external-link"></i>',
             close: '<i class="fa fa-fw fa-remove"></i>'

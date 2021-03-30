@@ -34,7 +34,7 @@ h1 {
     color: #ffffff;
     background: #ff4c13;
   }
-  .fa.item:before {
+  .fa.item:before, .fa.outline:before {
     content: "收合";
     font-size: .9rem;
     line-height: 22px;
@@ -47,7 +47,12 @@ h1 {
     cursor: pointer;
   }
   &.collapsed .fa.item:before {
-    content: "選擇教案內容";
+    content: "上傳課綱 / 勾選教案內容";
+    color: #fff;
+    background: #a50a98;
+  }
+  &.collapsed .fa.outline:before {
+    content: "上傳課綱";
     color: #fff;
     background: #a50a98;
   }
@@ -69,27 +74,50 @@ h1 {
     background: #006de2;
   }
 }
+.table-bordered thead td, .table-bordered thead th {
+  border-bottom-width: 6px;
+}
 
-
-.hw_upload .discrip {
-  font-weight: bold;
-  font-size: .85rem;
-  margin-bottom: 10px;
-  padding-left: 3rem;
-  line-height: 18px;
-  position: relative;
-  color: #3a3a3a;
-  &:before {
-    font-family: 'Font Awesome 5 Free';
-    content: '\f05a';
-    margin-right: 10px;
+.hw_upload {
+  .h5 {
     color: #ff4b00;
-    font-size: 2.2rem;
-    position: absolute;
-    top: 10px;
-    left: 0;
+    font-weight: 700;
+  }
+  .discrip {
+    font-weight: bold;
+    font-size: .85rem;
+    margin-bottom: 10px;
+    padding-left: 3rem;
+    line-height: 18px;
+    position: relative;
+    color: #3a3a3a;
+    &:before {
+      font-family: 'Font Awesome 5 Free';
+      content: '\f05a';
+      margin-right: 10px;
+      color: #ff4b00;
+      font-size: 2.2rem;
+      position: absolute;
+      top: 10px;
+      left: 0;
+    }
+    &.outline {
+      padding-left: 2.5rem;
+      
+      &:before {
+        font-family: 'Font Awesome 5 Free';
+        content: '\f05a';
+        margin-right: 10px;
+        color: #ff4b00;
+        font-size: 1.4rem;
+        position: absolute;
+        top: 0px;
+        left: .8rem;
+      }
+    }
   }
 }
+
 
 .btn.rounded {
   border-radius: 1.5rem !important;
@@ -167,4 +195,8 @@ h1 {
     font-size: .7rem;
     padding: .25rem .75rem;
   }
+}
+.editMe {
+  font-weight: bold;
+  color: #4e0000;
 }
