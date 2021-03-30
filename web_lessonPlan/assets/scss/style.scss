@@ -75,7 +75,7 @@ Patterns - reusable parts of our design
 .cd-img-replace {
   /* replace text with image */
   color: transparent;
-  overflow: hidden;
+  // overflow: hidden;
   text-indent: 100%;
   white-space: nowrap;
 }
@@ -1107,9 +1107,20 @@ Project content panel
   height: 32px;
   width: 32px;
   position: absolute;
-  top: 10px;
+  // top: 50%;
   right: 10px;
+  bottom: 20%;
   background: url(../img/cd-close-dark.svg) no-repeat center center;
+  &:before {
+    content: "";
+    height: 80px;
+    width: 80px;
+    background-color: rgba(255, 255, 255, .3);
+    position: absolute;
+    top: -25px;
+    left: -10px;
+    border-radius: 80px;
+  }
 }
 .cd-project-content em {
 	border-top: 1px solid #ff968f;
@@ -1132,6 +1143,9 @@ Project content panel
   .cd-project-content .close {
     top: 30px;
     right: 5%;
+    &:before {
+      display: none;
+    }
   }
 }
 

@@ -205,6 +205,7 @@
   border: 0px solid transparent;
   background-color: transparent;
   padding: 0;
+  justify-content: initial;
 }
 .navbar-brand {
   float: left;
@@ -236,7 +237,13 @@
 	font-weight: 900;
   color: #7a3b25;
 	font-size: 130%;
-	float: left;
+  // float: left;
+  @media (max-width: 575.98px) { 
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    // width: 260px; 
+   }
 	}
 .navbar-brand .subtitle {
 	font-weight: 400;
@@ -914,12 +921,56 @@ a:focus {
   .qblock nav li a > span {
     margin-bottom: .8rem;
   }
-
 }
 
-@media screen and (max-device-width: 480px) {
-
-   
+@media screen and (max-width: 575.98px) {
+  .navbar-brand {
+    float: left;
+    height: 70px;
+    padding: 15px 0 15px 15px;
+    font-size: 1.5em;
+    line-height: 37px;
+  }
+  .navbar-nav > li > a {
+    position: relative;
+    display: block;
+    padding: 10px 15px 10px 30px;
+    font-weight: normal;
+    font-size: 2rem;
+    line-height: 25px;
+  }
+  .navbar-toggle {
+    margin-top: 12px;
+    margin-bottom: 0px;
+    margin-right: 6px;
+    border: 1px solid #b9a69f !important;
+    &:hover, &:focus {
+      border: 1px solid #ff6fa0 !important;
+    }
+    &.outline {
+      padding: 6px;
+      margin-right: 6px;
+      &:hover, &:focus {
+        border: 1px solid #ff6fa0 !important;
+        color: #FFFFFF !important;
+      }
+    }
+  }
+ 
 }
+@media (max-width: 575.98px) { 
+.navbar-header {
+  padding: 20px 15px 15px;
+  .title {
+    font-weight: 900;
+    color: #7a3b25;
+    font-size: 2.8rem;
+      // overflow: hidden;
+      // white-space: nowrap;
+      // text-overflow: ellipsis;
+     }
+	}
+}
+  
 
 

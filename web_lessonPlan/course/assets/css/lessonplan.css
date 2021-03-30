@@ -206,6 +206,9 @@ b, strong {
   border: 0px solid transparent;
   background-color: transparent;
   padding: 0;
+  -webkit-box-pack: initial;
+      -ms-flex-pack: initial;
+          justify-content: initial;
 }
 
 .navbar-brand {
@@ -241,7 +244,14 @@ b, strong {
   font-weight: 900;
   color: #7a3b25;
   font-size: 130%;
-  float: left;
+}
+
+@media (max-width: 575.98px) {
+  .navbar-brand .title {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
 }
 
 .navbar-brand .subtitle {
@@ -1115,5 +1125,51 @@ a:focus {
   }
   .qblock nav li a > span {
     margin-bottom: .8rem;
+  }
+}
+
+@media screen and (max-width: 575.98px) {
+  .navbar-brand {
+    float: left;
+    height: 70px;
+    padding: 15px 0 15px 15px;
+    font-size: 1.5em;
+    line-height: 37px;
+  }
+  .navbar-nav > li > a {
+    position: relative;
+    display: block;
+    padding: 10px 15px 10px 30px;
+    font-weight: normal;
+    font-size: 2rem;
+    line-height: 25px;
+  }
+  .navbar-toggle {
+    margin-top: 12px;
+    margin-bottom: 0px;
+    margin-right: 6px;
+    border: 1px solid #b9a69f !important;
+  }
+  .navbar-toggle:hover, .navbar-toggle:focus {
+    border: 1px solid #ff6fa0 !important;
+  }
+  .navbar-toggle.outline {
+    padding: 6px;
+    margin-right: 6px;
+  }
+  .navbar-toggle.outline:hover, .navbar-toggle.outline:focus {
+    border: 1px solid #ff6fa0 !important;
+    color: #FFFFFF !important;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .navbar-header {
+    padding: 20px 15px 15px;
+  }
+  .navbar-header .title {
+    font-weight: 900;
+    color: #7a3b25;
+    font-size: 2.8rem;
   }
 }
