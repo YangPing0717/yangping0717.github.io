@@ -1,0 +1,336 @@
+
+
+/*   score  */
+.scrbox {
+	font-weight: 700;
+	/*margin-top: 10px;*/
+	}
+.scrname {
+	font-size: 3.2rem;
+    color: #044c3b;
+	margin-top: 6px;
+	}
+.scrnum {
+    height: 12.5rem;
+    position: relative;
+	margin-top: 40px;
+	margin-bottom: 55px;
+	}
+.scrlenum {
+	font-size: 3rem; 
+	color: #64001B;
+	line-height: 3.2rem;
+	}
+.scrbox hr {
+    border: 0;
+    border-bottom: solid 1px rgb(221, 221, 221);
+    margin: 1em 0;
+}
+.bar_title{
+	font-weight: 700;
+    font-size: 1.8rem;
+    line-height: 1.1;
+    margin-bottom: 6px;
+	}
+.barper_t{
+	font-size: .9rem;
+	margin-top: 6px;
+	}
+.loading {
+	position: absolute;
+    left: 50%;
+    top: 50%;
+    margin: -75px 0 0 -70px;
+    background: #fff;
+    width: 150px;
+    height: 150px;
+    border-radius: 100%;
+    border: 12px solid #044c3b;
+    font-size: 5.4rem;
+    color: #6031b1;
+    line-height: 128px;
+    letter-spacing: -1px;
+}
+.loading:after {
+  content: '';
+  background: trasparent;
+  width: 140%;
+  height: 140%;
+  position: absolute;
+  border-radius: 100%;
+  top: -20%;
+  left: -20%;
+  /*opacity: 0.7;*/
+  box-shadow: rgba(61, 158, 125, 1) -10px -8px 8px -4px; 
+  animation: rotate 2s infinite linear;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotateZ(0deg);
+  }
+  100% {
+    transform: rotateZ(360deg);
+  }
+  }
+  
+  
+  
+.sugbox {
+	font-size: .85rem;
+    margin-top: 1.8rem;
+	 }
+.sugbox_tebox{
+	margin-bottom: 2.8rem;
+    font-size: 85%;
+    line-height: 1.8;
+	padding-top: 1rem;
+	}
+.sugbox_tebox .tit {
+	font-size: 140%;
+    font-weight: 700;
+    color: #044c3b;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 10px;
+    padding-bottom: 3px;
+}
+.sugbox_tebox.po {
+	padding-top: 0rem;
+}
+.ratearea {
+	
+}
+.ratea_sub {
+	border: 1px solid #DDDDDD;
+	margin-bottom: 20px;
+	text-align: left;
+	padding: 18px;
+    line-height: 2;
+	font-weight: 700;
+	height: 200px;
+}
+.ratebox {
+	border: 1px solid #64001b;
+	padding: 20px;
+	height: 100%;
+	margin-right: 10px;
+}
+.ratebox .labt {
+    border-radius: 20px;
+    padding: 3px 15px;
+    font-size: 75%;
+    color: #ffffff;
+    background-color: #585858;
+    float: left;
+}
+.ratebox .percent {
+    color: #64001b;
+    font-size: 46px;
+    line-height: 1.4;
+}
+.ratebox .icon {
+	color: #64001b;
+	font-size: 18px;
+}
+.ratebox .unstandard {
+	color: red;
+    font-size: 16px;
+    line-height: 1;
+}
+.suggest_noneline {
+	border: 1px solid #fff;
+	font-size: 14px;
+	line-height: 1.7;
+	font-weight: normal;
+}
+.suggest_noneline .title{
+	font-weight: 700;
+    border-radius: 20px;
+    padding: 5px 15px;
+    font-size: 75%;
+    color: #585858;
+    float: left;
+    border: 1px solid #585858;
+    background-color: #fff;
+	margin-bottom: 12px;
+}
+.suggest_noneline span {
+	color: #64001b;
+    margin-left: 6px;
+    font-weight: 700;
+}
+.que_box h1 {
+	font-size: 150%;
+    font-weight: 700;
+    margin-bottom: 28px;
+    border-left: 8px solid #11bf50;
+    padding-left: 10px;
+}
+.userinfo {
+	color: #072b23;
+    font-weight: 700;
+    text-align: left;
+    margin-top: 30px;
+	margin-bottom: -10px;
+}
+.userinfo span {
+	margin-left: 15px;
+}
+.userinfo i {
+	color: #779b8f;
+    margin-left: 4px;
+    margin-right: 4px;
+    vertical-align: sub;
+    font-size: larger;
+}
+.ratiobox {
+	margin-bottom: 12px;
+    position: relative;
+} 
+.ratio {
+	color: #ffffff;
+    font-size: 18px;
+    background-color: #6031b1;
+    width: 55px;
+    height: 55px;
+    line-height: 55px;
+    border-radius: 50%;
+    position: relative;
+    margin: auto;
+    left: 0;
+    right: 0;
+}
+.table.suggest ul {
+	padding-left: 2rem;
+}
+.table.suggest ul li {
+	list-style-type: square;
+}
+.table.table-bordered {
+    border: 1px solid #cccccc;
+}
+.table>thead {
+    
+}
+.suggest.table>thead>tr>th {
+	background-color: #89a29a;
+	color: #fff;
+	font-weight: 700;
+}
+.suggest.table > tbody > tr > th:first-child {
+	background-color: #dde4e2;
+    font-weight: 700;
+}
+
+.btnbox.filter {
+    float: right;
+    font-size: initial;
+	margin-top: -5px;
+}
+.btnbox.filter label {
+    float: left;
+    margin-right: 10px;
+    font-weight: normal;
+    line-height: 40px;
+    font-size: 14px;
+}
+.btnbox.filter .dropdown {
+    float: left;
+}
+
+.btnbox.filter .dropdown:last-child .btn_nor {
+    margin-right: 0px;
+}
+.btn_nor {
+    outline: none;
+    border: 1px solid #d3d3d3 !important; 
+    padding: 8px 22px;
+    white-space: nowrap;
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 400;
+    vertical-align: middle;
+    text-align: center;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    text-decoration: none;
+    color: #5e5e5e;
+    background-color: #FFF;
+    border-radius: 4rem;
+    -webkit-transition: all 250ms ease;
+    -moz-transition: all 250ms ease;
+    transition: all 250ms ease;
+    display: inline-block;
+    user-select: initial;
+    float: left;
+    margin-right: 8px;
+}
+
+.btn_nor.focus, .btn_nor:focus, .btn_nor:hover {
+	color: #470000;
+    background-color: rgba(71, 0, 0, 0.1);
+    border-color: #470000 !important;
+    transition: all 300ms ease-out;
+}
+.sugtext {
+	font-size: 80%;
+    font-weight: 700;
+}
+.dropdown .btn {
+	padding: 8px 36px 8px 22px;
+}
+.dropdown .btn .caret {
+	position: absolute;
+    right: 20px;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+.btn_lim {
+	max-width: 180px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.dropdown-menu > li > a:hover {
+    background-color: rgba(71, 0, 0, 0.1);
+    color: #333;
+}
+.panel .table thead tr th {
+    padding: 12px;
+    text-align: left;
+}
+
+#chartContainer4 {
+    width: 100%;
+    height: 420px;
+    display: inline-block;
+    margin-bottom: 25px;
+}
+
+@media screen and (max-width: 736px) { 
+.userinfo {
+    color: #072b23;
+    font-weight: 700;
+    text-align: left;
+    margin-top: 30px;
+    margin-bottom: -10px;
+    margin-left: 15px;
+}
+#result section .nav-tabs > li > a {
+    margin-right: 16px !important;
+    line-height: 1.6;
+    border: 0px solid transparent;
+    border-radius: 0px 0px 0 0;
+    color: #779b8f;
+    font-weight: 700;
+    padding: 10px 0px;
+}
+.btn_lim {
+    max-width: 120px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+}
