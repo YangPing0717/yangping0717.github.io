@@ -167,12 +167,10 @@
               </div>
 
 
-              
               <!-- 經銷商 -->
               <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
-                <button id="but_add3" class="btn btn-outline-primary rounded mr-1 mb-3">新增經銷商</button>
-                <button class="btn btn-outline-primary rounded mb-3" >提交</button>
-                <table class="table table-responsive-md table-bordered" id="makeEditable3">
+                <button id="but_add3" class="btn btn-outline-primary rounded mr-1 mb-3" data-toggle="modal" data-target=".modal_dealer">新增經銷商</button>
+                <table class="table table-bordered">
                   <thead>
                     <tr>
                       <th>經銷商編號</th>
@@ -183,95 +181,46 @@
                     </tr>
                   </thead>
                   <tbody>
+                    <tr class="animate__animated add_animate animate__repeat-2 hide" id="newDealerRow">
+                        <td>新增的-----ABC-345234</td>
+                        <td>新增的-----小熊搖籃直營店 - 台北101門市</td>
+                        <td>28</td>
+                        <td>305</td>
+                        <td>
+                          <button type="button" class="btn btn-outline-primary rounded btn-sm" data-toggle="modal" data-target=".modal_dealer"><i class="fas fa-pencil-alt"></i></button> 
+                          <button type="button" class="btn btn-outline-primary rounded btn-sm" data-toggle="modal" data-target=".bd-example-modal-sm"><i class="fas fa-trash-alt"></i></button>
+                        </td>
+                      </tr>
                     <tr>
-                      <td class="editMe">ABC-345234</td>
-                      <td class="editMe">小熊搖籃直營店 - 台北101門市</td>
-                      <td class="editMe">18</td>
-                      <td class="editMe">405</td>
-                      <td class="open collapsed" data-toggle="collapse" data-target="#collapseExample_x" aria-expanded="false" aria-controls="collapseExample"><i class="fa dealer" aria-hidden="true"></i></td>
+                      <td>ABC-345234</td>
+                      <td>小熊搖籃直營店 - 台北101門市</td>
+                      <td>18</td>
+                      <td>405</td>
+                      <td>
+                        <button type="button" class="btn btn-outline-primary rounded btn-sm" data-toggle="modal" data-target=".modal_dealer"><i class="fas fa-pencil-alt"></i></button> 
+                        <button type="button" class="btn btn-outline-primary rounded btn-sm" data-toggle="modal" data-target=".bd-example-modal-sm"><i class="fas fa-trash-alt"></i></button>
+                      </td>
+                      
                     </tr>
-                    <tr class="collapse fade" id="collapseExample_x" aria-expanded="false">
-                      <td colspan="7" class="hw_upload">
-                        <table class="table table-responsive-md table-bordered">
-                          <thead>
-                            <tr>
-                              <th>產品名稱</th>
-                              <th>已有序號數</th>
-                              <th>產生新序號數量</th>
-                              <th>操作</th>
-                            </tr>
-                          </thead>
-                          <tbody>
-                            <tr>
-                              <td>托幼銜接 Lv1</td>
-                              <td>408</td>
-                              <td class="editMe"></td>
-                              <td>
-                                <button class="btn btn-outline-primary rounded btn-sm mr-1" id="generate-serial">生成序號</button>
-                                <div class="serial_no mr-1 mb-2 hide " id="no-a">CFG-56789zcczs.pdf
-                                  <button class="btn btn-primary rounded float-right" id="copy-serial">下載序號檔</button>
-                                  <button class="btn btn-outline-primary rounded mr-2 float-right" id="re-generate-serial">重新生成序號</button>
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>Toby Lv1</td>
-                              <td>398</td>
-                              <td class="editMe"></td>
-                              <td>
-                                <button class="btn btn-outline-primary rounded btn-sm mr-1" id="generate-serial2">生成序號</button>
-                                <div class="serial_no mr-1 mb-2 hide" id="no-b">RGB-advjhashjv.xlsx
-                                  <button class="btn btn-primary rounded float-right" id="copy-serial2">下載序號檔</button>
-                                  <button class="btn btn-outline-primary rounded mr-2 float-right" id="re-generate-serial2">重新生成序號</button>
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>動動Lv2</td>
-                              <td>258</td>
-                              <td class="editMe"></td>
-                              <td>
-                                <button class="btn btn-outline-primary rounded btn-sm mr-1" id="generate-serial3">生成序號</button>
-                                <div class="serial_no mr-1 mb-2 hide " id="no-c">ascnbv-wvhhrwvhrwv.xlsx
-                                  <button class="btn btn-primary rounded float-right" id="copy-serial3">下載序號檔</button>
-                                  <button class="btn btn-outline-primary rounded mr-2 float-right" id="re-generate-serial3">重新生成序號</button>
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>動動Lv12</td>
-                              <td>208</td>
-                              <td class="editMe"></td>
-                              <td>
-                                <button class="btn btn-outline-primary rounded btn-sm mr-1" id="generate-serial4">生成序號</button>
-                                <div class="serial_no mr-1 mb-2 hide " id="no-d">GGHJKcdscsd-jSGCjgds.xlsx
-                                  <button class="btn btn-primary rounded float-right" id="copy-serial4">下載序號檔</button>
-                                  <button class="btn btn-outline-primary rounded mr-2 float-right" id="re-generate-serial4">重新生成序號</button>
-                                </div>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
+                    <tr>
+                      <td>HJKL-345890</td>
+                      <td>宜蘭直營旗艦門市 - 好好學嘖嘖小熊</td>
+                      <td>26</td>
+                      <td>668</td>
+                      <td>
+                        <button type="button" class="btn btn-outline-primary rounded btn-sm" data-toggle="modal" data-target=".modal_dealer"><i class="fas fa-pencil-alt"></i></button> 
+                        <button type="button" class="btn btn-outline-primary rounded btn-sm" data-toggle="modal" data-target=".bd-example-modal-sm"><i class="fas fa-trash-alt"></i></button>
                       </td>
                     </tr>
                     <tr>
-                      <td class="editMe">HJKL-345890</td>
-                      <td class="editMe">宜蘭直營旗艦門市 - 好好學嘖嘖小熊</td>
-                      <td class="editMe">12</td>
-                      <td class="editMe">268</td>
-                      <td class="open collapsed" data-toggle="collapse" data-target="#collapseExample_y" aria-expanded="false" aria-controls="collapseExample"><i class="fa dealer" aria-hidden="true"></i></td>
-                    </tr>
-                    <tr class="collapse fade" id="collapseExample_y" aria-expanded="false">
-                      <td colspan="7" class="hw_upload">
-                        
+                      <td>ABC-123</td>
+                      <td>高雄直營旗艦分部 - 小熊旗艦樂園</td>
+                      <td>28</td>
+                      <td>168</td>
+                      <td>
+                        <button type="button" class="btn btn-outline-primary rounded btn-sm" data-toggle="modal" data-target=".modal_dealer"><i class="fas fa-pencil-alt"></i></button> 
+                        <button type="button" class="btn btn-outline-primary rounded btn-sm" data-toggle="modal" data-target=".bd-example-modal-sm"><i class="fas fa-trash-alt"></i></button>
                       </td>
-                    </tr>
-                    <tr>
-                      <td class="editMe">CFG-56789</td>
-                      <td class="editMe">高雄直營旗艦分部 - 小熊旗艦樂園</td>
-                      <td class="editMe">28</td>
-                      <td class="editMe">168</td>
-                      <td class="editMe">--</td>
                     </tr>
                   </tbody>
                 </table> 
@@ -296,7 +245,7 @@
     <div class="modal-dialog modal-lg">
       <div class="modal-content">
         <div class="modal-header">
-          <h4 class="modal-title" id="exampleModalLabel">新增教案 / 或 已編輯的教案名稱</h4>
+          <h4 class="modal-title" id="exampleModalLabel">新增教案 / 或 編輯教案</h4>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
@@ -331,12 +280,13 @@
     </div>
   </div>
 
+
   <!-- modal full 產品 -->
   <div class="modal fade modal_item full " tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg">
       <div class="modal-content">
         <div class="modal-header">
-          <h4 class="modal-title" id="exampleModalLabel">新增產品 / 或 已編輯的產品名稱</h4>
+          <h4 class="modal-title" id="exampleModalLabel">新增產品 / 或 編輯產品</h4>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
@@ -384,7 +334,7 @@
                       <tr>
                         <th>
                             <div class="checkbox-btn">
-                              <input type="checkbox" value="value-11" id="rc11" name="rc11" />
+                              <input type="checkbox" value="value-11" id="rc11" name="rc11"  />
                               <label for="rc11" onclick>全選</label>
                           </div>
                         </th>
@@ -394,10 +344,10 @@
                       </tr>
                     </thead>
                     <tbody>
-                      <tr class="add_obj_hide">
+                      <tr class="selected">
                         <td>
                           <div class="checkbox-btn">
-                            <input type="checkbox" value="value-11" id="rc12" name="rc11" />
+                            <input type="checkbox" value="value-11" id="rc12" name="rc11" checked />
                             <label for="rc12" onclick></label>
                           </div>
                         </td>
@@ -405,7 +355,7 @@
                         <td >(音1-1)大海浪小海浪的故事書名稱</td>
                         <!-- <td><i class="fas fa-long-arrow-alt-down"></i> <i class="fas fa-long-arrow-alt-up"></i></td> -->
                       </tr>
-                      <tr class="add_obj_hide">
+                      <tr>
                         <td>
                           <div class="checkbox-btn">
                             <input type="checkbox" value="value-11" id="rc13" name="rc11" />
@@ -417,32 +367,6 @@
                         <!-- <td><i class="fas fa-long-arrow-alt-down"></i> <i class="fas fa-long-arrow-alt-up"></i></td> -->
                       </tr>
 
-
-                      <tr class="selected_obj_show hide">
-                        <td>
-                          <div class="checkbox-btn">
-                            <input type="checkbox" value="value-11" id="rc12" name="rc11" />
-                            <label for="rc12" onclick></label>
-                          </div>
-                        </td>
-                        <td >ABC-345234</td>
-                        <td >(音1-1)大海浪小海浪的故事書名稱</td>
-                        <!-- <td><i class="fas fa-long-arrow-alt-down"></i> <i class="fas fa-long-arrow-alt-up"></i></td> -->
-                      </tr>
-                      <tr class="selected_obj_show hide">
-                        <td>
-                          <div class="checkbox-btn">
-                            <input type="checkbox" value="value-11" id="rc13" name="rc11" />
-                            <label for="rc13" onclick></label>
-                          </div>
-                        </td>
-                        <td >HJKL-345890</td>
-                        <td >(音1-2)袜子小鱼</td>
-                        <!-- <td><i class="fas fa-long-arrow-alt-down"></i> <i class="fas fa-long-arrow-alt-up"></i></td> -->
-                      </tr>
-
-
-                      
                       <tr>
                         <td>
                           <div class="checkbox-btn">
@@ -526,32 +450,7 @@
                       </tr>
                     </thead>
                     <tbody>
-                        
-                      <tr class="add_obj_show hide">  
-                        <td>
-                          <div class="checkbox-btn">
-                            <input type="checkbox" value="value-11" id="rc30" name="rc11" />
-                            <label for="rc30" onclick></label>
-                          </div>
-                        </td>
-                        <td >ABC-345234</td>
-                        <td >(音1-1)大海浪小海浪的故事書名稱</td>
-                        <td><i class="fas fa-long-arrow-alt-down"></i> <i class="fas fa-long-arrow-alt-up"></i></td>
-                      </tr>
-                      <tr class="add_obj_show hide">
-                        <td>
-                          <div class="checkbox-btn">
-                            <input type="checkbox" value="value-11" id="rc31" name="rc11" />
-                            <label for="rc31" onclick></label>
-                          </div>
-                        </td>
-                        <td >ABC-345234</td>
-                        <td >(音1-1)大海浪小海浪的故事書名稱</td>
-                        <td><i class="fas fa-long-arrow-alt-down"></i> <i class="fas fa-long-arrow-alt-up"></i></td>
-                      </tr>
-
-
-                      <tr class="selected_obj_hide">
+                      <tr>
                         <td>
                           <div class="checkbox-btn">
                             <input type="checkbox" value="value-11" id="rc22" name="rc11" />
@@ -562,7 +461,7 @@
                         <td >(音1-1)大海浪小海浪的故事書名稱</td>
                         <td><i class="fas fa-long-arrow-alt-down"></i> <i class="fas fa-long-arrow-alt-up"></i></td>
                       </tr>
-                      <tr class="selected_obj_hide">
+                      <tr>
                         <td>
                           <div class="checkbox-btn">
                             <input type="checkbox" value="value-11" id="rc23" name="rc11" />
@@ -596,45 +495,139 @@
                         <td >(音1-4)海裏的小鱼</td>
                         <td><i class="fas fa-long-arrow-alt-down"></i> <i class="fas fa-long-arrow-alt-up"></i></td>
                       </tr>
+                      
                     </tbody>
-                    <tfoot>
-                      <tr>
-                        <td colspan="4">
-                          <nav aria-label="Page navigation example" >
-                              <ul class="pagination justify-content-end">
-                                <li class="page-item">
-                                  <a class="page-link" href="#" aria-label="Previous">
-                                    <span aria-hidden="true">&laquo;</span>
-                                    <span class="sr-only">Previous</span>
-                                  </a>
-                                </li>
-                                <li class="page-item"><a class="page-link" href="#">1</a></li>
-                                <li class="page-item"><a class="page-link" href="#">2</a></li>
-                                <li class="page-item"><a class="page-link" href="#">3</a></li>
-                                <li class="page-item">
-                                  <a class="page-link" href="#" aria-label="Next">
-                                    <span aria-hidden="true">&raquo;</span>
-                                    <span class="sr-only">Next</span>
-                                  </a>
-                                </li>
-                              </ul>
-                            </nav>
-                        </td>
-                      </tr>
-                    </tfoot>
                   </table>
                 </div>
                 </div>
               </div>
-            
-            
-
             
           </div>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-link" data-dismiss="modal">取 消</button>
           <button type="button" class="btn btn-primary rounded" id="addItem" data-dismiss="modal">新增 / 或 儲存</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- modal full 經銷商 -->
+  <div class="modal fade modal_dealer full " tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title" id="exampleModalLabel">新增經銷商 / 或 編輯經銷商</h4>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="form-group col-12 col-md-3">
+              <label for="recipient-no" class="form-control-label">經銷商編號</label>
+              <input type="text" class="form-control" id="recipient-no">
+            </div>
+            <div class="form-group col-12 col-md-3">
+              <label for="recipient-name" class="form-control-label">經銷商名稱</label>
+              <input type="text" class="form-control" id="recipient-name">
+            </div>
+          </form>
+          <form>
+            <div class="col-12 col-md-3">
+              <div class="row ">
+                <div class="form-group col-6 col-md-6">
+                  <label for="recipient-name" class="form-control-label">產品總數</label>
+                  <input type="number" class="form-control" id="recipient-name">
+                </div>
+                <div class="form-group col-6 col-md-6">
+                  <label for="recipient-name" class="form-control-label">序號總數</label>
+                  <input type="number" class="form-control" id="recipient-name">
+                </div>
+              </div>
+            </div>
+          </form>
+          <div class="col-12">
+            <div class="hw_upload">
+              <div class="h5">產品序號管理</div>
+
+              <table class="table table-responsive-md table-bordered" >
+                <thead>
+                  <tr>
+                    <th>產品名稱</th>
+                    <th>已有序號數</th>
+                    <th>產生新序號數量</th>
+                    <th>操作</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>托幼銜接 Lv1</td>
+                    <td>408</td>
+                    <td>
+                      <input type="number" class="form-control" id="quantityZ">
+                    </td>
+                    <td>
+                      <button class="btn btn-outline-primary rounded btn-sm mr-1" id="generate-serial">生成序號</button>
+                      <div class="serial_no mr-1 mb-2 hide " id="no-a">CFG-56789zcczs.pdf
+                        <button class="btn btn-primary rounded float-right" id="copy-serial">下載序號檔</button>
+                        <button class="btn btn-outline-primary rounded mr-2 float-right" id="re-generate-serial">重新生成序號</button>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Toby Lv1</td>
+                    <td>398</td>
+                    <td>
+                      <input type="number" class="form-control" id="quantityA">
+                    </td>
+                    <td>
+                      <button class="btn btn-outline-primary rounded btn-sm mr-1" id="generate-serial2">生成序號</button>
+                      <div class="serial_no mr-1 mb-2 hide" id="no-b">RGB-advjhashjv.xlsx
+                        <button class="btn btn-primary rounded float-right" id="copy-serial2">下載序號檔</button>
+                        <button class="btn btn-outline-primary rounded mr-2 float-right" id="re-generate-serial2">重新生成序號</button>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>動動Lv2</td>
+                    <td>258</td>
+                    <td>
+                      <input type="number" class="form-control" id="quantityB">
+                    </td>
+                    <td>
+                      <button class="btn btn-outline-primary rounded btn-sm mr-1" id="generate-serial3">生成序號</button>
+                      <div class="serial_no mr-1 mb-2 hide " id="no-c">ascnbv-wvhhrwvhrwv.xlsx
+                        <button class="btn btn-primary rounded float-right" id="copy-serial3">下載序號檔</button>
+                        <button class="btn btn-outline-primary rounded mr-2 float-right" id="re-generate-serial3">重新生成序號</button>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>動動Lv12</td>
+                    <td>208</td>
+                    <td>
+                      <input type="number" class="form-control" id="quantityC">
+                    </td>
+                    <td>
+                      <button class="btn btn-outline-primary rounded btn-sm mr-1" id="generate-serial4">生成序號</button>
+                      <div class="serial_no mr-1 mb-2 hide " id="no-d">GGHJKcdscsd-jSGCjgds.xlsx
+                        <button class="btn btn-primary rounded float-right" id="copy-serial4">下載序號檔</button>
+                        <button class="btn btn-outline-primary rounded mr-2 float-right" id="re-generate-serial4">重新生成序號</button>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+
+              </div>
+            
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-link" data-dismiss="modal">取 消</button>
+          <button type="button" class="btn btn-primary rounded" id="addDealer" data-dismiss="modal">新增 / 或 儲存</button>
         </div>
       </div>
     </div>
@@ -899,6 +892,11 @@
   $('#addItem').on('click', function(){
     $("#newItemRow").fadeIn(300); 
   });
+  $('#addDealer').on('click', function(){
+    $("#newDealerRow").fadeIn(300); 
+  });
+  
+
 
   $('#btn_add_obj').on('click', function(){
     $(".add_obj_hide").hide().fadeOut(300); 
@@ -910,6 +908,7 @@
     $(".selected_obj_show").fadeIn(300);
   });
   
+
 
   
 </script>
