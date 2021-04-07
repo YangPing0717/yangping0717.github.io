@@ -3560,7 +3560,7 @@
 @media screen and (max-width: 1280px) { 
 #footer > .inner .menu {
     font-size: 0.65em;
-    color: rgba(255, 255, 255, 0.15);
+    color: #795548;
     text-align: center;
 }
 }
@@ -4268,7 +4268,7 @@
 	width: 32px;
 	position: absolute;
 	right: 10px;
-	bottom: 20%;
+	bottom: 25%;
 	background: url(../img/cd-close-dark.svg) no-repeat center center;
 	border-bottom: none;
 }
@@ -4279,5 +4279,19 @@
 		right: 5%;
 		border-bottom: none;
 	}
+	.close_dia:before { 
+		display: none;
+	}
 }
 
+
+.close_dia:before {
+	content: "";
+	height: 90px;
+	width: 90px;
+	background-color: rgba(255, 137, 176, .25);
+	position: absolute;
+	top: -30px;
+	left: -10px;
+	border-radius: 90px;
+}
