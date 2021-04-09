@@ -186,12 +186,32 @@ h1 {
   left: .8rem;
 }
 
-.uploaded .filearea {
-  background: #f8eaef;
+.uploaded.fileblock .h5 {
+  color: #0266ff;
+  font-weight: 700;
+}
+
+.uploaded.fileblock .h5 .outline {
+  padding-left: 2.5rem;
+}
+
+.uploaded.fileblock .h5 .outline:before {
+  font-family: 'Font Awesome 5 Free';
+  content: '\f05a';
+  margin-right: 10px;
+  color: #0294ff;
+  font-size: 1.4rem;
+  position: absolute;
+  top: 0px;
+  left: .8rem;
+}
+
+.uploaded.fileblock .filearea {
+  background: #e6eefe;
   position: relative;
 }
 
-.uploaded .filearea:before {
+.uploaded.fileblock .filearea:before {
   position: absolute;
   top: 20px;
   right: 23px;
@@ -435,7 +455,7 @@ h1 {
 }
 
 #snackbar .filename {
-  color: #ffd95c;
+  color: #83e6ff;
 }
 
 #snackbar.show {
