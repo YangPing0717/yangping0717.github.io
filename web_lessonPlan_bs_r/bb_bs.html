@@ -11,7 +11,6 @@
   <!-- <link href="https://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css"> -->
   <!-- Scripts -->
 
-
   <!-- upload files -->
   <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 
@@ -25,7 +24,7 @@
 
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-  <script src="assets/js_plugin/bootstable.js"></script>
+  <script src="assets/js/bootstable.js"></script>
 
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 
@@ -36,6 +35,11 @@
   <link href="assets/fileinput/themes/explorer-fa/theme.css" media="all" rel="stylesheet" type="text/css"/>
 
 
+  <!-- card effect -->
+  <link rel="stylesheet" type="text/css" href="assets/css/default.css" />
+  <link rel="stylesheet" type="text/css" href="assets/css/component.css" />
+  <script src="assets/js/modernizr.custom.js"></script>
+    
   <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
@@ -261,6 +265,86 @@
               <input type="text" class="form-control" id="recipient-name">
             </div>
           </form>
+          <div class="col-12 mb-4">
+            <div class="uploaded">
+                <div class="h5">
+                  <span>已上傳的檔案</span> 
+                  <span class="discrip outline">允许刪除檔案</span>
+                </div>
+                <div class="filearea">
+                  <ul class="grid cs-style-3">
+                    <li class="delete_obj">
+                      <figure>
+                        <div><div class="img_thumb"></div></div>
+                        <figcaption>
+                          <h3>image-from-rawpixel-id-2453725-original.jpg</h3>
+                          <span>5.5 MB</span>
+                          <a href="#" onclick="myFunction()" id="btn_delete_file" ><i class="fas fa-trash-alt"></i></a>
+                          <!-- Use a button to open the snackbar -->
+<!-- <button onclick="myFunction()">Show Snackbar</button> -->
+<!-- data-toggle="modal" data-target=".bd-example-modal-sm" -->
+                        </figcaption>
+                      </figure>
+                    </li>
+
+                    
+
+
+                    
+                    <li>
+                      <figure>
+                        <div><div class="file_icon type_doc"></div></div>
+                        <figcaption>
+                          <h3>生存_技能章頒發卡.doc</h3>
+                          <span>524 KB</span>
+                          <a href="#"><i class="fas fa-trash-alt"></i></a>
+                        </figcaption>
+                      </figure>
+                    </li>
+                    <li>
+                      <figure>
+                        <div><div class="file_icon type_pdf"></div></div>
+                        <figcaption>
+                          <h3>前導萌芽班_任務本_2里程碑卡.pdf</h3>
+                          <span>2.5 MB</span>
+                          <a href="#"><i class="fas fa-trash-alt"></i></a>
+                        </figcaption>
+                      </figure>
+                    </li>
+                    <li>
+                      <figure>
+                        <div><div class="img_thumb"></div></div>
+                        <figcaption>
+                          <h3>任務本里程碑卡demo.jpg</h3>
+                          <span>12.8 MB</span>
+                          <a href="#"><i class="fas fa-trash-alt"></i></a>
+                        </figcaption>
+                      </figure>
+                    </li>
+                    <li>
+                      <figure>
+                        <div><div class="file_icon type_image"></div></div>
+                        <figcaption>
+                          <h3>Phone.png</h3>
+                          <span>5.95 MB</span>
+                          <a href="#"><i class="fas fa-trash-alt"></i></a>
+                        </figcaption>
+                      </figure>
+                    </li>
+                    <li>
+                      <figure>
+                        <div><div class="file_icon type_doc"></div></div>
+                        <figcaption>
+                          <h3>Game_Center.docx</h3>
+                          <span>2.5 MB</span>
+                          <a href="#"><i class="fas fa-trash-alt"></i></a>
+                        </figcaption>
+                      </figure>
+                    </li>
+                  </ul>
+                </div>
+            </div>
+          </div>
           <div class="col-12">
             <div class="hw_upload">
               <div class="discrip">允许上传影音档（mp4、mp3、mov）文件档（pdf、word、excel、ppt）图档（jpg、png）<br>单一档案最大限制 100MB 以內</div>
@@ -656,9 +740,14 @@
   </div>
 
 
+  <!-- The actual snackbar -->
+  <div id="snackbar">
+    <span class="filename">image-from-rawpixel-id-2453725-original.jpg</span> 已被刪除
+    <button type="button" id="recover" class="btn btn-primary rounded btn-sm ml-4">恢復</button>
+  </div>
 
 
-<script>
+<!-- <script>
   $(function () {
 
     $('#makeEditable').SetEditable({ $addButton: $('#but_add') });
@@ -683,10 +772,10 @@
       }
     });
   });
-</script>
+</script> -->
 
 <!-- 可 inline 編輯 -->
-<script src="assets/SimpleTableCellEditor.es6.min.js"></script>
+<script src="assets/js/SimpleTableCellEditor.es6.min.js"></script>
 <script>
   $(document).ready(function () {
     var logAllEvents = true;
@@ -815,38 +904,38 @@
      alert('File browse clicked for #file-4');
      });
      */
-    $(document).ready(function () {
-        $("#test-upload").fileinput({
-            'theme': 'fa',
-            'showPreview': false,
-            'allowedFileExtensions': ['jpg', 'png', 'gif'],
-            'elErrorContainer': '#errorBlock'
-        });
-        $("#kv-explorer").fileinput({
-            'theme': 'explorer-fa',
-            'uploadUrl': '#',
-            overwriteInitial: false,
-            initialPreviewAsData: true,
-            initialPreview: [
-                "http://lorempixel.com/1920/1080/nature/1",
-                "http://lorempixel.com/1920/1080/nature/2",
-                "http://lorempixel.com/1920/1080/nature/3"
-            ],
-            initialPreviewConfig: [
-                {caption: "nature-1.jpg", size: 329892, width: "120px", url: "{$url}", key: 1},
-                {caption: "nature-2.jpg", size: 872378, width: "120px", url: "{$url}", key: 2},
-                {caption: "nature-3.jpg", size: 632762, width: "120px", url: "{$url}", key: 3}
-            ]
-        });
-        /*
-         $("#test-upload").on('fileloaded', function(event, file, previewId, index) {
-         alert('i = ' + index + ', id = ' + previewId + ', file = ' + file.name);
-         });
-         */
-    });
+    // $(document).ready(function () {
+    //     $("#test-upload").fileinput({
+    //         'theme': 'fa',
+    //         'showPreview': false,
+    //         'allowedFileExtensions': ['jpg', 'png', 'gif'],
+    //         'elErrorContainer': '#errorBlock'
+    //     });
+    //     $("#kv-explorer").fileinput({
+    //         'theme': 'explorer-fa',
+    //         'uploadUrl': '#',
+    //         overwriteInitial: false,
+    //         initialPreviewAsData: true,
+    //         initialPreview: [
+    //             "http://lorempixel.com/1920/1080/nature/1",
+    //             "http://lorempixel.com/1920/1080/nature/2",
+    //             "http://lorempixel.com/1920/1080/nature/3"
+    //         ],
+    //         initialPreviewConfig: [
+    //             {caption: "nature-1.jpg", size: 329892, width: "120px", url: "{$url}", key: 1},
+    //             {caption: "nature-2.jpg", size: 872378, width: "120px", url: "{$url}", key: 2},
+    //             {caption: "nature-3.jpg", size: 632762, width: "120px", url: "{$url}", key: 3}
+    //         ]
+    //     });
+    //     /*
+    //      $("#test-upload").on('fileloaded', function(event, file, previewId, index) {
+    //      alert('i = ' + index + ', id = ' + previewId + ', file = ' + file.name);
+    //      });
+    //      */
+    // });
 </script>
 
-<script>
+<!-- <script>
   $(document).ready(function() {
       $("#input-b6").fileinput({
         theme: 'fa',
@@ -856,7 +945,7 @@
         mainClass: "input-group-lg"
       });
   });
-</script>
+</script> -->
 
 <script >
   $('#generate-serial').on('click', function(){
@@ -908,9 +997,25 @@
     $(".selected_obj_show").fadeIn(300);
   });
   
+  $('#btn_delete_file').on('click', function(){
+    $(".delete_obj").hide(500); 
+  });
 
-
+  $('#recover').on('click', function(){
+    $(".delete_obj").fadeIn(500);
+  });
   
+
+  // animate__animated animate__bounceOut animate__slow
+  
+</script>
+
+<script>
+  function myFunction() {
+    var x = document.getElementById("snackbar");
+    x.className = "show";
+    setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+  }
 </script>
 
 </body>
