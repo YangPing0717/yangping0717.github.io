@@ -598,7 +598,7 @@ border-radius: 0px;
 }
 
 .file-caption-main .fileinput-upload{
-    /* display: none; */
+    display: none;
 }
 
 
