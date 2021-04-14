@@ -370,10 +370,10 @@
           </div>
           <div class="col-12">
             <div class="hw_upload">
-              <div class="discrip">允许上传影音档（mp4、mp3、mov）文件档（pdf、word、excel、ppt）图档（jpg、png）<br>单一档案最大限制 100MB 以內</div>
+              <div class="discrip">允许上传影音档（mp4、mp3、mov）文件档（pdf、word、excel、ppt）图档（jpg、png）<br>单一档案最大限制 xxxMB 以內</div>
               <div class="form-group hw_fileloading">
                 <div class="file-loading">
-                  <input id="file-11" type="file" multiple class="file" data-overwrite-initial="false" data-browse-on-zone-click="true" data-min-file-count="3">
+                  <input id="file-1" type="file" multiple class="file" data-overwrite-initial="false" data-browse-on-zone-click="true" data-min-file-count="3">
                 </div>
               </div>
             </div>
@@ -411,90 +411,66 @@
           </form>
           <div class="col-12">
             <div class="hw_upload">
-              <div class="h5"><span>上傳產品課綱</span> <span class="discrip outline">允许上传图档（jpg、png、pdf 格式）单一档案最大限制 2MB 以內</span></div>
+              <div class="h5"><span>上傳產品代表圖</span> <span class="discrip outline">將出現在經銷商首頁產品列表，允许上传单一图档（長寬比 800 (W) * 600 (H) px，jpg 格式）档案最大限制 xxxMB 以內</span></div>
               <div class="form-group hw_fileloading outline_area">
                 <div class="file-loading">
                     <input id="input-b6" name="input-b6" type="file" class="file" data-show-preview="false">
                 </div>
               </div>
+              <div class="h5"><span>上傳產品課綱</span> <span class="discrip outline">允许上传多個图档（jpg、png 格式）单一档案最大限制 xxxMB 以內</span></div>
+              
+
+              <div class="form-group hw_fileloading">
+                <div class="file-loading">
+                  <input id="file-11" type="file" multiple class="file" data-overwrite-initial="false" data-browse-on-zone-click="true" data-min-file-count="3">
+                </div>
+              </div>
+
               <div class="h5">選擇教案 / 排序</div>
               <div class="row">
                 <div class="col-6">
-                  
-                  
 
-                  <table class="table table-responsive-md table-bordered sub">
+                  <table class="table table-responsive-md table-bordered sub blue">
                     <thead>
                       <tr>
                         <th colspan="3" class="none_pb">
-                          <div class="row">
-                            <div class="input-group col-6">
+                          <div class="d-flex justify-content-end">
+                            <div class="row input-group col-12 col-md-6">
                               <input type="text" class="form-control" placeholder="搜尋關鍵字">
                             </div>
-                            <div class="col-6">
-                              <button type="button" class="btn btn-primary rounded float-right" id="btn_add_obj">確定加入 <i class="fas fa-arrow-circle-right"></i></button>
-                            </div>
-                                
                           </div>
+                          <!-- <div class="col-6">
+                            <button type="button" class="btn btn-primary rounded float-right" id="btn_add_obj">確定加入 <i class="fas fa-arrow-circle-right"></i></button>
+                          </div> -->
                         </th>
                       </tr>   
                       <tr>
-                        <th>
-                            <div class="checkbox-btn">
-                              <input type="checkbox" value="value-11" id="rc11" name="rc11"  />
-                              <label for="rc11" >全選</label>
-                          </div>
-                        </th>
                         <th>教案編號</th>
                         <th>教案名稱</th>
-                        <!-- <th>排 序</th> -->
+                        <th>操作</th>
                       </tr>
                     </thead>
                     <tbody>
                       <tr class="selected">
-                        <td>
-                          <div class="checkbox-btn">
-                            <input type="checkbox" value="value-11" id="rc12" name="rc11" checked />
-                            <label for="rc12" ></label>
-                          </div>
-                        </td>
                         <td >ABC-345234</td>
                         <td >(音1-1)大海浪小海浪的故事書名稱</td>
-                        <!-- <td><i class="fas fa-long-arrow-alt-down"></i> <i class="fas fa-long-arrow-alt-up"></i></td> -->
+                        <td><button type="button" class="btn btn-outline-primary rounded btn-sm" id="btn_add_obj">加入 <i class="fas fa-arrow-circle-right"></i></button></td>
                       </tr>
-                      <tr>
-                        <td>
-                          <div class="checkbox-btn">
-                            <input type="checkbox" value="value-11" id="rc13" name="rc11" />
-                            <label for="rc13" ></label>
-                          </div>
-                        </td>
+                      <tr class="animate__animated animate__repeat-2 add_animate">
                         <td >HJKL-345890</td>
                         <td >(音1-2)袜子小鱼</td>
-                        <!-- <td><i class="fas fa-long-arrow-alt-down"></i> <i class="fas fa-long-arrow-alt-up"></i></td> -->
+                        <td><button type="button" class="btn btn-outline-primary rounded btn-sm" id="btn_add_obj">加入 <i class="fas fa-arrow-circle-right"></i></button></td>
                       </tr>
 
                       <tr>
-                        <td>
-                          <div class="checkbox-btn">
-                            <input type="checkbox" value="value-11" id="rc14" name="rc11" />
-                            <label for="rc14" ></label>
-                          </div>
-                        </td>
                         <td >ABC-123</td>
                         <td >(音1-3)快乐的小鱼</td>
-                        <!-- <td><i class="fas fa-long-arrow-alt-down"></i> <i class="fas fa-long-arrow-alt-up"></i></td> -->
+                        <td><button type="button" class="btn btn-outline-primary rounded btn-sm" id="btn_add_obj">加入 <i class="fas fa-arrow-circle-right"></i></button></td>
                       </tr>
                       <tr>
-                        <td>
-                          <div class="checkbox-btn">
-                            <input type="checkbox" value="value-11" id="rc15" name="rc11" />
-                            <label for="rc15" ></label>
-                          </div>
-                        </td>
                         <td >CFG-56789</td>
                         <td >(音1-4)海裏的小鱼</td>
-                        <!-- <td><i class="fas fa-long-arrow-alt-down"></i> <i class="fas fa-long-arrow-alt-up"></i></td> -->
+                        <td><button type="button" class="btn btn-outline-primary rounded btn-sm" id="btn_add_obj">加入 <i class="fas fa-arrow-circle-right"></i></button></td>
                       </tr>
                     </tbody>
                     <tfoot>
@@ -533,74 +509,45 @@
                     <thead>
                       <tr>
                         <th colspan="4" class="none_pb">
-                          <div class="row">
-                            <div class="input-group col-6">
+                          <div class="d-flex justify-content-end">
+                            <div class="row input-group col-12 col-md-6">
                               <input type="text" class="form-control" placeholder="搜尋關鍵字">
                             </div>
-                            <div class="col-6">
-                              <button type="button" class="btn btn-primary rounded float-right" id="btn_delete_obj"><i class="fas fa-arrow-circle-left"></i> 確定刪除</button>
-                            </div>
-                                
                           </div>
                         </th>
                       </tr> 
                       <tr>
-                        <th>
-                            <div class="checkbox-btn">
-                              <input type="checkbox" value="value-11" id="rc21" name="rc11" />
-                              <label for="rc21" >全選</label>
-                          </div>
-                        </th>
                         <th>教案編號</th>
                         <th>教案名稱</th>
-                        <th>排 序</th>
+                        <th>排序</th>
+                        <th>操作</th>
                       </tr>
                     </thead>
                     <tbody>
-                      <tr>
-                        <td>
-                          <div class="checkbox-btn">
-                            <input type="checkbox" value="value-11" id="rc22" name="rc11" />
-                            <label for="rc22" ></label>
-                          </div>
-                        </td>
+                      <tr class="animate__animated animate__repeat-2 add_red_animate">
                         <td >ABC-345234</td>
                         <td >(音1-1)大海浪小海浪的故事書名稱</td>
                         <td><i class="fas fa-long-arrow-alt-down"></i> <i class="fas fa-long-arrow-alt-up"></i></td>
+                        <td><button type="button" class="btn btn-outline-danger rounded btn-sm" ><i class="fas fa-arrow-circle-left"></i> 刪除</button></td>
                       </tr>
                       <tr>
-                        <td>
-                          <div class="checkbox-btn">
-                            <input type="checkbox" value="value-11" id="rc23" name="rc11" />
-                            <label for="rc23" ></label>
-                          </div>
-                        </td>
                         <td >HJKL-345890</td>
                         <td >(音1-2)袜子小鱼</td>
                         <td><i class="fas fa-long-arrow-alt-down"></i> <i class="fas fa-long-arrow-alt-up"></i></td>
+                        <td><button type="button" class="btn btn-outline-danger rounded btn-sm" ><i class="fas fa-arrow-circle-left"></i> 刪除</button></td>
                       </tr>
                       
                       <tr>
-                        <td>
-                          <div class="checkbox-btn">
-                            <input type="checkbox" value="value-11" id="rc24" name="rc11" />
-                            <label for="rc24" ></label>
-                          </div>
-                        </td>
                         <td >ABC-123</td>
                         <td >(音1-3)快乐的小鱼</td>
                         <td><i class="fas fa-long-arrow-alt-down"></i> <i class="fas fa-long-arrow-alt-up"></i></td>
+                        <td><button type="button" class="btn btn-outline-danger rounded btn-sm" ><i class="fas fa-arrow-circle-left"></i> 刪除</button></td>
                       </tr>
                       <tr>
-                        <td>
-                          <div class="checkbox-btn">
-                            <input type="checkbox" value="value-11" id="rc25" name="rc11" />
-                            <label for="rc25" ></label>
-                          </div>
-                        </td>
                         <td >CFG-56789</td>
                         <td >(音1-4)海裏的小鱼</td>
                         <td><i class="fas fa-long-arrow-alt-down"></i> <i class="fas fa-long-arrow-alt-up"></i></td>
+                        <td><button type="button" class="btn btn-outline-danger rounded btn-sm" ><i class="fas fa-arrow-circle-left"></i> 刪除</button></td>
                       </tr>
                       
                     </tbody>

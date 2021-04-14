@@ -99,6 +99,11 @@ h1 {
   background: #ffe0e0;
 }
 
+.table-bordered.sub.blue thead td, .table-bordered.sub.blue thead th {
+  border-bottom: 2px solid #fff;
+  background: #cde5ff;
+}
+
 .table > tbody > tr.selected {
   pointer-events: none;
   opacity: .3;
@@ -270,11 +275,6 @@ h1 {
   margin-bottom: 0rem;
 }
 
-.table.sub tr th:nth-child(1), .table.sub tr td:nth-child(1) {
-  text-align: center;
-  padding-bottom: 1.25rem;
-}
-
 .table.sub tr th.none_pb {
   padding-bottom: .75rem;
 }
@@ -301,6 +301,34 @@ h1 {
 
 .table.sub tfoot tr td .pagination {
   margin-bottom: 0rem;
+}
+
+.table.sub tr td button i {
+  background-color: none;
+  padding: initial;
+  color: #027bff;
+  border-radius: 2rem;
+  cursor: pointer;
+}
+
+.table.sub tr td button:hover i, .table.sub tr td button:active i {
+  color: #fff !important;
+}
+
+.table.sub tr td button:focus i {
+  color: #027bff;
+}
+
+.table.sub tr td button.btn-outline-danger i {
+  color: #dc3545 !important;
+}
+
+.table.sub tr td button.btn-outline-danger:hover i, .table.sub tr td button.btn-outline-danger:active i {
+  color: #fff !important;
+}
+
+.table.sub tr td button.btn-outline-danger:focus i {
+  color: #dc3545;
 }
 
 .table [name=buttons] .btn {
@@ -426,6 +454,43 @@ h1 {
 .add_animate {
   -webkit-animation-name: add !important;
           animation-name: add !important;
+  -webkit-animation-duration: 1s !important;
+          animation-duration: 1s !important;
+}
+
+@-webkit-keyframes add_red {
+  0% {
+    -webkit-box-shadow: 0 8px 60px rgba(255, 0, 55, 0.35);
+            box-shadow: 0 8px 60px rgba(255, 0, 55, 0.35);
+  }
+  70% {
+    -webkit-box-shadow: 0 5px 20px rgba(255, 104, 116, 0.7);
+            box-shadow: 0 5px 20px rgba(255, 104, 116, 0.7);
+  }
+  100% {
+    -webkit-box-shadow: 0 0px 0px rgba(255, 179, 202, 0);
+            box-shadow: 0 0px 0px rgba(255, 179, 202, 0);
+  }
+}
+
+@keyframes add_red {
+  0% {
+    -webkit-box-shadow: 0 8px 60px rgba(255, 0, 55, 0.35);
+            box-shadow: 0 8px 60px rgba(255, 0, 55, 0.35);
+  }
+  70% {
+    -webkit-box-shadow: 0 5px 20px rgba(255, 104, 116, 0.7);
+            box-shadow: 0 5px 20px rgba(255, 104, 116, 0.7);
+  }
+  100% {
+    -webkit-box-shadow: 0 0px 0px rgba(255, 179, 202, 0);
+            box-shadow: 0 0px 0px rgba(255, 179, 202, 0);
+  }
+}
+
+.add_red_animate {
+  -webkit-animation-name: add_red !important;
+          animation-name: add_red !important;
   -webkit-animation-duration: 1s !important;
           animation-duration: 1s !important;
 }

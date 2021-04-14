@@ -106,11 +106,11 @@
 	width: 100%;
 	/*margin: 0% 1.33% 2.66% 1.33%;*/
 	background: rgba(255, 255, 255, 0.2);
-	padding: 15px;
+	// padding: 15px;
 	box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, .5);
-	border: solid 1px #d20000;
+	border: solid 2px rgba(209, 0, 62, 0.3);
 	color: #421d1f;
-	height: 260px;
+	// height: 260px;
 	font-weight: 700;
 	cursor: pointer;
 	font-size: 1.4rem;
@@ -119,10 +119,10 @@
 .subject:hover,
 .subject:active {
 	box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.25);
-	background: rgba(245, 245, 245, 1);
+	background: rgba(245, 245, 245, .8);
 }
 .subject .header {
-  margin: 8px 0px;
+  margin: 4px 0 8px;
 }
 
 .subject .header .date,
@@ -136,6 +136,20 @@
 	white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+
+.subject {
+  .img_thumb{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+  &:hover, &:active {
+    .img_thumb{
+      filter: saturate(1.6);
+      transition: all 250ms ease-out;
+    }
+  }
 }
 
 /*.subject .header .date i,
@@ -216,13 +230,13 @@
 */
 
 .subject .title {
-  margin: 12px 0px 8px;
+  margin: 0 0 8px;
   color: #72013d;
   line-height: 1.25;
-  height: 95px;
+  height: 64px;
   // overflow-y: hidden;
   font-size: 1.6rem;
-  -webkit-line-clamp: 3;
+  -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -232,7 +246,7 @@
 	color: #dc143c;
   font-size: 1.8rem;
   vertical-align: middle;
-  margin-top: -2px;
+  margin: -2px -4px 0;
 }
 .subject .content {
   // &:after {
@@ -240,6 +254,7 @@
   //     border-bottom: dashed 1px #b1a1a1;
   //   }
   border-bottom: dashed 1px #b1a1a1;
+  padding: 0px 15px;
 }
 .subject .content a:before{
 	font-family: 'Material Icons';
@@ -258,7 +273,7 @@
   transition: background 0.15s cubic-bezier(0.33, 0.66, 0.66, 1) 0s;
   line-height: 24px;
   padding: 0 2px;
-  margin-top: .6rem;
+  margin: 10px 0 46px;
 }
 .subject .content a:hover, .subject .content a:hover i {
     text-decoration: none;
@@ -306,9 +321,6 @@
   }
 }
 
-
-
-
 .subject {
     transition: all 0.3s;
 }
@@ -321,7 +333,7 @@
 .status {
 	position: absolute;
 	right: 15px;
-	bottom: 8px;
+	bottom: 4px;
 }
 .status:after {
 	font-family: 'Material Icons';
