@@ -1,8 +1,10 @@
 .grid.outline_file {
-  padding: 25px 30px;
   /* max-width: 1300px; */
   margin: 0 auto;
   list-style: none;
+  max-height: 42rem;
+  min-height: 18rem;
+  overflow-y: scroll;
 }
 
 .grid.outline_file li {
@@ -199,4 +201,5 @@
   -webkit-box-shadow: 0 8px 10px rgba(0, 0, 0, 0.3);
           box-shadow: 0 8px 10px rgba(0, 0, 0, 0.3);
   position: relative;
+  padding: 28px 30px;
 }

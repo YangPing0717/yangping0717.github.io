@@ -104,7 +104,23 @@
     	font-weight: 700;
 	}
 	
-
+  ::selection {
+    background-color: #c9c9c9;
+    color: #ffffff;
+    text-shadow: none;
+  }
+  ::-webkit-scrollbar {
+    // width: 5px;
+    height: 5px;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    cursor: pointer;
+    border-radius: 20px;
+    background: #d1b7ff;
+    background: -webkit-gradient(linear, left bottom, left top, from(#d1b7ff), to(#78ffae));
+    background: linear-gradient(0deg, #d1b7ff 0%, #78ffae 100%);
+  }
 	
 	
 .title img {
