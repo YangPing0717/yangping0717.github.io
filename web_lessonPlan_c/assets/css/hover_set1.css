@@ -1,0 +1,346 @@
+
+.grid {
+	position: relative;
+	margin: 0 auto;
+	padding: 0em 0 0em;
+	/* max-width: 1000px; */
+	list-style: none;
+	text-align: center;
+	display: flow-root;
+}
+
+/* Common style */
+.grid figure {
+	position: relative;
+	float: left;
+	overflow: hidden;
+	margin: .75rem 1%;
+	min-width: 200px;
+  max-width: 480px;
+  max-height: 360px;
+  /*width: 23%;*/
+	background: #3085a3;
+	text-align: center;
+	cursor: pointer;
+	
+	width: 48%;
+	height: 80px;
+	border-radius: .25rem;
+}
+
+.grid figure img {
+	position: relative;
+	display: block;
+	min-height: 100%;
+	max-width: 100%;
+	opacity: 1;
+}
+
+.grid figure figcaption {
+	padding: 2em;
+	color: #fff;
+	/*text-transform: uppercase;*/
+	font-size: 1.2em;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+}
+
+.grid figure figcaption::before,
+.grid figure figcaption::after {
+	pointer-events: none;
+}
+
+.grid figure figcaption,
+.grid figure figcaption > a {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+/* Anchor will cover the whole item by default */
+/* For some effects it will show as a button */
+.grid figure figcaption > a {
+	z-index: 1000;
+	text-indent: 200%;
+	white-space: nowrap;
+	font-size: 0;
+	opacity: 0;
+}
+
+.grid figure h2 {
+	word-spacing: -0.15em;
+	font-weight: 300;
+}
+
+.grid figure h2 span {
+	font-weight: 800;
+}
+
+.grid figure h2,
+.grid figure p {
+	margin: 0;
+}
+
+.grid figure p {
+	/*letter-spacing: 1px;*/
+	font-size: 68.5%;
+	color: #001254;
+    font-weight: 700;
+}
+
+/* Individual effects */
+
+/*---------------*/
+/***** Roxy *****/
+/*---------------*/
+
+figure.effect-roxy {
+	/*background: -webkit-linear-gradient(45deg, #000000 0%, #23076f 100%);
+	background: linear-gradient(45deg, #000000 0%,#23076f 100%);*/
+	background: -webkit-linear-gradient(45deg, #dacdf3 0%, #dcdcdc 100%);
+	background: linear-gradient(45deg, #dacdf3 0%,#dcdcdc 100%);
+	transition: all 250ms ease-out;
+}
+
+figure.effect-roxy img {
+	max-width: none;
+	width: -webkit-calc(100% + 60px);
+	width: calc(100% + 60px);
+	-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+	transition: opacity 0.35s, transform 0.35s;
+	-webkit-transform: translate3d(-50px,0,0);
+	transform: translate3d(-50px,0,0);
+}
+
+figure.effect-roxy figcaption::before {
+	position: absolute;
+	top: 20px;
+    right: 23px;
+    bottom: 20px;
+    left: 23px;
+	border: 1px solid #676477;
+	content: '';
+	opacity: 0;
+	-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+	transition: opacity 0.35s, transform 0.35s;
+	-webkit-transform: translate3d(-20px,0,0);
+	transform: translate3d(-20px,0,0);
+	border-radius: .25rem;
+}
+
+figure.effect-roxy figcaption {
+	padding: 0rem 3.8rem;
+	text-align: left;
+}
+
+figure.effect-roxy h2 {
+	padding: 10% 0 8px 0;
+	font-weight: 700;
+	font-size: 26px;
+	line-height: 1.2;
+	text-transform: uppercase;
+	word-spacing: 0;
+	letter-spacing: 0;
+}
+
+figure.effect-roxy p {
+	/*opacity: 1;*/
+	opacity: 0;
+	-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+	transition: opacity 0.35s, transform 0.35s;
+	-webkit-transform: translate3d(-10px,0,0);
+	transform: translate3d(-10px,0,0);
+}
+figure.effect-roxy:hover {
+    background: -webkit-linear-gradient(45deg, #c3abf2 0%, #d1d0d5 100%);
+    background: linear-gradient(45deg, #c3abf2 0%,#d1d0d5 100%); 
+}
+figure.effect-roxy:hover img {
+	opacity: 0.4;
+	-webkit-transform: translate3d(0,0,0);
+	transform: translate3d(0,0,0);
+}
+
+figure.effect-roxy:hover figcaption::before, 
+figure.effect-roxy:hover p {
+	opacity: 1;
+	-webkit-transform: translate3d(0,0,0);
+	transform: translate3d(0,0,0);
+}
+figure.effect-roxy .filename {
+	line-height: 80px;
+	color: #7a3b25;
+	font-weight: 700;
+	overflow:hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	padding-right: 46px;
+}
+figure.effect-roxy:hover .filename {
+	color: #fff;
+}
+
+/* 先拿掉： */
+
+figure.effect-roxy p span.tag {
+	color: #ffffff;
+    margin-right: 8px;
+    background-color: #ffffff;
+    padding: 3px 6px;
+    background: #001255;
+    font-weight: 700;
+	text-transform: uppercase;
+}
+/*figure p.percent {
+	color: #21143a;
+    background-color: #ffffff;;
+    position: absolute;
+    border-radius: 50%;
+    height: 38px;
+    width: 38px;
+    line-height: 38px;
+    text-align: center;
+    right: 28px;
+	bottom: 6px;
+    margin-bottom: 0;
+}*/
+figure.effect-roxy p.percent {
+	color: #fff;
+    background-color: #854861;
+    position: absolute;
+    border-radius: 50%;
+    height: 48px;
+    width: 48px;
+    line-height: 48px;
+    text-align: center;
+    right: 38px;
+    /* bottom: 38px;
+    margin-bottom: 0; */
+		font-size: 2.6rem;
+		top: 0;
+    bottom: 0;
+    margin: auto;
+		
+}
+
+/* ======== disabled ======== */
+figure.disabled.effect-roxy {
+    cursor: not-allowed;
+	/*background: -webkit-linear-gradient(45deg, #000000 0%, #15004e 100%);
+    background: linear-gradient(45deg, #000000 0%,#15004e 100%);*/
+	
+	background: -webkit-linear-gradient(45deg, #c8c8c8 0%, #989898 100%);
+    background: linear-gradient(45deg, #c8c8c8 0%,#989898 100%);
+	
+}
+figure.disabled.effect-roxy img{
+	opacity: 0.2;
+	-webkit-transform: translate3d(0,0,0);
+	transform: translate3d(0,0,0);
+}
+figure.disabled.effect-roxy figcaption::before, 
+figure.disabled.effect-roxy p {
+	opacity: 1;
+	-webkit-transform: translate3d(0,0,0);
+	transform: translate3d(0,0,0);
+}
+figure.disabled.effect-roxy figcaption::before{
+	border: 1px solid #8e8e8e;
+}
+figure.disabled:after {
+	content: 'COMPLETED';
+    position: absolute;
+    line-height: 34px;
+    width: 150px;
+    height: 32px;
+    transform: rotate(45deg);
+    color: #fff;
+    background-color: #3f3f3f;
+    text-align: center;
+    right: -38px;
+    top: 18px;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+
+/*  pad 直式  */ 
+@media screen and (max-width: 50em) {
+	.content {
+		padding: 0 10px;
+		text-align: center;
+	}
+	/*.grid figure {
+		display: inline-block;
+		float: none;
+		margin: 10px auto;
+		width: 100%;
+	}*/
+.grid {
+    position: relative;
+    margin: 0 auto;
+    padding: 0em 0 0em;
+    max-width: 1000px;
+    list-style: none;
+    text-align: left;
+}
+.grid figure {
+		display: inline-block;
+		float: none;
+		margin: 5px 1%;
+		/*width: 30.9%;*/
+		min-width: initial;
+		width: 47.5%;
+}   
+figure.effect-roxy h2 {
+    padding: 8% 0 10px 0;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.2;
+}
+}
+@media screen and (max-width: 480px) { 
+	.grid figure {
+			display: inline-block;
+			float: none;
+			margin: 5px 0%;
+			width: 100%;
+			min-width: initial;
+			/*max-height: 220px;*/
+			/* min-height: 250px; */
+	} 
+	figure.effect-roxy img {
+			max-width: none;
+			width: -webkit-calc(100% + 50px);
+			width: calc(100% + 50px);
+			-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+			transition: opacity 0.35s, transform 0.35s;
+			-webkit-transform: translate3d(-50px,0,0);
+			transform: translate3d(-50px,0,0);
+	}
+}
+
+
+/* .grid.subcate {
+    padding: 1em;
+    border: 2px solid #ffffff;
+    background: rgba(255, 255, 255, .8);
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.8);
+	height: -moz-fit-content !important;
+	height: fit-content !important;
+} */
+
+.description {
+	font-size: 12px;
+	color: #7a3b25;
+	line-height: 1.4;
+	margin-bottom: 6px;
+}
+.mainblock section {
+	padding-bottom: 2rem;
+}
+.mainblock section:last-child {
+	padding-bottom: 3rem;
+}
