@@ -131,16 +131,21 @@
 }
 
 .subject .img_thumb {
-  -o-object-fit: cover;
-     object-fit: cover;
   width: 100%;
   height: 0;
   padding-bottom: 75%;
   margin-bottom: 18px;
+  overflow: hidden;
+  position: relative;
 }
 
 .subject .img_thumb img {
   width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 
 .subject:hover .img_thumb, .subject:active .img_thumb {
