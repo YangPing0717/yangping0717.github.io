@@ -205,7 +205,7 @@
 
         <v-main class="brown lighten-5 " 
             >
-            <v-container fluid class="pt-0" >
+            <v-container fluid class="mt-0" >
                 <v-row class="d-flex justify-center" >
                     <template >
                         <v-card tile :width="sheetWidth" elevation="0" >
@@ -574,15 +574,15 @@
         
         <div class="float_posi">
             <v-speed-dial
-            v-model="fab"
-            :top="top"
-            :bottom="bottom"
-            :right="right"
-            :left="left"
-            :direction="direction"
-            :open-on-hover="hover"
-            :transition="transition"
-            class="anima"
+                v-model="fab"
+                :top="top"
+                :bottom="bottom"
+                :right="right"
+                :left="left"
+                :direction="direction"
+                :open-on-hover="hover"
+                :transition="transition"
+                class="anima"
             >
             <template v-slot:activator >
                 <v-btn
@@ -1049,22 +1049,21 @@
                       // case 'md': return 500
                   }
               },
-
           },
           methods: {
               onClickOutside() {
                   this.sheetFocus = false
               },
-              close() {
-                  this.accors.forEach(item => {
-                      if (item.active) {
-                          _.delay(function () {
-                              item.active = false;
-                          }, 300);
-                          return false;
-                      }
-                  });
-              },
+            //   close() {
+            //       this.accors.forEach(item => {
+            //           if (item.active) {
+            //               _.delay(function () {
+            //                   item.active = false;
+            //               }, 300);
+            //               return false;
+            //           }
+            //       });
+            //   },
           },
 
           
