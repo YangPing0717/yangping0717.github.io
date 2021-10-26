@@ -26,13 +26,13 @@ var leftTime = 2400;
 	<link rel="stylesheet" type="text/css" href="./TOEFL_files/toefl.css">
 	<link rel="stylesheet" type="text/css" href="./TOEFL_files/nonselect.css">
 
-	<link type="text/css" rel="stylesheet" href="assets/css/octicons.css"/>
-	<link type="text/css" rel="stylesheet" href="assets/css/style_icomoon.css"/>
-	<link rel="stylesheet" href="assets/css/main_2.css" />
-	<link rel="stylesheet" href="assets/css/main_newtoefl.css" />
+	<link type="text/css" rel="stylesheet" href="assets_q/css/octicons.css"/>
+	<link type="text/css" rel="stylesheet" href="assets_q/css/style_icomoon.css"/>
+	<link rel="stylesheet" href="assets_q/css/main_2.css" />
+	<link rel="stylesheet" href="assets_q/css/main_newtoefl.css" />
 	
 	<!--  checkbox  -->
-	<link href="assets/css/checkbox_q.css" rel="stylesheet">
+	<link href="assets_q/css/checkbox_q.css" rel="stylesheet">
 
 	<script src="./TOEFL_files/jquery-1.12.0.min.js"></script>
 	<script src="./TOEFL_files/bootstrap.min.js"></script>
@@ -43,7 +43,7 @@ var leftTime = 2400;
 <!--<link rel='stylesheet prefetch' href='http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css'>-->
 <link rel='stylesheet prefetch' href='http://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.10.0/bootstrap-table.min.css'>
 <link rel='stylesheet prefetch' href='http://rawgit.com/vitalets/x-editable/master/dist/bootstrap3-editable/css/bootstrap-editable.css'>
-<link rel="stylesheet" href="assets/css/style_table.css">
+<link rel="stylesheet" href="assets_q/css/style_table.css">
 
 	</head>
     
@@ -302,36 +302,38 @@ var leftTime = 2400;
 				<td class="col-xs-1 correct"></td>
 				</td>
 					</tr>
-			</tbody></table>
-</div>
-</div>
-<div class="answer clearfix">
-	<div>我的答案 <span class="wrong">B A B A B</span></div>
-	<div>正確答案 <span>B A A A B</span></div>
-</div>
+			</tbody>
+		</table>
+		</div>
+		</div>
+
+			<div class="answer clearfix">
+				<div>我的答案 <span class="wrong">B A B A B</span></div>
+				<div>正確答案 <span>B A A A B</span></div>
+			</div>
 		
 			</div>
 			</div>
 			
 			
 			<div class="bhoechie-tab-content">
-			<div>
-				<!--<div class="qno">Question 4 of 6</div>-->
-			</div>
-			</div>
-			<div class="bhoechie-tab-content">
-			<div>
-				<!--<div class="qno">Question 5 of 6</div>-->
-			</div>
+				<div>
+					<!--<div class="qno">Question 4 of 6</div>-->
+				</div>
 			</div>
 			<div class="bhoechie-tab-content">
-			<div>
-The Listening section measures your ability to understand conversations and lectures in English. You will hear each conversation and lecture only one time. After each conversation or lecture, you will hear some questions about it. Answer all questions based on what the speakers state or imply.<br>
-You may take notes while you listen. You may use your notes to help you answer the questions.Most questions have four possible answers. In some questions, you will see this icon: . This means that you will hear, but not see, part of the question.<br>
-Some questions have special directions, which appear in a gray box. Most questions are worth one point. If a question is worth more than one point, special directions will indicate how many points you can receive.<br>
-You have approximately 40 minutes to complete the Listening section. This includes the time for listening to the conversations and lectures and for answering the questions.<br>
-To make this practice more like the real test, cover the questions and answers during each conversation and lecture. When you hear the question, uncover the questions and answers.
+				<div>
+					<!--<div class="qno">Question 5 of 6</div>-->
+				</div>
 			</div>
+			<div class="bhoechie-tab-content">
+				<div>
+					The Listening section measures your ability to understand conversations and lectures in English. You will hear each conversation and lecture only one time. After each conversation or lecture, you will hear some questions about it. Answer all questions based on what the speakers state or imply.<br>
+					You may take notes while you listen. You may use your notes to help you answer the questions.Most questions have four possible answers. In some questions, you will see this icon: . This means that you will hear, but not see, part of the question.<br>
+					Some questions have special directions, which appear in a gray box. Most questions are worth one point. If a question is worth more than one point, special directions will indicate how many points you can receive.<br>
+					You have approximately 40 minutes to complete the Listening section. This includes the time for listening to the conversations and lectures and for answering the questions.<br>
+					To make this practice more like the real test, cover the questions and answers during each conversation and lecture. When you hear the question, uncover the questions and answers.
+				</div>
 			</div>
 		</div>
 	</div>
@@ -348,15 +350,17 @@ To make this practice more like the real test, cover the questions and answers d
 
 <div class="col-xs-12 col-lg-10 col-lg-offset-1">
 <div class="col-xs-8 cpyright">
-	<img src="assets/css/images/logo_elite_tw_w.svg" alt=""/>
+	<img src="assets_q/css/images/logo_elite_tw_w.svg" alt=""/>
 	<h4>菁英國際語言教育中心</h4>
-	<h5>Copyright @ 2017 ELITE (English Language Institute of Testing and Education), <br/>All rights reserved.</h5>
+	<h5>Copyright &copy; <span id="year"></span> ELITE (English Language Institute of Testing and Education), <br/>All rights reserved.</h5>
 </div>
 </div>		
 		
 
 		
-		
+<script>
+  document.getElementById("year").innerHTML = new Date().getFullYear();
+</script>		
         
 <!-- 按下秀出 -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
@@ -376,7 +380,7 @@ $( "#timeicon" ).click(function() {
 <script src='http://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.9.1/extensions/export/bootstrap-table-export.js'></script>
 <script src='http://rawgit.com/hhurz/tableExport.jquery.plugin/master/tableExport.js'></script>
 <script src='http://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.9.1/extensions/filter-control/bootstrap-table-filter-control.js'></script>
-<script src="assets/js/index.js"></script>
+<script src="assets_q/js/index.js"></script>
 
 
 <script src="./TOEFL_files/jquery-ui.min.js"></script>
@@ -386,8 +390,8 @@ $( "#timeicon" ).click(function() {
 <script src="./TOEFL_files/dragdrop_options.js"></script>
 <script src="./TOEFL_files/nobackspace.js"></script>
 <script src="./TOEFL_files/essay.js"></script>
- 
- 
+
+
 <!--  Vertical Tabs  開始  -->
 <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
 <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
@@ -403,7 +407,9 @@ $(document).ready(function() {
     });
 });
 </script>
- 
- 
-  
+
+
+
+
+
 </body></html>

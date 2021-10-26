@@ -106,9 +106,9 @@
 			
 			<div class="collapse navbar-collapse navbar-right menu menu--prospero" id="myNavbar">
 			  <ul class="nav navbar-nav menu__list">
-				<li class="menu__item" onclick="location.href='browse.html'"><a href="#" class="menu__link">總覽</a></li>
-				<li class="menu__item" onclick="location.href='reading.html'"><a href="#" class="menu__link">閱讀訓練</a></li>
-				<li class="menu__item" onclick="location.href='listening.html'"><a href="#" class="menu__link">聽力訓練</a></li> 
+				<li class="menu__item"><a href="#" class="menu__link">總覽</a></li>
+				<li class="menu__item"><a href="#" class="menu__link">閱讀訓練</a></li>
+				<li class="menu__item"><a href="#" class="menu__link">聽力訓練</a></li> 
 				<li class="menu__item menu__item--current"><a href="#" class="menu__link">訓練紀錄</a></li> 
 				<li class="menu__item"><a href="#" class="menu__link name"><i class="material-icons">exit_to_app</i>登出</a><div class="userid hidden-xs">TESTERXXX</div></li>
 			  </ul>
@@ -315,8 +315,8 @@
 
 			
 				<div class="crbox">   
-				<div id="copyright" class="hidden-xs">Copyright &copy; 2017 by <a href="http://www.language-center.com.tw/" target="_blank">ELITE</a> International Education Services. All rights reserved.</div>
-        		<div class="copyright hidden-sm hidden-md hidden-lg">&copy; 2017 <a href="http://www.language-center.com.tw/" target="_blank">ELITE</a></div>
+				<div id="copyright" class="hidden-xs">Copyright &copy; <span id="year"></span> by <a href="http://www.language-center.com.tw/" target="_blank">ELITE</a> International Education Services. All rights reserved.</div>
+        		<div class="copyright hidden-sm hidden-md hidden-lg">&copy; <span id="year"></span> <a href="http://www.language-center.com.tw/" target="_blank">ELITE</a></div>
         		</div>
         		
 				</section>
@@ -614,6 +614,9 @@ $(".dropdown-menu li a").click(function(){
 </script>
 <!-- dropdown-menu 下拉過濾 btn 完  -->	
 
-								
+<script>
+	document.getElementById("year").innerHTML = new Date().getFullYear();
+</script>
+
 </body>
 </html>
