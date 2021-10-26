@@ -50,311 +50,309 @@ var leftTime = 2400;
     
     
 <body class="intro">
-<div>
+	<div>
 
-<div class="container-fluid">
-<div class="page-header col-xs-12 col-lg-10 col-lg-offset-1">
-    <div class="navbar-brand"><img src="../assets/images/logo.png" alt=""/></div>
-    <div class="headtitle">
-    <h2>TPO-01-C2<i class="material-icons">keyboard_arrow_right</i>The mystery of yawning The mystery of yawning</h2>
-    <div><small><div><span>主題</span>社會科學</div><div><span>程度</span>難度適中</div></small></div>
-    </div>
-    
-    <div class="pull-right cpnbox">
-    <div class="btn btn-default" id="confirm" style="display: none;">Confirm</div>
-	<a href="#"><div class="btn btn-default disable" id="previous" style="">Review</div></a>
-	<a href="#"><div class="btn btn-default" id="back" style="">Back</div></a>
-	<a href="#"><div class="btn btn-default" id="next" style="" data-toggle="modal" data-target="#myModal" >Next</div></a>
-	</div>
-   
-<!-- Modal -->
-<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" >
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-        <h4 class="modal-title" id="myModalLabel">Massage!</h4>
-      </div>
-      <div class="modal-body">
-      You should use the scroll bar to read the whole passage before you begin to answer the question. However, the passage will appear again with each question.
-      </div>
-      <div class="modal-footer">
-        <div class="btnbox">
-        <button type="button" class="btn btn-default" data-dismiss="modal">OK</button>
-        <!--<button type="button" class="btn btn-default" >Save changes</button>-->
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-	
-   
-    <p class="time_box">
-    <span id="time-disp" style="display: none" class="time_number_ml">03:48<span class="alert">最後5分鐘，請把握時間！</span></span>
-    <span><i class="fa fa-clock-o icon_r_l" id="timeicon"></i></span>
-    </p>
-    
-</div>
-</div>
-
-<!--  題目區  開始  -->
-<div class="col-xs-12 col-lg-10 col-lg-offset-1 ">
-
-<!--  單選題  -->
-<div class="question_index">
-	<span class="qtext qtext_mr2">Question</span>
-	<span class="current_index">1</span> of <span>14</span>
-	<div class="qtext_r">
-	<div><span class="qtext qtext_mr2">此題作答人次</span>463</div>
-	<div><span class="qtext qtext_mr2">答對率</span>76%</div>
-	</div>
-</div>
-
-<div class="panel panel-default question current" style="display: block;" audio="one sec.mp3">
-<div class="panel-body">
-<form action="http://elweb.elite-learning.com.tw/toefl_pony/?_c=toefl&amp;step=update&amp;_post=" method="post" target="answer_result">
-<div class="col-md-12">
-	<div class="mediabox">
-		<audio src="https://storage.googleapis.com/mock-exam/2017-05-15/b89217c813a71f40df1be64e80936186.mp3" controls ></audio>
-	</div>
-	<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 bhoechie-tab-container">
-		<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 bhoechie-tab-menu">
-		  <div class="list-group">
-			<a href="#" class="list-group-item active text-center">
-			  <table class="text-center">
-			  <tbody>
-				<tr>
-				  <td>第 1 題</td>
-				  <td>A</td>
-				  <td class="uncorrect"></td>
-				</tr>
-			  </tbody>
-			</table>
-			</a>
-			<a href="#" class="list-group-item text-center">
-			  <table class="text-center">
-			  <tbody>
-				<tr>
-				  <td>第 2 題</td>
-				  <td>A C</td>
-				  <td class="correct"></td>
-				</tr>
-			  </tbody>
-			</table>
-			</a>
-			<a href="#" class="list-group-item text-center">
-			  <table class="text-center">
-			  <tbody>
-				<tr>
-				  <td>第 3 題</td>
-				  <td>B A A A B</td>
-				  <td class="uncorrect"></td>
-				</tr>
-			  </tbody>
-			</table>
-			</a>
-			<a href="#" class="list-group-item text-center">
-			  <table class="text-center">
-			  <tbody>
-				<tr>
-				  <td>第 4 題</td>
-				  <td>A</td>
-				  <td class="correct"></td>
-				</tr>
-			  </tbody>
-			</table>
-			</a>
-			<a href="#" class="list-group-item text-center">
-			  <table class="text-center">
-			  <tbody>
-				<tr>
-				  <td>第 5 題</td>
-				  <td>A</td>
-				  <td class="uncorrect"></td>
-				</tr>
-			  </tbody>
-			</table>
-			</a>
-			<a href="#" class="list-group-item text-center">
-			  <table class="text-center">
-			  <tbody>
-				<tr>
-				  <td colspan="3">聽力原文</td>
-				</tr>
-			  </tbody>
-			</table>
-			</a>
-		  </div>
+		<div class="container-fluid">
+		<div class="page-header col-xs-12 col-lg-10 col-lg-offset-1">
+				<div class="navbar-brand"><img src="../assets/images/logo.png" alt=""/></div>
+				<div class="headtitle">
+				<h2>TPO-01-C2<i class="material-icons">keyboard_arrow_right</i>The mystery of yawning The mystery of yawning</h2>
+				<div><small><div><span>主題</span>社會科學</div><div><span>程度</span>難度適中</div></small></div>
+				</div>
+				
+				<div class="pull-right cpnbox">
+				<div class="btn btn-default" id="confirm" style="display: none;">Confirm</div>
+			<a href="#"><div class="btn btn-default disable" id="previous" style="">Review</div></a>
+			<a href="#"><div class="btn btn-default" id="back" style="">Back</div></a>
+			<a href="#"><div class="btn btn-default" id="next" style="" data-toggle="modal" data-target="#myModal" >Next</div></a>
+			</div>
+			 
+		<!-- Modal -->
+		<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" >
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+						<h4 class="modal-title" id="myModalLabel">Massage!</h4>
+					</div>
+					<div class="modal-body">
+					You should use the scroll bar to read the whole passage before you begin to answer the question. However, the passage will appear again with each question.
+					</div>
+					<div class="modal-footer">
+						<div class="btnbox">
+						<button type="button" class="btn btn-default" data-dismiss="modal">OK</button>
+						<!--<button type="button" class="btn btn-default" >Save changes</button>-->
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
-		<div class="col-lg-9 col-md-9 col-sm-9 col-xs-9 bhoechie-tab">
-			<!-- flight section -->
-			<div class="bhoechie-tab-content active">
-			<div>
-			<!--<div class="qno">Question 1 of 6</div>
-			<span class="qnum">2.</span>-->
-			<div class="subtitles">According to the <mark>recurrent passage</mark>, the force that generates tides on the earth is the force that generates tides on the earth is <i class="material-icons playsound">headset</i></div>
+			
+			 
+				<p class="time_box">
+				<span id="time-disp" style="display: none" class="time_number_ml">03:48<span class="alert">最後5分鐘，請把握時間！</span></span>
+				<span><i class="fa fa-clock-o icon_r_l" id="timeicon"></i></span>
+				</p>
+				
+		</div>
+		</div>
+		
+		<!--  題目區  開始  -->
+		<div class="col-xs-12 col-lg-10 col-lg-offset-1 ">
+		
+		<!--  單選題  -->
+		<div class="question_index">
+			<span class="qtext qtext_mr2">Question</span>
+			<span class="current_index">1</span> of <span>14</span>
+			<div class="qtext_r">
+			<div><span class="qtext qtext_mr2">此題作答人次</span>463</div>
+			<div><span class="qtext qtext_mr2">答對率</span>76%</div>
+			</div>
+		</div>
+		
+		<div class="panel panel-default question current" style="display: block;" audio="one sec.mp3">
+		<div class="panel-body">
+		<form action="http://elweb.elite-learning.com.tw/toefl_pony/?_c=toefl&amp;step=update&amp;_post=" method="post" target="answer_result">
+		<div class="col-md-12">
+			<div class="mediabox">
+				<audio src="https://storage.googleapis.com/mock-exam/2017-05-15/b89217c813a71f40df1be64e80936186.mp3" controls ></audio>
+			</div>
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 bhoechie-tab-container">
+				<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 bhoechie-tab-menu">
+					<div class="list-group">
+					<a href="#" class="list-group-item active text-center">
+						<table class="text-center">
+						<tbody>
+						<tr>
+							<td>第 1 題</td>
+							<td>A</td>
+							<td class="uncorrect"></td>
+						</tr>
+						</tbody>
+					</table>
+					</a>
+					<a href="#" class="list-group-item text-center">
+						<table class="text-center">
+						<tbody>
+						<tr>
+							<td>第 2 題</td>
+							<td>A C</td>
+							<td class="correct"></td>
+						</tr>
+						</tbody>
+					</table>
+					</a>
+					<a href="#" class="list-group-item text-center">
+						<table class="text-center">
+						<tbody>
+						<tr>
+							<td>第 3 題</td>
+							<td>B A A A B</td>
+							<td class="uncorrect"></td>
+						</tr>
+						</tbody>
+					</table>
+					</a>
+					<a href="#" class="list-group-item text-center">
+						<table class="text-center">
+						<tbody>
+						<tr>
+							<td>第 4 題</td>
+							<td>A</td>
+							<td class="correct"></td>
+						</tr>
+						</tbody>
+					</table>
+					</a>
+					<a href="#" class="list-group-item text-center">
+						<table class="text-center">
+						<tbody>
+						<tr>
+							<td>第 5 題</td>
+							<td>A</td>
+							<td class="uncorrect"></td>
+						</tr>
+						</tbody>
+					</table>
+					</a>
+					<a href="#" class="list-group-item text-center">
+						<table class="text-center">
+						<tbody>
+						<tr>
+							<td colspan="3">聽力原文</td>
+						</tr>
+						</tbody>
+					</table>
+					</a>
+					</div>
+				</div>
+				<div class="col-lg-9 col-md-9 col-sm-9 col-xs-9 bhoechie-tab">
+					<!-- flight section -->
+					<div class="bhoechie-tab-content active">
+					<div>
+					<!--<div class="qno">Question 1 of 6</div>
+					<span class="qnum">2.</span>-->
+					<div class="subtitles">According to the <mark>recurrent passage</mark>, the force that generates tides on the earth is the force that generates tides on the earth is <i class="material-icons playsound">headset</i></div>
+						<div class="ansbox">
+						<div class="radio-btn correct">
+							<input type="radio" value="value-1" id="rc1" name="rc1" />
+							<label for="rc1" onclick>( A ) the gravitational pull of the earth’s core</label>
+						</div>
+						<div class="radio-btn">
+							<input type="radio" value="value-2" id="rc2" name="rc1" disabled />
+							<label for="rc2" onclick>( B ) The same force that generates tides on the moon</label>
+						</div>
+						<div class="radio-btn">
+							<input type="radio" value="value-3" id="rc3" name="rc1" disabled />
+							<label for="rc3" onclick>( C ) abrupt changes in atmospheric pressure</label>
+						</div>
+						<div class="radio-btn">
+							<input type="radio" value="value-4" id="rc4" name="rc1" disabled />
+							<label for="rc4" onclick>( D ) a combination of gravity and centrifugal force and centrifugal force and centrifugal force</label>
+						</div>
+						</div>
+						
+						<div class="answer clearfix">
+							<div>我的答案 <span class="wrong">B</span></div>
+							<div>正確答案 <span>A</span></div>
+						</div>
+					</div>
+					</div>
+					<!-- train section -->
+					<div class="bhoechie-tab-content">
+					<div>
+		<!--<div class="qno">Question 2 of 6</div>
+		<span class="qnum">28.</span>-->
+		<div class="subtitles">According to the <mark>recurrent passage</mark>, the force that generates tides on the earth is the force that generates tides on the earth is</div>
+			<div class="ansbox">
+			<div class="checkbox-btn correct">
+				<input type="checkbox" value="value-5" id="rc5" name="rc5" />
+				<label for="rc5" onclick>( A ) the gravitational pull of the earth’s core</label>
+			</div>
+			
+			<div class="checkbox-btn">
+				<input type="checkbox" value="value-6" id="rc6" name="rc6" disabled />
+				<label for="rc6" onclick>( B ) The same force that generates tides on the moon</label>
+			</div>
+			
+			<div class="checkbox-btn correct">
+				<input type="checkbox" value="value-7" id="rc7" name="rc7" />
+				<label for="rc7" onclick>( C ) abrupt changes in atmospheric pressure</label>
+			</div>
+			
+			<div class="checkbox-btn">
+				<input type="checkbox" value="value-8" id="rc8" name="rc8" disabled />
+				<label for="rc8" onclick>( D ) a combination of gravity and centrifugal force and centrifugal force and centrifugal force</label>
+			</div>
+				</div>
+		<div class="subtitles "><strong>click on 2 answers</strong></div>
+		<div class="answer clearfix">
+			<div>我的答案 <span class="">A C</span></div>
+			<div>正確答案 <span>A C</span></div>
+		</div>
+						
+					</div>
+					</div>
+		
+					<!-- hotel search -->
+					<div class="bhoechie-tab-content">
+					<div>
+		<!--<div class="qno">Question 3 of 6</div>
+		<span class="qnum">25.</span>-->
+		<div class="subtitles">Based on the ....... For each sentence, click in the correct box. This question is worth 3 points.</div>
+		<div class="subtitles "><strong>click in the correct box for each phrase</strong></div>
+		
 				<div class="ansbox">
-				<div class="radio-btn correct">
-					<input type="radio" value="value-1" id="rc1" name="rc1" />
-					<label for="rc1" onclick>( A ) the gravitational pull of the earth’s core</label>
-				</div>
-				<div class="radio-btn">
-					<input type="radio" value="value-2" id="rc2" name="rc1" disabled />
-					<label for="rc2" onclick>( B ) The same force that generates tides on the moon</label>
-				</div>
-				<div class="radio-btn">
-					<input type="radio" value="value-3" id="rc3" name="rc1" disabled />
-					<label for="rc3" onclick>( C ) abrupt changes in atmospheric pressure</label>
-				</div>
-				<div class="radio-btn">
-					<input type="radio" value="value-4" id="rc4" name="rc1" disabled />
-					<label for="rc4" onclick>( D ) a combination of gravity and centrifugal force and centrifugal force and centrifugal force</label>
-				</div>
-				</div>
-				
-				<div class="answer clearfix">
-					<div>我的答案 <span class="wrong">B</span></div>
-					<div>正確答案 <span>A</span></div>
-				</div>
-			</div>
-			</div>
-			<!-- train section -->
-			<div class="bhoechie-tab-content">
-			<div>
-<!--<div class="qno">Question 2 of 6</div>
-<span class="qnum">28.</span>-->
-<div class="subtitles">According to the <mark>recurrent passage</mark>, the force that generates tides on the earth is the force that generates tides on the earth is</div>
-	<div class="ansbox">
-	<div class="checkbox-btn correct">
-		<input type="checkbox" value="value-5" id="rc5" name="rc5" />
-		<label for="rc5" onclick>( A ) the gravitational pull of the earth’s core</label>
-	</div>
-	
-	<div class="checkbox-btn">
-		<input type="checkbox" value="value-6" id="rc6" name="rc6" disabled />
-		<label for="rc6" onclick>( B ) The same force that generates tides on the moon</label>
-	</div>
-	
-	<div class="checkbox-btn correct">
-		<input type="checkbox" value="value-7" id="rc7" name="rc7" />
-		<label for="rc7" onclick>( C ) abrupt changes in atmospheric pressure</label>
-	</div>
-	
-	<div class="checkbox-btn">
-		<input type="checkbox" value="value-8" id="rc8" name="rc8" disabled />
-		<label for="rc8" onclick>( D ) a combination of gravity and centrifugal force and centrifugal force and centrifugal force</label>
-	</div>
-    </div>
-<div class="subtitles "><strong>click on 2 answers</strong></div>
-<div class="answer clearfix">
-	<div>我的答案 <span class="">A C</span></div>
-	<div>正確答案 <span>A C</span></div>
-</div>
-				
-			</div>
-			</div>
-
-			<!-- hotel search -->
-			<div class="bhoechie-tab-content">
-			<div>
-<!--<div class="qno">Question 3 of 6</div>
-<span class="qnum">25.</span>-->
-<div class="subtitles">Based on the ....... For each sentence, click in the correct box. This question is worth 3 points.</div>
-<div class="subtitles "><strong>click in the correct box for each phrase</strong></div>
-
-		<div class="ansbox">
-        
-<div class="table-responsive">
-  <table class="table table-bordered text-center">
-		<tbody><tr>
-			<td class="col-xs-9"></td>
-							<td class="col-xs-1 text-center">Yes</td>
-							<td class="col-xs-1 text-center">No</td>
-					</tr>
-				<tr>
-			<td class="col-xs-9">Statistics are used to describe the trend of a disease over time Statistics are used to describe the trend of a disease over time</td>
-				<td class="col-xs-1"></td>
-				<td class="col-xs-1 correct"></td>
-					</tr>
-				<tr>
-			<td class="col-xs-9">Researchers intervene to test a hypothesis about cause and effect.</td>
-				<td class="col-xs-1 correct"></td>
-				<td class="col-xs-1"></td>
-				</td>
-					</tr>
-				<tr>
-			<td class="col-xs-9">Researchers examine the eating habits of sick and well people.</td>
-				<td class="col-xs-1 correct"></td>
-				<td class="col-xs-1"></td>
-				</td>
-					</tr>
-				<tr>
-			<td class="col-xs-9">A treatment group is compared with a non-treatment group.</td>
-				<td class="col-xs-1 correct"></td>
-				<td class="col-xs-1"></td>
-				</td>
-					</tr>
-					<tr>
-			<td class="col-xs-9">Researchers intervene to test a hypothesis about cause and effect Researchers intervene to test a hypothesis about cause and effect.</td>
-				<td class="col-xs-1"></td>
-				<td class="col-xs-1 correct"></td>
-				</td>
-					</tr>
-			</tbody>
-		</table>
+						
+		<div class="table-responsive">
+			<table class="table table-bordered text-center">
+				<tbody><tr>
+					<td class="col-xs-9"></td>
+									<td class="col-xs-1 text-center">Yes</td>
+									<td class="col-xs-1 text-center">No</td>
+							</tr>
+						<tr>
+					<td class="col-xs-9">Statistics are used to describe the trend of a disease over time Statistics are used to describe the trend of a disease over time</td>
+						<td class="col-xs-1"></td>
+						<td class="col-xs-1 correct"></td>
+							</tr>
+						<tr>
+					<td class="col-xs-9">Researchers intervene to test a hypothesis about cause and effect.</td>
+						<td class="col-xs-1 correct"></td>
+						<td class="col-xs-1"></td>
+						</td>
+							</tr>
+						<tr>
+					<td class="col-xs-9">Researchers examine the eating habits of sick and well people.</td>
+						<td class="col-xs-1 correct"></td>
+						<td class="col-xs-1"></td>
+						</td>
+							</tr>
+						<tr>
+					<td class="col-xs-9">A treatment group is compared with a non-treatment group.</td>
+						<td class="col-xs-1 correct"></td>
+						<td class="col-xs-1"></td>
+						</td>
+							</tr>
+							<tr>
+					<td class="col-xs-9">Researchers intervene to test a hypothesis about cause and effect Researchers intervene to test a hypothesis about cause and effect.</td>
+						<td class="col-xs-1"></td>
+						<td class="col-xs-1 correct"></td>
+						</td>
+							</tr>
+					</tbody></table>
 		</div>
 		</div>
-
-			<div class="answer clearfix">
-				<div>我的答案 <span class="wrong">B A B A B</span></div>
-				<div>正確答案 <span>B A A A B</span></div>
+		<div class="answer clearfix">
+			<div>我的答案 <span class="wrong">B A B A B</span></div>
+			<div>正確答案 <span>B A A A B</span></div>
+		</div>
+				
+					</div>
+					</div>
+					
+					
+					<div class="bhoechie-tab-content">
+					<div>
+						<!--<div class="qno">Question 4 of 6</div>-->
+					</div>
+					</div>
+					<div class="bhoechie-tab-content">
+					<div>
+						<!--<div class="qno">Question 5 of 6</div>-->
+					</div>
+					</div>
+					<div class="bhoechie-tab-content">
+					<div>
+		The Listening section measures your ability to understand conversations and lectures in English. You will hear each conversation and lecture only one time. After each conversation or lecture, you will hear some questions about it. Answer all questions based on what the speakers state or imply.<br>
+		You may take notes while you listen. You may use your notes to help you answer the questions.Most questions have four possible answers. In some questions, you will see this icon: . This means that you will hear, but not see, part of the question.<br>
+		Some questions have special directions, which appear in a gray box. Most questions are worth one point. If a question is worth more than one point, special directions will indicate how many points you can receive.<br>
+		You have approximately 40 minutes to complete the Listening section. This includes the time for listening to the conversations and lectures and for answering the questions.<br>
+		To make this practice more like the real test, cover the questions and answers during each conversation and lecture. When you hear the question, uncover the questions and answers.
+					</div>
+					</div>
+				</div>
 			</div>
 		
-			</div>
-			</div>
-			
-			
-			<div class="bhoechie-tab-content">
-				<div>
-					<!--<div class="qno">Question 4 of 6</div>-->
-				</div>
-			</div>
-			<div class="bhoechie-tab-content">
-				<div>
-					<!--<div class="qno">Question 5 of 6</div>-->
-				</div>
-			</div>
-			<div class="bhoechie-tab-content">
-				<div>
-					The Listening section measures your ability to understand conversations and lectures in English. You will hear each conversation and lecture only one time. After each conversation or lecture, you will hear some questions about it. Answer all questions based on what the speakers state or imply.<br>
-					You may take notes while you listen. You may use your notes to help you answer the questions.Most questions have four possible answers. In some questions, you will see this icon: . This means that you will hear, but not see, part of the question.<br>
-					Some questions have special directions, which appear in a gray box. Most questions are worth one point. If a question is worth more than one point, special directions will indicate how many points you can receive.<br>
-					You have approximately 40 minutes to complete the Listening section. This includes the time for listening to the conversations and lectures and for answering the questions.<br>
-					To make this practice more like the real test, cover the questions and answers during each conversation and lecture. When you hear the question, uncover the questions and answers.
-				</div>
-			</div>
 		</div>
-	</div>
-
-</div>
-
-</form>
-</div>
-</div>
-
-</div><!--  題目區  結束  -->
-
-</div>
-
-<div class="col-xs-12 col-lg-10 col-lg-offset-1">
-<div class="col-xs-8 cpyright">
-	<img src="assets_q/css/images/logo_elite_tw_w.svg" alt=""/>
-	<h4>菁英國際語言教育中心</h4>
-	<h5>Copyright &copy; <span id="year"></span> ELITE (English Language Institute of Testing and Education), <br/>All rights reserved.</h5>
-</div>
-</div>		
+		
+		</form>
+		</div>
+		</div>
+		
+		</div><!--  題目區  結束  -->
+		
+		</div>
+		
+		<div class="col-xs-12 col-lg-10 col-lg-offset-1">
+		<div class="col-xs-8 cpyright">
+			<img src="assets_q/css/images/logo_elite_tw_w.svg" alt=""/>
+			<h4>菁英國際語言教育中心</h4>
+			<h5>Copyright &copy; <span id="year"></span> ELITE (English Language Institute of Testing and Education), <br/>All rights reserved.</h5>
+		</div>
+		</div>		
 		
 
 		
