@@ -18,7 +18,9 @@
 <meta name="keywords" content="ELITE, Education, 菁英, 多益, 多益西點軍校, 西點軍校" />
 
 <!-- Bootstrap -->
-<link href="assets/bootstrap_3.3.7/css/bootstrap.min.css" rel="stylesheet">
+<!-- <link href="assets/bootstrap_3.3.7/css/bootstrap.min.css" rel="stylesheet"> -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
 
 <!-- iconfont -->
 <link href="assets/css/font-awesome.min.css" rel="stylesheet">
@@ -262,8 +264,8 @@
 <div class="cpyright col-md-12">
 	<!--<img src="assets/images/logo_elite_tw_w.svg" alt="">
 	<h4>菁英國際語言教育中心</h4>-->
-	<h5 class="hidden-xs">Copyright &copy; 2017 by <a href="http://www.language-center.com.tw/" target="_blank">ELITE</a> International Education Services. All rights reserved.</h5>
-	<h5 class="hidden-sm hidden-md hidden-lg text-center">&copy; 2017 <a href="http://www.language-center.com.tw/" target="_blank">ELITE</a></h5>
+	<h5 class="hidden-xs">Copyright &copy; <span id="year"></span> by <a href="http://www.language-center.com.tw/" target="_blank">ELITE</a> International Education Services. All rights reserved.</h5>
+	<h5 class="hidden-sm hidden-md hidden-lg text-center">&copy; <span id="year"></span> <a href="http://www.language-center.com.tw/" target="_blank">ELITE</a></h5>
 </div>
 </footer>
 
@@ -278,6 +280,10 @@ $(".dropdown-menu li a").click(function(){
 });
 </script>
 <!-- dropdown-menu 完-->
+
+<script>
+  document.getElementById("year").innerHTML = new Date().getFullYear();
+</script>	
 
 
 </body>
