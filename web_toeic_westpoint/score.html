@@ -72,7 +72,7 @@
 </li>
 <li role="presentation">
   <a href="#" role="tab" id="samsa-tab" data-toggle="tab" aria-controls="samsa">
-	<span class="text" onclick="location.href='record.html'">學習紀錄 <i class="material-icons">launch</i></span>
+	<span class="text">學習紀錄 <i class="material-icons">launch</i></span>
   </a>
 </li>
 </ul>
@@ -300,8 +300,8 @@
 <div class="cpyright col-sm-offset-2 col-md-offset-2 ">
 	<!--<img src="assets/img/logo_elite_tw_w.svg" alt="">
 	<h4>菁英國際語言教育中心</h4>-->
-	<h5 class="hidden-xs">Copyright &copy; 2017 by <a href="http://www.language-center.com.tw/" target="_blank">ELITE</a> International Education Services. All rights reserved.</h5>
-	<h5 class="hidden-sm hidden-md hidden-lg text-center">&copy; 2017 <a href="http://www.language-center.com.tw/" target="_blank">ELITE</a></h5>
+	<h5 class="hidden-xs">Copyright &copy; <span id="year"></span> by <a href="http://www.language-center.com.tw/" target="_blank">ELITE</a> International Education Services. All rights reserved.</h5>
+	<h5 class="hidden-sm hidden-md hidden-lg text-center">&copy; <span id="year"></span> <a href="http://www.language-center.com.tw/" target="_blank">ELITE</a></h5>
 	
 </div>
 
@@ -381,7 +381,9 @@
 <script src="assets/js/index.js"></script>-->
 	
 	
-
+<script>
+  document.getElementById("year").innerHTML = new Date().getFullYear();
+</script>	
 	
 	
 </body>
