@@ -1,0 +1,79 @@
+img {max-width:100%}
+
+.form-group .control-label {color:#333; font-weight:bold}
+sup.required {color:#f00}
+
+body {margin:0}
+
+.form-popover {border-radius:0; background-color:#317ec6; color:#fff;}
+.form-popover .popover-content {padding:8px !important}
+
+.form-popover.bottom .arrow:after {border-bottom-color:#317ec6}
+.form-popover.right  .arrow:after {border-right-color:#317ec6}
+/*--*/
+
+#login {}
+    #login .logoWrap {position:relative; height:245px}
+    #login .logoWrap:before {display:block; content:''; position:absolute; top:0; left:0; /*border-top:80px solid #51318f; border-left:100vw solid #51318f; border-bottom:120px solid transparent*/ }
+        #login .logoWrap .school  {position:absolute; top:20px; left:20px; color:#fff; font-weight:bold; font-size:2vw; text-shadow:0 4px  3px  rgba(0, 0, 0, .4), 0 8px  13px rgba(0, 0, 0, .1), 0 18px 23px rgba(0, 0, 0, .1)}
+        #login .logoWrap .logo    {position:absolute; top:40px; left:0; right:0; overflow:hidden; max-width:200px; height:200px; border-radius:50%; box-shadow:rgba(255, 255, 255, .5) 0 0 20px 10px; margin:0 auto; background:#fff}
+
+    #login section {margin:20px auto; width:350px}
+    #login section .title   {text-align:center; font-size:2em; font-weight:bold; color:#333}
+    #login section .body    {margin-top:20px}
+
+    #login .footer {margin-top:50px; color:#999; font-size:12px; text-align:center}
+
+
+#exam-index {}
+    #exam-index .logoWrap {position:relative; height:245px}
+    #exam-index .logoWrap:before {display:block; content:''; position:absolute; top:0; left:0; border-top:80px solid #51318f; border-left:100vw solid #51318f; border-bottom:120px solid transparent}
+        #exam-index .logoWrap .school  {position:absolute; top:20px; left:20px; color:#fff; font-weight:bold; font-size:2vw; text-shadow:0 4px  3px  rgba(0, 0, 0, .4), 0 8px  13px rgba(0, 0, 0, .1), 0 18px 23px rgba(0, 0, 0, .1)}
+        #exam-index .logoWrap .logo    {position:absolute; top:40px; left:0; right:0; overflow:hidden; max-width:200px; height:200px; border-radius:50%; box-shadow:rgba(255, 255, 255, .5) 0 0 20px 10px; margin:0 auto; background:#fff}
+
+    #exam-index section  {font-family:"微軟正黑體"; margin:10px auto; width:450px; text-align:left}
+    #exam-index section .site    {text-align:center; font-size:3em; font-weight:bold; color:#333}
+    #exam-index section .title   {text-align:center; font-size:2em; font-weight:bold; color:#333}
+    #exam-index section .body    {margin-top:20px; line-height:2}
+
+        #exam-index section table {margin-top:10px; background:#fff; font-size:1.5em}
+
+        #exam-index section .body .department {font-size:2em;}
+        #exam-index section .body .name {font-size:2em;}
+
+    #exam-index .footer {margin-top:50px; color:#999; font-size:12px; text-align:center}
+    
+    
+
+#result {}
+    #result .logoWrap {position:relative; height:245px}
+    /*#result .logoWrap:before {display:block; content:''; position:absolute; top:0; left:0; border-top:80px solid #51318f; border-left:100vw solid #51318f; border-bottom:120px solid transparent}*/
+        #result .logoWrap .school  {position:absolute; top:20px; left:20px; color:#fff; font-weight:bold; font-size:2vw; text-shadow:0 4px  3px  rgba(0, 0, 0, .4), 0 8px  13px rgba(0, 0, 0, .1), 0 18px 23px rgba(0, 0, 0, .1)}
+        #result .logoWrap .logo    {position:absolute; top:40px; left:0; right:0; overflow:hidden; max-width:200px; height:200px; border-radius:50%; box-shadow:rgba(255, 255, 255, .5) 0 0 20px 10px; margin:0 auto; background:#fff}
+
+    #result section  {margin:10px auto; text-align:left}
+    #result section .site    {text-align:center; font-size:3em; font-weight:bold; color:#333}
+    #result section .title   {text-align:center; font-size:2em; font-weight:bold; color:#333}
+    #result section .body    {margin-top:20px; line-height:2}
+
+
+
+    #result .footer {margin-top:0px; color:#999; font-size:12px; text-align:center}
+
+    
+    
+    
+    
+#analyze {}
+    #analyze .logoWrap {position:relative; height:245px}
+    #analyze .logoWrap:before {display:block; content:''; position:absolute; top:0; left:0; border-top:80px solid #51318f; border-left:100vw solid #51318f; border-bottom:120px solid transparent}
+        #analyze .logoWrap .school  {position:absolute; top:20px; left:20px; color:#fff; font-weight:bold; font-size:2vw; text-shadow:0 4px  3px  rgba(0, 0, 0, .4), 0 8px  13px rgba(0, 0, 0, .1), 0 18px 23px rgba(0, 0, 0, .1)}
+        #analyze .logoWrap .logo    {position:absolute; top:40px; left:0; right:0; overflow:hidden; max-width:200px; height:200px; border-radius:50%; box-shadow:rgba(255, 255, 255, .5) 0 0 20px 10px; margin:0 auto; background:#fff}
+
+    #analyze section  {margin:10px auto; text-align:left}
+    #analyze section .site    {text-align:center; font-size:3em; font-weight:bold; color:#333}
+    #analyze section .title   {text-align:center; font-size:2em; font-weight:bold; color:#333}
+
+
+
+    #analyze .footer {margin-top:50px; color:#999; font-size:12px; text-align:center}

@@ -1,0 +1,988 @@
+<!doctype html>
+<html lang="zh-tw"><head>
+<meta http-equiv="X-UA-Compatible"	content="IE=Edge,chrome=1" />
+<meta http-equiv="Content-Type"		content="text/html; charset=utf-8" />
+<meta http-equiv="Cache-Control"	content="no-cache, no-store, must-revalidate" />
+<meta http-equiv="Pragma"			content="no-cache" />
+<meta http-equiv="Expires"			content="0" />
+
+<meta name="csrf-token" content="yG6oVTGg86ouuSzwzRhJ5LGxGfjbR4NskXkTCZ9I"/>
+<meta name="viewport"	content="width=device-width,initial-scale=1" />
+<meta name="keywords" content="TOEIC, dunhuang," />
+<meta property="og:image" content="assets/images/share_img_toeic.jpg">
+        
+<link rel="shortcut icon" href="assets/images/favicon.ico"> 
+<link rel="apple-touch-icon" href="assets/images/icon_TOEIC.png">
+
+<!-- Bootstrap -->
+<!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">-->
+<link href="assets/bootstrap_3.3.7/css/bootstrap.min.css" rel="stylesheet">
+  
+<!-- iconfont -->
+<link href="assets/css/font-awesome.min.css" rel="stylesheet">
+<link href="assets/css/style_icomoon.css" rel="stylesheet">
+<link href="assets/css/material-icons.css" rel="stylesheet">	
+
+<!-- RD's -->	
+<link media="all" type="text/css" rel="stylesheet" href="http://elite.elitetest.com.tw/css/all.css">
+<link media="all" type="text/css" rel="stylesheet" href="assets/style.css">
+
+<link rel="stylesheet" type="text/css" href="assets/css/demo.css" />
+<link rel="stylesheet" type="text/css" href="assets/css/toeic_style2.css" />
+
+<!-- bar 圖 -->
+<link rel="stylesheet" type="text/css" href="assets/css/toeic_bar.css" />
+<script src="http://code.jquery.com/jquery-3.1.0.slim.min.js" type="text/javascript"></script>
+
+<!-- 分數圈 -->
+<script src="assets/js/prefixfree.min.js"></script>
+<link href="assets/css/toeic_score.css" rel="stylesheet">
+<!-- Bar Chart -->
+<link rel="stylesheet" href="assets/css/style_BarChart.css">
+
+<link rel="stylesheet" type="text/css" href="assets/css/toeic_mock.css" />
+<link rel="stylesheet" type="text/css" href="assets/css/toeic_style3.css" />
+
+<!--<script>
+    window.Laravel = {"csrfToken":"yG6oVTGg86ouuSzwzRhJ5LGxGfjbR4NskXkTCZ9I"};
+</script>-->
+
+<!-- <script src="http://elite.elitetest.com.tw/js/app.js"></script>
+<script src="http://elite.elitetest.com.tw/plugins/app/script.js"></script>
+<script src="http://elite.elitetest.com.tw/plugins/app/form.js"></script> -->
+<title>多益線上模擬測驗</title>
+
+
+
+
+
+
+
+
+
+</head>
+
+
+
+
+<body id='result' class=""><div class="bgtoeic"></div>
+<div class="container-fluid">
+<div class='container logo'>
+	<div class='school'>多益線上模擬測驗</div>
+</div>
+</div>
+
+
+
+<div class="container userinfo">
+<div class="pull-left">測驗日期<i class="material-icons">event</i>2017-09-01
+	<button onclick="location.href='analyze.html'" type="button" class="btn btn-default btn-sm" aria-label="left Align">去看解析</button>
+	<button onclick="location.href='q_type.html'" type="button" class="btn btn-default btn-sm" aria-label="left Align">去看題型</button>
+</div>
+<div class="pull-right">
+	<span>學校<i class="material-icons">home</i>菁英大學</span>
+	<span>系所<i class="material-icons">location_city</i>經濟系</span>
+	<span>學號<i class="material-icons">assignment_ind</i>8088158</span>
+</div>
+</div>
+	
+
+
+<section class='container qarea'>
+
+	<div class="dropdown">
+		<a id="dLabel" data-target="#" href="http://example.com/" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+			Dropdown trigger
+			<span class="caret"></span>
+		</a>
+	
+		<ul class="dropdown-menu" aria-labelledby="dLabel">
+			amscmasmcacejceb,jcef
+		</ul>
+	</div>
+
+<!-- Nav tabs -->
+<ul class="nav nav-tabs" role="tablist">
+  <li class="active"><a href="#hometab" role="tab" data-toggle="tab">Score</a></li>
+  <li><a href="#javatab" role="tab" data-toggle="tab">Answer Sheet</a></li>
+  <li><a href="#csharptab" role="tab" data-toggle="tab">Bar Chart</a></li>
+
+  <li class="dropdown">
+		<a class="dropdown-toggle" data-toggle="dropdown" href="#">Progress <b class="caret"></b></a>
+			<ul class="dropdown-menu">
+				<li><a href="#jquerytab" role="tab" data-toggle="tab">整體答對率</a></li>
+				<li><a href="#bootstab" role="tab" data-toggle="tab">照片描述 Photographs</a></li>
+				<li><a href="#htmltab" role="tab" data-toggle="tab">應答問題 Question-Response</a></li>
+				<li><a href="#m1" role="tab" data-toggle="tab">簡短對話 Conversations</a></li>
+				<li><a href="#m2" role="tab" data-toggle="tab">簡短獨白 Talks</a></li>
+				<li><a href="#m3" role="tab" data-toggle="tab">句子填空 Incomplete Sentences</a></li>
+				<li><a href="#m4" role="tab" data-toggle="tab">段落填空 Test Completion</a></li>
+				<li><a href="#m5" role="tab" data-toggle="tab">閱讀測驗 Reading Comprehension</a></li>
+			</ul>
+  </li>  
+</ul>
+<!-- Tab panes -->
+<div class="tab-content">
+  <div class="tab-pane active" id="hometab">
+	<div class="col-md-4 scrbox text-center">
+			<div class="">STUDENT NAME</div>
+			<div class="scrname">王小明</div>
+			<hr>
+			<div class="">TOTAL SCORE</div>
+			<div class="scrnum"><div class="loading">886<!--<span style=" font-size: 1.6rem; margin-left:.2rem;">%</span>--></div></div>
+
+			<div class="text-center "><hr>
+			<div class="ratiobox">Numbers of answered questions <div class="ratio">128</div></div>
+			<div class="ratiobox">Ratio of answered questions <div class="ratio">86 %</div></div>
+			</div>
+			</div>
+	<div class="col-md-8 que_box">
+	<div><h1>英語能力說明</h1>
+	<div class="bar_title">Listening</div>
+	<div id="bar1" class="barfiller">
+		<div class="tipWrap">
+			<span class="tip"></span>
+			</div>
+			<span class="fill" data-percentage="50"></span>
+			<div class="barper_t"><span>5</span><span style="float:right">495</span></div>
+		</div>
+
+		<div class="bar_title">Reading</div>
+		<div id="bar2" class="barfiller">
+			<div class="tipWrap">
+			<span class="tip"></span>
+			</div>
+			<span class="fill" data-percentage="35"></span>
+			<div class="barper_t"><span>5</span><span style="float:right">495</span></div>
+		</div>
+		<div class="sugbox_tebox">
+		<div class="tit">參照ETS官網，您可獲得棕色證照（220-465）</div>聽力薄弱，僅能聽懂少數單字或部分大意，聽力薄弱，僅能聽懂少應從基礎英文。聽力薄弱，僅能聽懂少數單字或部分大意，應從基礎英文。聽力薄弱，僅能聽懂少數單字或部，僅能聽懂少數單字或部分分大意，應從基礎英文。數單字或部分大意，應從基礎英文。聽力薄弱大意，應從基礎英文。</div>
+	</div>
+
+	<div><h1>英語能力解析</h1>
+	<div class="row" style="margin-bottom: 2.8rem;">
+
+	<div class="col-md-6">
+	<div class="sugbox_tebox po"><div class="bar_title">Listening</div></div>
+	<div class="chart_po"><img src="assets/images/chart_1.svg" alt=""/></div>
+	<!--<canvas id="BarChart" class="img-responsive" ></canvas>-->
+	</div>
+
+	<div class="col-md-6">
+	<div class="sugbox_tebox po"><div class="bar_title">Reading</div></div>
+	<div class="chart_po"><img src="assets/images/chart_2.svg" alt=""/></div>
+	<!--<canvas id="BarChart2" ></canvas>-->
+	</div>
+
+	</div></div>
+
+	<div><h1>學習建議</h1>
+		<table class="table table-bordered suggest">
+				<thead>
+					<tr>
+						<th width="10%"></th>
+						<th width="45%">Strength</th>
+						<th width="45%">Weakness</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<th>Listening</th>
+						<th>
+							<ul>
+							<li>Listen to di erent kinds of materials on a variety of topics:</li>
+							<li>Start with familiar topics; then move to topics that are new to you.</li>
+							<li>Listen to audio and video material on tape/DVD or recorded from TV, radio and the Internet.</li>
+							<li>Listen to programs with academic content, such as “NOVA”, BBC and NPR broadcasts.</li>
+							<li>Listen to conversations and phone recordings.</li>
+							</ul>
+					   </th>
+						<th>
+							<ul>
+								<li>First listen with English subtitles, if they are available.</li>
+								<li>Then, without subtitles, listen for the main ideas and key details.</li>
+								<li>Then listen again to  ll in gaps in your basic understanding and to understand the connections between ideas, the structure of the talk and the speakers’ attitude.</li>
+							</ul>
+						</th>
+					</tr>
+					<tr>
+						<th>Reading</th>
+						<th>
+						<ul>
+							<li>Listen actively:</li>
+							<li>Take notes as you listen for main ideas and important details.</li>
+							<li>Ask yourself about basic information (Who? What? When? Where? Why? How?).</li>
+							<li>Make predictions about what you will hear next.</li>
+							<li>Summarize.</li>
+							<li>Write down new words and expressions.</li>
+							<li>For more di cult material, listen several times:</li>
+							</ul>
+					   </th>
+						<th>
+							<ul>
+								<li>First listen with English subtitles, if they are available.</li>
+								<li>Then, without subtitles, listen for the main ideas and key details.</li>
+								<li>Then listen again to  ll in gaps in your basic understanding and to understand the connections between ideas, the structure of the talk and the speakers’ attitude.</li>
+							</ul>
+						</th>
+					</tr>
+				</tbody>
+			</table>
+
+	</div>
+	</div>
+
+  </div>
+  <div class="tab-pane" id="javatab">
+	<div class='col-md-6'>
+            <div class='panel panel-default'>
+                <div class='panel-heading'>聽力
+					<div class="btnbox filter">
+					<label class="control-label" for="lunch">依排序</label>
+					<div class="dropdown">
+					  <button class="btn btn_nor btn_lim btn-secondary dropdown-toggle" type="button" data-toggle="dropdown" title="全部題型" data-placement="top" ><span>全部題型</span><span class="caret"></span></button>
+					  <ul class="dropdown-menu">
+						<li><a href="#">Photographs</a></li>
+						<li><a href="#">Question-Response</a></li>
+						<li><a href="#">Short Conversation</a></li>
+						<li><a href="#">Short Talk</a></li>
+						<li><a href="#">Incomplete Sentences</a></li>
+						<li><a href="#">Text Completion</a></li>
+						<li><a href="#">Reading Comprehension</a></li>
+					  </ul>
+					</div>
+					<div class="dropdown">
+					  <button class="btn btn_nor btn-secondary dropdown-toggle" type="button" data-toggle="dropdown" title="全部題型" data-placement="top" ><span>對錯題切換</span><span class="caret"></span></button>
+					  <ul class="dropdown-menu">
+						<li><a href="#">只顯示正確題</a></li>
+						<li><a href="#">只顯示錯誤題</a></li>
+					  </ul>
+					</div>
+					</div>
+                </div>
+
+                <table class='table'>
+                    <thead>
+                        <tr>
+                            <th>題號</th>
+                            <th>題型</th>
+                            <th>對錯</th>
+                            <th>解析</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th>1</th>
+                            <th>Photographs</th>
+                            <th><i class="material-icons">radio_button_unchecked</i></th>
+                            <th><a href="analyze.html"><i class="material-icons">find_in_page</i></a></th>
+                        </tr>
+                        <tr>
+                            <th>2</th>
+                            <th>Reading Comprehension</th>
+                            <th><i class="material-icons">radio_button_unchecked</i></th>
+                            <th><a href="analyze.html"><i class="material-icons">find_in_page</i></a></th>
+                        </tr>
+                        <tr>
+                            <th>3</th>
+                            <th>Short Conversation</th>
+                            <th><i class="material-icons required">close</i></th>
+                            <th><a href="analyze.html"><i class="material-icons">find_in_page</i></a></th>
+                        </tr>
+                        <tr>
+                            <th>4</th>
+                            <th>Photographs</th>
+                            <th><i class="material-icons required">close</i></th>
+                            <th><a href="analyze.html"><i class="material-icons">find_in_page</i></a></th>
+                        </tr>
+                        <tr>
+                            <th>5</th>
+                            <th>Photographs</th>
+                            <th><i class="material-icons required">close</i></th>
+                            <th><a href="analyze.html"><i class="material-icons">find_in_page</i></a></th>
+                        </tr>
+                        <tr>
+                            <th>6</th>
+                            <th>Question-Response</th>
+                            <th><i class="material-icons required">close</i></th>
+                            <th><a href="analyze.html"><i class="material-icons">find_in_page</i></a></th>
+                        </tr>
+                        <tr style="border-top: 3px solid #ddd;">
+                            <th>7</th>
+                            <th>Question-Response</th>
+                            <th><i class="material-icons">radio_button_unchecked</i></th>
+                            <th><a href="analyze.html"><i class="material-icons">find_in_page</i></a></th>
+                        </tr>
+                        <tr>
+                            <th>8</th>
+                            <th>Reading Comprehension</th>
+                            <th><i class="material-icons required">close</i></th>
+                            <th><a href="analyze.html"><i class="material-icons">find_in_page</i></a></th>
+                        </tr>
+                        <tr>
+                            <th>9</th>
+                            <th>Question-Response</th>
+                            <th><i class="material-icons">radio_button_unchecked</i></th>
+                            <th><a href="analyze.html"><i class="material-icons">find_in_page</i></a></th>
+                        </tr>
+                        <tr>
+                            <th>10</th>
+                            <th>Reading Comprehension</th>
+                            <th><i class="material-icons">radio_button_unchecked</i></th>
+                            <th><a href="analyze.html"><i class="material-icons">find_in_page</i></a></th>
+                        </tr>
+                        <tr>
+                            <th>11</th>
+                            <th>Short Conversation</th>
+                            <th><i class="material-icons required">close</i></th>
+                            <th><a href="analyze.html"><i class="material-icons">find_in_page</i></a></th>
+                        </tr>
+                        <tr>
+                            <th>12</th>
+                            <th>Short Conversation</th>
+                            <th><i class="material-icons required">close</i></th>
+                            <th><a href="analyze.html"><i class="material-icons">find_in_page</i></a></th>
+                        </tr>
+                        <tr>
+                            <th>13</th>
+                            <th>Short Conversation</th>
+                            <th><i class="material-icons required">close</i></th>
+                            <th><a href="analyze.html"><i class="material-icons">find_in_page</i></a></th>
+                        </tr>
+                        <tr>
+                            <th>14</th>
+                            <th>Short Conversation</th>
+                            <th><i class="material-icons required">close</i></th>
+                            <th><a href="analyze.html"><i class="material-icons">find_in_page</i></a></th>
+                        </tr>
+                        <tr style="border-top: 3px solid #ddd;">
+                            <th>15</th>
+                            <th>Short Conversation</th>
+                            <th><i class="material-icons required">close</i></th>
+                            <th><a href="analyze.html"><i class="material-icons">find_in_page</i></a></th>
+                        </tr>
+                    </tbody>
+                </table>
+
+            </div>
+
+        </div>
+    <div class='col-md-6'>
+            <div class='panel panel-default'>
+                <div class='panel-heading'>閱讀
+                	<div class="btnbox filter">
+					<label class="control-label" for="lunch">依排序</label>
+					<div class="dropdown">
+					  <button class="btn btn_nor btn_lim btn-secondary dropdown-toggle" type="button" data-toggle="dropdown" title="全部題型" data-placement="top" ><span>全部題型</span><span class="caret"></span></button>
+					  <ul class="dropdown-menu">
+						<li><a href="#">Photographs</a></li>
+						<li><a href="#">Question-Response</a></li>
+						<li><a href="#">Short Conversation</a></li>
+						<li><a href="#">Short Talk</a></li>
+						<li><a href="#">Incomplete Sentences</a></li>
+						<li><a href="#">Text Completion</a></li>
+						<li><a href="#">Reading Comprehension</a></li>
+					  </ul>
+					</div>
+					<div class="dropdown">
+					  <button class="btn btn_nor btn-secondary dropdown-toggle" type="button" data-toggle="dropdown" title="全部題型" data-placement="top" ><span>對錯題切換</span><span class="caret"></span></button>
+					  <ul class="dropdown-menu">
+						<li><a href="#">只顯示正確題</a></li>
+						<li><a href="#">只顯示錯誤題</a></li>
+					  </ul>
+					</div>
+					</div>
+                </div>
+
+                <table class='table'>
+                    <thead>
+                        <tr>
+                            <th>題號</th>
+                            <th>題型</th>
+                            <th>對錯</th>
+                            <th>解析</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th>1</th>
+                            <th>Photographs</th>
+                            <th><i class="material-icons">radio_button_unchecked</i></th>
+                            <th><a href="analyze.html"><i class="material-icons">find_in_page</i></a></th>
+                        </tr>
+                        <tr>
+                            <th>2</th>
+                            <th>Photographs</th>
+                            <th><i class="material-icons">radio_button_unchecked</i></th>
+                            <th><a href="analyze.html"><i class="material-icons">find_in_page</i></a></th>
+                        </tr>
+                        <tr>
+                            <th>3</th>
+                            <th>Photographs</th>
+                            <th><i class="material-icons required">close</i></th>
+                            <th><a href="analyze.html"><i class="material-icons">find_in_page</i></a></th>
+                        </tr>
+                    </tbody>
+                </table>
+
+            </div>
+
+        </div>
+  </div>
+  <div class="tab-pane" id="csharptab">
+    <div class="col-md-6">
+	<div class="skillbar clearfix bt collapsed" data-percent="5%" data-toggle="collapse" data-target="#demo">
+		<div class="skillbar-title" ><span>照片描述<br />Photographs</span></div>
+		<div class="skillbar-bar" ></div>
+		<div class="skill-bar-percent">5%</div>
+	</div>
+	<div id="demo" class="collapse">
+	<div class="bararea clearfix sub">
+		<div class="col-md-6">
+		<div class="skillbar clearfix " data-percent="8%">
+			<div class="skillbar-title" ><span>應答問題 Question-Response</span></div>
+			<div class="skillbar-bar" ></div>
+			<div class="skill-bar-percent">8%</div>
+		</div>
+		<div class="skillbar clearfix " data-percent="40%">
+			<div class="skillbar-title" ><span>時態題</span></div>
+			<div class="skillbar-bar" ></div>
+			<div class="skill-bar-percent">40%</div>
+		</div>
+		<div class="skillbar clearfix " data-percent="60%">
+			<div class="skillbar-title" ><span>句子題</span></div>
+			<div class="skillbar-bar" ></div>
+			<div class="skill-bar-percent">60%</div>
+		</div>
+			</div> 
+		<div class="col-md-6">
+		<div class="skillbar clearfix " data-percent="50%">
+			<div class="skillbar-title" ><span>介系詞題</span></div>
+			<div class="skillbar-bar" ></div>
+			<div class="skill-bar-percent">50%</div>
+		</div>
+		<div class="skillbar clearfix " data-percent="88%">
+			<div class="skillbar-title" ><span>字彙題</span></div>
+			<div class="skillbar-bar" ></div>
+			<div class="skill-bar-percent">88%</div>
+		</div> 
+		</div> 
+    </div>
+	</div>
+	
+	<div class="skillbar clearfix bt collapsed" data-percent="40%" data-toggle="collapse" data-target="#demo2">
+		<div class="skillbar-title" ><span>應答問題<br />Question-Response</span></div>
+		<div class="skillbar-bar" ></div>
+		<div class="skill-bar-percent">40%</div>
+	</div>
+	<div id="demo2" class="collapse">
+	<div class="bararea clearfix sub">
+		<div class="col-md-6">
+		<div class="skillbar clearfix " data-percent="50%">
+			<div class="skillbar-title" ><span>代名詞題</span></div>
+			<div class="skillbar-bar" ></div>
+			<div class="skill-bar-percent">50%</div>
+		</div>
+		<div class="skillbar clearfix " data-percent="40%">
+			<div class="skillbar-title" ><span>時態題</span></div>
+			<div class="skillbar-bar" ></div>
+			<div class="skill-bar-percent">40%</div>
+		</div>
+		<div class="skillbar clearfix " data-percent="60%">
+			<div class="skillbar-title" ><span>句子題</span></div>
+			<div class="skillbar-bar" ></div>
+			<div class="skill-bar-percent">60%</div>
+		</div>
+			</div> 
+		<div class="col-md-6">
+		<div class="skillbar clearfix " data-percent="50%">
+			<div class="skillbar-title" ><span>介系詞題</span></div>
+			<div class="skillbar-bar" ></div>
+			<div class="skill-bar-percent">50%</div>
+		</div>
+		<div class="skillbar clearfix " data-percent="88%">
+			<div class="skillbar-title" ><span>字彙題</span></div>
+			<div class="skillbar-bar" ></div>
+			<div class="skill-bar-percent">88%</div>
+		</div> 
+		</div> 
+    </div>
+	</div>
+	
+	
+	<div class="skillbar clearfix bt collapsed" data-percent="60%" data-toggle="collapse" data-target="#demo3">
+		<div class="skillbar-title" ><span>簡短對話<br />Conversations</span></div>
+		<div class="skillbar-bar" ></div>
+		<div class="skill-bar-percent">60%</div>
+	</div>
+	<div id="demo3" class="collapse">
+	<div class="bararea clearfix sub">
+		<div class="col-md-6">
+		<div class="skillbar clearfix " data-percent="50%">
+			<div class="skillbar-title" ><span>代名詞題</span></div>
+			<div class="skillbar-bar" ></div>
+			<div class="skill-bar-percent">50%</div>
+		</div>
+		<div class="skillbar clearfix " data-percent="40%">
+			<div class="skillbar-title" ><span>時態題</span></div>
+			<div class="skillbar-bar" ></div>
+			<div class="skill-bar-percent">40%</div>
+		</div>
+		<div class="skillbar clearfix " data-percent="60%">
+			<div class="skillbar-title" ><span>句子題</span></div>
+			<div class="skillbar-bar" ></div>
+			<div class="skill-bar-percent">60%</div>
+		</div>
+			</div> 
+		<div class="col-md-6">
+		<div class="skillbar clearfix " data-percent="50%">
+			<div class="skillbar-title" ><span>介系詞題</span></div>
+			<div class="skillbar-bar" ></div>
+			<div class="skill-bar-percent">50%</div>
+		</div>
+		<div class="skillbar clearfix " data-percent="88%">
+			<div class="skillbar-title" ><span>字彙題</span></div>
+			<div class="skillbar-bar" ></div>
+			<div class="skill-bar-percent">88%</div>
+		</div> 
+		</div> 
+    </div>
+	</div>
+	
+	<div class="skillbar clearfix bt collapsed" data-percent="50%" data-toggle="collapse" data-target="#demo4">
+		<div class="skillbar-title" ><span>簡短獨白<br />Talks</span></div>
+		<div class="skillbar-bar" ></div>
+		<div class="skill-bar-percent">50%</div>
+	</div>
+	<div id="demo4" class="collapse">
+	<div class="bararea clearfix sub">
+		<div class="col-md-6">
+		<div class="skillbar clearfix " data-percent="50%">
+			<div class="skillbar-title" ><span>代名詞題</span></div>
+			<div class="skillbar-bar" ></div>
+			<div class="skill-bar-percent">50%</div>
+		</div>
+		<div class="skillbar clearfix " data-percent="40%">
+			<div class="skillbar-title" ><span>時態題</span></div>
+			<div class="skillbar-bar" ></div>
+			<div class="skill-bar-percent">40%</div>
+		</div>
+		<div class="skillbar clearfix " data-percent="60%">
+			<div class="skillbar-title" ><span>句子題</span></div>
+			<div class="skillbar-bar" ></div>
+			<div class="skill-bar-percent">60%</div>
+		</div>
+			</div> 
+		<div class="col-md-6">
+		<div class="skillbar clearfix " data-percent="50%">
+			<div class="skillbar-title" ><span>介系詞題</span></div>
+			<div class="skillbar-bar" ></div>
+			<div class="skill-bar-percent">50%</div>
+		</div>
+		<div class="skillbar clearfix " data-percent="88%">
+			<div class="skillbar-title" ><span>字彙題</span></div>
+			<div class="skillbar-bar" ></div>
+			<div class="skill-bar-percent">88%</div>
+		</div> 
+		</div> 
+    </div>
+	</div>
+	
+	</div> <!-- 左邊 bar 結束 -->
+   
+    <div class="col-md-6">
+	<div class="skillbar clearfix bt collapsed" data-percent="66%" data-toggle="collapse" data-target="#demo5">
+		<div class="skillbar-title" ><span>句子填空<br />Incomplete Sentences</span></div>
+		<div class="skillbar-bar" ></div>
+		<div class="skill-bar-percent">66%</div>
+	</div>
+	<div id="demo5" class="collapse">
+	<div class="bararea clearfix sub">
+		<div class="col-md-6">
+		<div class="skillbar clearfix " data-percent="50%">
+			<div class="skillbar-title" ><span>代名詞題</span></div>
+			<div class="skillbar-bar" ></div>
+			<div class="skill-bar-percent">50%</div>
+		</div>
+		<div class="skillbar clearfix " data-percent="40%">
+			<div class="skillbar-title" ><span>時態題</span></div>
+			<div class="skillbar-bar" ></div>
+			<div class="skill-bar-percent">40%</div>
+		</div>
+		<div class="skillbar clearfix " data-percent="60%">
+			<div class="skillbar-title" ><span>句子題</span></div>
+			<div class="skillbar-bar" ></div>
+			<div class="skill-bar-percent">60%</div>
+		</div>
+			</div> 
+		<div class="col-md-6">
+		<div class="skillbar clearfix " data-percent="50%">
+			<div class="skillbar-title" ><span>介系詞題</span></div>
+			<div class="skillbar-bar" ></div>
+			<div class="skill-bar-percent">50%</div>
+		</div>
+		<div class="skillbar clearfix " data-percent="88%">
+			<div class="skillbar-title" ><span>字彙題</span></div>
+			<div class="skillbar-bar" ></div>
+			<div class="skill-bar-percent">88%</div>
+		</div> 
+		</div> 
+    </div>
+	</div>
+	
+	<div class="skillbar clearfix bt collapsed" data-percent="90%" data-toggle="collapse" data-target="#demo6">
+		<div class="skillbar-title" ><span>段落填空<br />Test Completion</span></div>
+		<div class="skillbar-bar" ></div>
+		<div class="skill-bar-percent">90%</div>
+	</div>
+	<div id="demo6" class="collapse">
+	<div class="bararea clearfix sub">
+		<div class="col-md-6">
+		<div class="skillbar clearfix " data-percent="50%">
+			<div class="skillbar-title" ><span>代名詞題</span></div>
+			<div class="skillbar-bar" ></div>
+			<div class="skill-bar-percent">50%</div>
+		</div>
+		<div class="skillbar clearfix " data-percent="40%">
+			<div class="skillbar-title" ><span>時態題</span></div>
+			<div class="skillbar-bar" ></div>
+			<div class="skill-bar-percent">40%</div>
+		</div>
+		<div class="skillbar clearfix " data-percent="60%">
+			<div class="skillbar-title" ><span>句子題</span></div>
+			<div class="skillbar-bar" ></div>
+			<div class="skill-bar-percent">60%</div>
+		</div>
+			</div> 
+		<div class="col-md-6">
+		<div class="skillbar clearfix " data-percent="50%">
+			<div class="skillbar-title" ><span>介系詞題</span></div>
+			<div class="skillbar-bar" ></div>
+			<div class="skill-bar-percent">50%</div>
+		</div>
+		<div class="skillbar clearfix " data-percent="88%">
+			<div class="skillbar-title" ><span>字彙題</span></div>
+			<div class="skillbar-bar" ></div>
+			<div class="skill-bar-percent">88%</div>
+		</div> 
+		</div> 
+    </div>
+	</div>
+	
+	<div class="skillbar clearfix bt collapsed" data-percent="60%" data-toggle="collapse" data-target="#demo7">
+		<div class="skillbar-title" ><span>閱讀測驗<br />Reading Comprehension</span></div>
+		<div class="skillbar-bar" ></div>
+		<div class="skill-bar-percent">60%</div>
+	</div>
+	<div id="demo7" class="collapse">
+	<div class="bararea clearfix sub">
+		<div class="col-md-6">
+		<div class="skillbar clearfix " data-percent="50%">
+			<div class="skillbar-title" ><span>代名詞題</span></div>
+			<div class="skillbar-bar" ></div>
+			<div class="skill-bar-percent">50%</div>
+		</div>
+		<div class="skillbar clearfix " data-percent="40%">
+			<div class="skillbar-title" ><span>時態題</span></div>
+			<div class="skillbar-bar" ></div>
+			<div class="skill-bar-percent">40%</div>
+		</div>
+		<div class="skillbar clearfix " data-percent="60%">
+			<div class="skillbar-title" ><span>句子題</span></div>
+			<div class="skillbar-bar" ></div>
+			<div class="skill-bar-percent">60%</div>
+		</div>
+			</div> 
+		<div class="col-md-6">
+		<div class="skillbar clearfix " data-percent="50%">
+			<div class="skillbar-title" ><span>介系詞題</span></div>
+			<div class="skillbar-bar" ></div>
+			<div class="skill-bar-percent">50%</div>
+		</div>
+		<div class="skillbar clearfix " data-percent="88%">
+			<div class="skillbar-title" ><span>字彙題</span></div>
+			<div class="skillbar-bar" ></div>
+			<div class="skill-bar-percent">88%</div>
+		</div> 
+		</div> 
+    </div>
+	</div>
+	
+	</div> <!-- 又邊 bar 結束 -->
+	
+	<div class="col-md-12 sugtext"><span class="required">＊</span> 點選題型名稱，即可顯示詳細能力分析。</div>
+  </div>
+
+  <div class="tab-pane" id="jquerytab">
+	<div class="col-md-8"><div id="chartContainer4"></div></div>
+  </div>
+  <div class="tab-pane" id="bootstab">照片描述 Photographs </div>
+  <div class="tab-pane" id="htmltab">應答問題 Question-Response</div>  
+  <div class="tab-pane" id="m1">簡短對話 Conversations</div>
+  <div class="tab-pane" id="m2">簡短獨白 Talks</div>
+  <div class="tab-pane" id="m3">句子填空 Incomplete Sentences</div>
+  <div class="tab-pane" id="m4">段落填空 Test Completion</div>
+  <div class="tab-pane" id="m5">閱讀測驗 Reading Comprehension</div>
+</div>
+  
+
+</section>
+
+<footer class='container footer'>
+<div class="row">
+<div class="cpyright col-md-offset-6">
+	<img src="assets/images/logo_elite_tw_w.svg" alt="">
+	<h4>菁英國際語言教育中心</h4>
+	<h5>Copyright &copy; 2017 ELITE (English Language Institute of Testing and Education), All rights reserved.</h5>
+</div></div>
+</footer>
+
+
+
+<!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Photographs 能力分析</h4>
+        </div>
+        <div class="modal-body">
+        <div class="bararea">
+		<div class="col-md-6">
+		<div class="skillbar clearfix " data-percent="50%">
+			<div class="skillbar-title" ><span>代名詞題</span></div>
+			<div class="skillbar-bar" ></div>
+			<div class="skill-bar-percent">50%</div>
+		</div>
+		<div class="skillbar clearfix " data-percent="40%">
+			<div class="skillbar-title" ><span>時態題</span></div>
+			<div class="skillbar-bar" ></div>
+			<div class="skill-bar-percent">40%</div>
+		</div>
+		<div class="skillbar clearfix " data-percent="60%">
+			<div class="skillbar-title" ><span>句子題</span></div>
+			<div class="skillbar-bar" ></div>
+			<div class="skill-bar-percent">60%</div>
+		</div>
+			</div> 
+		<div class="col-md-6">
+		<div class="skillbar clearfix " data-percent="50%">
+			<div class="skillbar-title" ><span>介系詞題</span></div>
+			<div class="skillbar-bar" ></div>
+			<div class="skill-bar-percent">50%</div>
+		</div>
+		<div class="skillbar clearfix " data-percent="88%">
+			<div class="skillbar-title" ><span>字彙題</span></div>
+			<div class="skillbar-bar" ></div>
+			<div class="skill-bar-percent">88%</div>
+		</div> 
+		</div> 
+        </div>
+        </div>
+        <div class="clearfix"></div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn_prev " data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="assets/bootstrap_3.3.7/js/bootstrap.min.js"></script>
+
+<!-- bar 柱狀圖 REQUIRED SCRIPTS FOR CHART -->
+<script src="assets/js/Chart.js"></script>
+<!-- REQUIRED CUSTOM SCRIPTS FOR BAR CHART -->
+<script>
+	var barChartData = {
+		labels: ["photograph", "photograph", "photograph", "photograph"],
+		datasets: [
+			{
+				//SET COLORS BELOW
+				fillColor: "rgba(56, 95, 184,0.65)",
+				strokeColor: "rgba(56, 95, 184,0.75)",
+				highlightFill: "rgba(56, 95, 184,0.75)",
+				highlightStroke: "rgba(56, 95, 184,1)",
+				data: [35, 45, 90, 80] // SET YOUR DATA POINTS HERE
+			},
+			{
+				fillColor: "rgba(0, 188, 209,0.65)",
+				strokeColor: "rgba(0, 188, 209,0.75)",
+				highlightFill: "rgba(0, 188, 209,0.75)",
+				highlightStroke: "rgba(0, 188, 2091,1)",
+				data: [15, 52, 40, 66] // SET YOUR DATA POINTS HERE
+			}
+		]
+
+	}
+
+	window.onload = function () {
+		var ctx = document.getElementById("BarChart").getContext("2d");
+		window.myLine = new Chart(ctx).Bar(barChartData, {
+			responsive: true
+		});
+	};
+
+</script>
+
+<!-- dropdown-menu -->
+<script>
+// $('.dropdown-toggle').dropdown();
+// $().dropdown('toggle')
+$(".dropdown-menu li a").click(function(){
+  $(this).parents(".dropdown").find('.btn').html($(this).text() + ' <span class="caret"></span>');
+  $(this).parents(".dropdown").find('.btn').val($(this).data('value'));
+});
+</script>
+<!-- dropdown-menu 完-->
+
+<!-- Bar Chart -->
+<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script src="assets/js/index_BarChart.js"></script>
+
+
+<!-- bar -->
+<script src="assets/js/jquery.barfiller.js" type="text/javascript"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+
+	$('#bar1').barfiller();
+	$('#bar2').barfiller({ barColor: '#044c3b', duration: 1500 });
+	$('#bar3').barfiller({ barColor: '#044c3b', duration: 1500 });
+	$('#bar4').barfiller({ barColor: '#044c3b', duration: 3000 });
+	
+});
+</script>
+
+
+<!-- 線圖 chart -->
+<script type="text/javascript">
+		window.onload = function () {
+
+			var chart = new CanvasJS.Chart("chartContainer4", {
+				zoomEnabled: false,
+				animationEnabled: true,
+				title: {
+					text: ""
+				},
+				axisY2: {
+					valueFormatString: "0.0 bn",
+
+					maximum: 1.2,
+					interval: .2,
+					interlacedColor: "#F5F5F5",
+					gridColor: "#D7D7D7",
+					tickColor: "#D7D7D7"
+				},
+				theme: "theme2",
+				toolTip: {
+					shared: true
+				},
+				legend: {
+					verticalAlign: "top",
+					horizontalAlign: "left",
+					fontSize: 15,
+					fontFamily: "Arial"
+				},
+				data: [{
+					type: "line",
+					lineThickness: 3,
+					axisYType: "secondary",
+					showInLegend: true,
+					name: "Photographs",
+					dataPoints: [
+					{ x: new Date(2001, 0), y: 0.01 },
+					{ x: new Date(2002, 0), y: 0.03 },
+					{ x: new Date(2003, 0), y: 0.035 },
+					{ x: new Date(2004, 0), y: 0.06 },
+					{ x: new Date(2005, 0), y: 0.1 },
+					{ x: new Date(2006, 0), y: 0.15 },
+					{ x: new Date(2007, 0), y: 0.22 },
+					{ x: new Date(2008, 0), y: 0.38 },
+					{ x: new Date(2009, 0), y: 0.56 },
+					{ x: new Date(2010, 0), y: 0.77 },
+					{ x: new Date(2011, 0), y: 0.91 },
+					{ x: new Date(2012, 0), y: 0.94 }
+					]
+				},
+				{
+					type: "line",
+					lineThickness: 3,
+					showInLegend: true,
+					name: "Question-Response",
+					axisYType: "secondary",
+					dataPoints: [
+					{ x: new Date(2001, 00), y: 0.18 },
+					{ x: new Date(2002, 00), y: 0.2 },
+					{ x: new Date(2003, 0), y: 0.25 },
+					{ x: new Date(2004, 0), y: 0.35 },
+					{ x: new Date(2005, 0), y: 0.42 },
+					{ x: new Date(2006, 0), y: 0.5 },
+					{ x: new Date(2007, 0), y: 0.58 },
+					{ x: new Date(2008, 0), y: 0.67 },
+					{ x: new Date(2009, 0), y: 0.78 },
+					{ x: new Date(2010, 0), y: 0.88 },
+					{ x: new Date(2011, 0), y: 0.98 },
+					{ x: new Date(2012, 0), y: 1.04 }
+					]
+				},
+				{
+					type: "line",
+					lineThickness: 3,
+					showInLegend: true,
+					name: "Short Conversation",
+					axisYType: "secondary",
+					dataPoints: [
+					{ x: new Date(2001, 00), y: 0.16 },
+					{ x: new Date(2002, 0), y: 0.17 },
+					{ x: new Date(2003, 0), y: 0.18 },
+					{ x: new Date(2004, 0), y: 0.19 },
+					{ x: new Date(2005, 0), y: 0.20 },
+					{ x: new Date(2006, 0), y: 0.23 },
+					{ x: new Date(2007, 0), y: 0.261 },
+					{ x: new Date(2008, 0), y: 0.289 },
+					{ x: new Date(2009, 0), y: 0.3 },
+					{ x: new Date(2010, 0), y: 0.31 },
+					{ x: new Date(2011, 0), y: 0.32 },
+					{ x: new Date(2012, 0), y: 0.33 }
+					]
+				}
+					   
+				],
+				legend: {
+					cursor: "pointer",
+					itemclick: function (e) {
+						if (typeof (e.dataSeries.visible) === "undefined" || e.dataSeries.visible) {
+							e.dataSeries.visible = false;
+						}
+						else {
+							e.dataSeries.visible = true;
+						}
+						chart.render();
+					}
+				}
+			});
+
+			chart.render();
+		}
+	</script>
+<!-- 線圖 chart -->
+<script src="assets/js/canvasjs.min.js"></script>
+
+<!-- Bootstrap -->
+<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>-->
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+
+
+
+
+</body>
+</html>

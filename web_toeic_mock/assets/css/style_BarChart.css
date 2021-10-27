@@ -1,0 +1,168 @@
+
+.skillbar {
+  font-family: 'Open Sans', 'sans-serif';
+	position:relative;
+	display:block;
+	margin-bottom:15px;
+	width:100%;
+	background:#eee;
+	height:35px;
+	border-radius:0px;
+	-moz-border-radius:0px;
+	-webkit-border-radius:0px;
+	-webkit-transition:0.4s linear;
+	-moz-transition:0.4s linear;
+	-ms-transition:0.4s linear;
+	-o-transition:0.4s linear;
+	transition:0.4s linear;
+	-webkit-transition-property:width, background-color;
+	-moz-transition-property:width, background-color;
+	-ms-transition-property:width, background-color;
+	-o-transition-property:width, background-color;
+	transition-property:width, background-color;
+	cursor: pointer;
+	padding-left: 226px;
+}
+
+.skillbar-title {
+	position:absolute;
+	top:0;
+	left:0;
+	font-weight:bold;
+	font-size:12px;
+	color:#fff;
+	background:#044c3b;
+	-webkit-border-top-left-radius:0px;
+	-webkit-border-bottom-left-radius:0px;
+	-moz-border-radius-topleft:0px;
+	-moz-border-radius-bottomleft:0px;
+	border-top-left-radius:0px;
+	border-bottom-left-radius:0px;
+	width: 225px;
+}
+
+.skillbar-title span {
+	display:block;
+	background:rgba(0, 0, 0, 0.1);
+	padding: 5px 15px;
+    height: 35px;
+    line-height: 14px;
+	font-size: 12px;
+	-webkit-border-top-left-radius:0px;
+	-webkit-border-bottom-left-radius:0px;
+	-moz-border-radius-topleft:0px;
+	-moz-border-radius-bottomleft:0px;
+	border-top-left-radius:0px;
+	border-bottom-left-radius:0px;
+}
+
+.skillbar-bar {
+	height:35px;
+	width:0px;
+	background: #779b8f;
+	border-radius:0px;
+	-moz-border-radius:0px;
+	-webkit-border-radius:0px;
+}
+
+.skill-bar-percent {
+	position:absolute;
+	right:10px;
+	top:0;
+	font-size:11px;
+	height:35px;
+	line-height:35px;
+	color:#444;
+	color:rgba(0, 0, 0, 0.4);
+}
+/*.modal-body .skillbar, 
+.modal-body .skillbar-bar, 
+.modal-body .skill-bar-percent, 
+.modal-body .skillbar-title span,
+.collapse .skillbar, 
+.collapse .skillbar-bar, 
+.collapse .skill-bar-percent, 
+.collapse .skillbar-title span {
+	 height: 25px;
+	 line-height: 25px;
+}
+.modal-body .skillbar,
+.collapse .skillbar {
+	background: #d6d6d6;
+}
+.modal-body .skillbar-bar,
+.collapse .skillbar-bar {
+    background: #b1bdbb;
+}
+.modal-body .skillbar-title span,
+.collapse .skillbar-title span {
+	background: #587971;
+}
+.collapse .skillbar-title span {
+	background: #587971;
+}
+
+
+*/
+
+.sub .skillbar, 
+.sub .skillbar-bar, 
+.sub .skill-bar-percent, 
+.sub .skillbar-title span {
+	 height: 25px;
+	 line-height: 25px;
+}
+.sub .skillbar-bar {
+    background: #b1bdbb;
+}
+.sub .skillbar-bar {
+    background: #b1bdbb;
+}
+.sub .skillbar-title span {
+	  background: rgba(88, 121, 113, 0);
+    width: 100%;
+}
+.sub .skillbar-title {
+	width: 78px;
+	background: rgba(4, 76, 59, 0);
+	width: 100%;
+}
+.sub .skillbar {
+	padding-left: 0px;
+	margin-top: 28px;
+	margin-bottom: 12px;
+}
+.sub .skillbar-title span {
+	padding: 0px;
+	margin-top: -22px;
+    color: #585858;
+}
+.modal-body .bararea {
+	margin: 15px 0 0;
+    display: flow-root;
+}
+.sub {
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+	border-bottom: 1px solid #ddd;
+    padding: 35px 10px 10px;
+    margin-top: -40px;
+	margin-bottom: 25px;
+}
+.skillbar.bt:after {
+    font-family: 'Material Icons';
+    content: "\E316";
+    position: absolute;
+    right: 10px;
+    line-height: 35px;
+    top: 0;
+    color: #11bf50;
+    font-size: 2rem;
+  }
+.skillbar.bt.collapsed:after {
+    content: "\E313";
+  }
+.skillbar.bt .skill-bar-percent {
+	right: 40px;
+}
+    
