@@ -4368,6 +4368,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7C0202', end
 }
 .playpause i{
 	margin: -6px -14px;
+	position: relative;
 }
 	}
 	
