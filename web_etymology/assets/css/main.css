@@ -92,9 +92,7 @@
 	
 	
 	
-	
-	
-	/*   播放影片區   */	
+/*   播放影片區   */	
 	
 .video_box {
 			/*background-image: -moz-linear-gradient(135deg, rgba(45, 0, 0, 0.8) 0%,rgba(88, 0, 0, 0.8) 10%,rgba(118, 0, 0, 0.8) 23%,rgba(33, 1, 1, 0.8) 51%,rgba(27, 0, 0, 0.8) 72%,rgba(214,0,174,0.8) 100%), url("images/concrete_seamless_2.png");
@@ -140,6 +138,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#666666', end
 	border: 0.8em solid rgba(255,255,255,1);
 	margin-bottom: 10em !important;
 	box-shadow: 0 0.8em 1.5em 0 rgba(0, 0, 0, 0.8),0 0em 2em 0 rgba(0, 0, 0, 0.5);
+	position: relative;
 	}
 .videoWrapper {
 	position: relative;
@@ -165,22 +164,20 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#666666', end
 }
 
 .playpause {
-    width: 1.8em;
-    height: 1.3em;
-    position: relative;
-    z-index: 50;
-    font-size: 4em;
-    color: #F00;
-    background: rgba(0, 0, 0, 0.55) none repeat scroll 0% 0%;
-    border-radius: 20px;
-    text-align: center;
-    text-shadow: 0px 2px 8px rgba(0, 0, 0, 0.9);
-    box-shadow: 0px 0px 25px rgba(255, 255, 255, 1),0px 0px 25px rgba(255, 255, 255, 1);
-    padding-top: .15em;
-    padding-left: .2em;
-    margin-left: 45%;
-    float: left;
-    margin-top: 23%;
+	width: 1.4em;
+	height: 1.4em;
+	position: absolute;
+	z-index: 50;
+	font-size: 5em;
+	color: #F00;
+	background: rgba(0, 0, 0, 0.55) none repeat scroll 0% 0%;
+	border-radius: 2em;
+	text-shadow: 0px 2px 8px rgb(0 0 0 / 90%);
+	box-shadow: 0px 0px 25px rgb(255 255 255), 0px 0px 25px rgb(255 255 255);
+	padding: 18px 36px;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
 }
 .playpause:hover{
 	color: #fff;
@@ -313,6 +310,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#666666', end
     border: 0em solid rgba(255,255,255,1);
     margin-bottom: 0em !important;
     box-shadow: 0 0.8em 1.5em 0 rgba(0, 0, 0, 0.8),0 0em 2em 0 rgba(0, 0, 0, 0.5);
+		position: relative;
 }
 
 	}
@@ -3221,11 +3219,14 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#666666', end
 
 		.spotlight.style2 .content {
 			border-color: #620000;
+			overflow: auto;
 		}
 
 		.spotlight.style3 .content {
 			border-color: #620000;
+			overflow: auto;
 		}
+
 
 		.spotlight.inactive .content {
 			opacity: 0;
@@ -3777,11 +3778,17 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#666666', end
 			line-height: 2.2em;
 		}
 		.playpause{
-			font-size: 3em;
+			/* font-size: 3em;
 			margin-left: 44%;
     		margin-top: 22%;
-			border-radius: 15px;
+			border-radius: 15px; */
+			font-size: 4em;
+    border-radius: 4em;
 			}
+			.playpause i { 
+				margin: -2px -6px;
+			}
+			
 		.text_hide{
 			display: none;
 			}
@@ -4352,13 +4359,16 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7C0202', end
     left: 50%;
 }
 .playpause{
-	font-size: 2.8em;
-	border-radius: 12px;
-	margin-left: 40%;
-    margin-top: 18%;
+	font-size: 3em;
+	border-radius: 3em;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
 }
-
-
+.playpause i{
+	margin: -6px -14px;
+}
 	}
 	
 	
