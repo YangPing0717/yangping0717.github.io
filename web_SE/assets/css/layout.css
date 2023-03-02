@@ -22,6 +22,17 @@
 /* a. General Styles
 /* ------------------------------------------------------------------ */
 
+::-moz-selection {
+   color: #ffffff;
+   background: rgba(25, 0, 19, .5);
+   /* background: linear-gradient(25deg, #5a4340, #723f4e); */
+ }
+ ::selection {
+   color: #ffffff;
+   background: rgba(25, 0, 19, .5);
+   /* background: linear-gradient(25deg, #5a4340, #723f4e); */
+ }
+
 body {
    /* background: #3c3639; */
    background: #ffffff;
