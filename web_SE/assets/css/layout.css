@@ -100,6 +100,10 @@ header .banner-text hr {
    border-color: rgba(255, 255, 255, 0.4);
 }
 
+.logo {
+   /* filter: invert(var(--value, 100%)); */
+   filter: brightness(1.3) invert(0.17) saturate(2.6) sepia(0.25) hue-rotate(290deg);
+}
 .logo img {
    width: 11rem !important;
    -webkit-filter: drop-shadow(0px 0px 15px rgba(255, 255, 255, 1)) !important;
