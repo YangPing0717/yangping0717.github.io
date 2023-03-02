@@ -2200,8 +2200,9 @@ footer {
    font-size: 14px;
    text-align: center;
    position: relative;
-   background: #755853;
+   /* background: #755853; */
    padding-bottom: 48px;
+   background: linear-gradient(25deg, #5a4340, #723f4e);
 }
 
 footer a,
