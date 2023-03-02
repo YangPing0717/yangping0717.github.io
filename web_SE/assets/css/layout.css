@@ -313,22 +313,27 @@ header .banner-text hr {
    -webkit-animation-fill-mode: both;
    display: inline-block;
    position: absolute;
-   margin: auto;
-   bottom: 0;
+   /* margin: auto;*/
+   /* bottom: 0;  */
    z-index: 200;
-   left: 50%;
-   /* top: 50%; */
+   
+   /* background: #bd5555; 
+   height: 200px;*/
+   width: 200px;
+   position: absolute; 
+   left: 0; top: 0; right: 0; bottom: 0;
+   margin: auto auto 0 auto;
 }
 
 @media only screen and (max-width: 767px) {
    #topbtn {
-      bottom: 85px;
+      /* bottom: 85px; */
    }
 }
 
 @media only screen and (max-width: 480px) {
    #topbtn {
-      bottom: 0px;
+      /* bottom: 0px; */
    }
 }
 
@@ -384,8 +389,8 @@ header .social li a:hover {
 header .scrolldown a {
    position: absolute;
    bottom: 80px;
-   left: 50%;
-   margin-left: -85px;
+   /* left: 50%;
+   margin-left: -85px; */
    color: #fff;
    display: block;
    height: 42px;
@@ -422,13 +427,13 @@ header .scrolldown span {
    font-weight: 700;
    font-size: 1.6rem;
    /* letter-spacing: -0.08em; */
-   display: block;
+   /* display: block; */
    line-height: 2em;
 }
 
 @media screen and (max-width: 1440px) {
    header .scrolldown a {
-      bottom: 60px;
+      /* bottom: 60px; */
       font-size: 3.3em;
    }
 
@@ -1954,11 +1959,30 @@ call-to-action .button {
 /* ------------------------------------------------------------------ */
 
 #contact {
-   background: #f3a99f;
+   /* background: #f3a99f; */
    padding-top: 96px;
    padding-bottom: 72px;
    color: #636363;
+   /* background-image: linear-gradient(rgb(255, 0, 66, .5), rgb(255, 179, 191, .5)), url(../../assets/images/testimonials-bg.jpg) center center no-repeat; */
+   /* background: url(../../assets/images/testimonials-bg.jpg) center center no-repeat; */
+   background-image: url(../../assets/images/sh_1.jpeg);
+   background-repeat: no-repeat;
+   background-position: center center;
+   background-size: cover;
+   position: relative;
 }
+#contact::before {
+   display: block;
+   content: "";
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   opacity: 0.8;
+   background-image: linear-gradient(25deg, #d28b9a, #ae88aa, #b388af, #ff6b98);
+}
+
 
 #contact .section-head {
    margin-bottom: 42px;

@@ -528,7 +528,7 @@
    }
 
    header .banner-text h1 {
-      font: 1.8rem/2.6rem '微軟正黑體', Helvetica, Arial, sans-serif !important;
+      font: 2rem/3rem '微軟正黑體', Helvetica, Arial, sans-serif !important;
       margin: 0 auto 24px auto;
       font-weight: 700 !important;
       /* text-align: initial; */
@@ -569,8 +569,16 @@
       /* display: flex;
       align-items: center;
       justify-content: center; */
+
+      /* color: rgb(0, 204, 190);
+      color: rgb(130, 232, 201); 
+      color: rgb(255, 163, 174);
+      color: rgb(75, 247, 254); 
+      color: rgb(198, 145, 255);  */
+      
    }
 
+   
 
 
 }
