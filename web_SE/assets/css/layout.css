@@ -1422,7 +1422,8 @@ ol {
    padding-bottom: 60px; */
    background-image: url(../images/header_bg_5.jpg);
    background-repeat: no-repeat;
-   background-position: 0% 0%;
+   /* background-position: 0% 0%; */
+   background-position: left bottom;
    background-size: contain;
    padding-bottom: 180px;
 }
