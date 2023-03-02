@@ -2242,7 +2242,8 @@ footer .copyright li {
    margin: 0;
    padding: 0;
    line-height: 24px;
-   color: #da88b0;
+   /* color: #da88b0; */
+   color: #5da3ad;
 }
 
 .ie footer .copyright li {
