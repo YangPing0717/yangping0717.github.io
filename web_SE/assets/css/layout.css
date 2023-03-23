@@ -1770,7 +1770,8 @@ call-to-action .button {
 /* ------------------------------------------------------------------ */
 
 #testimonials {
-   background: #1F1F1F url(../images/testimonials-bg.jpg) no-repeat center center;
+   /* background: #1F1F1F url(../images/testimonials-bg_2.jpg) no-repeat center center; */
+   background: linear-gradient(rgba(152, 225, 223, 0.7), rgba(48, 28, 33, 0.6)), url(../../assets/images/testimonials-bg_2.jpg) center center no-repeat;
    background-size: cover !important;
    -webkit-background-size: cover !important;
    background-attachment: fixed;
@@ -1779,6 +1780,9 @@ call-to-action .button {
    min-height: 200px;
    width: 100%;
    overflow: hidden;
+}
+#testimonials {
+   
 }
 
 #testimonials .text-container {
