@@ -1,12 +1,12 @@
 <?xml version='1.0' encoding='UTF-8' standalone='yes' ?>
 <dirinfo>
 <files>
-	<item key='android-chrome-192x192.png20221221114924' />
-	<item key='android-chrome-512x512.png20221221114924' />
-	<item key='apple-touch-icon.png20221221114924' />
-	<item key='favicon-16x16.png20221221114924' />
-	<item key='favicon-32x32.png20221221114924' />
 	<item key='favicon.ico20240502112655' />
 	<item key='X20240502112555' />
+	<item key='favicon-32x32.png20240502154400' />
+	<item key='favicon-16x16.png20240502154413' />
+	<item key='apple-touch-icon.png20240502154443' />
+	<item key='android-chrome-512x512.png20240502154602' />
+	<item key='android-chrome-192x192.png20240502154614' />
 </files>
 </dirinfo>
