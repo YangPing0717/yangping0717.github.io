@@ -1,0 +1,299 @@
+
+$blue: #001652;
+$blue_01: #00268C;
+$blue_02: #0033BB; 
+$selection:#d1c9ff;
+
+body {
+    background-color: white;
+    color: $blue;
+    font-size: 18px;
+    // font-family: "Raleway", sans-serif;
+    font-family: "微軟正黑體", 'Raleway', Arial, sans-serif;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "微軟正黑體", 'Raleway', Arial, sans-serif;
+    font-weight: 800;
+}
+
+.nav-link {
+    font-family: "微軟正黑體", 'Raleway', Arial, sans-serif;
+    color: #ffffff;
+    font-size: 1.6em;
+    line-height: 3.2rem;
+    font-weight: 700;
+    &:before{
+        background-color: $blue;
+    }
+}
+header.nav-down.header-sm {
+    box-shadow: 0 0 20px 20px rgba(0, 0, 0, 0.65);
+    background-color: rgba(0, 0, 0, 0.4);
+}
+.nav-menu-button .line {
+    display: block;
+    height: 3px;
+    width: 100%;
+    background: #ffffff;
+}
+.logo img {
+    @media screen and (max-width: 767px) {
+        width: 9rem;
+        margin-top: 0.8rem;
+    }
+}
+.nav{
+    .nav-menu-button {
+        background-color: transparent;
+    }
+    .nav-menu-wrapper{
+        background-color: #0dcaf0;
+        color: $blue;
+        background: rgb(33,255,215);
+        background: linear-gradient(0deg, rgb(13, 207, 171) 0%, rgba(0,245,255,1) 53%, rgb(42, 159, 191) 100%);
+        .nav-menu{
+            .dropdown-menu{
+                &.show {
+                    background-color: #d5b0ff;
+                }
+            }
+            .dropdown-item{
+                font-weight: 700;
+                font-size: 1.5rem;
+                font-family: initial;
+                color: $blue;
+            }
+            .nav-social a i {
+                padding-top: 250px;
+                font-size: 3rem;
+                color: #ffffff;
+                transition: all 0.3s ease;
+                &:hover {
+                    color: #182022;
+                }
+            }
+        }
+    }
+}
+
+.section-title {
+    font-size: 4.8rem;
+    margin-bottom: 25px;
+    line-height: 5.6rem;
+    position: relative;
+    br{
+        display: none;
+    }
+    @media screen and (max-width: 767px) {
+        font-size: 4rem;
+        line-height: 4.6rem;
+        padding-left: 0 !important;
+        padding-bottom: 40px !important;
+        br{
+            display: initial;
+        }
+    }
+  }
+.section-subtitle {
+    font-size: 2.4rem;
+    color: white;
+    // margin-bottom: 15px;
+    // position: relative;
+    padding-right: initial;
+    // display: inline-block;
+    @media screen and (max-width: 767px) {
+        font-size: 1.6rem;
+        line-height: 2.8rem;
+        padding-left: 0;
+        margin-bottom: 0;
+        margin-top: 1.4rem;
+    }
+    &.gradient{
+        padding-top: 2rem;
+        background: linear-gradient(to right, #b600b9 , #FF00FF); 
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-size: 2.6rem;
+        br{
+            display: none;
+        }
+        @media screen and (max-width: 767px) {
+            padding-top: 0;
+            background: linear-gradient(to right, #0cffdf, #FF00FF);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-size: 2.6rem;
+            margin-top: -1rem;
+            margin-bottom: 4.2rem;
+            br{
+                display: initial;
+            }
+        }
+    }
+}
+.team{
+    background: rgb(0,22,82);
+    background: linear-gradient(90deg, rgba(0,22,82,1) 0%, rgba(0,51,187,1) 100%);
+    height: calc(100vh + 3rem);
+    background: url("../images/main_banner.jpg") no-repeat center / cover;
+    @media screen and (max-width: 767px) {
+        background-color: #001652;
+        background: url("../images/main_banner_phone.jpg") no-repeat top center / 140%;
+        height: initial;
+        min-height: calc(100vh + 40rem);
+    }
+    .container{
+        .team-wrapper{
+            text-align: center;
+            h2 {
+                padding-bottom: 60px;
+                color: white;
+            }
+            p {
+                font-weight: 700;
+                color: white;
+                line-height: 2rem;
+                @media screen and (max-width: 767px) {
+                    line-height: 1.6rem;
+                }
+                br:first-child{
+                    display: none;
+                    @media screen and (max-width: 767px) {
+                        display: initial;
+                    }
+                }
+            }
+            ul {
+                list-style: none;
+            }
+            .team-spiral-arrow {
+                position: absolute;
+                top: 15%;
+                left: 23%;
+                @media screen and (max-width: 767px) {
+                    position: absolute;
+                    top: 8%;
+                    left: 8%;
+                    width: 20%;
+                }
+            }
+        }
+    }
+    .team-content{
+        li{
+            .team-member{
+                .team-member-img{
+                    border-radius: 52px;
+                    filter: drop-shadow(-10px 30px 30px rgba(16, 0, 93, 0.6));
+                    @media screen and (max-width: 767px) {
+                        border-radius: 36px;
+                    }
+                    img{
+                        border-radius: 0;
+                    }
+                }
+                .line-img{
+                    position: absolute;
+                    right: -4rem;
+                    top: 6rem;
+                    @media screen and (max-width: 767px) {
+                        right: -3rem;
+                        top: 4.5rem;
+                        width: 150px;
+                    }
+                }
+                &:hover .team-member-img img{
+                    filter: blur(2px) brightness(0.4);
+                    @media screen and (max-width: 767px) {
+                        filter: blur(0) brightness(1);
+                    } 
+                }
+                .team-member-info{
+                    color: white;
+                    text-align: left;
+                    @media screen and (max-width: 767px) {
+                        padding: 1.8rem 0 1rem;
+                    }
+                    .member-designation{
+                        font-size: 1.2rem;
+                        color: white;
+                        margin-bottom: 0.6rem;
+                    }
+                    h5{
+                        font-size: 1.8rem;  
+                        @media screen and (max-width: 767px) {
+                            padding-left: 0;
+                        }
+                    }
+                    .member-info{
+                        font-size: 1rem;
+                        color: white;
+                        line-height: 1.5rem;
+                        @media screen and (max-width: 767px) {
+                            font-size: .8rem;
+                            line-height: 1.2rem;
+                        }
+                    }
+                    .member-social-icon a{
+                        @media screen and (max-width: 767px) {
+                            color: white;
+                        }
+                    }
+                }
+            }
+            &.scale{
+                transform: scale(0.9);
+                @media screen and (max-width: 767px) {
+                    transform: scale(1);
+                }
+            }
+        }   
+    }
+}
+
+
+.banner-img-wrapper {
+    width: 100%;
+    height: 100%;
+    border: 1px solid #00fff2;
+    border-radius: 50%;
+    margin-top: 0;
+    position: relative;
+}
+
+
+
+
+.preloader {
+    background: rgb(0,159,70);
+    background: linear-gradient(28deg, rgba(0,159,70,1) 0%, rgba(0,128,159,1) 17%, rgba(114,0,187,1) 100%);
+    img{
+        filter: drop-shadow(4px 8px 6px rgba(16, 0, 93, 0.9));
+        @media screen and (max-width: 767px) {
+            max-width: 12rem;
+        }
+    }
+    .preloader_inner{
+        margin: auto;
+        font-family: "Righteous", cursive;
+        text-align: center;
+        font-size: 6vw;
+        font-weight: 600;
+        color: #00f7ff;
+        margin-top: 8px;
+        display: block;
+        line-height: 1em;
+        text-shadow: 1px 10px 20px rgba(40, 19, 85, 0.8);
+        @media screen and (max-width: 767px) {
+            font-size: 12vw;
+            line-height: 0.5rem;
+        }
+    }
+}
+
+
