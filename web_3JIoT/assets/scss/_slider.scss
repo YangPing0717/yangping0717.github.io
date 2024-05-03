@@ -1,0 +1,119 @@
+/* Home Slider Area css
+============================================================================================ */
+.main_slider_area {
+  ul {
+    li {
+      .slider_text_box {
+        .tag_text {
+          color: $baseColor;
+          font-family: "微軟正黑體", 'swanse', Arial, sans-serif;
+          font-weight: 700;
+          // margin-bottom: 1rem !important;
+        }
+        .first_text {
+          color: #fff;
+          font-family: "微軟正黑體", 'swanse', Arial, sans-serif;
+          font-weight: 700;
+          span {
+            color: $baseColor;
+            &.gradient{
+              background: linear-gradient(90deg, rgba(255,201,253,1) 0%, rgba(124,141,229,1) 53%, rgba(166,239,255,1) 100%);
+            //   background: rgb(255,175,252);
+            // background: linear-gradient(90deg, rgba(255,175,252,1) 0%, rgba(99,122,245,1) 53%, rgba(0,255,209,1) 100%);
+              -webkit-background-clip: text;
+              -webkit-text-fill-color: transparent;
+            }
+            &.first_t_s{
+              font-size: 80% !important;
+              color: white;
+              background: none !important;
+            }
+          }
+          .first_text_sub{
+            line-height: 3.8rem;
+            margin-top: 0;
+            @media (max-width: 575px){
+              line-height: 2.2rem;
+              font-size: 1.8rem !important;
+            }
+          }
+        }
+        .secand_text {
+          color: #fff;
+          font-family: "微軟正黑體", 'swanse', Arial, sans-serif;
+          font-weight: 700;
+          @media (max-width: 575px){
+            br{
+              display: none;
+            }
+          }
+        }
+        .br_s_text {
+          .br_s {
+            width: 100px;
+            height: 1px;
+            background: #fff;
+            display: inline-block;
+          }
+        }
+        .slider_button {
+          .arrow_btn {
+            color: #fff;
+            // font: 20px $swb;
+            font-family: "微軟正黑體", 'swanse', Arial, sans-serif;
+            font-size: 1.4rem !important;
+            font-weight: 700;
+            @include transition;
+            i {
+              font-size: 18px;
+              // margin-left: 6px;
+              font-weight: 700;
+              margin-top: -6px;
+            }
+            &:hover {
+              color: $baseColor;
+              i {
+                margin-left: 3px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .rev_slider {
+    .tp-bullets {
+      .tp-bullet {
+        width: 20px;
+        height: 4px;
+        background: #fff;
+        opacity: 1;
+        &.selected {
+          background: $baseColor;
+        }
+      }
+    }
+  }
+  @media (min-width: 1300px) {
+    .rev_slider {
+      .tp-bullets {
+        max-width: 1106px !important;
+        margin: auto !important;
+        width: 100% !important;
+        // left: 50% !important;
+        // bottom: 13vmin;
+        .tp-bullet {
+          width: 20px;
+          height: 4px;
+          background: #fff;
+          opacity: 1;
+          &.selected {
+            background: $baseColor;
+          }
+        }
+      }
+    }
+  }
+}
+/* End Home Slider Area css
+============================================================================================ */
