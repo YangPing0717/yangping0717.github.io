@@ -1,8 +1,11 @@
 /* Who We Area css
 ============================================================================================ */
 .who_we_area {
+  background: #000000;
+  background: url("../images/BG_01.jpg") no-repeat center top / cover;
   .col-lg-7 {
     align-self: center;
+    
   }
 }
 .who_we_text {
@@ -239,6 +242,11 @@
 .feature_item {
   img {
     margin-bottom: 30px;
+  }
+  h3, h2 {
+    color: $dip;
+    // font-size: 20px;
+    // margin-bottom: 15px;
   }
   h4 {
     color: $dip;

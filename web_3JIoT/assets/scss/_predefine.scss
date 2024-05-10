@@ -123,9 +123,15 @@ button:focus {
   h2 {
     color: $dip;
     font-size: 48px;
-    line-height: 50px;
+    line-height: 58px;
     margin-bottom: 0px;
     .color {
+      color: $baseColor;
+    }
+    .gradient{
+      background: linear-gradient(90deg, rgba(255,201,253,1) 0%, rgba(124,141,229,1) 53%, rgba(166,239,255,1) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
       color: $baseColor;
     }
     &.animated {
