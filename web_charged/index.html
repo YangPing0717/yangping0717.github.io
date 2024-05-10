@@ -34,9 +34,23 @@
     <link rel="stylesheet" href="css/media.css" />
 
     <link rel="stylesheet" href="css/charged.css" />
+
+    <script src="js/JjrPaxV.js" ></script>
+    <style>
+        .gradient-canvas {
+            margin:0;
+            padding:0;
+        }
+        #gradient-canvas {
+            --gradient-color-1: #fd8cad;
+            --gradient-color-2: #fbe8d0;
+            --gradient-color-3: #fcc3e6;
+            --gradient-color-4: #fcd7d5;
+        }
+    </style>
 </head>
 
-<body data-bs-spy="scroll" data-bs-target=".nav-menu">
+<body data-bs-spy="scroll" data-bs-target=".nav-menu" class="theme-blush">
     <!-- pre loader :: starts -->
     <div class="preloader">
         <div class="preloader_wrap">
@@ -62,11 +76,11 @@
                     <div class="nav-menu-wrapper">
                         <nav class="nav-menu">
                             <ul class="nav-links">
-                                <li><a href="#home" class="nav-link active">Home</a></li>
+                                <li><a href="#team" class="nav-link active">Home</a></li>
                                 <li><a href="#about" class="nav-link">About</a></li>
                                 <li><a href="#collection" class="nav-link">Collections</a></li>
                                 <li><a href="#roadmap" class="nav-link">Roadmap</a></li>
-                                <li><a href="#team" class="nav-link">Team</a></li>
+                                <!-- <li><a href="#team" class="nav-link">Team</a></li> -->
                                 <li><a href="#artist" class="nav-link">Artist</a></li>
                                 <li><a href="#faqs" class="nav-link">FAQs</a></li>
                                 <li class="nav-item dropdown">
@@ -110,14 +124,21 @@
         </header>
 
         <div class="main-content">
-
             <section class="team" id="team">
+                <div class="animate_lines">
+                    <div class="line"></div>
+                    <div class="line"></div>
+                    <div class="line"></div>
+                    <div class="line"></div>
+                    <div class="line"></div>
+                    <div class="line"></div>
+                </div>
                 <div class="container">
                     <div class="team-wrapper">
                         <h3 class="section-subtitle wow animate__fadeInUp" data-wow-delay="0.4s">
                             SmartDrive 環島充電站
                         </h3>
-                        <h2 class="section-title wow animate__fadeInUp" data-wow-duration="1s" data-wow-delay="0.4s">
+                        <h2 class="section-title none_br wow animate__fadeInUp" data-wow-duration="1s" data-wow-delay="0.4s">
                             加入LINE<br>官方帳號
                         </h2>
                         <p class="wow animate__fadeInUp" data-wow-duration="1s" data-wow-delay="0.8s">
@@ -201,21 +222,27 @@
                         </h3>
                     </div>
                 </div>
+                
             </section>
 
-            <!-- <section class="banner" id="home">
+            <section class="banner" id="home">
                 <div class="banner-wrapper">
-                    <div class="banner-content">
-                        <h5 class="wow animate__fadeInDown">A new wave of great collection </h5>
+                    <div class="banner-content ">
+                        <h5 class="wow animate__fadeInDown">與您共創美好電動生活</h5>
                         <h2 class="section-title">
                             <span class="wow animate__fadeIn" data-wow-duration="1s"
-                                data-wow-delay="0.5s">DISCOVER</span><br />
+                                data-wow-delay="0.5s">LINE 官方帳號</span><br />
                             <span class="lined wow animate__fadeIn" data-wow-duration="1s" data-wow-delay="1.2s"></span>
-                            COLLECT</span><br />
-                            <span class="wow animate__fadeIn" data-wow-duration="1s" data-wow-delay="2s">SELL.</span>
+                            享進階功能</span><br />
+                            <!-- <span class="wow animate__fadeIn" data-wow-duration="1s" data-wow-delay="2s">享進階功</span> -->
                         </h2>
+                        <p class="wow animate__fadeInUp" data-wow-duration="1.2s" data-wow-delay="0.3s">掃描行動條碼即可將官方帳號加入好友，請先點選LINE應用程式搜尋欄位旁的掃描圖示，再掃描此行動條碼。    
+                        </p> 
                     </div>
-                    <img class="banner-3 infiniteBounce" src="images/banner-img-3.png" alt="banner-img" />
+                    <div class="left-img">
+                        <img class="banner-3 infiniteBounce" src="images/object_02_2.svg" alt="banner-img" />
+                        <img class="banner-3-2 infiniteZoomInOut_slow" src="images/object_04_1.svg" alt="banner-img" />
+                    </div>
                     <img class="wavy-partical wow animate__flipInX" data-wow-delay="0.4s" src="images/banner-wave.png"
                         alt="banner-vector-shapes">
 
@@ -225,18 +252,19 @@
                             <span></span>
                             <img class="particle-black infiniteZoomInOut" src="images/particle-black.png"
                                 alt="floating-img" />
-                            <img class="particle-white infiniteZoomInOut" src="./images/particle-white.png"
+                            <img class="particle-white infiniteZoomInOut" src="./images/particle-green.png"
                                 alt="floating-img" />
                             <img class="particle-orange infiniteZoomInOut" src="./images/particle-orange.png"
                                 alt="floating-img" />
-                            <img class="banner-1 infiniteBounce" src="images/banner-img-1.png" alt="banner-img">
-                            <img class="banner-2 infiniteBounce" src="images/banner-img-2.png" alt="banner-img">
-                            <img class="banner-4 infiniteBounce" src="images/banner-img-4.png" alt="banner-img">
-                            <img class="banner-5 infiniteBounce" src="images/banner-img-5.png" alt="banner-img">
+                            <img class="banner-1 infiniteBounce" src="images/banner_1.png" alt="banner-img">
+                            <img class="banner-2 infiniteBounce" src="images/object_01_3.svg" alt="banner-img">
+                            <img class="banner-4 infiniteBounce" src="images/LINE_brand.svg" alt="banner-img">
+                            <img class="banner-5 infiniteBounce" src="images/LINE_brand.svg" alt="banner-img">
+                            <img class="banner-6 infiniteBounce" src="images/object_03_1.svg" alt="banner-img">
                         </div>
                     </div>
                 </div>
-            </section> -->
+            </section>
 
             <!-- <section class="about" id="about">
                 <div class="container">
@@ -354,13 +382,13 @@
             <section class="roadmap" id="roadmap">
                 <div class="container">
                     <div class="roadmap-wrapper">
-                        <h5 class="section-subtitle wow animate__fadeInUp" data-wow-delay="0.4s">
-                            加入 LINE 好友
+                        <!-- <h5 class="section-subtitle wow animate__fadeInUp" data-wow-delay="0.4s">
+                            Charging Menu
                         </h5>
-                        <h2 class="section-title wow animate__fadeInUp" data-wow-duration="1s" data-wow-delay="0.4s">LINE <br />官方帳號<br />享進階功能
+                        <h2 class="section-title blue_light none_br wow animate__fadeInUp" data-wow-duration="1s" data-wow-delay="0.4s">圖文選單進階功能<br /><br />
                             <img class=" spiral-arrow wow animate__fadeInUp" data-wow-delay="0.4s"
-                                src="images/spiral-arrow.png" alt="vector-shape">
-                        </h2>
+                                src="images/spiral-arrow-pur.png" alt="vector-shape">
+                        </h2> -->
                         <div class="vector-shapes">
                             <img class="particle-black" src="images/particle-black.png" alt="vector-shape">
                             <img class="wavy-particle" src="./images/wavy-partical.jpg" alt="vector-shape">
@@ -371,19 +399,27 @@
                                     <div class="col-sm-6">
                                         <div class="phase-content wow animate__fadeInLeft" data-wow-duration="1s"
                                             data-wow-delay="0.3s">
-                                            <h6>Build The Audience</h6>
-                                            <h3>Phase 1</h3>
-                                            <p>Eget tellus tincidunt viverra. Vivamus nec aliquet<br /> turpis. In
+                                            <h6>Charging Menu</h6>
+                                            <h3>圖文選單進階功能
+                                                <img class=" spiral-arrow wow animate__fadeInDown" data-wow-delay="1.2s" src="images/spiral-arrow-pur.png" alt="vector-shape">
+                                            </h3>
+                                            <p>這裡是 <span>LINE Menu</span> 主要功能解說文案，科技始終來自人性，APP免下載，一鍵啟動綠能新生活，5G與手機拓展了我們智能生活的可能性！
+                                                <br /> turpis. In
                                                 accumsan
                                                 velit
                                                 quis
                                                 odio vestibulum,<br /> sit amet mattis nisl accumsan.</p>
+                                                <ul class="discri">
+                                                    <li><span>連接 Chatbot </span>方便提供顧客更豐富的資訊與流暢的體驗</li>
+                                                    <li><span>切換選單 </span>根據顧客選擇、綁定狀態切換顯示不同圖文選單</li>
+                                                    <li><span>數據統計 </span>統計圖文選單上區塊點擊率、點擊佔比，以優化設計</li>
+                                                </ul>
                                         </div>
                                     </div>
                                     <div class=" col-sm-6">
                                         <div class="phase-img-box  wow animate__fadeInRight" data-wow-duration="1s"
                                             data-wow-delay="0.3s">
-                                            <img class="phase-art-img infiniteBounce" src="images/phase-1.png"
+                                            <img class="phase-art-img infiniteBounce" src="images/frame_1.png"
                                                 alt="phase-1">
 
                                             <div class="particle-wrap">
@@ -401,19 +437,21 @@
                                     <div class="col-sm-6">
                                         <div class="phase-content  wow animate__fadeInRight" data-wow-duration="1s"
                                             data-wow-delay="0.4s">
-                                            <h6>Focus on Artwork</h6>
-                                            <h3>Phase 2</h3>
-                                            <p>Eget tellus tincidunt viverra. Vivamus nec aliquet<br /> turpis. In
-                                                accumsan
-                                                velit
-                                                quis
-                                                odio vestibulum,<br /> sit amet mattis nisl accumsan</p>
+                                            <h6>Charging Cart Recovery</h6>
+                                            <h3>充電購物車儲值功能</h3>
+                                            <p>這裡是 <span>充電購物車</span> 主要功能解說文案，科技始終來自人性，APP免下載，一鍵啟動綠能新生活，5G與手機拓展了我們智能生活的可能性！</p>
+                                            <ul class="discri">
+                                                <li><span>購物車未結帳提醒 </span>追蹤顧客網站購物狀況，加入購物車未結帳自動發送 LINE 提醒</li>
+                                                <li><span>提醒訊息設定 </span>自訂提醒時間、次數、訊息內容</li>
+                                                <li><span>帶入商品資訊 </span>自動帶入顧客未結帳商品資訊，個人化提醒內容更有效</li>
+                                                <li><span>成效數據統計 </span>完整統計發送訊息數量、點擊率、轉換率，自動計算 ROAS</li>
+                                            </ul>
                                         </div>
                                     </div>
                                     <div class="col-sm-6">
-                                        <div class="phase-img-box  wow animate__fadeInLeft" data-wow-duration="1s"
+                                        <div class="phase-img-box bg_gra wow animate__fadeInLeft" data-wow-duration="1s"
                                             data-wow-delay="0.4s">
-                                            <img class="phase-art-img infiniteBounce" src="images/phase-2.png"
+                                            <img class="phase-art-img infiniteBounce" src="images/frame_2.png"
                                                 alt="phase-2">
 
                                             <div class="particle-wrap">
@@ -431,19 +469,22 @@
                                     <div class="col-sm-6">
                                         <div class="phase-content  wow animate__fadeInLeft" data-wow-duration="1s"
                                             data-wow-delay="0.5s">
-                                            <h6>3D Metaverse</h6>
-                                            <h3>Phase 3</h3>
-                                            <p>Eget tellus tincidunt viverra. Vivamus nec aliquet<br /> turpis. In
-                                                accumsan
-                                                velit
-                                                quis
-                                                odio vestibulum,<br /> sit amet mattis nisl accumsan</p>
+                                            <h6>Automation</h6>
+                                            <h3>自動化客服</h3>
+                                            <p>這裡是 <span>自動化客服</span> 主要功能解說文案，科技始終來自人性，APP免下載，一鍵啟動綠能新生活，5G與手機拓展了我們智能生活的可能性！
+                                            </p>
+                                            <ul class="discri">
+                                                <li><span>關鍵字自動回覆 </span>根據關鍵字觸發，自動回覆訊息</li>
+                                                <li><span>關鍵字自動指派 </span>根據關鍵字觸發，指派給特定人員處理，即時回覆</li>
+                                                <li><span>帶入商品資訊 </span>自動帶入顧客未結帳商品資訊，個人化提醒內容更有效</li>
+                                                <li><span>Chatbot </span>透過預先設計的對話流程，讓聊天機械人初步分類問題、自動回覆常見問題或提供資訊</li>
+                                            </ul>
                                         </div>
                                     </div>
                                     <div class="col-sm-6">
                                         <div class="phase-img-box  wow animate__fadeInRight" data-wow-duration="1s"
                                             data-wow-delay="0.5s">
-                                            <img class="phase-art-img infiniteBounce" src="images/phase-3.png"
+                                            <img class="phase-art-img infiniteBounce" src="images/frame_3.png"
                                                 alt="phase-3">
 
                                             <div class="particle-wrap">
@@ -461,19 +502,16 @@
                                     <div class="col-sm-6">
                                         <div class="phase-content  wow animate__fadeInRight" data-wow-duration="1s"
                                             data-wow-delay="0.6s">
-                                            <h6>Play to Earn</h6>
-                                            <h3>Phase 4</h3>
-                                            <p>Eget tellus tincidunt viverra. Vivamus nec aliquet<br /> turpis. In
-                                                accumsan
-                                                velit
-                                                quis
-                                                odio vestibulum,<br /> sit amet mattis nisl accumsan</p>
+                                            <h6>Automation</h6>
+                                            <h3>自動化客服自動化自動化</h3>
+                                            <p>這裡是LINE menu主要功能解說文案，科技始終來自人性，APP免下載，一鍵啟動綠能新生活，5G與手機拓展了我們智能生活的可能性，然而每當我們打開手機、面對琳琅滿目的APP，卻找不到要找的應用程式，往往讓人懊惱不已！<br >
+                                                這裡是LINE menu主要功能解說文案，儲能結合全台覆蓋率高達95.7％的LINE，自動累積減碳里程。</p>
                                         </div>
                                     </div>
                                     <div class="col-sm-6">
-                                        <div class="phase-img-box  wow animate__fadeInLeft" data-wow-duration="1s"
+                                        <div class="phase-img-box bg_gra wow animate__fadeInLeft" data-wow-duration="1s"
                                             data-wow-delay="0.6s">
-                                            <img class="phase-art-img infiniteBounce" src="images/phase-4.png"
+                                            <img class="phase-art-img infiniteBounce" src="images/frame_4.png"
                                                 alt="phase-4">
 
                                             <div class="particle-wrap">
@@ -705,11 +743,11 @@
                 <div class="container">
                     <div class="faq-wrapper">
                         <h5 class="section-subtitle wow animate__fadeInUp" data-wow-delay="0.4s">
-                            FAQ
+                            SmartDrive FAQ 
                         </h5>
                         <h2 class="section-title wow animate__fadeInUp" data-wow-duration="1s" data-wow-delay="0.4s">
-                            HAVE
-                            ANY <br /> QUESTIONS?</h2>
+                            關於快充慢充<br />
+                            還有其他問題？</h2>
                         <div class="row">
                             <div class="col-lg-4 col-sm-12">
                                 <img class="particle-orange" src="./images/particle-orange.png" alt="particle" />
@@ -721,59 +759,43 @@
                                     <li class="faq-accordian-item  wow animate__fadeInRight" data-wow-duration="1s"
                                         data-wow-delay="0.3s">
                                         <div class="accordian-title open">
-                                            Is there trail version available ?
+                                            SmartDrive 充電樁是接110V還是220V的電？幾安培的電流？一般住家要如何安裝？
                                         </div>
                                         <div class="accordian-content" style="display: block;">
-                                            Donec laoreet quis eros quis pharetra. Pellentesque eleifend porttitor
-                                            lacus, et euismod nibh placerat eget. Donec non ante bibendum, semper lacus
-                                            et, mattis ex. Nulla faucibus, dolor quis maximus vestibulum, tortor magna
-                                            dapibus massa, non facilisis metus velit ac felis. Etiam a urna consectetur,
-                                            pellentesque magna sed, eleifend velit.
+                                            SmartDrive充電樁是接220V的電，輸入電流可分成32安培與80安培。若您住家有安裝需求，可以與我們聯繫，華城有專業的施工團隊為您做居家現場用電檢測、配線規劃與安裝測試。
                                         </div>
                                     </li>
                                     <li class="faq-accordian-item  wow animate__fadeInRight" data-wow-duration="1s"
                                         data-wow-delay="0.4s">
                                         <div class="accordian-title">
-                                            Nulla vitae est risus. Aenean aliquam dolor a massa
-                                            placerat imperdiet ?
+                                            SmartDrive 充電樁採用哪種規格？ 			 
                                         </div>
                                         <div class="accordian-content">
-                                            Fusce in sagittis metus, id rutrum justo. Etiam porta
-                                            rutrum orci ac semper. Proin nisi massa, blandit a
-                                            consequat finibus, vulputate eu elit.
+                                            SmartDrive充電樁是接220V的電，輸入電流可分成32安培與80安培。若您住家有安裝需求，可以與我們聯繫，華城有專業的施工團隊為您做居家現場用電檢測、配線規劃與安裝測試。SmartDrive充電樁是接220V的電，輸入電流可分成32安培與80安培。若您住家有安裝需求，可以與我們聯繫，華城有專業的施工團隊為您做居家現場用電檢測、配線規劃與安裝測試。
                                         </div>
                                     </li>
                                     <li class="faq-accordian-item  wow animate__fadeInRight" data-wow-duration="1s"
                                         data-wow-delay="0.5s">
                                         <div class="accordian-title">
-                                            Pellentesque habitant morbi tristique senectus ?
+                                            SmartDrive 充電樁充電樁產品保固多久? 			
                                         </div>
                                         <div class="accordian-content">
-                                            Fusce in sagittis metus, id rutrum justo. Etiam porta
-                                            rutrum orci ac semper. Proin nisi massa, blandit a
-                                            consequat finibus, vulputate eu elit. Praesent lacinia
-                                            mauris ipsum, eu imperdiet ante semper nec.
+                                            SmartDrive充電樁是接220V的電，輸入電流可分成32安培與80安培。若您住家有安裝需求，可以與我們聯繫，華城有專業的施工團隊為您做居家現場用電檢測、配線規劃與安裝測試。輸入電流可分成32安培與80安培。若您住家有安裝需求，可以與我們聯繫，華城有專業的施工團隊為您做居家現場用電檢測、配線規劃與安裝測試。
                                         </div>
                                     </li>
                                     <li class="faq-accordian-item  wow animate__fadeInRight" data-wow-duration="1s"
                                         data-wow-delay="0.6s">
                                         <div class="accordian-title">
-                                            Aenean aliquam dolor a massa place ?
-
+                                            SmartDrive充電樁SmartDrive充電樁SmartDrive充電樁SmartDrive充電樁SmartDrive充電樁SmartDrive充電樁？
                                         </div>
                                         <div class="accordian-content">
-                                            Fusce in sagittis metus, id rutrum justo. Etiam porta
-                                            rutrum orci ac semper. Proin nisi massa, blandit a
-                                            consequat finibus, vulputate eu elit. Praesent lacinia
-                                            mauris ipsum, eu imperdiet ante semper nec. Praesent
-                                            lacinia mauris ipsum, eu imperdiet ante semper nec.
+                                            SmartDrive充電樁是接220V的電，輸入電流可分成32安培與80安培。若您住家有安裝需求，可以與我們聯繫，華城有專業的施工團隊為您做居家現場用電檢測、配線規劃與安裝測試。輸入電流可分成32安培與80安培。若您住家有安裝需求，可以與我們聯繫，華城有專業的施工團隊為您做居家現場用電檢測、配線規劃與安裝測試。
                                         </div>
                                     </li>
                                     <li class="faq-accordian-item  wow animate__fadeInRight" data-wow-duration="1s"
                                         data-wow-delay="0.6s">
                                         <div class="accordian-title">
-                                            Bestibulum consequat leo ac sapien sollicitudin, a
-                                            pellentesque turpis posuere. Mauris quis nequelibero ?
+                                            SmartDrive 充電樁在國內有符合國家CNS標準與認證，同時也有取得國外CE認證。
                                         </div>
                                         <div class="accordian-content">
                                             Fusce in sagittis metus, id rutrum justo. Etiam porta
@@ -788,6 +810,12 @@
                     </div>
                 </div>
             </section>
+
+            <div class="gradient-canvas">
+                <canvas id="gradient-canvas" style="width:100vw;height:100vh"></canvas>
+            </div>
+            
+        
 
 
         </div>
@@ -910,6 +938,11 @@
     <script src="js/owl.carousel.min.js"></script>
     <script src="js/wow.js"></script>
     <script src="js/main.js"></script>
+
+    <script>
+        var gradient = new Gradient()
+        gradient.initGradient('#gradient-canvas');
+    </script>
 </body>
 
 </html>

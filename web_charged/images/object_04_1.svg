@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="_圖層_2" data-name="圖層 2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 264.87 175.77">
+  <defs>
+    <style>
+      .cls-1, .cls-2 {
+        fill: #fff;
+      }
+
+      .cls-3, .cls-2 {
+        stroke: #4a7b96;
+        stroke-width: 7.72px;
+      }
+
+      .cls-3, .cls-2, .cls-4 {
+        stroke-linejoin: round;
+      }
+
+      .cls-3, .cls-4 {
+        fill: none;
+      }
+
+      .cls-5 {
+        fill: url(#_未命名漸層_97);
+      }
+
+      .cls-4 {
+        stroke: #00558c;
+        stroke-linecap: round;
+        stroke-width: 14px;
+      }
+    </style>
+    <linearGradient id="_未命名漸層_97" data-name="未命名漸層 97" x1="21" y1="98.25" x2="243.04" y2="98.25" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#acb1f1"/>
+      <stop offset=".13" stop-color="#a7b3f0" stop-opacity=".99"/>
+      <stop offset=".29" stop-color="#99b9ee" stop-opacity=".98"/>
+      <stop offset=".45" stop-color="#82c4ea" stop-opacity=".95"/>
+      <stop offset=".62" stop-color="#61d2e5" stop-opacity=".91"/>
+      <stop offset=".8" stop-color="#37e5de" stop-opacity=".87"/>
+      <stop offset=".98" stop-color="#05fcd6" stop-opacity=".81"/>
+      <stop offset="1" stop-color="#00ffd6" stop-opacity=".8"/>
+    </linearGradient>
+  </defs>
+  <g id="object">
+    <g>
+      <rect class="cls-5" x="21" y="24.62" width="222.04" height="147.26"/>
+      <rect class="cls-3" x="21.41" y="24.65" width="222.04" height="147.26"/>
+      <line class="cls-2" y1="24.65" x2="264.87" y2="24.65"/>
+      <line class="cls-2" y1="171.9" x2="264.87" y2="171.9"/>
+      <g>
+        <rect class="cls-2" x="49.32" y="3.86" width="34.56" height="20.79"/>
+        <rect class="cls-2" x="180.99" y="3.86" width="34.56" height="20.79"/>
+      </g>
+      <circle class="cls-1" cx="132.43" cy="98.28" r="45.48"/>
+      <polyline class="cls-4" points="142.25 49.19 115.69 103.47 149.18 103.47 128.97 147.36"/>
+    </g>
+  </g>
+</svg>

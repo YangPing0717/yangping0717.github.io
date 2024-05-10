@@ -1,46 +1,31 @@
-<svg width="1060" height="862" viewBox="0 0 1060 862" fill="none" xmlns="http://www.w3.org/2000/svg">
-<rect opacity="0.3" x="14" y="-28" width="1" height="890" fill="white"/>
-<rect opacity="0.15" x="220" y="-28" width="1" height="890" fill="white"/>
-<rect opacity="0.15" x="426" y="-28" width="1" height="890" fill="white"/>
-<rect opacity="0.15" x="632" y="-28" width="1" height="890" fill="white"/>
-<rect opacity="0.15" x="838" y="-28" width="1" height="890" fill="white"/>
-<rect opacity="0.3" x="1044" y="-28" width="1" height="890" fill="white"/>
-<circle cx="14.5" cy="362.5" r="12.5" fill="#1E5AFA" stroke="white" stroke-width="4"/>
-<g filter="url(#filter0_d_30_3419)">
-<circle cx="219.5" cy="508.5" r="11.5" fill="#1683A6"/>
-<circle cx="219.5" cy="508.5" r="9.5" stroke="white" stroke-width="4"/>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 27.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="圖層_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 1056 1139.5" style="enable-background:new 0 0 1056 1139.5;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#1E5AFA;stroke:#FFFFFF;stroke-width:4;}
+	.st1{fill:#1683A6;}
+	.st2{fill:none;stroke:#FFFFFF;stroke-width:4;}
+	.st3{fill:url(#SVGID_1_);stroke:#FFFFFF;stroke-width:2;}
+	.st4{fill:#00FFE0;}
+</style>
+<g>
+	<circle class="st0" cx="14.5" cy="445.3" r="12.5"/>
+	<g>
+		<circle class="st1" cx="219.5" cy="289.3" r="11.5"/>
+		<circle class="st2" cx="219.5" cy="289.3" r="9.5"/>
+	</g>
+	
+		<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="844.9611" y1="412.8512" x2="833.697" y2="420.3772" gradientTransform="matrix(1 0 0 1 0 48)">
+		<stop  offset="0" style="stop-color:#FF00FF"/>
+		<stop  offset="0.23" style="stop-color:#FA00FA"/>
+		<stop  offset="0.51" style="stop-color:#EC00ED"/>
+		<stop  offset="0.79" style="stop-color:#D500D7"/>
+		<stop  offset="1" style="stop-color:#C000C3"/>
+	</linearGradient>
+	<circle class="st3" cx="839.5" cy="464.5" r="7.5"/>
+	<g>
+		<circle class="st4" cx="1044.5" cy="152.5" r="11.5"/>
+	</g>
 </g>
-<circle cx="839.5" cy="436.5" r="7.5" fill="url(#paint0_linear_30_3419)" stroke="white" stroke-width="2"/>
-<g filter="url(#filter1_d_30_3419)">
-<circle cx="1044.5" cy="124.5" r="11.5" fill="#00FFE0"/>
-</g>
-<defs>
-<filter id="filter0_d_30_3419" x="204" y="497" width="31" height="31" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-<feFlood flood-opacity="0" result="BackgroundImageFix"/>
-<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
-<feOffset dy="4"/>
-<feGaussianBlur stdDeviation="2"/>
-<feComposite in2="hardAlpha" operator="out"/>
-<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
-<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_30_3419"/>
-<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_30_3419" result="shape"/>
-</filter>
-<filter id="filter1_d_30_3419" x="1029" y="113" width="31" height="31" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-<feFlood flood-opacity="0" result="BackgroundImageFix"/>
-<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
-<feOffset dy="4"/>
-<feGaussianBlur stdDeviation="2"/>
-<feComposite in2="hardAlpha" operator="out"/>
-<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
-<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_30_3419"/>
-<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_30_3419" result="shape"/>
-</filter>
-<linearGradient id="paint0_linear_30_3419" x1="848.476" y1="438.112" x2="837.212" y2="445.638" gradientUnits="userSpaceOnUse">
-<stop stop-color="#FF00FF"/>
-<stop offset="0.23" stop-color="#FA00FA"/>
-<stop offset="0.51" stop-color="#EC00ED"/>
-<stop offset="0.79" stop-color="#D500D7"/>
-<stop offset="1" stop-color="#C000C3"/>
-</linearGradient>
-</defs>
 </svg>

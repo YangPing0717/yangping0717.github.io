@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="_圖層_2" data-name="圖層 2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 123.18 198.07">
+  <defs>
+    <style>
+      .cls-1 {
+        stroke: #67a3c1;
+        stroke-width: 7px;
+      }
+
+      .cls-1, .cls-2, .cls-3, .cls-4 {
+        stroke-linejoin: round;
+      }
+
+      .cls-1, .cls-3 {
+        fill: none;
+      }
+
+      .cls-2 {
+        fill: url(#_未命名漸層_97-2);
+      }
+
+      .cls-2, .cls-3, .cls-4 {
+        stroke: #00558c;
+        stroke-width: 5.67px;
+      }
+
+      .cls-5 {
+        fill: #fff;
+      }
+
+      .cls-6 {
+        fill: url(#_新增漸層色票_9);
+      }
+
+      .cls-4 {
+        fill: url(#_未命名漸層_97);
+      }
+    </style>
+    <linearGradient id="_未命名漸層_97" data-name="未命名漸層 97" x1="112.31" y1="179.65" x2="123.18" y2="179.65" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#acb1f1"/>
+      <stop offset=".13" stop-color="#a7b3f0" stop-opacity=".99"/>
+      <stop offset=".29" stop-color="#99b9ee" stop-opacity=".98"/>
+      <stop offset=".45" stop-color="#82c4ea" stop-opacity=".95"/>
+      <stop offset=".62" stop-color="#61d2e5" stop-opacity=".91"/>
+      <stop offset=".8" stop-color="#37e5de" stop-opacity=".87"/>
+      <stop offset=".98" stop-color="#05fcd6" stop-opacity=".81"/>
+      <stop offset="1" stop-color="#00ffd6" stop-opacity=".8"/>
+    </linearGradient>
+    <linearGradient id="_未命名漸層_97-2" data-name="未命名漸層 97" y1="190.99" y2="190.99" xlink:href="#_未命名漸層_97"/>
+    <linearGradient id="_新增漸層色票_9" data-name="新增漸層色票 9" x1="3.35" y1="83.65" x2="116.63" y2="83.65" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#00ffd6"/>
+      <stop offset=".03" stop-color="#0bfdd6"/>
+      <stop offset=".24" stop-color="#54f5db"/>
+      <stop offset=".44" stop-color="#91efdf"/>
+      <stop offset=".62" stop-color="#c0e9e2"/>
+      <stop offset=".78" stop-color="#e2e6e5"/>
+      <stop offset=".91" stop-color="#f7e3e6"/>
+      <stop offset="1" stop-color="#ffe3e7"/>
+    </linearGradient>
+  </defs>
+  <g id="object">
+    <g>
+      <path class="cls-5" d="M99.1,195.13h13.11v-20.07h-13.11c-5.54,0-10.04,4.49-10.04,10.04h0c0,5.54,4.49,10.04,10.04,10.04Z"/>
+      <path class="cls-3" d="M99.21,195.24h13.11v-20.07h-13.11c-5.54,0-10.04,4.49-10.04,10.04h0c0,5.54,4.49,10.04,10.04,10.04Z"/>
+      <line class="cls-4" x1="112.31" y1="179.65" x2="123.18" y2="179.65"/>
+      <line class="cls-2" x1="112.31" y1="190.99" x2="123.18" y2="190.99"/>
+      <path class="cls-3" d="M89.65,185.32H36.42c-6.47,0-11.71-5.24-11.71-11.71v-31.5"/>
+      <path class="cls-6" d="M60,4.08H21.3C11.39,4.08,3.35,12.11,3.35,22.03v123.25c0,9.91,8.04,17.95,17.95,17.95h0c9.91,0,17.95-8.04,17.95-17.95v-27.92h19.45c31.69,0,58.45-25.93,57.92-57.61-.52-30.78-25.72-55.67-56.63-55.67Zm0,77.38h-20.74V39.97h20.74c11.44,0,20.74,9.3,20.74,20.74s-9.3,20.74-20.74,20.74Z"/>
+      <path class="cls-1" d="M60.14,3.5H21.45C11.54,3.5,3.5,11.54,3.5,21.45v123.25c0,9.91,8.04,17.95,17.95,17.95h0c9.91,0,17.95-8.04,17.95-17.95v-27.92h19.45c31.69,0,58.45-25.93,57.92-57.61-.52-30.79-25.72-55.67-56.63-55.67Zm0,77.38h-20.74V39.4h20.74c11.44,0,20.74,9.3,20.74,20.74s-9.3,20.74-20.74,20.74Z"/>
+    </g>
+  </g>
+</svg>
