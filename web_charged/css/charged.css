@@ -61,6 +61,11 @@ header.nav-down.header-sm {
   background: rgb(33, 255, 215);
   background: linear-gradient(0deg, rgb(13, 207, 171) 0%, rgb(0, 245, 255) 53%, rgb(42, 159, 191) 100%);
 }
+@media screen and (max-width: 767px) {
+  .nav .nav-menu-wrapper .nav-menu .dropdown-menu {
+    min-width: 100%;
+  }
+}
 .nav .nav-menu-wrapper .nav-menu .dropdown-menu.show {
   background-color: #d5b0ff;
 }
@@ -327,7 +332,7 @@ header.nav-down.header-sm {
 @media screen and (max-width: 767px) {
   .team {
     background-color: #001652;
-    background: url("../images/main_banner_phone.jpg") no-repeat top center/140%;
+    background: url("../images/main_banner_phone.jpg") no-repeat top center/162%;
     height: initial;
     min-height: calc(100vh + 40rem);
   }
@@ -551,14 +556,33 @@ header.nav-down.header-sm {
   right: 23%;
 }
 
+@media screen and (max-width: 767px) {
+  .phase .phase-content {
+    padding: 100px 15px 0px;
+  }
+}
 .phase .phase-content h3 {
   font-size: 2.4em;
   margin: 0.5rem 0 2.2rem;
+}
+@media screen and (max-width: 767px) {
+  .phase .phase-content h3 {
+    font-size: 2.4em;
+    margin: 0.5rem 0 1.5rem;
+  }
 }
 .phase .phase-content h3 img {
   position: absolute;
   margin-top: -5rem;
   margin-left: 1rem;
+}
+@media screen and (max-width: 767px) {
+  .phase .phase-content h3 img {
+    position: absolute;
+    margin-top: -6rem;
+    margin-left: 9.5rem;
+    transform: rotate(190deg);
+  }
 }
 .phase .phase-content h6 {
   font-size: 1.4em;
@@ -630,6 +654,12 @@ header.nav-down.header-sm {
 .phase-list li:nth-child(2) .phase-img-box .phase-art-img, .phase-list li:nth-child(3) .phase-img-box .phase-art-img {
   right: 0;
   left: 0;
+}
+@media screen and (max-width: 767px) {
+  .phase-list li:nth-child(2) .phase-img-box .phase-art-img, .phase-list li:nth-child(3) .phase-img-box .phase-art-img {
+    height: initial;
+    width: 70%;
+  }
 }
 .phase-list li:nth-child(4) .phase-img-box .phase-art-img {
   width: 35rem;
