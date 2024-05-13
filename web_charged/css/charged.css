@@ -545,6 +545,11 @@ header.nav-down.header-sm {
   padding-top: 300px;
   position: relative;
 }
+@media screen and (max-width: 767px) {
+  .roadmap {
+    padding-top: 160px;
+  }
+}
 .roadmap .vector-shapes .wavy-particle {
   position: absolute;
   bottom: -3%;
@@ -642,12 +647,18 @@ header.nav-down.header-sm {
 .phase-list li {
   padding-top: 16rem;
 }
+@media screen and (max-width: 767px) {
+  .phase-list li {
+    padding-top: 12rem;
+  }
+}
 .phase-list li:nth-child(1) .phase-img-box .phase-art-img {
   right: 0;
   left: 0;
 }
 @media screen and (max-width: 767px) {
   .phase-list li:nth-child(1) .phase-img-box .phase-art-img {
+    height: initial;
     width: 70%;
   }
 }
@@ -661,19 +672,50 @@ header.nav-down.header-sm {
     width: 70%;
   }
 }
+@media screen and (max-width: 767px) {
+  .phase-list li:nth-child(3) .phase-img-box .phase-art-img {
+    top: -7rem;
+  }
+}
 .phase-list li:nth-child(4) .phase-img-box .phase-art-img {
   width: 35rem;
   left: 8rem;
   bottom: -10rem;
 }
+@media screen and (max-width: 767px) {
+  .phase-list li:nth-child(4) .phase-img-box .phase-art-img {
+    height: initial;
+    width: 90%;
+    bottom: 2rem;
+    left: 5%;
+  }
+}
 
+.faq-section .section-title {
+  line-height: 5rem;
+}
+@media screen and (max-width: 767px) {
+  .faq-section .section-title {
+    line-height: 3.2rem;
+  }
+}
 .faq-section .section-subtitle {
   font-size: 1.4em;
   color: #1E5AFA;
   font-weight: 800;
 }
+@media screen and (max-width: 767px) {
+  .faq-section .section-subtitle {
+    padding-right: 0;
+  }
+}
 .faq-section .faq-wrapper .faq-accordian .faq-accordian-item .accordian-title {
   font-size: 1.4rem;
+}
+@media screen and (max-width: 767px) {
+  .faq-section .faq-wrapper .faq-accordian .faq-accordian-item .accordian-title {
+    font-size: 1.18rem;
+  }
 }
 .faq-section .faq-wrapper .faq-accordian .faq-accordian-item .accordian-title::after {
   color: #d000ff;
@@ -683,6 +725,37 @@ header.nav-down.header-sm {
   font-size: 1rem;
   color: #001652;
   line-height: 1.8rem;
+}
+
+footer .gradient-canvas {
+  width: 100vw;
+  height: -moz-fit-content;
+  height: fit-content;
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+footer .add-line {
+  padding-top: 80px;
+}
+footer .add-line .section-title {
+  line-height: 3.2rem;
+}
+footer .add-line .section-title span {
+  font-size: 66%;
+}
+footer .add-line .section-title .second {
+  margin-top: 2.2rem;
+}
+footer .footer-cont {
+  padding-top: 120px;
+}
+footer .footer-cont .social-icon {
+  background: rgb(175, 255, 255);
+  background: linear-gradient(90deg, rgb(175, 255, 255) 0%, rgb(229, 202, 255) 100%);
+}
+footer .footer-cont .social-icon img {
+  width: 48%;
 }
 
 .preloader {

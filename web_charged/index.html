@@ -42,10 +42,14 @@
             padding:0;
         }
         #gradient-canvas {
-            --gradient-color-1: #fd8cad;
+            /* --gradient-color-1: #fd8cad;
             --gradient-color-2: #fbe8d0;
             --gradient-color-3: #fcc3e6;
-            --gradient-color-4: #fcd7d5;
+            --gradient-color-4: #fcd7d5; */
+            --gradient-color-1: #00c660;
+            --gradient-color-2: #86fff3;
+            --gradient-color-3: #c3eafc;
+            --gradient-color-4: #8cb8ff;
         }
     </style>
 </head>
@@ -786,7 +790,7 @@
                                     <li class="faq-accordian-item  wow animate__fadeInRight" data-wow-duration="1s"
                                         data-wow-delay="0.6s">
                                         <div class="accordian-title">
-                                            SmartDrive充電樁SmartDrive充電樁SmartDrive充電樁SmartDrive充電樁SmartDrive充電樁SmartDrive充電樁？
+                                            SmartDrive充電樁，充電樁SmartDrive充電樁，有專業的施工團隊為您做居家現場用電檢測、SmartDrive接220V的電，充電樁SmartDrive充電樁？
                                         </div>
                                         <div class="accordian-content">
                                             SmartDrive充電樁是接220V的電，輸入電流可分成32安培與80安培。若您住家有安裝需求，可以與我們聯繫，華城有專業的施工團隊為您做居家現場用電檢測、配線規劃與安裝測試。輸入電流可分成32安培與80安培。若您住家有安裝需求，可以與我們聯繫，華城有專業的施工團隊為您做居家現場用電檢測、配線規劃與安裝測試。
@@ -811,39 +815,54 @@
                 </div>
             </section>
 
-            <div class="gradient-canvas">
-                <canvas id="gradient-canvas" style="width:100vw;height:100vh"></canvas>
-            </div>
-            
-        
-
-
         </div>
 
         <footer>
+            <div class="gradient-canvas">
+                <canvas id="gradient-canvas" ></canvas>
+            </div>
+            <div class="container">
+                <div class="add-line">  
+                    <div class="row g-5 col-lg-12 g-md-12 justify-content-between">
+                        <div class="col-lg-9 col-md-9 col-sm-12">
+                            <h2 class="section-title wow animate__fadeInUp" data-wow-duration="1s" data-wow-delay="0.4s">Charging
+                                <br /> <span>Go Anywhere, Charge Everywhere</span> 
+                                <div class="second">立刻加入LINE官方帳號</div>
+                            </h2>
+                        </div>
+                        <div class="col-lg-3 col-md-3 col-sm-12">
+                            <a href="#!" class="social-icon facebook wow animate__fadeInUp" data-wow-duration="1s"
+                                data-wow-delay="0.4s">
+                                <img src="images/Facebook.png" alt="" /></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
             <div class="container">
                 <div class="footer-cont">
                     <h2 class="section-title wow animate__fadeInUp" data-wow-duration="1s" data-wow-delay="0.4s">FOLLOW
                         US <br /> ON SOCIAL MEDIA</h2>
-                    <p>Cras vehicula sed enim semper finibus. Vestibulum rhoncus.</p>
+                    <p>追蹤我們，更快掌握更多產業動態分享</p>
                     <div class="row g-5 g-md-4 justify-content-between">
                         <div class="col-lg-4 col-md-4 col-sm-12">
                             <a href="#!" class="social-icon twitter wow animate__fadeInUp" data-wow-duration="0.6s"
-                                data-wow-delay="0.3s"><img src="images/twitter-logo.png" alt=""></a>
+                                data-wow-delay="0.3s"><img src="images/Youtube.png" alt=""></a>
                         </div>
                         <div class="col-lg-4 col-md-4 col-sm-12">
                             <a href="#!" class="social-icon facebook wow animate__fadeInUp" data-wow-duration="1s"
                                 data-wow-delay="0.4s">
-                                <img src="images/facebook-logo.png" alt="" /></a>
+                                <img src="images/Facebook.png" alt="" /></a>
                         </div>
                         <div class="col-lg-4 col-md-4 col-sm-12">
                             <a href="#!" class="social-icon insta wow animate__fadeInUp" data-wow-duration="1.5s"
-                                data-wow-delay="0.5s"><img src="images/insta.png" alt="" /></a>
+                                data-wow-delay="0.5s"><img src="images/Line.png" alt="" /></a>
                         </div>
                     </div>
                 </div>
                 <div class="copyright-para wow animate__fadeInUp" data-wow-duration="1.6s">
-                    &copy; Copyright 2024 3JIoT | All rights 2024 all rights reserved SmartDrive.
+                    Copyright &copy; <span id="year"></span> all rights reserved SmartDrive.
+                    <!-- &copy; Copyright 2024 3JIoT | All rights 2024 all rights reserved SmartDrive. -->
                 </div>
             </div>
         </footer>
@@ -942,6 +961,8 @@
     <script>
         var gradient = new Gradient()
         gradient.initGradient('#gradient-canvas');
+
+        document.getElementById("year").innerHTML = new Date().getFullYear();
     </script>
 </body>
 

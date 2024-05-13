@@ -539,6 +539,9 @@ header.nav-down.header-sm {
 .roadmap{
     padding-top: 300px;
     position: relative;
+    @media screen and (max-width: 767px) {
+        padding-top: 160px;
+    }
     .vector-shapes{
         .wavy-particle {
             position: absolute;
@@ -626,26 +629,27 @@ header.nav-down.header-sm {
             left: 0;
             top: -7rem;
             filter: drop-shadow(10px 50px 30px rgba(0, 9, 93, 0.3));
-            
         }
     }
 }
 .phase-list{
     li{
         padding-top: 16rem;
+        @media screen and (max-width: 767px) {
+            padding-top: 12rem;
+        }
         &:nth-child(1){
             .phase-img-box{
                 .phase-art-img {
                     right: 0;
                     left: 0;
                     @media screen and (max-width: 767px) {
+                        height: initial;
                         width: 70%;
                     }
                 }
             }
-            
         }
-        
         &:nth-child(2), &:nth-child(3){
             .phase-img-box{
                 .phase-art-img {
@@ -658,29 +662,54 @@ header.nav-down.header-sm {
                 }
             }
         }
+        &:nth-child(3){
+            .phase-img-box{
+                .phase-art-img{
+                    @media screen and (max-width: 767px) {
+                        top: -7rem;
+                    }
+                }
+            }
+        }
         &:nth-child(4){
             .phase-img-box{
                 .phase-art-img {
                     width: 35rem;
                     left: 8rem;
                     bottom: -10rem;
+                    @media screen and (max-width: 767px) {
+                        height: initial;
+                        width: 90%;
+                        bottom: 2rem;
+                        left: 5%;
+                    }
                 }
             }
-            
         }
     }
 }
 
 .faq-section{
-
+    .section-title{
+        line-height: 5rem;
+        @media screen and (max-width: 767px) {
+            line-height: 3.2rem;
+        }
+    }
     .section-subtitle{
         font-size: 1.4em;
         color: $blue_light;
         font-weight: 800;
+        @media screen and (max-width: 767px) {
+            padding-right: 0;
+        }
     }
     .faq-wrapper .faq-accordian .faq-accordian-item{
         .accordian-title{
             font-size: 1.4rem;
+            @media screen and (max-width: 767px) {
+                font-size: 1.18rem;
+            }
             &::after{
                 color: $purple_2;
                 font-size: 1.5rem;
@@ -694,6 +723,39 @@ header.nav-down.header-sm {
     }
     
 }
+
+footer{
+    .gradient-canvas{
+        width: 100vw;
+        height: fit-content;
+        position: absolute;
+        left: 0;
+        right: 0;
+    }
+    .add-line{
+        padding-top: 80px;
+        .section-title{
+            line-height: 3.2rem;
+            span{
+                font-size: 66%;
+            }
+            .second{
+                margin-top: 2.2rem;
+            }
+        }
+    }
+    .footer-cont{
+        padding-top: 120px;
+        .social-icon{
+            background: rgb(175,255,255);
+            background: linear-gradient(90deg, rgba(175,255,255,1) 0%, rgba(229,202,255,1) 100%);
+            img{
+                width: 48%;
+            }
+        }
+    }
+}
+
 
 .preloader {
     background: rgb(0,159,70);
