@@ -727,20 +727,77 @@ header.nav-down.header-sm {
 footer{
     .gradient-canvas{
         width: 100vw;
-        height: fit-content;
+        height: 30rem;
         position: absolute;
         left: 0;
         right: 0;
+        #gradient-canvas{
+            height: 100%;
+            width: 100vw;
+        }
     }
     .add-line{
-        padding-top: 80px;
-        .section-title{
-            line-height: 3.2rem;
-            span{
-                font-size: 66%;
+        padding-top: 120px;
+        h3{
+            font-size: 2.5rem;
+            margin-top: -0.6rem;
+            @media screen and (max-width: 767px) {
+                font-size: 1.6rem;
+                margin-top: 1.4rem;
+                line-height: 2rem;
             }
-            .second{
-                margin-top: 2.2rem;
+            br{
+                display: none;
+                @media screen and (max-width: 767px) {
+                    display: initial;
+                }
+            }
+
+            
+        }
+        .section-title{
+            line-height: 4.2rem;
+            @media screen and (max-width: 767px) {
+                line-height: 2.2rem;
+                font-size: 3.6rem;
+            }
+            &.second{
+                margin-top: 1.2rem;
+                font-size: 4.2rem;
+                @media screen and (max-width: 767px) {
+                    line-height: 3rem;
+                    font-size: 2.8rem;
+                    margin-top: 1rem;
+                }
+                br{
+                    display: none;
+                    @media screen and (max-width: 767px) {
+                        display: initial;
+                    }
+                }
+            }
+        }
+        .social-icon{
+            &.line{
+                img{
+                    margin-top: -2rem;
+                    filter: drop-shadow(-12px 50px 20px rgba(0, 9, 93, 0.35));
+                    @media screen and (max-width: 767px) {
+                        width: 88%;
+                        margin-left: 28%;
+                        margin-top: -3rem;
+                    }
+                    &:nth-child(2){
+                        margin-top: -38rem;
+                        margin-left: 15rem;
+                        @media screen and (max-width: 767px) {
+                            width: 42%;
+                            margin-left: 8%;
+                            margin-top: -22rem;
+                        }
+                    }
+                }
+                
             }
         }
     }

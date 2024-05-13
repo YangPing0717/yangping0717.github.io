@@ -729,23 +729,86 @@ header.nav-down.header-sm {
 
 footer .gradient-canvas {
   width: 100vw;
-  height: -moz-fit-content;
-  height: fit-content;
+  height: 30rem;
   position: absolute;
   left: 0;
   right: 0;
 }
+footer .gradient-canvas #gradient-canvas {
+  height: 100%;
+  width: 100vw;
+}
 footer .add-line {
-  padding-top: 80px;
+  padding-top: 120px;
+}
+footer .add-line h3 {
+  font-size: 2.5rem;
+  margin-top: -0.6rem;
+}
+@media screen and (max-width: 767px) {
+  footer .add-line h3 {
+    font-size: 1.6rem;
+    margin-top: 1.4rem;
+    line-height: 2rem;
+  }
+}
+footer .add-line h3 br {
+  display: none;
+}
+@media screen and (max-width: 767px) {
+  footer .add-line h3 br {
+    display: initial;
+  }
 }
 footer .add-line .section-title {
-  line-height: 3.2rem;
+  line-height: 4.2rem;
 }
-footer .add-line .section-title span {
-  font-size: 66%;
+@media screen and (max-width: 767px) {
+  footer .add-line .section-title {
+    line-height: 2.2rem;
+    font-size: 3.6rem;
+  }
 }
-footer .add-line .section-title .second {
-  margin-top: 2.2rem;
+footer .add-line .section-title.second {
+  margin-top: 1.2rem;
+  font-size: 4.2rem;
+}
+@media screen and (max-width: 767px) {
+  footer .add-line .section-title.second {
+    line-height: 3rem;
+    font-size: 2.8rem;
+    margin-top: 1rem;
+  }
+}
+footer .add-line .section-title.second br {
+  display: none;
+}
+@media screen and (max-width: 767px) {
+  footer .add-line .section-title.second br {
+    display: initial;
+  }
+}
+footer .add-line .social-icon.line img {
+  margin-top: -2rem;
+  filter: drop-shadow(-12px 50px 20px rgba(0, 9, 93, 0.35));
+}
+@media screen and (max-width: 767px) {
+  footer .add-line .social-icon.line img {
+    width: 88%;
+    margin-left: 28%;
+    margin-top: -3rem;
+  }
+}
+footer .add-line .social-icon.line img:nth-child(2) {
+  margin-top: -38rem;
+  margin-left: 15rem;
+}
+@media screen and (max-width: 767px) {
+  footer .add-line .social-icon.line img:nth-child(2) {
+    width: 42%;
+    margin-left: 8%;
+    margin-top: -22rem;
+  }
 }
 footer .footer-cont {
   padding-top: 120px;
