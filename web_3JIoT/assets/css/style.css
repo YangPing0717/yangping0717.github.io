@@ -45,12 +45,10 @@ Table of Content:
 /*=================== fonts ====================*/
 @font-face {
   font-family: "微軟正黑體", "Raleway", Arial, sans-serif;
-  src: url(../fonts/swansea-webfont.woff);
   font-weight: 700;
 }
 @font-face {
   font-family: "微軟正黑體", "Raleway", Arial, sans-serif;
-  src: url(../fonts/swansea_bold-webfont.woff);
   font-weight: 700;
 }
 /*---------------------------------------------------- */
@@ -70,8 +68,9 @@ a:hover, a:focus {
 body {
   line-height: 26px;
   font-size: 16px;
-  font-family: "swanse";
-  color: #a0a0a0;
+  font-family: "微軟正黑體", "Raleway", Arial, sans-serif;
+  color: #aeb7b7;
+  font-weight: 700;
 }
 
 h1,
@@ -80,7 +79,8 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "swanseb";
+  font-family: "微軟正黑體", "Raleway", Arial, sans-serif;
+  font-weight: 700;
 }
 
 i:before {
@@ -222,7 +222,7 @@ button:focus {
 .main_title h5 {
   font-size: 20px;
   line-height: 26px;
-  color: #a0a0a0;
+  color: #aeb7b7;
   font-family: "swanse";
   margin-bottom: 10px;
 }
@@ -344,7 +344,7 @@ button:focus {
   top: -70px;
   left: 0;
   right: 0;
-  background: rgba(27, 27, 27, 0.8);
+  background: rgba(6, 13, 51, 0.85);
   transform: translateY(70px);
   transition: transform 500ms ease, background 500ms ease;
   -webkit-transition: transform 500ms ease, background 500ms ease;
@@ -365,7 +365,7 @@ button:focus {
 }
 .header_area.navbar_fixed .main_menu .navbar .nav.navbar-nav > li > a {
   line-height: 70px;
-  color: #a0a0a0;
+  color: #aeb7b7;
 }
 .header_area.navbar_fixed .main_menu .navbar .nav.navbar-nav > li:hover > a, .header_area.navbar_fixed .main_menu .navbar .nav.navbar-nav > li.active > a {
   color: #00FFFF;
@@ -387,7 +387,7 @@ button:focus {
   position: absolute;
   left: 0px;
   top: 0px;
-  background: #1b1b1b;
+  background: rgba(16, 21, 49, 0.9);
   height: 56.5vmin;
   z-index: 40;
   width: 24.4vmin;
@@ -785,7 +785,7 @@ button:focus {
 }
 .who_we_text h6 {
   font: 16px/24px "swanse";
-  color: #a0a0a0;
+  color: #aeb7b7;
   margin-bottom: 20px;
 }
 
@@ -824,7 +824,7 @@ button:focus {
 }
 .spec_list .nav li a {
   font: 16px/26px "swanse";
-  color: #a0a0a0;
+  color: #aeb7b7;
   transition: all 300ms linear 0s;
 }
 .spec_list .nav li a span {
@@ -881,7 +881,7 @@ button:focus {
 
 .l_project_item .left_text h6 {
   font: 16px/26px "swanse";
-  color: #a0a0a0;
+  color: #aeb7b7;
   margin-bottom: 8px;
 }
 .l_project_item .left_text h4 {
@@ -891,7 +891,7 @@ button:focus {
 }
 .l_project_item .right_text h4 {
   font-size: 16px;
-  color: #a0a0a0;
+  color: #aeb7b7;
   margin-top: 24px;
   margin-bottom: 0px;
 }
@@ -1222,7 +1222,7 @@ button:focus {
   opacity: 0;
 }
 .team_item .team_text h5 {
-  color: #a0a0a0;
+  color: #aeb7b7;
   font: 16px "swanse";
   margin-bottom: 0px;
   transform: translateY(10px);
@@ -1835,7 +1835,7 @@ button:focus {
   padding-top: 25px;
 }
 .portfolio_grid_item .portfolio_text h6 {
-  color: #a0a0a0;
+  color: #aeb7b7;
   font: 16px "swanse";
   margin-bottom: 12px;
 }
@@ -1934,6 +1934,7 @@ button:focus {
   padding-top: 200px;
   position: relative;
   z-index: 99;
+  background: url(../images/BG_02.jpg) no-repeat center top/cover;
 }
 .latest_news_area .main_title {
   margin-bottom: 75px;
@@ -1942,6 +1943,44 @@ button:focus {
 .l_news_item {
   position: relative;
   cursor: pointer;
+  min-height: 16rem;
+  background: #160f16;
+  background: linear-gradient(42deg, rgba(22, 15, 22, 0.7) 0%, rgba(37, 52, 130, 0.88) 51%, rgb(0, 140, 255) 100%);
+}
+.l_news_item.second {
+  background: #677fff;
+  background: linear-gradient(202deg, #677fff 0%, #1d2656 100%);
+}
+.l_news_item.third {
+  background: #0069a2;
+  background: linear-gradient(202deg, rgba(0, 104, 162, 0.77) 0%, #050e42 100%);
+}
+.l_news_item.fourth {
+  background: #00ADAD;
+  background: linear-gradient(202deg, rgba(0, 173, 173, 0.8) 0%, #050711 100%);
+}
+.l_news_item .text_content {
+  min-height: 16rem;
+  border-radius: 2px;
+  padding-left: 36px;
+  padding-right: 18px;
+  padding-top: 40px;
+  padding-bottom: 35px;
+}
+.l_news_item .text_content h4 {
+  font-size: 1.5rem;
+  color: #fff;
+  font-weight: 700;
+}
+.l_news_item .text_content h4 span {
+  color: #00FFFF;
+  font-size: 3.6rem;
+  font-weight: 400;
+  vertical-align: bottom;
+  line-height: 2rem;
+}
+.l_news_item .text_content p {
+  color: #aeb7b7;
 }
 .l_news_item .flipbox_text {
   position: absolute;
@@ -1949,14 +1988,16 @@ button:focus {
   left: 0;
   width: 100%;
   height: 100%;
-  background: #1b1b1b;
+  background: #420842;
+  background: linear-gradient(60deg, #420842 0%, #0e163e 51%, #00457d 100%);
   border-radius: 2px;
   padding-left: 36px;
   padding-right: 42px;
   padding-top: 40px;
-  padding-bottom: 25px;
+  padding-bottom: 35px;
   opacity: 0;
   transition: opacity 0.2s linear;
+  overflow: hidden;
 }
 .l_news_item .flipbox_text:before, .l_news_item .flipbox_text:after {
   box-sizing: inherit;
@@ -1976,7 +2017,7 @@ button:focus {
 }
 .l_news_item .flipbox_text h5 {
   font: 16px/26px "swanse";
-  color: #a0a0a0;
+  color: #aeb7b7;
   margin-bottom: 18px;
   transform: translateY(10px);
   transition: all 0.5s;
@@ -1991,10 +2032,15 @@ button:focus {
   opacity: 0;
 }
 .l_news_item .flipbox_text p {
-  margin-bottom: 90px;
   transform: translateY(10px);
   transition: all 0.8s;
   opacity: 0;
+}
+.l_news_item .flipbox_text .arrow_btn {
+  font-size: 18px;
+  position: absolute;
+  left: 36px;
+  bottom: 35px;
 }
 .l_news_item:hover .flipbox_text {
   opacity: 1;
@@ -2630,4 +2676,29 @@ button:focus {
 
 /* End Footer Area css
 ============================================================================================ */
+/*---------------------------------------------------- */
+/*----------------------------------------------------*/
+.modal {
+  color: #021242;
+}
+.modal .modal-content {
+  border-radius: 0;
+}
+.modal .modal-content .modal-header {
+  padding: 2rem 1.6rem 1rem;
+  border-bottom: none;
+}
+.modal .modal-content .modal-header .btn-close {
+  font-size: 1.8rem;
+}
+.modal .modal-content .gra_line {
+  background: rgb(255, 201, 253);
+  background: linear-gradient(70deg, rgb(255, 201, 253) 0%, rgb(115, 137, 255) 51%, rgb(0, 255, 209) 100%);
+  height: 5px;
+}
+.modal .modal-content .modal-body.digi_a {
+  background: rgb(226, 255, 255);
+  background: linear-gradient(70deg, rgb(226, 255, 255) 0%, rgb(152, 229, 246) 51%, rgb(179, 191, 255) 100%);
+}
+
 /*---------------------------------------------------- */

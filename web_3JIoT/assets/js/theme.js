@@ -38,6 +38,8 @@
         delay: 7000,
         autoHeight: "on",
         minHeight: 480,
+        // autoplay: true,
+        // autoplaySpeed: 1000,
         navigation: {
           keyboardNavigation: "off",
           keyboard_direction: "horizontal",

@@ -13,7 +13,7 @@
       top: -70px;
       left: 0;
       right: 0;
-      background: rgba(27, 27, 27, 0.8);
+      background: rgba(6, 13, 51, 0.85);
       transform: translateY(70px);
       transition: transform 500ms ease, background 500ms ease;
       -webkit-transition: transform 500ms ease, background 500ms ease;
@@ -72,7 +72,8 @@
   position: absolute;
   left: 0px;
   top: 0px;
-  background: #1b1b1b;
+  // background: #1b1b1b;
+  background: rgba(16, 21, 49, 0.9);
   height: 56.5vmin;
   z-index: 40;
   width: 24.4vmin;

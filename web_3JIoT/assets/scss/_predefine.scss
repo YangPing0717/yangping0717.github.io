@@ -13,8 +13,10 @@ a {
 body {
   line-height: 26px;
   font-size: 16px;
-  font-family: $sw;
+  // font-family: $sw;
+  font-family: "微軟正黑體", "Raleway", Arial, sans-serif;
   color: $pfont;
+  font-weight: 700;
 }
 h1,
 h2,
@@ -22,7 +24,9 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: $swb;
+  // font-family: $swb;
+  font-family: "微軟正黑體", "Raleway", Arial, sans-serif;
+  font-weight: 700;
 }
 i {
   &:before {

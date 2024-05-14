@@ -9,7 +9,9 @@ $swb: "swanseb";
 /*Color Variables*/
 $baseColor: #00FFFF;
 $dip: #fff;
-$pfont: #a0a0a0;
+$pfont: #aeb7b7;
+$darkfont: #021242;
+
 /*=================== fonts ====================*/
 
 // Mixins
@@ -43,12 +45,12 @@ $pfont: #a0a0a0;
 @font-face {
   // font-family: "swanse";
   font-family: "微軟正黑體", "Raleway", Arial, sans-serif;
-  src: url(../fonts/swansea-webfont.woff);
+  // src: url(../fonts/swansea-webfont.woff);
   font-weight: 700;
 }
 @font-face {
   // font-family: "swanseb";
   font-family: "微軟正黑體", "Raleway", Arial, sans-serif;
-  src: url(../fonts/swansea_bold-webfont.woff);
+  // src: url(../fonts/swansea_bold-webfont.woff);
   font-weight: 700;
 }
