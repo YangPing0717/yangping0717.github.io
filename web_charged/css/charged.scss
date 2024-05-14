@@ -94,16 +94,22 @@ header.nav-down.header-sm {
                 position: absolute;
                 top: 50%;
                 right: 25%;
+                @media screen and (max-width: 767px) {
+                    display: initial;
+                    top: 18%;
+                    right: -10%;
+                }
                 img{
                     width: 34vw; 
                     filter: drop-shadow(-10px 60px 30px rgba(12, 9, 28, 0.2));
+                    @media screen and (max-width: 767px) {
+                        width: 48vw;
+                    }
                 }
             }
         }
     }
 }
-
-
 
 .main-content {
     // overflow: hidden;
@@ -291,7 +297,7 @@ header.nav-down.header-sm {
                 animation-delay: 2s;
                 @media screen and (max-width: 767px) {
                     display: initial;
-                    top: 93%;
+                    top: 97%;
                     width: 41.5%;
                     left: -6%;
                     z-index: 1;
@@ -540,7 +546,7 @@ header.nav-down.header-sm {
     padding-top: 300px;
     position: relative;
     @media screen and (max-width: 767px) {
-        padding-top: 160px;
+        padding-top: 220px;
     }
     .vector-shapes{
         .wavy-particle {
@@ -559,7 +565,12 @@ header.nav-down.header-sm {
 .phase{
     .phase-content{
         @media screen and (max-width: 767px) {
-            padding: 100px 15px 0px;
+            padding: 130px 15px 0px;
+        }
+        &.narrow{
+            @media screen and (max-width: 767px) {
+                padding: 50px 15px 0px;
+            }
         }
         h3 {
             font-size: 2.4em;
@@ -636,7 +647,7 @@ header.nav-down.header-sm {
     li{
         padding-top: 16rem;
         @media screen and (max-width: 767px) {
-            padding-top: 12rem;
+            padding-top: 13.5rem;
         }
         &:nth-child(1){
             .phase-img-box{
@@ -721,7 +732,19 @@ header.nav-down.header-sm {
             line-height: 1.8rem;
         }
     }
-    
+    .wavy-particle{
+        @media screen and (max-width: 767px) {
+            display: initial;
+            top: -9%;
+        }
+    }
+    .particle-orange {
+        @media screen and (max-width: 767px) {
+            right: 11%;
+            bottom: 0%;
+            top: 2%;
+        }
+    }
 }
 
 footer{

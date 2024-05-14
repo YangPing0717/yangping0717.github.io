@@ -89,9 +89,21 @@ header.nav-down.header-sm {
   top: 50%;
   right: 25%;
 }
+@media screen and (max-width: 767px) {
+  .nav .nav-menu-wrapper .nav-menu .nav-img {
+    display: initial;
+    top: 18%;
+    right: -10%;
+  }
+}
 .nav .nav-menu-wrapper .nav-menu .nav-img img {
   width: 34vw;
   filter: drop-shadow(-10px 60px 30px rgba(12, 9, 28, 0.2));
+}
+@media screen and (max-width: 767px) {
+  .nav .nav-menu-wrapper .nav-menu .nav-img img {
+    width: 48vw;
+  }
 }
 
 .banner {
@@ -290,7 +302,7 @@ header.nav-down.header-sm {
 @media screen and (max-width: 767px) {
   .banner .banner-wrapper .left-img .banner-3 {
     display: initial;
-    top: 93%;
+    top: 97%;
     width: 41.5%;
     left: -6%;
     z-index: 1;
@@ -547,7 +559,7 @@ header.nav-down.header-sm {
 }
 @media screen and (max-width: 767px) {
   .roadmap {
-    padding-top: 160px;
+    padding-top: 220px;
   }
 }
 .roadmap .vector-shapes .wavy-particle {
@@ -563,7 +575,12 @@ header.nav-down.header-sm {
 
 @media screen and (max-width: 767px) {
   .phase .phase-content {
-    padding: 100px 15px 0px;
+    padding: 130px 15px 0px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .phase .phase-content.narrow {
+    padding: 50px 15px 0px;
   }
 }
 .phase .phase-content h3 {
@@ -649,7 +666,7 @@ header.nav-down.header-sm {
 }
 @media screen and (max-width: 767px) {
   .phase-list li {
-    padding-top: 12rem;
+    padding-top: 13.5rem;
   }
 }
 .phase-list li:nth-child(1) .phase-img-box .phase-art-img {
@@ -725,6 +742,19 @@ header.nav-down.header-sm {
   font-size: 1rem;
   color: #001652;
   line-height: 1.8rem;
+}
+@media screen and (max-width: 767px) {
+  .faq-section .wavy-particle {
+    display: initial;
+    top: -9%;
+  }
+}
+@media screen and (max-width: 767px) {
+  .faq-section .particle-orange {
+    right: 11%;
+    bottom: 0%;
+    top: 2%;
+  }
 }
 
 footer .gradient-canvas {
