@@ -54,7 +54,6 @@
 	<item key='commuter-5.jpg20220906130954' />
 	<item key='creators.png20230102003344' />
 	<item key='email-icon.png20230107125756' />
-	<item key='facebook-logo.png20221221114924' />
 	<item key='favicon-16x16.png20221221114922' />
 	<item key='favicon-32x32.png20221221114924' />
 	<item key='favicon.ico20221221114924' />
@@ -66,11 +65,10 @@
 	<item key='frame_3.png20240429131708' />
 	<item key='growth-rate.png20230102003156' />
 	<item key='icons20230106132236' />
-	<item key='insta.png20221221114924' />
 	<item key='LINE_brand.png20240502164725' />
 	<item key='LINE_brand.svg20240502164851' />
-	<item key='line_dots_phone.svg20240502145705' />
-	<item key='line_dots_web.svg20240509144418' />
+	<item key='line_dots_phone.svg20240510161838' />
+	<item key='line_dots_web.svg20240510152157' />
 	<item key='LINE_Logo.png20240429170429' />
 	<item key='location-icon.png20230107125846' />
 	<item key='logo-dark.png20221221114924' />
@@ -85,6 +83,8 @@
 	<item key='particle-black.png20221221114924' />
 	<item key='particle-orange.png20221221114924' />
 	<item key='particle-white.png20221221114924' />
+	<item key='particle-blue.png20240513094602' />
+	<item key='particle-green.png20240509165809' />
 	<item key='phase-1.png20220906124322' />
 	<item key='phase-2.png20220906124408' />
 	<item key='phase-3.png20230107124718' />
@@ -98,12 +98,13 @@
 	<item key='team-member-5.png20220906124926' />
 	<item key='team-member-6.png20220906124942' />
 	<item key='team-particle-orange.png20221221114924' />
-	<item key='twitter-logo.png20221221114924' />
 	<item key='unique-assests.png20230102003112' />
 	<item key='user-icon.png20221231162948' />
 	<item key='wavy-partical.jpg20221221114924' />
 	<item key='banner_1.png20240509164125' />
-	<item key='particle-green.png20240509165809' />
+	<item key='facebook-logo.png20221221114924' />
+	<item key='insta.png20221221114924' />
+	<item key='twitter-logo.png20221221114924' />
 	<item key='spiral-arrow-pur.png20240509144703' />
 	<item key='object_01.svg20240509174839' />
 	<item key='object_01_1.svg20240510101246' />
@@ -115,5 +116,6 @@
 	<item key='object_02_2.svg20240510102624' />
 	<item key='object_04_1.svg20240510103108' />
 	<item key='object_03_1.svg20240510103120' />
+	<item key='frame_4.png20240510145129' />
 </files>
 </dirinfo>

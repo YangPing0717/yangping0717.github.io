@@ -92,7 +92,7 @@ header.nav-down.header-sm {
 @media screen and (max-width: 767px) {
   .nav .nav-menu-wrapper .nav-menu .nav-img {
     display: initial;
-    top: 18%;
+    top: 22%;
     right: -10%;
   }
 }
@@ -601,9 +601,8 @@ header.nav-down.header-sm {
 @media screen and (max-width: 767px) {
   .phase .phase-content h3 img {
     position: absolute;
-    margin-top: -6rem;
-    margin-left: 9.5rem;
-    transform: rotate(190deg);
+    margin-top: -4rem;
+    right: 0.2rem;
   }
 }
 .phase .phase-content h6 {

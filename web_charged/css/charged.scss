@@ -96,7 +96,7 @@ header.nav-down.header-sm {
                 right: 25%;
                 @media screen and (max-width: 767px) {
                     display: initial;
-                    top: 18%;
+                    top: 22%;
                     right: -10%;
                 }
                 img{
@@ -585,9 +585,8 @@ header.nav-down.header-sm {
                 margin-left: 1rem;
                 @media screen and (max-width: 767px) {
                     position: absolute;
-                    margin-top: -6rem;
-                    margin-left: 9.5rem;
-                    transform: rotate(190deg);
+                    margin-top: -4rem;
+                    right: 0.2rem;
                 }
             }
         }
