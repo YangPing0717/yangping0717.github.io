@@ -3,9 +3,18 @@
   color: $darkfont;
   .modal-content{
     border-radius: 0;
+    background: #c5ebeb;
+    background: linear-gradient(70deg, #c5ebeb 0%, #d9eaee 51%, #cbd3ff 100%);
+    
     .modal-header{
-      padding: 2rem 1.6rem 1rem ;
+      padding: 2rem 2rem 1rem;
       border-bottom: none;
+      background-color: white;
+      .modal-title{
+        span{
+          font-weight: 300;
+        }
+      }
       .btn-close{
         font-size: 1.8rem;
       }
@@ -16,9 +25,57 @@
       height: 5px;
     }
     .modal-body{
-      &.digi_a{
-        background: rgb(226,255,255);
-        background: linear-gradient(70deg, rgba(226,255,255,1) 0%, rgba(152,229,246,1) 51%, rgba(179,191,255,1) 100%);
+      padding: 3rem 3.6rem 3rem;
+      h6{
+        line-height: 1.6rem;
+      }
+    }
+    .modal-footer{
+      padding: 0 2.2rem 1.8rem;
+      border-top: none;
+    }
+    &.digi_a{
+      background: rgb(226,255,255);
+      background: linear-gradient(70deg, rgba(226,255,255,1) 0%, rgba(152,229,246,1) 51%, rgba(179,191,255,1) 100%);
+      overflow: hidden;
+      @media (max-width: 767px){
+        padding: 2rem 1rem;
+      }
+      &::before{
+        content: "";
+        background: url(../images/digi_bg_a.png) no-repeat right -180% / 100%;
+        width: 40rem;
+        height: 26rem;
+        position: absolute;
+        top: 95px;
+        right: -40px;
+        @media (max-width: 767px){
+
+        }
+      }
+      .modal-body{
+        padding: 15rem 3.6rem 4rem;
+        ul{
+          padding-left: 1.2rem;
+        }
+      }
+    }
+    &.digi_b{
+      background: url(../images/digi_bg_b.png) no-repeat center 1rem / 102%;
+      .modal-body{
+        padding: 2rem 3.6rem 24rem;
+      }
+    }
+    &.digi_c{
+      background: url(../images/digi_bg_c.png) no-repeat center 2rem / 102%;
+      .modal-body{
+        padding: 2rem 3.6rem 31rem;
+      }
+    }
+    &.digi_d{
+      background: url(../images/digi_bg_d.png) no-repeat center 5rem / 102%;
+      .modal-body{
+        padding: 2rem 3.6rem 28rem;
       }
     }
   }

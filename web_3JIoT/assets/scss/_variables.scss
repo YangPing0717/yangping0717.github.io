@@ -5,12 +5,15 @@
 /*font Variables*/
 $sw: "swanse";
 $swb: "swanseb";
+$chi: "chinese";
 
 /*Color Variables*/
 $baseColor: #00FFFF;
 $dip: #fff;
 $pfont: #aeb7b7;
 $darkfont: #021242;
+$darkBlueBg: #060d33;
+$primaryBlue: #346dff;
 
 /*=================== fonts ====================*/
 
@@ -49,8 +52,15 @@ $darkfont: #021242;
   font-weight: 700;
 }
 @font-face {
-  // font-family: "swanseb";
+  font-family: "swanseb";
   font-family: "微軟正黑體", "Raleway", Arial, sans-serif;
   // src: url(../fonts/swansea_bold-webfont.woff);
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "chinese";
+  font-family: "微軟正黑體", "Raleway", Arial, sans-serif;
+  // src: url(../fonts/swansea-webfont.woff);
   font-weight: 700;
 }

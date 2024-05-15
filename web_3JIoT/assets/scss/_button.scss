@@ -46,5 +46,34 @@
     font-weight: 700;
   }
 }
+//  primary secondary
+.primary_btn {
+  background: $primaryBlue;
+  // background: rgb(189, 155, 188);
+  // background: linear-gradient(90deg, rgba(189, 155, 188,1) 0%, rgba(99,122,245,1) 53%, rgba(0,255,209,1) 100%);
+  line-height: 48px;
+  border-radius: 0px;
+  text-align: center;
+  padding: 0px 30px;
+  color: $dip;
+  outline: none !important;
+  box-shadow: none !important;
+  // padding-top: 3px;
+  font-size: 1rem;
+  font-family: "微軟正黑體", 'swanse', Arial, sans-serif;
+  font-weight: 700;
+  &.small{
+    line-height: 36px;
+    padding: 0px 22px;
+  }
+  @include transition;
+  &:hover {
+    background: $darkfont;
+    color: #fff;
+  }
+  i{
+    font-weight: 700;
+  }
+}
 /* End Button Area css
 ============================================================================================ */

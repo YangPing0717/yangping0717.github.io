@@ -3,10 +3,38 @@
 .latest_news_area {
   padding-top: 200px;
   position: relative;
-  z-index: 99;
+  // z-index: 99;
   background: url(../images/BG_02.jpg) no-repeat center top / cover;
   .main_title {
     margin-bottom: 75px;
+    h5{
+      color: #fff;
+      text-transform: uppercase;
+      font-size: 20px;
+      line-height: 26px;
+      margin-bottom: 15px;
+    }
+  }
+  &.second_sty{
+    background-color: $darkBlueBg;
+    background: url(../images/BG_03.jpg) no-repeat center top / cover;
+    .main_title {
+      margin-bottom: 30px;
+    }
+    p {
+      margin-bottom: 20px;
+      span{
+        color: $baseColor;
+        &.tag{
+          background: $baseColor;
+          border-radius: 3rem;
+          padding: 0.4rem 1rem;
+          color: $darkfont;
+          vertical-align: super;
+          margin-right: 0.8rem;
+        }
+      }
+    }
   }
 }
 .l_news_item {
@@ -56,6 +84,47 @@
       color: $pfont;
     }
   }
+  .text_content_three{
+    min-height: 22rem;
+    padding-left: 36px;
+    padding-right: 18px;
+    padding-top: 48px;
+    padding-bottom: 35px;
+    &.type_a{
+      background: url(../images/blog/l-news/project_01.jpg) no-repeat center / cover;
+    }
+    &.type_b{
+      background: url(../images/blog/l-news/project_02.jpg) no-repeat center / cover;
+    }
+    &.type_c{
+      background: url(../images/blog/l-news/project_03.jpg) no-repeat center / cover;
+    }
+    img{
+      width: 72px;
+      margin-bottom: 1.6rem;
+    }
+    h4{
+      font-size: 1.5rem;
+      color: $dip;
+      font-weight: 700;
+      margin-bottom: 0.8rem;
+      span{
+        color: $baseColor;
+        font-size: 3.6rem;
+        font-weight: 400;
+        vertical-align: bottom;
+        line-height: 2rem;
+      }
+    }
+    p{
+      font-weight: 400;
+      color: $dip;
+      span{
+        font-weight: 700;
+        color: $baseColor;
+      }
+    }
+  }
   .flipbox_text {
     position: absolute;
     top: 0;
@@ -99,7 +168,7 @@
     }
     h4 {
       color: $dip;
-      font-size: 20px;
+      font-size: 24px;
       margin-bottom: 30px;
       transform: translateY(10px);
       transition: all 0.7s;
