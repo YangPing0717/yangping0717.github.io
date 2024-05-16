@@ -2004,6 +2004,7 @@ button:focus {
   min-height: 16rem;
   background: #160f16;
   background: linear-gradient(42deg, rgba(22, 15, 22, 0.7) 0%, rgba(37, 52, 130, 0.88) 51%, rgb(0, 140, 255) 100%);
+  margin-bottom: 30px;
 }
 .l_news_item.second {
   background: #677fff;
@@ -2056,8 +2057,18 @@ button:focus {
 .l_news_item .text_content_three.type_c {
   background: url(../images/blog/l-news/project_03.jpg) no-repeat center/cover;
 }
+.l_news_item .text_content_three.type_d {
+  background: url(../images/blog/l-news/project_04.jpg) no-repeat center/cover;
+}
+.l_news_item .text_content_three.type_e {
+  background: url(../images/blog/l-news/project_05.jpg) no-repeat center/cover;
+}
+.l_news_item .text_content_three.type_f {
+  background: url(../images/blog/l-news/project_06.jpg) no-repeat center/cover;
+}
 .l_news_item .text_content_three img {
   width: 72px;
+  height: 72px;
   margin-bottom: 1.6rem;
 }
 .l_news_item .text_content_three h4 {
@@ -2853,6 +2864,21 @@ button:focus {
 }
 .modal .modal-content.digi_d .modal-body {
   padding: 2rem 3.6rem 28rem;
+}
+.modal .modal-content.digi_e {
+  background: url(../images/digi_bg_e.jpg) no-repeat center -1rem/cover;
+}
+.modal .modal-content.digi_e::before {
+  content: "";
+  background: url(../images/digi_bg_e_2.png) no-repeat right center/100%;
+  width: 52rem;
+  height: 100%;
+  position: absolute;
+  top: 2rem;
+  right: 3rem;
+}
+.modal .modal-content.digi_e .modal-body {
+  padding: 2rem 3.6rem 43rem;
 }
 
 /*---------------------------------------------------- */

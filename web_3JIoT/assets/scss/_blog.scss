@@ -43,6 +43,7 @@
   min-height: 16rem;
   background: #160f16;
   background: linear-gradient(42deg, rgba(22, 15, 22, 0.7) 0%, rgba(37, 52, 130, 0.88) 51%, rgb(0, 140, 255) 100%);
+  margin-bottom: 30px;
   &.second{
     background: #677fff; 
     background: linear-gradient(202deg, #677fff 0%, #1d2656 100%);
@@ -99,8 +100,18 @@
     &.type_c{
       background: url(../images/blog/l-news/project_03.jpg) no-repeat center / cover;
     }
+    &.type_d{
+      background: url(../images/blog/l-news/project_04.jpg) no-repeat center / cover;
+    }
+    &.type_e{
+      background: url(../images/blog/l-news/project_05.jpg) no-repeat center / cover;
+    }
+    &.type_f{
+      background: url(../images/blog/l-news/project_06.jpg) no-repeat center / cover;
+    }
     img{
       width: 72px;
+      height: 72px;
       margin-bottom: 1.6rem;
     }
     h4{

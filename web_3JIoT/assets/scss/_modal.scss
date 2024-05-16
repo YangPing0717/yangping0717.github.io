@@ -78,6 +78,24 @@
         padding: 2rem 3.6rem 28rem;
       }
     }
+    &.digi_e{
+      background: url(../images/digi_bg_e.jpg) no-repeat center -1rem / cover;
+      &::before{
+        content: "";
+        background: url(../images/digi_bg_e_2.png) no-repeat right center / 100%;
+        width: 52rem;
+        height: 100%;
+        position: absolute;
+        top: 2rem;
+        right: 3rem;
+        @media (max-width: 767px){
+
+        }
+      }
+      .modal-body{
+        padding: 2rem 3.6rem 43rem;
+      }
+    }
   }
 }
 
