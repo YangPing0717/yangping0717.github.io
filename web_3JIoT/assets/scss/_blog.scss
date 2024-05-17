@@ -5,6 +5,9 @@
   position: relative;
   // z-index: 99;
   background: url(../images/BG_02.jpg) no-repeat center top / cover;
+  @media (max-width: 767px) {
+    background: url(../images/BG_02.jpg) no-repeat 72% top / 480%;
+  }
   .main_title {
     margin-bottom: 75px;
     h5{
@@ -18,6 +21,9 @@
   &.second_sty{
     background-color: $darkBlueBg;
     background: url(../images/BG_03.jpg) no-repeat center top / cover;
+    @media (max-width: 767px) {
+      background: url(../images/BG_03.jpg) no-repeat 67% -7rem / 390%;
+    }
     .main_title {
       margin-bottom: 30px;
     }
@@ -32,6 +38,10 @@
           color: $darkfont;
           vertical-align: super;
           margin-right: 0.8rem;
+          @media (max-width: 767px) {
+            font-size: 90%;
+            margin-right: 0.4rem;
+          }
         }
       }
     }
@@ -43,7 +53,7 @@
   min-height: 16rem;
   background: #160f16;
   background: linear-gradient(42deg, rgba(22, 15, 22, 0.7) 0%, rgba(37, 52, 130, 0.88) 51%, rgb(0, 140, 255) 100%);
-  margin-bottom: 30px;
+  margin-bottom: 20px !important;
   &.second{
     background: #677fff; 
     background: linear-gradient(202deg, #677fff 0%, #1d2656 100%);
@@ -64,21 +74,30 @@
     // height: 100%;
     min-height: 16rem;
     border-radius: 2px;
-    padding-left: 36px;
-    padding-right: 18px;
-    padding-top: 40px;
-    padding-bottom: 35px;
+    padding: 40px 18px 35px 36px;
     // margin: auto;
+    // @media (min-width: 576px){
+    //   padding: 1rem;
+    // }
+    @media screen and (max-width: 767px){
+      padding: 1.6rem 1.4rem;
+    }
     h4{
       font-size: 1.5rem;
       color: $dip;
       font-weight: 700;
+      @media screen and (max-width: 767px){
+        font-size: 1.2rem;
+      }
       span{
         color: $baseColor;
         font-size: 3.6rem;
         font-weight: 400;
         vertical-align: bottom;
         line-height: 2rem;
+        @media screen and (max-width: 767px){
+          font-size: 1.6rem;
+        }
       }
     }
     p{
@@ -145,13 +164,13 @@
     background: #420842;
     background: linear-gradient(60deg, #420842 0%, #0e163e 51%, #00457d 100%);
     border-radius: 2px;
-    padding-left: 36px;
-    padding-right: 42px;
-    padding-top: 40px;
-    padding-bottom: 35px;
+    padding: 40px 42px 35px 36px;
     opacity: 0;
     transition: opacity 0.2s linear;
     overflow: hidden;
+    @media screen and (max-width: 767px){
+      padding: 1.4rem 1.2rem 1rem !important;
+    }
     &:before,
     &:after {
       box-sizing: inherit;
@@ -194,8 +213,8 @@
     .arrow_btn {
       font-size: 18px;
       position: absolute;
-      left: 36px;
-      bottom: 35px;
+      // left: 36px;
+      // bottom: 35px;
     }
   }
   &:hover {

@@ -2,6 +2,9 @@
 ============================================================================================ */
 .portfolio_area{
   background: url(../images/BG_port.jpg) no-repeat center top / cover;
+  @media (max-width: 767px) {
+    background: url(../images/BG_port.jpg) repeat-y 52% -3rem / 200%;
+  }
   .main_title{
     h5{
       color: $pfont;
@@ -12,7 +15,10 @@
     }
     p{
       color: $darkBlueBg;
-      text-shadow: 0px 5px 12px #ffffff, 0 0 2rem #ffffff, 0 0 0.2em #ffffff
+      text-shadow: 0px 5px 12px #ffffff, 0 0 2rem #ffffff, 0 0 0.2rem #ffffff;
+      @media (max-width: 767px) {
+        text-shadow: 0px 0px 5px #ffffff, 0 0 2rem #ffffff, 0 0 2rem #ffffff;
+      }
     }
   }
 }
@@ -56,9 +62,8 @@
       .video {
         &.play {
           position: absolute; 
-          right: 0; 
-          bottom: 0;
-          transform: translate(-50%, -50%);
+          right: 2.6rem;
+          bottom: 2.2rem;
           font-size: 3.8rem;
           border: 1px solid $baseColor;
           border-radius: 50%;
@@ -75,6 +80,11 @@
             color: $baseColor;
             box-shadow: 0 0 2rem 0.5rem rgb(0, 225, 255), 0 0 10rem 5rem rgba(127, 255, 251, 0.4);
           }
+          @media (max-width: 767px) {
+            transform: scale(0.6);
+            right: 0rem;
+            bottom: 0rem;
+          }
         }
       }
       h4 {
@@ -85,13 +95,13 @@
         font-size: 1.6rem;
         margin-bottom: 0;
         background: rgb(22,28,80);
-background: linear-gradient(180deg, rgba(5, 8, 42,1) 0%, rgba(22,28,80,0) 95%);
+        background: linear-gradient(180deg, rgba(5, 8, 42,1) 0%, rgba(22,28,80,0) 95%);
         // padding: 5rem;
         padding: 55px 42px 10rem 42px;
         width: 100%;
-        // transform: translateY(10px);
-        // transition: all 0.5s;
-        // opacity: 0;
+        @media (max-width: 767px) {
+          padding: 1.8rem 1.6rem 5rem;
+        }
       }
     }
   }
@@ -105,6 +115,9 @@ background: linear-gradient(180deg, rgba(5, 8, 42,1) 0%, rgba(22,28,80,0) 95%);
     padding: 55px 42px 35px 42px;
     opacity: 0;
     transition: opacity 0.2s linear;
+    @media (max-width: 767px) {
+      padding: 1.8rem 1.6rem 1.6rem !important;
+    }
     &:before,
     &:after {
       box-sizing: inherit;
@@ -149,6 +162,62 @@ background: linear-gradient(180deg, rgba(5, 8, 42,1) 0%, rgba(22,28,80,0) 95%);
       left: 42px;
       bottom: 35px;
     }
+    .video {
+      &.play {
+        position: absolute; 
+        right: 1.4rem; 
+        bottom: 1.2rem;
+        transform: translate(-50%, -50%);
+        font-size: 2rem;
+        border: 1px solid $baseColor;
+        border-radius: 50%;
+        color: $dip;
+        z-index: 1;
+        text-align: center;
+        line-height: 3.2rem;
+        width: 3.4rem;
+        // transition: all 250ms ease-out;
+        transform: translateY(10px);
+        transition: all 0.5s;
+        i{
+          margin-left: 0.3rem;
+        }
+        &:hover{
+          color: $baseColor;
+          box-shadow: 0 0 1rem 0.5rem rgba(0, 225, 255, 0.8), 0 0 1rem 0 rgba(127, 255, 251, 0.4);
+        }
+      }
+    }
+  }
+  &.v_small{
+    .portfolio_text {
+      padding: 1.4rem 1.6rem;
+      @media (max-width: 767px) {
+        padding: 1rem 1.2rem 6rem !important;
+      }
+      h4 {
+        color: $dip;
+        font-size: 1.1rem !important;
+        line-height: 1.6rem;
+        margin-bottom: 0;
+        transform: translateY(10px);
+        transition: all 0.5s;
+        @media (max-width: 767px) {
+          font-size: .9rem !important;
+          line-height: 1.4rem;
+        }
+      }
+      .video {
+        &.play {
+          right: 1.4rem;
+          bottom: 1.6rem;
+          @media (max-width: 767px) {
+            right: 1.4rem;
+            bottom: 1.6rem;
+          }
+        }
+      }
+    }
   }
   &:hover {
     .portfolio_text {
@@ -183,25 +252,19 @@ background: linear-gradient(180deg, rgba(5, 8, 42,1) 0%, rgba(22,28,80,0) 95%);
       }
       .video {
         &.play {
-          position: absolute; 
-          right: 0; 
-          bottom: 0;
-          transform: translate(-50%, -50%);
-          font-size: 2rem;
-          border: 1px solid $baseColor;
-          border-radius: 50%;
-          color: $dip;
-          z-index: 1;
-          text-align: center;
-          line-height: 3.2rem;
-          width: 3.4rem;
-          transition: all 250ms ease-out;
-          i{
-            margin-left: 0.3rem;
-          }
-          &:hover{
-            color: $baseColor;
-            box-shadow: 0 0 1rem 0.5rem rgba(0, 225, 255, 0.8), 0 0 1rem 0 rgba(127, 255, 251, 0.4);
+          transform: translateY(0);
+          opacity: 1;
+        }
+      }
+    }
+    &.v_small{
+      .portfolio_text {
+        .video {
+          &.play {
+            @media (max-width: 767px) {
+              // right: 1.4rem;
+              // bottom: 2rem;
+            }
           }
         }
       }
@@ -233,6 +296,10 @@ background: linear-gradient(180deg, rgba(5, 8, 42,1) 0%, rgba(22,28,80,0) 95%);
         transform: translateY(10px);
         transition: all 0.5s;
         opacity: 0;
+        @media (max-width: 767px) {
+          transform: translateY(0px);
+          opacity: 1;
+        }
       }
       h4 {
         font-size: 29px;
@@ -280,20 +347,7 @@ background: linear-gradient(180deg, rgba(5, 8, 42,1) 0%, rgba(22,28,80,0) 95%);
       }
     }
   }
-  &.v_small{
-    .portfolio_text {
-      padding: 1.4rem 1.6rem;
-      h4 {
-        color: $dip;
-        font-size: 1.1rem;
-        line-height: 1.6rem;
-        margin-bottom: 0;
-        transform: translateY(10px);
-        transition: all 0.5s;
-      }
-    }
-  }
-
+  
 }
 .light_btn {
   height: 61px;

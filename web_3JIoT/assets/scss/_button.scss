@@ -35,7 +35,7 @@
   box-shadow: none !important;
   padding-top: 3px;
   font-size: 1rem;
-  font-family: "微軟正黑體", 'swanse', Arial, sans-serif;
+  font-family: "微軟正黑體", "Roboto Slab", Arial, sans-serif;
   font-weight: 700;
   @include transition;
   &:hover {
@@ -60,7 +60,7 @@
   box-shadow: none !important;
   // padding-top: 3px;
   font-size: 1rem;
-  font-family: "微軟正黑體", 'swanse', Arial, sans-serif;
+  font-family: "微軟正黑體", "Roboto Slab", Arial, sans-serif;
   font-weight: 700;
   &.small{
     line-height: 36px;

@@ -3,6 +3,9 @@
 .who_we_area {
   background: #000000;
   background: url("../images/BG_01.jpg") no-repeat center top / cover;
+  @media (max-width: 767px) {
+    background: url("../images/BG_01.jpg") no-repeat left top / cover;
+  }
   .col-lg-7 {
     align-self: center;
     

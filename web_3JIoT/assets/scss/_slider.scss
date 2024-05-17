@@ -14,27 +14,53 @@
           color: #fff;
           font-family: "微軟正黑體", 'swanse', Arial, sans-serif;
           font-weight: 700;
+          overflow: visible;
           span {
             color: $baseColor;
             &.gradient{
-              background: linear-gradient(90deg, rgba(255,201,253,1) 0%, rgba(124,141,229,1) 53%, rgba(166,239,255,1) 100%);
+              background: linear-gradient(90deg, rgb(255, 201, 253) 0%, rgb(177 189 255) 53%, rgb(140 234 255) 100%);
             //   background: rgb(255,175,252);
             // background: linear-gradient(90deg, rgba(255,175,252,1) 0%, rgba(99,122,245,1) 53%, rgba(0,255,209,1) 100%);
+              // -webkit-background-clip: text;
+              // -webkit-text-fill-color: transparent;
+              // text-shadow: 0px 5px 12px #13152a, 0 0 2rem #13152a;
+              // background: -webkit-linear-gradient(#eee, #333);
               -webkit-background-clip: text;
               -webkit-text-fill-color: transparent;
+              filter: drop-shadow(0px 5px 8px rgba(19, 21, 42, 0.7));
+              br{
+                display: none;
+                @media (max-width: 767px) {
+                  display: initial;
+                }
+              }
             }
             &.first_t_s{
               font-size: 80% !important;
               color: white;
               background: none !important;
+              text-shadow: 0px 5px 12px rgba(19, 21, 42, 0.5);
+              // line-height: 3rem;
+              @media (max-width: 767px) {
+
+              }
             }
           }
           .first_text_sub{
-            line-height: 3.8rem;
-            margin-top: 0;
-            @media (max-width: 575px){
-              line-height: 2.2rem;
+            margin-top: 1rem;
+            line-height: 3.2rem;
+            @media (max-width: 767px){
+              margin-top: 0.5rem;
+              line-height: 1.8rem;
               font-size: 1.8rem !important;
+            }
+            .first_t_s{
+              color: white;
+              background: none !important;
+              text-shadow: 0px 5px 12px rgba(19, 21, 42, 0.5);
+              @media (max-width: 767px) {
+
+              }
             }
           }
         }
@@ -42,6 +68,7 @@
           color: #fff;
           font-family: "微軟正黑體", 'swanse', Arial, sans-serif;
           font-weight: 700;
+          text-shadow: 0px 3px 10px rgba(19, 21, 42, 0.8), 0 0 1rem rgba(19, 21, 42, 0.5);
           @media (max-width: 575px){
             br{
               display: none;
@@ -117,3 +144,41 @@
 }
 /* End Home Slider Area css
 ============================================================================================ */
+
+
+// 追加
+.tp-mask-wrap{
+  padding-top: 1rem;
+  padding-left: 1rem;
+  padding-bottom: 0.5rem;
+}
+
+.tp-bgimg{
+  @media (max-width: 767px) {
+    // background-position: -48rem center !important;
+    // @include transition;
+  }
+}
+
+.rev_slider{
+  ul{
+    li:nth-child(2) {
+      .tp-bgimg{
+        background-position: center center !important;
+        @include transition;
+        @media (max-width: 767px) {
+          background-position: -45rem center !important;
+        }
+      }
+    }
+    li:nth-child(3) {
+      .tp-bgimg{
+        background-position: center center !important;
+        @include transition;
+        @media (max-width: 767px) {
+          background-position: -58rem center !important;
+        }
+      }
+    }
+  }
+}

@@ -87,14 +87,14 @@
     margin-top: 15vmin;
     .current-number {
       color: $baseColor !important;
-      font: 7.6vmin $swb;
+      font: 7.6vmin $Roboto;
       // font-family: "微軟正黑體", 'Raleway', Arial, sans-serif;
       // font-size: 7.6vmin;
       font-weight: 700;
     }
     sup {
       color: $dip;
-      font: 18px $sw;
+      font: 18px $Roboto;
       vertical-align: top;
     }
   }
