@@ -749,9 +749,16 @@ button:focus {
   }
 }
 .main_slider_area ul li .slider_text_box .first_text .first_text_sub .first_t_s {
+  font-size: 80% !important;
+  line-height: 4.2rem !important;
   color: white;
   background: none !important;
   text-shadow: 0px 5px 12px rgba(19, 21, 42, 0.5);
+}
+@media (max-width: 767px) {
+  .main_slider_area ul li .slider_text_box .first_text .first_text_sub .first_t_s {
+    line-height: 1.6rem !important;
+  }
 }
 .main_slider_area ul li .slider_text_box .secand_text {
   color: #fff;
