@@ -5,14 +5,23 @@
     border-radius: 0;
     background: #c5ebeb;
     background: linear-gradient(70deg, #c5ebeb 0%, #d9eaee 51%, #cbd3ff 100%);
-    
     .modal-header{
       padding: 2rem 2rem 1rem;
       border-bottom: none;
       background-color: white;
+      border-radius: 0;
+      @media (max-width: 767px) {
+        padding: 1rem 1rem 0.6rem;
+      }
       .modal-title{
         span{
           font-weight: 300;
+        }
+        br{
+          display: none;
+          @media (max-width: 767px) {
+            display: initial;
+          }
         }
       }
       .btn-close{
@@ -33,13 +42,16 @@
     .modal-footer{
       padding: 0 2.2rem 1.8rem;
       border-top: none;
+      @media (max-width: 767px){
+        padding: 0 1.2rem 1.2rem;
+      }
     }
     &.digi_a{
       background: rgb(226,255,255);
       background: linear-gradient(70deg, rgba(226,255,255,1) 0%, rgba(152,229,246,1) 51%, rgba(179,191,255,1) 100%);
       overflow: hidden;
       @media (max-width: 767px){
-        padding: 2rem 1rem;
+        // padding: 2rem 1rem;
       }
       &::before{
         content: "";
@@ -50,11 +62,20 @@
         top: 95px;
         right: -40px;
         @media (max-width: 767px){
-
+          content: "";
+          background: url(../images/digi_bg_a.png) no-repeat right 0rem / 67%;
+          width: 35rem;
+          height: 25rem;
+          position: absolute;
+          top: 100px;
+          right: -40px;
         }
       }
       .modal-body{
         padding: 15rem 3.6rem 4rem;
+        @media (max-width: 767px){
+          padding: 13rem 1rem 1rem;
+        }
         ul{
           padding-left: 1.2rem;
         }
@@ -62,20 +83,38 @@
     }
     &.digi_b{
       background: url(../images/digi_bg_b.png) no-repeat center 1rem / 102%;
+      @media (max-width: 767px){
+        background: url(../images/digi_bg_b_m.png) no-repeat center 1rem / 106%;
+      }
       .modal-body{
         padding: 2rem 3.6rem 24rem;
+        @media (max-width: 767px){
+          padding: 1rem 1rem 11rem;
+        }
       }
     }
     &.digi_c{
       background: url(../images/digi_bg_c.png) no-repeat center 2rem / 102%;
+      @media (max-width: 767px){
+        background: url(../images/digi_bg_c.png) no-repeat center 4rem / 102%;
+      }
       .modal-body{
         padding: 2rem 3.6rem 31rem;
+        @media (max-width: 767px){
+          padding: 1rem 1.6rem 12rem;
+        }
       }
     }
     &.digi_d{
       background: url(../images/digi_bg_d.png) no-repeat center 5rem / 102%;
+      @media (max-width: 767px){
+        background: url(../images/digi_bg_d_m.png) no-repeat center 3rem / 113%;
+      }
       .modal-body{
         padding: 2rem 3.6rem 28rem;
+        @media (max-width: 767px){
+          padding: 1rem 1rem 14rem;
+        }
       }
     }
     &.digi_e{
