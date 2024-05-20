@@ -47,7 +47,7 @@
   <div class="animsition">
     <div class="body_wrapper bg_color">
 
-      <!--================Header Area =================-->
+      <!--================ Header Area =================-->
       <header class="header_area home_page">
         <div class="home_logo">
           <img src="assets/images//3J_white.svg" alt="">
@@ -117,12 +117,12 @@
           </div>
         </div>
       </header>
-      <!--================End Footer Area =================-->
+      <!--================End Header Area =================-->
 
       <!--================Slider Area =================-->
       <section class="main_slider_area">
         <div id="main_slider1" class="rev_slider" data-version="5.3.1.6">
-          <ul>
+          <ul class="menus">
             <li data-index="rs-1587" data-transition="slotzoom-horizontal" data-slotamount="8" data-masterspeed="1000"
               data-fsmasterspeed="1000">
               <!-- MAIN IMAGE -->
@@ -173,7 +173,7 @@
                   <div class="br_s"></div>
                 </div>
 
-                <div class="tp-caption tp-resizeme slider_button menus" data-x="['left','left','15','15','15']"
+                <div class="tp-caption tp-resizeme slider_button " data-x="['left','left','15','15','15']"
                   data-hoffset="['0','0','0','0']" data-y="['center','center','center','top']"
                   data-voffset="['280','200','200','410','410']" data-fontsize="['14','14','14','14']"
                   data-lineheight="['46','46','46','46']" data-width="none" data-height="none" data-whitespace="nowrap"
@@ -234,14 +234,14 @@
                   <div class="br_s"></div>
                 </div>
 
-                <div class="tp-caption tp-resizeme slider_button" data-x="['left','left','15','15','15']"
+                <div class="tp-caption tp-resizeme slider_button menus" data-x="['left','left','15','15','15']"
                   data-hoffset="['0','0','0','0']" data-y="['center','center','center','top']"
                   data-voffset="['280','200','200','410','455']" data-fontsize="['14','14','14','14']"
                   data-lineheight="['46','46','46','46']" data-width="none" data-height="none" data-whitespace="nowrap"
                   data-type="text" data-responsive_offset="on"
                   data-frames='[{"delay":10,"speed":1500,"frame":"0","from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","mask":"x:0px;y:[100%];s:inherit;e:inherit;","to":"o:1;","ease":"Power2.easeInOut"},{"delay":"wait","speed":1500,"frame":"999","to":"y:[175%];","mask":"x:inherit;y:inherit;s:inherit;e:inherit;","ease":"Power2.easeInOut"}]'>
                   <!-- <a class="arrow_btn" href="single-blog.html">See project <i class="lnr lnr-chevron-right"></i></a> -->
-                  <a class="btn submit_btn" href="#">Discover More <i class="lnr lnr-chevron-right"></i></a>
+                  <a class="btn submit_btn" href="#" data-sec="section_3">Discover More <i class="lnr lnr-chevron-right"></i></a>
                 </div>
               </div>
             </li>
@@ -292,13 +292,13 @@
                   <div class="br_s"></div>
                 </div>
 
-                <div class="tp-caption tp-resizeme slider_button" data-x="['left','left','15','15','15']"
+                <div class="tp-caption tp-resizeme slider_button menus" data-x="['left','left','15','15','15']"
                   data-hoffset="['0','0','0','0']" data-y="['center','center','center','top']"
                   data-voffset="['270','200','200','410','420']" data-fontsize="['14','14','14','14']"
                   data-lineheight="['46','46','46','46']" data-width="none" data-height="none" data-whitespace="nowrap"
                   data-type="text" data-responsive_offset="on"
                   data-frames='[{"delay":10,"speed":1500,"frame":"0","from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","mask":"x:0px;y:[100%];s:inherit;e:inherit;","to":"o:1;","ease":"Power2.easeInOut"},{"delay":"wait","speed":1500,"frame":"999","to":"y:[175%];","mask":"x:inherit;y:inherit;s:inherit;e:inherit;","ease":"Power2.easeInOut"}]'>
-                  <a class="btn submit_btn" href="#">Discover More <i class="lnr lnr-chevron-right"></i></a>
+                  <a class="btn submit_btn" href="#" data-sec="section_2">Discover More <i class="lnr lnr-chevron-right"></i></a>
                 </div>
               </div>
             </li>
@@ -506,6 +506,7 @@
 
 
       <!--================ 服務  =================-->
+      <div id="section_2"></div>
       <section class="latest_news_area pb-174 second_sty">
         <div class="container">
           <div class="main_title">
@@ -639,6 +640,7 @@
 
 
       <!--================ 漁港 =================-->
+      <div id="section_3"></div>
       <section class="portfolio_area portfolio_masonry pt-174 pb-174">
         <div class="container">
             <div class="row">
@@ -1091,6 +1093,9 @@
   </div>
 
 
+
+  <p id="back-top"><a href="#top"><span><i class="material-icons iconbi">arrow_upward</i></span></a></p>
+
   <!-- Modal 0 預設 -->
   <div class="modal fade" id="exampleModalToggle00" aria-hidden="true" aria-labelledby="exampleModalToggleLabel00" tabindex="-1">
     <div class="modal-dialog modal-dialog-centered modal-xl">
@@ -1354,8 +1359,38 @@
 
   <script src="assets/js/theme.js"></script>
 
+  <!-- 置頂 btn -->
+  <!-- <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.3/jquery.min.js"></script> -->
+  <script>
+    $(document).ready(function(){
+    
+      // hide #back-top first
+      $("#back-top").hide();
+      
+      // fade in #back-top
+      $(function () {
+        $(window).scroll(function () {
+          if ($(this).scrollTop() > 500) {
+            $('#back-top').fadeIn();
+          } else {
+            $('#back-top').fadeOut();
+          }
+        });
+    
+        // scroll body to 0px on click
+        $('#back-top a').click(function () {
+          $('body,html').animate({
+            scrollTop: 0
+          }, 400);
+          return false;
+        });
+      });
+    
+    });
+    </script>
+    <!-- 置頂 btn 完 -->
 
-  <!-- scrollTo -->
+  <!-- click scrollTo -->
   <script>
     'use strict';
 
