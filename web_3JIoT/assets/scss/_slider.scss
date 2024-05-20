@@ -157,28 +157,38 @@
 
 .tp-bgimg{
   @media (max-width: 767px) {
-    // background-position: -48rem center !important;
-    // @include transition;
+    .tp-bgimg[background-position]{
+      // object-fit: cover;
+      // object-position: 80% 100%;
+      // object-position: 80% 100% !important;
+      // background-position: -48rem center !important;
+      // @include transition;
+    }
   }
 }
 
 .rev_slider{
   ul{
     li:nth-child(2) {
-      .tp-bgimg{
-        background-position: center center !important;
-        @include transition;
+      .tp-bgimg[background-position]{
+        // background-position: center center !important;
         @media (max-width: 767px) {
-          background-position: -45rem center !important;
+          // background-position: -45rem center !important;
+          // background: url(../images/BG_port.jpg) no-repeat 80% top / cover !important;
+          // object-fit: cover;
+          // object-position: 80% 100% !important;
         }
       }
     }
     li:nth-child(3) {
       .tp-bgimg{
-        background-position: center center !important;
-        @include transition;
+        // background-position: center center !important ;
+        // @include transition;
+        // object-position: 80% 100%;
         @media (max-width: 767px) {
-          background-position: -58rem center !important;
+          // background-position: -58rem center !important;
+          // background: url(../images/BG_port.jpg) no-repeat 80% top / cover !important;
+          // object-position: 80% 100% !important;
         }
       }
     }

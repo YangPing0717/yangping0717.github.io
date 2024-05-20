@@ -36,9 +36,14 @@
   <link rel="stylesheet" href="assets/css/style.css" />
   <link rel="stylesheet" href="assets/css/responsive.css" />
 
+  
+
+
+
 </head>
 
 <body data-scroll-animation="true" class="loading">
+
   <div class="animsition">
     <div class="body_wrapper bg_color">
 
@@ -168,13 +173,13 @@
                   <div class="br_s"></div>
                 </div>
 
-                <div class="tp-caption tp-resizeme slider_button" data-x="['left','left','15','15','15']"
+                <div class="tp-caption tp-resizeme slider_button menus" data-x="['left','left','15','15','15']"
                   data-hoffset="['0','0','0','0']" data-y="['center','center','center','top']"
                   data-voffset="['280','200','200','410','410']" data-fontsize="['14','14','14','14']"
                   data-lineheight="['46','46','46','46']" data-width="none" data-height="none" data-whitespace="nowrap"
                   data-type="text" data-responsive_offset="on"
                   data-frames='[{"delay":10,"speed":1500,"frame":"0","from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","mask":"x:0px;y:[100%];s:inherit;e:inherit;","to":"o:1;","ease":"Power2.easeInOut"},{"delay":"wait","speed":1500,"frame":"999","to":"y:[175%];","mask":"x:inherit;y:inherit;s:inherit;e:inherit;","ease":"Power2.easeInOut"}]'>
-                  <a class="btn submit_btn" href="#team">Discover More <i class="lnr lnr-chevron-right"></i></a>
+                  <a class="btn submit_btn" href="#team" data-sec="section_1" >Discover More <i class="lnr lnr-chevron-right"></i></a>
                   <!-- <button type="submit" value="submit" class="btn submit_btn">Discover More <i class="lnr lnr-chevron-right"></i></button> -->
                 </div>
               </div>
@@ -303,6 +308,7 @@
       <!--================End Slider Area =================-->
 
       <!--================Who We Are Area =================-->
+      <div id="section_1"></div>
       <section class="who_we_area pt-174" id="team">
         <div class="container">
           <div class="row">
@@ -1348,7 +1354,29 @@
 
   <script src="assets/js/theme.js"></script>
 
-  
+
+  <!-- scrollTo -->
+  <script>
+    'use strict';
+
+    const menus = document.querySelector('.menus');
+
+    // 1. 조상 요소로부터 버튼에게 이벤트 위임
+    menus.addEventListener('click', function(e) {
+      e.preventDefault();
+      const curTarget = e.target;
+      if (!curTarget.classList.contains('btn')) return;
+
+    // 2. 버튼의 해당 섹션 id값을 가져와 일치하는 DOM 요소를 변수 할당
+      const currentSection = document.querySelector(`#${curTarget.dataset.sec}`);
+
+      // 3. 원하는 위치로 스크롤링
+      window.scrollTo({
+        top: currentSection.getBoundingClientRect().top + window.pageYOffset,
+        behavior: 'smooth',
+      })  
+    })
+  </script>
   
 
 
