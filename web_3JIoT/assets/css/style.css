@@ -3178,7 +3178,7 @@ button:focus {
 }
 @media (max-width: 767px) {
   .modal .modal-content.digi_a .modal-body {
-    padding: 13rem 1rem 1rem;
+    padding: 13rem 1.4rem 1rem;
   }
 }
 .modal .modal-content.digi_a .modal-body ul {
@@ -3197,7 +3197,7 @@ button:focus {
 }
 @media (max-width: 767px) {
   .modal .modal-content.digi_b .modal-body {
-    padding: 1rem 1rem 11rem;
+    padding: 1rem 1.4rem 11rem;
   }
 }
 .modal .modal-content.digi_c {
@@ -3213,7 +3213,7 @@ button:focus {
 }
 @media (max-width: 767px) {
   .modal .modal-content.digi_c .modal-body {
-    padding: 1rem 1.6rem 12rem;
+    padding: 1rem 1.4rem 12rem;
   }
 }
 .modal .modal-content.digi_d {
@@ -3229,11 +3229,16 @@ button:focus {
 }
 @media (max-width: 767px) {
   .modal .modal-content.digi_d .modal-body {
-    padding: 1rem 1rem 14rem;
+    padding: 1rem 1.4rem 14rem;
   }
 }
 .modal .modal-content.digi_e {
   background: url(../images/digi_bg_e.jpg) no-repeat center -1rem/cover;
+}
+@media (max-width: 767px) {
+  .modal .modal-content.digi_e {
+    background: url(../images/digi_bg_e_m.png) no-repeat left 1rem/150%;
+  }
 }
 .modal .modal-content.digi_e::before {
   content: "";
@@ -3244,8 +3249,24 @@ button:focus {
   top: 2rem;
   right: 3rem;
 }
+@media (max-width: 767px) {
+  .modal .modal-content.digi_e::before {
+    ontent: "";
+    background: url(../images/digi_bg_e_2.png) no-repeat right center/109%;
+    width: 25rem;
+    height: 90%;
+    position: absolute;
+    top: 10rem;
+    right: -1rem;
+  }
+}
 .modal .modal-content.digi_e .modal-body {
   padding: 2rem 3.6rem 43rem;
+}
+@media (max-width: 767px) {
+  .modal .modal-content.digi_e .modal-body {
+    padding: 2rem 3.6rem 35rem;
+  }
 }
 
 /*---------------------------------------------------- */
