@@ -86,7 +86,7 @@
 #back-top {
   position: fixed;
   bottom: 5rem;
-  right: 1.6rem;
+  right: 0.8rem;
   z-index: 110;
 }
 #back-top a {
@@ -107,26 +107,27 @@ color: #000;
 }
 /* arrow icon (span tag) */
 #back-top span {
-width: 4.2rem;
-  height: 4.2rem;
+  width:  3.2rem;
+  height: 3.2rem;
   display: block;
   /* margin-bottom: 7px; */
-  background: #8167b0;
+  background: rgba(0, 0, 0, 0.4);
+  border: 1px solid $baseColor;
   /* -webkit-border-radius: 50%; 
   -moz-border-radius: 50%;
   border-radius: 50%; */
   -webkit-transition: 1s;
   -moz-transition: 1s;
   transition: 1s;
-  color: #fff;
+  color: $baseColor;
   /* font-size: 3rem;
   line-height: 4.2rem;
   box-shadow: 0 5px 8px rgba(0, 0, 0, 0.3); */
 }
 #back-top a:hover span {
-background-color: #777;
+background-color: rgba(0, 0, 0, 0.2);
 }	
 .iconbi{
-	font-size: 30px;
-	line-height: 4.2rem;
+	font-size: 2rem;
+	line-height: 2.9rem;
 	}
