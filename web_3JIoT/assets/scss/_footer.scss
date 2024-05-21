@@ -7,8 +7,9 @@
   bottom: 0px;
   padding-top: 150px;
   padding-bottom: 130px;
-  border-top: 1px solid #3e3e3e;
+  border-top: 1px solid #3e494a;
   background: #1b1b1b;
+  background: url(../images/footer.jpg) no-repeat center center / cover;
   .logo {
     width: 140px; 
     margin-top: -0.9rem;
@@ -16,7 +17,9 @@
 }
 .copyright_wd {
   p {
-    color: $dip;
+    color: $pfont;
+    font-size: 0.9rem;
+    line-height: 1.4rem;
   }
 }
 .list_wd {
@@ -26,7 +29,8 @@
       margin-bottom: 4px;
       a {
         color: $dip;
-        font: 16px/26px $chi;
+        // font: 16px/26px $swb;
+        // font-family: "微軟正黑體", "Raleway", Arial, sans-serif;
         @include transition;
         &:hover {
           color: $baseColor;

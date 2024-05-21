@@ -3149,8 +3149,9 @@ button:focus {
   bottom: 0px;
   padding-top: 150px;
   padding-bottom: 130px;
-  border-top: 1px solid #3e3e3e;
+  border-top: 1px solid #3e494a;
   background: #1b1b1b;
+  background: url(../images/footer.jpg) no-repeat center center/cover;
 }
 .footer_area .logo {
   width: 140px;
@@ -3158,7 +3159,9 @@ button:focus {
 }
 
 .copyright_wd p {
-  color: #fff;
+  color: #aeb7b7;
+  font-size: 0.9rem;
+  line-height: 1.4rem;
 }
 
 .list_wd {
@@ -3169,7 +3172,6 @@ button:focus {
 }
 .list_wd .nav li a {
   color: #fff;
-  font: 16px/26px "chinese";
   transition: all 300ms linear 0s;
 }
 .list_wd .nav li a:hover {
