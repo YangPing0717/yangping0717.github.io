@@ -245,7 +245,7 @@ button:focus {
 /* End Main Title Area css
 ============================================================================================ */
 .bg_color {
-  background: #1b1b1b;
+  background: #060d33;
 }
 
 /* Preloader Area css
@@ -294,7 +294,7 @@ button:focus {
 /* Button Area css
 ============================================================================================ */
 .arrow_btn {
-  font: 16px "swanse";
+  font: 16px "chinese";
   color: #00FFFF;
   display: inline-block;
   transition: all 300ms linear 0s;
@@ -1147,9 +1147,14 @@ button:focus {
   font-size: 20px;
   margin-bottom: 10px;
 }
+.testi_slider .testi_item h3 {
+  color: #fff;
+  font-size: 1.6rem;
+  margin-bottom: 10px;
+}
 .testi_slider .testi_item h5 {
   color: #fff;
-  font: 16px "swanse";
+  font: 1rem "chinese";
   margin-bottom: 30px;
 }
 .testi_slider .testi_item h5 a {
@@ -1157,11 +1162,15 @@ button:focus {
 }
 
 .testi_inner .col-lg-6 {
-  background: #1b1b1b;
+  background: rgba(10, 16, 48, 0.8);
 }
 .testi_inner .testi_slider {
-  background: #1b1b1b;
   padding-top: 70px;
+}
+@media (max-width: 767px) {
+  .testi_inner .testi_slider {
+    padding-top: 40px;
+  }
 }
 .testi_inner .testi_slider_box {
   max-width: 538px;
@@ -1178,15 +1187,41 @@ button:focus {
 }
 .testi_inner .navigation .slick-arrow i {
   font-size: 18px;
-  color: #fff;
+  color: #00FFFF;
 }
 .testi_inner .navigation .next {
   margin-left: 18px;
 }
 
 .video_big_image {
-  margin-top: 200px;
+  background: #060d33;
+  margin-top: 300px;
   position: relative;
+}
+@media (max-width: 767px) {
+  .video_big_image {
+    margin-top: 230px !important;
+  }
+}
+.video_big_image .choose {
+  position: absolute;
+  top: -180px;
+}
+.video_big_image .choose .main_title br {
+  display: none;
+}
+@media (max-width: 767px) {
+  .video_big_image .choose .main_title br {
+    display: initial;
+  }
+}
+.video_big_image .main_bg {
+  width: calc(100vw - 7rem);
+}
+@media (max-width: 767px) {
+  .video_big_image .main_bg {
+    width: 100vw;
+  }
 }
 
 /* End Testimonials Slider Area css
@@ -1238,6 +1273,30 @@ button:focus {
 
 /* End Text Testimonials Area css
 ============================================================================================ */
+.rounded-circle {
+  width: 10rem !important;
+}
+
+.video_item .gradient {
+  background: rgb(107, 83, 255);
+  background: linear-gradient(65deg, rgba(107, 83, 255, 0.9) 0%, rgba(36, 193, 255, 0.85) 52%, #00fff7 100%);
+  width: 100%;
+  padding: 2rem 2.4rem;
+}
+.video_item .gradient h2 {
+  color: #fff;
+}
+.video_item .gradient p {
+  color: #060d33;
+  margin-bottom: 0;
+  font-size: 0.95rem;
+  line-height: 1.5rem;
+}
+.video_item .gradient .stars i {
+  font-size: 1.2rem;
+  color: #00FFFF;
+}
+
 /*---------------------------------------------------- */
 /*----------------------------------------------------*/
 /* Video Area css
@@ -3093,6 +3152,10 @@ button:focus {
   border-top: 1px solid #3e3e3e;
   background: #1b1b1b;
 }
+.footer_area .logo {
+  width: 140px;
+  margin-top: -0.9rem;
+}
 
 .copyright_wd p {
   color: #fff;
@@ -3106,7 +3169,7 @@ button:focus {
 }
 .list_wd .nav li a {
   color: #fff;
-  font: 16px/26px "swanse";
+  font: 16px/26px "chinese";
   transition: all 300ms linear 0s;
 }
 .list_wd .nav li a:hover {
@@ -3118,6 +3181,19 @@ button:focus {
 
 /* End Footer Area css
 ============================================================================================ */
+.nav.share li {
+  color: #fff;
+  font: 16px "Roboto";
+  margin-right: 1.6rem;
+  margin-top: 0.8rem;
+}
+.nav.share li i {
+  font-size: 2.2rem;
+}
+.nav.share li img {
+  width: 2.2rem;
+}
+
 /*---------------------------------------------------- */
 /*----------------------------------------------------*/
 .modal {

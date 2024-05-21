@@ -18,9 +18,14 @@
       font-size: 20px;
       margin-bottom: 10px;
     }
+    h3{
+      color: $dip;
+      font-size: 1.6rem;
+      margin-bottom: 10px;
+    }
     h5 {
       color: $dip;
-      font: 16px $sw;
+      font: 1rem $chi;
       margin-bottom: 30px;
       a {
         color: $baseColor;
@@ -30,11 +35,14 @@
 }
 .testi_inner {
   .col-lg-6 {
-    background: #1b1b1b;
+    background: rgba(10, 16, 48, 0.8);
   }
   .testi_slider {
-    background: #1b1b1b;
+    // background: #1b1b1b;
     padding-top: 70px;
+    @media (max-width: 767px){
+      padding-top: 40px;
+    }
   }
   .testi_slider_box {
     max-width: 538px;
@@ -49,7 +57,7 @@
       cursor: pointer;
       i {
         font-size: 18px;
-        color: $dip;
+        color: $baseColor; 
       }
     }
     .next {
@@ -58,8 +66,30 @@
   }
 }
 .video_big_image {
-  margin-top: 200px;
+  background: $darkBlueBg;
+  margin-top: 300px;
   position: relative;
+  @media (max-width: 767px){
+    margin-top: 230px !important;
+  }
+  .choose{
+    position: absolute;
+    top: -180px;
+    .main_title{
+      br{
+        display: none;
+        @media (max-width: 767px){
+          display: initial;
+        }
+      }
+    }
+  }
+  .main_bg{
+    width: calc(100vw - 7rem);
+    @media (max-width: 767px){
+      width: 100vw;
+    }
+  }
 }
 /* End Testimonials Slider Area css
 ============================================================================================ */
@@ -111,3 +141,33 @@
 }
 /* End Text Testimonials Area css
 ============================================================================================ */
+
+.rounded-circle{
+  width: 10rem !important;
+}
+
+.video_item {
+  .gradient{
+    background: rgb(107, 83, 255);
+    background: linear-gradient(65deg, rgba(107, 83, 255, 0.9) 0%, rgba(36, 193, 255, 0.85) 52%, #00fff7 100%);
+    width: 100%;
+    // height: 20rem;
+    padding: 2rem 2.4rem;
+    h2{
+      color: $dip;
+      
+    }
+    p{
+      color: $darkBlueBg;
+      margin-bottom: 0;
+      font-size: 0.95rem;
+      line-height: 1.5rem;
+    }
+    .stars{
+      i {
+        font-size: 1.2rem;
+        color: $baseColor;
+      }
+    }      
+  }
+}

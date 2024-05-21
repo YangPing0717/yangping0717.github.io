@@ -9,6 +9,10 @@
   padding-bottom: 130px;
   border-top: 1px solid #3e3e3e;
   background: #1b1b1b;
+  .logo {
+    width: 140px; 
+    margin-top: -0.9rem;
+  }
 }
 .copyright_wd {
   p {
@@ -22,7 +26,7 @@
       margin-bottom: 4px;
       a {
         color: $dip;
-        font: 16px/26px $sw;
+        font: 16px/26px $chi;
         @include transition;
         &:hover {
           color: $baseColor;
@@ -36,3 +40,22 @@
 }
 /* End Footer Area css
 ============================================================================================ */
+
+
+.nav{
+  &.share{
+    li{
+      color: #fff;
+      font: 16px "Roboto";
+      margin-right: 1.6rem;
+      margin-top: 0.8rem;
+      i {
+        font-size: 2.2rem;
+        // color: #fff;
+      }
+      img {
+        width: 2.2rem;
+      }
+    }
+  }
+}
