@@ -10,16 +10,22 @@
   border-top: 1px solid #3e494a;
   background: #1b1b1b;
   background: url(../images/footer.jpg) no-repeat center center / cover;
+  @media (max-width: 767px){
+    background: url(../images/footer.jpg) no-repeat left center / cover;
+  }
   .logo {
     width: 140px; 
     margin-top: -0.9rem;
+    @media (max-width: 767px){
+      width: 125px;
+    }
   }
 }
 .copyright_wd {
   p {
     color: $pfont;
-    font-size: 0.9rem;
-    line-height: 1.4rem;
+    font-size: 0.8rem;
+    line-height: 1.2rem;
   }
 }
 .list_wd {

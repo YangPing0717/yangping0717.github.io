@@ -49,22 +49,22 @@ $primaryBlue: #346dff;
 
 // Project Core Font Family
 @font-face {
-  // font-family: "swanse";
-  font-family: "微軟正黑體", "Raleway", Arial, sans-serif;
-  // src: url(../fonts/swansea-webfont.woff);
+  font-family: "swanse";
+  // font-family: "微軟正黑體", "Raleway", Arial, sans-serif;
+  src: url(../fonts/swansea-webfont.woff);
   font-weight: 700;
 }
 @font-face {
   font-family: "swanseb";
-  font-family: "微軟正黑體", "Raleway", Arial, sans-serif;
-  // src: url(../fonts/swansea_bold-webfont.woff);
+  // font-family: "微軟正黑體", "Raleway", Arial, sans-serif;
+  src: url(../fonts/swansea_bold-webfont.woff);
   font-weight: 700;
 }
 
 @font-face {
   font-family: "chinese";
   font-family: "微軟正黑體", "Raleway", Arial, sans-serif;
-  // src: url(../fonts/swansea-webfont.woff);
+  src: url(../fonts/swansea-webfont.woff);
   font-weight: 700;
 }
 

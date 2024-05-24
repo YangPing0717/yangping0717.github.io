@@ -1,7 +1,8 @@
 /* Button Area css
 ============================================================================================ */
 .arrow_btn {
-  font: 16px $chi;
+  // font: 16px $chi;
+  font-family: "微軟正黑體", "Roboto Slab", Arial, sans-serif;
   color: $baseColor;
   display: inline-block;
   @include transition;

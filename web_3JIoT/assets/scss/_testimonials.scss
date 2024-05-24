@@ -85,7 +85,10 @@
     }
   }
   .main_bg{
-    width: calc(100vw - 7rem);
+    width: calc(100vw - 10%);
+    @media (max-width: 1300px){
+      width: 100vw;
+    }
     @media (max-width: 767px){
       width: 100vw;
     }

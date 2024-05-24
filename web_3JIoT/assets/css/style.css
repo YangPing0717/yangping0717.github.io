@@ -45,17 +45,19 @@ Table of Content:
 /*Color Variables*/
 /*=================== fonts ====================*/
 @font-face {
-  font-family: "微軟正黑體", "Raleway", Arial, sans-serif;
+  font-family: "swanse";
+  src: url(../fonts/swansea-webfont.woff);
   font-weight: 700;
 }
 @font-face {
   font-family: "swanseb";
-  font-family: "微軟正黑體", "Raleway", Arial, sans-serif;
+  src: url(../fonts/swansea_bold-webfont.woff);
   font-weight: 700;
 }
 @font-face {
   font-family: "chinese";
   font-family: "微軟正黑體", "Raleway", Arial, sans-serif;
+  src: url(../fonts/swansea-webfont.woff);
   font-weight: 700;
 }
 @font-face {
@@ -294,7 +296,7 @@ button:focus {
 /* Button Area css
 ============================================================================================ */
 .arrow_btn {
-  font: 16px "chinese";
+  font-family: "微軟正黑體", "Roboto Slab", Arial, sans-serif;
   color: #00FFFF;
   display: inline-block;
   transition: all 300ms linear 0s;
@@ -756,12 +758,12 @@ button:focus {
 ============================================================================================ */
 .main_slider_area ul li .slider_text_box .tag_text {
   color: #00FFFF;
-  font-family: "微軟正黑體", "swanse", Arial, sans-serif;
+  font-family: "微軟正黑體", "Raleway", Arial, sans-serif;
   font-weight: 700;
 }
 .main_slider_area ul li .slider_text_box .first_text {
   color: #fff;
-  font-family: "微軟正黑體", "swanse", Arial, sans-serif;
+  font-family: "微軟正黑體", "Raleway", Arial, sans-serif;
   font-weight: 700;
   overflow: visible;
 }
@@ -790,7 +792,6 @@ button:focus {
 }
 .main_slider_area ul li .slider_text_box .first_text .first_text_sub {
   margin-top: 1rem;
-  line-height: 3.2rem;
 }
 @media (max-width: 767px) {
   .main_slider_area ul li .slider_text_box .first_text .first_text_sub {
@@ -801,7 +802,6 @@ button:focus {
 }
 .main_slider_area ul li .slider_text_box .first_text .first_text_sub .first_t_s {
   font-size: 80% !important;
-  line-height: 4.2rem !important;
   color: white;
   background: none !important;
   text-shadow: 0px 5px 12px rgba(19, 21, 42, 0.5);
@@ -1216,7 +1216,12 @@ button:focus {
   }
 }
 .video_big_image .main_bg {
-  width: calc(100vw - 7rem);
+  width: calc(100vw - 10%);
+}
+@media (max-width: 1300px) {
+  .video_big_image .main_bg {
+    width: 100vw;
+  }
 }
 @media (max-width: 767px) {
   .video_big_image .main_bg {
@@ -1307,6 +1312,7 @@ button:focus {
 .video_area .video_inner .video_item {
   position: relative;
   margin-left: -14px;
+  margin-top: 200px;
 }
 .video_area .video_inner .video_item .video {
   position: absolute;
@@ -2024,6 +2030,12 @@ button:focus {
   transform: translateY(10px);
   transition: all 0.5s;
 }
+@media (max-width: 1300px) {
+  .portfolio_item.v_small .portfolio_text h4 {
+    font-size: 0.85rem !important;
+    line-height: 1.3rem;
+  }
+}
 @media (max-width: 767px) {
   .portfolio_item.v_small .portfolio_text h4 {
     font-size: 0.9rem !important;
@@ -2368,7 +2380,7 @@ button:focus {
   padding: 0.4rem 1rem;
   color: #021242;
   vertical-align: super;
-  margin-right: 0.8rem;
+  margin-right: 0.4rem;
 }
 @media (max-width: 767px) {
   .latest_news_area.second_sty p span.tag {
@@ -3153,15 +3165,25 @@ button:focus {
   background: #1b1b1b;
   background: url(../images/footer.jpg) no-repeat center center/cover;
 }
+@media (max-width: 767px) {
+  .footer_area {
+    background: url(../images/footer.jpg) no-repeat left center/cover;
+  }
+}
 .footer_area .logo {
   width: 140px;
   margin-top: -0.9rem;
 }
+@media (max-width: 767px) {
+  .footer_area .logo {
+    width: 125px;
+  }
+}
 
 .copyright_wd p {
   color: #aeb7b7;
-  font-size: 0.9rem;
-  line-height: 1.4rem;
+  font-size: 0.8rem;
+  line-height: 1.2rem;
 }
 
 .list_wd {
