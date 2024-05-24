@@ -296,7 +296,6 @@ button:focus {
 /* Button Area css
 ============================================================================================ */
 .arrow_btn {
-  font-family: "微軟正黑體", "Roboto Slab", Arial, sans-serif;
   color: #00FFFF;
   display: inline-block;
   transition: all 300ms linear 0s;
