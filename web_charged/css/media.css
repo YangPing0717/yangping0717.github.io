@@ -98,6 +98,12 @@
     }
 
     /*banner*/
+    .banner-floating-images {
+        /* top: 18%; */
+        /* max-width: 800px; */
+        left: calc(((100vw - 1490px) / 2) + 430px);
+        /* left: calc(((100vw - 1170px) / 2) + 370px); */
+    }
 
 
     /*about*/
