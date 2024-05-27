@@ -1071,7 +1071,7 @@
           </div>
           <div class="col-lg-3 col-md-4 col-sm-4 col-7">
             <aside class="f_widget copyright_wd">
-              <p>© 3JIoT. 2024<br />
+              <p>© 3JIoT. <span id="year"></span><br /> 
                 All Rights Resevered</p>
             </aside>
           </div>
@@ -1442,6 +1442,12 @@
         behavior: 'smooth',
       })  
     })
+  </script>
+
+
+  <!-- 年份 -->
+  <script>
+    document.getElementById("year").innerHTML = new Date().getFullYear();
   </script>
   
 
