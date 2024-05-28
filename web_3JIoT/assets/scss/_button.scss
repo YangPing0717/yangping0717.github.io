@@ -30,12 +30,11 @@
   line-height: 50px;
   border-radius: 0px;
   text-align: center;
-  padding: 0px 24px;
+  padding: 2px 24px 0px;
   color: $dip;
   outline: none !important;
   box-shadow: none !important;
-  padding-top: 3px;
-  font-size: 1rem;
+  font-size: 1.1rem;
   font-family: "微軟正黑體", "Roboto Slab", Arial, sans-serif;
   font-weight: 700;
   @include transition;

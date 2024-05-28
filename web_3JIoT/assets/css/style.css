@@ -268,7 +268,7 @@ button:focus {
   width: 100%;
   height: 100%;
   border-radius: 50%;
-  background-color: #a3cc01;
+  background-color: #00FFFF;
   opacity: 0.6;
   position: absolute;
   top: 0;
@@ -323,12 +323,11 @@ button:focus {
   line-height: 50px;
   border-radius: 0px;
   text-align: center;
-  padding: 0px 24px;
+  padding: 2px 24px 0px;
   color: #fff;
   outline: none !important;
   box-shadow: none !important;
-  padding-top: 3px;
-  font-size: 1rem;
+  font-size: 1.1rem;
   font-family: "微軟正黑體", "Roboto Slab", Arial, sans-serif;
   font-weight: 700;
   transition: all 300ms linear 0s;
@@ -1778,7 +1777,7 @@ button:focus {
 }
 @media (max-width: 767px) {
   .portfolio_area {
-    background: url(../images/BG_port.jpg) repeat-y 52% -3rem/200%;
+    background: url(../images/BG_port.jpg) repeat-y 65% -3rem/160%;
   }
 }
 @media (max-width: 767px) {
@@ -2342,7 +2341,7 @@ button:focus {
 }
 @media (max-width: 767px) {
   .latest_news_area {
-    background: url(../images/BG_02.jpg) no-repeat 72% top/480%;
+    background: url(../images/BG_02_m.jpg) no-repeat 90% top/220%;
   }
 }
 .latest_news_area .main_title {
@@ -2376,15 +2375,16 @@ button:focus {
 .latest_news_area.second_sty p span.tag {
   background: #00FFFF;
   border-radius: 3rem;
-  padding: 0.4rem 1rem;
+  padding: 0.36rem 0.85rem;
   color: #021242;
   vertical-align: super;
   margin-right: 0.4rem;
 }
 @media (max-width: 767px) {
   .latest_news_area.second_sty p span.tag {
-    font-size: 90%;
-    margin-right: 0.4rem;
+    font-size: 85%;
+    padding: 0.36rem 0.7rem;
+    margin-right: 0.2rem;
   }
 }
 
@@ -3238,6 +3238,11 @@ button:focus {
     padding: 1rem 1rem 0.6rem;
   }
 }
+@media (max-width: 767px) {
+  .modal .modal-content .modal-header .modal-title {
+    line-height: 1.2;
+  }
+}
 .modal .modal-content .modal-header .modal-title span {
   font-weight: 300;
 }
@@ -3341,7 +3346,7 @@ button:focus {
   }
 }
 .modal .modal-content.digi_d {
-  background: url(../images/digi_bg_d.png) no-repeat center 5rem/102%;
+  background: url(../images/digi_bg_d.jpg) no-repeat center 5rem/102%;
 }
 @media (max-width: 767px) {
   .modal .modal-content.digi_d {
@@ -3361,7 +3366,7 @@ button:focus {
 }
 @media (max-width: 767px) {
   .modal .modal-content.digi_e {
-    background: url(../images/digi_bg_e_m.png) no-repeat left 1rem/150%;
+    background: url(../images/digi_bg_e_m.jpg) no-repeat left 1rem/150%;
   }
 }
 .modal .modal-content.digi_e::before {

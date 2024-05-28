@@ -6,7 +6,7 @@
   // z-index: 99;
   background: url(../images/BG_02.jpg) no-repeat center top / cover;
   @media (max-width: 767px) {
-    background: url(../images/BG_02.jpg) no-repeat 72% top / 480%;
+    background: url(../images/BG_02_m.jpg) no-repeat 90% top / 220%;
   }
   .main_title {
     margin-bottom: 75px;
@@ -34,13 +34,14 @@
         &.tag{
           background: $baseColor;
           border-radius: 3rem;
-          padding: 0.4rem 1rem;
+          padding: 0.36rem 0.85rem;
           color: $darkfont;
           vertical-align: super;
           margin-right: 0.4rem;
           @media (max-width: 767px) {
-            font-size: 90%;
-            margin-right: 0.4rem;
+            font-size: 85%;
+            padding: 0.36rem 0.7rem;
+            margin-right: 0.2rem;
           }
         }
       }
