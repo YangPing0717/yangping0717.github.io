@@ -1,0 +1,109 @@
+/* Home Slider Area css
+============================================================================================ */
+.main_slider_area {
+  ul {
+    li {
+      .slider_text_box {
+        @media (max-width: 767px){
+          top: -20%;
+          position: absolute;
+        }
+        .tag_text {
+          color: #fff;
+          font-family: $sw;
+          font-weight: 900;
+          filter: drop-shadow(0px 2px 1px rgba(0, 3, 34, 1)); 
+          @include l-space-3;
+        }
+        .first_text {
+          color: #fff;
+          // font-family: $primary-font;
+          font-family: $sw;
+          font-weight: 300;
+          filter: drop-shadow(0px 3px 2px rgba(0, 3, 34, 1)); 
+          @include l-space-3;
+          span {
+            color: $baseColor;
+            background: $gra_01;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: 400;
+            @media (max-width: 767px){
+              font-size: 2.5rem !important;
+            }
+          }
+          @media (max-width: 767px){
+            font-size: 2.5rem !important;
+          }
+        }
+        .secand_text {
+          color: #fff;
+          font-family: $sw;
+          font-weight: 900;
+          filter: drop-shadow(0px 2px 1px rgba(0, 3, 34, 1)); 
+          @include l-space-2;
+        }
+        .br_s_text {
+          .br_s {
+            width: 56px;
+            height: 1px;
+            background: #fff;
+            display: inline-block;
+          }
+        }
+        .slider_button {
+          .arrow_btn {
+            color: #fff;
+            font: 20px $swb;
+            @include transition;
+            i {
+              font-size: 18px;
+              margin-left: 6px;
+            }
+            &:hover {
+              color: $baseColor;
+              i {
+                margin-left: 3px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .rev_slider {
+    .tp-bullets {
+      .tp-bullet {
+        width: 20px;
+        height: 4px;
+        background: #fff;
+        opacity: 1;
+        &.selected {
+          background: $baseColor;
+        }
+      }
+    }
+  }
+  @media (min-width: 1300px) {
+    .rev_slider {
+      .tp-bullets {
+        max-width: 1106px !important;
+        margin: auto !important;
+        width: 100% !important;
+        // left: 50% !important;
+        // bottom: 13vmin;
+        .tp-bullet {
+          width: 20px;
+          height: 4px;
+          background: #fff;
+          opacity: 1;
+          &.selected {
+            background: $baseColor;
+          }
+        }
+      }
+    }
+  }
+}
+/* End Home Slider Area css
+============================================================================================ */

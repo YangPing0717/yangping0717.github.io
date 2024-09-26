@@ -1,0 +1,100 @@
+/* Footer Area css
+============================================================================================ */
+.footer_area {
+  position: fixed;
+  width: 100%;
+  left: 0px;
+  bottom: 0px;
+  padding-top: 150px;
+  padding-bottom: 130px;
+  border-top: 1px solid #3e3e3e;
+  @include l-space-2;
+  // background: #1b1b1b;
+  background: #021a2a;
+  background: url(../images/footer_bg.jpg) no-repeat center center / cover;
+  @media (max-width: 767px){
+    background: url(../images/footer_bg.jpg) no-repeat left center / cover;
+  }
+  .logo {
+    img {
+      width: 100px; 
+      margin-top: -0.9rem;
+      @media (max-width: 767px){
+        width: 100px;
+        display: block;
+        margin: 0 auto;
+      }
+    }
+    
+  }
+}
+.copyright_wd {
+  p {
+    color: $pfont;
+    font-size: 0.9rem;
+    line-height: 1.4rem;
+  }
+}
+.list_wd {
+  padding-left: 20px;
+  .nav {
+    li {
+      margin-bottom: 4px;
+      a {
+        color: $dip;
+        font: 16px/26px $sw;
+        @include transition;
+        &:hover {
+          color: $baseColor;
+        }
+      }
+      &:last-child {
+        margin-bottom: 0px;
+      }
+      
+    }
+  }
+}
+/* End Footer Area css
+============================================================================================ */
+
+
+.nav{
+  &.share{
+    li{
+      color: #fff;
+      font: 16px "Roboto";
+      margin-right: 1.2rem;
+      margin-top: 0.8rem;
+      i {
+        font-size: 1.6rem;
+        // color: #fff;
+      }
+      img {
+        width: 2.2rem;
+      }
+      
+    }
+  }
+}
+
+.contract_add{
+  .icon-slash{
+    position: relative;
+    display: inline-block ;
+    padding-right: 20px;
+    &::before{
+      content: "";
+      // display: inline-block;
+      // position: relative;
+      display: block;
+      position: absolute;
+      height: 2px;
+      right: 4px;
+      top: 13px;
+      transform: rotate(-50deg) translateY(-50%);
+      width: 6px;
+      background: #fff;
+    }
+  }
+}

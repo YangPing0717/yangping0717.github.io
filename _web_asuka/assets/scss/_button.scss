@@ -1,0 +1,140 @@
+/* Button Area css
+============================================================================================ */
+.arrow_btn {
+  font: 16px $sw;
+  color: $baseColor;
+  display: inline-block;
+  @include transition;
+  i {
+    font-size: 18px;
+    position: relative;
+    top: 2px;
+    margin-left: 5px;
+    @include transition;
+  }
+  &:hover {
+    color: $dip;
+    i {
+      margin-left: 0px;
+    }
+  }
+  &.dark {
+    color: $dip;
+  }
+}
+.primary_btn {
+  background: $baseColor;
+  line-height: 50px;
+  border-radius: 0px;
+  text-align: center;
+  padding: 0px 43px;
+  color: $dip;
+  outline: none !important;
+  box-shadow: none !important;
+  padding-top: 3px;
+  font-size: 13px;
+  font-family: $sw;
+  @include transition;
+  &:hover {
+    background: #000;
+    color: #fff;
+  }
+}
+.submit_btn {
+  // background: $baseColor;
+  background: #bd9bbc;
+  background: $gra_01;
+  line-height: 50px;
+  border-radius: 0px;
+  text-align: center;
+  padding: 0px 28px;
+  color: $black;
+  outline: none !important;
+  box-shadow: none !important;
+  padding-top: 3px;
+  font-size: 18px;
+  font-family: $sw;
+  text-transform:uppercase;
+  border: none;
+  letter-spacing: 0;
+  @include transition;
+  &:hover {
+    background: #000;
+    color: #fff;
+  }
+}
+/* End Button Area css
+============================================================================================ */
+
+
+
+.secondary_btn {
+  font-size: 16px;
+  line-height: 20px;
+  border: 1px solid $pfont2;
+  color: #fff;
+  text-transform: uppercase;
+  padding: 10px 20px;
+  // transition: all 0.2s linear;
+  // margin-top: 25px;
+  display: inline-block;
+  border-radius: 0px;
+  @include transition;
+  @include l-space-2;
+  &:hover {
+    background: $gra_01;
+    // border-color: $black;
+  }
+}
+
+
+
+/*  置頂 btn - Back to top button   */
+#back-top {
+  position: fixed;
+  bottom: 5rem;
+  right: 0.8rem;
+  z-index: 110;
+}
+#back-top a {
+width: 4.2rem;
+display: block;
+text-align: center;
+/*font: 11px/100% Arial, Helvetica, sans-serif;*/
+text-transform: uppercase;
+text-decoration: none;
+color: #bbb;
+/* background color transition */
+-webkit-transition: 1s;
+-moz-transition: 1s;
+transition: 1s;
+}
+#back-top a:hover {
+color: #000;
+}
+/* arrow icon (span tag) */
+#back-top span {
+  width:  3.2rem;
+  height: 3.2rem;
+  display: block;
+  /* margin-bottom: 7px; */
+  background: rgba(0, 0, 0, 0.4);
+  border: 1px solid $baseColor;
+  /* -webkit-border-radius: 50%; 
+  -moz-border-radius: 50%;
+  border-radius: 50%; */
+  -webkit-transition: 1s;
+  -moz-transition: 1s;
+  transition: 1s;
+  color: $baseColor;
+  /* font-size: 3rem;
+  line-height: 4.2rem;
+  box-shadow: 0 5px 8px rgba(0, 0, 0, 0.3); */
+}
+#back-top a:hover span {
+background-color: rgba(0, 0, 0, 0.2);
+}	
+.iconbi{
+	font-size: 2rem;
+	line-height: 2.9rem;
+	}

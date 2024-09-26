@@ -1,0 +1,98 @@
+/*font Variables*/
+$sw: "swanse";
+$swb: "swanseb";
+
+$primary-font: "Noto Sans TC", "Noto Sans JP", sans-serif;
+// $primary-font: "Noto Serif", serif;
+// $primary-font: "Cormorant Garamond", serif;
+
+
+
+
+
+
+/*Color Variables*/
+$baseColor: #70ffd2;
+$dip: #fff;
+$pfont: #dfd2d2;
+$pfont2: #989090;
+$black: black;
+$darkblue: #061a27;
+// $pfont: #a0a0a0;
+
+$gra_01: linear-gradient(90deg, #efb1ff 0%, #8a9cff 53%, #00ffd1 100%);
+
+
+/*=================== fonts ====================*/
+
+// Mixins
+@mixin transition(
+  $property: all,
+  $duration: 300ms,
+  $animate: linear,
+  $delay: 0s
+) {
+  transition: $property $duration $animate $delay;
+}
+@mixin l-space-3 {
+  letter-spacing: .3rem;
+}
+@mixin l-space-2 {
+  letter-spacing: .2rem;
+}
+@mixin l-space-1 {
+  letter-spacing: .1rem;
+}
+
+// Placeholder Mixins
+
+@mixin placeholder {
+  &.placeholder {
+    @content;
+  }
+  &:-moz-placeholder {
+    @content;
+  }
+  &::-moz-placeholder {
+    @content;
+  }
+  &::-webkit-input-placeholder {
+    @content;
+  }
+}
+
+// Project Core Font Family
+@font-face {
+  font-family: "swanse";
+  src: url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap");
+}
+@font-face {
+  font-family: "swanseb";
+  src: url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800;900&family=Righteous&display=swap");
+}
+
+// "Noto Serif TC", "Noto Serif JP", serif
+
+// "Noto Sans TC", "Noto Sans JP", sans-serif
+// font-family: "Noto Sans JP", sans-serif;
+
+
+// 晴日 價錢 數字
+// font-family: Cormorant Garamond, serif;
+
+
+// $primary-font: 'PT Sans', sans-serif;
+// $secondary-font: 'IM Fell Double Pica', serif;
+
+
+// <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
+
+// Project Core Font Family
+// @font-face {
+//   font-family: "swanse";
+//   src: url(../fonts/swansea-webfont.woff);
+// }
+// @font-face {
+//   font-family: "swanseb";
+//   src: url(../fonts/swansea_bold-webfont.woff);
+// }
