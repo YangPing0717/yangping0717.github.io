@@ -1017,7 +1017,7 @@ button:focus {
 ============================================================================================ */
 .latest_project_area {
   overflow: hidden;
-  background: url(../images/japan_map.png) no-repeat center top/cover;
+  background: url(../images/japan_map.jpg?v=202310) no-repeat center top/cover;
 }
 @media (max-width: 767px) {
   .latest_project_area {
