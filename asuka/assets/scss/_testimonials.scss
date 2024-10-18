@@ -4,7 +4,7 @@
   position: absolute;
   width: 100%;
   z-index: 10;
-  top: 0px;
+  top: 161px;
   left: 0px;
 }
 .testi_slider {
@@ -15,27 +15,39 @@
     }
     h4 {
       color: $dip;
-      font-size: 20px;
+      font-size: 24px;
       margin-bottom: 10px;
+      line-height: 2rem;
+      font-weight: 400;
+      @include l-space-1;
     }
     h5 {
       color: $dip;
       font: 16px $sw;
+      line-height: 1.6rem;
       margin-bottom: 30px;
+      @include l-space-1;
       a {
         color: $baseColor;
       }
+      span {
+        color: $baseColor;
+      }
+    }
+    p{
+      @include l-space-2;
     }
   }
 }
 .testi_inner {
   .col-lg-6 {
     // background: #1b1b1b;
-    background-color: #b3bbc9;
-    background-image: linear-gradient(220deg, #b3bbc9 0%, #e8c6df 100%);
+    // background-color: #b3bbc9;
+    background-image: linear-gradient(218deg, rgba(43, 255, 209, .7) 0%, rgba(131, 70, 150, 0.75) 40%, rgba(6, 9, 27, .9) 100%);
   }
   .testi_slider {
-    background: #1b1b1b;
+    // background: #1b1b1b;
+    // background: rgba(6, 26, 39, 0.6); 
     padding-top: 70px;
   }
   .testi_slider_box {
@@ -44,14 +56,18 @@
     float: right;
   }
   .navigation {
-    margin-top: 40px;
-    padding-bottom: 110px;
+    margin-top: 20px;
+    padding-bottom: 20px;
     .slick-arrow {
       display: inline-block;
       cursor: pointer;
       i {
-        font-size: 18px;
+        font-size: 22px;
         color: $dip;
+        font-weight: 900;
+        &:hover{
+          color: $baseColor;
+        }
       }
     }
     .next {
@@ -62,6 +78,9 @@
 .video_big_image {
   margin-top: 200px;
   position: relative;
+  .main_title {
+    margin-bottom: 75px;
+  }
 }
 /* End Testimonials Slider Area css
 ============================================================================================ */

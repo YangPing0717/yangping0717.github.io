@@ -67,7 +67,7 @@ a:hover, a:focus {
 body {
   line-height: 26px;
   font-size: 16px;
-  font-family: "swanse";
+  font-family: "Noto Sans TC", "Noto Sans JP", sans-serif;
   color: #dfd2d2;
 }
 
@@ -77,7 +77,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "swanse";
+  font-family: "Noto Sans TC", "Noto Sans JP", sans-serif;
   font-weight: 400;
 }
 
@@ -168,28 +168,28 @@ button:focus {
 }
 
 ::-moz-selection {
-  background-color: #70ffd2;
-  color: #1b1b1b;
+  background-color: black;
+  color: #fff;
 }
 
 ::selection {
-  background-color: #70ffd2;
-  color: #1b1b1b;
+  background-color: black;
+  color: #fff;
 }
 
 -webkit-::-moz-selection {
-  background-color: #70ffd2;
-  color: #1b1b1b;
+  background-color: black;
+  color: #fff;
 }
 
 -webkit-::selection {
-  background-color: #70ffd2;
-  color: #1b1b1b;
+  background-color: black;
+  color: #fff;
 }
 
 ::-moz-selection {
-  background-color: #70ffd2;
-  color: #1b1b1b;
+  background-color: black;
+  color: #fff;
 }
 
 .animated .char {
@@ -227,14 +227,17 @@ button:focus {
   font-size: 20px;
   line-height: 26px;
   color: #dfd2d2;
-  font-family: "swanse";
+  font-family: "Noto Sans TC", "Noto Sans JP", sans-serif;
   margin-bottom: 10px;
 }
 
 /* End Main Title Area css
 ============================================================================================ */
 .bg_color {
-  background: #052032;
+  background: #061a27;
+}
+.bg_color.bg_color_gra {
+  background: linear-gradient(116deg, #e8d5cc 0%, #ddccdf 53%, #aec6c2 100%);
 }
 
 /* Preloader Area css
@@ -256,7 +259,7 @@ button:focus {
   width: 100%;
   height: 100%;
   border-radius: 50%;
-  background-color: #a3cc01;
+  background-color: #70ffd2;
   opacity: 0.6;
   position: absolute;
   top: 0;
@@ -295,7 +298,7 @@ button:focus {
 /* Button Area css
 ============================================================================================ */
 .arrow_btn {
-  font: 16px "swanse";
+  font: 16px "Noto Sans TC", "Noto Sans JP", sans-serif;
   color: #70ffd2;
   display: inline-block;
   -webkit-transition: all 300ms linear 0s;
@@ -331,7 +334,7 @@ button:focus {
           box-shadow: none !important;
   padding-top: 3px;
   font-size: 13px;
-  font-family: "swanse";
+  font-family: "Noto Sans TC", "Noto Sans JP", sans-serif;
   -webkit-transition: all 300ms linear 0s;
   transition: all 300ms linear 0s;
 }
@@ -354,7 +357,7 @@ button:focus {
           box-shadow: none !important;
   padding-top: 3px;
   font-size: 18px;
-  font-family: "swanse";
+  font-family: "Noto Sans TC", "Noto Sans JP", sans-serif;
   text-transform: uppercase;
   border: none;
   letter-spacing: 0;
@@ -374,9 +377,9 @@ button:focus {
   border: 1px solid #989090;
   color: #fff;
   text-transform: uppercase;
-  padding: 10px 20px;
+  padding: 8px 18px;
   display: inline-block;
-  border-radius: 0px;
+  border-radius: 2px;
   -webkit-transition: all 300ms linear 0s;
   transition: all 300ms linear 0s;
   letter-spacing: 0.2rem;
@@ -524,7 +527,7 @@ button:focus {
 }
 .home_logo .slide-number sup {
   color: #fff;
-  font: 18px "swanse";
+  font: 18px "Noto Sans TC", "Noto Sans JP", sans-serif;
   vertical-align: top;
 }
 .home_logo .nav {
@@ -580,7 +583,7 @@ button:focus {
 }
 .main_menu .navbar .number {
   color: #fff;
-  font: 16px "swanse";
+  font: 16px "Noto Sans TC", "Noto Sans JP", sans-serif;
   white-space: nowrap;
 }
 .main_menu .navbar .nav.navbar-nav {
@@ -591,9 +594,9 @@ button:focus {
 }
 .main_menu .navbar .nav.navbar-nav li a {
   color: #fff;
-  font-family: "swanse";
+  font-family: "Noto Sans TC", "Noto Sans JP", sans-serif;
   position: relative;
-  font: 16px/138px "swanse";
+  font: 16px/138px "Noto Sans TC", "Noto Sans JP", sans-serif;
   position: relative;
   -webkit-transition: color 0.5s ease;
   transition: color 0.5s ease;
@@ -637,7 +640,7 @@ button:focus {
   display: block;
   line-height: 49px;
   color: #828282;
-  font-family: "swanse";
+  font-family: "Noto Sans TC", "Noto Sans JP", sans-serif;
   font-size: 15px;
   padding: 0px 30px;
   -webkit-transition: all 300ms ease;
@@ -757,7 +760,7 @@ button:focus {
   padding: 0px 34px 0px 16px;
   font-size: 17px;
   font-weight: 600;
-  font-family: "swanse";
+  font-family: "Noto Sans TC", "Noto Sans JP", sans-serif;
   letter-spacing: 0.51px;
   position: relative;
 }
@@ -780,6 +783,7 @@ button:focus {
   position: absolute;
   left: 60px;
   top: 52px;
+  width: 86px;
 }
 .menu_dark .main_menu .navbar .number {
   color: #fff;
@@ -829,7 +833,7 @@ button:focus {
 }
 .main_slider_area ul li .slider_text_box .tag_text {
   color: #fff;
-  font-family: "swanse";
+  font-family: "Noto Sans TC", "Noto Sans JP", sans-serif;
   font-weight: 900;
   -webkit-filter: drop-shadow(0px 2px 1px rgb(0, 3, 34));
           filter: drop-shadow(0px 2px 1px rgb(0, 3, 34));
@@ -837,7 +841,7 @@ button:focus {
 }
 .main_slider_area ul li .slider_text_box .first_text {
   color: #fff;
-  font-family: "swanse";
+  font-family: "Noto Sans TC", "Noto Sans JP", sans-serif;
   font-weight: 300;
   -webkit-filter: drop-shadow(0px 3px 2px rgb(0, 3, 34));
           filter: drop-shadow(0px 3px 2px rgb(0, 3, 34));
@@ -863,7 +867,7 @@ button:focus {
 }
 .main_slider_area ul li .slider_text_box .secand_text {
   color: #fff;
-  font-family: "swanse";
+  font-family: "Noto Sans TC", "Noto Sans JP", sans-serif;
   font-weight: 900;
   -webkit-filter: drop-shadow(0px 2px 1px rgb(0, 3, 34));
           filter: drop-shadow(0px 2px 1px rgb(0, 3, 34));
@@ -943,7 +947,7 @@ button:focus {
   margin-bottom: 15px;
 }
 .who_we_text h6 {
-  font: 16px/24px "swanse";
+  font: 16px/24px "Noto Sans TC", "Noto Sans JP", sans-serif;
   color: #dfd2d2;
   margin-bottom: 20px;
 }
@@ -986,7 +990,7 @@ button:focus {
           animation-delay: calc(0.1s * var(--char-index));
 }
 .spec_list .nav li a {
-  font: 16px/26px "swanse";
+  font: 16px/26px "Noto Sans TC", "Noto Sans JP", sans-serif;
   color: #dfd2d2;
   -webkit-transition: all 300ms linear 0s;
   transition: all 300ms linear 0s;
@@ -1017,12 +1021,34 @@ button:focus {
 ============================================================================================ */
 .latest_project_area {
   overflow: hidden;
-  background: url(../images/japan_map.jpg?v=202310) no-repeat center top/cover;
 }
-@media (max-width: 767px) {
-  .latest_project_area {
-    background: url(../images/japan_map_m.png) no-repeat right top/cover;
-  }
+.latest_project_area.bg_img {
+  position: relative;
+  background-image: linear-gradient(20deg, #071926 0%, #232c41 40%, #2d0c33 100%);
+  z-index: 0;
+}
+.latest_project_area.bg_img::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: url(../images/japan_map_2.png?v=202310) no-repeat left top/cover;
+  z-index: -1;
+}
+.latest_project_area.asia_bg_img {
+  position: relative;
+  background-image: linear-gradient(335deg, #071926 0%, #232c41 40%, #2d0c33 100%);
+  z-index: 0;
+}
+.latest_project_area.asia_bg_img::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: url(../images/asia_map.png?v=202310) no-repeat left top/cover;
+  z-index: -1;
 }
 .latest_project_area .main_title {
   margin-bottom: 70px;
@@ -1049,9 +1075,42 @@ button:focus {
   width: 100%;
   margin-bottom: 30px;
 }
+.latest_project_area .right .latest_slider_w {
+  margin-left: 0px;
+}
+.latest_project_area .right .latest_slider_w .item {
+  margin: 0px 15px;
+  outline: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+.latest_project_area .right .latest_slider_w .item img {
+  width: 100%;
+  margin-bottom: 30px;
+}
+.latest_project_area .right .latest_slider_w .item.world_trip {
+  width: 350px;
+}
+.latest_project_area .navigation .slick-arrow {
+  display: inline-block;
+  cursor: pointer;
+  -webkit-transition: all 300ms linear 0s;
+  transition: all 300ms linear 0s;
+}
+.latest_project_area .navigation .slick-arrow i {
+  font-size: 28px;
+  color: #fff;
+}
+.latest_project_area .navigation .slick-arrow i:hover {
+  font-weight: 900;
+  color: #70ffd2;
+}
+.latest_project_area .navigation .next_2 {
+  margin-left: 18px;
+}
 
 .l_project_item .left_text h6 {
-  font: 16px/26px "swanse";
+  font: 16px/26px "Noto Sans TC", "Noto Sans JP", sans-serif;
   color: #dfd2d2;
   margin-bottom: 8px;
   letter-spacing: 0.3rem;
@@ -1090,6 +1149,9 @@ button:focus {
 }
 .about_img_area .main_title h2 {
   line-height: 69px;
+}
+.about_img_area .bg_img {
+  height: 768px;
 }
 
 /* End About Image Area css
@@ -1137,12 +1199,12 @@ button:focus {
   font-size: 150px;
   color: #70ffd2;
   font-style: normal;
-  font-family: "swanse";
+  font-family: "Noto Sans TC", "Noto Sans JP", sans-serif;
   line-height: 100px;
   margin-top: 24px;
 }
 .experience_design_area .exp_text .media-body p {
-  font: 20px/35px "swanse";
+  font: 20px/35px "Noto Sans TC", "Noto Sans JP", sans-serif;
   color: #fff;
   max-width: 400px;
   margin-bottom: 35px;
@@ -1183,7 +1245,7 @@ button:focus {
 ============================================================================================ */
 .date_list {
   font-size: 16px;
-  font-family: "swanse";
+  font-family: "Noto Sans TC", "Noto Sans JP", sans-serif;
   color: #989090;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1244,7 +1306,7 @@ button:focus {
   position: absolute;
   width: 100%;
   z-index: 10;
-  top: 0px;
+  top: 161px;
   left: 0px;
 }
 
@@ -1256,24 +1318,33 @@ button:focus {
 }
 .testi_slider .testi_item h4 {
   color: #fff;
-  font-size: 20px;
+  font-size: 24px;
   margin-bottom: 10px;
+  line-height: 2rem;
+  font-weight: 400;
+  letter-spacing: 0.1rem;
 }
 .testi_slider .testi_item h5 {
   color: #fff;
-  font: 16px "swanse";
+  font: 16px "Noto Sans TC", "Noto Sans JP", sans-serif;
+  line-height: 1.6rem;
   margin-bottom: 30px;
+  letter-spacing: 0.1rem;
 }
 .testi_slider .testi_item h5 a {
   color: #70ffd2;
 }
+.testi_slider .testi_item h5 span {
+  color: #70ffd2;
+}
+.testi_slider .testi_item p {
+  letter-spacing: 0.2rem;
+}
 
 .testi_inner .col-lg-6 {
-  background-color: #b3bbc9;
-  background-image: linear-gradient(220deg, #b3bbc9 0%, #e8c6df 100%);
+  background-image: linear-gradient(218deg, rgba(43, 255, 209, 0.7) 0%, rgba(131, 70, 150, 0.75) 40%, rgba(6, 9, 27, 0.9) 100%);
 }
 .testi_inner .testi_slider {
-  background: #1b1b1b;
   padding-top: 70px;
 }
 .testi_inner .testi_slider_box {
@@ -1282,16 +1353,20 @@ button:focus {
   float: right;
 }
 .testi_inner .navigation {
-  margin-top: 40px;
-  padding-bottom: 110px;
+  margin-top: 20px;
+  padding-bottom: 20px;
 }
 .testi_inner .navigation .slick-arrow {
   display: inline-block;
   cursor: pointer;
 }
 .testi_inner .navigation .slick-arrow i {
-  font-size: 18px;
+  font-size: 22px;
   color: #fff;
+  font-weight: 900;
+}
+.testi_inner .navigation .slick-arrow i:hover {
+  color: #70ffd2;
 }
 .testi_inner .navigation .next {
   margin-left: 18px;
@@ -1300,6 +1375,9 @@ button:focus {
 .video_big_image {
   margin-top: 200px;
   position: relative;
+}
+.video_big_image .main_title {
+  margin-bottom: 75px;
 }
 
 /* End Testimonials Slider Area css
@@ -1341,7 +1419,7 @@ button:focus {
 }
 .testi_text_slider .item p {
   color: #fff;
-  font: 25px/50px "swanse";
+  font: 25px/50px "Noto Sans TC", "Noto Sans JP", sans-serif;
   margin-bottom: 25px;
 }
 .testi_text_slider .item h4 {
@@ -1377,6 +1455,76 @@ button:focus {
 
 /* End Video Area css
 ============================================================================================ */
+/* PLAY NOW */
+.play-now {
+  position: relative;
+  width: 340px;
+  height: 340px;
+  position: absolute;
+  z-index: 4;
+  overflow: hidden;
+  margin: auto;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  top: 0;
+}
+.play-now .play-btn {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 1;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 25px 0 25px 40px;
+  border-color: transparent transparent transparent #ffffff;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+          transform: translateX(-50%) translateY(-50%);
+}
+.play-now text {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  fill: #ffffff;
+}
+.play-now svg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 340px;
+  -webkit-animation-name: rotate;
+  animation-name: rotate;
+  -webkit-animation-duration: 10s;
+  animation-duration: 10s;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+}
+
+/* ANIMATIONS */
+@-webkit-keyframes rotate {
+  from {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+  to {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+}
+@keyframes rotate {
+  from {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+  to {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+}
 /*---------------------------------------------------- */
 /*----------------------------------------------------*/
 /* Client Logo Area css
@@ -1474,7 +1622,7 @@ button:focus {
 }
 .team_item .team_text h5 {
   color: #dfd2d2;
-  font: 16px "swanse";
+  font: 16px "Noto Sans TC", "Noto Sans JP", sans-serif;
   margin-bottom: 0px;
   -webkit-transform: translateY(10px);
           transform: translateY(10px);
@@ -1957,7 +2105,7 @@ button:focus {
 }
 .g_fillter .nav li a {
   color: #fff;
-  font: 16px "swanse";
+  font: 16px "Noto Sans TC", "Noto Sans JP", sans-serif;
   -webkit-transition: all 300ms linear 0s;
   transition: all 300ms linear 0s;
 }
@@ -2221,12 +2369,12 @@ button:focus {
   padding-top: 25px;
 }
 .portfolio_grid_item .portfolio_text h6 {
-  color: #dfd2d2;
-  font: 16px "swanse";
+  color: black;
+  font: 16px "Noto Sans TC", "Noto Sans JP", sans-serif;
   margin-bottom: 12px;
 }
 .portfolio_grid_item .portfolio_text h4 {
-  color: #fff;
+  color: #665e70;
   font-size: 29px;
   margin-bottom: 0px;
   -webkit-transition: all 300ms linear 0s;
@@ -2235,12 +2383,31 @@ button:focus {
 .portfolio_grid_item .portfolio_text h4:hover {
   color: #70ffd2;
 }
+.portfolio_grid_item .portfolio_text p {
+  color: #665e70;
+  margin-top: 0.5rem;
+}
+.portfolio_grid_item .portfolio_text p:hover {
+  color: #70ffd2;
+}
 .portfolio_grid_item:hover .portfolio_img img {
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
 }
 .portfolio_grid_item:hover .portfolio_img .light_btn {
   opacity: 1;
+}
+.portfolio_grid_item:hover .portfolio_text h4 {
+  color: #061a27;
+}
+.portfolio_grid_item:hover .portfolio_text h4:hover {
+  color: #061a27;
+}
+.portfolio_grid_item:hover .portfolio_text p {
+  color: #061a27;
+}
+.portfolio_grid_item:hover .portfolio_text p:hover {
+  color: #061a27;
 }
 
 /* End Portfolio Grid Area css
@@ -2326,6 +2493,27 @@ button:focus {
   position: relative;
   z-index: 99;
 }
+.latest_news_area.bg_img {
+  position: relative;
+  background-image: linear-gradient(338deg, #011e2d 0%, rgba(35, 44, 65, 0.75) 40%, rgba(7, 25, 38, 0.9) 100%);
+}
+.latest_news_area.bg_img::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url(../images/bg_fest.png?v=202310) no-repeat right top/cover;
+}
+@media (max-width: 767px) {
+  .latest_news_area.bg_img {
+    background: url(../images/bg_fest.png?v=202310) no-repeat right top/cover;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+}
 .latest_news_area .main_title {
   margin-bottom: 75px;
 }
@@ -2340,7 +2528,7 @@ button:focus {
   left: 0;
   width: 100%;
   height: 100%;
-  background: #1b1b1b;
+  background: rgba(2, 8, 12, 0.9);
   border-radius: 2px;
   padding-left: 36px;
   padding-right: 42px;
@@ -2368,32 +2556,40 @@ button:focus {
   right: 0;
 }
 .l_news_item .flipbox_text h5 {
-  font: 16px/26px "swanse";
-  color: #dfd2d2;
-  margin-bottom: 18px;
+  font: 16px/24px "Noto Sans TC", "Noto Sans JP", sans-serif;
+  color: #fff;
+  margin-bottom: 14px;
   -webkit-transform: translateY(10px);
           transform: translateY(10px);
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
   opacity: 0;
+  letter-spacing: 0.1rem;
 }
 .l_news_item .flipbox_text h4 {
   color: #fff;
-  font-size: 20px;
-  margin-bottom: 30px;
+  font: 20px/22px "Noto Sans TC", "Noto Sans JP", sans-serif;
+  margin-bottom: 20px;
   -webkit-transform: translateY(10px);
           transform: translateY(10px);
   -webkit-transition: all 0.7s;
   transition: all 0.7s;
   opacity: 0;
+  letter-spacing: 0.2rem;
 }
 .l_news_item .flipbox_text p {
-  margin-bottom: 90px;
+  font: 14px/22px "Noto Sans TC", "Noto Sans JP", sans-serif;
+  margin-bottom: 20px;
   -webkit-transform: translateY(10px);
           transform: translateY(10px);
   -webkit-transition: all 0.8s;
   transition: all 0.8s;
   opacity: 0;
+  letter-spacing: 0.1rem;
+}
+.l_news_item .flipbox_text .arrow_btn {
+  position: absolute;
+  bottom: 30px;
 }
 .l_news_item:hover .flipbox_text {
   opacity: 1;
@@ -2467,10 +2663,6 @@ button:focus {
 ============================================================================================ */
 /* Blog banner area css
 ============================================================================================ */
-.bg_img {
-  height: 768px;
-}
-
 /* End Blog banner area css
 ============================================================================================ */
 /* Blog single area css
@@ -2482,7 +2674,7 @@ button:focus {
 .blog_single_title {
   font-size: 29px;
   line-height: 42px;
-  font-family: "swanse";
+  font-family: "Noto Sans TC", "Noto Sans JP", sans-serif;
   color: #fff;
   margin-bottom: 75px;
 }
@@ -2533,7 +2725,7 @@ button:focus {
 }
 .blog_details_info blockquote:before {
   content: "“";
-  font-family: "swanse";
+  font-family: "Noto Sans TC", "Noto Sans JP", sans-serif;
   font-size: 150px;
   color: #70ffd2;
   line-height: 130px;
@@ -2570,7 +2762,7 @@ button:focus {
 }
 .single_post_tag .tag_links li a {
   color: #767676;
-  font-family: "swanse";
+  font-family: "Noto Sans TC", "Noto Sans JP", sans-serif;
   -webkit-transition: color 0.3s linear;
   transition: color 0.3s linear;
 }
@@ -2799,7 +2991,7 @@ button:focus {
 .comment_box .post_comment .comment_card .media-body .comment_card_head a {
   color: #ababab;
   font-size: 13px;
-  font-family: "swanse";
+  font-family: "Noto Sans TC", "Noto Sans JP", sans-serif;
   text-transform: uppercase;
   margin-left: 12px;
   -webkit-transition: all 0.2s linear;
@@ -2904,7 +3096,7 @@ button:focus {
   margin-bottom: 40px;
 }
 .contact_details h2 {
-  font: 29px/42px "swanse";
+  font: 29px/42px "Noto Sans TC", "Noto Sans JP", sans-serif;
   color: #fff;
   margin-bottom: 45px;
 }
@@ -2916,7 +3108,7 @@ button:focus {
   font-family: "swanseb";
 }
 .contact_details .nav li a {
-  font: 16px "swanse";
+  font: 16px "Noto Sans TC", "Noto Sans JP", sans-serif;
   color: #767676;
 }
 .contact_details .nav li a span {
@@ -2950,26 +3142,26 @@ button:focus {
   outline: none;
   -webkit-box-shadow: none;
           box-shadow: none;
-  font: 16px/50px "swanse";
+  font: 16px/50px "Noto Sans TC", "Noto Sans JP", sans-serif;
   background: transparent;
   -webkit-transition: all 0.2s linear;
   transition: all 0.2s linear;
   color: #767676;
 }
 .contact_form .input-group input.placeholder {
-  font: 16px/50px "swanse";
+  font: 16px/50px "Noto Sans TC", "Noto Sans JP", sans-serif;
   color: #767676;
 }
 .contact_form .input-group input:-moz-placeholder {
-  font: 16px/50px "swanse";
+  font: 16px/50px "Noto Sans TC", "Noto Sans JP", sans-serif;
   color: #767676;
 }
 .contact_form .input-group input::-moz-placeholder {
-  font: 16px/50px "swanse";
+  font: 16px/50px "Noto Sans TC", "Noto Sans JP", sans-serif;
   color: #767676;
 }
 .contact_form .input-group input::-webkit-input-placeholder {
-  font: 16px/50px "swanse";
+  font: 16px/50px "Noto Sans TC", "Noto Sans JP", sans-serif;
   color: #767676;
 }
 .contact_form .input-group input:focus {
@@ -2991,24 +3183,24 @@ button:focus {
   outline: none;
   -webkit-box-shadow: none;
           box-shadow: none;
-  font: 16px/50px "swanse";
+  font: 16px/50px "Noto Sans TC", "Noto Sans JP", sans-serif;
   background: transparent;
   color: #767676;
 }
 .contact_form .input-group textarea.placeholder {
-  font: 16px/50px "swanse";
+  font: 16px/50px "Noto Sans TC", "Noto Sans JP", sans-serif;
   color: #767676;
 }
 .contact_form .input-group textarea:-moz-placeholder {
-  font: 16px/50px "swanse";
+  font: 16px/50px "Noto Sans TC", "Noto Sans JP", sans-serif;
   color: #767676;
 }
 .contact_form .input-group textarea::-moz-placeholder {
-  font: 16px/50px "swanse";
+  font: 16px/50px "Noto Sans TC", "Noto Sans JP", sans-serif;
   color: #767676;
 }
 .contact_form .input-group textarea::-webkit-input-placeholder {
-  font: 16px/50px "swanse";
+  font: 16px/50px "Noto Sans TC", "Noto Sans JP", sans-serif;
   color: #767676;
 }
 .contact_form .input-group textarea:focus {
@@ -3074,7 +3266,7 @@ button:focus {
 }
 .list_wd .nav li a {
   color: #fff;
-  font: 16px/26px "swanse";
+  font: 16px/26px "Noto Sans TC", "Noto Sans JP", sans-serif;
   -webkit-transition: all 300ms linear 0s;
   transition: all 300ms linear 0s;
 }

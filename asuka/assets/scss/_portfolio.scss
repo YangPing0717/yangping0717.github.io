@@ -82,6 +82,9 @@
       left: 42px;
       bottom: 35px;
     }
+    // h6{
+    //   color: $black;
+    // }
   }
   &:hover {
     .portfolio_text {
@@ -273,15 +276,22 @@
   .portfolio_text {
     padding-top: 25px;
     h6 {
-      color: $pfont;
+      color: $black;
       font: 16px $sw;
       margin-bottom: 12px;
     }
     h4 {
-      color: $dip;
+      color: $darkfont;
       font-size: 29px;
       margin-bottom: 0px;
       @include transition;
+      &:hover {
+        color: $baseColor;
+      }
+    }
+    p {
+      color: $darkfont;
+      margin-top: 0.5rem;
       &:hover {
         color: $baseColor;
       }
@@ -294,6 +304,22 @@
       }
       .light_btn {
         opacity: 1;
+      }
+    }
+    .portfolio_text {
+      // padding-top: 25px;
+      // color: $baseColor;
+      h4 {
+        color: $darkblue;
+        &:hover {
+          color: $darkblue;
+        }
+      }
+      p {
+        color: $darkblue;
+        &:hover {
+          color: $darkblue;
+        }
       }
     }
   }

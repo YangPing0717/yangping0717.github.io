@@ -98,9 +98,57 @@
 ============================================================================================ */
 .latest_project_area {
   overflow: hidden;
-  background: url(../images/japan_map.jpg?v=202310) no-repeat center top / cover;
+  // position: relative;
+  &.bg_img {
+    position: relative;
+    // top: 0;
+    // left: 0;
+    // background: url(../images/japan_map.jpg?v=202310) no-repeat left top / cover;
+    background-image: linear-gradient(20deg, #071926 0%, #232c41 40%, #2d0c33 100%);
+    z-index: 0;
+    &::before{
+      content: '';
+      position: absolute;
+      top: 0;
+      // left: 0;
+      width: 100%;
+      height: 100%;
+      background: url(../images/japan_map_2.png?v=202310) no-repeat left top / cover;
+      z-index: -1;
+    }
+  }
+  &.asia_bg_img {
+    position: relative;
+    // top: 0;
+    // left: 0;
+    // background: url(../images/japan_map.jpg?v=202310) no-repeat left top / cover;
+    background-image: linear-gradient(335deg, #071926 0%, #232c41 40%, #2d0c33 100%);
+    z-index: 0;
+    &::before{
+      content: '';
+      position: absolute;
+      top: 0;
+      // left: 0;
+      width: 100%;
+      height: 100%;
+      background: url(../images/asia_map.png?v=202310) no-repeat left top / cover;
+      z-index: -1;
+    }
+  }
+  
+  
+  
+  // &::before{
+  //   content: '';
+  //   position: absolute;
+  //   top: 0;
+  //   left: 0;
+  //   width: 100%;
+  //   height: 100%;
+  //   background: url(../images/japan_map.jpg?v=202310) no-repeat left top / cover;
+  // }
   @media (max-width: 767px){
-    background: url(../images/japan_map_m.png) no-repeat right top / cover;
+    // background: url(../images/japan_map_m.png?v=202310) no-repeat right top / cover;
   }
   .main_title {
     margin-bottom: 70px;
@@ -123,9 +171,48 @@
           width: 100%;
           margin-bottom: 30px;
         }
+        // &.world_trip {
+        //   width: 350px;
+        // }
+        
+      }
+    }
+    .latest_slider_w {
+      margin-left: 0px;
+      .item {
+        margin: 0px 15px;
+        outline: none;
+        box-shadow: none;
+        img {
+          width: 100%;
+          margin-bottom: 30px;
+        }
+        &.world_trip {
+          width: 350px;
+        }
       }
     }
   }
+  .navigation {
+    // margin-top: 40px;
+    // padding-bottom: 110px;
+    .slick-arrow {
+      display: inline-block;
+      cursor: pointer;
+      @include transition;
+      i {
+        font-size: 28px;
+        color: $dip;
+        &:hover{
+          font-weight: 900;
+          color: $baseColor;
+        }
+      }
+    }
+    .next_2 {
+      margin-left: 18px;
+    }
+  } 
 }
 .l_project_item {
   .left_text {
@@ -170,6 +257,9 @@
     h2 {
       line-height: 69px;
     }
+  }
+  .bg_img{
+    height: 768px;
   }
 }
 /* End About Image Area css

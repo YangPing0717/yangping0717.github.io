@@ -1,12 +1,16 @@
 /*font Variables*/
-$sw: "swanse";
+$sw: "Noto Sans TC", "Noto Sans JP", sans-serif;
 $swb: "swanseb";
+
+// 原來
+// $sw: "swanse";
+// $swb: "swanseb";
 
 $primary-font: "Noto Sans TC", "Noto Sans JP", sans-serif;
 // $primary-font: "Noto Serif", serif;
 // $primary-font: "Cormorant Garamond", serif;
 
-
+// Verse 用: font-family: 'Noto Serif TC', serif;
 
 
 
@@ -18,10 +22,15 @@ $pfont: #dfd2d2;
 $pfont2: #989090;
 $black: black;
 $darkblue: #061a27;
+$darkfont: #665e70;
 // $pfont: #a0a0a0;
+$subfont: #59a6eb;
+$darkred: #1c1515;
+
+
 
 $gra_01: linear-gradient(90deg, #efb1ff 0%, #8a9cff 53%, #00ffd1 100%);
-
+$gra_02: linear-gradient(116deg, #e8d5cc 0%, #ddccdf 53%, #aec6c2 100%);
 
 /*=================== fonts ====================*/
 
@@ -70,6 +79,17 @@ $gra_01: linear-gradient(90deg, #efb1ff 0%, #8a9cff 53%, #00ffd1 100%);
   font-family: "swanseb";
   src: url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800;900&family=Righteous&display=swap");
 }
+
+// 原來
+// @font-face {
+//   font-family: "swanse";
+//   src: url(../fonts/swansea-webfont.woff);
+// }
+// @font-face {
+//   font-family: "swanseb";
+//   src: url(../fonts/swansea_bold-webfont.woff);
+// }
+
 
 // "Noto Serif TC", "Noto Serif JP", serif
 

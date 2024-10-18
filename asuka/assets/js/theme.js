@@ -39,10 +39,10 @@
         autoHeight: "on",
         minHeight: 480,
         navigation: {
-          keyboardNavigation: "off",
+          keyboardNavigation: "on",
           keyboard_direction: "horizontal",
           onHoverStop: "off",
-          mouseScrollNavigation: "off",
+          mouseScrollNavigation: "on",
           mouseScrollReverse: "default",
           touch: {
             touchenabled: "on",
@@ -148,6 +148,7 @@
         infinite: true,
         centerMode: true,
         centerPadding: "300px",
+        // variableWidth: true,
         responsive: [
           {
             breakpoint: 992,
@@ -168,6 +169,53 @@
     }
   }
   latest_project_slider();
+
+  // 新增 - 可控制 item 寬度 + 左右控制箭頭
+  function latest_project_slider_w() {
+    if ($(".latest_slider_w").length) {
+      $(".latest_slider_w").slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 5000,
+        // arrows: false,
+        dots: false,
+        pauseOnHover: true,
+        infinite: true,
+        centerMode: true,
+        centerPadding: "300px",
+        // 可控制 item 寬度
+        variableWidth: true,
+
+        // dots: false,
+        // infinite: true,
+        speed: 300,
+        // slidesToShow: 1,
+        // adaptiveHeight: true,
+        prevArrow: ".prev_2",
+        nextArrow: ".next_2",
+
+        responsive: [
+          {
+            breakpoint: 992,
+            settings: {
+              slidesToShow: 2,
+              centerPadding: "0px",
+            },
+          },
+          {
+            breakpoint: 768,
+            settings: {
+              slidesToShow: 1,
+              centerPadding: "0px",
+            },
+          },
+        ],
+      });
+    }
+  }
+  latest_project_slider_w();
+
 
   function testi_text_slider() {
     if ($(".testi_text_slider").length) {
@@ -264,6 +312,31 @@
       slick_2_is_animating
     );
   });
+
+
+  // 新增 init slider
+  const slick_3 = $(".latest_slider_w");
+  var slick_3_is_animating = false;
+
+  slick_3.on("afterChange", function (index) {
+    console.log("Slide after change " + index);
+    slick_3_is_animating = false;
+  });
+
+  slick_3.on("beforeChange", function (index) {
+    console.log("Slide before change " + index);
+    slick_3_is_animating = true;
+  });
+
+  slick_3.on("wheel", function (e) {
+    slick_handle_wheel_event_debounced(
+      e.originalEvent,
+      slick_3,
+      slick_3_is_animating
+    );
+  });
+
+
 
   /*=============================================== 
 	*** Testimonials Slider

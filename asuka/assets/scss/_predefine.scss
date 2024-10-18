@@ -15,6 +15,7 @@ body {
   font-size: 16px;
   font-family: $sw;
   color: $pfont;
+  // font-size: clamp(.9375rem, 1.15vw, 1rem);
 }
 h1,
 h2,
@@ -96,18 +97,18 @@ button:focus {
 }
 
 ::selection {
-  background-color: $baseColor;
-  color: #1b1b1b;
+  background-color: $black;
+  color: $dip;
 }
 
 -webkit-::selection {
-  background-color: $baseColor;
-  color: #1b1b1b;
+  background-color: $black;
+  color: $dip;
 }
 
 ::-moz-selection {
-  background-color: $baseColor;
-  color: #1b1b1b;
+  background-color: $black;
+  color: $dip;
 }
 
 .animated {
@@ -153,7 +154,11 @@ button:focus {
 
 .bg_color {
   // background: #1b1b1b;
-  background: #052032;
+  // background: #052032;
+  background: $darkblue;
+  &.bg_color_gra{
+    background: $gra_02;
+  }
 }
 
 /* Preloader Area css
@@ -179,7 +184,7 @@ button:focus {
   width: 100%;
   height: 100%;
   border-radius: 50%;
-  background-color: #a3cc01;
+  background-color: $baseColor;
   opacity: 0.6;
   position: absolute;
   top: 0;
