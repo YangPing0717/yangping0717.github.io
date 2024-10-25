@@ -429,50 +429,67 @@
         <!--================Footer Area =================-->
         <footer class="footer_area">
             <div class="container">
-                <div class="row">
-                    <div class="col-lg-3 col-md-4 col-sm-4 col-5">
-                        <aside class="f_widget logo_wd">
-                            <img src="assets/images/logo-white.png" alt="">
-                        </aside>
-                    </div>
-                    <div class="col-lg-3 col-md-4 col-sm-4 col-7">
-                        <aside class="f_widget copyright_wd">
-                            <p>© Sparch. 2020<br />
-                                All Rights Resevered</p>
-                        </aside>
-                    </div>
-                    <div class="col-lg-2 col-md-4 col-sm-4 col-4">
-                        <aside class="f_widget list_wd">
-                            <ul class="nav flex-column">
-                                <li><a href="">Home</a></li>
-                                <li><a href="">About</a></li>
-                                <li><a href="">Projects</a></li>
-                                <li><a href="">News</a></li>
-                                <li><a href="">Contacts</a></li>
-                            </ul>
-                        </aside>
-                    </div>
-                    <div class="col-lg-2 col-md-4 col-sm-4 col-4">
-                        <aside class="f_widget list_wd">
-                            <ul class="nav flex-column">
-                                <li><a href="">EN</a></li>
-                                <li><a href="">FRA</a></li>
-                                <li><a href="">GER</a></li>
-                            </ul>
-                        </aside>
-                    </div>
-                    <div class="col-lg-2 col-md-4 col-sm-4 col-4">
-                        <aside class="f_widget list_wd">
-                            <ul class="nav flex-column">
-                                <li><a href="">Facebook</a></li>
-                                <li><a href="">Twitter</a></li>
-                                <li><a href="">Behance</a></li>
-                            </ul>
-                        </aside>
-                    </div>
+              <div class="row">
+                <div class="col-lg-4 col-md-4 col-sm-4 col-12">
+                  <aside class="f_widget logo_wd logo list_wd contract_add">
+                    <img src="assets/images/logo_white.svg" alt="">
+                    <ul class="nav flex-column py-5 ">
+                      <li><a href="https://maps.app.goo.gl/NX5dMsSSLt4nY1p27">台北市士林區中山北路5段516號5樓</a></li>
+                      <li><span class="icon-slash">E-mail</span> <a href="mailto:info@asukatw.com">info@asukatw.com</a></li>
+                      <li><span class="icon-slash">電話</span> <a href="tel:+886266178899" class="number">(02)6617-8899</a></li>
+                      <li><span class="icon-slash">傳真</span> <a href="fax:+886228833008" class="number">(02)2883-3008</a></li>
+                      <!-- <li><a href="">Contacts</a></li> -->
+                    </ul>
+                  </aside>
                 </div>
+                <div class="col-lg-3 col-md-4 col-sm-4 col-12">
+                  <aside class="f_widget copyright_wd">
+                    <p>© ASUKA TRAVEL. <span id="year"></span><br />
+                      All Rights Resevered</p>
+                  </aside>
+                </div>
+                <div class="col-lg-2 col-md-4 col-sm-4 col-5">
+                  <aside class="f_widget list_wd">
+                    <ul class="nav flex-column pb-5">
+                      <li><a href="">Home</a></li>
+                      <li><a href="">About</a></li>
+                      <li><a href="">Projects</a></li>
+                      <li><a href="">News</a></li>
+                      <li><a href="">Contacts</a></li>
+                    </ul>
+                  </aside>
+                </div>
+                <!-- <div class="col-lg-2 col-md-4 col-sm-4 col-4">
+                  <aside class="f_widget list_wd">
+                    <ul class="nav flex-column">
+                      <li><a href="">EN</a></li>
+                      <li><a href="">FRA</a></li>
+                      <li><a href="">GER</a></li>
+                    </ul>
+                  </aside>
+                </div> -->
+                <div class="col-lg-3 col-md-6 col-sm-6 col-7">
+                  <aside class="f_widget list_wd">
+                    <div>追蹤我們 &nbsp;更多旅遊資訊</div>
+                    <ul class="nav share">
+                      <li><a href="#"><i class="fa fa-youtube-play"></i></a></li>
+                      <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                      <li><a href="#"><i class="fa fa-commenting"></i></a></li>
+                    </ul>
+                  </aside>
+                </div>
+                <!-- <div class="col-lg-2 col-md-4 col-sm-4 col-4">
+                  <aside class="f_widget list_wd">
+                    <ul class="nav flex-column">
+                      <li><a href="">Facebook</a></li>
+                      <li><a href="">Twitter</a></li>
+                      <li><a href="">Behance</a></li>
+                    </ul>
+                  </aside>
+                </div> -->
+              </div>
             </div>
-        </footer>
+          </footer>
         <!--================End Footer Area =================-->
 
     </div>
@@ -507,7 +524,44 @@
     <script src="assets/vendors/splitting/splitting.min.js"></script>
     <script src="assets/vendors/animsition-preloader/js/animsition.min.js"></script>
 
-    <script src="assets/js/theme.js"></script>
+    <script src="assets/js/theme.js?v=202310"></script>
+
+  <!-- 置頂 btn -->
+  <!-- <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.3/jquery.min.js"></script> -->
+  <script>
+    $(document).ready(function(){
+    
+      // hide #back-top first
+      $("#back-top").hide();
+      
+      // fade in #back-top
+      $(function () {
+        $(window).scroll(function () {
+          if ($(this).scrollTop() > 500) {
+            $('#back-top').fadeIn();
+          } else {
+            $('#back-top').fadeOut();
+          }
+        });
+    
+        // scroll body to 0px on click
+        $('#back-top a').click(function () {
+          $('body,html').animate({
+            scrollTop: 0
+          }, 400);
+          return false;
+        });
+      });
+    
+    });
+  </script>
+  <!-- 置頂 btn 完 -->
+
+  <!-- 年份 -->
+  <script>
+    document.getElementById("year").innerHTML = new Date().getFullYear();
+  </script>
+
 </body>
 
 </html>
