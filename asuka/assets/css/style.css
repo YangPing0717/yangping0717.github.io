@@ -368,6 +368,9 @@ button:focus {
   background: #000;
   color: #fff;
 }
+.submit_btn i {
+  font-weight: 700;
+}
 
 /* End Button Area css
 ============================================================================================ */
@@ -2507,6 +2510,7 @@ button:focus {
   width: 100%;
   height: 100%;
   background: url(../images/bg_fest.png?v=202310) no-repeat right top/cover;
+  z-index: -1;
 }
 @media (max-width: 767px) {
   .latest_news_area.bg_img {
@@ -3264,7 +3268,7 @@ button:focus {
   padding-left: 20px;
 }
 .list_wd .nav li {
-  margin-bottom: 4px;
+  margin-bottom: 8px;
 }
 .list_wd .nav li a {
   color: #fff;
