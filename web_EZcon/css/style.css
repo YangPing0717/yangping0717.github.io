@@ -1315,6 +1315,7 @@ textarea {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
+<<<<<<< HEAD
   opacity: 0.4;
 }
 .page-header .video-bg .swiper-slide {
@@ -1322,6 +1323,9 @@ textarea {
   background-position: center;
   overflow: hidden;
   opacity: 0.4;
+=======
+  opacity: 0.2;
+>>>>>>> 57a53e3113e5da84e520082ad84f882c3a766f01
 }
 .page-header .inner {
   width: 100%;
@@ -1341,7 +1345,10 @@ textarea {
   font-size: 22px;
   font-weight: 300;
   letter-spacing: -0.5px;
+<<<<<<< HEAD
   max-width: 90%;
+=======
+>>>>>>> 57a53e3113e5da84e520082ad84f882c3a766f01
 }
 
 /* INTRO */
@@ -1400,6 +1407,7 @@ textarea {
 .intro a:hover {
   border-color: #fff;
 }
+<<<<<<< HEAD
 .intro .author {
   width: 100%;
   display: inline;
@@ -1415,6 +1423,8 @@ textarea {
   margin-right: 15px;
   border-radius: 50%;
 }
+=======
+>>>>>>> 57a53e3113e5da84e520082ad84f882c3a766f01
 
 /* INTRO IMAGE */
 .intro-image {
@@ -1606,6 +1616,10 @@ textarea {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
+<<<<<<< HEAD
+=======
+  margin-top: 150px;
+>>>>>>> 57a53e3113e5da84e520082ad84f882c3a766f01
   color: #fff;
   background: #0A0E0E;
   position: relative;
@@ -1613,15 +1627,23 @@ textarea {
 .testimonials:before {
   content: "";
   width: 100%;
+<<<<<<< HEAD
   height: 100px;
   background: none;
+=======
+  height: 50px;
+  background: #121d1d;
+>>>>>>> 57a53e3113e5da84e520082ad84f882c3a766f01
   position: absolute;
   left: 0;
   top: 0;
 }
+<<<<<<< HEAD
 .testimonials .container {
   margin-top: -100px;
 }
+=======
+>>>>>>> 57a53e3113e5da84e520082ad84f882c3a766f01
 .testimonials .section-title {
   margin-bottom: 0;
 }
@@ -1695,7 +1717,11 @@ textarea {
   display: flex;
   flex-wrap: wrap;
   padding-top: 150px;
+<<<<<<< HEAD
   padding-bottom: 200px;
+=======
+  padding-bottom: 100px;
+>>>>>>> 57a53e3113e5da84e520082ad84f882c3a766f01
   color: #fff;
   background: #0A0E0E;
   position: relative;
@@ -1704,7 +1730,11 @@ textarea {
 .team:before {
   content: "";
   width: 100%;
+<<<<<<< HEAD
   height: 200px;
+=======
+  height: 100px;
+>>>>>>> 57a53e3113e5da84e520082ad84f882c3a766f01
   position: absolute;
   left: 0;
   bottom: 0;
@@ -2930,4 +2960,8 @@ html[dir=rtl] .footer .footer-bar .creation {
     -webkit-transform: scale(0, 1);
     transform: scale(0, 1);
   }
+<<<<<<< HEAD
 }
+=======
+}/*# sourceMappingURL=style.css.map */
+>>>>>>> 57a53e3113e5da84e520082ad84f882c3a766f01
