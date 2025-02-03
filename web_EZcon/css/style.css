@@ -1315,7 +1315,13 @@ textarea {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  opacity: 0.2;
+  opacity: 0.4;
+}
+.page-header .video-bg .swiper-slide {
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+  opacity: 0.4;
 }
 .page-header .inner {
   width: 100%;
@@ -1335,6 +1341,7 @@ textarea {
   font-size: 22px;
   font-weight: 300;
   letter-spacing: -0.5px;
+  max-width: 90%;
 }
 
 /* INTRO */
@@ -1392,6 +1399,21 @@ textarea {
 }
 .intro a:hover {
   border-color: #fff;
+}
+.intro .author {
+  width: 100%;
+  display: inline;
+  margin-bottom: 20px;
+  position: absolute;
+  left: 22rem;
+  margin-top: -28px;
+}
+.intro .author img {
+  width: 5rem;
+  height: 5rem;
+  display: inline-block;
+  margin-right: 15px;
+  border-radius: 50%;
 }
 
 /* INTRO IMAGE */
@@ -1584,7 +1606,6 @@ textarea {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
-  margin-top: 150px;
   color: #fff;
   background: #0A0E0E;
   position: relative;
@@ -1592,11 +1613,14 @@ textarea {
 .testimonials:before {
   content: "";
   width: 100%;
-  height: 50px;
-  background: #121d1d;
+  height: 100px;
+  background: none;
   position: absolute;
   left: 0;
   top: 0;
+}
+.testimonials .container {
+  margin-top: -100px;
 }
 .testimonials .section-title {
   margin-bottom: 0;
@@ -1671,7 +1695,7 @@ textarea {
   display: flex;
   flex-wrap: wrap;
   padding-top: 150px;
-  padding-bottom: 100px;
+  padding-bottom: 200px;
   color: #fff;
   background: #0A0E0E;
   position: relative;
@@ -1680,7 +1704,7 @@ textarea {
 .team:before {
   content: "";
   width: 100%;
-  height: 100px;
+  height: 200px;
   position: absolute;
   left: 0;
   bottom: 0;
@@ -2906,4 +2930,4 @@ html[dir=rtl] .footer .footer-bar .creation {
     -webkit-transform: scale(0, 1);
     transform: scale(0, 1);
   }
-}/*# sourceMappingURL=style.css.map */
+}
