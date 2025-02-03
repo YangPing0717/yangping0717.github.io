@@ -1401,12 +1401,11 @@ textarea {
   border-color: #fff;
 }
 .intro .author {
-  width: 100%;
   display: inline;
   margin-bottom: 20px;
   position: absolute;
-  left: 22rem;
-  margin-top: -28px;
+  left: 23rem;
+  margin-top: -16px;
 }
 .intro .author img {
   width: 5rem;
@@ -2930,4 +2929,4 @@ html[dir=rtl] .footer .footer-bar .creation {
     -webkit-transform: scale(0, 1);
     transform: scale(0, 1);
   }
-}
+}/*# sourceMappingURL=style.css.map */
