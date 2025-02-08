@@ -1340,6 +1340,10 @@ textarea {
 						color: $color-main;
 					}
 				}
+				&:hover {
+					cursor: pointer;
+					transform: scale3d(1.05, 1.05, 1.8);
+				}
 			}
 		}
 	}

@@ -1273,6 +1273,10 @@ textarea {
   text-decoration: none;
   color: #00DAD6;
 }
+.carousel-hero .carousel-slider .swiper-slide .inner:hover {
+  cursor: pointer;
+  transform: scale3d(1.05, 1.05, 1.8);
+}
 .carousel-hero .swiper-button-prev {
   height: auto;
   position: absolute;
