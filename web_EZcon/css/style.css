@@ -672,6 +672,7 @@ textarea {
 .section-title.sub {
   font-size: 3vw;
   font-weight: normal;
+  color: white;
 }
 
 /* SOCIAL MEDIA */
@@ -2722,7 +2723,7 @@ html[dir=rtl] .footer .footer-bar .creation {
   .slider .gallery-thumbs .swiper-slide-active span {
     width: 100%;
     font-size: 8vw;
-    line-height: 11vw;
+    line-height: 9vw;
   }
   .intro .col-lg-7 {
     padding-left: 15px;

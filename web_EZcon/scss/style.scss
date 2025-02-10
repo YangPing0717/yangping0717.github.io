@@ -724,6 +724,7 @@ textarea {
 	&.sub{
 		font-size: 3vw;
 		font-weight: normal;
+		color: white;
 	}
 }
 
@@ -3049,7 +3050,7 @@ only screen and (max-device-width: 991px) {
 	.slider .gallery-thumbs .swiper-slide-active span {
 		width: 100%;
 		font-size: 8vw;
-		line-height: 11vw;
+		line-height: 9vw;
 	}
 
 	.intro .col-lg-7 {

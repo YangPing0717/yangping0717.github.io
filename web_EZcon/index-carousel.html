@@ -42,6 +42,13 @@
 <link rel="stylesheet" href="css/odometer.min.css">
 <link rel="stylesheet" href="css/swiper.min.css">
 <link rel="stylesheet" href="css/bootstrap.min.css">
+
+<!-- slick-carousel -->
+<!-- <link rel="stylesheet" href="https://public.codepenassets.com/css/reset-2.0.min.css"> -->
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css'>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css'>
+<link rel="stylesheet" href="css/style_slick.css">
+
 <link rel="stylesheet" href="css/style.css">
 
 <script src="js/JjrPaxV.js" ></script>
@@ -51,14 +58,15 @@
             padding:0;
         }
         #gradient-canvas {
-            /* --gradient-color-1: #fd8cad;
-            --gradient-color-2: #fbe8d0;
-            --gradient-color-3: #fcc3e6;
-            --gradient-color-4: #fcd7d5; */
-            --gradient-color-1: #122521;
+            --gradient-color-1: #8693af; 
+            --gradient-color-2: #4a748b;
+            --gradient-color-3: #96bfbb;
+            --gradient-color-4: #449d9d;
+            
+            /* --gradient-color-5: #004d3d;
             --gradient-color-2: #002824;
             --gradient-color-3: #12172b;
-            --gradient-color-4: #093c45;
+            --gradient-color-4: #093c45; */
         }
     </style>
 
@@ -396,6 +404,167 @@
   </section>
   <!-- end icon-content-block -->
 
+  <!-- slick-carousel -->
+  <section class="timeline-carousel ">
+    
+    <div class="gradient-canvas">
+      <canvas id="gradient-canvas" ></canvas>
+    </div>
+    
+    <!-- <div class="container-fluid">
+      <div class="row">
+        <div class="col-lg-12 wow" data-splitting>
+          <h4 class="section-title sub">
+            <span class="light">EZCON App</span> <br> Operation Interface
+          </h4>
+        </div>
+      </div>
+    </div> -->
+
+
+    
+    <div class="timeline-carousel__item-wrapper" data-js="timeline-carousel">
+      <h4 class="section-title sub">
+        <span class="light">EZCON App</span> <br> Operation Interface
+      </h4>
+        <!--Timeline item-->
+        <div class="timeline-carousel__item">
+            <div class="timeline-carousel__image">
+                <div class="media-wrapper media-wrapper--overlay" style="background: url('images/app_fr_1.png') center center; background-size:cover;"></div>
+            </div>
+            <div class="timeline-carousel__item-inner">
+                <span class="year">Door Security</span>
+                <span class="month">Excellent mobile and web app experiences</span>
+                <p>The fully-sealed optical engine adopts a high-definition optical lens featuring excellent light transmission, projecting clearer images with high colour accuracy to reproduce the true artistic beauty of films.</p>
+              <a href="#" class="read-more">Read more</a>
+            </div>
+        </div>
+      <!--/Timeline item-->
+      
+        <!--Timeline item-->
+        <div class="timeline-carousel__item">
+            <div class="timeline-carousel__image">
+                <div class="media-wrapper media-wrapper--overlay" style="background: url('images/app_fr_1.png') center center; background-size:cover;"></div>
+            </div>
+            <div class="timeline-carousel__item-inner">
+                <div class="pointer"></div>
+                <span class="month">Wi-Fi Smart Lock</span>
+                <p>Austria-Hungary seeks German support for a war against Serbia in case of Russian militarism. Germany gives assurances of support.</p>
+              <a href="#" class="read-more">Read more</a>
+            </div>
+        </div>
+      <!--/Timeline item-->
+      
+      <!--Timeline item-->
+      <div class="timeline-carousel__item">
+        <div class="timeline-carousel__image">
+            <div class="media-wrapper media-wrapper--overlay" style="background: url('images/app_fr_1.png') center center; background-size:cover;"></div>
+        </div>
+        <div class="timeline-carousel__item-inner">
+            <span class="year">Smart Home Lighting</span>
+            <span class="month">Fingerprint Review</span>
+            <p>The Russian offensive in the Carpathians begins. It will continue until April 12.	</p>
+          <a href="#" class="read-more">Read more</a>
+        </div>
+      </div>
+      <!--/Timeline item-->
+
+      <!--Timeline item-->
+        <div class="timeline-carousel__item">
+            <div class="timeline-carousel__image">
+                <div class="media-wrapper media-wrapper--overlay" style="background: url('images/app_fr_1.png') center center; background-size:cover;"></div>
+            </div>
+            <div class="timeline-carousel__item-inner">
+                <div class="pointer"></div>
+                <span class="month">Responsive touch screen</span>
+                <p>Supports Alexa and Google voice commands, Responsive touch screen, No lengthy contract required.	</p>
+              <a href="#" class="read-more">Read more</a>
+            </div>
+        </div>
+      <!--/Timeline item-->
+      
+      <!--Timeline item-->
+      <div class="timeline-carousel__item">
+        <div class="timeline-carousel__image">
+            <div class="media-wrapper media-wrapper--overlay" style="background: url('images/app_fr_1.png') center center; background-size:cover;"></div>
+        </div>
+        <div class="timeline-carousel__item-inner">
+            <span class="year">Affordable hardware</span>
+            <span class="month">No contract required</span>
+            <p>Austro-Hungarian offensive against Montenegro, which capitulates.	</p>
+          <a href="#" class="read-more">Read more</a>
+        </div>
+      </div>
+      <!--/Timeline item-->
+      
+      <!--Timeline item-->
+      <div class="timeline-carousel__item">
+        <div class="timeline-carousel__image">
+            <div class="media-wrapper media-wrapper--overlay" style="background: url('images/app_fr_1.png') center center; background-size:cover;"></div>
+        </div>
+        <div class="timeline-carousel__item-inner">
+            <div class="pointer"></div>
+            <span class="month">Lumens true brightness</span>
+            <p>With ISO standard effective luminous flux certification, it boasts a brightness of up to 400 ISO lumens, ensuring accurate brightness representation and more visible details.</p>
+          <a href="#" class="read-more">Read more</a>
+        </div>
+      </div>
+      <!--/Timeline item-->
+
+      <!--Timeline item-->
+      <div class="timeline-carousel__item">
+        <div class="timeline-carousel__image">
+            <div class="media-wrapper media-wrapper--overlay" style="background: url('images/app_fr_1.png') center center; background-size:cover;"></div>
+        </div>
+        <div class="timeline-carousel__item-inner">
+            <div class="pointer"></div>
+            <span class="month">Fully-sealed optical engine</span>
+            <p>Energy Star Certified: This means it meets strict energy efficiency guidelines, helping you save on your electricity bills. InstaView™ Feature: Just knock twice on the glass panel to see inside without opening the door, reducing cold air loss.</p>
+          <a href="#" class="read-more">Read more</a>
+        </div>
+      </div>
+
+      <!--Timeline item-->
+      <div class="timeline-carousel__item">
+        <div class="timeline-carousel__image">
+            <div class="media-wrapper media-wrapper--overlay" style="background: url('images/app_fr_1.png') center center; background-size:cover;"></div>
+        </div>
+        <div class="timeline-carousel__item-inner">
+          <span class="year">EZ Smart Refrigerator</span>
+            <span class="month">EZ Smart Refrigerator</span>
+            <!-- <div class="pointer"></div>
+            <span class="month">No contract required	</span> -->
+            <p>The EZ Smart Refrigerator is a game-changer for your kitchen. This innovative appliance not only keeps your food fresh but also helps you save energy. Here are some of its standout features:</p>
+          <a href="#" class="read-more">Read more</a>
+        </div>
+      </div>
+
+      
+
+    
+
+     
+
+  </div>
+
+  </section>
+  <!-- end slick-carousel -->
+
+  <!-- <div class="slick_btn">
+    <div class="prev">
+      <span class="material-icons-two-tone">
+        arrow_back 
+        </span>
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true">aaaa</span>
+    </div>
+    <div class="next">
+      <span class="material-icons-two-tone">
+        arrow_forward
+        </span>
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true">aaaa</span>
+    </div>
+  </div> -->
+
   <section class="intro">
     <div class="container">
       <div class="row">
@@ -429,9 +598,9 @@
   <!-- end intro -->
 
   <section class="works">
-    <div class="gradient-canvas">
+    <!-- <div class="gradient-canvas">
       <canvas id="gradient-canvas" ></canvas>
-    </div>
+    </div> -->
     <div id="bg"></div>
     <div class="container">
       <div class="row">
@@ -695,6 +864,11 @@
 <script src='js/odometer.min.js'></script> 
 <script src='js/fancybox.min.js'></script> 
 <script src="js/scripts.js"></script>
+
+<!-- slick-carousel -->
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.js'></script>
+<script src="js/script_slick.js"></script>
 
 <!-- BG_net -->
 <script src='https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js'></script>
