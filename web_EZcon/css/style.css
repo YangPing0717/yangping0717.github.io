@@ -2019,6 +2019,72 @@ textarea {
 .works .section-title.sub {
   text-align: initial;
 }
+.works .relate-area {
+  width: 100%;
+  border-top: 1px dotted #395d5d;
+  margin: 3rem;
+  padding-top: 3rem;
+}
+.works .relate-area h6 {
+  color: #b1bbbb;
+  font-size: 1.8rem;
+}
+.works .relate-area a {
+  color: #17a2b8;
+}
+.works .relate-area img {
+  width: 12rem;
+  height: auto;
+}
+.works .relate-area .relate-case {
+  overflow: hidden;
+  -webkit-transition: 0.25s ease-in-out;
+  -moz-transition: 0.25s ease-in-out;
+  -ms-transition: 0.25s ease-in-out;
+  -o-transition: 0.25s ease-in-out;
+  transition: 0.25s ease-in-out;
+}
+.works .relate-area .relate-case.left {
+  transform: translateX(-3rem);
+}
+.works .relate-area .relate-case.left .arrow {
+  opacity: 0;
+  transform: translateX(-3.8rem);
+  -webkit-transition: 0.25s ease-in-out;
+  -moz-transition: 0.25s ease-in-out;
+  -ms-transition: 0.25s ease-in-out;
+  -o-transition: 0.25s ease-in-out;
+  transition: 0.25s ease-in-out;
+}
+.works .relate-area .relate-case.left:hover {
+  transform: translateX(0) scaleX(0.99);
+}
+.works .relate-area .relate-case.left:hover .arrow {
+  opacity: 1;
+  transform: translateX(0.4rem) scaleX(1);
+}
+.works .relate-area .relate-case.right {
+  transform: translateX(3rem);
+}
+.works .relate-area .relate-case.right .arrow {
+  opacity: 0;
+  transform: translateX(3.8rem);
+  -webkit-transition: 0.25s ease-in-out;
+  -moz-transition: 0.25s ease-in-out;
+  -ms-transition: 0.25s ease-in-out;
+  -o-transition: 0.25s ease-in-out;
+  transition: 0.25s ease-in-out;
+}
+.works .relate-area .relate-case.right:hover {
+  transform: translateX(0) scaleX(0.99);
+}
+.works .relate-area .relate-case.right:hover .arrow {
+  opacity: 1;
+  transform: translateX(-0.4rem) scaleX(1);
+}
+.works .relate-area .hr {
+  border-right: 1px dotted #395d5d;
+}
 
 /* CASE STUDY */
 .case-study {
@@ -2200,6 +2266,15 @@ textarea {
 .blog .post.single .post-content .post-title {
   font-size: 4vw;
   line-height: 1.4;
+}
+.blog .post.single .post-content .post-title-sub {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  margin-top: 2rem;
+  font-weight: 800;
+}
+.blog .post.single .post-content p .light {
+  font-weight: 600;
 }
 .blog .post:nth-child(even) {
   position: relative;

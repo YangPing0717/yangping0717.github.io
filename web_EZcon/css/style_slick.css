@@ -235,11 +235,21 @@
   background: rgba(20, 29, 29, 0.8);
   color: #00DAD6;
 }
+.slick-prev.slick-disabled, .slick-next.slick-disabled {
+  opacity: 0.2;
+  cursor: initial;
+}
+.slick-prev.slick-disabled:hover, .slick-next.slick-disabled:hover {
+  background: none;
+  color: #121d1d;
+}
 
 .slick-prev {
   right: 88px;
+  padding-right: 4px;
 }
 
 .slick-next {
   right: 0;
+  padding-left: 4px;
 }/*# sourceMappingURL=style_slick.css.map */

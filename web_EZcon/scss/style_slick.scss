@@ -297,10 +297,20 @@ $color-dark-txt : #294242;
       // border: 1px solid $main-color;
       color: $main-color;
     }
+    &.slick-disabled {
+      opacity: 0.2;
+      cursor: initial;
+      &:hover {
+         background: none;
+         color: $color-dark;
+       }
+    }
 }
 .slick-prev {
    right: 88px;
+   padding-right: 4px;
 }
 .slick-next {
    right: 0;
+   padding-left: 4px;
 }

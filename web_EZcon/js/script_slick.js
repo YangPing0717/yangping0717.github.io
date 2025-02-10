@@ -6,9 +6,10 @@ $.js = function (el) {
 function carousel() {
   $.js('timeline-carousel').slick({
     infinite: false,
-    // arrows: true,
+    arrows: true,
     dots: false,
-    autoplay: false,
+    autoplay: true,
+    // autoplaySpeed: 3000,
     speed: 300,
     slidesToShow: 5,
     slidesToScroll: 1,

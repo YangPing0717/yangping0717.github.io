@@ -2185,6 +2185,74 @@ textarea {
 		}
 	}
 	
+	.relate-area {
+		width: 100%;
+    // padding: 3rem 2.8rem 0;
+    border-top: 1px dotted $color-dark-2;
+		margin: 3rem;
+    padding-top: 3rem;
+		
+		h6 {
+			color: $color-txtindark;
+			font-size: 1.8rem;
+		}
+		a {
+			color: $col-light-greenblue;
+		}
+		img {
+			width: 12rem;
+			height: auto;
+		}
+		.relate-case {
+			// &::after {
+			// 	content: '\e5c8';
+			// 	font-family: 'Material Icons';
+			// 	font-size: 4.2rem;
+			// 	position: absolute;
+			// 	right: 0;
+			// 	top: 0;
+			// 	color: $color-main;
+			// }
+			overflow: hidden;
+			// transform: translate(-3rem, 0);
+			@include transition;
+			&.left {
+				transform: translateX(-3rem);
+				.arrow {
+					opacity: 0;
+					transform: translateX(-3.8rem);
+					@include transition;
+
+				}
+				&:hover {
+					transform: translateX(0) scaleX(0.99);
+					.arrow {
+						opacity: 1;
+						transform: translateX(.4rem) scaleX(1);
+					}
+				}
+			}
+			&.right {
+				transform: translateX(3rem);
+				.arrow {
+					opacity: 0;
+					transform: translateX(3.8rem);
+					@include transition;
+				}
+				&:hover {
+					transform: translateX(0) scaleX(0.99);
+					.arrow {
+						opacity: 1;
+						transform: translateX(-.4rem) scaleX(1);
+					}
+				}
+			}
+		}
+		.hr {
+			border-right: 1px dotted $color-dark-2;
+			// background: $color-dark-2;
+		}
+	}
 }
 
 
@@ -2399,6 +2467,15 @@ textarea {
 				.post-title {
 					font-size: 4vw;
 					line-height: 1.4;
+				}
+				.post-title-sub {
+					font-size: 1.5rem;
+					line-height: 2rem;
+					margin-top: 2rem;
+					font-weight: 800;
+				}
+				p .light {
+					font-weight: 600;
 				}
 			}
 		}
