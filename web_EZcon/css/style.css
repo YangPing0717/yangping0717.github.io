@@ -1402,6 +1402,12 @@ textarea {
   font-size: 6vw;
   letter-spacing: -3px;
 }
+@media (max-width: 768px) {
+  .page-header .inner.single_case h1 {
+    font-size: 10vw;
+    letter-spacing: 0;
+  }
+}
 
 /* INTRO */
 .intro {
@@ -2022,19 +2028,35 @@ textarea {
 .works .relate-area {
   width: 100%;
   border-top: 1px dotted #395d5d;
-  margin: 3rem;
+  margin: 3rem 3rem 0;
   padding-top: 3rem;
 }
 .works .relate-area h6 {
   color: #b1bbbb;
   font-size: 1.8rem;
+  font-weight: 600;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+}
+@media (max-width: 768px) {
+  .works .relate-area h6 {
+    font-size: 1.4rem;
+  }
 }
 .works .relate-area a {
   color: #17a2b8;
 }
 .works .relate-area img {
-  width: 12rem;
+  width: 16rem;
   height: auto;
+}
+.works .relate-area p {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
 }
 .works .relate-area .relate-case {
   overflow: hidden;
@@ -2044,8 +2066,20 @@ textarea {
   -o-transition: 0.25s ease-in-out;
   transition: 0.25s ease-in-out;
 }
+@media (max-width: 768px) {
+  .works .relate-area .relate-case {
+    overflow: visible;
+  }
+}
 .works .relate-area .relate-case.left {
   transform: translateX(-3rem);
+  padding-right: 6rem;
+}
+@media (max-width: 768px) {
+  .works .relate-area .relate-case.left {
+    transform: translateX(0rem);
+    padding-right: 0;
+  }
 }
 .works .relate-area .relate-case.left .arrow {
   opacity: 0;
@@ -2056,15 +2090,39 @@ textarea {
   -o-transition: 0.25s ease-in-out;
   transition: 0.25s ease-in-out;
 }
+@media (max-width: 768px) {
+  .works .relate-area .relate-case.left .arrow {
+    position: absolute;
+  }
+}
 .works .relate-area .relate-case.left:hover {
   transform: translateX(0) scaleX(0.99);
+}
+@media (max-width: 768px) {
+  .works .relate-area .relate-case.left:hover {
+    transform: translateX(1.2rem) scaleX(0.95);
+  }
 }
 .works .relate-area .relate-case.left:hover .arrow {
   opacity: 1;
   transform: translateX(0.4rem) scaleX(1);
 }
+@media (max-width: 768px) {
+  .works .relate-area .relate-case.left:hover .arrow {
+    transform: translateX(-2.2rem) scaleX(1);
+    z-index: 1;
+  }
+}
 .works .relate-area .relate-case.right {
   transform: translateX(3rem);
+  padding-left: 6rem;
+}
+@media (max-width: 768px) {
+  .works .relate-area .relate-case.right {
+    transform: translateX(0rem);
+    padding-left: 0;
+    margin-top: 2rem;
+  }
 }
 .works .relate-area .relate-case.right .arrow {
   opacity: 0;
@@ -2075,15 +2133,62 @@ textarea {
   -o-transition: 0.25s ease-in-out;
   transition: 0.25s ease-in-out;
 }
+@media (max-width: 768px) {
+  .works .relate-area .relate-case.right .arrow {
+    position: absolute;
+    right: 0;
+  }
+}
 .works .relate-area .relate-case.right:hover {
   transform: translateX(0) scaleX(0.99);
+}
+@media (max-width: 768px) {
+  .works .relate-area .relate-case.right:hover {
+    transform: translateX(-1.2rem) scaleX(0.95);
+  }
 }
 .works .relate-area .relate-case.right:hover .arrow {
   opacity: 1;
   transform: translateX(-0.4rem) scaleX(1);
 }
+@media (max-width: 768px) {
+  .works .relate-area .relate-case.right:hover .arrow {
+    transform: translateX(3rem) scaleX(1);
+    z-index: 1;
+  }
+}
+.works .relate-area .relate-case ul.categories_tag {
+  width: 100%;
+  display: block;
+  padding: 0;
+  margin: 0;
+}
+.works .relate-area .relate-case ul.categories_tag li {
+  display: inline-block;
+  list-style: none;
+  width: fit-content;
+  padding: 0;
+  margin: 0 5px 3px 0;
+}
+.works .relate-area .relate-case ul.categories_tag li a {
+  font-weight: 600;
+  font-size: 11px;
+  background: #0A0E0E;
+  color: #fff;
+  line-height: 1;
+  padding: 3px 6px;
+}
+.works .relate-area .relate-case ul.categories_tag li a:hover {
+  color: #00DAD6;
+  text-decoration: none;
+}
 .works .relate-area .hr {
   border-right: 1px dotted #395d5d;
+}
+@media (max-width: 768px) {
+  .works .relate-area .hr {
+    border-right: none;
+  }
 }
 
 /* CASE STUDY */
@@ -2925,7 +3030,10 @@ html[dir=rtl] .footer .footer-bar .creation {
   }
   .page-header .inner p {
     font-size: 17px;
-    padding-right: 10%;
+    padding-right: 0;
+  }
+  .page-header .inner p br {
+    display: none;
   }
   .all-cases .inner {
     padding-left: 100px;

@@ -92,7 +92,7 @@ $col-light-greenblue: #17a2b8;
 
 $color-txtindark: #b1bbbb;
 $color-dark-2 : #395d5d;
-
+$color-dark-3 : #1f3737;
 
 /* GOOGLE FONTS */
 @import url('https://fonts.googleapis.com/css?family=Fjalla+One|Poppins:300,400,600,800&display=swap');
@@ -1476,6 +1476,10 @@ textarea {
 				font-weight: 800;
 				font-size: 6vw;
 				letter-spacing: -3px;
+				@media (max-width: 768px){
+					font-size: 10vw;
+					letter-spacing: 0;
+				}
 			}
 		}
 	}
@@ -2189,19 +2193,39 @@ textarea {
 		width: 100%;
     // padding: 3rem 2.8rem 0;
     border-top: 1px dotted $color-dark-2;
-		margin: 3rem;
+		margin: 3rem 3rem 0;
     padding-top: 3rem;
 		
 		h6 {
 			color: $color-txtindark;
 			font-size: 1.8rem;
+			font-weight: 600;
+			display: -webkit-box;
+			-webkit-box-orient: vertical;
+			-webkit-line-clamp: 3;
+			overflow: hidden;
+			@media (max-width: 768px) {
+				font-size: 1.4rem;
+			}
 		}
 		a {
 			color: $col-light-greenblue;
 		}
 		img {
-			width: 12rem;
+			width: 16rem;
 			height: auto;
+			
+			@media (min-width: 768px)  {
+				// width: 6rem !important;
+				// max-width: none;
+			}
+			
+		}
+		p {
+			display: -webkit-box;
+			-webkit-box-orient: vertical;
+			-webkit-line-clamp: 2;
+			overflow: hidden;
 		}
 		.relate-case {
 			// &::after {
@@ -2213,44 +2237,112 @@ textarea {
 			// 	top: 0;
 			// 	color: $color-main;
 			// }
-			overflow: hidden;
 			// transform: translate(-3rem, 0);
+			overflow: hidden;
 			@include transition;
+			@media (max-width: 768px){
+				overflow: visible;
+			}
 			&.left {
 				transform: translateX(-3rem);
+				padding-right: 6rem;
+				@media (max-width: 768px){
+					transform: translateX(0rem);
+					padding-right: 0;
+				}
 				.arrow {
 					opacity: 0;
 					transform: translateX(-3.8rem);
 					@include transition;
-
+					@media (max-width: 768px){
+						position: absolute;
+					}
 				}
 				&:hover {
 					transform: translateX(0) scaleX(0.99);
+					@media (max-width: 768px){
+						transform: translateX(1.2rem) scaleX(0.95);
+					}
 					.arrow {
 						opacity: 1;
-						transform: translateX(.4rem) scaleX(1);
+						transform: translateX(0.4rem) scaleX(1);
+						@media (max-width: 768px){
+							transform: translateX(-2.2rem) scaleX(1);
+							z-index: 1;
+						}
 					}
 				}
 			}
 			&.right {
 				transform: translateX(3rem);
+				padding-left: 6rem;
+				@media (max-width: 768px){
+					transform: translateX(0rem);
+					padding-left: 0;
+					margin-top: 2rem;
+				}
 				.arrow {
 					opacity: 0;
 					transform: translateX(3.8rem);
 					@include transition;
+					@media (max-width: 768px){
+						position: absolute;
+						right: 0;
+					}
 				}
 				&:hover {
 					transform: translateX(0) scaleX(0.99);
+					@media (max-width: 768px){
+						transform: translateX(-1.2rem) scaleX(0.95);
+					}
 					.arrow {
 						opacity: 1;
-						transform: translateX(-.4rem) scaleX(1);
+						transform: translateX(-0.4rem) scaleX(1);
+						@media (max-width: 768px){
+							transform: translateX(3rem) scaleX(1);
+							z-index: 1;
+						}
 					}
 				}
 			}
+
+				ul {
+					&.categories_tag {
+							width: 100%;
+							display: block;
+							padding: 0;
+							margin: 0;
+							li {
+								display: inline-block;
+								list-style: none;
+								width: fit-content;
+								padding: 0;
+								margin: 0 5px 3px 0;
+								a {
+									font-weight: 600;
+									font-size: 11px;
+									background: $color-darker;
+									color: #fff;
+									line-height: 1;
+									padding: 3px 6px;
+		
+									&:hover {
+										color: $color-main;
+										text-decoration: none;
+									}
+								}
+							}
+						}
+					} 
+				
+
 		}
 		.hr {
 			border-right: 1px dotted $color-dark-2;
 			// background: $color-dark-2;
+			@media (max-width: 768px)  {
+				border-right: none;
+			}
 		}
 	}
 }
@@ -3293,7 +3385,11 @@ only screen and (max-device-width: 767px) {
 
 	.page-header .inner p {
 		font-size: 17px;
-		padding-right: 10%;
+		// padding-right: 10%;
+		padding-right: 0;
+		br {
+			display: none;
+		}
 	}
 
 	.all-cases .inner {
