@@ -207,6 +207,11 @@ input[type="submit"] {
 	padding: 0 30px;
 	font-weight: 600;
 	font-size: 14px;
+	@include transition;
+	&:hover {
+		background: $color-darker;
+		color: $color-main;
+	}
 }
 
 button[type="submit"] {
@@ -217,6 +222,11 @@ button[type="submit"] {
 	padding: 0 30px;
 	font-weight: 600;
 	font-size: 14px;
+	@include transition;
+	&:hover {
+		background: $color-darker;
+		color: $color-main;
+	}
 }
 
 textarea {
@@ -1469,6 +1479,21 @@ textarea {
 			font-weight: 300;
 			letter-spacing: -0.5px;
 			max-width: 90%;
+			b {
+				&::after{
+					content: "";
+					display: inline-block;
+					position: relative;
+					height: 5px;
+					left: 1px;
+					top: -3px;
+					-webkit-transform: rotate(-50deg) translateY(-50%);
+					transform: rotate(-50deg) translateY(-50%);
+					width: 0.8rem;
+					background: $color-main;
+					margin: 0 1rem;
+				}
+			}
 		}
 		&.single_case{
 			h1 {
@@ -2854,6 +2879,17 @@ textarea {
 
 		a {
 			text-decoration: underline;
+		}
+	}
+	.section-title {
+		margin-bottom: 1rem;
+		&.sub {
+			font-size: 3vw;
+			font-weight: normal;
+			color: $color-darker;
+			@media (max-width: 768px){
+				font-size: 1.6rem;
+			}	
 		}
 	}
 
