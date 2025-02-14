@@ -1046,6 +1046,9 @@ textarea {
 }
 .slider .gallery-thumbs .swiper-slide span b {
   color: #00DAD6;
+  background: linear-gradient(120deg, #00fffa, #007bff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 .slider .gallery-thumbs .swiper-slide a {
   display: none;
@@ -1504,7 +1507,7 @@ textarea {
   display: inline;
   margin-bottom: 20px;
   position: absolute;
-  left: 23rem;
+  left: 20rem;
   margin-top: -16px;
 }
 .intro .author img {
@@ -1664,16 +1667,18 @@ textarea {
   letter-spacing: 0.5px;
   margin-bottom: 10px;
   font-size: 1.3rem;
+  line-height: 1.5;
 }
 .icon-content-block .content-block ul {
   margin: 0;
   padding: 0;
 }
 .icon-content-block .content-block ul li {
-  padding: 3px 0;
+  padding: 0;
   opacity: 0.7;
   list-style: none;
   font-weight: 300;
+  padding-top: 0.8rem;
 }
 .icon-content-block .content-block p {
   padding: 3px 0;
@@ -2613,6 +2618,14 @@ textarea {
   border-left: 1px solid #eee;
   border-top: 1px solid #eee;
 }
+.clients .section-title {
+  margin-bottom: 1rem;
+}
+.clients .section-title.sub {
+  font-size: 1.8rem;
+  color: #121d1d;
+  letter-spacing: 1px;
+}
 
 /* CONTACT */
 .contact {
@@ -2776,6 +2789,18 @@ textarea {
   font-family: "Fjalla One", sans-serif;
   font-size: 2vw;
   margin-bottom: 20px;
+}
+.footer h6.sub {
+  font-family: initial;
+  font-size: 1.3rem;
+  margin-top: -0.6rem;
+}
+@media (max-width: 768px) {
+  .footer h6.sub {
+    font-size: 1.2rem;
+    margin-top: -0.6rem;
+    line-height: 1.6rem;
+  }
 }
 .footer h2 {
   font-size: 4vw;
@@ -3307,11 +3332,11 @@ html[dir=rtl] .footer .footer-bar .creation {
 
 .app-btn {
   width: 45%;
-  max-width: 160px;
+  max-width: 172px;
   color: #fff;
   margin: 20px 10px;
   text-align: left;
-  border-radius: 5px;
+  border-radius: 0;
   text-decoration: none;
   font-family: "Lucida Grande", sans-serif;
   font-size: 10px;

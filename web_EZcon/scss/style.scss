@@ -86,6 +86,8 @@ $color-main : #00DAD6;
 $color-dark : #121d1d;
 $color-darker : #0A0E0E;
 $col-light-blue: #007bff;
+$col-light-blue-2: #284CFD;
+
 
 $col-light-pur: #ff1dc2;
 $col-light-greenblue: #17a2b8;
@@ -1079,6 +1081,9 @@ textarea {
 				font-weight: 800;
 				b{
 					color: $color-main;
+					background: linear-gradient(120deg, #00fffa, #007bff);
+					-webkit-background-clip: text;
+					-webkit-text-fill-color: transparent;
 				}
 			}
 
@@ -1584,16 +1589,16 @@ textarea {
     display: inline;
     margin-bottom: 20px;
     position: absolute;
-    left: 23rem;
+    left: 20rem;
     margin-top: -16px;
 
-				img {
-					width: 5rem;
-    	height: 5rem;
-					display: inline-block;
-					margin-right: 15px;
-					border-radius: 50%;
-				}
+		img {
+			width: 5rem;
+			height: 5rem;
+			display: inline-block;
+			margin-right: 15px;
+			border-radius: 50%;
+		}
 	}
 }
 
@@ -1765,6 +1770,7 @@ textarea {
 			letter-spacing: 0.5px;
 			margin-bottom: 10px;
 			font-size: 1.3rem;
+			line-height: 1.5;
 		}
 
 		ul {
@@ -1772,10 +1778,11 @@ textarea {
 			padding: 0;
 
 			li {
-				padding: 3px 0;
+				padding: 0;
 				opacity: 0.7;
 				list-style: none;
 				font-weight: 300;
+				padding-top: 0.8rem;
 			}
 		}
 		p {
@@ -2852,6 +2859,14 @@ textarea {
 			border-top: 1px solid #eee;
 		}
 	}
+	.section-title{
+		margin-bottom: 1rem;
+		&.sub {
+			font-size: 1.8rem;
+			color: $color-dark;
+			letter-spacing: 1px;
+		}
+	} 
 }
 
 
@@ -3039,6 +3054,16 @@ textarea {
 		@include second-font;
 		font-size: 2vw;
 		margin-bottom: 20px;
+		&.sub {
+			font-family: initial;
+			font-size: 1.3rem;
+			margin-top: -0.6rem;
+			@media (max-width: 768px){
+				font-size: 1.2rem;
+				margin-top: -0.6rem;
+				line-height: 1.6rem;
+			}
+		}
 	}
 
 	h2 {
@@ -3727,41 +3752,41 @@ only screen and (max-device-width: 767px) {
 	justify-content: center;
    }
    
-   .app {
-	&-btn {
-	 width: 45%;
-	 max-width: 160px;
-	 color: #fff;
-	 margin: 20px 10px;
-	 text-align: left;
-	 border-radius: 5px;
-	 text-decoration: none;
-	 font-family: "Lucida Grande", sans-serif;
-	 font-size: 10px;
-	 text-transform: uppercase;
-	 &.blu {
-	  background-color: #101010;
-	  transition: background-color 0.25s linear;
-	  &:hover {
-	   background-color: $color-main;
-	  }
-	 }
-	 i {
-	  width: 20%;
-	  text-align: center;
-	  font-size: 28px;
-	  margin-right: 7px;
-	 }
-	 .big-txt {
-	  font-size: 17px;
-	  text-transform: capitalize;
-	 }
-	 p {
-		margin-top: .8rem;
-		margin-bottom: .8rem;
-	 }
-	}
-   }
+  .app {
+		&-btn {
+		width: 45%;
+		max-width: 172px;
+		color: #fff;
+		margin: 20px 10px;
+		text-align: left;
+		border-radius: 0;
+		text-decoration: none;
+		font-family: "Lucida Grande", sans-serif;
+		font-size: 10px;
+		text-transform: uppercase;
+		&.blu {
+			background-color: #101010;
+			transition: background-color 0.25s linear;
+			&:hover {
+			background-color: $color-main;
+			}
+		}
+		i {
+			width: 20%;
+			text-align: center;
+			font-size: 28px;
+			margin-right: 7px;
+		}
+		.big-txt {
+			font-size: 17px;
+			text-transform: capitalize;
+		}
+		p {
+			margin-top: .8rem;
+			margin-bottom: .8rem;
+		}
+		}
+  }
 
 
 //New Material Design Icons 🎉 - Two Tone Color Tint
