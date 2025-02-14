@@ -2064,8 +2064,20 @@ textarea {
 .works .relate-area {
   width: 100%;
   border-top: 1px dotted #395d5d;
-  margin: 3rem 3rem 0;
-  padding-top: 3rem;
+  margin: 4rem 3rem 0;
+}
+.works .relate-area h3 {
+  background: #0A0E0E;
+  padding: 0.6rem 1.4rem;
+  width: fit-content;
+  margin: -1.8rem auto 1.8rem;
+}
+@media (max-width: 768px) {
+  .works .relate-area h3 {
+    font-size: 1.2rem;
+    padding: 0.4rem 1.2rem;
+    margin: -1.2rem auto 1.8rem;
+  }
 }
 .works .relate-area h6 {
   color: #b1bbbb;
