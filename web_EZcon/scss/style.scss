@@ -1525,11 +1525,15 @@ textarea {
 	padding: 150px 0;
 	color: #fff;
 	background: $color-darker;
-
+	
 	.col-lg-7 {
 		padding-left: 6%;
 	}
-
+	&.wild {
+		.col-lg-7 {
+			padding-left: 0;
+		}
+	}
 	h6 {
 		font-weight: 600;
 		text-transform: uppercase;
@@ -2221,7 +2225,7 @@ textarea {
 		}
 	}
 	
-	.relate-area {
+	.relate-area { 
 		width: 100%;
     // padding: 3rem 2.8rem 0;
     border-top: 1px dotted $color-dark-2;

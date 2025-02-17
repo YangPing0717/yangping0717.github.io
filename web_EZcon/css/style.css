@@ -1455,6 +1455,9 @@ textarea {
 .intro .col-lg-7 {
   padding-left: 6%;
 }
+.intro.wild .col-lg-7 {
+  padding-left: 0;
+}
 .intro h6 {
   font-weight: 600;
   text-transform: uppercase;
