@@ -264,19 +264,13 @@ $color-dark-txt : #294242;
 //    }
 // }
 
-// .timeline-carousel__item-wrapper {
-//    position: relative;
-//    .slick_btn {
-//       position: absolute !important;
-//       bottom: 0;
-//       right: 0;
-//       .prev, .next {
-//          display: inline-block;
-//          width: 70px !important;
-//       }
-//    }
-   
-// }
+.timeline-carousel__item-wrapper {
+   &.pad {
+      .timeline-carousel__item .media-wrapper {
+         padding-bottom: 68.5%;
+      }
+   }
+}
 
 
 .slick-prev, .slick-next {

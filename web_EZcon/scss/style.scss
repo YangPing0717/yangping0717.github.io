@@ -224,10 +224,31 @@ button[type="submit"] {
 	padding: 0 30px;
 	font-weight: 600;
 	font-size: 14px;
+	border-radius: 0;
 	@include transition;
 	&:hover {
 		background: $color-darker;
 		color: $color-main;
+	}
+	&.type2 {
+		&:hover {
+			background: $color-main;
+			color: $color-darker;
+		}
+	}
+	&.type3_wild {
+		height: 64px;
+		padding: 0 36px;
+		background: $color-main;
+		color: $color-darker;
+		font-size: 1.1rem;
+		@include transition;
+		&:hover {
+			background: $color-darker;
+			color: $color-main;
+			// background: linear-gradient(90deg, rgb(149, 145, 149) 0%, rgb(48, 68, 181) 53%, rgb(0, 255, 209) 100%);
+			border: 1px solid $color-main;
+		}
 	}
 }
 
@@ -462,8 +483,6 @@ textarea {
 	border: 2px solid #fff;
 	background: none;
 }
-
-
 
 
 /* PRELOADER */
@@ -740,7 +759,17 @@ textarea {
 	}
 }
 
-
+.txt_area {
+	color: white;
+	text-align: center;
+	.section-title {
+		margin-bottom: 2rem;
+		&.sub{
+			font-size: 3vw;
+			font-weight: normal;
+		}
+	}
+}
 
 /* SOCIAL MEDIA */
 .social-media {
@@ -1608,6 +1637,18 @@ textarea {
 			border-radius: 50%;
 		}
 	}
+	ul {
+		text-align: initial;
+    list-style-type: square;
+    padding-left: 1.2rem;
+		margin-bottom: 2rem;
+		li {
+			list-style-type: square;
+			font-weight: 300;
+			padding-top: 0;
+			padding-bottom: 0.2rem;
+		}
+	}
 }
 
 
@@ -1670,11 +1711,12 @@ textarea {
 				width: 12rem;
 				margin-left: .8rem;
 				margin-bottom: .5rem;
-				&.bigger{
+				&.bigger {
 					font-size: 1.8rem;
 					width: 16rem;
 				}
 			}
+			
 		}
 		video {
 			width: 100%;
@@ -1684,6 +1726,30 @@ textarea {
 			position: absolute;
 			right: 0;
 			bottom: 0;
+		}
+		
+	}
+	
+	.descrip {
+		color: #fff;
+		line-height: 1.6;
+		width: 60%;
+		@media (max-width: 768px){
+			width: 100%;
+		}
+		p {
+			font-size: 1.2rem;
+			font-weight: 600;
+			margin-left: 1.8rem;
+			margin-top: 1rem;
+			color: $color-main;
+		}
+		ul {
+			list-style-type: square;
+			padding-left: 2.8rem;
+			li {
+				margin-bottom: 0.8rem;
+			}
 		}
 	}
 }
@@ -1766,9 +1832,31 @@ textarea {
 			width: 100%;
 			display: block;
 			margin-bottom: 40px;
-
 			img {
 				height: 75px;
+			}
+			&.image-75 {
+				width: 75%;
+				margin: -1.8rem auto 0;
+				&.effect_a {
+					filter: saturate(0.6);
+				}
+				&.effect_b {
+					filter: hue-rotate(35deg) saturate(0.7);
+				}
+				img {
+					height: auto;
+				}
+			}
+			&.image-full {
+				width: 100%;
+				margin: 0 auto;
+				&.effect {
+					filter: saturate(0.4);
+				}
+				img {
+					height: auto;
+				}
 			}
 		}
 
@@ -1797,6 +1885,20 @@ textarea {
 			padding: 3px 0;
 			opacity: 0.7;
 			text-align: left;
+		}
+	}
+	&.type2 {
+		padding-top: 150px;
+		ul {
+			text-align: initial;
+			list-style-type: square;
+    	padding-left: 1.8rem;
+			li {
+				list-style-type: square;
+				font-weight: 300;
+				padding-top: 0;
+				padding-bottom: 0.8rem;
+			}
 		}
 	}
 }

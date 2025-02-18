@@ -218,6 +218,10 @@
   color: #fff;
 }
 
+.timeline-carousel__item-wrapper.pad .timeline-carousel__item .media-wrapper {
+  padding-bottom: 68.5%;
+}
+
 .slick-prev, .slick-next {
   position: absolute;
   font-size: 3.8rem;

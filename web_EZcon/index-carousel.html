@@ -256,7 +256,7 @@
           <!-- <a href="#">hello@tourog.com</a>  -->
         </div>
         <!-- end col-5 -->
-        <div class="col-lg-7 wow" data-splitting>
+        <div class="col-lg-7 wow" >
           <p>A truly leading brand of smart home systems - Easy Control Wisdom</p>
           <p class="p_small">Let the home be more than just an ordinary smart home control system, but deeply integrate lighting control dimming, audio-visual, environmental control and security systems to create a smart home that is close to the needs of your family with the wisdom of the Internet of Things. </p>
           <p class="p_small">Comprehensive planning integrates every aspect of home life, allowing family members to truly feel the convenience and comfort brought by smart life; according to the needs of different family members, create a smart home that best meets the needs of family members.</p>
@@ -264,6 +264,11 @@
           <small>Digital Artisit</small> <b>25</b>
           <h4>YEARS OF<br>
             DIGITAL EXPERIENCE</h4> -->
+          <div class="form-group mt-4 menus">
+            <button id="submit" type="submit" name="submit" class="btn type3_wild" data-sec="section_cases">
+              <strong>DISCOVER ALL CASES<b></b> <i></i></strong>
+            </button>
+          </div>
         </div>
         <!-- end col-7 --> 
       </div>
@@ -425,7 +430,7 @@
     
     <div class="timeline-carousel__item-wrapper" data-js="timeline-carousel">
       <h4 class="section-title sub">
-        <span class="light">EZCON App</span> <br> Operation Interface
+        <span class="light">EZCON e-Home App</span> <br> Operation Interface
       </h4>
         <!--Timeline item-->
         <div class="timeline-carousel__item">
@@ -736,6 +741,7 @@
         </div>
       </div>
     </div>
+    <div id="section_cases"></div>
     <ul>
       <li>
         <figure class="reveal-effect masker wow"> <a href="images/works04.jpg" data-fancybox><img src="images/works04.jpg" alt="Image"></a> </figure>
@@ -825,7 +831,8 @@
           <li><a href="#"><i class="fab fa-google-plus-g"></i></a></li>
           <li><a href="#"><i class="fab fa-youtube"></i></a></li>
         </ul>
-        <h6>LET’S HAVE A TALK ABOUT YOUR PROJECT.</h6>
+        <h6>Become Our Partner / Distributor</h6>
+        <h6 class="sub">Join us in playing a leading role in the Whole-Building Smart Home Industry</h6>
         <h2>Need more information or want <br>
           to get in touch?</h2>
         <a href="#" class="link">Get in touch with <b style="color: #00DAD6;">EZCON</b></a> </div>
@@ -841,7 +848,6 @@
   </div>
   <!-- end container -->
 </footer>
-<!-- end footer -->
 
 <div id="back-top">
   <a href="#top">
@@ -903,12 +909,35 @@
   </script>
   <!-- 置頂 btn 完 -->
 
-<script>
-  var gradient = new Gradient()
-  gradient.initGradient('#gradient-canvas');
+  <!-- click scrollTo -->
+  <script>
+    'use strict';
 
-  document.getElementById("year").innerHTML = new Date().getFullYear();
-</script>
+    const menus = document.querySelector('.menus');
+
+    // 1. 조상 요소로부터 버튼에게 이벤트 위임
+    menus.addEventListener('click', function(e) {
+      e.preventDefault();
+      const curTarget = e.target;
+      if (!curTarget.classList.contains('btn')) return;
+
+    // 2. 버튼의 해당 섹션 id값을 가져와 일치하는 DOM 요소를 변수 할당
+      const currentSection = document.querySelector(`#${curTarget.dataset.sec}`);
+
+      // 3. 원하는 위치로 스크롤링
+      window.scrollTo({
+        top: currentSection.getBoundingClientRect().top + window.pageYOffset,
+        behavior: 'smooth',
+      })  
+    })
+  </script>
+
+  <script>
+    var gradient = new Gradient()
+    gradient.initGradient('#gradient-canvas');
+
+    document.getElementById("year").innerHTML = new Date().getFullYear();
+  </script>
 
 
 
