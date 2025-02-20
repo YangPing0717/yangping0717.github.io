@@ -30,7 +30,7 @@
 
 
     // TREE MENU
-    $('.site-navigation .inner ul li i').click(function () {
+    $('.site-navigation .inner ul li a').click(function () {
       $(this).parent().children('.site-navigation .inner ul li ul').slideToggle(300);
       return true;
     });

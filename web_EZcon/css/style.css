@@ -190,6 +190,23 @@ button[type=submit].type2:hover {
   background: #00DAD6;
   color: #0A0E0E;
 }
+button[type=submit].type3 {
+  height: 48px;
+  padding: 0 24px;
+  background: #00DAD6;
+  color: #0A0E0E;
+  font-size: 0.9rem;
+  -webkit-transition: 0.25s ease-in-out;
+  -moz-transition: 0.25s ease-in-out;
+  -ms-transition: 0.25s ease-in-out;
+  -o-transition: 0.25s ease-in-out;
+  transition: 0.25s ease-in-out;
+}
+button[type=submit].type3:hover {
+  background: #0A0E0E;
+  color: #00DAD6;
+  border: 1px solid #00DAD6;
+}
 button[type=submit].type3_wild {
   height: 64px;
   padding: 0 36px;
@@ -684,6 +701,9 @@ textarea {
 .site-navigation .inner ul li a:hover {
   color: #00DAD6;
   text-decoration: none;
+}
+.site-navigation .inner ul li a:hover i {
+  color: #00DAD6;
 }
 .site-navigation.active {
   opacity: 1;
@@ -1264,6 +1284,10 @@ textarea {
   transform: scale(1);
   filter: blur(0px);
 }
+.carousel-hero .carousel-slider .swiper-slide.swiper-slide-active .inner:hover {
+  cursor: pointer;
+  transform: scale3d(1.05, 1.05, 1.8);
+}
 .carousel-hero .carousel-slider .swiper-slide.swiper-slide-active:after {
   opacity: 0.25;
 }
@@ -1301,6 +1325,7 @@ textarea {
   font-weight: 800;
   color: #fff;
   margin-bottom: 10px;
+  text-transform: uppercase;
 }
 @media only screen and (max-width: 767px), only screen and (max-device-width: 767px) {
   .carousel-hero .carousel-slider .swiper-slide .inner h2 {
@@ -1328,10 +1353,6 @@ textarea {
 .carousel-hero .carousel-slider .swiper-slide .inner a:hover {
   text-decoration: none;
   color: #00DAD6;
-}
-.carousel-hero .carousel-slider .swiper-slide .inner:hover {
-  cursor: pointer;
-  transform: scale3d(1.05, 1.05, 1.8);
 }
 .carousel-hero .swiper-button-prev {
   height: auto;
@@ -2120,6 +2141,12 @@ textarea {
   line-height: 2.2;
   color: white;
 }
+.works ul li p span {
+  line-height: 1.8;
+}
+.works ul li p span.sec {
+  color: white;
+}
 .works .features .sub_title {
   margin-top: 3.6rem;
 }
@@ -2404,6 +2431,15 @@ textarea {
 .blog .col-lg-9 {
   padding-right: 60px;
 }
+.blog.bg_1::after {
+  content: "";
+  width: 100%;
+  height: 500px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background: url(../images/arch_line.png) no-repeat right top/contain;
+}
 .blog .sidebar {
   width: 100%;
   float: left;
@@ -2532,7 +2568,7 @@ textarea {
 }
 .blog .post.single .post-content .post-title {
   font-size: 4vw;
-  line-height: 1.4;
+  line-height: 1.2;
 }
 .blog .post.single .post-content .post-title-sub {
   font-size: 1.5rem;
@@ -2540,8 +2576,13 @@ textarea {
   margin-top: 2rem;
   font-weight: 800;
 }
-.blog .post.single .post-content p .light {
-  font-weight: 600;
+.blog .post.single .post-content p span {
+  font-weight: 800;
+}
+.blog .post.single .post-content p span.highlight {
+  color: #007bff;
+  font-size: 125%;
+  line-height: 2;
 }
 .blog .post:nth-child(even) {
   position: relative;
@@ -2635,7 +2676,22 @@ textarea {
   float: left;
   margin-right: 30px;
   margin-bottom: 30px;
-  margin-top: 20px;
+}
+.blog .post .post-content .image-right {
+  width: 60%;
+  float: right;
+  margin-left: 30px;
+  margin-bottom: 30px;
+  margin-top: -1rem;
+}
+@media (max-width: 768px) {
+  .blog .post .post-content .image-right {
+    width: 100%;
+    float: initial;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-top: -2rem;
+  }
 }
 .blog .post .post-content .image-full {
   width: 100%;
@@ -2940,6 +2996,7 @@ textarea {
   font-size: 17px;
   border-bottom: 1px solid #00DAD6;
   padding-bottom: 5px;
+  position: relative;
 }
 .footer .link:hover {
   border-color: #fff;
@@ -3663,4 +3720,113 @@ html[dir=rtl] .footer .footer-bar .creation {
 .iconbi {
   font-size: 2rem;
   line-height: 2.9rem;
+}
+
+/*=============== VARIABLES CSS ===============*/
+:root {
+  /*========== Colors ==========*/
+  /*Color mode HSL(hue, saturation, lightness)*/
+  --accent-color: #00DAD6;
+  --box-shadow: 0 0 5px #00DAD6, 0 0 25px #00DAD6;
+  /*========== Font and typography ==========*/
+  /*.5rem = 8px | 1rem = 16px ...*/
+  --normal-font-size: 2rem;
+  /*========== Font weight ==========*/
+  /*========== z index ==========*/
+}
+
+.btn {
+  border: none;
+}
+
+.button-animation {
+  font-size: 1.2rem !important;
+  font-weight: 800;
+  position: relative;
+  display: inline-block;
+  padding: 20px 44px !important;
+  color: var(--accent-color);
+  text-transform: uppercase;
+  overflow: hidden;
+  transition: 0.5s;
+  border-bottom: none !important;
+  border-radius: 0;
+  letter-spacing: 2px;
+}
+.button-animation span {
+  position: absolute;
+  display: block;
+}
+.button-animation span:nth-child(1) {
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--accent-color));
+  animation: btn-anim1 1s linear infinite;
+}
+@keyframes btn-anim1 {
+  0% {
+    left: -100%;
+  }
+  50%, 100% {
+    left: 100%;
+  }
+}
+.button-animation span:nth-child(2) {
+  top: -100%;
+  right: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(180deg, transparent, var(--accent-color));
+  animation: btn-anim2 1s linear infinite;
+  animation-delay: 0.25s;
+}
+@keyframes btn-anim2 {
+  0% {
+    top: -100%;
+  }
+  50%, 100% {
+    top: 100%;
+  }
+}
+.button-animation span:nth-child(3) {
+  bottom: 0;
+  right: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(270deg, transparent, var(--accent-color));
+  animation: btn-anim3 1s linear infinite;
+  animation-delay: 0.5s;
+}
+@keyframes btn-anim3 {
+  0% {
+    right: -100%;
+  }
+  50%, 100% {
+    right: 100%;
+  }
+}
+.button-animation span:nth-child(4) {
+  bottom: -100%;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(360deg, transparent, var(--accent-color));
+  animation: btn-anim4 1s linear infinite;
+  animation-delay: 0.75s;
+}
+@keyframes btn-anim4 {
+  0% {
+    bottom: -100%;
+  }
+  50%, 100% {
+    bottom: 100%;
+  }
+}
+.button-animation:hover {
+  color: #0A0E0E;
+  background-color: var(--accent-color);
+  box-shadow: var(--box-shadow);
+  text-decoration: none;
 }/*# sourceMappingURL=style.css.map */

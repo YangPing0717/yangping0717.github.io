@@ -236,6 +236,20 @@ button[type="submit"] {
 			color: $color-darker;
 		}
 	}
+	&.type3{
+		height: 48px;
+		padding: 0 24px;
+		background: $color-main;
+		color: $color-darker;
+		font-size: 0.9rem;
+		@include transition;
+		&:hover {
+			background: $color-darker;
+			color: $color-main;
+			// background: linear-gradient(90deg, rgb(149, 145, 149) 0%, rgb(48, 68, 181) 53%, rgb(0, 255, 209) 100%);
+			border: 1px solid $color-main;
+		}
+	}
 	&.type3_wild {
 		height: 64px;
 		padding: 0 36px;
@@ -258,6 +272,7 @@ textarea {
 	border: 1px solid #eee;
 	padding: 20px;
 }
+
 
 
 
@@ -719,6 +734,9 @@ textarea {
 					&:hover {
 						color: $color-main;
 						text-decoration: none;
+						i {
+							color: $color-main;
+						}
 					}
 				}
 			}
@@ -1315,6 +1333,10 @@ textarea {
 					opacity: 1;
 					transform: scale(1);
 					filter: blur(0px);
+					&:hover {
+						cursor: pointer;
+						transform: scale3d(1.05, 1.05, 1.8);
+					}
 				}
 
 				&:after {
@@ -1357,6 +1379,7 @@ textarea {
 					font-weight: 800;
 					color: #fff;
 					margin-bottom: 10px;
+					text-transform: uppercase;
 					@media only screen and (max-width: 767px),
 					only screen and (max-device-width: 767px){
 						font-size: 10vw;
@@ -1385,10 +1408,7 @@ textarea {
 						color: $color-main;
 					}
 				}
-				&:hover {
-					cursor: pointer;
-					transform: scale3d(1.05, 1.05, 1.8);
-				}
+				
 			}
 		}
 	}
@@ -2263,6 +2283,13 @@ textarea {
 					line-height: 2.2;
 					color: white;
 				}
+				span {
+					// font-weight: 400;
+					line-height: 1.8;
+					&.sec {
+						color: white;
+					}
+				}
 			}
 		}
 	}
@@ -2563,7 +2590,15 @@ textarea {
 	.col-lg-9 {
 		padding-right: 60px;
 	}
-
+	&.bg_1::after {
+		content: "";
+    width: 100%;
+    height: 500px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background: url(../images/arch_line.png) no-repeat right top / contain;
+	}
 	.sidebar {
 		width: 100%;
 		float: left;
@@ -2710,7 +2745,7 @@ textarea {
 
 				.post-title {
 					font-size: 4vw;
-					line-height: 1.4;
+					line-height: 1.2;
 				}
 				.post-title-sub {
 					font-size: 1.5rem;
@@ -2718,8 +2753,13 @@ textarea {
 					margin-top: 2rem;
 					font-weight: 800;
 				}
-				p .light {
-					font-weight: 600;
+				p span {
+					font-weight: 800;
+					&.highlight {
+						color: $col-light-blue;
+						font-size: 125%;
+						line-height: 2;
+					}
 				}
 			}
 		}
@@ -2847,9 +2887,23 @@ textarea {
 				float: left;
 				margin-right: 30px;
 				margin-bottom: 30px;
-				margin-top: 20px;
+				// margin-top: -1rem;
 			}
 
+			.image-right {
+				width: 60%;
+				float: right;
+				margin-left: 30px;
+				margin-bottom: 30px;
+				margin-top: -1rem;
+				@media (max-width: 768px)  {
+					width: 100%;
+					float: initial;
+					margin-bottom: 0;
+					margin-left: 0;
+					margin-top: -2rem;
+				}
+			}
 			.image-full {
 				width: 100%;
 				display: block;
@@ -3199,7 +3253,7 @@ textarea {
 		font-size: 17px;
 		border-bottom: 1px solid $color-main;
 		padding-bottom: 5px;
-
+		position: relative;
 		&:hover {
 			border-color: #fff;
 			text-decoration: none;
@@ -4090,3 +4144,138 @@ background-color: rgba(0, 0, 0, 0.2);
 	font-size: 2rem;
 	line-height: 2.9rem;
 	}
+
+
+
+// button-animation
+// @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap");
+
+/*=============== VARIABLES CSS ===============*/
+:root {
+	/*========== Colors ==========*/
+	/*Color mode HSL(hue, saturation, lightness)*/
+	--accent-color: #00DAD6;
+	--box-shadow: 0 0 5px #00DAD6, 0 0 25px #00DAD6;
+	// , 0 0 50px #00DAD6, 0 0 100px #00DAD6
+
+
+	/*========== Font and typography ==========*/
+	/*.5rem = 8px | 1rem = 16px ...*/
+	// --body-font: "Montserrat", sans-serif;
+	--normal-font-size: 2rem;
+
+	/*========== Font weight ==========*/
+	// --font-regular: 400;
+	// --font-semi-bold: 600;
+
+	/*========== z index ==========*/
+	// --z-tooltip: 10;
+	// --z-fixed: 100;
+}
+
+.btn {
+	border: none;
+}
+
+.button-animation {
+	font-size: 1.2rem !important;
+	font-weight: 800;
+	position: relative;
+	display: inline-block;
+	padding: 20px 44px !important;
+	color: var(--accent-color);
+	text-transform: uppercase;
+	overflow: hidden;
+	transition: 0.5s;
+	border-bottom: none !important;
+	border-radius: 0;
+	letter-spacing: 2px;
+	span {
+		position: absolute;
+		display: block;
+	}
+
+	span:nth-child(1) {
+		top: 0;
+		left: -100%;
+		width: 100%;
+		height: 2px;
+		background: linear-gradient(90deg, transparent, var(--accent-color));
+		animation: btn-anim1 1s linear infinite;
+	}
+	@keyframes btn-anim1 {
+		0% {
+			left: -100%;
+		}
+		50%,
+		100% {
+			left: 100%;
+		}
+	}
+
+	span:nth-child(2) {
+		top: -100%;
+		right: 0;
+		width: 2px;
+		height: 100%;
+		background: linear-gradient(180deg, transparent, var(--accent-color));
+		animation: btn-anim2 1s linear infinite;
+		animation-delay: 0.25s;
+	}
+	@keyframes btn-anim2 {
+		0% {
+			top: -100%;
+		}
+		50%,
+		100% {
+			top: 100%;
+		}
+	}
+
+	span:nth-child(3) {
+		bottom: 0;
+		right: -100%;
+		width: 100%;
+		height: 2px;
+		background: linear-gradient(270deg, transparent, var(--accent-color));
+		animation: btn-anim3 1s linear infinite;
+		animation-delay: 0.5s;
+	}
+	@keyframes btn-anim3 {
+		0% {
+			right: -100%;
+		}
+		50%,
+		100% {
+			right: 100%;
+		}
+	}
+
+	span:nth-child(4) {
+		bottom: -100%;
+		left: 0;
+		width: 2px;
+		height: 100%;
+		background: linear-gradient(360deg, transparent, var(--accent-color));
+		animation: btn-anim4 1s linear infinite;
+		animation-delay: 0.75s;
+	}
+
+	@keyframes btn-anim4 {
+		0% {
+			bottom: -100%;
+		}
+		50%,
+		100% {
+			bottom: 100%;
+		}
+	}
+
+	&:hover {
+		color: $color-darker;
+		background-color: var(--accent-color);
+		box-shadow: var(--box-shadow);
+		text-decoration: none;
+		
+	}
+}
