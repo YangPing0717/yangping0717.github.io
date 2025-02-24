@@ -1452,6 +1452,9 @@ textarea {
 .page-header .video-bg .swiper-slide.brighter {
   opacity: 0.6;
 }
+.page-header .video-bg .swiper-slide.brighter-2 {
+  opacity: 0.7;
+}
 .page-header .inner {
   width: 100%;
   padding-left: 220px;
@@ -1485,17 +1488,25 @@ textarea {
   background: #00DAD6;
   margin: 0 1rem;
 }
+.page-header .inner.single_case {
+  color: white;
+}
 .page-header .inner.single_case h1 {
-  color: #fff;
   font-weight: 800;
   font-size: 6vw;
   letter-spacing: -3px;
+  line-height: 1.1;
 }
 @media (max-width: 768px) {
   .page-header .inner.single_case h1 {
     font-size: 10vw;
     letter-spacing: 0;
   }
+}
+.page-header .inner.single_case h2 {
+  font-size: 2.4rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
 }
 
 /* INTRO */
@@ -2439,6 +2450,15 @@ textarea {
   left: 0;
   bottom: 0;
   background: url(../images/arch_line.png) no-repeat right top/contain;
+}
+.blog.bg_2::after {
+  content: "";
+  width: 100%;
+  height: 500px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background: url(../images/case_2/cs_arch_line.png) no-repeat right top/contain;
 }
 .blog .sidebar {
   width: 100%;
