@@ -68,7 +68,12 @@
             --gradient-color-3: #12172b;
             --gradient-color-4: #093c45; */
         }
+
+        html {
+          scroll-behavior: smooth;
+        }
     </style>
+
 
 </head>
 
@@ -743,7 +748,7 @@
   </section>
 
 
-  <section class="works">
+  <section class="works" id="category_a">
     <div class="container">
       <div class="row justify-content-center">
         <div class="col-12 wow" data-splitting>
@@ -949,6 +954,19 @@
     gradient.initGradient('#gradient-canvas');
 
     document.getElementById("year").innerHTML = new Date().getFullYear();
+  </script>
+
+
+  <!--  Scroll to anchor on another page  -->
+  <script>
+    $(document).ready(function() {
+        if (window.location.hash) {
+            var hash = window.location.hash;
+            $('html, body').animate({
+                scrollTop :  $(hash).offset().top
+            }, 1500);
+        };
+    });
   </script>
 
 
