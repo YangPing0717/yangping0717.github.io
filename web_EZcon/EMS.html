@@ -49,8 +49,6 @@
 <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css'>
 <link rel="stylesheet" href="css/style_slick.css">
 
-<!-- <link rel="stylesheet" href="css/style_sl.css"> -->
-
 <link rel="stylesheet" href="css/style.css">
 
 <script src="js/JjrPaxV.js" ></script>
@@ -70,14 +68,17 @@
             --gradient-color-3: #12172b;
             --gradient-color-4: #093c45; */
         }
+
         html {
           scroll-behavior: smooth;
         }
     </style>
 
+
 </head>
 
 <body data-scroll-animation="true" >
+  
 <div class="preloader">
   <div class="layer"></div>
   <!-- end layer -->
@@ -156,23 +157,35 @@
 </div>
 <!-- end social-media -->
 
-<div class="all-cases">
+<div class="all-cases ">
   <div class="layer"> </div>
   <!-- end layer -->
   <div class="inner">
     <ul>
+      <!-- <li>
+        <a class=" all-cases-link" href="#" >e-Home
+          <b class="btn scroll_to_id" data-sec="section_cases"></b> 
+        </a>
+      </li> -->
+      
       <li><a href="ehome.html#ehome_cases">e-Home</a></li>
+      <li><a href="BA.html#BA_cases">Smart Building (BA)</a></li>
       <li>
-        <a class="all-cases-link scroll_link" href="#BA_cases" >
-          <b class="">Smart Building(BA)</b> 
+        <a class="all-cases-link scroll_link" href="#EMS_cases" >
+          <b class="">EMS</b> 
         </a>
       </li>
-      <li><a href="EMS.html#EMS_cases">EMS</a></li>
+      <!-- <li><a href="#">EZ Module</a></li>
+      <li><a href="#">Smart Building</a></li>
+      <li><a href="#">E-Home</a></li> -->
     </ul>
   </div>
   <!-- end inner --> 
 </div>
 <!-- end all-cases -->
+
+
+
 
 <main>
   <aside class="left-side">
@@ -205,30 +218,31 @@
 
   <div class="all-cases-link"> <span>ALL CASES</span> <b>+</b> </div>
   <!-- end all-cases-link -->
+  
 
   <header class="carousel-hero">
       <div class="carousel-slider">
       <div class="swiper-wrapper">
-        <div class="swiper-slide" data-background="images/ba_case_1/BA_1_01_2.jpg">
-        	<div class="inner" onclick="location.href='BA_case_1.html';">
-            <h2>Tuk Tuk Source</h2> 
-            <div class="sub_t">Smart Housing Case Studies</div>
-            <a href="BA_case_1.html">DISCOVER CASE</a> 
+        <div class="swiper-slide" data-background="images/EMS_main_2.jpg">
+        	<div class="inner" onclick="location.href='ehome_case_1.html';">
+            <h2>XINYI NO.18</h2> 
+            <div class="sub_t">Property Management Case</div>
+            <a href="ehome_case_1.html">DISCOVER CASE</a> 
+          </div>
+        	<!-- end inner -->
+        </div>
+        <!-- end swiper-slide -->
+        <div class="swiper-slide" data-background="images/EMS_main_3.jpg">
+        	<div class="inner" onclick="location.href='ehome_case_2.html';">
+            <h2>ZHUBEI FUYU</h2> 
+            <div class="sub_t">Property Management Case</div>
+            <a href="ehome_case_2.html">DISCOVER CASE</a> 
           </div>
         	<!-- end inner -->
         </div>
         <!-- end swiper-slide -->
         <div class="swiper-slide" data-background="images/works06.jpg">
-        	<div class="inner">
-            <h2>DINGTAI ZHENHUAN</h2> 
-            <div class="sub_t">Sales Center Sample House</div>
-            <a href="#">DISCOVER CASE</a> 
-          </div>
-        	<!-- end inner -->
-        </div>
-        <!-- end swiper-slide -->
-        <div class="swiper-slide" data-background="images/works06.jpg">
-        	<div class="inner">
+        	<div class="inner" onclick="location.href='ehome_case_3.html';">
             <h2>SHANGCHENG RUOSHUI</h2> 
             <div class="sub_t">Shangcheng Ruoshui Sales Center</div>
             <a href="#">DISCOVER CASE</a> 
@@ -262,31 +276,30 @@
   </header>
   <!-- end carousel-hero -->
    
-  <section class="intro wild">
+  <section class="intro">
     <div class="container">
       <div class="row">
         <div class="col-lg-5 wow" data-splitting>
-          <h3 class="section-title"><span class="light">Building Automation </span>& <br>
-            Smart Society</h3>
+          <h3 class="section-title"><span class="light">EZ-EMS Energy </span><br>
+            Management System</h3>
           <!-- <a href="#">hello@tourog.com</a>  -->
         </div>
         <!-- end col-5 -->
-        <div class="col-lg-7 wow">
-          <p>People-oriented, close to residential use needs. Enhance the interaction between people and buildings through technology. Meet practical needs with innovative thinking.</p>
-          <p class="p_bigger">Easy Control Wisdom has complete solutions and customized services for smart building systems.</p>
-          <figure class="reveal-effect masker wow">
-            <img src="images/ba_des_1.png" alt="Image"> 
-          </figure>
-          <p class="p_small">Easy Control is committed to the research and development of AIoT. In order to provide excellent experience for building management and residents, we independently developed and integrated the eHome system, smart building system, and community property software to connect the three together to provide overall solutions for building management, residents, and construction projects. The systems can also operate independently and complement each other, making building intelligence more humane.</p>
-          
-          <p class="p_bigger mt-4">Why do we need building management?</p>
-          <figure class="reveal-effect masker wow">
-            <img src="images/ba_des_2.png" alt="Image"> 
-          </figure>
-          <p class="p_small">
-            Building maintenance costs account for 82.5% of the total cost. Therefore, during the operation and maintenance period, costs should be reduced and operational efficiency should be improved as much as possible.
-Easy-to-control intelligence improves the software integration and usability of smart building systems and solves many pain points in building management!
+        <div class="col-lg-7 wow" >
+          <p>
+            Unlike general companies that only perform EMS energy management from charging piles, Yikong performs energy management <span class="light">from the source of community power boxes</span>. Therefore, there is no need to bind charging piles, and car owners can choose original or other brand charging piles at will.
           </p>
+          <p class="p_small">
+            There are two solutions in total. The first is to use the wireless meter of Schneider , a major European manufacturer, to detect power usage. The wireless meter is compact and does not take up space in the low-voltage box, and it looks beautiful. The second method is to use the architecture of the lead-sealed meter for control. Both have their advantages and disadvantages, and the choice mainly depends on what the community cares about.
+          </p>
+          <br>
+          <p>
+            EasyControl provides a <span class="light">Community EMS Proposal</span> for residents, chairpersons, car owners, etc. to reference and provides <span class="light">Community Management Methods</span> for the management committee to reference.
+          </p>
+          <!-- <h6>Salvador Dali</h6>
+          <small>Digital Artisit</small> <b>25</b>
+          <h4>YEARS OF<br>
+            DIGITAL EXPERIENCE</h4> -->  
 
           <!-- menus 這層是為了 click scroll_to_id 此頁滑動 -->
           <div class="form-group mt-4 menus">
@@ -294,13 +307,9 @@ Easy-to-control intelligence improves the software integration and usability of 
               <strong>DISCOVER ALL CASES<b></b> <i></i></strong>
             </button> -->
             <a class="btn box__link button-animation scroll_to_id" href="#" data-sec="section_cases">
-              DISCOVER ALL BA CASES<span></span><span></span><span></span><span></span>
+              DISCOVER ALL EMS CASES<span></span><span></span><span></span><span></span>
             </a>
           </div>
-          <!-- <h6>Salvador Dali</h6>
-          <small>Digital Artisit</small> <b>25</b>
-          <h4>YEARS OF<br>
-            DIGITAL EXPERIENCE</h4> -->
         </div>
         <!-- end col-7 --> 
       </div>
@@ -310,18 +319,7 @@ Easy-to-control intelligence improves the software integration and usability of 
   </section>
   <!-- end intro -->
 
-  
   <section class="intro-image">
-    <div class="container">
-      <div class="col-12 wow" data-splitting>
-        <!-- <h3 class="section-title sub"><span class="light">E-Home</span><br> 
-          IS ABLE TO DO</h3> -->
-          <div class="txt_area mb-5">
-            <h3 class="section-title sub">Learn how EasyControl <br><span class="light">reduces the cost burden of building management</span><br> through technology</h3>
-                    <p>Through four major aspects of management and easy-to-control software and hardware integration, <br>we can solve various pain points of developers in introducing technology.</p>
-          </div>
-      </div>
-    </div>
     <div class="container">
       <div class="row">
         <div class="col-12">
@@ -329,110 +327,40 @@ Easy-to-control intelligence improves the software integration and usability of 
             <div class="swiper-wrapper">
 
               <div class="swiper-slide">
-                <figure> 
-                  <img src="images/ba_能耗管理.jpg" alt="Image">
-                  <figcaption>
-                    <h6 class="bigger">Energy management</h6>
-                  </figcaption>
-                </figure>
-                <div class="descrip">
-                  <p>Energy consumption of the whole building, energy saving by area, energy management system (electricity), operating power saving, public electricity (lighting, air conditioning) through scheduling and detectors (air quality, illumination) Execute energy saving plan 
-                    </p>
-                  <ul>
-                    <li>Detect the air quality in public areas and automatically determine whether to start the air conditioning system, fresh air system and full heat exchange according to the temperature, humidity and gas concentration data.</li>
-                    <li>Automatic energy-saving control of lighting and air conditioning through power detection</li>
-                    <li>With the popularization of electric vehicles, electricity consumption analysis can be carried out for each household’s charging piles.</li>
-                  </ul>
-                </div>
-              </div>
-              <!-- end swiper-slide --> 
-
-              <div class="swiper-slide">
-                <figure> 
-                  <img src="images/ba_設備管理.jpg" alt="Image">
-                  <figcaption>
-                    <h6 class="bigger">Device Management</h6>
-                  </figcaption>
-                </figure>
-                <div class="descrip">
-                  <p>Equipment use, equipment abnormality, equipment maintenance, 
-                    <br>equipment life cycle management</p>
-                  <ul>
-                    <li>It can provide anticipated alarms and self-detection for important equipment such as generators, various pumps, exhaust fans, etc., so you can know in advance before equipment failure!
-                      </li>
-                    <li>Administrators can select cameras to view through the floor plan, which is convenient and intuitive.</li>
-                  </ul>
-                </div>
-              </div>
-
-              <div class="swiper-slide">
-                <figure> 
-                  <img src="images/ba_人力管理.jpg" alt="Image">
-                  <figcaption>
-                    <h6 class="bigger">Human Resources Management</h6>
-                  </figcaption>
-                </figure>
-                <div class="descrip">
-                  <p>Maintenance dispatch, cleaning inspection, repair records, attendance records</p>
-                  <ul>
-                    <li>Pre-schedule cleaning and patrol inspection activities and synchronize them to the calendar. Residents, vendors and administrators can synchronize information</li>
-                  </ul>
-                </div>
-              </div>
-
-              <div class="swiper-slide">
                 <figure class="reveal-effect masker wow"> 
-                  <video src="videos/入侵警告與畫面自動推播.mp4" muted loop autoplay></video>
-                  <!-- <img src="images/device.png" alt="Image">  -->
+                  <img src="images/EMS_descrip_1.png" alt="Image">
                   <figcaption>
-                    <h6 class="bigger">Security Management</h6>
-                  </figcaption>                
-                  <!-- <div class="download_btn">
-                    <form>
-                      <input type="text" placeholder="Search on blog">
-                      <button type="submit">SEARCH</button>
-                      <button type="submit">SEARCH</button>
-                    </form>
-                  </div> -->
-                  
-                  <!-- <div class="flex social-btns">
-                    <a class="app-btn blu flex vert" href="http:apple.com">
-                      <i class="fab fa-apple"></i>
-                      <p>Available on the <br/> <span class="big-txt">App Store</span></p>
-                    </a>
-                  
-                    <a class="app-btn blu flex vert" href="http:google.com">
-                      <i class="fab fa-google-play"></i>
-                      <p>Get it on <br/> <span class="big-txt">Google Play</span></p>
-                    </a>
-                    
-                    <a class="app-btn blu flex vert" href="http:alphorm.com">
-                      <i class="fas fa-desktop"></i>
-                      <p>Application <br/> <span class="big-txt">Desktop</span></p>
-                    </a>
-                  </div> -->
-                
+                    <h6 class="bigger">Schneider Radio Display</h6>
+                  </figcaption>
                 </figure>
-                <div class="descrip">
-                  <p>Access control system, parking control, <br>surveillance system, emergency alarm</p>
-                  <ul>
-                    <li>Based on identity recognition such as card reading and face recognition, residents, visitors, and staff are controlled by area access control for public facilities and elevators.</li>
-                    <li>Accurate vehicle guidance, after license plate recognition and eTag entry, automatically guides to the most appropriate parking space according to the algorithm</li>
-                    <li>EasyControl's unique AI humanoid electronic fence image recognition enhances community safety maintenance</li>
-                    <li>Administrators can select cameras to view through the floor plan, which is convenient and intuitive.</li>
-                  </ul>
-                </div>
               </div>
+
+              <div class="swiper-slide">
+                <figure> 
+                  <img src="images/EMS_descrip_2.png" alt="Image">
+                  <figcaption>
+                    <h6 class="bigger">Schematic diagram of lead-sealed electric meter solution</h6>
+                  </figcaption>
+                </figure>
+              </div>
+
+              <!-- <div class="swiper-slide">
+                <figure> 
+                  <video src="videos/智慧家庭篇- 易控.mp4" muted loop autoplay></video>
+                  <iframe width="420" height="345" src="https://youtu.be/YvQGwWoAICQ?si=HqcU_ZfMSXJA3LG7">
+                  </iframe>
+                  <figcaption>
+                    <h6 class="bigger">Easy Control - Smart Home</h6>
+                  </figcaption>
+                </figure>
+              </div> -->
 
             </div>
             <!-- end swiper-wrapper -->
-
             <div class="swiper-pagination"></div>
             <!-- end swiper-pagination --> 
-
           </div>
           <!-- end office-slider --> 
-
         </div>
         <!-- end col-12 --> 
       </div>
@@ -442,45 +370,143 @@ Easy-to-control intelligence improves the software integration and usability of 
   </section>
   <!-- end intro-image -->
    
+  <section class="icon-content-block type2 ">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-12 mb-5 wow" data-splitting>
+          <h3 class="section-title mb-3"><span class="light">EasyControl EMS System</span><br> 
+            is different other brands</h3>
+            <p>After reading the two architectures, you want to understand the difference between <br>the EasyControl EMS system and other brands of EMS? <br>What are the advantages for administrators and tram owners?</p>
+        </div>
+        <!-- end col-12 -->
+        <div class="col-lg-5 col-md-5 reveal-effect masker wow" >
+          <div class="content-block">
+            <figure> <i class="material-icons-two-tone">manage_accounts</i> </figure> 
+            <h6>To the Management Committee</h6>
+            <ul>
+              <li>The Easy-Control EMS system is also integrated with the property management system. Managers can directly submit car owners' charging costs to their personal monthly management fees with one click, without having to export to Excel or calculate one by one.</li>
+              <li>Buyout EMS system, no monthly rental fee required.</li>
+              <li>The backend of the EMS system can be flexibly adjusted according to government policies or changes in the management committee.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-7 col-md-7 reveal-effect masker wow">
+          <div class="content-block selected">
+            <figure> <i class="material-icons-two-tone">group_add</i> </figure>
+            <h6>For Users</h6>
+            <ul>
+              <li>The system uses a local billing host and does not transmit information through the cloud. Even if the network is disconnected, there is no need to worry about the loss of electricity usage data or the risk of information security being leaked.</li>
+              <li>Not bound to charging piles, car owners can buy original or other brands of charging piles. The system supports Tesla original charging piles and OCPP protocol charging piles.</li>
+              <li>Integrated payment service, users can use the App to scan the QR code to pay at convenience stores. It is paperless and environmentally friendly, and detailed records can be viewed on the App.</li>
+              <li>Integrate financial flow services, and the fees paid by users will go directly into the designated account of the management committee without going through the system provider's account. There is no need to worry about being charged usage fees or electricity bills.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- table -->
+        <div class="col-12 col-lg-12 table-image">
+          <table class="table table-dark table-bordered text-start">
+          <thead>
+            <tr>
+              <th scope="col"></th>
+              <th scope="col">Easy-control EMS system supports Tesla and OCPP agreements</th>
+              <th scope="col">Community-based EMS system supporting OCPP protocol</th>
+              <th scope="col">Cloud-based stored-value billing system</th>
+            </tr>
+          </thead>
+          
+          <tbody>
+            <tr>
+              <th scope="row">Not bound to charging piles</th>
+              <td>Can use original manufacturers</td>
+              <td>Bind to a specific brand</td>
+              <td>Can use the original manufacturer</td>
+            </tr>
+            <tr>
+              <th scope="row">Integrate property systems and aggregate information</th>
+              <td>Directly remit monthly management fees to car owners</td>
+              <td>Not supported</td>
+              <td>Not supported</td>
+            </tr>
+            <tr>
+              <th scope="row">Integrate payment and financial services</th>
+              <td>Support APP convenience store barcode payment</td>
+              <td>Not supported</td>
+              <td>Not supported</td>
+            </tr>
+            <tr>
+              <th scope="row">Pre-charge before use</th>
+              <td>Charging fee aggregation management fee</td>
+              <td>Export Excel report</td>
+              <td>Bind credit card first</td>
+            </tr>
+
+            <tr>
+              <th scope="row">System operators take a cut of subsequent electricity charges</th>
+              <td>Car owners directly remit electricity fees to the management committee account and cash flow does not go through system operators</td>
+              <td>Yes</td>
+              <td>Yes</td>            
+            </tr>
+            <tr>
+              <th scope="row">Support Tesla original charging piles to perform EMS management</th>
+              <td>Support Tesla charging piles to implement EMS energy management</td>
+              <td>No</td>
+              <td>No</td>
+            </tr>
+            <tr>
+              <th scope="row">Buyout system services</th>
+              <td>One-time buyout without subsequent extension fees</td>
+              <td>No</td>
+              <td>No</td>
+            </tr>
+            <tr>
+              <th scope="row">Flexible adjustment of system backend</th>
+              <td>Can be adjusted at any time according to policies</td>
+              <td>No permission to adjust</td>
+              <td>No permission to adjust</td>
+            </tr>
+          </tbody>
+         </table>     
+        </div>
+
+        <!-- end col-3 -->
+        <!-- <div class="col-lg-3 col-md-4 reveal-effect masker wow">
+          <div class="content-block">
+            <figure> <i class="material-icons-two-tone">theaters</i> </figure>
+            <h6>THEATER MODE</h6>
+            <p>"Hey! Siri, help me turn on theater mode." The lights dim, the projection screen lowers, and you can enjoy a comfortable movie time. It's that simple!</p>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-4 reveal-effect masker wow">
+          <div class="content-block">
+            <figure> <i class="material-icons-two-tone">pets</i> </figure>
+            <h6>PET MODE</h6>
+            <p>Whether it is hot summer or cold winter, you can create a comfortable environment for your pets even if you are not at home, always keeping up with your family's needs.</p>
+          </div>
+        </div> -->
+
+      </div>
+      <!-- end row --> 
+    </div>
+    <!-- end container --> 
+  </section>
+  <!-- end icon-content-block -->
+
+
   <!-- slick-carousel -->
-  <section class="timeline-carousel ">
+  <!-- <section class="timeline-carousel ">
     
     <div class="gradient-canvas">
       <canvas id="gradient-canvas" ></canvas>
     </div>
-    
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-lg-12 wow" data-splitting>
-          <h4 class="section-title sub mb-5">
-            <span class="light">Smart Building(BA) App</span> <br> Operation Interface
-          </h4>
-        </div>
-      </div>
-    </div>
 
-    <!-- <div class="container">
+    <div class="timeline-carousel__item-wrapper" data-js="timeline-carousel">
       <h4 class="section-title sub">
-        <span class="light">EZCON App</span> <br> Operation Interface
+        <span class="light">EZCON e-Home App</span> <br> Operation Interface
       </h4>
-    </div> -->
-    
-    <div class="timeline-carousel__item-wrapper pad" data-js="timeline-carousel-pad">
-      <div class="timeline-carousel__item">
-        <div class="timeline-carousel__image">
-            <div class="media-wrapper media-wrapper--overlay" style="background: url('images/pad_fr_0.png') center center; background-size:cover;"></div>
-        </div>
-        <div class="timeline-carousel__item-inner">
-            <span class="year">Door Security</span>
-            <span class="month">Excellent mobile and web app experiences</span>
-            <p>The fully-sealed optical engine adopts a high-definition optical lens featuring excellent light transmission, projecting clearer images with high colour accuracy to reproduce the true artistic beauty of films.</p>
-          <a href="#" class="read-more">Read more</a>
-        </div>
-    </div>
-    
         <div class="timeline-carousel__item">
             <div class="timeline-carousel__image">
-                <div class="media-wrapper media-wrapper--overlay" style="background: url('images/pad_fr_1.png') center center; background-size:cover;"></div>
+                <div class="media-wrapper media-wrapper--overlay" style="background: url('images/app_fr_1.png') center center; background-size:cover;"></div>
             </div>
             <div class="timeline-carousel__item-inner">
                 <span class="year">Door Security</span>
@@ -492,7 +518,7 @@ Easy-to-control intelligence improves the software integration and usability of 
       
         <div class="timeline-carousel__item">
             <div class="timeline-carousel__image">
-                <div class="media-wrapper media-wrapper--overlay" style="background: url('images/pad_fr_2.png') center center; background-size:cover;"></div>
+                <div class="media-wrapper media-wrapper--overlay" style="background: url('images/app_fr_1.png') center center; background-size:cover;"></div>
             </div>
             <div class="timeline-carousel__item-inner">
                 <div class="pointer"></div>
@@ -501,12 +527,10 @@ Easy-to-control intelligence improves the software integration and usability of 
               <a href="#" class="read-more">Read more</a>
             </div>
         </div>
-      <!--/Timeline item-->
       
-      <!--Timeline item-->
       <div class="timeline-carousel__item">
         <div class="timeline-carousel__image">
-            <div class="media-wrapper media-wrapper--overlay" style="background: url('images/pad_fr_3.png') center center; background-size:cover;"></div>
+            <div class="media-wrapper media-wrapper--overlay" style="background: url('images/app_fr_1.png') center center; background-size:cover;"></div>
         </div>
         <div class="timeline-carousel__item-inner">
             <span class="year">Smart Home Lighting</span>
@@ -515,12 +539,10 @@ Easy-to-control intelligence improves the software integration and usability of 
           <a href="#" class="read-more">Read more</a>
         </div>
       </div>
-      <!--/Timeline item-->
 
-      <!--Timeline item-->
         <div class="timeline-carousel__item">
             <div class="timeline-carousel__image">
-                <div class="media-wrapper media-wrapper--overlay" style="background: url('images/pad_fr_4.png') center center; background-size:cover;"></div>
+                <div class="media-wrapper media-wrapper--overlay" style="background: url('images/app_fr_1.png') center center; background-size:cover;"></div>
             </div>
             <div class="timeline-carousel__item-inner">
                 <div class="pointer"></div>
@@ -529,12 +551,10 @@ Easy-to-control intelligence improves the software integration and usability of 
               <a href="#" class="read-more">Read more</a>
             </div>
         </div>
-      <!--/Timeline item-->
       
-      <!--Timeline item-->
       <div class="timeline-carousel__item">
         <div class="timeline-carousel__image">
-            <div class="media-wrapper media-wrapper--overlay" style="background: url('images/pad_fr_5.png') center center; background-size:cover;"></div>
+            <div class="media-wrapper media-wrapper--overlay" style="background: url('images/app_fr_1.png') center center; background-size:cover;"></div>
         </div>
         <div class="timeline-carousel__item-inner">
             <span class="year">Affordable hardware</span>
@@ -543,12 +563,10 @@ Easy-to-control intelligence improves the software integration and usability of 
           <a href="#" class="read-more">Read more</a>
         </div>
       </div>
-      <!--/Timeline item-->
       
-      <!--Timeline item-->
       <div class="timeline-carousel__item">
         <div class="timeline-carousel__image">
-            <div class="media-wrapper media-wrapper--overlay" style="background: url('images/pad_fr_6.png') center center; background-size:cover;"></div>
+            <div class="media-wrapper media-wrapper--overlay" style="background: url('images/app_fr_1.png') center center; background-size:cover;"></div>
         </div>
         <div class="timeline-carousel__item-inner">
             <div class="pointer"></div>
@@ -557,12 +575,10 @@ Easy-to-control intelligence improves the software integration and usability of 
           <a href="#" class="read-more">Read more</a>
         </div>
       </div>
-      <!--/Timeline item-->
 
-      <!--Timeline item-->
-      <!-- <div class="timeline-carousel__item">
+      <div class="timeline-carousel__item">
         <div class="timeline-carousel__image">
-            <div class="media-wrapper media-wrapper--overlay" style="background: url('images/pad_fr_1.png') center center; background-size:cover;"></div>
+            <div class="media-wrapper media-wrapper--overlay" style="background: url('images/app_fr_1.png') center center; background-size:cover;"></div>
         </div>
         <div class="timeline-carousel__item-inner">
             <div class="pointer"></div>
@@ -570,12 +586,11 @@ Easy-to-control intelligence improves the software integration and usability of 
             <p>Energy Star Certified: This means it meets strict energy efficiency guidelines, helping you save on your electricity bills. InstaView™ Feature: Just knock twice on the glass panel to see inside without opening the door, reducing cold air loss.</p>
           <a href="#" class="read-more">Read more</a>
         </div>
-      </div> -->
+      </div>
 
-      <!--Timeline item-->
-      <!-- <div class="timeline-carousel__item">
+      <div class="timeline-carousel__item">
         <div class="timeline-carousel__image">
-            <div class="media-wrapper media-wrapper--overlay" style="background: url('images/pad_fr_2.png') center center; background-size:cover;"></div>
+            <div class="media-wrapper media-wrapper--overlay" style="background: url('images/app_fr_1.png') center center; background-size:cover;"></div>
         </div>
         <div class="timeline-carousel__item-inner">
           <span class="year">EZ Smart Refrigerator</span>
@@ -585,145 +600,21 @@ Easy-to-control intelligence improves the software integration and usability of 
           <p>The EZ Smart Refrigerator is a game-changer for your kitchen. This innovative appliance not only keeps your food fresh but also helps you save energy. Here are some of its standout features:</p>
           <a href="#" class="read-more">Read more</a>
         </div>
-      </div> -->
+      </div>
 
   </div>
 
-  </section>
+  </section> -->
   <!-- end slick-carousel -->
-
-  <!-- icon - 卡片 -->
-  <section class="icon-content-block type2">
-    <div class="container">
-      <div class="row justify-content-center">
-        <div class="col-12 wow" data-splitting>
-          <!-- <h3 class="section-title"><span class="light">E-Home</span><br> 
-            IS ABLE TO DO</h3> -->
-          <div class="txt_area mb-5">
-            <h3 class="section-title sub">Ensure the quality of high-quality <br>living space and create smart buildings that <br><span class="light">users can feel</span></h3>
-            <p>If a building is to sell well, it still needs the residents to pay for it. Convenient, <br>comfortable and safe buildings have always been the goal pursued by mankind.</p>
-          </div>
-        </div>
-
-        <div class="col-lg-5 col-md-4 reveal-effect masker wow" >
-          <div class="content-block">
-            <figure> <i class="material-icons-two-tone">health_and_safety</i> </figure>
-            <h6>SAFETY</h6>
-            <ul>
-              <li>Access control: facial recognition and card reader recognition, ensuring the safety of residents entering and exiting</li>
-              <li>When an earthquake strikes, the earthquake sensor can be used to connect the gas valves</li>
-              <li>Gas switch control</li>
-              <li>Water Leak Detection</li>
-              <li>Emergency help (call for help via intercom in the house, notify family members via mobile phone, and link to community management)</li>
-            </ul>
-            <figure class="image-75 mt-3"><img src="images/ba_safety.svg" alt="Image"></figure>
-          </div>
-        </div>
-
-        <div class="col-lg-7 col-md-4 reveal-effect masker wow">
-          <div class="content-block">
-            <figure> <i class="material-icons-two-tone">dashboard_customize</i> </figure>
-            <h6>CONVENIENT</h6>
-            <ul>
-              <li>Environmental control system for public facilities, enriching the situational effects of space (theater, gym, karaoke space, lighting, air conditioning, curtains, audio-visual system, one-button situational control)</li>
-              <li>Through the combination of the easy-to-control property management system and the smart building system, residents can use their mobile phones and home screens</li>
-              <li>Community restaurant ordering service, community visitor reservation and notification
-                Parking lot charging pile automatic billing service, automatically included in the community car charging fee every month</li>
-              <li>Open the mailbox by swiping the card, the investment letter will notify and the mailbox will not be closed</li>
-              <li>Residents' elevator call service</li>
-            </ul>
-            <figure class="image-75 effect_a"><img src="images/ba_con.svg" alt="Image"></figure>
-          </div>
-        </div>
-
-        <div class="col-lg-4 col-md-4 reveal-effect masker wow">
-          <div class="content-block selected">
-            <figure> <i class="material-icons-two-tone">medical_information</i> </figure>
-            <h6>HEALTHY</h6>
-            <ul>
-              <li>Health is the most important thing. EasyControl has built a physiological measurement health station to allow residents to track their physiological data over a long period of time and view their personal statistics at home.</li>
-            </ul>
-            <figure class="image-75 effect_b mt-n2"><img src="images/ba_heal.svg" alt="Image"></figure>
-          </div>
-        </div>
-
-        <div class="col-lg-4 col-md-4 reveal-effect masker wow">
-          <div class="content-block">
-            <figure> <i class="material-icons-two-tone">diversity_1</i> </figure>
-            <h6>COMFORT</h6>
-            <ul>
-              <li>Through the smart home system, you can customize every expression in your home to meet the various needs of your family and create a warm and comfortable environment.</li>
-              <li class="light">Download Smart Building + ehome Presentation</li>
-            </ul>
-            <div class="form-group mt-2">
-              <button id="submit" type="submit" name="submit" class="type2" >
-                <strong>Download Now<b></b> <i></i></strong>
-              </button>
-            </div>
-          </div>
-        </div>
-        <!-- <div class="col-lg-4"></div> -->
-      </div>
-      <!-- end row --> 
-    </div>
-    <!-- end container --> 
-  </section>
-  <!-- end icon-content-block -->
-
   
-  <!-- 硬體 -->
-  <section class="intro">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-5 wow" data-splitting>
-          <h4 class="section-title sub">
-            Smart Home -  <br>Reference Example of Building Brand Selection</h4>
-          <!-- <a href="#">hello@tourog.com</a>  -->
-        </div>
-        <!-- end col-5 -->
-        <div class="col-lg-7 wow" data-splitting>
-          <p class="p_bigger mb-1"><span class="light">Standard </span>Solution</p>
-          <ul>
-            <li>Smart system + core host * 1</li>
-            <li>Wall-mounted touch panel * 1 + APP operation</li>
-            <li>Smart door lock*1 – fingerprint/ password/ card reader/ key</li>
-            <li>Lighting module * 1 (controllable 10 circuits)</li>
-            <li>Air quality detection * 1 (temperature and humidity, CO2, PM2.5, PM10, TVOC, CH2O)</li>
-            <li>Kitchen water leakage detector * 1</li>
-          </ul>
 
-          <p class="p_bigger mb-1"><span class="light">Options </span>Solution</p>
-          <ul>
-            <li>Lighting module * 1 (controllable lighting + 10 circuits)</li>
-            <li>Dimming module * 1 (controllable brightness and darkness of lighting + 4 circuits)</li>
-            <li>Dimming buttons * 2 (controllable brightness and darkness buttons + 4 groups)</li>
-            <li>Infrared module * 1 (controllable IR devices + 8 groups)</li>
-            <li>Dry contact module * 1 (controllable dry contact devices + 3 groups)</li>
-            <li>Voice control * 1 (voice control)</li>
-            <li>IP camera * 1 (live video viewing)</li>
-          </ul>
-        </div>
-        <!-- end col-7 --> 
-        <div class="col-lg-12 reveal-effect masker wow">
-          <figure class="image-full" style="opacity: 0.2;">
-            <!-- <img src="images/hardware.png" alt="Image"> -->
-            <img src="images/ba_標配選配.jpg" alt="Image"> 
-          </figure>
-        </div>
-      </div>
-      <!-- end row --> 
-    </div>
-    <!-- end container --> 
-  </section>
-  <!-- end intro -->
-  
   <!-- QA -->
-  <section class="works">
+  <section class="works type2">
     <div class="container">
       <div class="row">
         <div class="col-lg-5 wow" data-splitting>
           <h4 class="section-title sub">
-            BA Frequently asked questions
+            EMS Frequently asked questions
           </h4>
         </div>
         <div class="col-lg-7 wow" >
@@ -765,86 +656,39 @@ Easy-to-control intelligence improves the software integration and usability of 
   </section>
 
 
-  <!-- cases  -->
-  <section class="works">
+  <section class="works" >
     <div class="container">
       <div class="row justify-content-center">
         <div class="col-12 wow" data-splitting>
           <h3 class="section-title">
-            <span class="light">Building Automation(BA)</span><br> 
+            <span class="light">EZ-EMS</span><br> 
             Case Studies</h3>
         </div>
       </div>
     </div>
     <div id="section_cases"></div>
-    <div id="BA_cases"></div>
+    <div id="EMS_cases"></div>
     <ul>
       <li>
-        <figure class="reveal-effect masker wow"> <a href="images/ba_case_1/BA_1_w_main_2.jpg" data-fancybox><img src="images/ba_case_1/BA_1_w_main_2.jpg" alt="Image"></a> </figure>
+        <figure class="reveal-effect masker wow"> <a href="images/works04.jpg" data-fancybox><img src="images/works04.jpg" alt="Image"></a> </figure>
         <div class="caption wow" data-splitting>
-          <h3>Tuk Tuk Source</h3>
-          <small>E-Home, SmartBuilding</small> 
+          <h3>Darkness Vehicle</h3>
+          <small>DIGITAL, PRINT, DEVELOPMENT</small> 
         </div>
-        <p>
-          <span class="light">BA System</span><br>
-          Integrates monitoring, access control, parking management, monitors and environmental detection functions to achieve building automation management.<br>
-          <span class="light">Intercom System</span><br>
-          Uses Sip Network Intercom To Improve Communication Efficiency Between Residents And Between Residents And The Management Center.<br>
-          <span class="light">Security System</span><br>
-          Equipped with electronic door locks to enhance residents' home security.<br>
-          <span class="light">Situational System </span><br>
-          Provides functions such as lighting control, air conditioning control, etc.<br><br>
-          <span class="light">Completion&nbsp;&nbsp;</span>Sep.&nbsp;2023<br>
-          <span class="light">Client&nbsp;&nbsp;</span>Tuk Tuk Construction
-        </p>
-        <button type="submit" name="submit" class="type3" onclick="location.href='BA_case_1.html';">
-          <strong>Discover More<b></b> <i></i></strong>
-        </button>
-      </li>
-      <li>
-        <figure class="reveal-effect masker wow"> <a href="images/ba_case/定泰青松翫.jpg" data-fancybox><img src="images/ba_case/定泰青松翫.jpg" alt="Image"></a> </figure>
-        <div class="caption wow" data-splitting>
-          <h3>Dingtai Green Pine Play</h3>
-          <small>E-Home, SmartBuilding, Housing Case Studies</small>
-        </div>
-        <p>
-          <span class="light">Public Weak Current System</span><br>
-          <span class="sec">BA system&nbsp; &ndash; &nbsp;</span><br>
-          monitoring / access control / parking management / monitor<br>
-          <span class="sec">Intercom System&nbsp; &ndash; &nbsp;</span>SIP network intercom<br>
-          <span class="light">Property Management System&nbsp;&nbsp;</span>BA integration<br><br>
-          <span class="light">Number of households&nbsp;&nbsp;</span>85<br>
-          <span class="light">Estimated Completion Date&nbsp;&nbsp;</span>Dec.&nbsp;2026<br>
-          <span class="light">Client&nbsp;&nbsp;</span>Dingtai Construction
-        </p>
         <!-- end caption --> 
       </li>
       <li>
-        <figure class="reveal-effect masker wow"> <a href="images/ba_case/定泰臻翫.jpg" data-fancybox><img src="images/ba_case/定泰臻翫.jpg" alt="Image"></a> </figure>
+        <figure class="reveal-effect masker wow"> <a href="images/works04.jpg" data-fancybox><img src="images/works04.jpg" alt="Image"></a> </figure>
         <div class="caption wow" data-splitting>
-          <h3>Dingtai Zhenhuan</h3>
-          <small>SmartBuilding, Housing Case Studies</small> 
-        </div>
-        <p>
-          <span class="light">Public Weak Current System</span><br>
-          <span class="sec">BA system&nbsp; &ndash; &nbsp;</span><br>
-          monitoring / access control / parking management / monitor / environmental detection<br>
-          <span class="sec">Intercom System&nbsp; &ndash; &nbsp;</span> SIP network intercom<br>
-          <span class="light">Property Management System&nbsp;&nbsp;</span><br>
-          Face recognition / health care station / smart elevator calling / BA integration<br>
-
-          <span class="light">eHome system in the house&nbsp; &ndash; &nbsp; Standard</span><br>
-          <span class="sec">Security system&nbsp; &gt; &nbsp;power control&nbsp; &ndash; &nbsp;</span><br>
-          Electronic door lock/gas monitoring/water leakage monitoring<br>
-          
-          <span class="light">eHome system in the house&nbsp; &ndash; &nbsp;Optional Expansion</span><br>
-          <span class="sec">Security system&nbsp; &gt; &nbsp;power control&nbsp; &ndash; &nbsp;</span><br>
-          Dimming control/audio control/curtain control/lift control/monitor/voice system<br><br>
-
-          <span class="light">Number of households&nbsp;&nbsp;</span>140<br>
-          <span class="light">Estimated Completion Date&nbsp;&nbsp;</span>Dec.&nbsp;2026<br>
-          <span class="light">Client&nbsp;&nbsp;</span>Dingtai Construction
-        </p>
+          <h3>Goddes Cover Art</h3>
+          <small>PRINT, DIGITAL, DEVELOPMENT</small></div>
+        <!-- end caption --> 
+      </li>
+      <li>
+        <figure class="reveal-effect masker wow"> <a href="images/works04.jpg" data-fancybox><img src="images/works04.jpg" alt="Image"></a> </figure>
+        <div class="caption wow" data-splitting>
+          <h3>Hard Employee</h3>
+          <small>WEB, DIGITAL, DEVELOPMENT</small> </div>
         <!-- end caption --> 
       </li>
       <li>
@@ -870,17 +714,16 @@ Easy-to-control intelligence improves the software integration and usability of 
       </li>
     </ul>
   </section>
-  <!-- end cases -->
 
-  <!-- 品牌 -->
+  
   <!-- <section class="clients">
     <div class="container">
-      <div class="row"> <div class="col-lg-5 wow" data-splitting>
+      <div class="row"> 
+        <div class="col-lg-5 wow" data-splitting>
           <h3 class="section-title">AGENSY PROUD<br>
             IS QUALITY OF<br>
             PARTNERS</h3>
         </div>
-
         <div class="col-lg-7">
           <ul>
             <li class="reveal-effect masker wow"> <img src="images/logo01.png" alt="Image"> </li>
@@ -897,9 +740,12 @@ Easy-to-control intelligence improves the software integration and usability of 
       </div>
     </div>
   </section> -->
+  <!-- end clients --> 
 
 </main>
 <!-- end main -->
+ 
+
 
 <footer class="footer">
   <div class="container">
@@ -952,15 +798,14 @@ Easy-to-control intelligence improves the software integration and usability of 
 <!-- slick-carousel -->
 <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
 <script src='https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.js'></script>
-<script src="js/script_slick.js"></script> 
-<!-- <script src="js/script_sl.js"></script> -->
+<script src="js/script_slick.js"></script>
 
 <!-- BG_net -->
 <script src='https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js'></script>
 <script src='https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js'></script>
 <script  src="js/script_net.js"></script>
 
-  <!-- 置頂 btn -->
+<!-- 置頂 btn -->
   <!-- <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.3/jquery.min.js"></script> -->
   <script>
     $(document).ready(function(){
@@ -991,6 +836,27 @@ Easy-to-control intelligence improves the software integration and usability of 
   </script>
   <!-- 置頂 btn 完 -->
 
+  
+
+  <script>
+    var gradient = new Gradient()
+    gradient.initGradient('#gradient-canvas');
+
+    document.getElementById("year").innerHTML = new Date().getFullYear();
+  </script>
+
+
+  <!--  Scroll to anchor on another page  -->
+  <script>
+    $(document).ready(function() {
+        if (window.location.hash) {
+            var hash = window.location.hash;
+            $('html, body').animate({
+                scrollTop :  $(hash).offset().top
+            }, 1500);
+        };
+    });
+  </script>
 
   <!-- click scroll_to_id 此頁滑動 -->
   <script>
@@ -1013,26 +879,6 @@ Easy-to-control intelligence improves the software integration and usability of 
         behavior: 'smooth',
       })  
     })
-  </script>
-
-
-  <script>
-    var gradient = new Gradient()
-    gradient.initGradient('#gradient-canvas');
-
-    document.getElementById("year").innerHTML = new Date().getFullYear();
-  </script>
-
-  <!--  Scroll to anchor on another page  -->
-  <script>
-    $(document).ready(function() {
-        if (window.location.hash) {
-            var hash = window.location.hash;
-            $('html, body').animate({
-                scrollTop :  $(hash).offset().top
-            }, 1500);
-        };
-    });
   </script>
 
 

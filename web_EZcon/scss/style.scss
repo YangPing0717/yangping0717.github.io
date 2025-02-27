@@ -147,6 +147,7 @@ a {
 @media (min-width: 1300px) {
 	.container {
 		max-width: 1340px;
+		z-index: 1;
 	}
 }
 
@@ -996,6 +997,31 @@ textarea {
 			background: $color-main;
 			text-decoration: none;
 			color: #fff;
+		}
+	}
+	&.scroll_link {
+		position: relative;
+		right: initial;
+		top: 0;
+		transition-delay: 0s;
+		b {
+			top: initial;
+			background: transparent;
+			font-size: 8vw;
+			font-weight: 800;
+			width: fit-content;
+			height: fit-content;
+			line-height: initial;
+			display: inline-block;
+			color: initial;
+			text-align: center;
+			border-radius: initial;
+			cursor: pointer;
+			@include transition;
+			&:hover {
+				text-decoration: none;
+				color: white;
+			}
 		}
 	}
 }
@@ -2201,7 +2227,9 @@ textarea {
 	padding: 150px 0;
 	background: $color-dark;
 	color: #fff;
-
+	&.type2 {
+		background: $color-darker;
+	}
 	ul {
 		width: 100%;
 		display: flex;
@@ -4034,6 +4062,7 @@ only screen and (max-device-width: 767px) {
 }
 
 
+
 // QA
 .faq-header{
 	font-size: 42px;
@@ -4123,6 +4152,8 @@ only screen and (max-device-width: 767px) {
 	display: none;
   }
 
+
+	
   /*  置頂 btn - Back to top button   */
 #back-top {
   position: fixed;
@@ -4307,3 +4338,62 @@ background-color: rgba(0, 0, 0, 0.2);
 		
 	}
 }
+
+
+
+
+
+// EMS table
+.table-image {
+	margin-top: 5rem;
+	.table-dark  {
+		background: $color-dark;
+	}
+  td, th {
+    vertical-align: middle;
+		text-align: initial;
+  }
+	i {
+		font-size: 150%;
+		vertical-align: middle;
+	}
+	table {
+		tr {
+			th, td {
+				padding: 1rem 1.8rem;
+				border-color: #1d3a3a;
+			}
+			th:nth-child(2), td:nth-child(2) {
+				background: $color-darker;
+				color: $color-main;
+				transform: scale(1.05);
+				font-weight: 600;
+				font-size: 105%;
+				border-top: 6px solid $col-light-blue;
+				padding-left: 4rem;
+			}
+			th:nth-child(2) {
+				font-size: 140%;
+			}
+			th:nth-child(2), td:nth-child(2) {
+				&::before {
+					position: absolute;
+					left: 1.8rem;
+					font-family: 'Material Icons Two Tone';
+					content: '\e2e6';
+					font-size: 120%;
+					color: $col-light-blue;
+					padding-right: .8rem;
+					top: 50%;
+  				transform: translateY(-50%);
+				}
+			}
+			&:last-child td:nth-child(2) {
+				border-bottom: 8px solid $col-light-blue;
+			}
+		}
+	}
+}
+
+
+

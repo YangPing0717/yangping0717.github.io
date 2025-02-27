@@ -77,7 +77,8 @@
 
 </head>
 
-<body class="menus">
+<body data-scroll-animation="true" >
+  
 <div class="preloader">
   <div class="layer"></div>
   <!-- end layer -->
@@ -119,7 +120,7 @@
         </ul> -->
       </li>
       <li>
-        <a href="blog.html">EMS</a> 
+        <a href="EMS.html">EMS</a> 
         <small>Energy Management System</small> 
       </li>
       <li>
@@ -156,37 +157,24 @@
 </div>
 <!-- end social-media -->
 
-<div class="all-cases">
+<div class="all-cases ">
   <div class="layer"> </div>
   <!-- end layer -->
   <div class="inner">
     <ul>
       <li>
-        <!-- <div class="btn all-cases-link" data-sec="section_cases"> 
-          <span>
-          <a class="btn all-cases-link" href="#" >e-Home <b>+</b> </a>
-        </span> 
-          <a class="btn" href="#" >e-Home</a>ALL CASESXXXX
-        </div> -->
-          <!-- <a class="btn" href="#" >e-Home
-            
-          </a> -->
-        <!-- <a class="" href="#" >e-Home</a> -->
-
-        <a class=" all-cases-link" href="#" >e-Home
-          <b class="btn scrollto" data-sec="section_cases"></b> 
+        <a class="all-cases-link scroll_link" href="#ehome_cases" >
+          <b class="">e-Home</b> 
         </a>
       </li>
-      <li><a href="#">Smart Building (BA)</a></li>
-      <li><a href="#">EMS</a></li>
-      <!-- <li><a href="#">EZ Module</a></li>
-      <li><a href="#">Smart Building</a></li>
-      <li><a href="#">E-Home</a></li> -->
+      <li><a href="BA.html">Smart Building (BA)</a></li>
+      <li><a href="EMS.html">EMS</a></li>
     </ul>
   </div>
   <!-- end inner --> 
 </div>
 <!-- end all-cases -->
+
 
 <main>
   <aside class="left-side">
@@ -294,11 +282,13 @@
           <small>Digital Artisit</small> <b>25</b>
           <h4>YEARS OF<br>
             DIGITAL EXPERIENCE</h4> -->
-          <div class="form-group mt-4 ">
+
+          <!-- menus 這層是為了 click scroll_to_id 此頁滑動 -->
+          <div class="form-group mt-4 menus">
             <!-- <button id="submit" type="submit" name="submit" class="btn type3_wild" data-sec="section_cases">
               <strong>DISCOVER ALL CASES<b></b> <i></i></strong>
             </button> -->
-            <a class="btn box__link button-animation scrollto" href="#" data-sec="section_cases">
+            <a class="btn box__link button-animation scroll_to_id" href="#" data-sec="section_cases">
               DISCOVER ALL e-Home CASES<span></span><span></span><span></span><span></span>
             </a>
           </div>
@@ -597,6 +587,7 @@
     </div>
   </div> -->
 
+  
   <section class="intro">
     <div class="container">
       <div class="row">
@@ -628,6 +619,8 @@
     <!-- end container --> 
   </section>
   <!-- end intro -->
+
+
 
   <section class="works">
     <!-- <div class="gradient-canvas">
@@ -722,7 +715,7 @@
       <div class="row">
         <div class="col-lg-5 wow" data-splitting>
           <h4 class="section-title sub">
-            Frequently asked questions
+            e-Home Frequently asked questions
           </h4>
         </div>
         <div class="col-lg-7 wow" >
@@ -823,14 +816,15 @@
     </ul>
   </section>
 
+  <!-- 品牌 -->
   <section class="clients">
     <div class="container">
-      <div class="row"> <div class="col-lg-5 wow" data-splitting>
+      <div class="row"> 
+        <div class="col-lg-5 wow" data-splitting>
           <h3 class="section-title">AGENSY PROUD<br>
             IS QUALITY OF<br>
             PARTNERS</h3>
         </div>
-        <!-- end col-5 -->
         <div class="col-lg-7">
           <ul>
             <li class="reveal-effect masker wow"> <img src="images/logo01.png" alt="Image"> </li>
@@ -844,15 +838,14 @@
             <li class="reveal-effect masker wow"> <img src="images/logo09.png" alt="Image"> </li>
           </ul>
         </div>
-        <!-- end col-7 --> 
       </div>
-      <!-- end row --> 
     </div>
-    <!-- end container --> 
   </section>
   <!-- end clients --> 
+   
 </main>
 <!-- end main -->
+ 
 
 <footer class="footer">
   <div class="container">
@@ -943,7 +936,7 @@
   </script>
   <!-- 置頂 btn 完 -->
 
-  <!-- click scrollTo -->
+  <!-- click scroll_to_id 此頁滑動 -->
   <script>
     'use strict';
 
@@ -953,7 +946,7 @@
     menus.addEventListener('click', function(e) {
       e.preventDefault();
       const curTarget = e.target;
-      if (!curTarget.classList.contains('scrollto')) return;
+      if (!curTarget.classList.contains('scroll_to_id')) return;
 
     // 2. 버튼의 해당 섹션 id값을 가져와 일치하는 DOM 요소를 변수 할당
       const currentSection = document.querySelector(`#${curTarget.dataset.sec}`);

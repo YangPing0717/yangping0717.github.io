@@ -99,6 +99,7 @@ a:hover {
 @media (min-width: 1300px) {
   .container {
     max-width: 1340px;
+    z-index: 1;
   }
 }
 /* SECTIONS */
@@ -967,6 +968,35 @@ textarea {
   background: #00DAD6;
   text-decoration: none;
   color: #fff;
+}
+.all-cases-link.scroll_link {
+  position: relative;
+  right: initial;
+  top: 0;
+  transition-delay: 0s;
+}
+.all-cases-link.scroll_link b {
+  top: initial;
+  background: transparent;
+  font-size: 8vw;
+  font-weight: 800;
+  width: fit-content;
+  height: fit-content;
+  line-height: initial;
+  display: inline-block;
+  color: initial;
+  text-align: center;
+  border-radius: initial;
+  cursor: pointer;
+  -webkit-transition: 0.25s ease-in-out;
+  -moz-transition: 0.25s ease-in-out;
+  -ms-transition: 0.25s ease-in-out;
+  -o-transition: 0.25s ease-in-out;
+  transition: 0.25s ease-in-out;
+}
+.all-cases-link.scroll_link b:hover {
+  text-decoration: none;
+  color: white;
 }
 
 /* LEFT SIDE */
@@ -2060,6 +2090,9 @@ textarea {
   padding: 150px 0;
   background: #121d1d;
   color: #fff;
+}
+.works.type2 {
+  background: #0A0E0E;
 }
 .works ul {
   width: 100%;
@@ -3858,4 +3891,49 @@ html[dir=rtl] .footer .footer-bar .creation {
   background-color: var(--accent-color);
   box-shadow: var(--box-shadow);
   text-decoration: none;
+}
+
+.table-image {
+  margin-top: 5rem;
+}
+.table-image .table-dark {
+  background: #121d1d;
+}
+.table-image td, .table-image th {
+  vertical-align: middle;
+  text-align: initial;
+}
+.table-image i {
+  font-size: 150%;
+  vertical-align: middle;
+}
+.table-image table tr th, .table-image table tr td {
+  padding: 1rem 1.8rem;
+  border-color: #1d3a3a;
+}
+.table-image table tr th:nth-child(2), .table-image table tr td:nth-child(2) {
+  background: #0A0E0E;
+  color: #00DAD6;
+  transform: scale(1.05);
+  font-weight: 600;
+  font-size: 105%;
+  border-top: 6px solid #007bff;
+  padding-left: 4rem;
+}
+.table-image table tr th:nth-child(2) {
+  font-size: 140%;
+}
+.table-image table tr th:nth-child(2)::before, .table-image table tr td:nth-child(2)::before {
+  position: absolute;
+  left: 1.8rem;
+  font-family: "Material Icons Two Tone";
+  content: "\e2e6";
+  font-size: 120%;
+  color: #007bff;
+  padding-right: 0.8rem;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.table-image table tr:last-child td:nth-child(2) {
+  border-bottom: 8px solid #007bff;
 }/*# sourceMappingURL=style.css.map */
