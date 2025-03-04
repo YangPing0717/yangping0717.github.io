@@ -762,6 +762,9 @@ textarea {
 
 .light{
 	color: $color-main;
+	&.bolder {
+		font-weight: 600;
+	}
 }
 
 /* SECTION TITLES */
@@ -2298,6 +2301,17 @@ textarea {
 						width: 100%;
 					}
 				}
+				.tag {
+					position: absolute;
+					bottom: -.8rem;
+					right: .8rem;
+					background: #000;
+					color: $color-main;
+					z-index: 2;
+					font-size: 80%;
+					padding: 2px 8px;
+					font-weight: 600;
+				}
 			}
 
 			h3 {
@@ -2327,6 +2341,10 @@ textarea {
 					&.sec {
 						color: white;
 					}
+				}
+				.light{
+					color: $color-main;
+					font-weight: 600;
 				}
 			}
 		}

@@ -721,6 +721,9 @@ textarea {
 .light {
   color: #00DAD6;
 }
+.light.bolder {
+  font-weight: 600;
+}
 
 /* SECTION TITLES */
 .section-title {
@@ -2164,6 +2167,17 @@ textarea {
 .works ul li figure a img {
   width: 100%;
 }
+.works ul li figure .tag {
+  position: absolute;
+  bottom: -0.8rem;
+  right: 0.8rem;
+  background: #000;
+  color: #00DAD6;
+  z-index: 2;
+  font-size: 80%;
+  padding: 2px 8px;
+  font-weight: 600;
+}
 .works ul li h3 {
   font-weight: 600;
   margin-bottom: 5px;
@@ -2190,6 +2204,10 @@ textarea {
 }
 .works ul li p span.sec {
   color: white;
+}
+.works ul li p .light {
+  color: #00DAD6;
+  font-weight: 600;
 }
 .works .features .sub_title {
   margin-top: 3.6rem;
