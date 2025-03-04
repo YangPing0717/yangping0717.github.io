@@ -63,8 +63,6 @@
 	<item key='foot.jpg20250206172747' />
 	<item key='footer-bg.png20190621204925' />
 	<item key='arch_line.png20250206175733' />
-	<item key='caseMain_1_1.jpg20250207092911' />
-	<item key='caseMain_1_2.jpg20250207103636' />
 	<item key='index_banner_2.jpg20250207145211' />
 	<item key='index_banner_3.jpg20250207153141' />
 	<item key='index_banner.jpg20250207144224' />
@@ -77,5 +75,29 @@
 	<item key='2x20250214162535' />
 	<item key='ba_des_1.png20250217134906' />
 	<item key='ba_des_2.png20250217160303' />
+	<item key='ba_人力管理.jpg20250218091814' />
+	<item key='ba_能耗管理.jpg20250218093302' />
+	<item key='ba_設備管理.jpg20250217175226' />
+	<item key='ba_標配選配.jpg20250218180833' />
+	<item key='ba_標配選配.png20250218154048' />
+	<item key='ba_case20250220135807' />
+	<item key='ba_case_120250219112243' />
+	<item key='ba_con.svg20250218145347' />
+	<item key='ba_heal.svg20250218152315' />
+	<item key='ba_safety.svg20250219105440' />
+	<item key='EMS_descrip_1.png20250227094803' />
+	<item key='EMS_descrip_2.png20250227095141' />
+	<item key='EMS_main_1.jpg20250227165414' />
+	<item key='EMS_main_2.jpg20250227162852' />
+	<item key='EMS_main_3.jpg20250227173326' />
+	<item key='EMS_main_4.jpg20250303114541' />
+	<item key='pad_fr_0.png20250225104600' />
+	<item key='pad_fr_1.png20250218100137' />
+	<item key='pad_fr_2.png20250218104323' />
+	<item key='pad_fr_3.png20250218104332' />
+	<item key='pad_fr_4.png20250218104340' />
+	<item key='pad_fr_5.png20250218104348' />
+	<item key='pad_fr_6.png20250218104353' />
+	<item key='SVG20250218134219' />
 </files>
 </dirinfo>
