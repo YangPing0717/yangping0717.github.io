@@ -121,7 +121,7 @@
 
 
     // EQUALIZER TOGGLE
-    var source = "audio/audio2.mp3";
+    var source = "audio/audio3.mp3";
     var audio = new Audio(); // use the constructor in JavaScript, just easier that way
     audio.addEventListener("load", function () {
       audio.play();
