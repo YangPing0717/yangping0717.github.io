@@ -927,11 +927,12 @@ textarea {
 			padding: 0;
 
 			li {
-				font-size: 8vw;
+				font-size: 6.6vw;
 				font-weight: 800;
 				margin: 0;
 				padding: 0;
 				list-style: none;
+				line-height: 1.2;
 
 				a {
 					-webkit-text-stroke-width: 1px;
@@ -2683,6 +2684,16 @@ textarea {
     bottom: -6%;
     background: url(../images/case_4/cs_4_arch_line.svg) no-repeat center -20% / cover;
 		opacity: 0.5;
+	}
+	&.bg_5::after {
+		content: "";
+    width: 100%;
+    height: 950px;
+    position: absolute;
+    left: -13%;
+    bottom: -3%;
+    background: url(../images/case_5/cs_5_arch_line.svg) no-repeat left bottom / contain;
+    opacity: 0.3;
 	}
 	.sidebar {
 		width: 100%;
