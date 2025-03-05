@@ -2496,18 +2496,19 @@ textarea {
 .blog.bg_1::after {
   content: "";
   width: 100%;
-  height: 500px;
+  height: 1000px;
   position: absolute;
-  left: 0;
-  bottom: 0;
-  background: url(../images/arch_line.png) no-repeat right top/contain;
+  right: -18%;
+  top: 16%;
+  background: url(../images/case_1/cs_1_arch_line.svg) no-repeat right center/contain;
+  opacity: 0.7;
 }
 .blog.bg_2::after {
   content: "";
   width: 100%;
   height: 500px;
   position: absolute;
-  left: 0;
+  right: -5%;
   bottom: 0;
   background: url(../images/case_2/cs_arch_line_2.png) no-repeat right top/contain;
 }
@@ -2519,6 +2520,16 @@ textarea {
   left: 0;
   bottom: 0;
   background: url(../images/case_3/caseMain_bg.png) no-repeat center -40%/cover;
+}
+.blog.bg_4::after {
+  content: "";
+  width: 50%;
+  height: 1000px;
+  position: absolute;
+  right: 0;
+  bottom: -6%;
+  background: url(../images/case_4/cs_4_arch_line.svg) no-repeat center -20%/cover;
+  opacity: 0.5;
 }
 .blog .sidebar {
   width: 100%;
