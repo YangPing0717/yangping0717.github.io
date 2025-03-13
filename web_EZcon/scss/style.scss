@@ -1410,6 +1410,12 @@ textarea {
 					color: #fff;
 					margin-bottom: 10px;
 					text-transform: uppercase;
+					br {
+						display: none;
+						@media (max-width: 768px){
+							display: initial;
+						}
+					}
 					@media only screen and (max-width: 767px),
 					only screen and (max-device-width: 767px){
 						font-size: 10vw;
@@ -1453,6 +1459,9 @@ textarea {
 		@include second-font;
 		color: #fff;
 		background: none;
+		@media (max-width: 768px){
+			right: 100px;
+		}
 	}
 
 	.swiper-button-next {
@@ -1477,7 +1486,9 @@ textarea {
 		margin-left: -110px;
 		z-index: 3;
 		text-align: center;
-
+		@media (max-width: 768px){
+			margin-left: -125px;
+		}
 		span {
 			display: inline-block;
 			color: #fff;
@@ -1492,7 +1503,9 @@ textarea {
 			display: inline-block;
 			position: static;
 			background: rgba(255, 255, 255, 0.3);
-
+			@media (max-width: 768px){
+				width: 140px;
+			}
 			.swiper-pagination-progressbar-fill {
 				background: #fff;
 			}
@@ -1542,6 +1555,23 @@ textarea {
 			}
 			&.brighter-2 {
 				opacity: 0.7;
+			}
+			&.texture::after {
+				content: '';
+				width: 110vw;
+				height: 100%;
+				position: absolute;
+				bottom: -20%;
+				background: url(../images/ba_case_3/BA_3_main1_texture.svg) no-repeat center bottom / cover;
+				opacity: 0.7;
+				filter: grayscale(0.8);
+				@media (max-width: 768px){
+					width: 156vw;
+					bottom: -20%;
+					background: url(../images/ba_case_3/BA_3_main1_texture.svg) no-repeat left bottom / cover;
+					filter: grayscale(0.8) contrast(1.5);
+					left: -15rem;
+        }
 			}
 		}
 	}
@@ -1636,6 +1666,9 @@ textarea {
 			display: inline-block;
 			margin-left: 15px;
 			margin-bottom: 7px;
+			@media (max-width: 768px){
+				width: 80px;
+			}
 		}
 	}
 
@@ -1688,7 +1721,9 @@ textarea {
     position: absolute;
     left: 20rem;
     margin-top: -16px;
-
+		@media (max-width: 768px){
+			left: 16rem;
+		}
 		img {
 			width: 5rem;
 			height: 5rem;
@@ -1763,7 +1798,9 @@ textarea {
 			bottom: 0;
 			padding: 20px;
 			line-height: 1;
-
+			@media (max-width: 768px){
+				padding: 0;
+			}
 			h6 {
 				font-size: 18px;
 				color: #fff;
@@ -1774,6 +1811,11 @@ textarea {
 				&.bigger {
 					font-size: 1.8rem;
 					width: 16rem;
+				}
+				@media (max-width: 768px){
+					font-size: 1rem;
+					margin-left: 1rem;
+					margin-bottom: 0.8rem;
 				}
 			}
 			
@@ -1892,6 +1934,9 @@ textarea {
 			width: 100%;
 			display: block;
 			margin-bottom: 40px;
+			@media (max-width: 768px){
+				margin-bottom: 1rem;
+			}
 			img {
 				height: 75px;
 			}
@@ -1939,6 +1984,9 @@ textarea {
 				list-style: none;
 				font-weight: 300;
 				padding-top: 0.8rem;
+				@media (max-width: 768px){
+					padding-top: 0.4rem;
+				}
 			}
 		}
 		p {
@@ -2656,6 +2704,16 @@ textarea {
 		top: 16%;
     background: url(../images/case_1/cs_1_arch_line.svg) no-repeat right center / contain;
     opacity: 0.7;
+		@media (max-width: 768px){
+			content: "";
+			width: 120%;
+			height: 1000px;
+			position: absolute;
+			right: -18%;
+			bottom: 22%;
+			background: url(../images/case_1/cs_1_arch_line.svg) no-repeat right bottom / contain;
+			opacity: 0.7;
+		}
 	}
 	&.bg_2::after {
 		content: "";
@@ -2694,6 +2752,37 @@ textarea {
     bottom: -3%;
     background: url(../images/case_5/cs_5_arch_line.svg) no-repeat left bottom / contain;
     opacity: 0.3;
+	}
+	&.ba_bg_1::after {
+		content: "";
+    width: 100%;
+    height: 1050px;
+    position: absolute;
+    right: -10%;
+    bottom: -8%;
+    background: url(../images/ba_case_1/BA_1_arch_line.svg) no-repeat right bottom / contain;
+    opacity: 0.5;
+    transform: rotate(337deg);
+	}
+	&.ba_bg_2::after {
+		content: "";
+    width: 100%;
+    height: 1000px;
+    position: absolute;
+    left: -16%;
+    bottom: -6%;
+    background: url(../images/ba_case_2/BA_2_arch_line.svg) no-repeat left bottom / contain;
+    opacity: 0.35;
+	}
+	&.ba_bg_3::after {
+		content: "";
+    width: 100%;
+    height: 1200px;
+    position: absolute;
+    right: -2%;
+    bottom: 1rem;
+    background: url(../images/ba_case_3/BA_3_arch_line.svg) no-repeat right bottom / contain;
+    opacity: 0.5;
 	}
 	.sidebar {
 		width: 100%;
@@ -2854,7 +2943,7 @@ textarea {
 					&.highlight {
 						color: $col-light-blue;
 						font-size: 125%;
-						line-height: 2;
+						line-height: 1.4;
 					}
 				}
 			}
