@@ -1677,12 +1677,21 @@ textarea {
 				@media (max-width: 768px){
 					font-size: 10vw;
 					letter-spacing: 0;
+					br {
+						display: none;
+					}
 				}
 			}
 			h2 {
 				font-size: 2.4rem;
 				font-weight: 600;
 				margin-bottom: 1rem;
+				@media (max-width: 768px){
+					font-size: 1.8rem;
+					br {
+						display: none;
+					}
+				}
 			}
 		}
 	}
@@ -2764,9 +2773,10 @@ textarea {
 			height: 1000px;
 			position: absolute;
 			right: -18%;
-			bottom: 22%;
-			background: url(../images/case_1/cs_1_arch_line.svg) no-repeat right bottom / contain;
+			bottom: 0;
+			background: url(../images/case_1/cs_1_arch_line.svg) no-repeat center center / cover;
 			opacity: 0.7;
+			top: initial;
 		}
 	}
 	&.bg_2::after {
@@ -2777,6 +2787,10 @@ textarea {
     right: -5%;
     bottom: 0;
     background: url(../images/case_2/cs_arch_line_2.png) no-repeat right top / contain;
+		@media (max-width: 768px){
+			width: 180%;
+			background: url(../images/case_2/cs_arch_line_2.png) no-repeat right bottom / contain;
+		}
 	}
 	&.bg_3::after {
 		content: "";
@@ -2796,6 +2810,9 @@ textarea {
     bottom: -6%;
     background: url(../images/case_4/cs_4_arch_line.svg) no-repeat center -20% / cover;
 		opacity: 0.5;
+		@media (max-width: 768px){
+			width: 100%;
+		}
 	}
 	&.bg_5::after {
 		content: "";
@@ -2806,6 +2823,12 @@ textarea {
     bottom: -3%;
     background: url(../images/case_5/cs_5_arch_line.svg) no-repeat left bottom / contain;
     opacity: 0.3;
+		@media (max-width: 768px){
+			width: 180%;
+    	height: 1000px;
+			left: 0;
+    	bottom: -1%;
+		}
 	}
 	&.ba_bg_1::after {
 		content: "";
@@ -2857,7 +2880,22 @@ textarea {
     bottom: -10rem;
     background: url(../images/ems_c1/EMS_1_arch_line.svg) no-repeat right bottom / contain;
     opacity: 0.3;
+		@media (max-width: 768px){
+			background: url(../images/ems_c1/EMS_1_arch_line_m.svg) no-repeat right bottom / contain;
+			bottom: 0;
+		}
 	}
+	&.ems_bg_2::after {
+		content: "";
+    width: 100%;
+    height: 800px;
+    position: absolute;
+    right: -4%;
+    bottom: 0;
+    background: url(../images/ems_c2/EMS_2_arch_line.svg) no-repeat right bottom / contain;
+    opacity: 0.3;
+	}
+
 	.sidebar {
 		width: 100%;
 		float: left;
@@ -3155,7 +3193,7 @@ textarea {
 				margin-left: 30px;
 				margin-bottom: 30px;
 				margin-top: -1rem;
-				@media (max-width: 768px)  {
+				@media (max-width: 768px) {
 					width: 100%;
 					float: initial;
 					margin-bottom: 0;
@@ -3164,6 +3202,17 @@ textarea {
 				}
 				&.w35 {
 					width: 35%;
+					@media (max-width: 768px) {
+						width: 100%;
+						margin-bottom: 1rem;
+					}
+				}
+				&.w50 {
+					width: 50%;
+					@media (max-width: 768px) {
+						width: 100%;
+						margin-bottom: 1rem;
+					}
 				}
 			}
 			.image-full {
