@@ -54,6 +54,25 @@
       $(this).toggleClass("is-opened-navi");
     });
 
+    // 滑去該頁案例區：點擊後，關閉 site-navigation，hamburger 恢復原狀
+    $('.tocases').on('click', function (e) {
+      if ($(".site-navigation").hasClass("active")) {
+        $("body").toggleClass("overflow");
+        $(".site-navigation").removeClass("active");
+        $(".site-navigation").css("transition-delay", "0.5s");
+        $(".site-navigation .layer").css("transition-delay", "0.3s");
+        $(".site-navigation .inner").css("transition-delay", "0s");
+        $(".hamburger").removeClass("is-opened-navi");
+      } else {
+        $(".site-navigation").addClass('active');
+        $("body").toggleClass("overflow");
+        $(".site-navigation.active").css("transition-delay", "0s");
+        $(".site-navigation.active .layer").css("transition-delay", "0.2s");
+        $(".site-navigation.active .inner").css("transition-delay", "0.7s");
+      }
+      $(this).toggleClass("is-opened-navi");
+    });
+
 
     // FOLLOW US
     $('.follow-us').on('click', function (e) {

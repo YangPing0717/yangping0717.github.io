@@ -908,7 +908,7 @@ textarea {
   padding: 0;
 }
 .all-cases .inner ul li {
-  font-size: 6.6vw;
+  font-size: 6vw;
   font-weight: 800;
   margin: 0;
   padding: 0;
@@ -919,6 +919,7 @@ textarea {
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: #fff;
   color: transparent;
+  text-transform: uppercase;
 }
 .all-cases .inner ul li a:hover {
   color: #fff;
@@ -946,6 +947,7 @@ textarea {
   right: -100%;
   top: 30px;
   z-index: 5;
+  text-transform: uppercase;
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
   transition: all 0.3s ease;
@@ -3674,7 +3676,13 @@ html[dir=rtl] .footer .footer-bar .creation {
     padding-left: 100px;
   }
   .all-cases .inner ul li {
-    font-size: 13vw;
+    font-size: 10vw;
+    line-height: 1.2;
+    margin-bottom: 0.8rem;
+  }
+  .all-cases .inner ul li b {
+    font-size: 10vw;
+    text-align: left;
   }
   .site-navigation .inner {
     padding-left: 0;
@@ -3684,6 +3692,7 @@ html[dir=rtl] .footer .footer-bar .creation {
   }
   .site-navigation .inner ul li a {
     font-size: 34px;
+    line-height: 1.2;
   }
   .site-navigation .inner ul li i {
     font-size: 20px;

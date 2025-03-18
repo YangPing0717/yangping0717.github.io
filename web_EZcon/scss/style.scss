@@ -930,7 +930,7 @@ textarea {
 			padding: 0;
 
 			li {
-				font-size: 6.6vw;
+				font-size: 6vw;
 				font-weight: 800;
 				margin: 0;
 				padding: 0;
@@ -941,7 +941,7 @@ textarea {
 					-webkit-text-stroke-width: 1px;
 					-webkit-text-stroke-color: #fff;
 					color: transparent;
-
+					text-transform: uppercase;
 					&:hover {
 						color: #fff;
 						text-decoration: none;
@@ -978,6 +978,7 @@ textarea {
 	right: -100%;
 	top: 30px;
 	z-index: 5;
+	text-transform: uppercase;
 	@include transition-cubic;
 	transition-delay: 1s;
 
@@ -3959,7 +3960,14 @@ only screen and (max-device-width: 767px) {
 	}
 
 	.all-cases .inner ul li {
-		font-size: 13vw;
+		font-size: 10vw;
+		line-height: 1.2;
+		margin-bottom: 0.8rem;
+		
+		b {
+			font-size: 10vw;
+			text-align: left;
+		}
 	}
 
 	.site-navigation .inner {
@@ -3972,6 +3980,8 @@ only screen and (max-device-width: 767px) {
 
 	.site-navigation .inner ul li a {
 		font-size: 34px;
+		line-height: 1.2;
+
 	}
 
 	.site-navigation .inner ul li i {
