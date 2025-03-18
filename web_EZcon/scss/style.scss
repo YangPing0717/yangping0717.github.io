@@ -789,6 +789,9 @@ textarea {
 		&.sub{
 			font-size: 3vw;
 			font-weight: normal;
+			@media (max-width: 768px){
+				font-size: 26px;
+			}
 		}
 	}
 }
@@ -1714,6 +1717,9 @@ textarea {
 	&.wild {
 		.col-lg-7 {
 			padding-left: 0;
+			@media (max-width: 768px){
+				padding-left: 15px;
+			}
 		}
 	}
 	h6 {
@@ -2514,6 +2520,9 @@ textarea {
 					list-style: none;
 					border-left: 1px solid $color-dark-2;
 					border-top: 1px solid $color-dark-2;
+					@media (max-width: 768px){
+						padding: 20px 24px;
+					}
 				}
 			}
 			
@@ -4335,28 +4344,37 @@ only screen and (max-device-width: 767px) {
   }
   
   .panel-title {
-	font-size: 24px;
-	width: 100%;
-	position: relative;
-	margin: 0;
-	padding: 6px 10px 0 3.6rem;
-	display: block;
-	cursor: pointer;
+		font-size: 24px;
+		width: 100%;
+		position: relative;
+		margin: 0;
+		padding: 6px 10px 0 3.6rem;
+		display: block;
+		cursor: pointer;
+		@media (max-width: 768px){
+			font-size: 1.2rem;
+			padding: 6px 10px 0 2rem;
+		}
   }
   
   .panel-content {
-	font-size: 20px;
-	padding: 0px 18px;
-	margin: 0 40px;
-	height: 0;
-	overflow: hidden;
-	// z-index: -1;
-	position: relative;
-	// opacity: 0;
-	-webkit-transition: .4s ease;
-	-moz-transition: .4s ease;
-	-o-transition: .4s ease;
-	transition: .4s ease;
+		font-size: 20px;
+		padding: 0px 18px;
+		margin: 0 40px;
+		height: 0;
+		overflow: hidden;
+		// z-index: -1;
+		position: relative;
+		// opacity: 0;
+		-webkit-transition: .4s ease;
+		-moz-transition: .4s ease;
+		-o-transition: .4s ease;
+		transition: .4s ease;
+		@media (max-width: 768px){
+			margin: 10px 0 0 2rem;
+			padding: initial !important;
+			font-size: 1rem;
+		}
   }
   
   .panel:checked ~ .panel-content{
@@ -4376,22 +4394,29 @@ only screen and (max-device-width: 767px) {
   }
   
   .plus {
-	position: absolute;
-	margin-left: 1rem;
-	margin-top: 4px;
-	z-index: 5;
-	font-size: 42px;
-	line-height: 100%;
-	-webkit-user-select: none;    
-	-moz-user-select: none;
-	-ms-user-select: none;
-	-o-user-select: none;
-	user-select: none;
-	-webkit-transition: .2s ease;
-	-moz-transition: .2s ease;
-	-o-transition: .2s ease;
-	transition: .2s ease;
-	color: $color-main;
+		position: absolute;
+		margin-left: 1rem;
+		margin-top: 4px;
+		z-index: 5;
+		font-size: 42px;
+		line-height: 100%;
+		-webkit-user-select: none;    
+		-moz-user-select: none;
+		-ms-user-select: none;
+		-o-user-select: none;
+		user-select: none;
+		-webkit-transition: .2s ease;
+		-moz-transition: .2s ease;
+		-o-transition: .2s ease;
+		transition: .2s ease;
+		color: $color-main;
+		@media (max-width: 768px){
+			margin-left: 0;
+			margin-top: 6px;
+			z-index: 5;
+			font-size: 34px;
+		}
+		
   }
   
   .panel:checked ~ .plus {

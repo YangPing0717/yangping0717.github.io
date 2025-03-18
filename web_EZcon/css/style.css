@@ -750,6 +750,11 @@ textarea {
   font-size: 3vw;
   font-weight: normal;
 }
+@media (max-width: 768px) {
+  .txt_area .section-title.sub {
+    font-size: 26px;
+  }
+}
 
 /* SOCIAL MEDIA */
 .social-media {
@@ -1660,6 +1665,11 @@ textarea {
 .intro.wild .col-lg-7 {
   padding-left: 0;
 }
+@media (max-width: 768px) {
+  .intro.wild .col-lg-7 {
+    padding-left: 15px;
+  }
+}
 .intro h6 {
   font-weight: 600;
   text-transform: uppercase;
@@ -2392,6 +2402,11 @@ textarea {
   list-style: none;
   border-left: 1px solid #395d5d;
   border-top: 1px solid #395d5d;
+}
+@media (max-width: 768px) {
+  .works .features .brands ul li {
+    padding: 20px 24px;
+  }
 }
 .works .section-title {
   text-align: center;
@@ -3958,6 +3973,12 @@ html[dir=rtl] .footer .footer-bar .creation {
   display: block;
   cursor: pointer;
 }
+@media (max-width: 768px) {
+  .panel-title {
+    font-size: 1.2rem;
+    padding: 6px 10px 0 2rem;
+  }
+}
 
 .panel-content {
   font-size: 20px;
@@ -3970,6 +3991,13 @@ html[dir=rtl] .footer .footer-bar .creation {
   -moz-transition: 0.4s ease;
   -o-transition: 0.4s ease;
   transition: 0.4s ease;
+}
+@media (max-width: 768px) {
+  .panel-content {
+    margin: 10px 0 0 2rem;
+    padding: initial !important;
+    font-size: 1rem;
+  }
 }
 
 .panel:checked ~ .panel-content {
@@ -4005,6 +4033,14 @@ html[dir=rtl] .footer .footer-bar .creation {
   -o-transition: 0.2s ease;
   transition: 0.2s ease;
   color: #00DAD6;
+}
+@media (max-width: 768px) {
+  .plus {
+    margin-left: 0;
+    margin-top: 6px;
+    z-index: 5;
+    font-size: 34px;
+  }
 }
 
 .panel:checked ~ .plus {
