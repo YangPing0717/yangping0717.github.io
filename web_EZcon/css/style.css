@@ -1194,6 +1194,11 @@ textarea {
   color: #fff;
   background: none;
 }
+@media (max-width: 768px) {
+  .slider .swiper-button-prev {
+    right: 100px;
+  }
+}
 .slider .swiper-button-next {
   height: auto;
   position: absolute;
@@ -1216,6 +1221,11 @@ textarea {
   z-index: 3;
   text-align: center;
 }
+@media (max-width: 768px) {
+  .slider .slide-progress {
+    margin-left: -125px;
+  }
+}
 .slider .slide-progress span {
   display: inline-block;
   color: #fff;
@@ -1229,6 +1239,11 @@ textarea {
   display: inline-block;
   position: static;
   background: rgba(255, 255, 255, 0.3);
+}
+@media (max-width: 768px) {
+  .slider .slide-progress .swiper-pagination {
+    width: 140px;
+  }
 }
 .slider .slide-progress .swiper-pagination .swiper-pagination-progressbar-fill {
   background: #fff;

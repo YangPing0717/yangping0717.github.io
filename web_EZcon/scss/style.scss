@@ -1222,6 +1222,9 @@ textarea {
 		@include second-font;
 		color: #fff;
 		background: none;
+		@media (max-width: 768px){
+			right: 100px;
+		}
 	}
 
 	.swiper-button-next {
@@ -1246,7 +1249,9 @@ textarea {
 		margin-left: -110px;
 		z-index: 3;
 		text-align: center;
-
+		@media (max-width: 768px){
+			margin-left: -125px;
+		}
 		span {
 			display: inline-block;
 			color: #fff;
@@ -1261,7 +1266,9 @@ textarea {
 			display: inline-block;
 			position: static;
 			background: rgba(255, 255, 255, 0.3);
-
+			@media (max-width: 768px){
+				width: 140px;
+			}
 			.swiper-pagination-progressbar-fill {
 				background: #fff;
 			}
