@@ -730,6 +730,7 @@ textarea {
 					display: inline-block;
 					font-weight: 800;
 					color: #fff;
+					text-transform:uppercase;
 					@include transition;
 
 					&:hover {
@@ -790,7 +791,17 @@ textarea {
 			font-size: 3vw;
 			font-weight: normal;
 			@media (max-width: 768px){
-				font-size: 26px;
+				font-size: 30px;
+				br {
+					display: none;
+				}
+			}
+		}
+	}
+	p {
+		@media (max-width: 768px){
+			br {
+				display: none;
 			}
 		}
 	}
@@ -1674,6 +1685,10 @@ textarea {
 					width: 0.8rem;
 					background: $color-main;
 					margin: 0 1rem;
+					@media (max-width: 768px){
+						height: 3px;
+						width: 0.5rem;
+					}
 				}
 			}
 		}
@@ -1855,6 +1870,9 @@ textarea {
 		background: transparent;
 		position: relative;
 		overflow: hidden;
+		@media (max-width: 768px){
+			padding-bottom: 2.8rem;
+		}
 	}
 
 	figure {
@@ -1888,14 +1906,22 @@ textarea {
 				&.bigger {
 					font-size: 1.8rem;
 					width: 16rem;
+					@media (max-width: 768px){
+						font-size: 1rem;
+					}
 				}
 				@media (max-width: 768px){
 					font-size: 1rem;
-					margin-left: 1rem;
+					margin-left: 0.8rem;
 					margin-bottom: 0.8rem;
+					
+				}
+				&.type2 {
+					@media (max-width: 768px){
+						margin-bottom: 4.8rem;
+					}
 				}
 			}
-			
 		}
 		video {
 			width: 100%;
@@ -1906,7 +1932,13 @@ textarea {
 			right: 0;
 			bottom: 0;
 		}
-		
+		&.txt_posi {
+			img, video {
+				@media (max-width: 768px){
+					padding-bottom: 2.5rem;
+				}
+			}
+		}
 	}
 	
 	.descrip {
@@ -1922,10 +1954,18 @@ textarea {
 			margin-left: 1.8rem;
 			margin-top: 1rem;
 			color: $color-main;
+			@media (max-width: 768px){
+				font-size: 1.1rem;
+				line-height: 1.5;
+				margin-left: .8rem;
+			}
 		}
 		ul {
 			list-style-type: square;
 			padding-left: 2.8rem;
+			@media (max-width: 768px){
+				padding-left: 1.8rem;
+			}
 			li {
 				margin-bottom: 0.8rem;
 			}
@@ -2020,6 +2060,9 @@ textarea {
 			&.image-75 {
 				width: 75%;
 				margin: -1.8rem auto 0;
+				@media (max-width: 768px){
+					margin: 0 auto;
+				}
 				&.effect_a {
 					filter: saturate(0.6);
 				}
@@ -2028,6 +2071,9 @@ textarea {
 				}
 				img {
 					height: auto;
+					@media (max-width: 768px){
+						margin-bottom: 2rem;
+					}
 				}
 			}
 			&.image-full {
@@ -4026,10 +4072,12 @@ only screen and (max-device-width: 767px) {
 		right: 90px;
 	}
 
-	.icon-content-block .col-lg-3:nth-child(3) {
+	.icon-content-block .col-lg-3:nth-child(3){
 		margin: 50px 0;
 	}
-
+	.icon-content-block .col-lg-3:nth-child(5){
+		margin-top: 50px;
+	}
 	.icon-content-block .content-block {
 		padding: 0;
 	}
@@ -4261,7 +4309,11 @@ only screen and (max-device-width: 767px) {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-   }
+	@media (max-width: 768px){
+		// flex-wrap: wrap;
+		margin-top: 1rem;
+	}
+}
    
   .app {
 		&-btn {
@@ -4275,6 +4327,12 @@ only screen and (max-device-width: 767px) {
 		font-family: "Lucida Grande", sans-serif;
 		font-size: 10px;
 		text-transform: uppercase;
+		@media (max-width: 768px){
+			width: 33%;
+			max-width: none;
+			margin: 0;
+			transform: scaleX(0.96);
+		}
 		&.blu {
 			background-color: #101010;
 			transition: background-color 0.25s linear;
@@ -4287,10 +4345,16 @@ only screen and (max-device-width: 767px) {
 			text-align: center;
 			font-size: 28px;
 			margin-right: 7px;
+			@media (max-width: 768px){
+				font-size: 24px;
+			}
 		}
 		.big-txt {
 			font-size: 17px;
 			text-transform: capitalize;
+			@media (max-width: 768px){
+				font-size: 15px;
+			}
 		}
 		p {
 			margin-top: .8rem;
