@@ -95,6 +95,8 @@ $col-light-greenblue: #17a2b8;
 $color-txtindark: #b1bbbb;
 $color-dark-2 : #395d5d;
 $color-dark-3 : #1f3737;
+$color-darkblue-4: #0d2324;
+
 
 /* GOOGLE FONTS */
 @import url('https://fonts.googleapis.com/css?family=Fjalla+One|Poppins:300,400,600,800&display=swap');
@@ -1740,7 +1742,9 @@ textarea {
 	padding: 150px 0;
 	color: #fff;
 	background: $color-darker;
-	
+	&.darker {
+		background: $color-darkblue-4;
+	}
 	.col-lg-7 {
 		padding-left: 6%;
 	}
@@ -2824,7 +2828,16 @@ textarea {
 	padding: 100px 0 0;
 	// padding: 100px 0;
 	background: #fff;
-
+	&.title_type2 {
+		p {
+			.highlight {
+				color: #007b85 !important;
+			}
+			.light {
+				color: #00bdba;
+			}
+		}
+	}
 	.col-lg-9 {
 		padding-right: 60px;
 	}

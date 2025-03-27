@@ -1,11 +1,8 @@
 <?xml version='1.0' encoding='UTF-8' standalone='yes' ?>
 <dirinfo>
 <files>
-	<item key='icon01.png20190623022849' />
 	<item key='footer-bg.png20190621204925' />
 	<item key='dot-pattern.png20190623013326' />
-	<item key='icon02.png20190623023107' />
-	<item key='icon03.png20190623023225' />
 	<item key='preloader.gif20190624171017' />
 	<item key='avatar01.jpg20190702060554' />
 	<item key='logo01.png20190702060554' />
@@ -28,16 +25,10 @@
 	<item key='works07.jpg20190702060554' />
 	<item key='works08.jpg20190702060554' />
 	<item key='works09.jpg20190702060554' />
-	<item key='xx20250122164005' />
-	<item key='slide02.jpg20250122165400' />
-	<item key='slide01.jpg20250122165423' />
 	<item key='logo_con.png20250122175548' />
 	<item key='office01.jpg20250123154539' />
 	<item key='office02.jpg20250123154709' />
 	<item key='office03.jpg20250123154724' />
-	<item key='works01.jpg20250123173243' />
-	<item key='works02.jpg20250123173551' />
-	<item key='works03.jpg20250123173653' />
 	<item key='single_a.jpg20250123175144' />
 	<item key='works01_1.jpg20250124095343' />
 	<item key='works01_3.jpg20250124095427' />
@@ -46,7 +37,6 @@
 	<item key='single_c.jpg20250124114215' />
 	<item key='avatar01_1.jpg20250124114702' />
 	<item key='single_d.jpg20250124153254' />
-	<item key='news.jpeg20250201162943' />
 	<item key='team.jpeg20250201181935' />
 	<item key='Home-Automation.jpg20250201183248' />
 	<item key='eed67dfe-8c69-4897-8ade-34983da8fa92.png20250201183517' />
@@ -73,8 +63,6 @@
 	<item key='app_fr_1.png20250208143406' />
 	<item key='brand_co20250214113026' />
 	<item key='2x20250214162535' />
-	<item key='ba_des_1.png20250217134906' />
-	<item key='ba_des_2.png20250217160303' />
 	<item key='ba_設備管理.jpg20250217175226' />
 	<item key='ba_人力管理.jpg20250218091814' />
 	<item key='ba_能耗管理.jpg20250218093302' />
@@ -93,8 +81,6 @@
 	<item key='ba_case_120250219112243' />
 	<item key='ba_case20250220135807' />
 	<item key='pad_fr_0.png20250225104600' />
-	<item key='EMS_descrip_1.png20250227094803' />
-	<item key='EMS_descrip_2.png20250227095141' />
 	<item key='EMS_main_5.jpg20250303143550' />
 	<item key='EMS_main_4.jpg20250303114541' />
 	<item key='EMS_main_1.jpg20250227165414' />
@@ -110,5 +96,12 @@
 	<item key='EMS_descrip_2.svg20250305134448' />
 	<item key='ba_des_1.svg20250305140713' />
 	<item key='ba_des_2.svg20250305140809' />
+	<item key='ba_case_220250310172754' />
+	<item key='ba_case_320250312112119' />
+	<item key='ba_case_420250313105018' />
+	<item key='ems_c120250314111731' />
+	<item key='ems_c220250317131652' />
+	<item key='ems_c320250317153741' />
+	<item key='BA_device.png20250327113046' />
 </files>
 </dirinfo>

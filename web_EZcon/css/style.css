@@ -1696,6 +1696,9 @@ textarea {
   color: #fff;
   background: #0A0E0E;
 }
+.intro.darker {
+  background: #0d2324;
+}
 .intro .col-lg-7 {
   padding-left: 6%;
 }
@@ -2718,6 +2721,12 @@ textarea {
   flex-wrap: wrap;
   padding: 100px 0 0;
   background: #fff;
+}
+.blog.title_type2 p .highlight {
+  color: #007b85 !important;
+}
+.blog.title_type2 p .light {
+  color: #00bdba;
 }
 .blog .col-lg-9 {
   padding-right: 60px;
