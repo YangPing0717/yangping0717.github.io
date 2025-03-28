@@ -1699,6 +1699,9 @@ textarea {
 .intro.darker {
   background: #0d2324;
 }
+.intro.type2 {
+  padding-bottom: 280px;
+}
 .intro .col-lg-7 {
   padding-left: 6%;
 }
@@ -1818,6 +1821,17 @@ textarea {
 }
 .intro-image.light:before {
   background: #fff;
+}
+.intro-image.type2 {
+  padding-bottom: 80px;
+}
+.intro-image.type2:before {
+  content: "";
+  height: 0;
+  background: none;
+}
+.intro-image.type2 .row {
+  margin-top: -150px;
 }
 .intro-image .office-slider {
   width: 100%;

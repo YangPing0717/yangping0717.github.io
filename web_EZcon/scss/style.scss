@@ -1745,6 +1745,9 @@ textarea {
 	&.darker {
 		background: $color-darkblue-4;
 	}
+	&.type2 {
+		padding-bottom: 280px;
+	}
 	.col-lg-7 {
 		padding-left: 6%;
 	}
@@ -1872,7 +1875,17 @@ textarea {
 	&.light:before {
 		background: #fff;
 	}
-
+	&.type2 {
+		padding-bottom: 80px;
+		&:before {
+			content: "";
+			height: 0;
+			background: none;
+		}
+		.row {
+			margin-top: -150px;
+		}
+	}
 	.office-slider {
 		width: 100%;
 		display: flex;
