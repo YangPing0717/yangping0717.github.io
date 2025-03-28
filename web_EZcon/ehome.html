@@ -49,30 +49,37 @@
 <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css'>
 <link rel="stylesheet" href="css/style_slick.css">
 
+<!-- Multiple VantaJS BG effect -->
+<!-- <link rel="stylesheet" href="https://public.codepenassets.com/css/normalize-5.0.0.min.css"> -->
+<link rel="stylesheet" href="css/style_multiple.css">
+
 <link rel="stylesheet" href="css/style.css">
 
-<script src="js/JjrPaxV.js" ></script>
-    <style>
-        .gradient-canvas {
-            margin:0;
-            padding:0;
-        }
-        #gradient-canvas {
-            --gradient-color-1: #8693af; 
-            --gradient-color-2: #4a748b;
-            --gradient-color-3: #96bfbb;
-            --gradient-color-4: #449d9d;
-            
-            /* --gradient-color-5: #004d3d;
-            --gradient-color-2: #002824;
-            --gradient-color-3: #12172b;
-            --gradient-color-4: #093c45; */
-        }
+  <script src="js/JjrPaxV.js" ></script>
+  <style>
+      .gradient-canvas {
+          margin:0;
+          padding:0;
+      }
+      #gradient-canvas {
+          --gradient-color-1: #8693af; 
+          --gradient-color-2: #4a748b;
+          --gradient-color-3: #96bfbb;
+          --gradient-color-4: #449d9d;
+          
+          /* --gradient-color-5: #004d3d;
+          --gradient-color-2: #002824;
+          --gradient-color-3: #12172b;
+          --gradient-color-4: #093c45; */
+      }
 
-        html {
-          scroll-behavior: smooth;
-        }
-    </style>
+      html {
+        scroll-behavior: smooth;
+      }
+  </style>
+
+  
+  
 
 
 </head>
@@ -162,6 +169,7 @@
   <!-- end inner --> 
 </div>
 <!-- end all-cases -->
+
 
 
 <main>
@@ -445,9 +453,7 @@
               <a href="#" class="read-more">Read more</a>
             </div>
         </div>
-      <!--/Timeline item-->
       
-        <!--Timeline item-->
         <div class="timeline-carousel__item">
             <div class="timeline-carousel__image">
                 <div class="media-wrapper media-wrapper--overlay" style="background: url('images/app_fr_1.png') center center; background-size:cover;"></div>
@@ -459,9 +465,7 @@
               <a href="#" class="read-more">Read more</a>
             </div>
         </div>
-      <!--/Timeline item-->
       
-      <!--Timeline item-->
       <div class="timeline-carousel__item">
         <div class="timeline-carousel__image">
             <div class="media-wrapper media-wrapper--overlay" style="background: url('images/app_fr_1.png') center center; background-size:cover;"></div>
@@ -473,23 +477,19 @@
           <a href="#" class="read-more">Read more</a>
         </div>
       </div>
-      <!--/Timeline item-->
 
-      <!--Timeline item-->
-        <div class="timeline-carousel__item">
-            <div class="timeline-carousel__image">
-                <div class="media-wrapper media-wrapper--overlay" style="background: url('images/app_fr_1.png') center center; background-size:cover;"></div>
-            </div>
-            <div class="timeline-carousel__item-inner">
-                <div class="pointer"></div>
-                <span class="month">Responsive touch screen</span>
-                <p>Supports Alexa and Google voice commands, Responsive touch screen, No lengthy contract required.	</p>
-              <a href="#" class="read-more">Read more</a>
-            </div>
-        </div>
-      <!--/Timeline item-->
+      <div class="timeline-carousel__item">
+          <div class="timeline-carousel__image">
+              <div class="media-wrapper media-wrapper--overlay" style="background: url('images/app_fr_1.png') center center; background-size:cover;"></div>
+          </div>
+          <div class="timeline-carousel__item-inner">
+              <div class="pointer"></div>
+              <span class="month">Responsive touch screen</span>
+              <p>Supports Alexa and Google voice commands, Responsive touch screen, No lengthy contract required.	</p>
+            <a href="#" class="read-more">Read more</a>
+          </div>
+      </div>
       
-      <!--Timeline item-->
       <div class="timeline-carousel__item">
         <div class="timeline-carousel__image">
             <div class="media-wrapper media-wrapper--overlay" style="background: url('images/app_fr_1.png') center center; background-size:cover;"></div>
@@ -501,9 +501,7 @@
           <a href="#" class="read-more">Read more</a>
         </div>
       </div>
-      <!--/Timeline item-->
       
-      <!--Timeline item-->
       <div class="timeline-carousel__item">
         <div class="timeline-carousel__image">
             <div class="media-wrapper media-wrapper--overlay" style="background: url('images/app_fr_1.png') center center; background-size:cover;"></div>
@@ -515,9 +513,7 @@
           <a href="#" class="read-more">Read more</a>
         </div>
       </div>
-      <!--/Timeline item-->
 
-      <!--Timeline item-->
       <div class="timeline-carousel__item">
         <div class="timeline-carousel__image">
             <div class="media-wrapper media-wrapper--overlay" style="background: url('images/app_fr_1.png') center center; background-size:cover;"></div>
@@ -530,7 +526,6 @@
         </div>
       </div>
 
-      <!--Timeline item-->
       <div class="timeline-carousel__item">
         <div class="timeline-carousel__image">
             <div class="media-wrapper media-wrapper--overlay" style="background: url('images/app_fr_1.png') center center; background-size:cover;"></div>
@@ -566,7 +561,20 @@
   </div> -->
 
   
+
+
+
   <section class="intro darker">
+
+    <!-- Multiple VantaJS BG effect -->
+    <div class="container_multi row">
+      <div class="col">
+        <div class="vanta" id="vanta1"></div>
+        <div class="vanta" id="vanta2"></div>
+      </div>
+      <div class="vanta" id="vanta3"></div>
+    </div>
+
     <div class="container">
       <div class="row">
         <div class="col-lg-5 wow" data-splitting>
@@ -595,6 +603,7 @@
       <!-- end row --> 
     </div>
     <!-- end container --> 
+
   </section>
   <!-- end intro -->
 
@@ -1072,6 +1081,10 @@
     });
   </script>
 
+  <!-- Multiple VantaJS BG effect -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vanta/0.5.21/vanta.halo.min.js"></script>
+  <script src="js/script_multiple.js"></script>
 
 
 </body>
