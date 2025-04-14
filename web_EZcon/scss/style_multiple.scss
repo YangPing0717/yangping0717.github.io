@@ -30,6 +30,9 @@
     margin-left: 0;
     > .vanta {
       flex-basis: 50%;
+      @media (max-width: 768px){
+        flex-basis: 100%;
+      }
     }
   }
 

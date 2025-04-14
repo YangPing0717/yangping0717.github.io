@@ -19,6 +19,11 @@
 .container_multi.row > .vanta {
   flex-basis: 50%;
 }
+@media (max-width: 768px) {
+  .container_multi.row > .vanta {
+    flex-basis: 100%;
+  }
+}
 .container_multi .col {
   display: flex;
   flex-direction: column;

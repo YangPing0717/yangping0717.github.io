@@ -28,7 +28,7 @@ vantaOptions.map(options => {
     gyroControls: false,
     baseColor: baseColor,
     backgroundColor: backgroundColor,
-    size: 0.8,
+    // size: 0.8,
     ...options });
 
 });

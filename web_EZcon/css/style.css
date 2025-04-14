@@ -183,6 +183,11 @@ button[type=submit] {
   -o-transition: 0.25s ease-in-out;
   transition: 0.25s ease-in-out;
 }
+@media (max-width: 768px) {
+  button[type=submit] {
+    background: #1f3737;
+  }
+}
 button[type=submit]:hover {
   background: #0A0E0E;
   color: #00DAD6;

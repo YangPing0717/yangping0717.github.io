@@ -46,8 +46,6 @@
 	<item key='EMS.jpg20250203173127' />
 	<item key='modern-city-concept-3d-illustration-form-circle.jpg20250203175525' />
 	<item key='logo.png20250204103630' />
-	<item key='device_x.png20250204115842' />
-	<item key='device.png20250204145044' />
 	<item key='feature_1.png20250206102453' />
 	<item key='brands20250206155518' />
 	<item key='foot.jpg20250206172747' />
@@ -59,7 +57,6 @@
 	<item key='index_banner.jpg20250207144224' />
 	<item key='index_banner_2.jpg20250207145211' />
 	<item key='index_banner_3.jpg20250207153141' />
-	<item key='hardware.png20250208115928' />
 	<item key='app_fr_1.png20250208143406' />
 	<item key='brand_co20250214113026' />
 	<item key='2x20250214162535' />
@@ -77,7 +74,6 @@
 	<item key='ba_heal.svg20250218152315' />
 	<item key='ba_標配選配.png20250218154048' />
 	<item key='ba_標配選配.jpg20250218180833' />
-	<item key='ba_safety.svg20250219105440' />
 	<item key='ba_case_120250219112243' />
 	<item key='ba_case20250220135807' />
 	<item key='pad_fr_0.png20250225104600' />
@@ -102,7 +98,10 @@
 	<item key='ems_c120250314111731' />
 	<item key='ems_c220250317131652' />
 	<item key='ems_c320250317153741' />
-	<item key='BA_device.png20250328125845' />
 	<item key='EZ_share.jpg20250311155532' />
+	<item key='device.png20250401105421' />
+	<item key='hardware.png20250407134610' />
+	<item key='BA_device.png20250407141300' />
+	<item key='ba_safety.svg20250407165532' />
 </files>
 </dirinfo>

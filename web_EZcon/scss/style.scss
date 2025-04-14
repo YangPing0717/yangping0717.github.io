@@ -229,6 +229,9 @@ button[type="submit"] {
 	font-size: 14px;
 	border-radius: 0;
 	@include transition;
+	@media (max-width: 768px){
+		background: $color-dark-3;
+	}
 	&:hover {
 		background: $color-darker;
 		color: $color-main;
