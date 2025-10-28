@@ -1,0 +1,106 @@
+# 3D model import /Users/ezcon/Desktop/sweetHome_Vehicles/renault-scenic/renault-scenic.obj
+
+newmtl plate
+illum 2
+Ka 0.0 0.0 0.0
+Kd 1.0 1.0 1.0
+Ks 0.04908 0.04908 0.04908
+Ns 43.137257
+Ni 1.0
+
+newmtl 2
+illum 2
+Ka 0.0 0.0 0.0
+Kd 0.083531 0.083531 0.083531
+Ks 0.166667 0.166667 0.166667
+Ns 64.70588
+Ni 1.0
+
+newmtl 3
+illum 2
+Ka 0.0 0.0 0.0
+Kd 0.05212 0.05855 0.069712
+Ks 0.5 0.5 0.5
+Ns 128.0
+Ni 1.0
+d 0.933767
+
+newmtl sweethome3d_window_mirror
+illum 2
+Ka 0.0 0.0 0.0
+Kd 1.0 1.0 1.0
+Ks 1.0 1.0 1.0
+Ns 128.0
+Ni 1.0
+
+newmtl 7
+illum 2
+Ka 0.0 0.0 0.0
+Kd 0.011088 0.011088 0.011088
+Ks 0.065657 0.065657 0.065657
+Ns 7.843137
+Ni 1.0
+
+newmtl Plane_8
+illum 2
+Ka 0.2 0.2 0.2
+Kd 1.0 1.0 1.0
+Ks 0.5 0.5 0.5
+Ns 128.0
+Ni 1.0
+map_Kd renault-scenic_Plane_8.jpeg
+
+newmtl glass
+illum 2
+Ka 0.2 0.2 0.2
+Kd 1.0 1.0 1.0
+Ks 0.5 0.5 0.5
+Ns 128.0
+Ni 1.0
+d 0.933767
+map_Kd renault-scenic_Plane_8.jpeg
+
+newmtl Plane_770_10
+illum 2
+Ka 0.2 0.2 0.2
+Kd 1.0 1.0 1.0
+Ks 0.5 0.5 0.5
+Ns 96.07843
+Ni 1.0
+map_Kd renault-scenic_Plane_8.jpeg
+
+newmtl Plane_788_11
+illum 2
+Ka 0.2 0.2 0.2
+Kd 1.0 1.0 1.0
+Ks 0.512022 0.512022 0.512022
+Ns 58.82353
+Ni 1.0
+map_Kd renault-scenic_Plane_8.jpeg
+
+newmtl Plane_808_12
+illum 1
+Ka 0.2 0.2 0.2
+Kd 1.0 1.0 1.0
+Ks 0.0 0.0 0.0
+Ns 1.0
+Ni 1.0
+map_Kd renault-scenic_Plane_8.jpeg
+
+newmtl tires
+illum 1
+Ka 0.2 0.2 0.2
+Kd 1.0 1.0 1.0
+Ks 0.0 0.0 0.0
+Ns 1.0
+Ni 1.0
+map_Kd renault-scenic_Plane_8.jpeg
+
+newmtl wheels
+illum 2
+Ka 0.2 0.2 0.2
+Kd 1.0 1.0 1.0
+Ks 0.5 0.5 0.5
+Ns 128.0
+Ni 1.0
+map_Kd renault-scenic_Plane_8.jpeg

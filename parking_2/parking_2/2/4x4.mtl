@@ -1,0 +1,183 @@
+# 3D model import /Users/ezcon/Desktop/sweetHome_Vehicles/4x4/4x4.obj
+
+newmtl Body
+illum 2
+Ka 0.6 0.55 0.4
+Kd 0.6 0.55 0.4
+Ks 0.123853 0.123853 0.123853
+Ns 80.0
+Ni 1.45
+
+newmtl BlackRubber
+illum 2
+Ka 0.020791 0.020791 0.020791
+Kd 0.020791 0.020791 0.020791
+Ks 0.034247 0.034247 0.034247
+Ns 5.0
+Ni 1.0
+
+newmtl WheelArch
+illum 3
+Ka 0.01096 0.01096 0.01096
+Kd 0.01096 0.01096 0.01096
+Ks 0.148285 0.148285 0.148285
+Ns 2.0
+Ni 1.45
+
+newmtl LowBodyArch
+illum 2
+Ka 0.014996 0.014704 0.014574
+Kd 0.014996 0.014704 0.014574
+Ks 0.047367 0.047367 0.047367
+Ns 80.0
+Ni 1.45
+
+newmtl Lights
+illum 2
+Ka 0.2 0.2 0.2
+Kd 1.0 1.0 1.0
+Ks 0.5 0.5 0.5
+Ns 80.0
+Ni 1.45
+map_Kd 4x4_Lights.jpeg
+
+newmtl AirGrid
+illum 2
+Ka 0.2 0.2 0.2
+Kd 1.0 1.0 1.0
+Ks 0.041284 0.041284 0.041284
+Ns 80.0
+Ni 1.45
+map_Kd 4x4_Lights.jpeg
+
+newmtl Underside
+illum 2
+Ka 0.010022 0.010022 0.010022
+Kd 0.010022 0.010022 0.010022
+Ks 0.043478 0.043478 0.043478
+Ns 10.0
+Ni 1.45
+
+newmtl HandleDoor
+illum 2
+Ka 0.6 0.55 0.4
+Kd 0.6 0.55 0.4
+Ks 0.123853 0.123853 0.123853
+Ns 80.0
+Ni 1.45
+
+newmtl Tires
+illum 2
+Ka 0.2 0.2 0.2
+Kd 1.0 1.0 1.0
+Ks 0.1 0.1 0.1
+Ns 10.0
+Ni 1.45
+map_Kd 4x4_Lights.jpeg
+
+newmtl Rim
+illum 2
+Ka 0.2 0.2 0.2
+Kd 1.0 1.0 1.0
+Ks 0.5 0.5 0.5
+Ns 80.0
+Ni 1.45
+map_Kd 4x4_Lights.jpeg
+
+newmtl BackWheels
+illum 1
+Ka 0.034859 0.03377 0.03165
+Kd 0.034859 0.03377 0.03165
+Ks 0.0 0.0 0.0
+Ns 1.0
+Ni 1.45
+
+newmtl BlackInteriorCar
+illum 2
+Ka 0.012981 0.012981 0.012981
+Kd 0.012981 0.012981 0.012981
+Ks 0.077982 0.077982 0.077982
+Ns 2.0
+Ni 1.45
+
+newmtl GreyInteriorCar
+illum 1
+Ka 0.418854 0.418854 0.418854
+Kd 0.418854 0.418854 0.418854
+Ks 0.0 0.0 0.0
+Ns 1.0
+Ni 1.45
+
+newmtl Glass
+illum 9
+Ka 0.145507 0.183589 0.219526
+Kd 0.145507 0.183589 0.219526
+Ks 0.5 0.5 0.5
+Ns 80.0
+Ni 1.45
+d 0.5
+
+newmtl Seating
+illum 2
+Ka 0.032441 0.029308 0.03164
+Kd 0.032441 0.029308 0.03164
+Ks 0.013699 0.013699 0.013699
+Ns 2.0
+Ni 1.0
+
+newmtl BackSeating
+illum 2
+Ka 0.032441 0.029308 0.03164
+Kd 0.032441 0.029308 0.03164
+Ks 0.013699 0.013699 0.013699
+Ns 2.0
+Ni 1.0
+
+newmtl SteeringWheel
+illum 2
+Ka 0.038204 0.038204 0.038204
+Kd 0.038204 0.038204 0.038204
+Ks 0.020548 0.020548 0.020548
+Ns 5.0
+Ni 1.0
+
+newmtl Rearview
+illum 2
+Ka 0.025099 0.025099 0.025099
+Kd 0.025099 0.025099 0.025099
+Ks 0.209677 0.209677 0.209677
+Ns 80.0
+Ni 1.0
+
+newmtl Mirror
+illum 2
+Ka 0.8 0.8 0.8
+Kd 0.8 0.8 0.8
+Ks 1.0 1.0 1.0
+Ns 120.0
+Ni 1.0
+
+newmtl Axe
+illum 3
+Ka 0.018354 0.018354 0.018354
+Kd 0.018354 0.018354 0.018354
+Ks 0.261468 0.261468 0.261468
+Ns 80.0
+Ni 1.45
+
+newmtl Lines
+illum 1
+Ka 0.005604 0.005604 0.005604
+Kd 0.005604 0.005604 0.005604
+Ks 0.0 0.0 0.0
+Ns 1.0
+Ni 1.45
+
+newmtl LicensePlate
+illum 2
+Ka 0.2 0.2 0.2
+Kd 1.0 1.0 1.0
+Ks 0.036697 0.036697 0.036697
+Ns 80.0
+Ni 1.45
+map_Kd 4x4_Lights.jpeg

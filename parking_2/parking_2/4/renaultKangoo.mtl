@@ -1,0 +1,218 @@
+# 3D model import /Users/ezcon/Desktop/sweetHome_Vehicles/renaultKangoo/renaultKangoo.obj
+
+newmtl fenetres
+illum 2
+Ka 0.2 0.2 0.2
+Kd 1.0 1.0 1.0
+Ks 0.5 0.5 0.5
+Ns 120.0
+Ni 1.45
+d 1.0
+map_Kd renaultKangoo_fenetres.png
+
+newmtl fenetreArriere
+illum 9
+Ka 0.2 0.2 0.2
+Kd 1.0 1.0 1.0
+Ks 0.5 0.5 0.5
+Ns 120.0
+Ni 1.45
+d 1.0
+map_Kd renaultKangoo_fenetres.png
+
+newmtl pareChoc
+illum 2
+Ka 0.6 0.6 0.6
+Kd 0.08 0.08 0.08
+Ks 0.075342 0.075342 0.075342
+Ns 10.0
+Ni 1.0
+
+newmtl interieur
+illum 2
+Ka 0.5 0.5 0.5
+Kd 0.264106 0.264106 0.264106
+Ks 0.061644 0.061644 0.061644
+Ns 10.0
+Ni 1.0
+
+newmtl roue
+illum 2
+Ka 0.2 0.2 0.2
+Kd 1.0 1.0 1.0
+Ks 0.0 0.0 0.0
+Ns 1.0
+Ni 1.45
+map_Kd renaultKangoo_roue.jpeg
+
+newmtl plaque
+illum 2
+Ka 0.2 0.2 0.2
+Kd 1.0 1.0 1.0
+Ks 0.070248 0.070248 0.070248
+Ns 30.0
+Ni 1.45
+map_Kd renaultKangoo_roue.jpeg
+
+newmtl lignes
+illum 2
+Ka 0.2 0.2 0.2
+Kd 1.0 1.0 1.0
+Ks 0.1 0.1 0.1
+Ns 10.0
+Ni 1.45
+d 1.0
+map_Kd renaultKangoo_fenetres.png
+
+newmtl jante
+illum 2
+Ka 0.2 0.2 0.2
+Kd 1.0 1.0 1.0
+Ks 0.5 0.5 0.5
+Ns 50.0
+Ni 1.45
+map_Kd renaultKangoo_roue.jpeg
+
+newmtl marque
+illum 2
+Ka 0.2 0.2 0.2
+Kd 1.0 1.0 1.0
+Ks 0.206612 0.206612 0.206612
+Ns 100.0
+Ni 1.45
+map_Kd renaultKangoo_roue.jpeg
+
+newmtl retroviseur
+illum 2
+Ka 0.335616 0.335616 0.335616
+Kd 0.025099 0.025099 0.025099
+Ks 0.209677 0.209677 0.209677
+Ns 10.0
+Ni 1.0
+
+newmtl sieges
+illum 2
+Ka 0.7 0.7 0.7
+Kd 0.08 0.08 0.08
+Ks 0.013699 0.013699 0.013699
+Ns 10.0
+Ni 1.0
+
+newmtl siegesArrieres
+illum 2
+Ka 0.7 0.7 0.7
+Kd 0.08 0.08 0.08
+Ks 0.013699 0.013699 0.013699
+Ns 10.0
+Ni 1.0
+
+newmtl phare
+illum 2
+Ka 0.2 0.2 0.2
+Kd 1.0 1.0 1.0
+Ks 0.5 0.5 0.5
+Ns 100.0
+Ni 1.45
+map_Kd renaultKangoo_roue.jpeg
+
+newmtl volant
+illum 2
+Ka 0.7 0.7 0.7
+Kd 0.08 0.08 0.08
+Ks 0.020548 0.020548 0.020548
+Ns 20.0
+Ni 1.0
+
+newmtl poignees
+illum 3
+Ka 0.027397 0.027397 0.027397
+Kd 0.026597 0.026597 0.026597
+Ks 0.1 0.1 0.1
+Ns 10.0
+Ni 1.0
+
+newmtl fermeture
+illum 2
+Ka 0.2 0.2 0.2
+Kd 1.0 1.0 1.0
+Ks 0.1 0.1 0.1
+Ns 10.0
+Ni 1.45
+d 1.0
+map_Kd renaultKangoo_fenetres.png
+
+newmtl ombrePoignees
+illum 2
+Ka 0.2 0.2 0.2
+Kd 1.0 1.0 1.0
+Ks 0.5 0.5 0.5
+Ns 128.0
+Ni 1.45
+d 1.0
+map_Kd renaultKangoo_fenetres.png
+
+newmtl fenetresAvant
+illum 9
+Ka 1.0 1.0 1.0
+Kd 0.141263 0.219526 0.168269
+Ks 0.5 0.5 0.5
+Ns 120.0
+Ni 1.45
+d 0.39999998
+
+newmtl bordParebrise
+illum 9
+Ka 0.5 0.5 0.5
+Kd 0.000911 0.001214 0.001214
+Ks 0.5 0.5 0.5
+Ns 120.0
+Ni 1.45
+d 0.669421
+
+newmtl rail
+illum 3
+Ka 0.335616 0.335616 0.335616
+Kd 0.016068 0.016068 0.016068
+Ks 0.328767 0.328767 0.328767
+Ns 5.0
+Ni 1.0
+
+newmtl caoutchoucFenetre
+illum 2
+Ka 0.4 0.4 0.4
+Kd 0.039421 0.039421 0.039421
+Ks 0.0 0.0 0.0
+Ns 1.0
+Ni 1.0
+
+newmtl carrosserie
+illum 2
+Ka 0.226027 0.226027 0.226027
+Kd 0.396755 0.42869 0.558341
+Ks 0.267123 0.267123 0.267123
+Ns 110.0
+Ni 1.0
+
+newmtl soubassement
+illum 1
+Ka 0.5 0.5 0.5
+Kd 0.08 0.08 0.08
+Ks 0.0 0.0 0.0
+Ns 1.0
+Ni 1.0
+
+newmtl entreeDAir
+illum 2
+Ka 0.6 0.6 0.6
+Kd 0.008669 0.008669 0.008669
+Ks 0.082192 0.082192 0.082192
+Ns 10.0
+Ni 1.0
+
+newmtl miroir
+illum 2
+Ka 1.0 1.0 1.0
+Kd 1.0 1.0 1.0
+Ks 1.0 1.0 1.0
+Ns 128.0
+Ni 1.0
