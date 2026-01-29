@@ -1,0 +1,96 @@
+h1.big, .h1_big {
+  font-size: 5.2rem;
+  line-height: 5.6rem;
+}
+h1.big .smaller, .h1_big .smaller {
+  font-size: 3.6rem;
+  line-height: 2.6rem;
+}
+@media (max-width: 480px) {
+  h1.big .smaller, .h1_big .smaller {
+    font-size: 1.8rem;
+    line-height: 1.8rem;
+  }
+}
+@media (max-width: 480px) {
+  h1.big, .h1_big {
+    font-size: 2.8rem;
+    line-height: 3.2rem;
+  }
+}
+
+h1.ultra-big.smaller {
+  font-size: 5.8rem;
+  line-height: 6rem;
+}
+h1.ultra-big.smaller .text-line {
+  font-size: 5.8rem;
+}
+h1.ultra-big.number {
+  font-family: "Prompt", Helvetica, Arial, sans-serif;
+}
+
+header .logo-main {
+  width: 148px;
+}
+
+.wm-carousel {
+  padding-top: 75vh;
+}
+
+#de-carousel .mask {
+  background: rgba(0, 2, 69, 0.55);
+}
+
+footer .logo img {
+  width: 188px;
+}
+
+@-webkit-keyframes scaleIn {
+  from {
+    opacity: 0;
+    -webkit-transform: scale3d(1.5, 1.5, 1.5);
+    transform: scale3d(1.5, 1.5, 1.5);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+}
+.wow {
+  visibility: hidden;
+}
+
+.scaleIn {
+  -webkit-animation-name: scaleIn;
+  animation-name: scaleIn;
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    -webkit-transform: scale3d(1.5, 1.5, 1.5);
+    transform: scale3d(1.5, 1.5, 1.5);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+}
+.rotate-animation {
+  animation: rotate-animation 10s infinite linear;
+}
+
+@keyframes rotate-animation {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
