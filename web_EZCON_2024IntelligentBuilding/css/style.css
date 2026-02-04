@@ -5950,7 +5950,7 @@ i.font60 {
 
 .ul-style-4 li {
   margin: 2px 0 2px 0;
-  display: ;
+  /* display: ; */
   font-weight: 500;
 }
 
@@ -6520,7 +6520,7 @@ i.font60 {
 }
 
 .pricing-s2.text-light .top .price,
-.pricing-s2.text-white .top .price,
+.pricing-s2.text-white .top .price
   {
   color: #ffffff;
 }
@@ -11391,8 +11391,10 @@ a.img-icon-zoom {
   border-color: #555;
 }
 
-.widget_tags li a:hover border-color: #eceff3;
-}
+.widget_tags li a:hover{
+  border-color: #eceff3;
+} 
+
 
 footer .widget {
   border: none;
@@ -11877,7 +11879,7 @@ i.bg-color-secondary {
 
 
 .owl-carousel.no-hide .owl-stage-outer{
-  overflow: visible; !important;
+  overflow: visible !important;
 }
 
 .c-item{
@@ -11979,14 +11981,14 @@ i.bg-color-secondary {
   font-size: 80px;
   letter-spacing: -.08em;
   line-height: 1em;
-  padding-right: 20px;
+  /* padding-right: 20px; */
   color:#ffffff;
   text-align: center;
   font-weight: bold;
 }
 
 .de-pricing-s1 .d-price:before{
-  content: '$';
+  /* content: '$'; */
   font-size: 20px;
 }
 
@@ -12002,7 +12004,7 @@ i.bg-color-secondary {
 }
 
 .de-pricing-s1 .d-list li:before{
-  color: var(--primary-color);
+  color: var(--secondary-color);
   font-family: "FontAwesome";
   content: "\f00c";
   margin-right: 10px;

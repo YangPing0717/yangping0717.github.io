@@ -14,8 +14,8 @@ h1.big .smaller, .h1_big .smaller {
 }
 @media (max-width: 480px) {
   h1.big, .h1_big {
-    font-size: 2.8rem;
-    line-height: 3.2rem;
+    font-size: 3.2rem;
+    line-height: 3.6rem;
   }
 }
 
@@ -28,6 +28,15 @@ h1.ultra-big.smaller .text-line {
 }
 h1.ultra-big.number {
   font-family: "Prompt", Helvetica, Arial, sans-serif;
+}
+
+p.lead.big {
+  font-size: 1.4rem !important;
+}
+@media (max-width: 480px) {
+  p.lead.big {
+    font-size: 1rem !important;
+  }
 }
 
 header .logo-main {
@@ -93,4 +102,186 @@ footer .logo img {
   100% {
     transform: rotate(360deg);
   }
+}
+.bestAI {
+  background: linear-gradient(to right, var(--primary-color) 20%, var(--secondary-color) 30%, var(--third-color) 50%, var(--primary-color) 70%, var(--secondary-color) 80%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: center;
+  font-weight: 700;
+  background-size: 500% auto;
+  animation: gradientMove 10s ease-in-out infinite alternate;
+}
+
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+/* [ btn effect ] */
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 24px;
+  position: relative;
+  transition: all 0.2s;
+  cursor: pointer;
+  color: #FFF;
+  z-index: 1;
+  border-radius: 60px;
+  background: linear-gradient(270deg, rgba(0, 255, 177, 0.75) 0%, rgba(0, 255, 177, 0.3) 50%);
+  border: 2px solid transparent;
+}
+
+.button::before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  border-radius: 60px;
+  padding: 2px;
+  background: linear-gradient(90deg, #5C33FF, #00FFB1);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.button:active {
+  transform: scale(0.97);
+}
+
+.hoverEffect {
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: -1;
+  overflow: hidden;
+  border-radius: 60px;
+}
+
+.hoverEffect span {
+  background: linear-gradient(90deg, #5C33FF 0%, #00FFB1 100%);
+  width: 12rem;
+  height: 12rem;
+  transition: 0.4s;
+  filter: blur(20px);
+  animation: effect infinite 3s linear;
+  opacity: 0.8;
+  overflow: hidden;
+}
+
+@keyframes effect {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.material-icons-two-tone {
+  filter: invert(0.5) sepia(1) saturate(20) hue-rotate(180deg);
+  font-size: 64px;
+}
+
+.material-icons,
+.material-icons-outlined,
+.material-icons-round,
+.material-icons-sharp {
+  color: #0072ff;
+  font-size: 64px;
+}
+
+.de-pricing-s1 .d-deco-top {
+  position: absolute;
+  top: 0;
+  width: 250px;
+  height: 250px;
+  background: linear-gradient(135deg, rgba(var(--primary-color-rgb), 0.4) 0%, rgba(var(--primary-color-rgb), 0) 50%);
+}
+
+.de-pricing-s1 .d-deco-bottom {
+  position: absolute;
+  width: 250px;
+  height: 250px;
+  bottom: 0;
+  right: 0;
+  background: linear-gradient(-45deg, rgba(var(--secondary-color-rgb), 0.2) 0%, rgba(var(--secondary-color-rgb), 0) 50%);
+}
+
+.de-pricing-s1 .d-list {
+  text-indent: -26px;
+  padding-left: 22px;
+}
+
+.module3 .de-gradient-edge-top, .module3 .de-gradient-edge-bottom {
+  z-index: initial;
+}
+.module3 h1 {
+  margin-bottom: 0;
+}
+.module3 h2.sub_title {
+  line-height: 2.2rem !important;
+}
+.module3 h2.sub_title span {
+  font-size: 10rem;
+  line-height: 0;
+  letter-spacing: -20px;
+  font-weight: 900;
+}
+.module3 h3 {
+  line-height: 4rem;
+}
+.module3 h3 span span {
+  color: #8800ff;
+  font-weight: 300;
+}
+.module3 .images-deco-1 .d-img-3 {
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  bottom: 4rem;
+  left: 20px;
+}
+.module3 .images-deco-1 .d-img-4 {
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  z-index: 0;
+  top: -3rem;
+  right: -2rem;
+}
+.module3 .images-deco-1 .d-img-2 {
+  left: -3rem;
+}
+.module3 .images-deco-1 .d-img-5 {
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  z-index: 0;
+  bottom: -20px;
+  left: 20px;
+}
+
+.features .de_count {
+  width: 70%;
+  padding: 1.8rem 0 0 0;
+}
+.features .de_count h2 {
+  font-size: 1.8rem;
+  line-height: 1.2;
 }

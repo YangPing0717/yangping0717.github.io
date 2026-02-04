@@ -99,17 +99,18 @@ h1.s2 .c1 span,
 .d_demo_img,
 .d_demo_img .d-overlay span
  {
-    background:linear-gradient(to right, var(--primary-color), var(--secondary-color));
+    /* background:linear-gradient(to right, var(--primary-color), var(--secondary-color)); */
+    background: linear-gradient(270deg, rgba(0, 255, 177, 0.75) 0%, rgba(0, 255, 177, 0.3) 50%);
 }
 
 ::-moz-selection { /* Code for Firefox */
     color:#ffffff;
-    background:var(--secondary-color);
+    background:var(--primary-color-dark);
 }
 
 ::selection {
     color:#ffffff;
-    background:var(--secondary-color);
+    background:var(--primary-color-dark);
 }
 
 body::-webkit-scrollbar-thumb,#de_modal::-webkit-scrollbar-thumb,

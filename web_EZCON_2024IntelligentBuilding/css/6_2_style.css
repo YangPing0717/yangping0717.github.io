@@ -1,0 +1,225 @@
+@keyframes rotateMain {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes rotateInner {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-360deg);
+  }
+}
+.centralized {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* transform: scale(1.2) !important; */
+  flex-direction: column;
+  flex-wrap: nowrap;
+}
+
+.main-container {
+  margin: 0 auto 150px;
+  /* height: 350px; */
+  position: relative;
+}
+
+.main-container .main-circle {
+  border: 6px solid #1266f1;
+  border-radius: 100%;
+  box-sizing: border-box;
+  padding: 24px;
+  height: 360px;
+  width: 360px;
+  position: relative;
+}
+
+.main-container .main-circle .inner {
+  /* background: #a22d2d; */
+  background: linear-gradient(270deg, rgba(0, 255, 177, 0.75) 0%, rgba(0, 255, 177, 0.3) 50%);
+  /* background:var(--primary-color-dark); */
+  /* border: 10px solid #fff; */
+  border-radius: 100%;
+  box-shadow: 4px 5px 5px 0px rgba(0, 0, 0, 0.2);
+  box-sizing: border-box;
+  color: #ffffff;
+  font-size: 24px;
+  height: 100%;
+  line-height: 1.5;
+  text-align: center;
+  width: 100%;
+  display: inline-block;
+  flex-direction: column;
+}
+.main-container .main-circle .inner .hoverEffect {
+  border-radius: 200px;
+}
+.main-container .main-circle .inner .hoverEffect span {
+  width: 50rem;
+  height: 50rem;
+}
+.main-container .main-circle .inner.button::before {
+  top: -8px;
+  left: -8px;
+  right: -8px;
+  bottom: -8px;
+  padding: 8px;
+  border-radius: 200px;
+}
+.main-container .main-circle .inner h1 {
+  font-size: 7.6rem;
+  margin-top: -1rem;
+  letter-spacing: -3px;
+  text-shadow: 1px 1px 2px rgb(117, 0, 201), 0 0 1em blue, 0 0 0.2em blue;
+}
+.main-container .main-circle .inner h1 span {
+  font-size: 1rem;
+}
+.main-container .main-circle .inner h4 {
+  text-shadow: 1px 1px 2px rgb(117, 0, 201), 0 0 1em blue, 0 0 0.2em blue;
+  font-size: 1.8rem;
+  padding-top: 4rem;
+}
+
+.main-container .bubble-container {
+  border: 6px;
+  box-sizing: border-box;
+  height: 360px;
+  position: absolute;
+  width: 360px;
+  opacity: 0;
+  transform: rotate(0deg);
+  transition: transform ease-in 0.8s, opacity ease 1s;
+  transition-delay: 3s;
+}
+
+.main-container .bubble-container .pointer {
+  background: #fff;
+  border: 4px solid #04eabb;
+  border-radius: 100%;
+  box-sizing: border-box;
+  position: absolute;
+  left: 352px;
+  height: 34px;
+  top: calc(100% - 200px);
+  width: 34px;
+}
+
+.main-container .bubble-container .pointer .arrow {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 7px 14px 7px 0;
+  border-color: transparent #04eabb transparent transparent;
+  position: absolute;
+  left: -15px;
+  top: 5.52px;
+}
+
+.main-container .bubble-container .pointer .inner {
+  background: #000;
+  border-radius: 100%;
+  box-sizing: border-box;
+  height: 14px;
+  width: 14px;
+}
+
+.main-container .bubble-container .bubble {
+  border-radius: 100%;
+  box-sizing: border-box;
+  position: absolute;
+  height: 200px;
+  top: calc(50% - 110px);
+  left: 420px;
+  width: 200px;
+  transform: rotate(0deg);
+  transition: all ease 0.8s;
+  padding-top: 0;
+}
+
+.main-container .bubble-container .bubble .inner {
+  background: #fff;
+  border-radius: 100%;
+  box-shadow: 4px 5px 5px 0px rgba(0, 0, 0, 0.2);
+  box-sizing: border-box;
+  height: 178px;
+  width: 178px;
+  padding: 6px;
+  overflow: hidden;
+  box-shadow: inset 0 0 20px #004ecf;
+}
+.main-container .bubble-container .bubble .inner h3 {
+  font-weight: 900;
+  color: #00264c;
+  line-height: 1.8rem;
+  margin-bottom: 8px;
+}
+.main-container .bubble-container .bubble .inner .small_txt {
+  font-size: 1rem;
+  color: #00264c !important;
+  font-weight: 900;
+  line-height: 1.2;
+}
+
+.main-container .bubble-container.black .bubble,
+.main-container .bubble-container.black .pointer .inner {
+  background: #505269;
+}
+
+.main-container .bubble-container.blue-dark .bubble,
+.main-container .bubble-container.blue-dark .pointer .inner {
+  background: #4c67aa;
+}
+
+.main-container .bubble-container.blue-light .bubble,
+.main-container .bubble-container.blue-light .pointer .inner {
+  background: linear-gradient(270deg, rgb(0, 217, 255) 0%, rgba(9, 20, 51, 0.629) 100%);
+}
+
+.main-container .bubble-container.green .bubble,
+.main-container .bubble-container.green .pointer .inner {
+  background: #8dc03f;
+}
+
+.main-container .bubble-container.orange .bubble {
+  background: #fa9128;
+}
+
+.main-container .bubble-container.orange .pointer .inner {
+  background: #fa9128;
+}
+
+.main-container .bubble-container.red .bubble,
+.main-container .bubble-container.red .pointer .inner {
+  background: #e46020;
+}
+
+.translate-middle-rotate {
+  transform: translate(-50%, -50%) rotate(60deg) !important;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.scroll-reveal-div {
+  /* 2. Apply the animation properties */
+  animation-name: fade-in;
+  animation-duration: 1s; /* The duration value becomes a range mapping */
+  animation-fill-mode: both;
+  /* 3. Specify the animation timeline */
+  animation-timeline: view();
+  /* 4. Define the range (starts at entry, ends at mid-viewport) */
+  animation-range: entry 0% cover 50%;
+}
