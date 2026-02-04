@@ -32,6 +32,10 @@
   /* height: 350px; */
   // width: 100%;
   position: relative;
+  @media (max-width: 767px){
+    transform: scale(0.5) !important;
+    transform-origin: top;
+  }
 }
 .main-container .main-circle {
   border: 6px solid #1266f1;

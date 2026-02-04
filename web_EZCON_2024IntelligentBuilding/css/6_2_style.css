@@ -28,6 +28,12 @@
   /* height: 350px; */
   position: relative;
 }
+@media (max-width: 767px) {
+  .main-container {
+    transform: scale(0.5) !important;
+    transform-origin: top;
+  }
+}
 
 .main-container .main-circle {
   border: 6px solid #1266f1;
