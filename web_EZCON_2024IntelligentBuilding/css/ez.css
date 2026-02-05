@@ -407,18 +407,25 @@ footer .logo img {
   .features .de_count {
     width: 80%;
     padding: 0;
+    margin-top: -1rem;
   }
 }
 .features .de_count h2 {
   font-size: 1.6rem;
   line-height: 1.2;
-  margin-bottom: 0.6rem;
+  margin-bottom: 1rem;
+}
+@media (max-width: 767px) {
+  .features .de_count h2 {
+    font-size: 1.8rem;
+  }
 }
 .features .de_count h3 i {
   font-size: 3.6rem;
 }
 .features .de_count p {
   font-weight: 300;
+  line-height: 1.6rem;
 }
 .features.step4 .de-gradient-edge-top, .features.step4 .de-gradient-edge-bottom {
   z-index: -1;
