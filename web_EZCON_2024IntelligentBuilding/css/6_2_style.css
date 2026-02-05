@@ -24,14 +24,15 @@
 }
 
 .main-container {
-  margin: 0 auto 150px;
+  margin: 0 auto 200px;
   /* height: 350px; */
   position: relative;
 }
 @media (max-width: 767px) {
   .main-container {
-    transform: scale(0.5) !important;
+    transform: scale(0.53) !important;
     transform-origin: top;
+    margin: 0 auto -6rem;
   }
 }
 
@@ -83,8 +84,14 @@
   letter-spacing: -3px;
   text-shadow: 1px 1px 2px rgb(117, 0, 201), 0 0 1em blue, 0 0 0.2em blue;
 }
+@media (max-width: 767px) {
+  .main-container .main-circle .inner h1 {
+    margin-top: 2.4rem;
+    font-size: 7.8rem;
+  }
+}
 .main-container .main-circle .inner h1 span {
-  font-size: 1rem;
+  font-size: 1.2rem;
 }
 .main-container .main-circle .inner h4 {
   text-shadow: 1px 1px 2px rgb(117, 0, 201), 0 0 1em blue, 0 0 0.2em blue;
@@ -101,7 +108,7 @@
   opacity: 0;
   transform: rotate(0deg);
   transition: transform ease-in 0.8s, opacity ease 1s;
-  transition-delay: 3s;
+  transition-delay: 2s;
 }
 
 .main-container .bubble-container .pointer {
@@ -139,13 +146,18 @@
   border-radius: 100%;
   box-sizing: border-box;
   position: absolute;
-  height: 200px;
+  height: 220px;
   top: calc(50% - 110px);
   left: 420px;
-  width: 200px;
+  width: 220px;
   transform: rotate(0deg);
   transition: all ease 0.8s;
   padding-top: 0;
+}
+@media (max-width: 767px) {
+  .main-container .bubble-container .bubble {
+    left: 390px;
+  }
 }
 
 .main-container .bubble-container .bubble .inner {
@@ -153,23 +165,29 @@
   border-radius: 100%;
   box-shadow: 4px 5px 5px 0px rgba(0, 0, 0, 0.2);
   box-sizing: border-box;
-  height: 178px;
-  width: 178px;
-  padding: 6px;
+  height: 196px;
+  width: 196px;
+  padding: 12px;
   overflow: hidden;
   box-shadow: inset 0 0 20px #004ecf;
 }
 .main-container .bubble-container .bubble .inner h3 {
   font-weight: 900;
-  color: #00264c;
-  line-height: 1.8rem;
+  color: #001d4c;
+  line-height: 2rem;
   margin-bottom: 8px;
+  font-size: 1.8rem;
 }
 .main-container .bubble-container .bubble .inner .small_txt {
   font-size: 1rem;
-  color: #00264c !important;
+  color: rgba(0, 0, 0, 0.7) !important;
   font-weight: 900;
   line-height: 1.2;
+}
+@media (max-width: 767px) {
+  .main-container .bubble-container .bubble .inner .small_txt {
+    font-size: 1.25rem;
+  }
 }
 
 .main-container .bubble-container.black .bubble,
