@@ -67,8 +67,10 @@ Table of content:
 @import url("../fonts/icofont/icofont.min.css");
 
 * {
-  --title-font: "Noto Sans TC", "Prompt", Helvetica, Arial, sans-serif;
-  --body-font: "Manrope", Helvetica, Arial, sans-serif;
+  /* --title-font: "Noto Sans TC", "Prompt", Helvetica, Arial, sans-serif; */
+  --title-font: "Noto Sans TC", sans-serif;
+  /* --title-font: "Noto Sans TC", Helvetica, Arial, sans-serif; */
+  --body-font: "Noto Sans TC", "Manrope", Helvetica, Arial, sans-serif; 
   --border-default: solid 1px rgba(30, 30, 30, 1);
   --bg-color-even: #E8E8E8;
   --bg-color-odd: #F4F4F4;
@@ -17316,7 +17318,7 @@ a.btn-slider:hover {
   margin: 0 6px;
   display: inline-block;
   zoom: 1;
-  *display: inline;
+  display: inline;
 }
 
 .testi-slider .flex-control-paging li a {
@@ -18871,3 +18873,5 @@ img {
 
   .container-timeline ul li::before {
     left: 0
+  }
+}

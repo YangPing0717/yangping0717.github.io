@@ -36,6 +36,7 @@ h1.ultra-big.smaller {
 }
 h1.ultra-big.smaller .text-line {
   font-size: 5.8rem;
+  -webkit-text-stroke: 1px #ffffff;
 }
 @media (max-width: 767px) {
   h1.ultra-big.smaller .text-line {
