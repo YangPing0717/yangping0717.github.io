@@ -18090,7 +18090,7 @@ img {
   }
 
   #back-to-top {
-    display: none;
+    /* display: none; */
   }
 
   header.header-mobile {
