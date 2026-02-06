@@ -458,3 +458,6 @@ footer .logo img {
 .location h4.s2 a {
   color: #fff;
 }
+.location h4.s2 a:hover {
+  color: var(--secondary-color);
+}
