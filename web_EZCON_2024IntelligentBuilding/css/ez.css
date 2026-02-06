@@ -443,3 +443,18 @@ footer .logo img {
     margin-bottom: -3rem;
   }
 }
+
+.location h2 span {
+  font-size: 80%;
+}
+@media (max-width: 767px) {
+  .location h2 span {
+    font-size: 2.2rem;
+  }
+}
+.location h4.s2 {
+  font-size: 1.28rem;
+}
+.location h4.s2 a {
+  color: #fff;
+}
