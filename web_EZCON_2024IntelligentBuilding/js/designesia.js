@@ -1732,6 +1732,17 @@
                  mobile_menu_show = 0;
              }
          })
+         
+        // 針對選單內的連結點擊後自動關閉選單
+        jQuery('#mainmenu li a.menu-item').on("click", function() {
+            // 檢查目前是否是在手機版開啟狀態 (mobile_menu_show == 1)
+            if (typeof mobile_menu_show !== 'undefined' && mobile_menu_show == 1) {
+                jQuery('header').removeClass('menu-open');
+                jQuery('header').css('height', 'auto');
+                mobile_menu_show = 0;
+            }
+        });
+        
          jQuery("a.btn").on("click", function(evn) {
              if (this.href.indexOf('#') === -1) {
                  evn.preventDefault();
