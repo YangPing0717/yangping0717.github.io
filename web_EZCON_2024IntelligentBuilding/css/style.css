@@ -15835,7 +15835,8 @@ a.read_more i {
   left: 30px;
 }
 
-#carouselExampleIndicators .carousel-indicators {
+#carouselExampleIndicators .carousel-indicators,
+#carouselExampleIndicatorsSec .carousel-indicators {
   margin: 0;
 }
 
