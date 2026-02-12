@@ -509,8 +509,20 @@ footer .logo img {
   content: "將捷建設 將捷 MRT - 2016 銀級";
 }
 
+.carousel-indicators {
+  margin-right: initial;
+  margin-left: initial;
+}
+
 @media (max-width: 767px) {
   .carousel-indicators [data-mdb-target] {
     margin: 0px 4px;
   }
+}
+.carousel-indicators [data-mdb-target] img {
+  border: 1px solid #505050;
+}
+
+.carousel-inner {
+  border: 1px solid #272727;
 }
