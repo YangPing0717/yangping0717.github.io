@@ -540,10 +540,6 @@ footer .logo img {
   }
 }
 
-.map-iframe {
-  filter: invert(1) hue-rotate(180deg);
-}
-
 #section-location iframe {
   filter: invert(90%) hue-rotate(180deg) brightness(90%);
 }
