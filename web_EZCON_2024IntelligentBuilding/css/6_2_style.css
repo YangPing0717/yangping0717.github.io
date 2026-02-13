@@ -247,3 +247,8 @@
   /* 4. Define the range (starts at entry, ends at mid-viewport) */
   animation-range: entry 0% cover 50%;
 }
+
+.bubble-container {
+  opacity: 0;
+  transition: transform 1s cubic-bezier(0.175, 0.885, 0.32, 1.275), opacity 0.5s;
+}
