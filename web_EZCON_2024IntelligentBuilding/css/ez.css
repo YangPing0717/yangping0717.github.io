@@ -139,6 +139,14 @@ header .logo-main {
 .wm-carousel {
   padding-top: 75vh;
 }
+@media (max-width: 767px) {
+  .wm-carousel {
+    padding-top: initial;
+    transform: scale(0.6);
+    margin-top: 12rem;
+  }
+}
+
 #de-carousel .mask {
   background: rgba(0, 0, 0, 0.75);
 }
