@@ -40,11 +40,12 @@
     <!-- <script src="https://kit.fontawesome.com" crossorigin="anonymous"></script> -->
     <!-- Or use a CDN (Example for version 6) -->
     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com" integrity="..." crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
-
+    
     <link id="colors" href="css/6_2_style.css" rel="stylesheet" type="text/css" >
     <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto:300,400,500|Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp'>
     <link id="colors" href="css/vendors.css" rel="stylesheet" type="text/css" >
     <link id="colors" href="css/ez.css" rel="stylesheet" type="text/css" >
+
 </head>
 
 <body class="dark-scheme">
@@ -137,9 +138,9 @@
                     <div class="carousel-item active jarallax" data-video-src="mp4:video/tech_s.mp4">
                         <div class="mask">
                             
-                            <div class="d-content relative z1000">
-                                <div class="wm wm-carousel">
-                                    <div class="images-carousel-group wow fadeInRight">
+                            <div class="d-content relative z1000 mobi">
+                                <div class="wm wm-carousel ">
+                                    <div class="images-carousel-group wow fadeInRight ">
                                         <a href="https://www.ezcontw.com/he-yong-jian-she-kun-ming-jie-wan-hua-an/" target="_blank">
                                             <img src="demo/preview/和雍a.jpg" alt=""  >
                                         </a>
@@ -181,8 +182,12 @@
                                         <!-- <img src="demo/preview/定泰_翫花同_外觀效果圖_H.jpg" alt="">
                                         <img src="demo/preview/玖柞_俊寶揚運_home_b.jpg" alt=""> -->
                                     </div>
-                                </div>                  
-                                <div class="v-center">
+                                </div> 
+                                
+
+                                
+
+                                <div class="v-center mobi">
                                     <div class="container z1000">
                                         <div class="row align-items-center text-center"> 
 
@@ -1459,6 +1464,9 @@
     <!-- Javascript Files
     ================================================== -->
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js'></script>
+
+    
+
     <script src="js/6_2_script.js"></script>
     <script src="js/plugins.js"></script>
     <script src="js/designesia.js"></script>
@@ -1478,7 +1486,6 @@
             direction: 'left',
             duration: 30000,
             gap: 60,
-            // time in milliseconds before the marquee will start animating
             delayBeforeStart: 0, 
             duplicated: true,
             startVisible: false
@@ -1492,7 +1499,7 @@
     </script>
 
     <!-- scroll div transition -->
-    <script>
+    <!-- <script>
         const scrollElements = document.querySelectorAll(".scroll-reveal-js");
 
         const observer = new IntersectionObserver((entries) => {
@@ -1509,7 +1516,13 @@
         observer.observe(el);
         el.style.transform = 'translateY(50px)'; // initial state
         });
-    </script>
+    </script> -->
+
+
+
+
+    
+
     
 </body>
 

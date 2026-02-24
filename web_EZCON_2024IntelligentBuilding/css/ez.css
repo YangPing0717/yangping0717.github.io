@@ -1,4 +1,10 @@
 @charset "UTF-8";
+@media (max-width: 1400px) {
+  .mobi {
+    transform: scale(0.9);
+  }
+}
+
 .text-gradient-light {
   background: -webkit-linear-gradient(45deg, var(--purple-light) 0%, var(--cyan-light) 100%);
   background: -moz-linear-gradient(45deg, var(--purple-light) 0%, var(--cyan-light) 100%);
@@ -531,6 +537,11 @@ footer .logo img {
 }
 .images-carousel-group a:nth-child(11)::before {
   content: "金鋐建設 金鋐琢岳 - 2016 銀級";
+}
+@media (max-width: 1400px) {
+  .images-carousel-group img {
+    height: 26vh;
+  }
 }
 
 .carousel-indicators {
