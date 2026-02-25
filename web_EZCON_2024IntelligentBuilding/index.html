@@ -40,11 +40,12 @@
     <!-- <script src="https://kit.fontawesome.com" crossorigin="anonymous"></script> -->
     <!-- Or use a CDN (Example for version 6) -->
     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com" integrity="..." crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
-
+    
     <link id="colors" href="css/6_2_style.css" rel="stylesheet" type="text/css" >
     <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto:300,400,500|Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp'>
     <link id="colors" href="css/vendors.css" rel="stylesheet" type="text/css" >
     <link id="colors" href="css/ez.css" rel="stylesheet" type="text/css" >
+
 </head>
 
 <body class="dark-scheme">
@@ -139,7 +140,7 @@
                             
                             <div class="d-content relative z1000">
                                 <div class="wm wm-carousel">
-                                    <div class="images-carousel-group wow fadeInRight">
+                                    <div class="images-carousel-group wow fadeInRight ">
                                         <a href="https://www.ezcontw.com/he-yong-jian-she-kun-ming-jie-wan-hua-an/" target="_blank">
                                             <img src="demo/preview/和雍a.jpg" alt=""  >
                                         </a>
@@ -181,13 +182,15 @@
                                         <!-- <img src="demo/preview/定泰_翫花同_外觀效果圖_H.jpg" alt="">
                                         <img src="demo/preview/玖柞_俊寶揚運_home_b.jpg" alt=""> -->
                                     </div>
-                                </div>                  
+                                </div> 
+                                
+
                                 <div class="v-center">
-                                    <div class="container z1000">
+                                    <div class="container z1000 mobi_lap">
                                         <div class="row align-items-center text-center"> 
 
                                             <div class="col-lg-8 offset-lg-2">
-                                                <h1 class="text-uppercase big" data-jarallax-element="-50">
+                                                <h1 class="text-uppercase big" data-jarallax-element="-20">
                                                     <span class="smaller">2024 智慧建築全攻略</span>
                                                     <span class="bestAI">易控取分系統</span>
                                                     <!-- <span class="text-gradient">易控取分系統</span> -->
@@ -235,7 +238,7 @@
             <section id="section-hero" class="jarallax">
                 <img src="images/background/1.jpg" class="mobile_bg jarallax-img" alt="">
                 <div class="container position-relative z1000 wow fadeInDown">
-                    <div class="row align-items-center position-relative">
+                    <div class="row align-items-center position-relative mobi_lap">
                         <div class="spacer-double d-lg-none d-sm-block"></div>
                         <div class="col-lg-12 z1000">
                             <div class="spacer-double"></div>
@@ -256,9 +259,11 @@
                                 <!-- <span class="text-line wow fadeInRight" data-wow-delay=".4s">讓智慧建築</span> <br/> -->
                                 <span class=" wow fadeInRight" data-wow-delay=".4s">讓智慧建築</span> <br/>
                                 <span class="text-gradient-light forPhone_br">
-                                    <span class=""><i class="fa fa-check"></i></span>少風險<br/>
-                                    <i class="fa fa-check"></i>少糾紛<br/>
-                                    <i class="fa fa-check"></i>好掌控
+                                    <span class="">
+                                        <i class="fa fa-check"></i>少風險<br/>
+                                        <i class="fa fa-check"></i>少糾紛<br/>
+                                        <i class="fa fa-check"></i>好掌控
+                                    </span>
                                 </span>
                                 <!-- <i class="material-icons-two-tone">check</i>  -->
                             </h1>
@@ -1459,6 +1464,7 @@
     <!-- Javascript Files
     ================================================== -->
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js'></script>
+
     <script src="js/6_2_script.js"></script>
     <script src="js/plugins.js"></script>
     <script src="js/designesia.js"></script>
@@ -1478,7 +1484,6 @@
             direction: 'left',
             duration: 30000,
             gap: 60,
-            // time in milliseconds before the marquee will start animating
             delayBeforeStart: 0, 
             duplicated: true,
             startVisible: false
@@ -1492,7 +1497,7 @@
     </script>
 
     <!-- scroll div transition -->
-    <script>
+    <!-- <script>
         const scrollElements = document.querySelectorAll(".scroll-reveal-js");
 
         const observer = new IntersectionObserver((entries) => {
@@ -1509,7 +1514,13 @@
         observer.observe(el);
         el.style.transform = 'translateY(50px)'; // initial state
         });
-    </script>
+    </script> -->
+
+
+
+
+    
+
     
 </body>
 

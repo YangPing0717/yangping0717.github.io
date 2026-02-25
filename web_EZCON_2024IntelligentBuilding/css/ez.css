@@ -1,8 +1,13 @@
 @charset "UTF-8";
-@media (max-width: 1400px) {
-  .mobi {
-    transform: scale(0.9);
+@media (min-width: 769px) and (max-width: 1440px) {
+  .mobi_lap {
+    transform: scale(0.85);
   }
+}
+
+.dark-scheme header.smaller {
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(6px);
 }
 
 .text-gradient-light {
@@ -43,7 +48,7 @@ h1.ultra-big.smaller {
   font-size: 5.8rem;
   line-height: 6rem;
 }
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   h1.ultra-big.smaller {
     font-size: 3.6rem;
     line-height: 4rem;
@@ -53,7 +58,7 @@ h1.ultra-big.smaller .text-line {
   font-size: 5.8rem;
   -webkit-text-stroke: 1px #ffffff;
 }
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   h1.ultra-big.smaller .text-line {
     font-size: 3.6rem;
     line-height: 4rem;
@@ -73,7 +78,7 @@ h1.ultra-big.smaller i {
   margin-right: 8px;
   -webkit-text-fill-color: initial;
 }
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   h1.ultra-big.smaller i {
     vertical-align: middle;
     margin-top: 0;
@@ -87,7 +92,7 @@ h1.ultra-big.number {
 h1.ultra-big.number span.text-line {
   margin-bottom: 0.5rem;
 }
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   h1.ultra-big.number span.text-line {
     font-size: 5.5rem;
     line-height: 5rem;
@@ -126,13 +131,13 @@ p.lead.big {
 .forPhone_br br {
   display: none;
 }
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   .forPhone_br br {
     display: initial;
   }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   .forPhone_br_show br {
     display: none;
   }
@@ -145,13 +150,109 @@ header .logo-main {
 .wm-carousel {
   padding-top: 75vh;
 }
-@media (max-width: 767px) {
+@media (min-width: 769px) and (max-width: 1440px) {
   .wm-carousel {
     padding-top: initial;
     transform: scale(0.6);
-    margin-top: 12rem;
-    display: none;
+    margin-top: 6.8rem;
   }
+}
+@media (max-width: 768px) {
+  .wm-carousel {
+    margin-top: 1.2rem;
+  }
+}
+.wm-carousel .images-carousel-group a {
+  position: relative;
+}
+@media (min-width: 769px) and (max-width: 1440px) {
+  .wm-carousel .images-carousel-group a img {
+    height: 45vh;
+  }
+}
+@media (max-width: 768px) {
+  .wm-carousel .images-carousel-group a img {
+    height: 21vh;
+  }
+}
+.wm-carousel .images-carousel-group a::before {
+  letter-spacing: initial;
+  position: absolute;
+  width: 628px;
+  height: 6rem;
+  left: 0;
+  bottom: 0.8rem;
+  content: "和雍建設 昆明案 - 2024 黃金級";
+  font-size: 1.4rem;
+  color: #ffffff;
+  -webkit-text-stroke: 0px;
+  background: linear-gradient(0deg, rgba(9, 9, 27, 0.9) 30%, rgba(0, 0, 0, 0) 100%);
+}
+@media (min-width: 769px) and (max-width: 1440px) {
+  .wm-carousel .images-carousel-group a::before {
+    bottom: 0.8rem;
+    font-size: 1.8rem;
+    width: 582px;
+  }
+}
+@media (max-width: 768px) {
+  .wm-carousel .images-carousel-group a::before {
+    bottom: 2rem;
+    font-size: 1.2rem;
+    width: 352px;
+  }
+}
+.wm-carousel .images-carousel-group a:nth-child(2)::before {
+  content: "和雍建設 台北士林天母案 - 2024 銀級";
+}
+.wm-carousel .images-carousel-group a:nth-child(3)::before {
+  content: "利百加建設 民有印象 - 2024 銀級";
+}
+.wm-carousel .images-carousel-group a:nth-child(4)::before {
+  content: "傳田建設 傳田豐御 - 2016 銀級";
+}
+.wm-carousel .images-carousel-group a:nth-child(5)::before {
+  content: "峻勝建設 文化首勝 - 2016 銀級";
+}
+.wm-carousel .images-carousel-group a:nth-child(6)::before {
+  content: "傑座建設 甄豪宅 - 2016 銀級";
+}
+.wm-carousel .images-carousel-group a:nth-child(7)::before {
+  content: "將捷建設 將捷 MRT - 2016 銀級";
+}
+.wm-carousel .images-carousel-group a:nth-child(8)::before {
+  content: "城中建設 城心城邑 - 2016 銀級";
+}
+.wm-carousel .images-carousel-group a:nth-child(9)::before {
+  content: "大漢建設 星禾苑 - 2016 銀級";
+}
+.wm-carousel .images-carousel-group a:nth-child(10)::before {
+  content: "邑城建設 邑城仰睦 - 2016 銀級";
+}
+.wm-carousel .images-carousel-group a:nth-child(11)::before {
+  content: "金鋐建設 金鋐琢岳 - 2016 銀級";
+}
+
+.carousel-indicators {
+  margin-right: initial;
+  margin-left: initial;
+}
+
+@media (max-width: 768px) {
+  .carousel-indicators [data-mdb-target] {
+    margin: 0px 4px;
+  }
+}
+.carousel-indicators [data-mdb-target] img {
+  border: 1px solid #505050;
+}
+
+.carousel-inner {
+  border: 1px solid #272727;
+}
+
+#de-carousel .carousel-inner {
+  border: none;
 }
 
 #de-carousel .mask {
@@ -354,7 +455,7 @@ footer .logo img {
   letter-spacing: -20px;
   font-weight: 900;
 }
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   .module3 h2.sub_title span {
     font-size: 6rem;
     line-height: 0;
@@ -364,7 +465,7 @@ footer .logo img {
 .module3 h3 {
   line-height: 4rem;
 }
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   .module3 h3 {
     font-size: 1.28rem;
     line-height: 1rem;
@@ -375,7 +476,7 @@ footer .logo img {
   color: #8800ff;
   font-weight: 300;
 }
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   .module3 .images-deco-1 .d-img-1 {
     width: 100%;
     margin: 0;
@@ -388,7 +489,7 @@ footer .logo img {
   bottom: 4rem;
   left: 20px;
 }
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   .module3 .images-deco-1 .d-img-3 {
     display: none;
   }
@@ -401,7 +502,7 @@ footer .logo img {
   top: -20px;
   right: -8px;
 }
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   .module3 .images-deco-1 .d-img-4 {
     display: none;
   }
@@ -409,7 +510,7 @@ footer .logo img {
 .module3 .images-deco-1 .d-img-2 {
   left: -3rem;
 }
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   .module3 .images-deco-1 .d-img-2 {
     display: none;
   }
@@ -427,7 +528,7 @@ footer .logo img {
   width: 75%;
   padding: 1.8rem 0 0 0;
 }
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   .features .de_count {
     width: 80%;
     padding: 0;
@@ -439,7 +540,7 @@ footer .logo img {
   line-height: 1.2;
   margin-bottom: 1rem;
 }
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   .features .de_count h2 {
     font-size: 1.8rem;
   }
@@ -457,12 +558,12 @@ footer .logo img {
 .features.step4 h1 {
   margin-bottom: 0;
 }
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   .features .img-fluid.ro180 {
     transform: rotate(180deg);
   }
 }
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   .features .feat_mb {
     margin-bottom: -3rem;
   }
@@ -471,7 +572,7 @@ footer .logo img {
 .location h2 span {
   font-size: 80%;
 }
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   .location h2 span {
     font-size: 2.2rem;
   }
@@ -486,87 +587,7 @@ footer .logo img {
   color: var(--secondary-color);
 }
 
-.images-carousel-group a {
-  position: relative;
-}
-.images-carousel-group a::before {
-  letter-spacing: initial;
-  position: absolute;
-  width: 628px;
-  height: 6rem;
-  left: 0;
-  bottom: 0.8rem;
-  content: "和雍建設 昆明案 - 2024 黃金級";
-  font-size: 1.4rem;
-  color: #ffffff;
-  -webkit-text-stroke: 0px;
-  background: linear-gradient(0deg, rgba(9, 9, 27, 0.9) 30%, rgba(0, 0, 0, 0) 100%);
-}
-@media (max-width: 767px) {
-  .images-carousel-group a::before {
-    bottom: -0.5rem;
-    font-size: 2rem;
-  }
-}
-.images-carousel-group a:nth-child(2)::before {
-  content: "和雍建設 台北士林天母案 - 2024 銀級";
-}
-.images-carousel-group a:nth-child(3)::before {
-  content: "利百加建設 民有印象 - 2024 銀級";
-}
-.images-carousel-group a:nth-child(4)::before {
-  content: "傳田建設 傳田豐御 - 2016 銀級";
-}
-.images-carousel-group a:nth-child(5)::before {
-  content: "峻勝建設 文化首勝 - 2016 銀級";
-}
-.images-carousel-group a:nth-child(6)::before {
-  content: "傑座建設 甄豪宅 - 2016 銀級";
-}
-.images-carousel-group a:nth-child(7)::before {
-  content: "將捷建設 將捷 MRT - 2016 銀級";
-}
-.images-carousel-group a:nth-child(8)::before {
-  content: "城中建設 城心城邑 - 2016 銀級";
-}
-.images-carousel-group a:nth-child(9)::before {
-  content: "大漢建設 星禾苑 - 2016 銀級";
-}
-.images-carousel-group a:nth-child(10)::before {
-  content: "邑城建設 邑城仰睦 - 2016 銀級";
-}
-.images-carousel-group a:nth-child(11)::before {
-  content: "金鋐建設 金鋐琢岳 - 2016 銀級";
-}
-@media (max-width: 1400px) {
-  .images-carousel-group img {
-    height: 26vh;
-  }
-}
-
-.carousel-indicators {
-  margin-right: initial;
-  margin-left: initial;
-}
-
-@media (max-width: 767px) {
-  .carousel-indicators [data-mdb-target] {
-    margin: 0px 4px;
-  }
-}
-.carousel-indicators [data-mdb-target] img {
-  border: 1px solid #505050;
-}
-
-.carousel-inner {
-  border: 1px solid #272727;
-}
-
-#de-carousel .carousel-inner {
-  border: none;
-}
-
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   .spacer-100-mo {
     width: 100%;
     height: 100px;
