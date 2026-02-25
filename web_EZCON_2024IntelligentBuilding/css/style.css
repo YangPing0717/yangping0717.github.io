@@ -18266,7 +18266,7 @@ img {
   header.header-mobile #mainmenu li>ul>li>span {
     width: 36px;
     height: 36px;
-    background: url(../images/ui/arrow-down.png) center no-repeat;
+    background: url(../images/ui/arrow-down-light.png) center no-repeat;
     position: absolute;
     right: 0;
     margin-top: -45px;
@@ -18275,7 +18275,7 @@ img {
   }
 
   header.header-mobile #mainmenu>li>ul>li>span.active {
-    background: url(../images/ui/arrow-up.png) center no-repeat;
+    background: url(../images/ui/arrow-up-light.png) center no-repeat;
   }
 
   header.header-mobile #mainmenu li ul li a.menu-item {

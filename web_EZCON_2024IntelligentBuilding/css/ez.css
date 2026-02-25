@@ -5,9 +5,24 @@
   }
 }
 
-.dark-scheme header.smaller, .dark-scheme header.header-mobile {
+.dark-scheme header.smaller {
   background: rgba(0, 0, 0, 0.4);
   backdrop-filter: blur(6px);
+}
+.dark-scheme header.header-mobile {
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(6px);
+}
+@media (max-width: 768px) {
+  .dark-scheme header.header-mobile #mainmenu li ul li a.menu-item {
+    border-bottom: 1px solid;
+    border-bottom-color: rgba(255, 255, 255, 0.1);
+  }
+}
+@media (max-width: 768px) {
+  .dark-scheme header.header-mobile #mainmenu li ul li ul {
+    margin-bottom: 0px;
+  }
 }
 
 .text-gradient-light {
