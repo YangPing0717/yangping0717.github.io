@@ -10,8 +10,8 @@
   backdrop-filter: blur(6px);
 }
 .dark-scheme header.header-mobile {
-  background: rgba(0, 0, 0, 0.85);
-  backdrop-filter: blur(6px);
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(12.5px);
 }
 @media (max-width: 768px) {
   .dark-scheme header.header-mobile #mainmenu li ul li a.menu-item {
