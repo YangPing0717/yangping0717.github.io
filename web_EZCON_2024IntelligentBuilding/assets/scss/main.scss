@@ -1,0 +1,62 @@
+
+// abstracts scss
+@import
+    'abstracts/variables',
+    'abstracts/mixins';
+
+// base scss
+@import 
+    // 'base/fonts',
+    // 'base/base',
+    'base/spacing',
+    // 'base/typography',
+    'base/animation',
+    'base/overlay';
+
+// layout scss
+// @import 
+//     'layout/header',
+//     'layout/navigation';
+ 
+// components scss
+@import    
+    'components/brand',
+    'components/industries',
+    'components/project',
+    'components/process',
+    'components/pricing',
+    'components/integration',
+    'components/integration',
+    'components/download',
+    'components/award',
+    'components/career',
+    'components/funfact',
+    'components/sec-title',
+    'components/about',
+    'components/service',
+    'components/feature',
+    'components/team',
+    'components/details',
+    'components/video',
+    'components/cta',
+    'components/testimonial',
+    'components/blog',
+    'components/faq',
+    'components/contact',
+    'components/sidebar',
+    'components/global',
+    'components/hero',
+    'components/breadcrumb',
+    'components/buttons',
+    'components/backtotop',
+    'components/mobile-menu',
+    'components/preloader';
+
+// home scss
+
+
+// layout scss
+// @import
+//     'layout/footer';
+ 
+
