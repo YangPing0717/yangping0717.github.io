@@ -214,7 +214,7 @@ header .logo-main {
   height: 6rem;
   left: 0;
   bottom: 0.8rem;
-  content: "和雍建設 昆明案 - 2024 黃金級";
+  content: "和雍建設 昆明案 - 2024 銀級";
   font-size: 1.4rem;
   color: #ffffff;
   -webkit-text-stroke: 0px;
@@ -250,10 +250,10 @@ header .logo-main {
   content: "傑座建設 甄豪宅 - 2016 銀級";
 }
 .wm-carousel .images-carousel-group a:nth-child(7)::before {
-  content: "將捷建設 將捷 MRT - 2016 銀級";
+  content: "將捷建設 將捷 MRT - 2016 銅級";
 }
 .wm-carousel .images-carousel-group a:nth-child(8)::before {
-  content: "城中建設 城心城邑 - 2016 銀級";
+  content: "城中建設 城心城邑 - 2016 銅級";
 }
 .wm-carousel .images-carousel-group a:nth-child(9)::before {
   content: "大漢建設 星禾苑 - 2016 銀級";
@@ -652,82 +652,36 @@ footer .logo img {
   color: var(--cyan-light);
 }
 
-.facility_start h1.ultra-big {
+.facility_page .facility_start {
+  padding-top: 0 !important;
+}
+.facility_page .facility_start h1.ultra-big {
   line-height: 6.2rem;
   font-size: 6.2rem;
 }
-.facility_start h1.ultra-big span.text-line {
+@media (max-width: 768px) {
+  .facility_page .facility_start h1.ultra-big {
+    font-size: 3.8rem;
+    line-height: 4rem;
+  }
+}
+.facility_page .facility_start h1.ultra-big span.text-line {
   font-size: inherit;
   -webkit-text-stroke: 1px #ffffff;
 }
-.facility_start h1.ultra-big .smaller {
+.facility_page .facility_start h1.ultra-big .smaller {
   font-size: 4.6rem;
   margin-top: -0.38rem;
 }
-
-.facility .de_count {
-  width: 100%;
-  margin-top: -0.5rem;
-  padding-top: 0;
-}
 @media (max-width: 768px) {
-  .facility .de_count {
-    width: 100%;
-    padding: 0;
-    margin-top: -1rem;
+  .facility_page .facility_start h1.ultra-big .smaller {
+    font-size: 66%;
   }
 }
-.facility .de_count.ver_arange h3 {
-  margin: -2rem 0 0 -2.6rem;
-}
-.facility .de_count.ver_arange h3 .timer {
-  font-family: "Prompt", Helvetica, Arial, sans-serif;
-}
-.facility .de_count.ver_arange h3 span {
-  font-size: 9.2rem;
-  margin-bottom: 1.4rem;
-  letter-spacing: -2px;
-  padding-right: 8px;
-}
-.facility .de_count.ver_arange h3 .plus {
-  font-size: 80%;
-  position: relative;
-  display: inline-block;
-  left: 1.6rem;
-  top: -1.6rem;
-}
-.facility .de_count.ver_arange h4 {
-  margin-top: 1rem;
-}
-.facility .de_count.ver_arange_type2 h3 {
-  margin: -3rem 0 0 -2.6rem;
-}
-.facility .de_count.ver_arange_type2 h3 .timer {
-  font-family: "Prompt", Helvetica, Arial, sans-serif;
-}
-.facility .de_count.ver_arange_type2 h3 span {
-  font-size: 6.2rem;
-  margin-bottom: 1.4rem;
-  letter-spacing: 0px;
-  padding-right: 8px;
-}
-.facility .de_count.ver_arange_type2 h3 span:nth-child(3) {
-  margin: 0 -36px 0 -36px;
-}
-.facility .de_count.ver_arange_type2 h3 .plus {
-  font-size: 70%;
-  position: relative;
-  display: inline-block;
-  left: 1.6rem;
-  top: -0.2rem;
-}
-.facility_start {
-  padding: 0;
-}
-.facility_start .facility_startBox {
+.facility_page .facility_start .facility_startBox {
   padding: 120px 0 120px 0;
 }
-.facility_start .facility_startBox .mask {
+.facility_page .facility_start .facility_startBox .mask {
   background: rgba(0, 238, 255, 0.05);
   position: absolute;
   top: 0;
@@ -743,4 +697,86 @@ footer .logo img {
   display: inline-block;
   padding: 120px 0 120px 0;
   filter: invert(1) sepia(1) saturate(90) hue-rotate(335deg);
+}
+@media (max-width: 768px) {
+  .facility_page .facility_start .facility_startBox .mask {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .facility_score .col-lg-5 {
+    margin-bottom: 6rem;
+  }
+}
+@media (max-width: 768px) {
+  .facility_score .mb-mobile-60 {
+    margin-top: -4rem !important;
+  }
+}
+.facility_score .de_count {
+  width: 100%;
+  margin-top: -0.5rem;
+  padding-top: 0;
+}
+@media (max-width: 768px) {
+  .facility_score .de_count {
+    width: 100%;
+    padding: 0;
+    margin-top: 1rem;
+  }
+}
+.facility_score .de_count.ver_arange h3 {
+  margin: -2rem 0 0 -2.6rem;
+}
+.facility_score .de_count.ver_arange h3 .timer {
+  font-family: "Prompt", Helvetica, Arial, sans-serif;
+}
+.facility_score .de_count.ver_arange h3 span {
+  font-size: 9.2rem;
+  margin-bottom: 1.4rem;
+  letter-spacing: -2px;
+  padding-right: 8px;
+}
+.facility_score .de_count.ver_arange h3 .plus {
+  font-size: 80%;
+  position: relative;
+  display: inline-block;
+  left: 1.6rem;
+  top: -1.6rem;
+}
+.facility_score .de_count.ver_arange h4 {
+  margin-top: 1rem;
+}
+@media (max-width: 768px) {
+  .facility_score .de_count.ver_arange_type2 {
+    margin-top: 0rem;
+  }
+}
+.facility_score .de_count.ver_arange_type2 h3 {
+  margin: -3rem 0 0 -2.6rem;
+}
+.facility_score .de_count.ver_arange_type2 h3 .timer {
+  font-family: "Prompt", Helvetica, Arial, sans-serif;
+}
+.facility_score .de_count.ver_arange_type2 h3 span {
+  font-size: 6.2rem;
+  margin-bottom: 1.4rem;
+  letter-spacing: 0px;
+  padding-right: 8px;
+}
+.facility_score .de_count.ver_arange_type2 h3 span:nth-child(3) {
+  margin: 0 -36px 0 -36px;
+}
+.facility_score .de_count.ver_arange_type2 h3 .plus {
+  font-size: 70%;
+  position: relative;
+  display: inline-block;
+  left: 1.6rem;
+  top: -0.2rem;
+}
+@media (max-width: 768px) {
+  .transform_img_deg90 {
+    transform: rotate(180deg);
+  }
 }
