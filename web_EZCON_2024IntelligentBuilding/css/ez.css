@@ -191,6 +191,7 @@ header .logo-main {
 @media (max-width: 768px) {
   .wm-carousel {
     margin-top: 1.2rem;
+    display: none;
   }
 }
 .wm-carousel .images-carousel-group a {

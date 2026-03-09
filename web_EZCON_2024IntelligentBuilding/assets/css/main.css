@@ -5742,6 +5742,12 @@ body[data-aos-easing=ease] [data-aos] {
   font-weight: 900;
   vertical-align: sub;
 }
+.sec-title .title.with_img {
+  line-height: 1;
+}
+.sec-title .title.with_img img {
+  margin: 0 -4rem;
+}
 .sec-title .sub-title {
   font-size: 16px;
   font-weight: 400;
