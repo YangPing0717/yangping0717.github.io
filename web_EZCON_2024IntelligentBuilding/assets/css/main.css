@@ -4413,6 +4413,9 @@ body[data-aos-easing=ease] [data-aos] {
 
 @media (max-width: 767px) {
   .project.facility_ability4_con h2.title {
+    display: inline-block !important;
+    text-align: center;
+    line-height: 3.2rem;
     margin-left: 0;
   }
 }
@@ -4428,6 +4431,11 @@ body[data-aos-easing=ease] [data-aos] {
 @media (max-width: 767px) {
   .project.facility_ability4_con h2.title br {
     display: none;
+  }
+}
+@media (max-width: 767px) {
+  .project.facility_ability4_con .xb-heading-btn {
+    margin-top: 4rem;
   }
 }
 @media (max-width: 767px) {
@@ -5802,7 +5810,7 @@ body[data-aos-easing=ease] [data-aos] {
 @media (max-width: 767px) {
   .sec-title .title .big_num {
     vertical-align: bottom;
-    margin-left: -3rem;
+    margin-left: -1rem;
   }
 }
 .sec-title .title.with_img {
