@@ -1426,6 +1426,18 @@
         document.getElementById("year").innerHTML = new Date().getFullYear();
     </script>
 
+    <!-- 手機停用 data-jarallax-element -->
+    <script>
+        // 初始化時判斷
+        jarallax(document.querySelectorAll('[data-jarallax-element]'), {
+            disableParallax: /iPad|iPhone|iPod|Android/, // 針對行動裝置系統停用
+            // 或者用螢幕寬度判斷
+            disableParallax: function () {
+                return window.innerWidth < 768; 
+            }
+        });
+    </script>
+
 
     <!-- ４大關鍵能力 -->
     <!-- Core dependencies -->
