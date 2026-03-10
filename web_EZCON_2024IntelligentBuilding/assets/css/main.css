@@ -3683,6 +3683,9 @@ body[data-aos-easing=ease] [data-aos] {
   display: ruby;
 }
 
+.xb-industries-logo {
+  width: 100%;
+}
 @media (max-width: 1199px) {
   .xb-industries-logo {
     max-width: 73%;
@@ -3823,6 +3826,37 @@ body[data-aos-easing=ease] [data-aos] {
   .xb-gradiant-line span:nth-child(4) {
     top: 35%;
     right: 14%;
+  }
+}
+
+.industries .sec-title .title .big_num {
+  font-size: 10rem;
+  line-height: 0;
+  font-weight: 900;
+  vertical-align: sub;
+}
+@media (max-width: 767px) {
+  .industries .sec-title .title .big_num {
+    vertical-align: baseline;
+    margin-left: 0;
+  }
+}
+.industries .sec-title .title.with_img {
+  line-height: 1;
+}
+@media (max-width: 767px) {
+  .industries .sec-title .title.with_img {
+    line-height: 1.4;
+    letter-spacing: -1.5px;
+  }
+}
+.industries .sec-title .title.with_img img {
+  margin: 0 -3rem;
+}
+@media (max-width: 767px) {
+  .industries .sec-title .title.with_img img {
+    margin: -12rem 0 0 0;
+    position: absolute;
   }
 }
 
@@ -4447,6 +4481,11 @@ body[data-aos-easing=ease] [data-aos] {
 
 .bg_img {
   background-size: cover;
+}
+@media (max-width: 767px) {
+  .bg_img {
+    background-size: cover !important;
+  }
 }
 
 .xb-process-step {
