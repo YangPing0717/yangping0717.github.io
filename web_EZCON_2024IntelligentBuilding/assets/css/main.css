@@ -5892,6 +5892,7 @@ body[data-aos-easing=ease] [data-aos] {
     line-height: 1;
     position: relative;
     top: -20px;
+    margin: 0 -8px 0 -16px;
   }
 }
 .sec-title .title.with_img {
