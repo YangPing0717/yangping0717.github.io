@@ -143,6 +143,38 @@ h1.ultra-big.number span.text-line {
     margin-bottom: 0.8rem;
   }
 }
+@media (max-width: 768px) {
+  h1.ultra-big.s3 span.text-line {
+    font-size: 6.8rem;
+  }
+}
+@media (max-width: 768px) {
+  h1.ultra-big.s3 span.text-line.mobile_plus {
+    display: block;
+    position: relative;
+    right: 6.5vw;
+    top: -16px;
+    float: right;
+    font-size: 5rem;
+  }
+}
+h1.ultra-big.s3 span.text-line span.descrip {
+  -webkit-text-stroke: 0px;
+  display: inline-block;
+  color: white;
+  letter-spacing: 0;
+  vertical-align: middle;
+  font-size: 1.8rem;
+  line-height: 1;
+  position: relative;
+  top: -6px;
+  left: 48px;
+}
+@media (max-width: 768px) {
+  h1.ultra-big.s3 span.text-line span.descrip {
+    left: 6px;
+  }
+}
 
 @media only screen and (max-width: 767px) {
   h1, h1.ultra-big,
