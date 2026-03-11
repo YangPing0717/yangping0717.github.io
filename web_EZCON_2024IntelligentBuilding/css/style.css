@@ -67,7 +67,7 @@ Table of content:
 @import url("../fonts/icofont/icofont.min.css");
 
 * {
-  /* --title-font: "Noto Sans TC", "Prompt", Helvetica, Arial, sans-serif; */
+  --number-font: "Noto Sans TC", "Prompt", Helvetica, Arial, sans-serif;
   --title-font: "Noto Sans TC", sans-serif;
   /* --title-font: "Noto Sans TC", Helvetica, Arial, sans-serif; */
   --body-font: "Noto Sans TC", "Manrope", Helvetica, Arial, sans-serif; 

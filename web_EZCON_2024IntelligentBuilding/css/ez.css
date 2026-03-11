@@ -506,6 +506,9 @@ footer .logo img {
     letter-spacing: -12px;
   }
 }
+.module3 h2.sub_title span.num_narrow {
+  letter-spacing: -14px;
+}
 .module3 h3 {
   line-height: 4rem;
 }
