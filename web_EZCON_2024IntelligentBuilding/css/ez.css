@@ -673,7 +673,7 @@ footer .logo img {
 }
 @media (max-width: 768px) {
   .facility_page .facility_start h1.ultra-big {
-    font-size: 3.8rem;
+    font-size: 3.4rem;
     line-height: 4rem;
   }
 }
@@ -691,7 +691,12 @@ footer .logo img {
   }
 }
 .facility_page .facility_start .facility_startBox {
-  padding: 120px 0 120px 0;
+  padding: 220px 0 120px 0;
+}
+@media (max-width: 768px) {
+  .facility_page .facility_start .facility_startBox {
+    padding: 180px 0 120px 0;
+  }
 }
 .facility_page .facility_start .facility_startBox .mask {
   background: rgba(0, 238, 255, 0.05);
