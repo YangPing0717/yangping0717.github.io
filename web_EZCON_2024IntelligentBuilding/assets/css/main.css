@@ -3844,6 +3844,8 @@ body[data-aos-easing=ease] [data-aos] {
   .industries .sec-title .title .big_num {
     vertical-align: baseline;
     margin-left: 0;
+    display: initial;
+    position: initial;
   }
 }
 .industries .sec-title .title.with_img {
@@ -4482,7 +4484,8 @@ body[data-aos-easing=ease] [data-aos] {
     text-align: center;
     line-height: 3.6rem;
     margin-left: 0;
-    font-size: 8vw;
+    font-size: 8.4vw;
+    margin-bottom: -5.6rem;
   }
 }
 @media (max-width: 767px) {
@@ -5878,11 +5881,17 @@ body[data-aos-easing=ease] [data-aos] {
   line-height: 0;
   font-weight: 900;
   vertical-align: sub;
+  top: -80px;
 }
 @media (max-width: 767px) {
   .sec-title .title .big_num {
     vertical-align: bottom;
     margin-left: -1rem;
+    display: inline-block;
+    vertical-align: text-top;
+    line-height: 1;
+    position: relative;
+    top: -20px;
   }
 }
 .sec-title .title.with_img {
