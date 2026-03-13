@@ -3584,8 +3584,12 @@ body[data-aos-easing=ease] [data-aos] {
 }
 @media (max-width: 767px) {
   .xb-gardiant-shape {
-    left: 15px;
-    right: 15px;
+    left: 0;
+    right: 0;
+  }
+  .xb-gardiant-shape img {
+    width: 100%;
+    margin-top: -48px;
   }
 }
 @media only screen and (min-width: 576px) and (max-width: 767px) {
@@ -3740,7 +3744,7 @@ body[data-aos-easing=ease] [data-aos] {
 @media (max-width: 767px) {
   .indu-shape {
     left: 0px;
-    bottom: 18px;
+    bottom: 15px;
     transform: translateX(20px);
   }
 }
