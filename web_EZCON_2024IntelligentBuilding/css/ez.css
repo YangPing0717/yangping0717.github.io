@@ -838,3 +838,24 @@ footer .logo img {
     transform: rotate(180deg);
   }
 }
+
+.widget {
+  padding-bottom: 0;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media (max-width: 768px) {
+  .widget {
+    margin-bottom: 1.6rem;
+  }
+}
+@media (max-width: 768px) {
+  .widget ul {
+    margin-top: 30px;
+    text-align: center;
+  }
+}
+
+/* 選中標籤的樣式 */
