@@ -218,6 +218,12 @@ p.lead.big {
   }
 }
 
+@media (max-width: 768px) {
+  .forPhone_hide {
+    display: none;
+  }
+}
+
 header .logo-main {
   width: 148px;
 }
@@ -692,11 +698,11 @@ footer .logo img {
   font-size: 15px;
 }
 .breadcrumb a {
-  color: #c6c6c6;
+  color: var(--cyan-light);
   transition: all 0.3s ease-in-out;
 }
 .breadcrumb a:hover {
-  color: var(--cyan-light);
+  color: var(--cyan-light-active);
 }
 
 .facility_page .facility_start {
@@ -722,7 +728,7 @@ footer .logo img {
 }
 @media (max-width: 768px) {
   .facility_page .facility_start h1.ultra-big .smaller {
-    font-size: 66%;
+    font-size: 7.8vw;
   }
 }
 .facility_page .facility_start .facility_startBox {
