@@ -1477,6 +1477,14 @@
             // 點擊過濾
             $('.widget_tags ul li a').on('click', function(e) {
                 e.preventDefault();
+
+                // --- 樣式切換邏輯 ---
+                // 1. 移除該區域所有標籤的 active class
+                $('.widget_tags li a').removeClass('active');
+                
+                // 2. 為當前被點擊的 <a> 加上 active class
+                $(this).addClass('active');
+                
                 var filterValue = $(this).attr('data-filter');
                 
                 // 如果是 all，filter 就給 '*'，否則給 '.class'
@@ -1489,6 +1497,9 @@
                     $(window).trigger('resize.jarallax');
                 });
                 new WOW().init();
+
+                // 預設行為：讓第一個標籤 (通常是 All) 一開始就是選中狀態
+                // $('.widget_tags li a').first().addClass('active');
             });
         });
     </script>
