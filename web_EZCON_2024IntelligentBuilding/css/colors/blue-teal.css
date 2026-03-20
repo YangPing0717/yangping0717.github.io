@@ -10,5 +10,7 @@
   --third-color: #5C33FF;
   --primary-color-dark: rgba(0, 0, 0, 0.4);
   --purple-light: #b3aaf4;
-  --cyan-light: #aef3e5;
+  --cyan-light-active: #3bfed7;
+  --cyan-light: #6abbac;
+  --darkblue-light: #001a66;
 }
