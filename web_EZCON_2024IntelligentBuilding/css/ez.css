@@ -5,6 +5,10 @@
   }
 }
 
+.hide_tem {
+  display: none;
+}
+
 .dark-scheme header.smaller {
   -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
@@ -882,4 +886,123 @@ footer .logo img {
   box-shadow: 0 0 10px 4px rgba(0, 255, 177, 0.8);
   /* 字體加粗 */
   font-weight: bold;
+}
+
+.property_page {
+  padding-top: 180px;
+}
+.property_page .de-gradient-edge-bottom {
+  height: 40%;
+  background: linear-gradient(0deg, rgb(0, 0, 0) 20%, rgba(0, 0, 0, 0) 100%);
+}
+.property_page h1.ultra-big-2 {
+  font-size: 7.2rem;
+  text-shadow: 0 10px 20px #000, 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+.property_page h1.ultra-big-2 .bigger_letter {
+  font-size: 130%;
+  font-family: "Prompt", Helvetica, Arial, sans-serif;
+  vertical-align: middle;
+  height: 130px;
+  margin-right: 0.6rem;
+  text-shadow: none;
+}
+.property_page h1.ultra-big-2 .smaller {
+  font-size: 70%;
+  display: block;
+  margin-top: -1.2rem;
+}
+.property_page h5.s2 {
+  background: var(--darkblue-light);
+}
+.property_page h5.s2 i {
+  color: var(--cyan-light-active);
+}
+
+.property_score .de_count {
+  width: 88%;
+  padding: 1.8rem 0 0 0;
+}
+@media (max-width: 768px) {
+  .property_score .de_count {
+    width: 90%;
+    padding: 0;
+    margin-top: -1rem;
+  }
+}
+.property_score .de_count h2 {
+  font-size: 1.8rem;
+  line-height: 1;
+  margin-bottom: 0;
+}
+@media (max-width: 768px) {
+  .property_score .de_count h2 {
+    font-size: 1.8rem;
+  }
+}
+.property_score .de_count h2.bigger {
+  font-size: 2.1rem;
+  line-height: 1.2;
+}
+.property_score .de_count h3 i {
+  font-size: 3.6rem;
+}
+.property_score .de_count p {
+  font-weight: 700;
+  line-height: 1.6rem;
+  margin-top: 0.4rem;
+}
+.property_score .de_count .arrow {
+  transform: rotate(90deg);
+  width: 3rem;
+}
+.property_score .de_count img {
+  animation: spin 2s linear infinite;
+}
+
+/* 1. Define the rotation keyframes */
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+/* 2. Apply to your element */
+.spinning-element {
+  animation: spin 2s linear infinite;
+}
+
+.img-fluid.type2 {
+  max-width: 20rem;
+  margin-left: -6rem;
+  width: 240px;
+}
+
+.c-item_title {
+  border-radius: 3rem;
+  background: rgba(0, 26, 102, 0.85);
+  margin-bottom: -3%;
+  padding: 0.4rem 1.2rem 0.4rem;
+  line-height: 1.4;
+  width: max-content;
+  transform: translateX(-50%);
+  left: 50%;
+  margin-left: 0;
+}
+
+.chatbot-btn .btn-bg {
+  left: 100px;
+}
+.chatbot-btn:hover {
+  color: #fff;
+}
+.chatbot-btn:hover .btn-bg {
+  left: -50px;
+}
+
+a.btn-main.big.type2 {
+  font-size: 18px;
+  padding: 8px 20px;
 }
