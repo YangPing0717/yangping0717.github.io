@@ -9776,9 +9776,9 @@ body[data-aos-easing=ease] [data-aos] {
   transition: 0.3s;
 }
 .ai-testimonial-slider-img .ai-tes-img img {
+  width: 100%;
   height: 100%;
   object-fit: cover;
-  float: right;
 }
 
 @media (max-width: 1199px) {
