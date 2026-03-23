@@ -11,6 +11,7 @@
   --primary-color-dark: rgba(0, 0, 0, 0.4);
   --purple-light: #b3aaf4;
   --cyan-light-active: #3bfed7;
+  --cyan-light-active-rgb: rgb(59, 254, 215);
   --cyan-light: #6abbac;
   --darkblue-light: #001a66;
 }

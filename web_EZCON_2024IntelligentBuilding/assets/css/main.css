@@ -9612,7 +9612,7 @@ body[data-aos-easing=ease] [data-aos] {
   transform: translateY(30px);
 }
 .ai-testimonial-item .integration-list {
-  margin: 1.8rem 0 2.4rem;
+  margin: 2.4rem 0 2.8rem;
   color: var(--color-white);
 }
 .ai-testimonial-item .integration-list li {
@@ -9624,6 +9624,10 @@ body[data-aos-easing=ease] [data-aos] {
   -o-transition: 0.5s;
   transition: 0.5s;
   transform: translateY(30px);
+}
+.ai-testimonial-item .integration-list li span svg {
+  margin-top: -10px;
+  transform: scale(1.5);
 }
 .ai-testimonial-item .item_num {
   font-family: "Prompt", Helvetica, Arial, sans-serif;

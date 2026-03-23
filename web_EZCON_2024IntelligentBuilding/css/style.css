@@ -3598,9 +3598,9 @@ a.btn-slider:hover {
 a.btn-main:hover,
 .btn-main:hover {
   color: #fff;
-  -webkit-box-shadow: 2px 2px 20px 0px rgba(var(--primary-color-rgb), 0.5);
-  -moz-box-shadow: 2px 2px 20px 0px rgba(var(--primary-color-rgb), 0.5);
-  box-shadow: 2px 2px 20px 0px rgba(var(--primary-color-rgb), 0.5);
+  -webkit-box-shadow: 2px 2px 20px 0px rgba(var(--primary-color-rgb), 0.8);
+  -moz-box-shadow: 2px 2px 20px 0px rgba(var(--primary-color-rgb), 0.8);
+  box-shadow: 2px 2px 20px 0px rgba(var(--primary-color-rgb), 0.8);
 }
 
 a.btn-slider:hover:after {
