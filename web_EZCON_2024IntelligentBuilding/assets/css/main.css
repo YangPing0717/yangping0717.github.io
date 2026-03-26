@@ -5783,6 +5783,23 @@ body[data-aos-easing=ease] [data-aos] {
 .sec-title--two .sub-title::before, .sec-title--two .sub-title::after {
   display: none;
 }
+.sec-title--two .sub-title.type2 {
+  padding-left: 20px;
+  font-weight: 600;
+}
+.sec-title--two .sub-title.type2::before {
+  border-radius: 0;
+  -webkit-border-radius: 0;
+  display: initial;
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 50%;
+  height: 12px;
+  width: 12px;
+  transform: translateY(-50%);
+  background: var(--color-primary);
+}
 
 .sec-title-center .sub-title {
   padding-right: 16px;
