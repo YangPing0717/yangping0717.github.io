@@ -689,6 +689,11 @@ footer .logo img {
   filter: invert(90%) hue-rotate(180deg) brightness(90%);
 }
 
+.d_demo_img {
+  border-radius: 0;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+}
 .d_demo_img .d-overlay span {
   border-radius: 3rem;
 }

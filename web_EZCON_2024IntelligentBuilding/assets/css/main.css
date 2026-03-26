@@ -5004,12 +5004,16 @@ body[data-aos-easing=ease] [data-aos] {
   z-index: 1 !important;
 }
 .comparison-list .xb-item--title {
-  padding: 13px 0 6px;
+  padding: 20px 0 10px;
   text-align: center;
-  letter-spacing: -0.04em;
-  background: #15192f;
+  letter-spacing: 0.4rem;
+  background: #0d1230;
   border-radius: 10px 10px 0 0;
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  margin-bottom: 0;
+}
+.comparison-list .xb-item--title.type2 {
+  background: #0a212b;
 }
 .comparison-list .xb-item--list {
   position: relative;
@@ -5093,6 +5097,36 @@ body[data-aos-easing=ease] [data-aos] {
   .integration-content {
     padding-top: 100px;
   }
+}
+
+@media only screen and (min-width: 1200px) and (max-width: 1500px) {
+  .elec_solution {
+    padding: 0 0 0 60px;
+  }
+}
+.elec_solution h4.bigger {
+  font-size: 1.8rem;
+  line-height: 1.2;
+}
+.elec_solution h4.bestAI {
+  font-size: 1.6rem;
+  text-align: initial;
+}
+.elec_solution .comparison-list h3 {
+  font-size: 2rem;
+  padding: 20px 0 10px;
+}
+.elec_solution .comparison-list h3::after {
+  content: "方案示意圖";
+  font-size: 7rem;
+  color: transparent !important;
+  -webkit-text-stroke: 0.5px #ffffff;
+  line-height: 0;
+  font-weight: 900;
+  position: absolute;
+  top: -1%;
+  letter-spacing: -6px;
+  right: 3%;
 }
 
 .download-sec-title {
@@ -6669,14 +6703,14 @@ body[data-aos-easing=ease] [data-aos] {
 }
 
 .ai-img-content {
-  padding: 50px 30px 30px;
+  padding: 20px 16px 20px;
   position: absolute;
   left: 0;
   bottom: -1px;
   z-index: 1;
   opacity: 0;
   width: 100%;
-  min-height: 234px;
+  min-height: fit-content;
   overflow: hidden;
   transform: scaleY(0);
   transform-origin: bottom;
@@ -6713,17 +6747,20 @@ body[data-aos-easing=ease] [data-aos] {
   content: "";
   left: 0;
   z-index: -1;
-  top: 20px;
+  top: 0;
   height: 100%;
   width: 100%;
   background: #11121D;
 }
 .ai-img-content .title {
-  font-size: 24px;
+  font-size: 20px;
   line-height: 1.4;
   max-width: 250px;
   margin-bottom: 6px;
-  letter-spacing: -0.1em;
+  letter-spacing: 0;
+  border-bottom: 0px;
+  margin-bottom: 8px;
+  padding-bottom: 0;
 }
 @media only screen and (min-width: 1200px) and (max-width: 1300px) {
   .ai-img-content .title {
@@ -6749,7 +6786,9 @@ body[data-aos-easing=ease] [data-aos] {
   }
 }
 .ai-img-content .content {
-  line-height: 1.2;
+  font-size: 0.9rem;
+  line-height: 1.4;
+  margin-bottom: 0;
 }
 @media only screen and (min-width: 1200px) and (max-width: 1300px) {
   .ai-img-content .content {
@@ -6859,6 +6898,17 @@ body[data-aos-easing=ease] [data-aos] {
 .ai-service-img-item:hover .ai-img-content {
   opacity: 1;
   transform: scaleY(1);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.elec_solution .ai-service-img {
+  gap: 16px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
 }
 
 .xb-feature-item {
@@ -9529,7 +9579,7 @@ body[data-aos-easing=ease] [data-aos] {
   text-align: center;
   align-items: center;
   overflow: hidden;
-  background: linear-gradient(270deg, rgba(17, 18, 29, 0.3) 0%, rgba(10, 10, 18, 0.7) 85%, rgba(10, 10, 18, 0.95) 100%);
+  background: none;
   transform: translate(0%);
 }
 @media only screen and (min-width: 1200px) and (max-width: 1300px) {
@@ -9635,7 +9685,7 @@ body[data-aos-easing=ease] [data-aos] {
   line-height: 0;
   font-weight: 900;
   position: absolute;
-  top: 11.5%;
+  top: 13%;
   left: 10%;
   opacity: 0;
   -webkit-transition: 0.5s;
@@ -9748,6 +9798,9 @@ body[data-aos-easing=ease] [data-aos] {
   opacity: 1;
   transition-delay: 0.1s;
   transform: translateY(0);
+}
+.ai-testimonial-slider-nav .swiper-slide-active .ai-testimonial-item .xb-item--inner {
+  background: linear-gradient(270deg, rgba(10, 10, 18, 0) 0%, rgba(10, 10, 18, 0.9) 30%, rgb(10, 10, 18) 100%);
 }
 .ai-testimonial-slider-nav .swiper-slide-active .ai-testimonial-item .spin_el {
   opacity: 1;
