@@ -69,6 +69,10 @@ header *, .hover *, #mainmenu * {
   object-fit: none !important;
   object-position: 50% 0 !important;
 }
+.mobile_bg.type2 {
+  object-fit: cover !important;
+  object-position: 74% 0 !important;
+}
 
 h1.big, .h1_big {
   font-size: 5.2rem;
@@ -900,28 +904,59 @@ footer .logo img {
   height: 40%;
   background: linear-gradient(0deg, rgb(0, 0, 0) 20%, rgba(0, 0, 0, 0) 100%);
 }
+@media (max-width: 768px) {
+  .property_page .de-gradient-edge-bottom {
+    height: 55%;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.7) 65%, rgba(0, 0, 0, 0) 100%);
+  }
+}
 .property_page h1.ultra-big-2 {
   font-size: 7.2rem;
   text-shadow: 0 10px 20px #000, 2px 2px 2px rgba(0, 0, 0, 0.5);
 }
+@media (max-width: 768px) {
+  .property_page h1.ultra-big-2 {
+    font-size: 10.2vw;
+    line-height: 4.6rem;
+  }
+}
 .property_page h1.ultra-big-2 .bigger_letter {
-  font-size: 130%;
+  font-size: 140%;
   font-family: "Prompt", Helvetica, Arial, sans-serif;
   vertical-align: middle;
-  height: 130px;
+  height: 122px;
   margin-right: 0.6rem;
   text-shadow: none;
+}
+@media (max-width: 768px) {
+  .property_page h1.ultra-big-2 .bigger_letter {
+    margin-right: 0.2rem;
+    font-size: 200%;
+    height: 78px;
+    vertical-align: bottom;
+  }
 }
 .property_page h1.ultra-big-2 .smaller {
   font-size: 70%;
   display: block;
   margin-top: -1.2rem;
 }
+@media (max-width: 768px) {
+  .property_page h1.ultra-big-2 .smaller {
+    font-size: 86%;
+    margin-top: -1.3rem;
+  }
+}
 .property_page h5.s2 {
   background: var(--darkblue-light);
 }
 .property_page h5.s2 i {
   color: var(--cyan-light-active);
+}
+@media (max-width: 768px) {
+  .property_page h5.s2 {
+    margin-top: 8px !important;
+  }
 }
 
 .property_score .de_count {
@@ -964,6 +999,9 @@ footer .logo img {
 .property_score .de_count img {
   animation: spin 2s linear infinite;
 }
+.property_score .feat_mb {
+  margin-bottom: -2rem;
+}
 
 /* 1. Define the rotation keyframes */
 @keyframes spin {
@@ -983,6 +1021,14 @@ footer .logo img {
   max-width: 20rem;
   margin-left: -6rem;
   width: 240px;
+}
+@media (max-width: 768px) {
+  .img-fluid.type2 {
+    max-width: 20rem;
+    margin-left: -9rem;
+    width: 260px;
+    margin-top: -4rem;
+  }
 }
 
 .c-item_title {
