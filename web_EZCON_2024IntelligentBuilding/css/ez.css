@@ -922,10 +922,8 @@ footer .logo img {
 }
 .property_page h1.ultra-big-2 .bigger_letter {
   font-size: 140%;
-  font-family: "Prompt", Helvetica, Arial, sans-serif;
   vertical-align: middle;
   height: 122px;
-  margin-right: 0.6rem;
   text-shadow: none;
 }
 @media (max-width: 768px) {
@@ -937,9 +935,9 @@ footer .logo img {
   }
 }
 .property_page h1.ultra-big-2 .smaller {
-  font-size: 70%;
+  font-size: 85%;
   display: block;
-  margin-top: -1.2rem;
+  margin-top: 1rem;
 }
 @media (max-width: 768px) {
   .property_page h1.ultra-big-2 .smaller {
