@@ -4988,7 +4988,7 @@ body[data-aos-easing=ease] [data-aos] {
 }
 .integration-logo-wrap .xb-shape .shape {
   position: absolute;
-  width: 110%;
+  width: 150%;
   height: 201px;
   filter: blur(25px);
   background: #00020f;
