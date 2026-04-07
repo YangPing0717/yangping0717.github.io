@@ -5000,6 +5000,8 @@ body[data-aos-easing=ease] [data-aos] {
 @media (max-width: 767px) {
   .integration-logo-wrap .xb-shape .shape--1 {
     left: -17px;
+    filter: blur(0px);
+    background: linear-gradient(0deg, rgba(2, 2, 2, 0) 0%, rgb(0, 0, 0) 50%);
   }
 }
 .integration-logo-wrap .xb-shape .shape--2 {
@@ -5009,6 +5011,8 @@ body[data-aos-easing=ease] [data-aos] {
 @media (max-width: 767px) {
   .integration-logo-wrap .xb-shape .shape--2 {
     left: -17px;
+    filter: blur(0px);
+    background: linear-gradient(180deg, rgba(2, 2, 2, 0) 0%, rgb(0, 0, 0) 50%);
   }
 }
 
@@ -5027,13 +5031,13 @@ body[data-aos-easing=ease] [data-aos] {
   padding: 20px 0 10px;
   text-align: center;
   letter-spacing: 0.4rem;
-  background: #0d1230;
+  background: #0f1422;
   border-radius: 10px 10px 0 0;
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
   margin-bottom: 0;
 }
 .comparison-list .xb-item--title.type2 {
-  background: #0a212b;
+  background: #071921;
 }
 .comparison-list .xb-item--list {
   position: relative;
@@ -12787,7 +12791,6 @@ body .mfp-wrap .mfp-container .mfp-content .mfp-close:hover::before, body .mfp-w
 @media (max-width: 767px) {
   .chatbot-btn {
     gap: 10px;
-    padding: 7px 7px 7px 10px;
   }
 }
 .chatbot-btn .btn-bg {

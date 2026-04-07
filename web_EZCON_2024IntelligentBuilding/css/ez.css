@@ -71,7 +71,11 @@ header *, .hover *, #mainmenu * {
 }
 .mobile_bg.type2 {
   object-fit: cover !important;
-  object-position: 75% 30px !important;
+}
+@media (max-width: 768px) {
+  .mobile_bg.type2 {
+    object-position: 75% 30px !important;
+  }
 }
 
 h1.big, .h1_big {
@@ -928,9 +932,9 @@ footer .logo img {
 }
 @media (max-width: 768px) {
   .property_page h1.ultra-big-2 .bigger_letter {
-    margin-right: 0.2rem;
-    font-size: 140%;
-    height: 72px;
+    margin-right: 0rem;
+    font-size: 130%;
+    height: 73px;
     vertical-align: bottom;
   }
 }
