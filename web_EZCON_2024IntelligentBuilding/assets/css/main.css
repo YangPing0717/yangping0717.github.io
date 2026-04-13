@@ -4907,6 +4907,12 @@ body[data-aos-easing=ease] [data-aos] {
     transform: scale(1);
   }
 }
+.integration-list.type2 li span.sub_ti {
+  background: #00020f;
+  transform: none;
+  border-radius: 1rem;
+  padding: 0 0.8rem 0.1rem;
+}
 
 .integration-logo {
   height: 140px;
