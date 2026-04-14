@@ -77,6 +77,14 @@ header *, .hover *, #mainmenu * {
     object-position: 75% 30px !important;
   }
 }
+.mobile_bg.type3 {
+  object-fit: cover !important;
+}
+@media (max-width: 768px) {
+  .mobile_bg.type3 {
+    object-position: 74% -138px !important;
+  }
+}
 
 h1.big, .h1_big {
   font-size: 5.2rem;
@@ -721,6 +729,9 @@ footer .logo img {
 .breadcrumb a:hover {
   color: var(--cyan-light-active);
 }
+.breadcrumb_wrap {
+  height: 50px;
+}
 
 .facility_page .facility_start {
   padding-top: 0 !important;
@@ -1057,6 +1068,11 @@ a.btn-main.big.type2 {
   padding: 8px 20px;
 }
 
+@media (max-width: 768px) {
+  .ezlife_page .ezlife_start {
+    padding-top: 3rem;
+  }
+}
 .ezlife_page .ezlife_start h1.ultra-big {
   line-height: 6.2rem;
   font-size: 6.2rem;
@@ -1067,8 +1083,8 @@ a.btn-main.big.type2 {
 }
 @media (max-width: 768px) {
   .ezlife_page .ezlife_start h1.ultra-big {
-    font-size: 3.4rem;
-    line-height: 4rem;
+    font-size: 12vw;
+    line-height: 3.4rem;
   }
 }
 .ezlife_page .ezlife_start h1.ultra-big span.text-line {
@@ -1087,7 +1103,20 @@ a.btn-main.big.type2 {
 .ezlife_page .ezlife_start h5.s2 {
   background: rgba(255, 255, 255, 0.2);
 }
+.ezlife_page .ezlife_start .ezlife_startContent {
+  padding-top: 6rem !important;
+}
 .ezlife_page h2 .bigger_letter {
   font-size: 4.8rem;
   line-height: 5rem;
+}
+@media (max-width: 768px) {
+  .ezlife_page h2 .bigger_letter {
+    font-size: 14vw;
+  }
+}
+@media (max-width: 768px) {
+  .ezlife_page .txt_scrolling {
+    padding: 5rem 0;
+  }
 }

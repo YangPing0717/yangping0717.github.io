@@ -12489,7 +12489,7 @@ body.dark-scheme::-webkit-scrollbar-track,
   direction: rtl;
 }
 
-#item-carousel-big {
+#item-carousel-big, #item-carousel-big-sec {
   padding: 0 25px;
 }
 
