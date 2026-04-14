@@ -1055,6 +1055,12 @@ footer .logo img {
   left: 50%;
   margin-left: 0;
 }
+@media (max-width: 768px) {
+  .c-item_title {
+    font-size: 13px;
+    padding: 0.4rem 0.8rem;
+  }
+}
 
 .chatbot-btn:hover {
   color: #fff;
@@ -1112,11 +1118,25 @@ a.btn-main.big.type2 {
 }
 @media (max-width: 768px) {
   .ezlife_page h2 .bigger_letter {
-    font-size: 14vw;
+    font-size: 12vw;
+    line-height: 4rem;
+  }
+}
+@media (max-width: 768px) {
+  .ezlife_page .blog {
+    padding-bottom: 25rem;
   }
 }
 @media (max-width: 768px) {
   .ezlife_page .txt_scrolling {
     padding: 5rem 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .bg_img_mobile {
+    background-position: left top !important;
+    background-size: 300% !important;
+    background-repeat: no-repeat;
   }
 }
