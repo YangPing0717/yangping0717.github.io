@@ -4928,7 +4928,7 @@ body[data-aos-easing=ease] [data-aos] {
 @media (max-width: 767px) {
   .integration-list.type2 li span:nth-child(3) {
     display: block;
-    margin-left: 4.6rem;
+    margin-left: 4.5rem;
     font-size: 50%;
   }
 }
@@ -7958,6 +7958,11 @@ img {
 .blog.type2 .d-carousel {
   overflow: hidden;
   padding: 2.5rem 0 4.5rem;
+}
+@media (max-width: 767px) {
+  .blog.type2 .d-carousel {
+    padding: 2.5rem 0 6.5rem;
+  }
 }
 .blog.type2 .owl-item .c-item_title {
   display: none;
