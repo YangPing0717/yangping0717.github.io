@@ -82,7 +82,7 @@ header *, .hover *, #mainmenu * {
 }
 @media (max-width: 768px) {
   .mobile_bg.type3 {
-    object-position: 74% -138px !important;
+    object-position: 75% -95px !important;
   }
 }
 
@@ -1059,6 +1059,8 @@ footer .logo img {
   .c-item_title {
     font-size: 13px;
     padding: 0.4rem 0.8rem;
+    max-width: 150%;
+    margin-bottom: -20%;
   }
 }
 
