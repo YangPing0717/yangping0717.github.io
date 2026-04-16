@@ -8172,6 +8172,11 @@ img {
   }
 }
 @media (max-width: 767px) {
+  .blog-slide-item.type2 .xb-item--title {
+    font-size: 1.8rem;
+  }
+}
+@media (max-width: 767px) {
   .blog-slide-item.type2 .xb-item--title, .blog-slide-item.type2 .xb-item--content {
     padding: 0 2rem 0 3.2rem;
   }
