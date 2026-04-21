@@ -1120,6 +1120,12 @@ a.btn-main.big.type2 {
     padding-top: 6rem !important;
   }
 }
+@media (max-width: 768px) {
+  .ezlife_page .ezlife_start .ezlife_startContent {
+    margin-top: 0;
+    padding-top: 6rem !important;
+  }
+}
 .ezlife_page h2 .bigger_letter {
   font-size: 4.8rem;
   line-height: 5rem;
