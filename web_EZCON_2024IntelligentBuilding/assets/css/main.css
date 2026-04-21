@@ -8186,6 +8186,27 @@ img {
     object-position: -240px 0;
   }
 }
+.blog-slide-item.type2 .xb-item--img {
+  position: relative;
+}
+.blog-slide-item.type2 .xb-item--img::before {
+  content: "情境示意圖";
+  color: rgba(255, 255, 255, 0.6);
+  background: rgba(0, 0, 0, 0.2);
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  font-size: 0.7rem;
+  z-index: 1;
+  border-radius: 20px;
+  line-height: 1.8;
+  padding: 0.1rem 0.5rem;
+}
+@media (max-width: 767px) {
+  .blog-slide-item.type2 .xb-item--img::before {
+    display: none;
+  }
+}
 @media (max-width: 767px) {
   .blog-slide-item.type2 .integration-list.type2 {
     padding: 0 2rem 2rem 3.2rem;
