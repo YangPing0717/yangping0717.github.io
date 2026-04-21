@@ -1112,7 +1112,13 @@ a.btn-main.big.type2 {
   background: rgba(255, 255, 255, 0.2);
 }
 .ezlife_page .ezlife_start .ezlife_startContent {
-  padding-top: 6rem !important;
+  margin-top: -6rem;
+}
+@media screen and (min-width: 1441px) {
+  .ezlife_page .ezlife_start .ezlife_startContent {
+    margin-top: 0;
+    padding-top: 6rem !important;
+  }
 }
 .ezlife_page h2 .bigger_letter {
   font-size: 4.8rem;
