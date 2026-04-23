@@ -1154,3 +1154,12 @@ a.btn-main.big.type2 {
     background-repeat: no-repeat;
   }
 }
+
+.bim_page .full {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  overflow: hidden;
+  background: rgba(0, 0, 0, 0.8);
+  position: absolute;
+}
