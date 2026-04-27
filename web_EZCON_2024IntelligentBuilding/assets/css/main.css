@@ -3463,6 +3463,9 @@ body[data-aos-easing=ease] [data-aos] {
   height: 100%;
   object-fit: cover;
 }
+.background_video.type2 {
+  opacity: 0.5;
+}
 
 .xb-industries-item {
   width: 259px;
@@ -4329,6 +4332,15 @@ body[data-aos-easing=ease] [data-aos] {
     width: 100%;
     padding: 40px 20px 45px;
   }
+}
+.xb-project-wrap_2.for_single_card .xb-project-item .xb-project-content {
+  left: -6rem;
+  position: absolute;
+}
+.xb-project-wrap_2.for_single_card .xb-project-item .xb-project-content .xb-item--inner {
+  width: 31rem;
+  padding: 50px 40px 50px 60px;
+  background: linear-gradient(209deg, rgba(255, 255, 255, 0.06) 0%, rgba(255, 255, 255, 0.06) 100%);
 }
 
 .project-meta {
@@ -5869,6 +5881,21 @@ body[data-aos-easing=ease] [data-aos] {
   .sec-title .title.with_img img {
     margin-left: -3rem;
   }
+}
+.sec-title .title.type2 {
+  line-height: 1.6;
+}
+.sec-title .title.type2 img {
+  width: 120px;
+  margin-top: -10px;
+  margin-left: -18px;
+  filter: drop-shadow(16px 16px 18px #ff0033) invert(355%) hue-rotate(35deg) brightness(2.9);
+}
+.sec-title .title .smaller {
+  display: block;
+  color: var(--color-white);
+  font-size: 3rem;
+  line-height: 1.1;
 }
 .sec-title .sub-title {
   font-size: 16px;
