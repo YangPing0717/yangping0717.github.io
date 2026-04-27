@@ -44,11 +44,15 @@
   -webkit-transform: translateZ(0);
   transform: translateZ(0);
 }
+.dark-scheme header #mainmenu li ul {
+  width: 220px;
+}
 
 #mainmenu li a.active, #mainmenu li a.active:hover {
   color: #ffffff !important;
   background: var(--darkblue-lighter) !important;
   font-weight: bold;
+  cursor: none;
 }
 
 header *, .hover *, #mainmenu * {
