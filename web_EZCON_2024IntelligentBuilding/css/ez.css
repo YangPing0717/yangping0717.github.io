@@ -45,6 +45,12 @@
   transform: translateZ(0);
 }
 
+#mainmenu li a.active, #mainmenu li a.active:hover {
+  color: #ffffff !important;
+  background: var(--darkblue-lighter) !important;
+  font-weight: bold;
+}
+
 header *, .hover *, #mainmenu * {
   transition: all 0.5s ease-in-out;
 }
