@@ -8227,7 +8227,7 @@ img {
   .blog-slide-item.type2 .xb-item--img img {
     height: 48%;
     object-fit: cover;
-    object-position: -270px 0;
+    object-position: -245px 0;
   }
 }
 @media (max-width: 767px) {

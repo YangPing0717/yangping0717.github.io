@@ -47,6 +47,11 @@
 .dark-scheme header #mainmenu li ul {
   width: 240px;
 }
+@media (max-width: 768px) {
+  .dark-scheme header #mainmenu li ul {
+    width: initial;
+  }
+}
 
 #mainmenu li a.active, #mainmenu li a.active:hover {
   color: #ffffff !important;
@@ -103,7 +108,7 @@ header *, .hover *, #mainmenu * {
 }
 @media (max-width: 768px) {
   .mobile_bg.type3 {
-    object-position: 75% -95px !important;
+    object-position: 72% -105px !important;
   }
 }
 
@@ -1165,6 +1170,11 @@ a.btn-main.big.type2 {
 @media (max-width: 768px) {
   .ezlife_page .txt_scrolling {
     padding: 5rem 0;
+  }
+}
+@media (max-width: 768px) {
+  .ezlife_page #ezlife-case .de-gradient-edge-bottom, .ezlife_page #ezlife-case .de-gradient-edge-top {
+    z-index: 0;
   }
 }
 
