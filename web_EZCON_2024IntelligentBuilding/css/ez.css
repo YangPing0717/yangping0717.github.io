@@ -111,6 +111,17 @@ header *, .hover *, #mainmenu * {
     object-position: 72% -105px !important;
   }
 }
+.mobile_bg.type4 {
+  opacity: 0.4;
+  height: 100vh;
+  width: 100vw;
+}
+@media screen and (min-width: 1441px) {
+  .mobile_bg.type4 {
+    height: 100vh;
+    width: 100vw;
+  }
+}
 
 h1.big, .h1_big {
   font-size: 5.2rem;
@@ -1189,11 +1200,101 @@ a.btn-main.big.type2 {
 .bim_page {
   padding-top: 0;
 }
+.bim_page .de-gradient-edge-bottom {
+  height: 40%;
+  background: linear-gradient(0deg, rgb(0, 0, 0) 20%, rgba(0, 0, 0, 0) 100%);
+}
+@media (max-width: 768px) {
+  .bim_page .de-gradient-edge-bottom {
+    height: 55%;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.7) 65%, rgba(0, 0, 0, 0) 100%);
+  }
+}
+.bim_page h1.ultra-big-2 {
+  font-size: 7.2rem;
+  text-shadow: 0 10px 20px #000, 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+@media (max-width: 768px) {
+  .bim_page h1.ultra-big-2 {
+    font-size: 13.2vw;
+    line-height: 4.6rem;
+  }
+}
+.bim_page h1.ultra-big-2 .bigger_letter {
+  font-size: 140%;
+  vertical-align: middle;
+  height: 136px;
+  text-shadow: none;
+}
+@media (max-width: 768px) {
+  .bim_page h1.ultra-big-2 .bigger_letter {
+    margin-right: 0.2rem;
+    font-size: 150%;
+    height: 73px;
+    vertical-align: bottom;
+  }
+}
+.bim_page h1.ultra-big-2 .smaller {
+  font-size: 85%;
+  display: block;
+  margin-top: 1rem;
+}
+@media (max-width: 768px) {
+  .bim_page h1.ultra-big-2 .smaller {
+    font-size: 11vw;
+    margin-top: -1rem;
+  }
+}
+.bim_page h5.s2 {
+  background: var(--darkblue-light);
+}
+.bim_page h5.s2 i {
+  color: var(--cyan-light-active);
+}
+@media (max-width: 768px) {
+  .bim_page h5.s2 {
+    margin-top: 8px !important;
+  }
+}
 .bim_page .full {
   width: 100vw;
   height: 100vh;
   margin: 0;
   overflow: hidden;
-  background: rgba(0, 0, 0, 0.8);
+  background: rgba(0, 0, 0, 0.5);
   position: absolute;
+}
+.bim_page .full canvas #logo {
+  display: none !important;
+}
+.bim_page .full .de-gradient-edge-bottom {
+  height: 50%;
+  background: linear-gradient(0deg, rgb(0, 0, 0) 40%, rgba(0, 0, 0, 0) 100%) !important;
+}
+@media screen and (min-width: 1441px) {
+  .bim_page .full .de-gradient-edge-bottom {
+    display: none;
+  }
+}
+.bim_page .bim_content {
+  padding-top: 0;
+  margin-top: 0;
+  pointer-events: none !important;
+}
+@media screen and (min-width: 1441px) {
+  .bim_page .bim_content {
+    padding-top: 180px !important;
+  }
+}
+@media (max-width: 768px) {
+  .bim_page .bim_content {
+    margin-top: 0;
+    padding-top: 6rem !important;
+  }
+}
+.bim_page .bim_content .button {
+  pointer-events: initial;
+}
+.bim_page .bim_content h2, .bim_page .bim_content h3 {
+  text-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), 2px 2px 2px rgba(0, 0, 0, 0.5);
 }
