@@ -4556,7 +4556,7 @@ body[data-aos-easing=ease] [data-aos] {
   overflow: hidden;
   position: relative;
   margin-right: 63px;
-  padding: 20px 20px 25px;
+  padding: 18px 18px 24px;
   text-align: center;
   border-radius: 10px;
   -webkit-border-radius: 10px;
@@ -4565,7 +4565,7 @@ body[data-aos-easing=ease] [data-aos] {
   -o-border-radius: 10px;
   backdrop-filter: blur(40px);
   box-shadow: 0 4px 24px -1px rgba(28, 9, 61, 0.2);
-  background: linear-gradient(209deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.05) 100%);
+  background: linear-gradient(315deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.12) 100%);
 }
 @media (max-width: 991px) {
   .xb-process-step {
@@ -4600,16 +4600,18 @@ body[data-aos-easing=ease] [data-aos] {
   top: 51%;
   transform: translate(-50%, -50%);
   font-weight: 400;
-  font-size: 30px;
-  letter-spacing: -0.04em;
+  font-family: "Prompt", Helvetica, Arial, sans-serif;
+  font-size: 5.6rem;
+  font-weight: bolder;
 }
 .xb-process-step.active {
   display: block;
 }
 .xb-process-step .step-name {
-  font-size: 22px;
+  font-size: 1.7rem;
   padding-top: 30px;
   letter-spacing: -0.04em;
+  line-height: 2.1rem;
 }
 
 .xb-process-left-container {
@@ -4636,6 +4638,9 @@ body[data-aos-easing=ease] [data-aos] {
   .xb-process-right-container {
     padding-bottom: 150px;
   }
+}
+.xb-process-right-container.type2 {
+  text-align: start;
 }
 
 .process-sction {
@@ -4686,6 +4691,77 @@ body[data-aos-easing=ease] [data-aos] {
   .process-title .xb-heading-btn {
     transform: translate(15px, 0px);
   }
+}
+
+.xb-process-item {
+  padding: 20px 20px 25px;
+  margin-bottom: 30px;
+}
+.xb-process-item .xb-img {
+  position: relative;
+  margin-bottom: 25px;
+}
+.xb-process-item .xb-img::after {
+  content: "BA APP";
+  font-size: 5.8rem;
+  color: transparent !important;
+  -webkit-text-stroke: 0.4px #ffffff;
+  line-height: 0;
+  font-weight: 900;
+  position: absolute;
+  top: 88%;
+  left: -12%;
+  letter-spacing: -6px;
+}
+.xb-process-item .xb-img.txt2::after {
+  content: "EZNotify APP";
+}
+.xb-process-item .xb-img.txt3::after {
+  content: "EMS";
+}
+.xb-process-item .xb-img.img_note_video {
+  position: relative;
+}
+.xb-process-item .xb-img.img_note_video::before {
+  content: "熱感攝影機與充電樁火災預警測試";
+  font-size: 0.9rem;
+  color: #000000;
+  font-weight: 700;
+  line-height: 0;
+  position: absolute;
+  top: 99%;
+  right: 2%;
+  border-radius: 30px;
+  z-index: 100;
+  width: fit-content;
+  height: 20px;
+  padding: 12px 14px;
+  background: linear-gradient(270deg, rgba(0, 255, 177, 0.8) 0%, rgba(0, 255, 177, 0.3) 100%);
+}
+.xb-process-item .xb-img.img_note_ems {
+  position: relative;
+}
+.xb-process-item .xb-img.img_note_ems::before {
+  content: "透過數據即時顯示充電樁狀態，便於管理、維護和節能";
+  font-size: 0.9rem;
+  color: #000000;
+  font-weight: 700;
+  line-height: 0;
+  position: absolute;
+  top: 90.5%;
+  left: 12%;
+  border-radius: 30px;
+  z-index: 100;
+  width: fit-content;
+  height: 20px;
+  padding: 12px 14px;
+  background: linear-gradient(270deg, rgba(0, 255, 177, 0.8) 0%, rgba(0, 255, 177, 0.3) 100%);
+}
+.xb-process-item .xb-img img {
+  filter: drop-shadow(0px 0px 4px rgba(90, 255, 225, 0.6));
+}
+.xb-process-item .content {
+  padding: 0 20px;
 }
 
 .pricing-list li {
@@ -4944,6 +5020,13 @@ body[data-aos-easing=ease] [data-aos] {
   transform: none;
   border-radius: 1rem;
   padding: 0 0.8rem 0.1rem;
+}
+.integration-list.type2 li span.sub_ti_2 {
+  background: rgba(0, 255, 153, 0.1);
+  transform: none;
+  border-radius: 1rem;
+  padding: 0 0.8rem 0.1rem;
+  color: var(--color-primary);
 }
 .integration-list.type2 li span:nth-child(3) {
   font-size: 0.8rem;
@@ -5991,6 +6074,15 @@ body[data-aos-easing=ease] [data-aos] {
   width: 12px;
   transform: translateY(-50%);
   background: var(--color-primary);
+}
+.sec-title--two .sub-title.type3 {
+  font-size: 1.2rem;
+}
+.sec-title--two .sub-title.type3 img.before_sty {
+  width: 8rem;
+  height: 2.8rem;
+  object-fit: cover;
+  margin: 0 -12px 0 -20px;
 }
 
 .sec-title-center .sub-title {
