@@ -1492,6 +1492,26 @@ a.btn-main.big.type2 {
     margin-right: -17px;
   }
 }
+.bim_page_start .txt_direction {
+  position: absolute;
+  right: 1rem;
+  bottom: calc(100vh - 49%);
+  font-size: 0.8rem;
+  color: #a5a5a5;
+  background-color: #000000;
+  z-index: 10;
+  line-height: 1.3rem;
+  padding: 8px 12px;
+}
+.bim_page_start .txt_direction span {
+  color: var(--cyan-light-active);
+}
+@media screen and (min-width: 1441px) {
+  .bim_page_start .txt_direction {
+    right: 2rem;
+    bottom: calc(100vh - 84%);
+  }
+}
 
 .bim_feat .sec-title .title {
   display: block;
