@@ -4604,6 +4604,11 @@ body[data-aos-easing=ease] [data-aos] {
   font-size: 5.6rem;
   font-weight: bolder;
 }
+@media (max-width: 767px) {
+  .xb-process-step .xb-img .step-number {
+    line-height: 5rem;
+  }
+}
 .xb-process-step.active {
   display: block;
 }
@@ -6378,6 +6383,7 @@ body[data-aos-easing=ease] [data-aos] {
     width: 80%;
     left: 0px;
     top: 20px;
+    height: 48px;
   }
 }
 @media only screen and (min-width: 576px) and (max-width: 767px) {

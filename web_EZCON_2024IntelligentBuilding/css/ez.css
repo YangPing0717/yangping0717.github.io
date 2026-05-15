@@ -1228,6 +1228,9 @@ footer .logo img {
   filter: brightness(2);
   margin: auto;
 }
+.video-container video.type3 {
+  filter: none;
+}
 
 .chatbot-btn:hover {
   color: #fff;
@@ -1402,6 +1405,11 @@ a.btn-main.big.type2 {
   background: rgba(0, 0, 0, 0.5);
   position: absolute;
 }
+@media (max-width: 768px) {
+  .bim_page_start .full spline-viewer {
+    height: calc(100vh - 80px);
+  }
+}
 .bim_page_start .full canvas #logo {
   display: none !important;
 }
@@ -1510,6 +1518,11 @@ a.btn-main.big.type2 {
   .bim_page_start .txt_direction {
     right: 2rem;
     bottom: calc(100vh - 84%);
+  }
+}
+@media (max-width: 768px) {
+  .bim_page_start .txt_direction {
+    display: none;
   }
 }
 
