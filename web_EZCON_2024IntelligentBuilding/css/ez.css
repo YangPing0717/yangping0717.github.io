@@ -1108,6 +1108,11 @@ footer .logo img {
 .gallery_type2 {
   padding-bottom: 150px;
 }
+@media (max-width: 768px) {
+  .gallery_type2 {
+    padding-bottom: 320px;
+  }
+}
 .gallery_type2 .c-item_info .c-item_title {
   font-size: 20px;
   border-radius: 3rem;
@@ -1151,8 +1156,8 @@ footer .logo img {
 }
 @media (max-width: 768px) {
   .gallery_type2 .c-item_info .c-item_discr {
-    font-size: 65%;
-    line-height: 1.5;
+    font-size: 60%;
+    line-height: 1.7;
   }
 }
 .gallery_type2 .c-item_info .light {
@@ -1181,7 +1186,7 @@ footer .logo img {
 }
 @media (max-width: 768px) {
   .gallery_type2 .owl-carousel.owl-center .owl-item.active.center {
-    transform: scale(1.6);
+    transform: scale(2);
   }
 }
 .gallery_type2 .d-arrow-left, .gallery_type2 .d-arrow-right {
@@ -1545,7 +1550,7 @@ a.btn-main.big.type2 {
 }
 @media (max-width: 768px) {
   .bim_feat .sec-title .title .bigger {
-    font-size: 48px;
+    font-size: 46px;
   }
 }
 
