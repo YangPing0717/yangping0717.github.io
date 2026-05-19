@@ -1415,7 +1415,7 @@ a.btn-main.big.type2 {
     height: calc(100vh - 80px);
   }
 }
-.bim_page_start .full canvas #logo {
+.bim_page_start .full spline-viewer #container #logo {
   display: none !important;
 }
 .bim_page_start .full .de-gradient-edge-bottom {
@@ -1557,6 +1557,12 @@ a.btn-main.big.type2 {
 .bim_score h4.bigger {
   font-size: 1.8rem;
   line-height: 1.2;
+}
+@media (max-width: 768px) {
+  .bim_score h4.bigger {
+    font-size: 1.4rem;
+    line-height: 1.4;
+  }
 }
 
 .bim_process .sec-title {
