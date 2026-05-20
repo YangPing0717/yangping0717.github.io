@@ -4737,10 +4737,25 @@ body[data-aos-easing=ease] [data-aos] {
 }
 .xb-process-item .xb-img.txt2::after {
   content: "EZNotify APP";
+  min-width: 100vw;
+}
+@media (max-width: 767px) {
+  .xb-process-item .xb-img.txt2::after {
+    font-size: 3.6rem;
+    top: -11%;
+    left: -1%;
+  }
 }
 .xb-process-item .xb-img.txt3::after {
   content: "EMS";
   top: 92%;
+}
+@media (max-width: 767px) {
+  .xb-process-item .xb-img.txt3::after {
+    font-size: 3.6rem;
+    top: -6%;
+    left: -1%;
+  }
 }
 .xb-process-item .xb-img.img_note_video {
   position: relative;
