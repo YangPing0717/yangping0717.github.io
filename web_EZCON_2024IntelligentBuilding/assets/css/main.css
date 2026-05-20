@@ -4394,6 +4394,7 @@ body[data-aos-easing=ease] [data-aos] {
 
 .ai-project-item {
   z-index: 1;
+  background: #191919;
 }
 @media (max-width: 767px) {
   .ai-project-item {
@@ -4716,15 +4717,16 @@ body[data-aos-easing=ease] [data-aos] {
 }
 .xb-process-item .xb-img::after {
   content: "BA APP";
+  font-family: "Prompt", Helvetica, Arial, sans-serif;
   font-size: 5.8rem;
   color: transparent !important;
   -webkit-text-stroke: 0.4px #ffffff;
   line-height: 0;
-  font-weight: 900;
+  font-weight: 700;
   position: absolute;
   top: 88%;
-  left: -12%;
-  letter-spacing: -6px;
+  left: -10%;
+  letter-spacing: -2px;
 }
 @media (max-width: 767px) {
   .xb-process-item .xb-img::after {
@@ -4738,6 +4740,7 @@ body[data-aos-easing=ease] [data-aos] {
 }
 .xb-process-item .xb-img.txt3::after {
   content: "EMS";
+  top: 92%;
 }
 .xb-process-item .xb-img.img_note_video {
   position: relative;

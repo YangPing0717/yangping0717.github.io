@@ -30,9 +30,14 @@
 }
 @media (max-width: 767px) {
   .main-container {
-    transform: scale(0.53) !important;
+    transform: scale(0.55) !important;
     transform-origin: top;
     margin: 0 auto -6rem;
+  }
+}
+@media (max-width: 375px) {
+  .main-container {
+    transform: scale(0.47) !important;
   }
 }
 
