@@ -289,6 +289,39 @@ header .logo-main {
   width: 148px;
 }
 
+.float-text {
+  width: 20px;
+  position: fixed;
+  z-index: 1000;
+  margin-left: 30px;
+  text-align: center;
+  letter-spacing: 2px;
+  font-size: 12px;
+  top: 50%;
+  left: 15px;
+  transform: translate(-50%, -50%);
+}
+@media (max-width: 768px) {
+  .float-text {
+    margin-left: 1.8rem;
+    top: 75%;
+    left: 0;
+  }
+}
+.float-text a {
+  color: #ffffff;
+}
+.float-text span {
+  margin-left: -5px;
+  margin-top: 20px;
+  writing-mode: vertical-rl;
+  letter-spacing: 0.75px;
+  -webkit-transform: rotate(-180deg);
+  -ms-transform: rotate(-180deg);
+  transform: rotate(-180deg);
+  color: #222;
+}
+
 .wm-carousel {
   padding-top: 75vh;
 }
@@ -1084,6 +1117,20 @@ footer .logo img {
 }
 @media (max-width: 768px) {
   .img-fluid.type2 {
+    max-width: 20rem;
+    margin-left: -9rem;
+    width: 260px;
+    margin-top: -4rem;
+  }
+}
+
+.img-fluid.type3 {
+  width: 100%;
+  object-fit: cover;
+  height: 150px;
+}
+@media (max-width: 768px) {
+  .img-fluid.type3 {
     max-width: 20rem;
     margin-left: -9rem;
     width: 260px;
