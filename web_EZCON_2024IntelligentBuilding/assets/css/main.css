@@ -4514,10 +4514,15 @@ body[data-aos-easing=ease] [data-aos] {
   color: #01ff97;
 }
 .ai-project-content .content.text-end {
-  max-width: 240px;
+  max-width: 220px;
   text-align: start !important;
   margin-bottom: 0;
   position: relative;
+}
+@media screen and (min-width: 1441px) {
+  .ai-project-content .content.text-end {
+    max-width: 240px;
+  }
 }
 .ai-project-content .content.text-end::before {
   content: "\f138";
@@ -4527,10 +4532,16 @@ body[data-aos-easing=ease] [data-aos] {
   font-size: 5.8rem;
   color: transparent !important;
   -webkit-text-stroke: 0.5px var(--color-primary);
-  top: -5rem;
-  left: -4rem;
+  top: -6.5rem;
+  left: -2rem;
   text-shadow: 0 0 72px rgba(0, 255, 213, 0.75);
   z-index: -1;
+}
+@media screen and (min-width: 1441px) {
+  .ai-project-content .content.text-end::before {
+    top: -5rem;
+    left: -4rem;
+  }
 }
 .ai-project-content .content i.txt_icon {
   font-size: 1.2rem !important;
@@ -4580,7 +4591,7 @@ body[data-aos-easing=ease] [data-aos] {
   left: 0;
   z-index: 2;
   bottom: -30px;
-  background: var(--color-secondary);
+  background: transparent;
 }
 
 .wrapper_ty2 {
