@@ -4517,9 +4517,56 @@ body[data-aos-easing=ease] [data-aos] {
   max-width: 240px;
   text-align: start !important;
   margin-bottom: 0;
+  position: relative;
+}
+.ai-project-content .content.text-end::before {
+  content: "\f138";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  position: absolute;
+  font-size: 5.8rem;
+  color: transparent !important;
+  -webkit-text-stroke: 0.5px var(--color-primary);
+  top: -5rem;
+  left: -4rem;
+  text-shadow: 0 0 72px rgba(0, 255, 213, 0.75);
+  z-index: -1;
 }
 .ai-project-content .content i.txt_icon {
   font-size: 1.2rem !important;
+}
+.ai-project-content .content .widget {
+  padding-bottom: 0;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
+}
+@media (max-width: 767px) {
+  .ai-project-content .content .widget {
+    margin-bottom: 1.6rem;
+  }
+}
+.ai-project-content .content .widget ul {
+  margin-top: 0;
+}
+@media (max-width: 767px) {
+  .ai-project-content .content .widget ul {
+    margin-top: 0;
+    text-align: center;
+  }
+}
+.ai-project-content .content .widget ul li {
+  margin: 3px 2px;
+}
+@media (max-width: 767px) {
+  .ai-project-content .content .widget ul li {
+    margin: 3px 4px 8px;
+  }
+}
+.ai-project-content .content .widget ul li a {
+  cursor: none;
 }
 
 .ai-portfolio-wrap {
