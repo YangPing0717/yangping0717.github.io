@@ -822,7 +822,7 @@ footer .logo img {
 }
 @media (max-width: 768px) {
   .facility_page .facility_start h1.ultra-big {
-    font-size: 3.4rem;
+    font-size: 3.2rem;
     line-height: 4rem;
   }
 }
@@ -836,7 +836,7 @@ footer .logo img {
 }
 @media (max-width: 768px) {
   .facility_page .facility_start h1.ultra-big .smaller {
-    font-size: 7.8vw;
+    font-size: 7.4vw;
   }
 }
 .facility_page .facility_start .facility_startBox {
@@ -1132,9 +1132,10 @@ footer .logo img {
 @media (max-width: 768px) {
   .img-fluid.type3 {
     max-width: 20rem;
-    margin-left: -9rem;
     width: 260px;
-    margin-top: -4rem;
+    margin-top: -3rem;
+    height: 180px;
+    margin-left: 5rem;
   }
 }
 
