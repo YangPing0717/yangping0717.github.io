@@ -4461,6 +4461,11 @@ body[data-aos-easing=ease] [data-aos] {
     background: rgba(0, 2, 15, 0);
   }
 }
+@media (max-width: 767px) {
+  .ai-project-item:before {
+    display: none;
+  }
+}
 .ai-project-item .ai-portfolio-thumb {
   position: relative;
 }
