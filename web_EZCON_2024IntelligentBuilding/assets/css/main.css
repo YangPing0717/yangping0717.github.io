@@ -4233,7 +4233,7 @@ body[data-aos-easing=ease] [data-aos] {
 @media (max-width: 767px) {
   .custom-sec-title .title.type3 .big_num {
     position: absolute !important;
-    left: 3.2rem !important;
+    left: 3.8rem !important;
     top: 8.8rem !important;
   }
 }
@@ -4244,7 +4244,7 @@ body[data-aos-easing=ease] [data-aos] {
   .custom-sec-title .title.type3 b {
     display: block;
     font-weight: 700;
-    margin-left: 3.6rem;
+    margin-left: 4rem;
     font-size: 32px;
   }
 }
