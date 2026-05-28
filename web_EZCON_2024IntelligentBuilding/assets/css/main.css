@@ -4458,7 +4458,6 @@ body[data-aos-easing=ease] [data-aos] {
 @media (max-width: 1199px) {
   .ai-project-item:before {
     opacity: 1;
-    background: rgba(0, 2, 15, 0);
   }
 }
 @media (max-width: 767px) {
@@ -4478,6 +4477,8 @@ body[data-aos-easing=ease] [data-aos] {
 @media (max-width: 767px) {
   .ai-project-item .ai-portfolio-thumb img {
     min-height: fit-content;
+    height: auto;
+    object-fit: contain;
   }
 }
 .ai-project-item .ai-category {
@@ -4666,7 +4667,7 @@ body[data-aos-easing=ease] [data-aos] {
   left: 0;
   z-index: 2;
   bottom: -30px;
-  background: transparent;
+  background: var(--color-secondary);
 }
 
 .wrapper_ty2 {
