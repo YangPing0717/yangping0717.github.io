@@ -4233,8 +4233,9 @@ body[data-aos-easing=ease] [data-aos] {
 @media (max-width: 767px) {
   .custom-sec-title .title.type3 .big_num {
     position: absolute !important;
-    left: 3.8rem !important;
-    top: 8.8rem !important;
+    left: 2rem !important;
+    top: 9.4rem !important;
+    font-size: 7rem;
   }
 }
 .custom-sec-title .title.type3 b {
@@ -4244,17 +4245,18 @@ body[data-aos-easing=ease] [data-aos] {
   .custom-sec-title .title.type3 b {
     display: block;
     font-weight: 700;
-    margin-left: 4rem;
+    margin-left: 6.4rem;
     font-size: 32px;
+    text-align: left;
   }
 }
 @media (max-width: 767px) {
   .custom-sec-title .title.type3 .round-img {
-    margin-left: -2.2rem;
+    margin-left: -1rem;
     display: block;
     margin-bottom: 0.6rem;
     width: 20rem;
-    margin-right: -3rem;
+    margin-right: -1rem;
   }
 }
 .custom-sec-title .sub-title {
@@ -4441,7 +4443,6 @@ body[data-aos-easing=ease] [data-aos] {
 @media (max-width: 767px) {
   .ai-project-item {
     margin-bottom: 30px;
-    margin-top: 10rem;
   }
 }
 .ai-project-item:before {
@@ -4667,7 +4668,7 @@ body[data-aos-easing=ease] [data-aos] {
   left: 0;
   z-index: 2;
   bottom: -30px;
-  background: var(--color-secondary);
+  background: none;
 }
 
 .wrapper_ty2 {
