@@ -1157,6 +1157,9 @@ footer .logo img {
     margin-top: 1rem;
   }
 }
+.img-fluid.with_paragr.float_right {
+  float: right;
+}
 .img-fluid.with_paragr.wild {
   width: 250px;
 }
