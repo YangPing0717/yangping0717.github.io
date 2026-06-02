@@ -4236,6 +4236,7 @@ body[data-aos-easing=ease] [data-aos] {
     left: 2rem !important;
     top: 9.4rem !important;
     font-size: 7rem;
+    text-align: right;
   }
 }
 .custom-sec-title .title.type3 b {
