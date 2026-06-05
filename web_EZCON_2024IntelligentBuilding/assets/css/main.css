@@ -4399,6 +4399,33 @@ body[data-aos-easing=ease] [data-aos] {
     padding: 3rem 1rem 3.5rem 2rem;
   }
 }
+.xb-project-wrap_2.for_certifi {
+  margin-top: 7.2rem;
+}
+.xb-project-wrap_2.for_certifi .xb-project-item .xb-project-content {
+  position: absolute;
+  top: -8rem;
+}
+@media (max-width: 767px) {
+  .xb-project-wrap_2.for_certifi .xb-project-item .xb-project-content {
+    left: 0;
+    position: relative;
+  }
+}
+.xb-project-wrap_2.for_certifi .xb-project-item .xb-project-content .xb-item--inner {
+  width: 52rem;
+  padding: 50px 40px 50px 60px;
+  background: linear-gradient(209deg, rgba(255, 255, 255, 0.06) 0%, rgba(255, 255, 255, 0.06) 100%);
+}
+@media (max-width: 767px) {
+  .xb-project-wrap_2.for_certifi .xb-project-item .xb-project-content .xb-item--inner {
+    width: auto;
+    padding: 3rem 1rem 3.5rem 2rem;
+  }
+}
+.xb-project-wrap_2.for_certifi .xb-project-item .xb-project-content .xb-item--inner p {
+  width: 70%;
+}
 
 .project-meta {
   gap: 25px;
@@ -6281,6 +6308,28 @@ body[data-aos-easing=ease] [data-aos] {
 }
 @media (max-width: 767px) {
   .sec-title .title.type2 img {
+    margin-top: -4.2rem;
+    margin-bottom: -2.8rem;
+  }
+}
+.sec-title .title.type3 {
+  font-size: 3.2rem;
+  line-height: 1.6;
+}
+@media (max-width: 767px) {
+  .sec-title .title.type3 {
+    font-size: 3rem;
+    line-height: 1.4;
+  }
+}
+.sec-title .title.type3 img {
+  width: 120px;
+  margin-top: -10px;
+  margin-left: -18px;
+  filter: drop-shadow(16px 16px 18px #ff0033) invert(355%) hue-rotate(35deg) brightness(3);
+}
+@media (max-width: 767px) {
+  .sec-title .title.type3 img {
     margin-top: -4.2rem;
     margin-bottom: -2.8rem;
   }
@@ -13008,7 +13057,6 @@ body .mfp-wrap .mfp-container .mfp-content .mfp-close:hover::before, body .mfp-w
 .hero-content .title {
   font-size: 72px;
   line-height: 90px;
-  letter-spacing: -0.07em;
   color: var(--color-white);
   font-family: var(--font-heading);
 }
@@ -13037,9 +13085,10 @@ body .mfp-wrap .mfp-container .mfp-content .mfp-close:hover::before, body .mfp-w
   }
 }
 .hero-content .sub-title {
+  color: rgba(255, 255, 255, 0.7);
   font-size: 20px;
   max-width: 678px;
-  line-height: 30px;
+  line-height: 36px;
   margin: 6px 0 32px;
   display: inline-block;
 }
@@ -13485,6 +13534,10 @@ body .mfp-wrap .mfp-container .mfp-content .mfp-close:hover::before, body .mfp-w
   .ai-marketing-hero {
     padding: 15px;
   }
+}
+
+.thm-btn.arrow_rotate {
+  transform: rotate(40deg);
 }
 
 .thm-btn {

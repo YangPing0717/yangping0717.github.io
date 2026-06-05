@@ -1700,3 +1700,30 @@ a.btn-main.big.type2 {
   top: 6rem;
   width: 3rem;
 }
+
+.certifi_startBox .mask {
+  background: rgba(0, 0, 0, 0.6);
+  height: 100%;
+}
+.certifi_startBox .container {
+  padding-top: 195px;
+}
+.certifi_startBox .xb-feature-item .xb-item--title {
+  font-size: 1.6rem;
+  margin: 40px 0 18px;
+  letter-spacing: 0;
+}
+.certifi_startBox .xb-feature-item a {
+  height: 62px;
+  width: 62px;
+  transform: rotate(40deg);
+}
+.certifi_startBox .xb-feature-item:hover a.xb-item--icon {
+  background: var(--color-primary);
+}
+.certifi_startBox .xb-feature-item:hover a.xb-item--icon svg rect {
+  fill: var(--color-secondary);
+}
+.certifi_startBox .de-gradient-edge-bottom {
+  z-index: -1;
+}
