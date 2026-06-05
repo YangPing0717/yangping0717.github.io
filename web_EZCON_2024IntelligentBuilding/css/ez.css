@@ -1705,6 +1705,11 @@ a.btn-main.big.type2 {
   background: rgba(0, 0, 0, 0.6);
   height: 100%;
 }
+@media (max-width: 768px) {
+  .certifi_startBox .mask {
+    background: rgba(0, 0, 0, 0.7);
+  }
+}
 .certifi_startBox .container {
   padding-top: 195px;
 }
@@ -1712,6 +1717,12 @@ a.btn-main.big.type2 {
   font-size: 1.6rem;
   margin: 40px 0 18px;
   letter-spacing: 0;
+}
+@media (max-width: 768px) {
+  .certifi_startBox .xb-feature-item .xb-item--title {
+    line-height: 1.4;
+    margin: 10px 0 12px;
+  }
 }
 .certifi_startBox .xb-feature-item a {
   height: 62px;
@@ -1726,4 +1737,15 @@ a.btn-main.big.type2 {
 }
 .certifi_startBox .de-gradient-edge-bottom {
   z-index: -1;
+}
+
+@media (max-width: 768px) {
+  .certifi_startBox[data-video-src*="mp4:video"] video {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* 維持正常比例 */
+    /* 調整影片在 div 內的位置：預設是置中 (50% 50%) */
+    object-position: center top; /* 讓影片靠上方對齊，黑邊留給下方 */
+    /* object-position: right bottom; 也可以設定靠右下，或給具體百分比 */
+  }
 }
