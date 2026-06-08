@@ -6269,7 +6269,7 @@ body[data-aos-easing=ease] [data-aos] {
   font-size: 62px;
   line-height: 1.5;
   color: var(--color-heading);
-  font-family: var(--font-heading);
+  font-family: var(--title-font);
 }
 @media (max-width: 1199px) {
   .sec-title .title {
