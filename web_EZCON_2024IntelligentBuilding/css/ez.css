@@ -1754,3 +1754,9 @@ a.btn-main.big.type2 {
   font-size: 4.8rem;
   line-height: 5rem;
 }
+@media (max-width: 768px) {
+  .certifi_end h2 .bigger_letter {
+    font-size: 12vw;
+    line-height: 3rem;
+  }
+}
