@@ -1760,3 +1760,14 @@ a.btn-main.big.type2 {
     line-height: 3rem;
   }
 }
+.certifi_end .block_btns {
+  margin: 1.6rem 0;
+}
+@media (max-width: 768px) {
+  .certifi_end .block_btns {
+    margin: 1.8rem 0 2.6rem;
+  }
+  .certifi_end .block_btns .xb-item---btn:first-child .thm-btn {
+    margin-bottom: 1rem;
+  }
+}
