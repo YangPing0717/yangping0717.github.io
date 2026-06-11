@@ -68,8 +68,8 @@ Table of content:
 
 * {
   --number-font: "Noto Sans TC", "Prompt", Helvetica, Arial, sans-serif;
-  --title-font: "Noto Sans TC", sans-serif;
-  /* --title-font: "Noto Sans TC", Helvetica, Arial, sans-serif; */
+  /* --title-font: "Noto Sans TC", sans-serif; */
+  --title-font: "Noto Sans TC", Helvetica, Arial, sans-serif;
   --body-font: "Noto Sans TC", "Manrope", Helvetica, Arial, sans-serif; 
   --border-default: solid 1px rgba(30, 30, 30, 1);
   --bg-color-even: #E8E8E8;

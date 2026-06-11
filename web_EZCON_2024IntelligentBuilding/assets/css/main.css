@@ -2,7 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
 :root {
   --font-body: "DM Sans", sans-serif;
-  --font-heading: 'Noto Sans TC';
+  --font-heading: "Noto Sans TC", Helvetica, Arial, sans-serif;
   --color-primary: #00ff97;
   --color-secondary: #00020f;
   --color-heading: #fff;
@@ -6756,10 +6756,12 @@ body[data-aos-easing=ease] [data-aos] {
 }
 @media (max-width: 767px) {
   .about-sec-title .title.type3 span:nth-child(5) {
-    width: 80%;
+    width: 100%;
     left: 0px;
     top: 20px;
-    height: 48px;
+    height: 52px;
+    border: 1px solid #0066ff;
+    filter: none;
   }
 }
 @media only screen and (min-width: 576px) and (max-width: 767px) {
@@ -6769,6 +6771,7 @@ body[data-aos-easing=ease] [data-aos] {
 }
 .about-sec-title .title.type3 span:nth-child(5) img {
   width: 100%;
+  object-position: 0px -25px;
 }
 .about-sec-title .title.type3 .discrip {
   font-size: 1.1rem;

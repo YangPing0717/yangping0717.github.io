@@ -1275,6 +1275,14 @@ footer .logo img {
   .gallery_type2 .owl-carousel.owl-center .owl-item.active.center {
     transform: scale(2);
   }
+  .gallery_type2 .owl-carousel.owl-center .owl-item.active.center img {
+    /* 1. 強制啟動 GPU 硬體加速，有時能逼導瀏覽器重新渲染像素 */
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+    /* 2. 改善手機上的影像縮放平滑度（演算法） */
+    image-rendering: -webkit-optimize-contrast; /* Safari 專用，提高對比清晰度 */
+    image-rendering: crisp-edges;
+  }
 }
 .gallery_type2 .d-arrow-left, .gallery_type2 .d-arrow-right {
   width: 50px;
