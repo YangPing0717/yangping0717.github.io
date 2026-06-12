@@ -45,7 +45,7 @@
   transform: translateZ(0);
 }
 .dark-scheme header #mainmenu li ul {
-  width: 240px;
+  width: 256px;
 }
 @media (max-width: 768px) {
   .dark-scheme header #mainmenu li ul {

@@ -45,7 +45,7 @@
   text-transform: capitalize;
   opacity: 0;
   visibility: hidden;
-  width: 11rem !important;
+  width: 12rem !important;
   text-align: right;
   transition: left 0.25s cubic-bezier(0.455, 0.03, 0.515, 0.955), opacity 0.25s cubic-bezier(0.455, 0.03, 0.515, 0.955), visibility 0.25s cubic-bezier(0.455, 0.03, 0.515, 0.955);
 }
@@ -70,7 +70,7 @@
   transition: width 0.15s cubic-bezier(0.455, 0.03, 0.515, 0.955), height 0.15s cubic-bezier(0.455, 0.03, 0.515, 0.955), left 0.15s cubic-bezier(0.455, 0.03, 0.515, 0.955), bottom 0.15s cubic-bezier(0.455, 0.03, 0.515, 0.955);
 }
 #scroll-indicator li:hover:before {
-  left: calc(100% - 236px);
+  left: calc(100% - 250px);
   opacity: 1;
   visibility: visible;
 }
