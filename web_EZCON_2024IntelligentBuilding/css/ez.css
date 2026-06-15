@@ -1711,6 +1711,8 @@ a.btn-main.big.type2 {
 
 .ba_base_func .owl-item .de_testi blockquote {
   padding: 3rem 40px 6rem 40px;
+  overflow: hidden;
+  border-radius: 10px;
 }
 .ba_base_func .owl-item .de_testi blockquote:before {
   content: "\f013";
@@ -1737,7 +1739,7 @@ a.btn-main.big.type2 {
   justify-content: center;
   align-items: center;
   font-weight: bold;
-  font-size: 2rem;
+  font-size: 1.8rem;
   line-height: normal;
 }
 .ba_base_func .owl-item .de_testi_by img {
@@ -1745,7 +1747,27 @@ a.btn-main.big.type2 {
   width: 15rem !important;
   height: auto !important;
   right: -4rem;
-  top: -1.2rem;
+  top: -0.8rem;
+}
+@media (min-width: 980px) and (max-width: 1440px) {
+  .ba_base_func .owl-item .de_testi_by img {
+    width: 13rem !important;
+    top: 0rem;
+    right: -3.8rem;
+  }
+}
+@media (max-width: 768px) {
+  .ba_base_func .owl-item .de_testi_by img {
+    width: 13.8rem;
+  }
+}
+.ba_base_func .about-sec-title.type2 {
+  padding: 0 3.2rem;
+}
+@media (max-width: 768px) {
+  .ba_base_func .integration-list {
+    margin-top: -2rem;
+  }
 }
 
 .owl-theme .owl-dots .owl-dot span {
@@ -1802,7 +1824,7 @@ a.btn-main.big.type2 {
 }
 
 .certifi_end h2 .bigger_letter {
-  font-size: 4.8rem;
+  font-size: 4.2rem;
   line-height: 5rem;
 }
 @media (max-width: 768px) {

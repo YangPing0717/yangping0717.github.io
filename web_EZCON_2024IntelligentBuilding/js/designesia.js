@@ -509,8 +509,11 @@
 			loop:true,
 			margin:20,
 			responsive:{
-				1000:{
+                1440:{
 					items:4
+				},
+				1000:{
+					items:2
 				},
 				600:{
 					items:2
