@@ -1709,6 +1709,49 @@ a.btn-main.big.type2 {
   width: 3rem;
 }
 
+.ba_base_func .owl-item .de_testi blockquote {
+  padding: 3rem 40px 6rem 40px;
+}
+.ba_base_func .owl-item .de_testi blockquote:before {
+  content: "\f013";
+}
+.ba_base_func .owl-item .de_testi blockquote:before {
+  content: "\f085";
+  font-size: 11rem;
+  color: transparent !important;
+  -webkit-text-stroke: 1px rgba(0, 114, 255, 0.65);
+  background: none;
+  padding: 0;
+  text-shadow: 0 0 100px rgba(0, 255, 213, 0.5);
+  -webkit-text-fill-color: #000000;
+}
+.ba_base_func .owl-item .de_testi_by {
+  font-style: normal;
+  font-size: 12px;
+  display: flex;
+  margin-top: -20px;
+  position: relative;
+}
+.ba_base_func .owl-item .de_testi_by span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 2rem;
+  line-height: normal;
+}
+.ba_base_func .owl-item .de_testi_by img {
+  position: absolute;
+  width: 15rem !important;
+  height: auto !important;
+  right: -4rem;
+  top: -1.2rem;
+}
+
+.owl-theme .owl-dots .owl-dot span {
+  display: none;
+}
+
 .certifi_startBox .mask {
   background: rgba(0, 0, 0, 0.6);
   height: 100%;
