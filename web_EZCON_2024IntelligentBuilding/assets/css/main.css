@@ -3590,10 +3590,12 @@ body[data-aos-easing=ease] [data-aos] {
   .xb-gardiant-shape {
     left: 0;
     right: 0;
+    height: 115%;
   }
   .xb-gardiant-shape img {
     width: 100%;
     margin-top: -48px;
+    height: 100%;
   }
 }
 @media only screen and (min-width: 576px) and (max-width: 767px) {
@@ -3854,6 +3856,8 @@ body[data-aos-easing=ease] [data-aos] {
     margin-left: 0;
     display: initial;
     position: initial;
+    font-size: 8.8rem;
+    padding-right: 0.4rem;
   }
 }
 .industries .sec-title .title.with_img {

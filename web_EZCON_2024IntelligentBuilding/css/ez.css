@@ -822,8 +822,11 @@ footer .logo img {
 }
 @media (max-width: 768px) {
   .facility_page .facility_start h1.ultra-big {
-    font-size: 3.2rem;
-    line-height: 4rem;
+    font-size: 2.8rem;
+    line-height: 3.2rem;
+  }
+  .facility_page .facility_start h1.ultra-big .bestAI {
+    text-align: left;
   }
 }
 .facility_page .facility_start h1.ultra-big span.text-line {
@@ -1169,6 +1172,7 @@ footer .logo img {
     display: block;
     margin: -1.4rem auto;
     padding: 0;
+    float: none;
   }
 }
 
