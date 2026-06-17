@@ -6847,8 +6847,8 @@ body[data-aos-easing=ease] [data-aos] {
 @media (max-width: 767px) {
   .about-sec-title.type2 .title span {
     height: 10rem;
-    left: 11rem;
-    top: -30px;
+    float: right;
+    margin-right: -3rem;
   }
 }
 .about-sec-title.type2 .title span img {

@@ -1747,7 +1747,7 @@ a.btn-main.big.type2 {
   width: 15rem !important;
   height: auto !important;
   right: -4rem;
-  top: -0.8rem;
+  top: -2rem;
 }
 @media (min-width: 980px) and (max-width: 1440px) {
   .ba_base_func .owl-item .de_testi_by img {
@@ -1764,12 +1764,6 @@ a.btn-main.big.type2 {
 .ba_base_func .about-sec-title.type2 {
   padding: 0 3.2rem;
 }
-@media (max-width: 768px) {
-  .ba_base_func .integration-list {
-    margin-top: -2rem;
-  }
-}
-
 .owl-theme .owl-dots .owl-dot span {
   display: none;
 }
