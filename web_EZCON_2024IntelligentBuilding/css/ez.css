@@ -1844,9 +1844,13 @@ a.btn-main.big.type2 {
 }
 
 @media (max-width: 768px) {
+  .productpage .block_txt p {
+    margin-left: 2rem;
+  }
+}
+@media (max-width: 768px) {
   .productpage {
     padding-top: 120px !important;
-    padding-left: 2rem;
   }
 }
 .productpage h1 {
@@ -1855,8 +1859,7 @@ a.btn-main.big.type2 {
 @media (max-width: 768px) {
   .productpage h1 {
     line-height: 2.6rem;
-    margin-left: -2rem;
-    font-size: 12vw;
+    font-size: 11vw;
   }
 }
 .productpage h1 .bestAI {
@@ -1865,11 +1868,6 @@ a.btn-main.big.type2 {
 }
 .productpage h5.s2 {
   background: var(--darkblue-light);
-}
-@media (max-width: 768px) {
-  .productpage h5.s2 {
-    margin-left: -2rem;
-  }
 }
 @media (max-width: 768px) {
   .productpage h5.s2 span i {
@@ -1908,6 +1906,11 @@ a.btn-main.big.type2 {
   top: 25%;
   left: 50%;
 }
+@media (max-width: 768px) {
+  .hotspot {
+    z-index: initial;
+  }
+}
 .hotspot::before {
   content: "總開關斷路器 (MCCB)";
   position: absolute;
@@ -1921,6 +1924,13 @@ a.btn-main.big.type2 {
   top: 0.2rem;
   transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   text-shadow: 0 4px 10px rgba(0, 0, 0, 0.5), 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+@media (max-width: 768px) {
+  .hotspot::before {
+    font-size: 1rem;
+    left: -3rem;
+    top: 2.4rem;
+  }
 }
 .hotspot.type2 {
   top: 48%;
@@ -1981,7 +1991,7 @@ a.btn-main.big.type2 {
   position: absolute;
   bottom: 125%;
   left: 50%;
-  transform: translateX(-50%) scale(0.8);
+  transform: translateX(-50%) scale(1);
   min-width: 22rem;
   background: #ffffff;
   color: #333333;
@@ -2032,6 +2042,11 @@ a.btn-main.big.type2 {
   opacity: 0;
 }
 
+@media (max-width: 768px) {
+  .hotspot:hover, .hotspot.is-active {
+    transform: none;
+  }
+}
 .hotspot:hover .hotspot-btn, .hotspot.is-active .hotspot-btn {
   background: #00ffd5;
   transform: rotate(45deg) scale(1.3);
@@ -2078,24 +2093,24 @@ a.btn-main.big.type2 {
     /* 2. 模擬 bootstrap modal-sm 的置中與寬度 */
     width: 90%; /* 留點左右邊距 */
     max-width: 380px; /* 類似 modal-sm 的寬度 */
-    min-width: unset; /* 取消桌機的 22rem */
     /* 精準置中與動畫起點 */
-    transform: translate(-50%, -50%) scale(0.8);
     z-index: 9999; /* 確保在最上層 */
     padding: 2rem 1.5rem; /* 稍微調整手機版內距 */
+    pointer-events: none !important;
   }
   /* 當啟動時的置中狀態 */
   .hotspot.is-active .hotspot-tooltip {
     transform: translate(-50%, -50%) scale(1);
+    pointer-events: none;
   }
   /* 手機版圖片微調：原本桌機版用 negative right 很容易爆版，手機版改成塞在內文下方或隱藏 */
   .hotspot-tooltip img {
     position: relative;
     top: auto;
     right: auto;
-    width: 100%;
+    width: 220px;
     height: auto;
-    margin-top: 1rem;
+    margin-top: -0.5rem;
     filter: none;
   }
   /* (選擇性) 增加一個暗色遮罩背景，讓 Modal 更明顯 */
@@ -2107,7 +2122,7 @@ a.btn-main.big.type2 {
     right: 0;
     bottom: 0;
     background: rgba(0, 0, 0, 0.5);
-    z-index: 99;
+    z-index: 2;
     opacity: 0;
     pointer-events: none;
     transition: opacity 0.3s ease;
@@ -2116,5 +2131,23 @@ a.btn-main.big.type2 {
   .hotspot-container:has(.hotspot.is-active)::before {
     opacity: 1;
     pointer-events: auto;
+  }
+}
+.close-tooltip-btn {
+  display: none; /* 桌機隱藏 */
+}
+@media (max-width: 768px) {
+  .close-tooltip-btn {
+    display: block;
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    background: none;
+    border: none;
+    font-size: 1.8rem;
+    cursor: pointer;
+    color: #999;
+    line-height: 1;
+    padding: 5px;
   }
 }

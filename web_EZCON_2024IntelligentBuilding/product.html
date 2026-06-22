@@ -97,7 +97,7 @@
                                             <li><a class="menu-item" href="https://www.ezcontw.com/robot-integration-services/" target="_blank">智慧機器人整合服務</a></li>
                                             <li><a class="menu-item" href="https://www.ezcontw.com/smartoffice/" target="_blank">智慧企業總部</a></li>
                                             <li><a class="menu-item" href="https://www.ezcontw.com/smarthome/" target="_blank">智慧家庭 eHome</a></li>
-                                            <li><a class="menu-item" href="#" target="_blank">系統設備整合</a>
+                                            <li><a class="menu-item" href="#!" target="_blank">系統設備整合</a>
                                                 <ul>
                                                     <li><a class="menu-item active" href="https://www.ezcontw.com/intelligentbuilding/product.html">施耐德電機</a></li>
                                                 </ul>
@@ -165,7 +165,7 @@
                 <div class="v-center">
                     <div class="container position-relative z1000 wow fadeInDown ">
                         <div class="row gx-5 align-items-center">
-                            <div class="col-lg-5 mb-sm-30">
+                            <div class="block_txt col-lg-5 mb-sm-30 ">
                                 <h5 class="mb-2 s2">
                                     <span class="wow fadeInRight forPhone_br" data-wow-delay=".2s">
                                         <i class="id-color-2 fa fa-certificate forPhone_hide"></i> 
@@ -199,6 +199,7 @@
                                     <div class="hotspot">
                                         <button class="hotspot-btn" aria-label="View Details"></button>
                                         <div class="hotspot-tooltip">
+                                            <button class="close-tooltip-btn" aria-label="Close">&times;</button>
                                             <h4>總開關斷路器 (MCCB)</h4>
                                             <p>適用於建築主配電盤與大型設備保護，可有效防止過載、短路與異常電流造成的設備損壞。</p>
                                             <ul class="integration-list list-unstyled wow fadeInUp" data-wow-duration="600ms">
@@ -238,6 +239,7 @@
                                     <div class="hotspot type2">
                                         <button class="hotspot-btn" aria-label="View Details"></button>
                                         <div class="hotspot-tooltip">
+                                            <button class="close-tooltip-btn" aria-label="Close">&times;</button>
                                             <h4>微型斷路器 (MCB)</h4>
                                             <p>用於一般住宅與小型配電迴路，當電流異常時可快速切斷電源，保護電器與線路安全。</p>
                                             <ul class="integration-list list-unstyled wow fadeInUp" data-wow-duration="600ms">
@@ -279,6 +281,7 @@
                                     <div class="hotspot type4">
                                         <button class="hotspot-btn" aria-label="View Details"></button>
                                         <div class="hotspot-tooltip">
+                                            <button class="close-tooltip-btn" aria-label="Close">&times;</button>
                                             <img src="images/misc/pro_schneider_elec.png" alt="">
                                             <h4>無線電錶 (PowerTag)</h4>
                                             <p>可即時監測用電數據，掌握電力使用狀況，協助企業與建築進行能源管理與節能優化。</p>
@@ -326,6 +329,7 @@
                                     <div class="hotspot type3">
                                         <button class="hotspot-btn" aria-label="View Details"></button>
                                         <div class="hotspot-tooltip">
+                                            <button class="close-tooltip-btn" aria-label="Close">&times;</button>
                                             <h4>漏電斷路器 (RCCB / RCBO)</h4>
                                             <p>可偵測漏電異常，降低人員觸電與電氣火災風險，提升整體用電安全。 </p>
                                             <ul class="integration-list list-unstyled wow fadeInUp" data-wow-duration="600ms">
@@ -916,7 +920,7 @@
 
 
     <!-- responsive image hotspot -->
-    <script>
+    <!-- <script>
         // Toggle tooltip visibility on click for mobile devices
         document.querySelectorAll('.hotspot-btn').forEach(button => {
         button.addEventListener('click', (e) => {
@@ -942,6 +946,52 @@
         });
         });
 
+    </script> -->
+
+    <script>
+        document.querySelectorAll('.hotspot-btn').forEach(button => {
+            button.addEventListener('click', (e) => {
+                const currentHotspot = e.target.parentElement;
+                
+                // 檢查當前這個是不是已經打開了
+                const isActive = currentHotspot.classList.contains('is-active');
+                
+                // 先關閉所有
+                document.querySelectorAll('.hotspot').forEach(hotspot => {
+                    hotspot.classList.remove('is-active');
+                });
+                
+                // 如果原本沒打開，就打開它
+                if (!isActive) {
+                    currentHotspot.classList.add('is-active');
+                }
+                
+                e.stopPropagation();
+            });
+        });
+
+        // 新增：點擊 tooltip 內部的關閉按鈕
+        document.querySelectorAll('.close-tooltip-btn').forEach(closeBtn => {
+            closeBtn.addEventListener('click', (e) => {
+                const currentHotspot = e.target.closest('.hotspot');
+                currentHotspot.classList.remove('is-active');
+                e.stopPropagation(); // 防止事件冒泡
+            });
+        });
+
+        // 點擊 Tooltip 本體時，不要觸發關閉（避免點擊 Modal 內部字體時彈窗消失）
+        document.querySelectorAll('.hotspot-tooltip').forEach(tooltip => {
+            tooltip.addEventListener('click', (e) => {
+                e.stopPropagation();
+            });
+        });
+
+        // 點擊畫面上其他任何地方就關閉
+        document.addEventListener('click', () => {
+            document.querySelectorAll('.hotspot').forEach(hotspot => {
+                hotspot.classList.remove('is-active');
+            });
+        });
     </script>
 
 </body>
