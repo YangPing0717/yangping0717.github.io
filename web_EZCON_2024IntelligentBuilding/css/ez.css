@@ -2087,7 +2087,7 @@ a.btn-main.big.type2 {
   .hotspot-tooltip {
     /* 1. 改為 fixed 定位，相對於整個螢幕 */
     position: fixed;
-    top: 50%;
+    top: 65%;
     left: 50%;
     bottom: auto; /* 覆蓋桌機的 bottom: 125% */
     /* 2. 模擬 bootstrap modal-sm 的置中與寬度 */
