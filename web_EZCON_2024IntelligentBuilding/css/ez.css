@@ -1843,8 +1843,21 @@ a.btn-main.big.type2 {
   }
 }
 
+@media (max-width: 768px) {
+  .productpage {
+    padding-top: 120px !important;
+    padding-left: 2rem;
+  }
+}
 .productpage h1 {
   line-height: 4.4rem;
+}
+@media (max-width: 768px) {
+  .productpage h1 {
+    line-height: 2.6rem;
+    margin-left: -2rem;
+    font-size: 12vw;
+  }
 }
 .productpage h1 .bestAI {
   text-align: left;
@@ -1852,6 +1865,17 @@ a.btn-main.big.type2 {
 }
 .productpage h5.s2 {
   background: var(--darkblue-light);
+}
+@media (max-width: 768px) {
+  .productpage h5.s2 {
+    margin-left: -2rem;
+  }
+}
+@media (max-width: 768px) {
+  .productpage h5.s2 span i {
+    margin-right: 10px;
+    padding-left: 12px;
+  }
 }
 
 /* responsive image hotspot */
@@ -1861,6 +1885,13 @@ a.btn-main.big.type2 {
   width: 100%;
   max-width: 800px;
   margin: -6rem auto 0;
+}
+@media (max-width: 768px) {
+  .hotspot-container {
+    width: 200%;
+    position: relative !important;
+    margin: 6rem auto 0 -9rem;
+  }
 }
 
 .responsive-img {
@@ -1874,6 +1905,8 @@ a.btn-main.big.type2 {
   position: absolute;
   transform: translate(-50%, -50%); /* Centers the point exactly on coordinates */
   z-index: 10;
+  top: 25%;
+  left: 50%;
 }
 .hotspot::before {
   content: "總開關斷路器 (MCCB)";
@@ -1889,11 +1922,23 @@ a.btn-main.big.type2 {
   transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   text-shadow: 0 4px 10px rgba(0, 0, 0, 0.5), 2px 2px 2px rgba(0, 0, 0, 0.5);
 }
+.hotspot.type2 {
+  top: 48%;
+  left: 35%;
+}
 .hotspot.type2::before {
   content: "微型斷路器 (MCB)";
 }
+.hotspot.type3 {
+  top: 60%;
+  left: 73%;
+}
 .hotspot.type3::before {
   content: "漏電斷路器 (RCCB / RCBO)";
+}
+.hotspot.type4 {
+  top: 38%;
+  left: 66%;
 }
 .hotspot.type4::before {
   content: "無線電錶 (PowerTag)";
@@ -2004,5 +2049,72 @@ a.btn-main.big.type2 {
   100% {
     transform: scale(4.2);
     opacity: 0;
+  }
+}
+/* 調整原本的 hover/active 行為，避免手機上維持原本的 translate 造成置中歪掉 */
+.hotspot:hover .hotspot-tooltip,
+.hotspot.is-active .hotspot-tooltip {
+  opacity: 1;
+  pointer-events: auto;
+  /* 桌機版維持原樣 */
+}
+@media (min-width: 769px) {
+  .hotspot:hover .hotspot-tooltip,
+  .hotspot.is-active .hotspot-tooltip {
+    transform: translateX(-50%) scale(1);
+  }
+}
+
+/* ==========================================
+   手機版 Modal 效果 (RWD)
+   ========================================== */
+@media (max-width: 768px) {
+  .hotspot-tooltip {
+    /* 1. 改為 fixed 定位，相對於整個螢幕 */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    bottom: auto; /* 覆蓋桌機的 bottom: 125% */
+    /* 2. 模擬 bootstrap modal-sm 的置中與寬度 */
+    width: 90%; /* 留點左右邊距 */
+    max-width: 380px; /* 類似 modal-sm 的寬度 */
+    min-width: unset; /* 取消桌機的 22rem */
+    /* 精準置中與動畫起點 */
+    transform: translate(-50%, -50%) scale(0.8);
+    z-index: 9999; /* 確保在最上層 */
+    padding: 2rem 1.5rem; /* 稍微調整手機版內距 */
+  }
+  /* 當啟動時的置中狀態 */
+  .hotspot.is-active .hotspot-tooltip {
+    transform: translate(-50%, -50%) scale(1);
+  }
+  /* 手機版圖片微調：原本桌機版用 negative right 很容易爆版，手機版改成塞在內文下方或隱藏 */
+  .hotspot-tooltip img {
+    position: relative;
+    top: auto;
+    right: auto;
+    width: 100%;
+    height: auto;
+    margin-top: 1rem;
+    filter: none;
+  }
+  /* (選擇性) 增加一個暗色遮罩背景，讓 Modal 更明顯 */
+  .hotspot-container::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 99;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+  }
+  /* 當有任一 hotspot 被打開時，顯示遮罩 */
+  .hotspot-container:has(.hotspot.is-active)::before {
+    opacity: 1;
+    pointer-events: auto;
   }
 }
