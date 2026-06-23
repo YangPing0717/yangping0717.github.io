@@ -1632,6 +1632,38 @@
         });
     </script> -->
 
+    
+    <script>
+        window.addEventListener('load', () => {
+            const viewer = document.querySelector('spline-viewer');
+            if (!viewer) return;
+
+            let attempts = 0;
+            const maxAttempts = 25; // 最多檢查 25 次（200ms * 25 = 5秒）
+
+            const checkAndRemove = setInterval(() => {
+                attempts++;
+                const shadowRoot = viewer.shadowRoot;
+                
+                if (shadowRoot) {
+                    const logo = shadowRoot.getElementById('logo');
+                    if (logo) {
+                        logo.remove(); // 移除 logo
+                        clearInterval(checkAndRemove); // 停止計時器
+                        console.log(`Spline Logo 在第 ${attempts * 200}ms 被移除了！`);
+                        return;
+                    }
+                }
+
+                // 超過 5 秒都沒抓到，就放棄，避免無限迴圈
+                if (attempts >= maxAttempts) {
+                    clearInterval(checkAndRemove);
+                    console.log('已經連續檢查 5 秒，未發現 Logo。');
+                }
+            }, 200); // 每 200 毫秒檢查一次
+        });
+    </script>
+
 
     <!-- 案例 過濾器 -->
     <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>

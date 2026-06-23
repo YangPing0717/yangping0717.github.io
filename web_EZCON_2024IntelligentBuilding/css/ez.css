@@ -1443,6 +1443,10 @@ a.btn-main.big.type2 {
   }
 }
 
+spline-viewer::part(logo) {
+  display: none !important;
+}
+
 .bim_page_start {
   padding-top: 0;
 }
