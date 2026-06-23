@@ -469,10 +469,16 @@
          });
 		 
 		 jQuery("#ss-carousel").owlCarousel({
-            center: true,
+            // center: true,
 			items:4,
 			loop:true,
-			margin:60,
+			margin:20,
+            responsiveClass: true,
+            nav: true, // Enables previous and next buttons
+            navText: [
+                "<i class='fa fa-chevron-left'></i>", // Custom HTML or text for 'Previous' button
+                "<i class='fa fa-chevron-right'></i>" // Custom HTML or text for 'Next' button
+            ],
 			responsive:{
 				1000:{
 					items:4
@@ -481,7 +487,7 @@
 					items:3
 				},
 				0:{
-					items:2
+					items:1.1
 				}
 			}
          });
