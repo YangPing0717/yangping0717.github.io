@@ -1862,7 +1862,7 @@ spline-viewer::part(logo) {
 }
 @media (max-width: 768px) {
   .productpage h1 {
-    line-height: 2.6rem;
+    line-height: 2.8rem;
     font-size: 11vw;
   }
 }
