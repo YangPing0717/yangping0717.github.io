@@ -1870,6 +1870,11 @@ spline-viewer::part(logo) {
   text-align: left;
   font-size: 70%;
 }
+@media (max-width: 768px) {
+  .productpage h1 .bestAI {
+    font-size: 75%;
+  }
+}
 .productpage h5.s2 {
   background: var(--darkblue-light);
 }
