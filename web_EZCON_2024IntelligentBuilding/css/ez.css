@@ -263,6 +263,11 @@ p.lead.big {
 p strong {
   color: #ffffff;
 }
+@media (max-width: 768px) {
+  p.lead {
+    font-size: 1rem;
+  }
+}
 
 .forPhone_br br {
   display: none;
@@ -631,11 +636,17 @@ footer .logo img {
 .module3 h2.sub_title {
   line-height: 1.6rem !important;
 }
+@media (max-width: 768px) {
+  .module3 h2.sub_title {
+    line-height: 1.8rem;
+  }
+}
 .module3 h2.sub_title span {
   font-size: 10rem;
   line-height: 0;
   letter-spacing: 0;
   font-weight: 900;
+  font-family: var(--title-font);
 }
 @media (max-width: 768px) {
   .module3 h2.sub_title span {
@@ -659,7 +670,7 @@ footer .logo img {
 }
 .module3 h3 span span {
   color: #8800ff;
-  font-weight: 300;
+  font-weight: 700;
 }
 @media (max-width: 768px) {
   .module3 .images-deco-1 .d-img-1 {
