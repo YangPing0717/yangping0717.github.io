@@ -5566,6 +5566,12 @@ body[data-aos-easing=ease] [data-aos] {
   margin-bottom: 0;
   font-size: 2rem;
 }
+@media (max-width: 767px) {
+  .comparison-list .xb-item--title {
+    font-size: 1.7rem;
+    letter-spacing: 0;
+  }
+}
 .comparison-list .xb-item--title.type2 {
   background: #071921;
 }

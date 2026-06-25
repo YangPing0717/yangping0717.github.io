@@ -1913,7 +1913,7 @@ spline-viewer::part(logo) {
   top: 3rem;
   right: -7px;
   padding: 0;
-  -webkit-text-stroke: 1.5px var(--cyan-light-active);
+  -webkit-text-stroke: 1px var(--cyan-light-active);
   font-weight: 900;
   -webkit-text-fill-color: #000000;
 }
