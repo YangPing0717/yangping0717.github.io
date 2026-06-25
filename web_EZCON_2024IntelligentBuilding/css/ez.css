@@ -2248,7 +2248,7 @@ spline-viewer::part(logo) {
     font-family: var(--title-font);
     font-size: 1.4rem;
     font-weight: 700;
-    line-height: 1.1;
+    line-height: 1.25;
     text-align: left;
     margin-left: -6px;
   }
