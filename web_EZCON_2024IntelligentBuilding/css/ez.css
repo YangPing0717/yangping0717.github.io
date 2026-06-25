@@ -638,7 +638,7 @@ footer .logo img {
 }
 @media (max-width: 768px) {
   .module3 h2.sub_title {
-    line-height: 2rem !important;
+    line-height: 2.4rem !important;
   }
 }
 .module3 h2.sub_title span {
@@ -646,7 +646,6 @@ footer .logo img {
   line-height: 0;
   letter-spacing: 0;
   font-weight: 900;
-  font-family: var(--title-font);
 }
 @media (max-width: 768px) {
   .module3 h2.sub_title span {
