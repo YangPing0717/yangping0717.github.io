@@ -5639,9 +5639,16 @@ body[data-aos-easing=ease] [data-aos] {
   border-radius: inherit;
   background: radial-gradient(99.41% 174.01% at -2.12% 64.17%, rgb(0, 255, 151) 0%, rgb(0, 2, 15) 100%);
 }
+.comparison-vs-logo.type2 {
+  font-weight: 900;
+  font-size: 36px;
+  height: 80px;
+  width: 80px;
+  color: #ffffff;
+}
 
 .comparison-container {
-  padding-top: 42px;
+  padding-top: 3.6rem;
 }
 
 @media (max-width: 991px) {

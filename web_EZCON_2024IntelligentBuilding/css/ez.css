@@ -1868,7 +1868,7 @@ spline-viewer::part(logo) {
 }
 .productpage h1 .bestAI {
   text-align: left;
-  font-size: 70%;
+  font-size: 68%;
 }
 @media (max-width: 768px) {
   .productpage h1 .bestAI {
@@ -1876,7 +1876,7 @@ spline-viewer::part(logo) {
   }
 }
 .productpage h5.s2 {
-  background: var(--darkblue-light);
+  background: rgba(0, 0, 0, 0.5);
 }
 @media (max-width: 768px) {
   .productpage h5.s2 span i {
@@ -2117,12 +2117,19 @@ spline-viewer::part(logo) {
   transform: scale(1.05);
   transform-origin: top left;
   margin-bottom: 0.3rem;
+  font-size: 1.05rem;
+  font-weight: bolder;
+  gap: 8px;
 }
 .hotspot-tooltip .integration-list li path {
   opacity: 1;
 }
 .hotspot-tooltip .integration-list li path::nth-child(2) {
   fill: #070021;
+}
+.hotspot-tooltip .integration-list li span {
+  transform: none;
+  margin-right: 0;
 }
 .hotspot-tooltip img {
   position: absolute;
