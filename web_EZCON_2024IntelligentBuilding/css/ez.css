@@ -2245,9 +2245,9 @@ spline-viewer::part(logo) {
   }
   .hotspot-container .hotspot .hotspot-btn::before {
     content: "1";
-    font-family: "Microsoft JhengHei", "PingFang TC", Helvetica, Arial, sans-serif;
+    font-family: var(--title-font);
     font-size: 1.4rem;
-    font-weight: 600;
+    font-weight: 700;
     line-height: 1.1;
     text-align: left;
     margin-left: -6px;
