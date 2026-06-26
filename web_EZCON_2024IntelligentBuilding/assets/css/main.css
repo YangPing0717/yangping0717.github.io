@@ -4244,6 +4244,7 @@ body[data-aos-easing=ease] [data-aos] {
     top: 9.4rem !important;
     font-size: 7rem;
     text-align: right;
+    margin: initial;
   }
 }
 .custom-sec-title .title.type3 b {
@@ -6880,7 +6881,7 @@ body[data-aos-easing=ease] [data-aos] {
 }
 @media (max-width: 767px) {
   .about-sec-title.type2 .title {
-    font-size: 40px;
+    font-size: 7vw;
   }
   .about-sec-title.type2 .title .bestAI {
     font-size: 13vw;
@@ -6905,6 +6906,7 @@ body[data-aos-easing=ease] [data-aos] {
     height: 10rem;
     float: right;
     margin-right: -3rem;
+    margin-bottom: -2rem;
   }
 }
 .about-sec-title.type2 .title span img {

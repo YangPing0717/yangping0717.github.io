@@ -1740,6 +1740,11 @@ spline-viewer::part(logo) {
   overflow: hidden;
   border-radius: 10px;
 }
+@media (max-width: 768px) {
+  .ba_base_func .owl-item .de_testi blockquote {
+    padding: 2rem 40px 8.4rem 40px;
+  }
+}
 .ba_base_func .owl-item .de_testi blockquote:before {
   content: "\f013";
 }
@@ -1785,6 +1790,7 @@ spline-viewer::part(logo) {
 @media (max-width: 768px) {
   .ba_base_func .owl-item .de_testi_by img {
     width: 13.8rem;
+    top: 0rem;
   }
 }
 .ba_base_func .about-sec-title.type2 {
