@@ -24,6 +24,8 @@
   /* 強制觸發 iPhone 的硬體加速渲染 */
   -webkit-transform: translateZ(0);
   transform: translateZ(0);
+}
+.dark-scheme header.header-mobile.menu-open {
   position: fixed !important;
   top: 0;
   left: 0;
