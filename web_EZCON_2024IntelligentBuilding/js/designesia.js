@@ -525,7 +525,7 @@
 					items:2
 				},
                 0:{
-                    items:1.8,
+                    items:1.1,
                     center: false
                 }
 			}
