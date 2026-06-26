@@ -4448,6 +4448,7 @@ body[data-aos-easing=ease] [data-aos] {
 @media (max-width: 767px) {
   .xb-project-wrap_2.for_certifi .xb-project-item .xb-project-content .xb-item--inner .xb-item--img {
     margin-bottom: 1.4rem;
+    filter: none;
   }
 }
 .xb-project-wrap_2.for_certifi.type2 .xb-project-content .xb-item--inner {
@@ -10939,7 +10940,7 @@ img {
 }
 
 .ai-slide-btn > div {
-  top: 85%;
+  top: 91%;
   left: 4%;
   height: 50px;
   width: 50px;
@@ -10954,7 +10955,7 @@ img {
 }
 @media only screen and (max-width: 1600px) {
   .ai-slide-btn > div {
-    left: 19%;
+    left: 5%;
   }
 }
 @media only screen and (min-width: 1200px) and (max-width: 1300px) {
@@ -10992,7 +10993,7 @@ img {
 }
 @media only screen and (max-width: 1600px) {
   .ai-slide-btn .swiper-button-next {
-    right: 19%;
+    right: 5%;
   }
 }
 @media only screen and (min-width: 1200px) and (max-width: 1300px) {
