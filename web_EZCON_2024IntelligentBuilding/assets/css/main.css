@@ -6425,11 +6425,10 @@ body[data-aos-easing=ease] [data-aos] {
   margin: 1.4rem 0 1rem;
 }
 .sec-title .title.type4 img {
-  width: 120px;
-  margin-top: -10px;
-  margin-left: -18px;
-  padding-top: 1.2rem;
-  filter: drop-shadow(16px 16px 18px #ff0033) invert(355%) hue-rotate(35deg) brightness(3);
+  width: 130px;
+  margin-top: -1rem;
+  margin-left: 0rem;
+  padding-top: 0rem;
 }
 @media (max-width: 767px) {
   .sec-title .title.type4 img {
