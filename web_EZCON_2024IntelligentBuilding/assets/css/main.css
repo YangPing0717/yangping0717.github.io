@@ -6433,9 +6433,10 @@ body[data-aos-easing=ease] [data-aos] {
 @media (max-width: 767px) {
   .sec-title .title.type4 img {
     display: block;
-    margin-top: -10px;
+    margin-top: 0px;
     margin-bottom: 0;
     padding-top: 0;
+    margin-left: -1rem;
   }
 }
 .sec-title .title .smaller {
