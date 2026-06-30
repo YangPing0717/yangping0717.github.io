@@ -252,6 +252,7 @@
             }
          });
 
+        //  BA 圖控
         jQuery("#item-carousel-big").owlCarousel({
            center:true,
            loop:true,
@@ -262,6 +263,9 @@
            autoplayTimeout:3000,
            autoplayHoverPause:true,
            responsive:{
+            //     1440:{
+            //        items:4
+            //    },
                1000:{
                    items:3
                },
@@ -274,6 +278,33 @@
            }
         });
 
+
+        // 養生村 1
+        jQuery("#item-carousel-big-first").owlCarousel({
+           center:true,
+           loop:true,
+           margin:0,
+           nav:false,
+           dots:false,
+           autoplay: true,
+           autoplayTimeout:3000,
+           autoplayHoverPause:true,
+           responsive:{
+            //     1440:{
+            //        items:4
+            //    },
+               1000:{
+                   items:4
+               },
+               600:{
+                   items:2
+               },
+               0:{
+                   items:2
+               }
+           }
+        });
+        // 養生村 2
         jQuery("#item-carousel-big-sec").owlCarousel({
            center:true,
            loop:true,
@@ -389,6 +420,7 @@
             }
          });
 
+         
          var owl = $('#item-carousel-big');
          owl.owlCarousel();
          $('.d-carousel .d-arrow-right').on("click", function() {
@@ -398,6 +430,15 @@
              owl.trigger('prev.owl.carousel');
          });
 
+
+         var owl_first = $('#item-carousel-big-first');
+         owl.owlCarousel();
+         $('.d-carousel .d-arrow-right').on("click", function() {
+             owl_first.trigger('next.owl.carousel');
+         })
+         $('.d-carousel .d-arrow-left').on("click", function() {
+             owl_first.trigger('prev.owl.carousel');
+         });
          
          var owl_sec = $('#item-carousel-big-sec');
          owl_sec.owlCarousel();

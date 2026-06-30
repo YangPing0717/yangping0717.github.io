@@ -1197,13 +1197,13 @@ footer .logo img {
 .c-item_info .c-item_title {
   border-radius: 3rem;
   background: rgba(0, 26, 102, 0.85);
-  margin-bottom: -10%;
+  margin-bottom: -23%;
   padding: 0.4rem 1.2rem 0.4rem;
   line-height: 1.4;
-  width: max-content;
   transform: translateX(-50%);
   left: 50%;
   margin-left: 0;
+  width: 300px;
 }
 @media (max-width: 768px) {
   .c-item_info .c-item_title {
@@ -1999,14 +1999,20 @@ spline-viewer::part(logo) {
 .hotspot-container {
   position: relative;
   width: 100%;
-  max-width: 800px;
-  margin: -6rem auto 0;
+  max-width: 680px;
+  margin: -3rem 9rem 0 0;
 }
 @media (max-width: 768px) {
   .hotspot-container {
     width: 200%;
     position: relative !important;
     margin: 0 auto 0 -11rem;
+  }
+}
+@media screen and (min-width: 1441px) {
+  .hotspot-container {
+    max-width: 800px;
+    margin: -6rem auto 0;
   }
 }
 
@@ -2130,6 +2136,12 @@ spline-viewer::part(logo) {
   transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   line-height: 1.6rem;
 }
+@media (min-width: 980px) and (max-width: 1440px) {
+  .hotspot-tooltip.ty2 {
+    bottom: -6rem;
+    left: -11.5rem;
+  }
+}
 .hotspot-tooltip h4 {
   color: #070021;
   font-size: 1.5rem;
@@ -2234,6 +2246,18 @@ spline-viewer::part(logo) {
   }
 }
 
+/* 只有在沒有 active 狀態時，hover 才會顯示 */
+.hotspot:not(.is-active):hover .hotspot-tooltip {
+  opacity: 0;
+  pointer-events: auto;
+}
+
+/* 確保點擊 active 後也能顯示 */
+.hotspot.is-active .hotspot-tooltip {
+  opacity: 1;
+  pointer-events: auto;
+}
+
 /* ==========================================
    手機版 Modal 效果 (RWD)
    ========================================== */
@@ -2288,7 +2312,17 @@ spline-viewer::part(logo) {
   /* (選擇性) 增加一個暗色遮罩背景，讓 Modal 更明顯 */
 }
 .close-tooltip-btn {
-  display: none; /* 桌機隱藏 */
+  display: block;
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  background: none;
+  border: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+  color: #070021;
+  line-height: 1;
+  padding: 5px;
 }
 @media (max-width: 768px) {
   .close-tooltip-btn {
@@ -2304,4 +2338,10 @@ spline-viewer::part(logo) {
     line-height: 1;
     padding: 5px;
   }
+}
+
+.close-tooltip-btn {
+  pointer-events: auto !important; /* 確保可以被點擊 */
+  cursor: pointer;
+  z-index: 99999 !important; /* 確保在最上層 */
 }
