@@ -2503,7 +2503,7 @@ spline-viewer::part(logo) {
   color: var(--bs-table-hover-color);
 }
 
-#product-carousel.owl-theme .owl-nav.disabled + .owl-dots, #product-carousel-sec.owl-theme .owl-nav.disabled + .owl-dots {
+#product-carousel.owl-theme .owl-nav.disabled + .owl-dots, #product-carousel-sec.owl-theme .owl-nav.disabled + .owl-dots, #product-carousel-third.owl-theme .owl-nav.disabled + .owl-dots {
   margin-top: 0;
 }
 
