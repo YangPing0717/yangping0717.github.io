@@ -71,12 +71,26 @@
   cursor: none;
 }
 #mainmenu li a.active::before, #mainmenu li a.active:hover::before {
-  font-family: FontAwesome;
-  content: "\f192";
+  font-family: "Material Icons";
+  content: "\ef4a";
   color: var(--cyan-light-active);
-  font-size: 1.2rem;
+  font-size: 0.9rem;
   position: absolute;
   right: 0.8rem;
+}
+@media (max-width: 768px) {
+  #mainmenu li a.active::before, #mainmenu li a.active:hover::before {
+    font-size: 1.2rem;
+  }
+}
+
+#mainmenu ul li:hover > a.menu-item,
+#mainmenu li a.active:hover {
+  color: #000 !important;
+}
+#mainmenu ul li:hover > a.menu-item::before,
+#mainmenu li a.active:hover::before {
+  color: #000 !important;
 }
 
 header *, .hover *, #mainmenu * {
@@ -2437,9 +2451,9 @@ spline-viewer::part(logo) {
 }
 @media (max-width: 768px) {
   .de_tab.tab_style_4 .de_nav li.active::after {
-    font-family: "FontAwesome";
-    font-size: 1.4rem;
-    content: "\f192";
+    font-family: "Material Icons";
+    content: "\ef4a";
+    font-size: 1.2rem;
     color: var(--cyan-light-active);
     position: absolute;
     top: 50%;
