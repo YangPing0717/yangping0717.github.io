@@ -1967,6 +1967,24 @@ spline-viewer::part(logo) {
   content: "4";
   right: -4px;
 }
+.productpage .product_func .owl-carousel .owl-item .item .de_testi blockquote .btn_link {
+  float: inline-end;
+}
+.productpage .product_func .owl-carousel .owl-item .item .de_testi blockquote .btn_link a {
+  font-size: 1.05rem;
+  font-weight: bold;
+  color: var(--secondary-color);
+  position: relative;
+}
+.productpage .product_func .owl-carousel .owl-item .item .de_testi blockquote .btn_link a::after {
+  content: "";
+  width: 100%;
+  height: 1px;
+  position: absolute;
+  background: var(--secondary-color);
+  left: 0;
+  bottom: 0;
+}
 .productpage .product_func .owl-carousel .integration-list li {
   font-weight: bold;
   padding-left: 1.8rem;
@@ -2198,7 +2216,24 @@ spline-viewer::part(logo) {
 }
 .hotspot-tooltip .btn_link a {
   color: #006eff;
-  text-decoration: underline;
+  position: relative;
+  transition: all 0.3s ease;
+}
+.hotspot-tooltip .btn_link a::after {
+  content: "";
+  width: 100%;
+  height: 1px;
+  position: absolute;
+  background: #006eff;
+  left: 0;
+  bottom: 0;
+}
+.hotspot-tooltip .btn_link a:hover {
+  color: #000000;
+}
+.hotspot-tooltip .btn_link a:hover::after {
+  height: 0;
+  background: #000000;
 }
 
 /* Show tooltip on hover OR when active class is present (Mobile) */
