@@ -706,6 +706,87 @@
 				}
 			}
          });
+
+         jQuery("#product-carousel").owlCarousel({
+            // center: true,
+			items:1,
+            dots: true,
+			loop:true,
+			margin:0,
+            autoplay:true,
+			autoplayTimeout:4000,
+            responsiveClass: true,
+            // nav: true, // Enables previous and next buttons
+            // navText: [
+            //     "<i class='fa fa-chevron-left'></i>", // Custom HTML or text for 'Previous' button
+            //     "<i class='fa fa-chevron-right'></i>" // Custom HTML or text for 'Next' button
+            // ],
+			// responsive:{
+			// 	1000:{
+			// 		items:4
+			// 	},
+			// 	600:{
+			// 		items:3
+			// 	},
+			// 	0:{
+			// 		items:1.1
+			// 	}
+			// }
+         });
+
+         jQuery("#product-carousel-sec").owlCarousel({
+            // center: true,
+			items:1,
+            dots: true,
+			loop:true,
+			margin:0,
+            autoplay:true,
+			autoplayTimeout:4000,
+            responsiveClass: true,
+            // nav: true, // Enables previous and next buttons
+            // navText: [
+            //     "<i class='fa fa-chevron-left'></i>", // Custom HTML or text for 'Previous' button
+            //     "<i class='fa fa-chevron-right'></i>" // Custom HTML or text for 'Next' button
+            // ],
+			// responsive:{
+			// 	1000:{
+			// 		items:4
+			// 	},
+			// 	600:{
+			// 		items:3
+			// 	},
+			// 	0:{
+			// 		items:1.1
+			// 	}
+			// }
+         });
+
+         jQuery("#product-carousel-third").owlCarousel({
+            // center: true,
+			items:1,
+            dots: true,
+			loop:true,
+			margin:0,
+            autoplay:true,
+			autoplayTimeout:4000,
+            responsiveClass: true,
+            // nav: true, // Enables previous and next buttons
+            // navText: [
+            //     "<i class='fa fa-chevron-left'></i>", // Custom HTML or text for 'Previous' button
+            //     "<i class='fa fa-chevron-right'></i>" // Custom HTML or text for 'Next' button
+            // ],
+			// responsive:{
+			// 	1000:{
+			// 		items:4
+			// 	},
+			// 	600:{
+			// 		items:3
+			// 	},
+			// 	0:{
+			// 		items:1.1
+			// 	}
+			// }
+         });
 		 
          // Custom Navigation owlCarousel
          $(".next").on("click", function() {
