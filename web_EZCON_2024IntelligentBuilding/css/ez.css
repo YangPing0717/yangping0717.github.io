@@ -330,6 +330,7 @@ p strong {
 
 header .logo-main {
   width: 148px;
+  filter: none;
 }
 
 .float-text {
@@ -2490,6 +2491,11 @@ spline-viewer::part(logo) {
 .table .none_bg_co {
   --bs-table-accent-bg: rgba(0, 0, 0, 0);
 }
+@media (max-width: 768px) {
+  .table .none_bg_co {
+    --bs-table-accent-bg: rgba(0, 77, 74, 0.1);
+  }
+}
 
 .table-dark {
   background-color: rgba(0, 0, 0, 0.5) !important;
@@ -2575,8 +2581,15 @@ th, td {
     border: none;
     border-bottom: 1px solid #454545 !important;
     position: relative;
-    padding-left: 50%; /* Makes space for the pseudo-label */
+    padding-left: 42%; /* 留給左側偽元素 data-label 的空間 */
+    padding-right: 15px; /* 補上右側內距，避免文字貼齊邊框 */
     text-align: right;
+    /* ─── 💡 解決文字太長折行的核心修改 ─── */
+    word-break: break-word; /* 針對標準文字與亞洲文字，允許在字內換行 */
+    overflow-wrap: break-word; /* 針對超長網址或連續英文字母，強制拆開換行 */
+    white-space: normal; /* 確保沒有被其他地方設定到 nowrap，強制允許換行 */
+    display: block; /* 確保寬度計算正常 */
+    line-height: 1.65;
   }
   td.mobile-only {
     display: block;
@@ -2585,15 +2598,25 @@ th, td {
   td::before {
     content: attr(data-label);
     position: absolute;
+    top: 50%; /* ─── 💡 建議加上這兩行，讓標題在左側垂直居中 ─── */
+    transform: translateY(-50%);
     left: 15px;
-    width: 45%;
     padding-right: 10px;
-    white-space: nowrap;
+    white-space: nowrap; /* 標題本身維持不換行 */
     text-align: left;
     font-weight: bold;
     color: #868686;
+    white-space: nowrap; /* 強制不換行 */
+    overflow: hidden; /* 隱藏超出容器的文字 */
+    text-overflow: ellipsis; /* 顯示省略號 */
   }
   .table {
     border-bottom: 0px;
+  }
+  .table.ty2 td {
+    padding-left: 41% !important;
+  }
+  .table.ty2 td::before {
+    width: 40%;
   }
 }

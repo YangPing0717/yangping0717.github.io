@@ -917,16 +917,16 @@
                                                                         </thead>
                                                                         <tbody>
                                                                             <tr>
-                                                                                <td data-label="Circuit breakers" rowspan="2" class="none_bg_co" >額定電流<br/>Rating (In)</td>
+                                                                                <td data-label="Circuit breakers" rowspan="2" class="none_bg_co id-color-2" >額定電流<br/>Rating (In)</td>
                                                                                 <td data-label="1P" ><div><img src="images/schneider/ta_img01_w.svg" alt=""></div></td> 
                                                                                 <td data-label="2P" ><div><img src="images/schneider/ta_img02_w.svg" alt=""></div></td>
                                                                                 <td data-label="3P" ><div><img src="images/schneider/ta_img03_w.svg" alt=""></div></td>
                                                                             </tr>
                                                                             <tr>
                                                                                 <td data-label="Circuit breakers" class="mobile-only">額定電流<br/>Rating (In)</td>
-                                                                                <td data-label="1P" >Curve C</td> 
-                                                                                <td data-label="2P" >Curve C</td>
-                                                                                <td data-label="3P" >Curve C</td>
+                                                                                <td data-label="1P" class="id-color-2" >Curve C</td> 
+                                                                                <td data-label="2P" class="id-color-2" >Curve C</td>
+                                                                                <td data-label="3P" class="id-color-2" >Curve C</td>
                                                                             </tr>
                                                                             <tr>
                                                                                 <td data-label="Circuit breakers">6A</td>
@@ -1045,35 +1045,55 @@
                                                                 <!-- 表 1 -->
                                                                 <div class="table-container mt20">
                                                                     <div class="id-color-2">Technical data</div>
-                                                                    <table class="table table-dark table-sm table-striped table-hover table-borderless align-middle">
+                                                                    <table class="table ty2 table-dark table-sm table-striped table-hover table-borderless align-middle ">
                                                                         <thead>
                                                                             <tr>
-                                                                                <th >Main characteristics</th>
+                                                                                <th>Main characteristics</th>
                                                                                 <th>iC60H RCBO</th>
-                                                                                <th class="border_l">iC60H2 RCBO</th>
+                                                                                <th>iC60H2 RCBO</th>
                                                                                 <!-- <th>3P</th> -->
                                                                             </tr>
                                                                         </thead>
                                                                         <tbody>
                                                                             <tr>
-                                                                                <td data-label="" rowspan="2" class="none_bg_co">Endurance (O-C)</td>
-                                                                                <td data-label="">Electrical</td>
-                                                                                <td data-label="">4,000 cycles</td>
+                                                                                <td data-label="Main characteristics">Insulation voltage (Ui)</td>
+                                                                                <td data-label="iC60H RCBO">400 VAC</td>
+                                                                                <td data-label="iC60H2 RCBO">400 VAC</td>
                                                                             </tr>
                                                                             <tr>
-                                                                                <td data-label="" class="mobile-only">Endurance (O-C)</td>
-                                                                                <td data-label="">Mechanicall</td>
-                                                                                <td data-label="">20,000 cycles</td>
+                                                                                <td data-label="Main characteristics">Rated impulse withstand voltage (Uimp)</td>
+                                                                                <td data-label="iC60H RCBO">4 kV</td>
+                                                                                <td data-label="iC60H2 RCBO">4 kV</td>
                                                                             </tr>
                                                                             <tr>
-                                                                                <td data-label="">Operating temperature</td>
-                                                                                <td data-label="" class="hide"></td>
-                                                                                <td data-label="">-5°C to +60°C</td>
+                                                                                <td data-label="Main characteristics">Rated residual operating current (IAn)</td>
+                                                                                <td data-label="iC60H RCBO">10, 30, 100mA</td>
+                                                                                <td data-label="iC60H2 RCBO">30 mA</td>
                                                                             </tr>
                                                                             <tr>
-                                                                                <td data-label="">Storage temperature</td>
-                                                                                <td data-label="" class="hide"></td>
-                                                                                <td data-label="">-40°C to +85°C</td>
+                                                                                <td data-label="Main characteristics">Thermal tripping / Reference temperature</td>
+                                                                                <td data-label="iC60H RCBO">50°C</td>
+                                                                                <td data-label="iC60H2 RCBO">50°C</td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td data-label="Main characteristics">Limitation class</td>
+                                                                                <td data-label="iC60H RCBO">3</td>
+                                                                                <td data-label="iC60H2 RCBO">3</td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td data-label="Main characteristics">Surge current withstand (8/20 us) without tripping</td>
+                                                                                <td data-label="iC60H RCBO">250 A</td>
+                                                                                <td data-label="iC60H2 RCBO">250 A</td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td data-label="Main characteristics">Rated nominal breaking capacity (Icn)</td>
+                                                                                <td data-label="iC60H RCBO">15,000 A</td>
+                                                                                <td data-label="iC60H2 RCBO">15,000 A</td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td data-label="Main characteristics">Phase/earth rated residual breaking and making capacity (Im)</td>
+                                                                                <td data-label="iC60H RCBO">7,500 A</td>
+                                                                                <td data-label="iC60H2 RCBO">7,500 A</td>
                                                                             </tr>
                                                                         </tbody>
                                                                     </table>
@@ -1083,80 +1103,58 @@
 
                                                                 <!-- 表 2 -->
                                                                 <div class="table-container mt20">
-                                                                    <div class="id-color-2">Circuit breakers</div>
+                                                                    <div class="id-color-2">Additional characteristics</div>
                                                                     <table class="table table-dark table-sm table-striped table-hover table-borderless align-middle">
-                                                                        <thead class="header">
+                                                                        <thead>
                                                                             <tr>
-                                                                                <th>Circuit<br/>breakers</th>
-                                                                                <th>1P</th>
-                                                                                <th>2P</th>
-                                                                                <th>3P</th>
+                                                                                <th colspan="3">Additional characteristics</th>
+                                                                                <!-- <th>2P</th>
+                                                                                <th class="border_l">額定電流<br/>Rating (In)</th>
+                                                                                <th>3P</th> -->
                                                                             </tr>
                                                                         </thead>
                                                                         <tbody>
                                                                             <tr>
-                                                                                <td data-label="Circuit breakers" rowspan="2" class="none_bg_co" >額定電流<br/>Rating (In)</td>
-                                                                                <td data-label="1P" ><div><img src="images/schneider/ta_img01_w.svg" alt=""></div></td> 
-                                                                                <td data-label="2P" ><div><img src="images/schneider/ta_img02_w.svg" alt=""></div></td>
-                                                                                <td data-label="3P" ><div><img src="images/schneider/ta_img03_w.svg" alt=""></div></td>
+                                                                                <td data-label="">Degree of protection</td>
+                                                                                <td data-label="">Device only</td>
+                                                                                <td data-label="">IP20</td>
                                                                             </tr>
                                                                             <tr>
-                                                                                <td data-label="Circuit breakers" class="mobile-only">額定電流<br/>Rating (In)</td>
-                                                                                <td data-label="1P" >Curve C</td> 
-                                                                                <td data-label="2P" >Curve C</td>
-                                                                                <td data-label="3P" >Curve C</td>
+                                                                                <td data-label="" class="hide"></td>
+                                                                                <td data-label="">Device in modular enclosure</td>
+                                                                                <td data-label="">IP40</td>
                                                                             </tr>
                                                                             <tr>
-                                                                                <td data-label="Circuit breakers">6A</td>
-                                                                                <td data-label="1P">EZ9F51106</td>
-                                                                                <td data-label="2P">EZ9F51206</td>
-                                                                                <td data-label="3P">EZ9F51306</td>
+                                                                                <td data-label="">Endurance (O-C)</td>
+                                                                                <td data-label="">Electrical</td>
+                                                                                <td data-label="">5,000 cycles</td>
                                                                             </tr>
                                                                             <tr>
-                                                                                <td data-label="Circuit breakers">10A</td>
-                                                                                <td data-label="1P">EZ9F51110</td>
-                                                                                <td data-label="2P">EZ9F51210</td>
-                                                                                <td data-label="3P">EZ9F51310</td>
+                                                                                <td data-label=""></td>
+                                                                                <td data-label="">Mechanical</td>
+                                                                                <td data-label="">20,000 cycles</td>
                                                                             </tr>
                                                                             <tr>
-                                                                                <td data-label="Circuit breakers">16A</td>
-                                                                                <td data-label="1P">EZ9F51116</td>
-                                                                                <td data-label="2P">EZ9F51216</td>
-                                                                                <td data-label="3P">EZ9F51316</td>
+                                                                                <td data-label="">Operating temperature</td>
+                                                                                <td data-label="" class="hide"></td>
+                                                                                <td data-label="">-15°C to +60°C</td>
+                                                                            </tr>
+                                                                            
+                                                                            <tr>
+                                                                                <td data-label="">Storage temperature</td>
+                                                                                <td data-label="" class="hide"></td>
+                                                                                <td data-label="">-40°C to +85°C</td>
                                                                             </tr>
                                                                             <tr>
-                                                                                <td data-label="Circuit breakers">20A</td>
-                                                                                <td data-label="1P">EZ9F51120</td>
-                                                                                <td data-label="2P">EZ9F51220</td>
-                                                                                <td data-label="3P">EZ9F51320</td>
-                                                                            </tr>
-                                                                            <tr>
-                                                                                <td data-label="Circuit breakers">32A</td>
-                                                                                <td data-label="1P">EZ9F51132</td>
-                                                                                <td data-label="2P">EZ9F51232</td>
-                                                                                <td data-label="3P">EZ9F51332</td>
-                                                                            </tr>
-                                                                            <tr>
-                                                                                <td data-label="Circuit breakers">40A</td>
-                                                                                <td data-label="1P">EZ9F51140</td>
-                                                                                <td data-label="2P">EZ9F51240</td>
-                                                                                <td data-label="3P">EZ9F51340</td>
-                                                                            </tr>
-                                                                            <tr>
-                                                                                <td data-label="Circuit breakers">63A</td>
-                                                                                <td data-label="1P">EZ9F51163</td>
-                                                                                <td data-label="2P">EZ9F51263</td>
-                                                                                <td data-label="3P">EZ9F51363</td>
-                                                                            </tr>
-                                                                            <tr>
-                                                                                <td data-label="Circuit breakers">With in<br/>9-mm modules</td>
-                                                                                <td data-label="1P">2</td>
-                                                                                <td data-label="2P">4</td>
-                                                                                <td data-label="3P">6</td>
+                                                                                <td data-label="">Tropicalization</td>
+                                                                                <td data-label="" class="hide"></td>
+                                                                                <td data-label="">Treatment 2 (relative humidity: 95 % at 55°C)</td>
                                                                             </tr>
                                                                         </tbody>
                                                                     </table>
                                                                 </div>
+
+                                                                <!-- 表 3 -->
 
                                                                 <p class="xb-item--content mt10">
                                                                     Certified compliant IEC 60898-1
