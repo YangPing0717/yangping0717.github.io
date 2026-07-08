@@ -2116,7 +2116,7 @@ spline-viewer::part(logo) {
   left: 73%;
 }
 .hotspot.type3::before {
-  content: "漏電斷路器 (RCCB / RCBO)";
+  content: "漏電斷路器 (RCBO)";
 }
 @media (max-width: 768px) {
   .hotspot.type3::before {
