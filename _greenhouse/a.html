@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>全螢幕 SVG 多點位縮放導航</title>
+  <style>
+    /* 1. 確保網頁完全全螢幕，拔除滾動條與邊距 */
+    * { box-sizing: border-box; }
+    body, html { 
+      margin: 0; 
+      padding: 0; 
+      width: 100%; 
+      height: 100%; 
+      overflow: hidden; 
+      background-color: #2f3542; /* 深色背景襯托網頁 */
+    }
+
+    /* 2. 讓 SVG 容器填滿整個螢幕 */
+    #svg-container { 
+      width: 100vw; 
+      height: 100vh; 
+      display: block; /* 消除內聯元素的微小底邊距 */
+    }
+
+    /* 3. 點位樣式與滑鼠懸停動畫 */
+    .clickable-node { 
+      cursor: pointer; 
+      fill: #ff4757; 
+      stroke: #ffffff;
+      stroke-width: 3;
+      transition: fill 0.3s, r 0.3s; 
+    }
+    .clickable-node:hover { 
+      fill: #ffa502; 
+      r: 25; /* 懸停時稍微放大點位 */
+    }
+
+    /* 點位文字標籤樣式 */
+    .node-label {
+      fill: #ffffff;
+      font-family: sans-serif;
+      font-size: 14px;
+      pointer-events: none; /* 讓文字不干擾滑鼠點擊事件 */
+      text-anchor: middle;
+    }
+  </style>
+  <script src="https://cdn.jsdelivr.net/npm/svg-pan-zoom@3.6.1/dist/svg-pan-zoom.min.js"></script>
+</head>
+<body>
+
+  <svg id="svg-container" viewBox="0 0 1920 1080" width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg">
+    
+    <rect width="1920" height="1080" fill="#341f97" opacity="0.2" />
+    <circle cx="960" cy="540" r="500" fill="none" stroke="#54a0ff" stroke-width="2" stroke-dasharray="10,10" />
+    <text x="960" y="80" text-anchor="middle" fill="#ffffff" font-size="28">全螢幕地圖：請使用滑鼠滾輪縮放 / 拖曳平移，點擊任一目標點放大</text>
+
+    <g id="map-nodes">
+      <circle class="clickable-node" data-name="節點 A" cx="300" cy="200" r="18" />
+      <text class="node-label" x="300" y="240">節點 A</text>
+
+      <circle class="clickable-node" data-name="節點 B" cx="600" cy="350" r="18" />
+      <text class="node-label" x="600" y="390">節點 B</text>
+
+      <circle class="clickable-node" data-name="節點 C" cx="960" cy="250" r="18" />
+      <text class="node-label" x="960" y="290">節點 C</text>
+
+      <circle class="clickable-node" data-name="節點 D" cx="1400" cy="300" r="18" />
+      <text class="node-label" x="1400" y="340">節點 D</text>
+
+      <circle class="clickable-node" data-name="節點 E" cx="450" cy="600" r="18" />
+      <text class="node-label" x="450" y="640">節點 E</text>
+
+      <circle class="clickable-node" data-name="節點 F" cx="960" cy="540" r="18" />
+      <text class="node-label" x="960" y="580">中心節點 F</text>
+
+      <circle class="clickable-node" data-name="節點 G" cx="1500" cy="650" r="18" />
+      <text class="node-label" x="1500" y="690">節點 G</text>
+
+      <circle class="clickable-node" data-name="節點 H" cx="350" cy="850" r="18" />
+      <text class="node-label" x="350" y="890">節點 H</text>
+
+      <circle class="clickable-node" data-name="節點 I" cx="800" cy="800" r="18" />
+      <text class="node-label" x="800" y="840">節點 I</text>
+
+      <circle class="clickable-node" data-name="節點 J" cx="1300" cy="850" r="18" />
+      <text class="node-label" x="1300" y="890">節點 J</text>
+    </g>
+
+  </svg>
+
+  <script>
+    window.onload = function() {
+      // 1. 初始化全螢幕縮放套件
+      const panZoomInstance = svgPanZoom('#svg-container', {
+        zoomEnabled: true,
+        controlIconsEnabled: false, // 隱藏右下角控制鈕，讓畫面更乾淨
+        fit: true,
+        center: true,
+        minZoom: 0.2,
+        maxZoom: 15
+      });
+
+      // 監聽視窗大小改變，確保全螢幕縮放比例正確
+      window.addEventListener('resize', function() {
+        panZoomInstance.resize();
+        panZoomInstance.fit();
+        panZoomInstance.center();
+      });
+
+      // 2. 獲取所有具備 .clickable-node 類別的點位
+      const nodes = document.querySelectorAll('.clickable-node');
+
+      // 3. 使用 forEach 幫每一個點位綁定點擊事件
+      nodes.forEach(function(node) {
+        node.addEventListener('click', function(event) {
+          // 阻止事件冒泡（避免觸發其他底層的點擊事件）
+          event.stopPropagation();
+
+          // 取得被點擊點位的 cx, cy 座標
+          const targetX = parseFloat(node.getAttribute('cx'));
+          const targetY = parseFloat(node.getAttribute('cy'));
+          
+          // 印出點擊的節點名稱（Debug 用）
+          console.log('點擊了：', node.getAttribute('data-name'));
+
+          // 設定你想放大的目標倍率（可自由調整，數字越大放得越大）
+          const targetZoomLevel = 5; 
+          panZoomInstance.zoom(targetZoomLevel);
+
+          // 核心計算：將目標點移動到螢幕正中央
+          const sizes = panZoomInstance.getSizes();
+          const newX = (sizes.width / 2) - (targetX * panZoomInstance.getSizes().realZoom);
+          const newY = (sizes.height / 2) - (targetY * panZoomInstance.getSizes().realZoom);
+
+          // 執行平移
+          panZoomInstance.pan({ x: newX, y: newY });
+        });
+      });
+    };
+  </script>
+</body>
+</html>

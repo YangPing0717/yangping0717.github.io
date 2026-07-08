@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>全螢幕 SVG 點位平滑縮放特效 (GSAP)</title>
+  <style>
+    /* (CSS 部分保持不變) */
+    * { box-sizing: border-box; }
+    body, html { 
+      margin: 0; padding: 0; width: 100%; height: 100%; overflow: hidden; 
+      background-color: #2f3542; 
+    }
+    #svg-container { width: 100vw; height: 100vh; display: block; }
+    .clickable-node { 
+      cursor: pointer; fill: #ff4757; stroke: #ffffff; stroke-width: 3;
+      /* 這裡的 transition 負責懸停時的微調，不是點擊的大動畫 */
+      transition: fill 0.3s, r 0.3s, stroke-width 0.3s; 
+    }
+    .clickable-node:hover { 
+      fill: #ffa502; r: 25; stroke-width: 5;
+    }
+    .node-label {
+      fill: #ffffff; font-family: sans-serif; font-size: 14px;
+      pointer-events: none; text-anchor: middle;
+    }
+  </style>
+
+  <script src="https://cdn.jsdelivr.net/npm/svg-pan-zoom@3.6.1/dist/svg-pan-zoom.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+</head>
+<body>
+
+  <svg id="svg-container" viewBox="0 0 1920 1080" width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg">
+    <rect width="1920" height="1080" fill="#341f97" opacity="0.2" />
+    <text x="960" y="80" text-anchor="middle" fill="#ffffff" font-size="28">SVG 平滑動畫導航 (GSAP)</text>
+
+    <g id="map-nodes">
+      <circle class="clickable-node" data-name="節點 A" cx="300" cy="200" r="18" />
+      <text class="node-label" x="300" y="240">節點 A</text>
+
+      <circle class="clickable-node" data-name="節點 B" cx="600" cy="350" r="18" />
+      <text class="node-label" x="600" y="390">節點 B</text>
+
+      <circle class="clickable-node" data-name="節點 C" cx="960" cy="250" r="18" />
+      <text class="node-label" x="960" y="290">節點 C</text>
+
+      <circle class="clickable-node" data-name="節點 D" cx="1400" cy="300" r="18" />
+      <text class="node-label" x="1400" y="340">節點 D</text>
+
+      <circle class="clickable-node" data-name="節點 F" cx="960" cy="540" r="18" />
+      <text class="node-label" x="960" y="580">中心節點 F</text>
+
+      <circle class="clickable-node" data-name="節點 J" cx="1300" cy="850" r="18" />
+      <text class="node-label" x="1300" y="890">節點 J</text>
+    </g>
+  </svg>
+
+  <script>
+    window.onload = function() {
+      // 1. 初始化 svg-pan-zoom (保持滾輪縮放與拖曳功能)
+      const panZoomInstance = svgPanZoom('#svg-container', {
+        zoomEnabled: true,
+        controlIconsEnabled: false,
+        fit: true,
+        center: true,
+        minZoom: 0.2,
+        maxZoom: 15,
+        // 重要：如果在使用滑鼠滾輪或拖曳時，GSAP 動畫正在進行，
+        // 需要讓 svg-pan-zoom 暫停接管，否則會發生衝突（抖動）。
+        // 這裡設定當滑鼠操作開始時，殺掉 GSAP 的動畫。
+        onPan: function() { if(this.gsapTween) this.gsapTween.kill() },
+        onZoom: function() { if(this.gsapTween) this.gsapTween.kill() }
+      });
+
+      window.addEventListener('resize', function() {
+        panZoomInstance.resize();
+        panZoomInstance.fit();
+        panZoomInstance.center();
+      });
+
+      const nodes = document.querySelectorAll('.clickable-node');
+
+      nodes.forEach(function(node) {
+        node.addEventListener('click', function(event) {
+          event.stopPropagation();
+
+          // 2. 獲取目標資訊
+          const targetX = parseFloat(node.getAttribute('cx'));
+          const targetY = parseFloat(node.getAttribute('cy'));
+          const targetZoomLevel = 5; // 目標放大倍率
+
+          // 3. ✨ GSAP 動畫核心邏輯 ✨
+
+          // A. 先獲取「當前」的狀態值
+          const currentPan = panZoomInstance.getPan();
+          const currentZoom = panZoomInstance.getZoom();
+
+          // B. 殺掉之前可能還在執行的動畫，避免疊加
+          if (panZoomInstance.gsapTween) {
+            panZoomInstance.gsapTween.kill();
+          }
+
+          // C. 建立一個虛擬物件來儲存「動畫中」的變數
+          // 我們將從當前狀態 (currentPan, currentZoom) 動畫過渡到目標狀態
+          const animationState = {
+            zoom: currentZoom,
+            panX: currentPan.x,
+            panY: currentPan.y
+          };
+
+          // D. 計算目標 Pan 位置 (這部分與上次相同，只是放到動畫中計算)
+          // 為了計算準確，我們需要基於「目標縮放倍率」來算平移距離
+          const sizes = panZoomInstance.getSizes();
+          const targetRealZoom = sizes.realZoom * (targetZoomLevel / currentZoom); // 預估目標 realZoom
+          const destX = (sizes.width / 2) - (targetX * targetRealZoom);
+          const destY = (sizes.height / 2) - (targetY * targetRealZoom);
+
+          // E. 使用 GSAP 產生 smooth zoomin 特效
+          // 將 animationState 物件的值，在 0.8 秒內變成 destX, destY, targetZoomLevel
+          panZoomInstance.gsapTween = gsap.to(animationState, {
+            duration: 0.8,         // 動畫持續時間 (秒)，你可以隨意調整
+            zoom: targetZoomLevel,  // 目標 Zoom
+            panX: destX,            // 目標 Pan X
+            panY: destY,            // 目標 Pan Y
+            ease: "power2.out",     // 減速效果（由快變慢），看起來很自然
+            
+            // 重要：在動畫執行的每一幀 (Update)，手動更新 svg-pan-zoom
+            onUpdate: function() {
+              // 1. 先設定 Zoom（不觸發事件以免死迴圈）
+              panZoomInstance.zoomAtPoint(animationState.zoom, {x:sizes.width/2, y:sizes.height/2});
+              // 2. 設定 Pan 位置
+              panZoomInstance.pan({ x: animationState.panX, y: animationState.panY });
+            },
+            onComplete: function() {
+              console.log('ZoomIn 動畫完成：', node.getAttribute('data-name'));
+              panZoomInstance.gsapTween = null; // 清空動畫物件
+            }
+          });
+        });
+      });
+    };
+  </script>
+</body>
+</html>

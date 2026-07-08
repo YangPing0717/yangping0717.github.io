@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>極致平滑 SVG 縮放特效</title>
+  <style>
+    * { box-sizing: border-box; }
+    body, html { 
+      margin: 0; padding: 0; width: 100%; height: 100%; overflow: hidden; 
+      background-color: #2f3542; 
+    }
+    #svg-container { width: 100vw; height: 100vh; display: block; }
+    
+    /* 點位樣式 */
+    .clickable-node { 
+      cursor: pointer; fill: #ff4757; stroke: #ffffff; stroke-width: 3;
+      transition: fill 0.3s, r 0.3s; 
+    }
+    .clickable-node:hover { fill: #ffa502; r: 25; }
+    .node-label {
+      fill: #ffffff; font-family: sans-serif; font-size: 14px;
+      pointer-events: none; text-anchor: middle;
+    }
+  </style>
+
+  <script src="https://cdn.jsdelivr.net/npm/svg-pan-zoom@3.6.1/dist/svg-pan-zoom.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+</head>
+<body>
+
+  <svg id="svg-container" viewBox="0 0 1920 1080" width="100%" height="100%">
+    <g id="main-viewport">
+      <rect width="1920" height="1080" fill="#341f97" opacity="0.2" />
+      <text x="960" y="80" text-anchor="middle" fill="#ffffff" font-size="28">絲滑動畫導航展示</text>
+
+      <g id="map-nodes">
+        <circle class="clickable-node" data-name="節點 A" cx="300" cy="200" r="18" />
+        <text class="node-label" x="300" y="240">節點 A</text>
+
+        <circle class="clickable-node" data-name="節點 B" cx="600" cy="350" r="18" />
+        <text class="node-label" x="600" y="390">節點 B</text>
+
+        <circle class="clickable-node" data-name="節點 C" cx="960" cy="250" r="18" />
+        <text class="node-label" x="960" y="290">節點 C</text>
+
+        <circle class="clickable-node" data-name="節點 D" cx="1400" cy="300" r="18" />
+        <text class="node-label" x="1400" y="340">節點 D</text>
+      </g>
+    </g>
+  </svg>
+
+  <script>
+    window.onload = function() {
+      // 1. 初始化 svg-pan-zoom，但只讓它負責「滑鼠手勢」
+      const panZoomInstance = svgPanZoom('#svg-container', {
+        zoomEnabled: true,
+        controlIconsEnabled: false,
+        fit: true,
+        center: true,
+        minZoom: 0.2,
+        maxZoom: 15
+      });
+
+      window.addEventListener('resize', function() {
+        panZoomInstance.resize();
+        panZoomInstance.fit();
+        panZoomInstance.center();
+      });
+
+      // 2. 獲取我們要操作的虛擬視口與點位
+      const viewport = document.getElementById('main-viewport');
+      const nodes = document.querySelectorAll('.clickable-node');
+
+      nodes.forEach(function(node) {
+        node.addEventListener('click', function(event) {
+          event.stopPropagation();
+
+          // A. 獲取點擊的目標座標
+          const targetX = parseFloat(node.getAttribute('cx'));
+          const targetY = parseFloat(node.getAttribute('cy'));
+          
+          // B. 定義想要放大的倍率
+          const targetZoom = 4; 
+
+          // C. 關鍵平滑算法：計算如何讓該點居中
+          // 畫布中心點是 (1920/2, 1080/2) = (960, 540)
+          // 為了讓目標點放大後在中心，平移量 = 中心點 - (目標點 * 放大倍率)
+          const centerX = 1920 / 2;
+          const centerY = 1080 / 2;
+          const moveX = centerX - (targetX * targetZoom);
+          const moveY = centerY - (targetY * targetZoom);
+
+          // D. 先將 svg-pan-zoom 重設回初始狀態（這樣基礎矩陣才不會歪掉）
+          panZoomInstance.reset();
+
+          // E. ✨ GSAP 頂級絲滑動畫 ✨
+          // 我們直接用 CSS 的 transform屬性對 <g> 進行硬體加速渲染
+          gsap.to(viewport, {
+            duration: 1.2,           // 拉長到 1.2 秒，慢速過渡更顯平滑
+            transformOrigin: "0px 0px", // 確保以 SVG 的左上角原點做變換基準
+            attr: {
+              // 利用 SVG 的 transform 屬性，同時變更位置與縮放
+              transform: `translate(${moveX}, ${moveY}) scale(${targetZoom})`
+            },
+            ease: "power3.out",      // 使用更高級的 power3 減速曲線，極度舒適
+            onComplete: function() {
+              // 動畫完成後，同步更新 svg-pan-zoom 的內部數值，
+              // 這樣接下來使用者用滑鼠滾輪時，才不會「跳回原位」
+              panZoomInstance.zoom(targetZoom);
+              panZoomInstance.pan({ x: moveX, y: moveY });
+              
+              // 暫時重設 viewport 的 transform，交還給套件接管
+              viewport.setAttribute('transform', 'matrix(1 0 0 1 0 0)');
+            }
+          });
+        });
+      });
+    };
+  </script>
+</body>
+</html>
