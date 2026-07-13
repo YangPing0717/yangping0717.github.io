@@ -275,6 +275,9 @@ h1.ultra-big.s3 span.text-line span.descrip {
     line-height: 10vw;
     padding: 0;
   }
+  h2.ty2 {
+    font-size: 9.2vw;
+  }
 }
 
 @media (max-width: 768px) {
@@ -2120,7 +2123,7 @@ spline-viewer::part(logo) {
 }
 @media (max-width: 768px) {
   .hotspot.type3::before {
-    left: -13rem;
+    left: -8.5rem;
   }
 }
 .hotspot.type4 {
