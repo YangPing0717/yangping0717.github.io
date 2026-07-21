@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <title>Spline 相機切換範例</title>
+  <!-- 1. 載入 Spline Viewer 官方腳本 -->
+  <script type="module" src="https://unpkg.com/@splinetool/viewer/build/spline-viewer.js"></script>
+  
+  <style>
+    body { margin: 0; padding: 0; overflow: hidden; }
+    
+    /* 將按鈕浮動在 3D 畫面上方 */
+    .controls {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      z-index: 10;
+    }
+    button {
+      padding: 10px 16px;
+      font-size: 14px;
+      cursor: pointer;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      background: #ffffff;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 按鈕區 -->
+  <div class="controls">
+    <button id="btn-cam-1">視角一 (Main Camera)</button>
+    <button id="btn-cam-2">視角二 (Side Camera)</button>
+  </div>
+
+  <!-- 2. 坎入 Spline Viewer -->
+  <spline-viewer id="my-spline" url="https://prod.spline.design/JlnAz6QvfQenGRDu/scene.splinecode"></spline-viewer>
+
+  <script>
+    const viewer = document.getElementById('my-spline');
+    const btnCam1 = document.getElementById('btn-cam-1');
+    const btnCam2 = document.getElementById('btn-cam-2');
+
+    let spline = null;
+
+    // 3. 監聽 Spline 載入完成事件，取得 Application 實例
+    viewer.addEventListener('load-complete', (e) => {
+      spline = e.detail; // e.detail 即為 Spline API 的應用程式實例
+    });
+
+    // 4. 按鈕觸發相機切換
+    btnCam1.addEventListener('click', () => {
+      if (spline) {
+        // 填入你在 Spline 編輯器左側圖層說明的「相機名稱」或 ID
+        spline.setCamera('Cam_b_1'); 
+      }
+    });
+
+    btnCam2.addEventListener('click', () => {
+      if (spline) {
+        spline.setCamera('Camera');
+      }
+    });
+  </script>
+</body>
+</html>
