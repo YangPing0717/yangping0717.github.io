@@ -278,6 +278,36 @@
            }
         });
 
+        //  eHome phone frames
+        jQuery("#item-carousel-big-eHome").owlCarousel({
+           center:true,
+           loop:true,
+           margin: 20,
+           nav:false,
+           dots:true,
+           autoplay: true,
+           autoplayTimeout:4000,
+           autoplayHoverPause:true,
+           responsive:{
+            //     1440:{
+            //        items:4
+            //    },
+               1000:{
+                   items: 5.3,
+                //    center:false
+                    margin: 28
+               },
+               600:{
+                   items:2
+               },
+               0:{
+                   items:1.5
+               }
+           }
+        });
+
+
+
 
         // 養生村 1
         jQuery("#item-carousel-big-first").owlCarousel({
@@ -571,6 +601,29 @@
                 }
 			}
          });
+
+        //  eHome phone frames
+         jQuery("#testimonial-carousel-eHome").owlCarousel({
+            center: true,
+			loop:true,
+			margin:20,
+			responsive:{
+                1440:{
+					items:7
+				},
+				1000:{
+					items:2
+				},
+				600:{
+					items:2
+				},
+                0:{
+                    items:1.1,
+                    center: false
+                }
+			}
+         });
+
 
          jQuery("#testimonial-carousel-1-col").owlCarousel({
             center: false,

@@ -5757,6 +5757,67 @@ body[data-aos-easing=ease] [data-aos] {
   }
 }
 
+@media only screen and (min-width: 1200px) and (max-width: 1500px) {
+  .ehome_construct {
+    padding: 0 0 0 60px;
+  }
+}
+.ehome_construct h2 {
+  margin-bottom: 0.4rem;
+}
+.ehome_construct h4.bigger {
+  font-size: 1.8rem;
+  line-height: 1.2;
+}
+@media (max-width: 767px) {
+  .ehome_construct h4.bigger {
+    font-size: 1.4rem;
+    line-height: 1.4;
+  }
+}
+.ehome_construct h4.bestAI {
+  font-size: 1.6rem;
+  text-align: initial;
+}
+@media (max-width: 767px) {
+  .ehome_construct h4.bestAI {
+    font-size: 1.3rem;
+  }
+}
+.ehome_construct .comparison-list h3 {
+  font-size: 2rem;
+  padding: 20px 0 10px;
+}
+@media (max-width: 767px) {
+  .ehome_construct .comparison-list h3 {
+    font-size: 1.6rem;
+    padding: 16px 0 4px 16px;
+    letter-spacing: 0;
+    text-align: left;
+  }
+}
+.ehome_construct .comparison-list h3::after {
+  content: "架構示意圖";
+  font-size: 7rem;
+  color: transparent !important;
+  -webkit-text-stroke: 0.5px #ffffff;
+  line-height: 0;
+  font-weight: 900;
+  position: absolute;
+  top: -1%;
+  letter-spacing: -6px;
+  right: 3%;
+}
+@media (max-width: 767px) {
+  .ehome_construct .comparison-list h3::after {
+    font-size: 3rem;
+    -webkit-text-stroke: 0.3px #ffffff;
+  }
+}
+.ehome_construct .comparison-list .c-item_wrap {
+  padding: 2.4rem 1.8rem 2.4rem 0;
+}
+
 @media (max-width: 767px) {
   .mobile-mt20 {
     margin-top: 20px !important;

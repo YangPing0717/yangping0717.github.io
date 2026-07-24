@@ -2,7 +2,7 @@
 <html lang="zxx">
 
 <head>
-    <title>易控樓宇智慧化控制系統 (BA) - 易控智慧生活科技</title>
+    <title>易控智慧家庭 eHome - 易控智慧生活科技</title>
     <link rel="icon" href="images/ico_favicon.png" type="image/gif" sizes="16x16">
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
     <meta content="width=device-width, initial-scale=1.0" name="viewport" >
@@ -13,10 +13,10 @@
     <meta name="msapplication-TileColor" content="#000">
 
     <!-- SOCIAL MEDIA META -->
-    <meta property="og:description" content="易控樓宇智慧化控制系統 (BA) - 易控智慧生活科技">
+    <meta property="og:description" content="易控智慧家庭 eHome - 易控智慧生活科技">
     <meta property="og:image" content="images/EZCON2024_share.jpg">
-    <meta property="og:site_name" content="易控樓宇智慧化控制系統 (BA) - 易控智慧生活科技">
-    <meta property="og:title" content="易控樓宇智慧化控制系統 (BA) - 易控智慧生活科技">
+    <meta property="og:site_name" content="易控智慧家庭 eHome - 易控智慧生活科技">
+    <meta property="og:title" content="易控智慧家庭 eHome - 易控智慧生活科技">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://www.ezcontw.com/">
 
@@ -55,6 +55,8 @@
     <!-- <script src="https://kit.fontawesome.com" crossorigin="anonymous"></script> -->
     <!-- Or use a CDN (Example for version 6) -->
     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com" integrity="..." crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
+
+    <link rel="stylesheet" href="css/ai_butler.css">
 
     <!-- Sidebar Scroll Indicator -->
     <link rel="stylesheet" href="css/indicator.css">
@@ -133,7 +135,7 @@
                                             <li><a class="menu-item" href="https://www.ezcontw.com/related_articles/"  >相關文章</a></li>
                                         </ul>
                                     </li>
-                                    <li><a class="menu-item" href="#!">易控樓宇智慧化控制系統 (BA)</a>
+                                    <li><a class="menu-item" href="#!">易控智慧家庭 (eHome)</a>
                                         <ul>
                                             <li><a class="menu-item" href="#section-schedule-title">沉浸式 360 度圖控系統</a></li>
                                             <li><a class="menu-item" href="#process">易控獨家 智慧連動 全時全域</a></li>
@@ -176,7 +178,7 @@
 
             
             <div id="top"></div>
-            <section id="section-hero" data-title='易控樓宇智慧化控制系統&ensp;BA' class="jarallax bim_page_start">
+            <section id="section-hero" data-title='易控智慧家庭&ensp;eHome' class="jarallax eho_page">
                 <div class="txt_direction">控制畫面微互動，按住鍵盤：<br/>
                     <span> Alt&ensp;鍵</span>：可 360° 旋轉<br/>
                     <span><i class="fa fa-windows"></i>&ensp;鍵</span>：可移動<br/>
@@ -185,66 +187,132 @@
                 </div>
                 <!-- BIM mod -->
                 <div class="full wow fadeInUp" data-wow-duration="1.2s" data-wow-delay=".8s" >
-                    <script type="module" src="https://unpkg.com/@splinetool/viewer@1.12.87/build/spline-viewer.js"></script>
-                    <spline-viewer loading-anim-type="spinner-small-dark" url="https://prod.spline.design/ow3jz7VpiWPDsyLa/scene.splinecode"></spline-viewer>
-                    <div class="de-gradient-edge-bottom"></div>
+                    <!-- <script type="module" src="https://unpkg.com/@splinetool/viewer@1.12.87/build/spline-viewer.js"></script>
+                    <spline-viewer loading-anim-type="spinner-small-dark" url="https://prod.spline.design/ow3jz7VpiWPDsyLa/scene.splinecode"></spline-viewer> -->
+                    
+                    <!-- <script type="module" src="https://unpkg.com/@splinetool/viewer@1.12.98/build/spline-viewer.js"></script>
+                    <spline-viewer loading-anim-type="spinner-big-dark" touch-action="pan-y" url="https://prod.spline.design/JlnAz6QvfQenGRDu/scene.splinecode"></spline-viewer> -->
+                    
+                    <!-- 固定在右下角的 Reset 按鈕 -->
+                    <!-- <button id="reset-btn" style="
+                        position: absolute;
+                        bottom: 20px;
+                        right: 20px;
+                        z-index: 10;
+                        padding: 10px 16px;
+                        border-radius: 36px;
+                        background: rgba(255, 255, 255, 0.2);
+                        backdrop-filter: blur(10px); 
+                        color: white;
+                        border: 1px solid rgba(255, 255, 255, 0.3);
+                        cursor: pointer;
+                    ">
+                        ↺ Reset View
+                    </button> -->
+
+                    <div class="viewer-container">
+                        <div class="controls">
+                            <button id="btn-cam-1" class="btn">重置視角</button>
+                            <button id="btn-cam-2" class="btn">客廳</button>
+                            <button id="btn-cam-3" class="btn">餐廳</button>
+                            <button id="btn-cam-4" class="btn">臥室房間區</button>
+                            <button id="btn-cam-5" class="btn">衛浴區</button>
+                        </div>
+                        <canvas id="canvas3d"></canvas>
+                    </div>
+                    
+                    
+                    <!-- <div class="de-gradient-edge-bottom"></div> -->
                 </div>
 
-                <img src="images/background/BA_bg.jpg" class="jarallax-img mobile_bg type4 " alt="">
-                <div class="bim_start jarallax">
+                <img src="images/background/eHome_BG2.jpg" class="jarallax-img mobile_bg type5 " alt="">
+                
+                <div class="eho_start_txt jarallax">
                     <div class="container position-relative z1000 wow fadeInDown">
                         <div class="row align-items-center position-relative">
-                            <div class="col-lg-10">
+                            <!-- <div class="col-lg-12">
                                 <img src="images/background/emp-big.png" class="sm-img-fluid img-fluid mt-100 sm-mt-0 emp_img" alt="">
                             </div>
-                            <div class="clearfix"></div>    
-                            <div class="col-lg-1 col-1">
+                            <div class="clearfix"></div>     -->
+                            <!-- <div class="col-lg-1 col-1">
                                 <img src="images/misc/arrow-up-right.png" class="forPhone_hide img-fluid wow fadeInLeft bo" alt="" data-wow-delay=".8s" >
-                                <!-- <img src="assets/img/icon/animated-gif02.gif" class="img-fluid type2 wow fadeInLeft" alt="icon" data-wow-delay=".8s" >  -->
-                            </div>
-                            <div class="col-lg-6 col-11 wow fadeInUp" data-wow-delay=".8s" >
+                                <img src="assets/img/icon/animated-gif02.gif" class="img-fluid type2 wow fadeInLeft" alt="icon" data-wow-delay=".8s" > 
+                            </div> -->
+                            <div class="col-lg-4 col-11 wow fadeInUp" data-wow-delay=".8s" >
                                 <div class="position-relative">
-                                    <h2 class="mb-2 text-lg-start forPhone_br">樓宇智慧化<br/>控制系統(BA)</h2>
-                                    <h2 class="mb-2 text-start bestAI">
+                                    <h3 class="mb-2 text-lg-start forPhone_br">易控智慧家庭<br/> eHome</h3>
+                                    <!-- <h2 class="mb-2 text-start bestAI">
                                         偵知 <i class="fa fa-chevron-right"></i>
                                         顯示 <i class="fa fa-chevron-right"></i>
                                         連動
-                                    </h2>
+                                    </h2> -->
                                     <!-- <h3 class="mb-2"></h3> -->
                                     <h5 class="mt-2 mb-2 s2">
                                         <span class="wow fadeInRight" data-wow-delay=".2s">
-                                            <i class="id-color fas fa-tasks"></i>系統整合指標
-                                        </span>
-                                        <span class="wow fadeInRight" data-wow-delay=".2s">
+                                            <i class="id-color fas fa-tasks"></i>智慧化系統整合設計與智慧室內控制應用
+                                        </span><br/>
+                                        <!-- <span class="wow fadeInRight forPhone_hide" data-wow-delay=".2s">
                                             <i class="id-color fas fa-gears"></i>維運管理指標
-                                        </span>
-                                        <span class="wow fadeInRight forPhone_hide" data-wow-delay=".2s">
+                                        </span> -->
+                                        <span class="wow fadeInRight" data-wow-delay=".2s">
                                             <i class="id-color fas fa-network-wired"></i>智慧創新指標
                                         </span>
                                     </h5>
-                                    <p class="no-bottom ">
-                                        偵知是眼、顯示是腦、連動是手，三者完美結合，讓建築成為具備反應能力的智慧生命體。
-                                        BA 系統是智慧建築整合的核心，透過設備串聯與集中管理，讓建築從「被動運作」轉為「主動管理」。易控以穩定的控制核心落實數據監測與節能調度，在降低營運成本的同時，全面優化環境舒適度，打造高效能的頂級 AI 智慧建築。
+                                    <p class="">
+                                        去繁化簡，讓科技隱形，只有生活的優雅、從容。<br/>
+                                        <!-- 科技不是繁複操作，是讓生活更優雅、從容。<br/> -->
+                                         易控 eHome 沉浸式 360 度圖控系統，摒棄複雜，直覺操控。
+                                         透過系統整合，燈光、空調、安全，串聯宅內各項設備，打造 AI 智慧化的居家體驗，
+                                         更為您的居住空間注入滿滿科技奢華感，讓回家成為最優雅、安全的極致享受。
                                     </p>
+                                    <!-- <div class="spacer-single d-sm-block"></div> -->
+                                    <a class="btn-main big type3 button wow fadeInLeft" href="#section-schedule-title" data-wow-delay=".8s" >
+                                        eHome 系統核心
+                                        <span class="hoverEffect">
+                                            <span></span>
+                                        </span>
+                                    </a>
+                                    <!-- <a class="btn-main big type2 wow fadeInLeft" href="https://www.ezcontw.com/da-li-jian-she-da-li-he-yun-she-qu-ji-qi-ren/">
+                                        <span class="forPhone_hide">達麗建設 </span>達麗河藴
+                                    </a> -->
                                 </div>
                             </div>
 
-                            <div class="spacer-single d-lg-none d-sm-block"></div>
+                            <!-- <div class="spacer-single d-lg-none d-sm-block"></div> -->
 
-                            <div class="col-lg-3">
-                                <a class="btn-main big button wow fadeInLeft" href="#section-schedule-title" data-wow-delay=".8s" >BA 系統核心能力
-                                    <span class="hoverEffect">
-                                        <span></span>
-                                    </span>
-                                </a>
-                            </div>
+                            <!-- <div class="col-lg-3">
+                                
+                            </div> -->
                         </div>
                     </div>
-                    <div class="de-gradient-edge-bottom"></div>
+                    <!-- <div class="de-gradient-edge-bottom"></div> -->
                 </div>
             </section>
 
-            
+            <div class="spline-container hide_tem" style="position: relative; width: 100vw; height: 100vh;">
+                <!-- Spline Viewer -->
+                <!-- <spline-viewer id="my-spline" url="https://prod.spline.design/YOUR_SCENE_ID/scene.splinecode"></spline-viewer> -->
+
+                <script type="module" src="https://unpkg.com/@splinetool/viewer@1.12.98/build/spline-viewer.js"></script>
+                <spline-viewer id="my-spline" loading-anim-type="spinner-big-dark" touch-action="pan-y" url="https://prod.spline.design/JlnAz6QvfQenGRDu/scene.splinecode"></spline-viewer>
+
+                <!-- 固定在右下角的 Reset 按鈕 -->
+                <button id="reset-btn" style="
+                    position: absolute;
+                    bottom: 20px;
+                    right: 20px;
+                    z-index: 10;
+                    padding: 10px 16px;
+                    border-radius: 20px;
+                    background: rgba(255, 255, 255, 0.2);
+                    backdrop-filter: blur(10px); /* VisionOS 玻璃磨砂感 */
+                    color: white;
+                    border: 1px solid rgba(255, 255, 255, 0.3);
+                    cursor: pointer;
+                ">
+                    ↺ Reset View
+                </button>
+            </div>
             
 
             <!-- breadcrumb -->
@@ -257,7 +325,7 @@
                                 <ol class="breadcrumb mb40">
                                     <li class="breadcrumb-item"><a href="https://www.ezcontw.com/">首頁</a></li>
                                     <li class="breadcrumb-item"><a href="https://www.ezcontw.com/all_services/">服務項目</a></li>
-                                    <li class="breadcrumb-item active" aria-current="page">樓宇智慧化控制系統 (BA)</li>
+                                    <li class="breadcrumb-item active" aria-current="page">易控智慧家庭 eHome</li>
                                 </ol>
                             </nav>
                         </div>
@@ -265,29 +333,60 @@
                 </div>
             </section>
 
-            <!-- <section id="section-features" class="no-bottom no-top bim_feat">
+            <!-- AI speaker -->
+            <section id="section-features" class="no-bottom no-top bim_feat" data-title='易控&ensp;AI&ensp;智慧管家' >
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-12 text-center sec-title">
-                            <h2 class="title text-uppercase wow fadeInUp">易控樓宇智慧化控制系統 (BA)<br/>
+                            <!-- <h2 class="title text-uppercase wow fadeInUp">易控智慧家庭 eHome<br/>
                                 <span class="text-gradient-light bigger">沉浸式</span> <span class="bestAI bigger">360度圖控系統</span>
-                            </h2>
+                            </h2> -->
+                            
+                            <div class="ai_speaker">
+                                <canvas id="bio-eye"></canvas>
+                                <div id="start-screen">
+                                    <h1>EZCON AI</h1>
+                                    <p>Advanced User Response Agent</p>
+                                    <p style="font-size: 0.8rem; margin-top: 20px;">
+                                        <strong>我是您的易控 AI 智慧管家</strong><br/>
+                                        無論是解答疑問、生活協助還是隨意聊天，易控 AI 隨時為您服務。點擊按鈕，隨時隨地開啟我們的對話，傾聽您的需求，為您打造極致便利的 AI 智慧生活體感。
+                                    </p>
+                                    <button onclick="bootSystem()">呼叫易控 AI 智慧管家</button>
+                                </div>
+                                <!-- <div class="bio-eye-container">
+                                    
+                                </div> -->
+                                <div id="interface-container">
+                                    <div id="ui-layer">
+                                        <div id="status-display">SYSTEM OFFLINE</div>
+                                        <div id="transcript"></div>
+                                    </div>
+                                </div>
+                                <div class="disclaimer">AI generated content can be unpredictable. Use discretion.</div>
+                            </div>
+                        
                         </div>
-                        <div class="spacer-single"></div>
+
+                        <!-- <div class="spacer-single"></div>
+                        <div class="spacer-triple"></div> -->
+                        <div class="spacer-triple"></div>
                     </div>
                 </div>
-            </section> -->
+            </section>
+
+
+            
 
         
-            <section id="section-schedule-title" data-title='沉浸式&ensp;360&ensp;度圖控系統' class="bim_feat no-bottom no-top">
+            <section id="section-schedule-title" data-title='沉浸式&ensp;360&ensp;度圖控系統' class="bim_feat no-bottom">
                 <div class="container wow fadeInUp" data-wow-delay=".3s">
                     <div class="sec-title about-sec-title"> 
-                        <span class="sub-title">易控樓宇智慧化控制系統 (BA)</span>
+                        <span class="sub-title">易控智慧家庭&ensp;eHome</span>
                         <h2 class="title type3">
                             <span class="text-gradient-light bigger">沉浸式</span>
                             <span><img src="assets/img/icon/cubes.gif" alt="image" ></span>
                             <span class="bestAI bigger">360 度圖控系統</span><br/>
-                            全景監控，讓管理如臨現場
+                            全景監控，讓宅內操控如臨現場
                             <span><img src="assets/img/icon/tria_a.gif" alt="image"></span>
                             <div class="discrip">360 度全景影像技術，提供無死角監控視角，並透過影像串聯實現虛擬巡檢，讓管理人員可隨時遠端掌握建築各區域狀況，快速應對異常事件。</div>
                         </h2>
@@ -295,80 +394,12 @@
                 </div>
             </section>
 
-            <section id="section-gallery" data-title='圖控系統核心功能' class="gallery_type2 no-top">
+            <section id="section-gallery" data-title='圖控系統核心功能' class="gallery_type3 no-top">
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-lg-12" data-jarallax-element="-20">
                             <div class="d-carousel wow fadeInRight" >
-                                <div id="item-carousel-big" class="owl-carousel no-hide owl-center" data-wow-delay="1s">
-
-                                    <div class="c-item">                            
-                                        <a href="#!">
-                                            <span class="c-item_info">
-                                                <span class="c-item_title"><span class="bestAI">BA 環景 360 度圖控系統，沉浸式監控體驗</span>
-                                                    <span class="c-item_discr">
-                                                        <span class="light">沉浸式監控體驗 </span> 採用360度全景攝影技術，無死角現場監控視角讓管理者如臨現場掌握建築物全域實況<br/>
-                                                        <span class="light">虛擬巡檢功能 </span> 透過全景影像串聯，實現遠端虛擬巡檢，大幅降低人力成本，提升巡檢效率與頻率<br/>
-                                                        <span class="light">遠距即時掌控 </span> 管理人員可隨時隨地透過系統查看建築各區域實況，快速回應異常狀況，提升管理效能
-                                                    </span>
-                                                    <!-- <span class="c-item_discr">採用 360 度全景攝影技術，提供無死角現場監控視角，讓管理者如臨現場般掌握建築物各區域實況</span> -->
-                                                </span>
-                                            </span>
-                                            <div class="c-item_wrap" >
-                                                <!-- <img src="demo/preview/feat_04.jpg" class="lazy img-fluid" alt="" > -->
-                                                <div class="video-container" data-video-src="video/環景360.mp4">
-                                                    <!-- JS 會將 video 標籤插入於此 -->
-                                                    <video autoplay muted loop playsinline poster="video/BIM-fallback.jpg" class="type3">
-                                                        <source src="video/環景360.mp4" type="video/mp4">
-                                                    </video>
-                                                </div>
-                                            </div>
-                                        </a>
-                                    </div>
-
-                                    <div class="c-item">                            
-                                        <a href="#!">
-                                            <span class="c-item_info">
-                                                <span class="c-item_title wild"><span class="bestAI">BIM 建築資訊模組整合</span>
-                                                    <span class="c-item_discr">
-                                                        <span class="light">可視化管理 </span> 3D模型直觀呈現建築全貌，快速定位設備位置<br/>
-                                                        <span class="light">數據整合 </span> 整合各系統資訊，建立完整數位資產檔案<br/>
-                                                        <span class="light">預測維護 </span> 結合歷史數據，提前預警設備異常狀況
-                                                    </span>
-                                                </span>
-                                            </span>
-                                            <div class="c-item_wrap" >
-                                                <!-- <img src="demo/preview/feat_04.jpg" class="lazy img-fluid" alt="" > -->
-                                                <div class="video-container" data-video-src="video/BIM.mp4">
-                                                    <!-- JS 會將 video 標籤插入於此 -->
-                                                    <video autoplay muted loop playsinline poster="video/BIM-fallback.jpg" class="type1">
-                                                        <source src="video/BIM.mp4" type="video/mp4">
-                                                    </video>
-                                                </div>
-                                            </div>
-                                        </a>
-                                    </div>      
-
-                                    <div class="c-item">                            
-                                        <a href="#!">
-                                            <span class="c-item_info">
-                                                <span class="c-item_title wild">離線形 <span class="bestAI">生成式 AI 智慧管家</span>
-                                                    <span class="c-item_discr">
-                                                        <span class="light">聲控操作設備 </span> 語音命令控制開關燈光/調整溫度，體驗更便捷<br/>
-                                                        <span class="light">設備狀態查詢 </span> 隨時詢問 AI 管家設備運作狀態/能耗，掌握建築動態<br/>
-                                                        <span class="light">智能建議/優化 </span> AI 根據使用者習性/環境數據，主動提供節能建議設備優化方案
-                                                    </span>
-                                                </span>
-                                            </span>
-                                            <div class="c-item_wrap">
-                                                <div class="video-container" data-video-src="video/ezbot.mp4">
-                                                    <video autoplay muted loop playsinline poster="video/BIM-fallback.jpg" class="type2">
-                                                        <source src="video/ezbot.mp4" type="video/mp4">
-                                                    </video>
-                                                </div>
-                                            </div>
-                                        </a>
-                                    </div>
+                                <div id="item-carousel-big-eHome" class="owl-carousel no-hide owl-center" data-wow-delay="1s">
 
                                     <div class="c-item">                            
                                         <a href="#!">
@@ -378,7 +409,7 @@
                                                 </span>
                                             </span>
                                             <div class="c-item_wrap">
-                                                <img src="demo/BA/fra_給排水系統.jpg" class="lazy img-fluid" alt=""> 
+                                                <img src="demo/app_fr/app_fr_home.png" class="lazy img-fluid" alt=""> 
                                             </div>
                                         </a>
                                     </div>
@@ -390,7 +421,7 @@
                                                 </span>
                                             </span>
                                             <div class="c-item_wrap">
-                                                <img src="demo/BA/fra_消防系統.jpg" class="lazy img-fluid" alt=""> 
+                                                <img src="demo/app_fr/app_fr_ModeSetting.png" class="lazy img-fluid" alt=""> 
                                             </div>
                                         </a>
                                     </div>
@@ -402,7 +433,7 @@
                                                 </span>
                                             </span>
                                             <div class="c-item_wrap">
-                                                <img src="demo/BA/fra_送排風系統.jpg" class="lazy img-fluid" alt=""> 
+                                                <img src="demo/app_fr/app_fr_energy.png" class="lazy img-fluid" alt=""> 
                                             </div>
                                         </a>
                                     </div>
@@ -414,7 +445,7 @@
                                                 </span> 
                                             </span>
                                             <div class="c-item_wrap">
-                                                <img src="demo/BA/fra_門禁管制.jpg" class="lazy img-fluid" alt=""> 
+                                                <img src="demo/app_fr/app_fr_lighting.png" class="lazy img-fluid" alt=""> 
                                             </div>
                                         </a>
                                     </div>
@@ -426,7 +457,7 @@
                                                 </span>
                                             </span>
                                             <div class="c-item_wrap">
-                                                <img src="demo/BA/fra_保全防盜.jpg" class="lazy img-fluid" alt=""> 
+                                                <img src="demo/app_fr/app_fr_air.png" class="lazy img-fluid" alt=""> 
                                             </div>
                                         </a>
                                     </div>
@@ -438,13 +469,11 @@
                                                 </span>
                                             </span>
                                             <div class="c-item_wrap">
-                                                <img src="demo/BA/fra_緊急求救.jpg" class="lazy img-fluid" alt=""> 
+                                                <img src="demo/app_fr/app_fr_Curtain.png" class="lazy img-fluid" alt=""> 
                                             </div>
                                         </a>
                                     </div>
 
-                                    
-                                    
                                     <div class="c-item">                            
                                         <a href="#!">
                                             <span class="c-item_info">
@@ -453,7 +482,7 @@
                                                 </span>
                                             </span>
                                             <div class="c-item_wrap">
-                                                <img src="images/gallery/for_智慧建築_web_c.jpg" class="lazy img-fluid" alt="">
+                                                <img src="demo/app_fr/app_fr_doorlock.png" class="lazy img-fluid" alt="">
                                             </div>
                                         </a>
                                     </div>
@@ -465,11 +494,11 @@
                                                 </span>
                                             </span>
                                             <div class="c-item_wrap">
-                                                <img src="images/gallery/for_智慧建築_web_b.jpg" class="lazy img-fluid" alt="">
+                                                <img src="demo/app_fr/app_fr_electric_meter.png" class="lazy img-fluid" alt="">
                                             </div>
                                         </a>
                                     </div>
-                                    <div class="c-item">                            
+                                    <!-- <div class="c-item">                            
                                         <a href="#!">
                                             <span class="c-item_info">
                                                 <span class="c-item_title">遠距即時掌控
@@ -480,7 +509,7 @@
                                                 <img src="images/gallery/for_智慧建築_web_a.jpg" class="lazy img-fluid" alt="">
                                             </div>
                                         </a>
-                                    </div>
+                                    </div> -->
                                     <!-- <div class="c-item">                            
                                         <a href="#!">
                                             <span class="c-item_info">
@@ -498,10 +527,221 @@
                                     <div class="d-arrow-right mod-a"><i class="fa fa-angle-right"></i></div>
                             </div>
                             <div class="spacer-double"></div>
+                            <div class="spacer-double"></div>
+                            <div class="spacer-double"></div>
                         </div>
                     </div>
                 </div>
             </section>
+
+
+            <!-- eHome 架構圖  -->
+            <section id="section-featureselectric" class="ehome_construct bg_img_mobile" data-background="assets/img/bg/bootcamp-bg.png">
+                <div class="container mxw-1800"> 
+                    <div class="row">
+                        <div class="col-lg-12 ">
+                            <h2 class="text-uppercase wow fadeInUp"><span class="bestAI">易控智慧家庭</span></h2>
+                            <h4 class="bigger">不只控制 更是整合</h4>
+                        </div>
+                        <div class="spacer-single"></div>
+                    </div>
+
+                    <div class="row g-4">
+                        <div class="col-lg-3 col-md-3 wow fadeInRight" data-wow-delay=".2s">
+                            <!-- <h4 class="bigger">將收費問題提升至 <span class="text-gradient-light"><br/>不只控制 更是整合</span></h4> -->
+                            <p class="mb30">為解決社區中"住戶把公用電拿來當汽車充電"應如何計費的問題，易控團隊最新研發「社區汽車充電輔助計費系統」，於電箱中分路開關底下，分別安裝電表來紀錄用電，無需擔心充電樁品牌，都可透過網路傳輸將數據紀錄到EZ社區App，除了方便住戶能清楚用電狀態、紀錄查詢、商店繳款外，管理單位也可分別查詢各戶的用電情況。</p>
+                            <ul class="integration-list list-unstyled wow fadeInUp" data-wow-duration="600ms">
+                                <li>
+                                    <span><svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path opacity="0.1" d="M21 10.5C21 11.396 19.8993 12.1345 19.6787 12.9605C19.4513 13.8145 20.027 15.0045 19.5947 15.7517C19.1555 16.5112 17.8342 16.6022 17.2183 17.2183C16.6022 17.8342 16.5112 19.1555 15.7517 19.5947C15.0045 20.027 13.8145 19.4513 12.9605 19.6787C12.1345 19.8993 11.396 21 10.5 21C9.604 21 8.8655 19.8993 8.0395 19.6787C7.1855 19.4513 5.9955 20.027 5.24825 19.5947C4.48875 19.1555 4.39775 17.8342 3.78175 17.2183C3.16575 16.6022 1.8445 16.5112 1.40525 15.7517C0.973 15.0045 1.54875 13.8145 1.32125 12.9605C1.10075 12.1345 0 11.396 0 10.5C0 9.604 1.10075 8.8655 1.32125 8.0395C1.54875 7.1855 0.973 5.9955 1.40525 5.24825C1.8445 4.48875 3.16575 4.39775 3.78175 3.78175C4.39775 3.16575 4.48875 1.8445 5.24825 1.40525C5.9955 0.973 7.1855 1.54875 8.0395 1.32125C8.8655 1.10075 9.604 0 10.5 0C11.396 0 12.1345 1.10075 12.9605 1.32125C13.8145 1.54875 15.0045 0.973 15.7517 1.40525C16.5112 1.8445 16.6022 3.16575 17.2183 3.78175C17.8342 4.39775 19.1555 4.48875 19.5947 5.24825C20.027 5.9955 19.4513 7.1855 19.6787 8.0395C19.8993 8.8655 21 9.604 21 10.5Z" fill="#00FF97" />
+                                    <path d="M13.5336 7.3707L9.53661 11.3677L7.46461 9.29745C7.01486 8.8477 6.28511 8.8477 5.83536 9.29745C5.38561 9.7472 5.38561 10.4769 5.83536 10.9267L8.74211 13.8334C9.17961 14.2709 9.89011 14.2709 10.3276 13.8334L15.1611 8.99995C15.6109 8.5502 15.6109 7.82045 15.1611 7.3707C14.7114 6.92095 13.9834 6.92095 13.5336 7.3707Z" fill="#00FF97" />
+                                    </svg></span> 
+                                    解決社區充電計費亂象
+                                </li>
+                                <li>
+                                    <span><svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path opacity="0.1" d="M21 10.5C21 11.396 19.8993 12.1345 19.6787 12.9605C19.4513 13.8145 20.027 15.0045 19.5947 15.7517C19.1555 16.5112 17.8342 16.6022 17.2183 17.2183C16.6022 17.8342 16.5112 19.1555 15.7517 19.5947C15.0045 20.027 13.8145 19.4513 12.9605 19.6787C12.1345 19.8993 11.396 21 10.5 21C9.604 21 8.8655 19.8993 8.0395 19.6787C7.1855 19.4513 5.9955 20.027 5.24825 19.5947C4.48875 19.1555 4.39775 17.8342 3.78175 17.2183C3.16575 16.6022 1.8445 16.5112 1.40525 15.7517C0.973 15.0045 1.54875 13.8145 1.32125 12.9605C1.10075 12.1345 0 11.396 0 10.5C0 9.604 1.10075 8.8655 1.32125 8.0395C1.54875 7.1855 0.973 5.9955 1.40525 5.24825C1.8445 4.48875 3.16575 4.39775 3.78175 3.78175C4.39775 3.16575 4.48875 1.8445 5.24825 1.40525C5.9955 0.973 7.1855 1.54875 8.0395 1.32125C8.8655 1.10075 9.604 0 10.5 0C11.396 0 12.1345 1.10075 12.9605 1.32125C13.8145 1.54875 15.0045 0.973 15.7517 1.40525C16.5112 1.8445 16.6022 3.16575 17.2183 3.78175C17.8342 4.39775 19.1555 4.48875 19.5947 5.24825C20.027 5.9955 19.4513 7.1855 19.6787 8.0395C19.8993 8.8655 21 9.604 21 10.5Z" fill="#00FF97" />
+                                    <path d="M13.5336 7.3707L9.53661 11.3677L7.46461 9.29745C7.01486 8.8477 6.28511 8.8477 5.83536 9.29745C5.38561 9.7472 5.38561 10.4769 5.83536 10.9267L8.74211 13.8334C9.17961 14.2709 9.89011 14.2709 10.3276 13.8334L15.1611 8.99995C15.6109 8.5502 15.6109 7.82045 15.1611 7.3707C14.7114 6.92095 13.9834 6.92095 13.5336 7.3707Z" fill="#00FF97" />
+                                    </svg></span> 
+                                    不同充電樁的整合
+                                </li>
+                                <li>
+                                    <span><svg width="21" height="21" viewBox="0 0 21 21"  fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path opacity="0.1" d="M21 10.5C21 11.396 19.8993 12.1345 19.6787 12.9605C19.4513 13.8145 20.027 15.0045 19.5947 15.7517C19.1555 16.5112 17.8342 16.6022 17.2183 17.2183C16.6022 17.8342 16.5112 19.1555 15.7517 19.5947C15.0045 20.027 13.8145 19.4513 12.9605 19.6787C12.1345 19.8993 11.396 21 10.5 21C9.604 21 8.8655 19.8993 8.0395 19.6787C7.1855 19.4513 5.9955 20.027 5.24825 19.5947C4.48875 19.1555 4.39775 17.8342 3.78175 17.2183C3.16575 16.6022 1.8445 16.5112 1.40525 15.7517C0.973 15.0045 1.54875 13.8145 1.32125 12.9605C1.10075 12.1345 0 11.396 0 10.5C0 9.604 1.10075 8.8655 1.32125 8.0395C1.54875 7.1855 0.973 5.9955 1.40525 5.24825C1.8445 4.48875 3.16575 4.39775 3.78175 3.78175C4.39775 3.16575 4.48875 1.8445 5.24825 1.40525C5.9955 0.973 7.1855 1.54875 8.0395 1.32125C8.8655 1.10075 9.604 0 10.5 0C11.396 0 12.1345 1.10075 12.9605 1.32125C13.8145 1.54875 15.0045 0.973 15.7517 1.40525C16.5112 1.8445 16.6022 3.16575 17.2183 3.78175C17.8342 4.39775 19.1555 4.48875 19.5947 5.24825C20.027 5.9955 19.4513 7.1855 19.6787 8.0395C19.8993 8.8655 21 9.604 21 10.5Z" fill="#00FF97" />
+                                    <path d="M13.5336 7.3707L9.53661 11.3677L7.46461 9.29745C7.01486 8.8477 6.28511 8.8477 5.83536 9.29745C5.38561 9.7472 5.38561 10.4769 5.83536 10.9267L8.74211 13.8334C9.17961 14.2709 9.89011 14.2709 10.3276 13.8334L15.1611 8.99995C15.6109 8.5502 15.6109 7.82045 15.1611 7.3707C14.7114 6.92095 13.9834 6.92095 13.5336 7.3707Z" fill="#00FF97" />
+                                    </svg></span> 
+                                    避免浪費人力統計收費
+                                </li>
+                                <li>
+                                    <span><svg width="21" height="21" viewBox="0 0 21 21"  fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path opacity="0.1" d="M21 10.5C21 11.396 19.8993 12.1345 19.6787 12.9605C19.4513 13.8145 20.027 15.0045 19.5947 15.7517C19.1555 16.5112 17.8342 16.6022 17.2183 17.2183C16.6022 17.8342 16.5112 19.1555 15.7517 19.5947C15.0045 20.027 13.8145 19.4513 12.9605 19.6787C12.1345 19.8993 11.396 21 10.5 21C9.604 21 8.8655 19.8993 8.0395 19.6787C7.1855 19.4513 5.9955 20.027 5.24825 19.5947C4.48875 19.1555 4.39775 17.8342 3.78175 17.2183C3.16575 16.6022 1.8445 16.5112 1.40525 15.7517C0.973 15.0045 1.54875 13.8145 1.32125 12.9605C1.10075 12.1345 0 11.396 0 10.5C0 9.604 1.10075 8.8655 1.32125 8.0395C1.54875 7.1855 0.973 5.9955 1.40525 5.24825C1.8445 4.48875 3.16575 4.39775 3.78175 3.78175C4.39775 3.16575 4.48875 1.8445 5.24825 1.40525C5.9955 0.973 7.1855 1.54875 8.0395 1.32125C8.8655 1.10075 9.604 0 10.5 0C11.396 0 12.1345 1.10075 12.9605 1.32125C13.8145 1.54875 15.0045 0.973 15.7517 1.40525C16.5112 1.8445 16.6022 3.16575 17.2183 3.78175C17.8342 4.39775 19.1555 4.48875 19.5947 5.24825C20.027 5.9955 19.4513 7.1855 19.6787 8.0395C19.8993 8.8655 21 9.604 21 10.5Z" fill="#00FF97" />
+                                    <path d="M13.5336 7.3707L9.53661 11.3677L7.46461 9.29745C7.01486 8.8477 6.28511 8.8477 5.83536 9.29745C5.38561 9.7472 5.38561 10.4769 5.83536 10.9267L8.74211 13.8334C9.17961 14.2709 9.89011 14.2709 10.3276 13.8334L15.1611 8.99995C15.6109 8.5502 15.6109 7.82045 15.1611 7.3707C14.7114 6.92095 13.9834 6.92095 13.5336 7.3707Z" fill="#00FF97" />
+                                    </svg></span> 
+                                    避免管理收費定義不清
+                                </li>
+                                <li>
+                                    <span><svg width="21" height="21" viewBox="0 0 21 21"  fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path opacity="0.1" d="M21 10.5C21 11.396 19.8993 12.1345 19.6787 12.9605C19.4513 13.8145 20.027 15.0045 19.5947 15.7517C19.1555 16.5112 17.8342 16.6022 17.2183 17.2183C16.6022 17.8342 16.5112 19.1555 15.7517 19.5947C15.0045 20.027 13.8145 19.4513 12.9605 19.6787C12.1345 19.8993 11.396 21 10.5 21C9.604 21 8.8655 19.8993 8.0395 19.6787C7.1855 19.4513 5.9955 20.027 5.24825 19.5947C4.48875 19.1555 4.39775 17.8342 3.78175 17.2183C3.16575 16.6022 1.8445 16.5112 1.40525 15.7517C0.973 15.0045 1.54875 13.8145 1.32125 12.9605C1.10075 12.1345 0 11.396 0 10.5C0 9.604 1.10075 8.8655 1.32125 8.0395C1.54875 7.1855 0.973 5.9955 1.40525 5.24825C1.8445 4.48875 3.16575 4.39775 3.78175 3.78175C4.39775 3.16575 4.48875 1.8445 5.24825 1.40525C5.9955 0.973 7.1855 1.54875 8.0395 1.32125C8.8655 1.10075 9.604 0 10.5 0C11.396 0 12.1345 1.10075 12.9605 1.32125C13.8145 1.54875 15.0045 0.973 15.7517 1.40525C16.5112 1.8445 16.6022 3.16575 17.2183 3.78175C17.8342 4.39775 19.1555 4.48875 19.5947 5.24825C20.027 5.9955 19.4513 7.1855 19.6787 8.0395C19.8993 8.8655 21 9.604 21 10.5Z" fill="#00FF97" />
+                                    <path d="M13.5336 7.3707L9.53661 11.3677L7.46461 9.29745C7.01486 8.8477 6.28511 8.8477 5.83536 9.29745C5.38561 9.7472 5.38561 10.4769 5.83536 10.9267L8.74211 13.8334C9.17961 14.2709 9.89011 14.2709 10.3276 13.8334L15.1611 8.99995C15.6109 8.5502 15.6109 7.82045 15.1611 7.3707C14.7114 6.92095 13.9834 6.92095 13.5336 7.3707Z" fill="#00FF97" />
+                                    </svg></span> 
+                                    能源管理、在席偵測管理
+                                </li>
+                            </ul>
+                            <div class="spacer-20"></div>
+                            <div class="d-inline">
+                                <a class="thm-btn agency-btn" href="https://www.ezcontw.com/intelligentbuilding/product.html" >
+                                    <span class="text">
+                                        易控智慧 - 配電解決方案
+                                    </span>
+                                    <span class="arrow">
+                                        <span class="arrow-icon">
+                                            <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <rect x="5.06592" y="19.9785" width="20.5712" height="2.61221" transform="rotate(-40.2798 5.06592 19.9785)" fill="white" />
+                                            <rect x="7.97095" y="7.24463" width="2.61221" height="2.61221" transform="rotate(-40.2798 7.97095 7.24463)" fill="white" />
+                                            <rect x="11.6523" y="7.54834" width="2.61221" height="2.61221" transform="rotate(-40.2798 11.6523 7.54834)" fill="white" />
+                                            <rect x="15.334" y="7.85205" width="2.61221" height="2.61221" transform="rotate(-40.2798 15.334 7.85205)" fill="white" />
+                                            <rect x="18.7119" y="11.8374" width="2.61221" height="2.61221" transform="rotate(-40.2798 18.7119 11.8374)" fill="white" />
+                                            <rect x="18.4084" y="15.52" width="2.61221" height="2.61221" transform="rotate(-40.2798 18.4084 15.52)" fill="white" />
+                                            <rect x="18.104" y="19.2012" width="2.61221" height="2.61221" transform="rotate(-40.2798 18.104 19.2012)" fill="white" />
+                                            </svg>
+                                            <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <rect x="5.06592" y="19.9785" width="20.5712" height="2.61221" transform="rotate(-40.2798 5.06592 19.9785)" fill="white" />
+                                            <rect x="7.97095" y="7.24463" width="2.61221" height="2.61221" transform="rotate(-40.2798 7.97095 7.24463)" fill="white" />
+                                            <rect x="11.6523" y="7.54834" width="2.61221" height="2.61221" transform="rotate(-40.2798 11.6523 7.54834)" fill="white" />
+                                            <rect x="15.334" y="7.85205" width="2.61221" height="2.61221" transform="rotate(-40.2798 15.334 7.85205)" fill="white" />
+                                            <rect x="18.7119" y="11.8374" width="2.61221" height="2.61221" transform="rotate(-40.2798 18.7119 11.8374)" fill="white" />
+                                            <rect x="18.4084" y="15.52" width="2.61221" height="2.61221" transform="rotate(-40.2798 18.4084 15.52)" fill="white" />
+                                            <rect x="18.104" y="19.2012" width="2.61221" height="2.61221" transform="rotate(-40.2798 18.104 19.2012)" fill="white" />
+                                            </svg>
+                                        </span>
+                                    </span>
+                                </a>
+                            </div>
+
+                            <div class="spacer-20"></div>
+                            <div class="spacer-20"></div>
+
+                            <!-- <p class="wow fadeInRight" data-wow-delay=".6s">
+                                <strong>
+                                    在能源與安全管理領域，易控以 <span class="id-color-2">榮獲智慧財產局認證發明專利「充電樁管控系統及方法」</span>，為智慧建築建構最堅實的技術後盾。該專利技術深植於電力監測、設備調配及異常主動防禦機制，協助物業在安全至上的原則下，展現最高效能的智慧調度與能源數位治理。
+                                </strong>
+                            </p>
+                            <p>
+                                <picture>
+                                    <source srcset="images/智慧財產局發明專利_充電樁管控系統及方法_mo.png" media="(max-width: 768px)" >
+                                    <img src="demo/certifi/certificate/智慧財產局發明專利_充電樁管控系統及方法.jpg" class="img-fluid with_paragr wild " alt="" data-jarallax-element="10">
+                                </picture>
+                            </p>
+                            <div class="spacer-40"></div>
+                            <div class="d-inline">
+                                <a class="thm-btn agency-btn" href="https://www.ezcontw.com/intelligentbuilding/#section-schedule" >
+                                    <span class="text">
+                                        智慧建築<span>評分項目</span> - 取分全攻略
+                                    </span>
+                                    <span class="arrow">
+                                        <span class="arrow-icon">
+                                            <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <rect x="5.06592" y="19.9785" width="20.5712" height="2.61221" transform="rotate(-40.2798 5.06592 19.9785)" fill="white" />
+                                            <rect x="7.97095" y="7.24463" width="2.61221" height="2.61221" transform="rotate(-40.2798 7.97095 7.24463)" fill="white" />
+                                            <rect x="11.6523" y="7.54834" width="2.61221" height="2.61221" transform="rotate(-40.2798 11.6523 7.54834)" fill="white" />
+                                            <rect x="15.334" y="7.85205" width="2.61221" height="2.61221" transform="rotate(-40.2798 15.334 7.85205)" fill="white" />
+                                            <rect x="18.7119" y="11.8374" width="2.61221" height="2.61221" transform="rotate(-40.2798 18.7119 11.8374)" fill="white" />
+                                            <rect x="18.4084" y="15.52" width="2.61221" height="2.61221" transform="rotate(-40.2798 18.4084 15.52)" fill="white" />
+                                            <rect x="18.104" y="19.2012" width="2.61221" height="2.61221" transform="rotate(-40.2798 18.104 19.2012)" fill="white" />
+                                            </svg>
+                                            <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <rect x="5.06592" y="19.9785" width="20.5712" height="2.61221" transform="rotate(-40.2798 5.06592 19.9785)" fill="white" />
+                                            <rect x="7.97095" y="7.24463" width="2.61221" height="2.61221" transform="rotate(-40.2798 7.97095 7.24463)" fill="white" />
+                                            <rect x="11.6523" y="7.54834" width="2.61221" height="2.61221" transform="rotate(-40.2798 11.6523 7.54834)" fill="white" />
+                                            <rect x="15.334" y="7.85205" width="2.61221" height="2.61221" transform="rotate(-40.2798 15.334 7.85205)" fill="white" />
+                                            <rect x="18.7119" y="11.8374" width="2.61221" height="2.61221" transform="rotate(-40.2798 18.7119 11.8374)" fill="white" />
+                                            <rect x="18.4084" y="15.52" width="2.61221" height="2.61221" transform="rotate(-40.2798 18.4084 15.52)" fill="white" />
+                                            <rect x="18.104" y="19.2012" width="2.61221" height="2.61221" transform="rotate(-40.2798 18.104 19.2012)" fill="white" />
+                                            </svg>
+                                        </span>
+                                    </span>
+                                </a>
+                            </div> -->
+                        </div>
+
+                        <div class="col-lg-9 col-md-9 wow fadeInRight" data-wow-delay=".4s">
+                            <div class="row">
+                                <!-- 電圖 1 -->
+                                <div class="col-lg-12 mt-30">
+                                    <div class="comparison-list mobile-mt80 xb-border bg_img wow fadeInUp" data-wow-duration="600ms" data-background="assets/img/bg/comparison-bg.png">
+                                        <h3 class="xb-item--title"><span class="text-gradient-light">易控智慧家庭</span> eHome</h3>
+                                        <div class="c-item_wrap">
+                                            <img src="demo/eHome/eHome_con.png" class="lazy img-fluid" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3">
+                                    <h4 class="bestAI mt30">易控 AI 智慧家庭 eHome</h4>
+                                    <p class="">整合施耐德斷路器與 PowerTag IoT 電錶，實現建築用電即時監測與數據化管理，結合EMS能源管理系統提升整體能源使用效率與管理透明度，易控提供施耐德電力設備之經銷與系統整合服務。</p>
+                                    <!-- <div class="">
+                                        <a class="btn-main big type2 wow fadeInLeft" href="https://www.ezcontw.com/ding-tai-zhen-wan/" >定泰臻翫</a>
+                                        <a class="btn-main big type2 wow fadeInLeft" href="https://www.ezcontw.com/yong-feng-shang-yu/" >永峰建設 永峰上鈺</a>
+                                    </div> -->
+                                </div>
+
+                                <div class="col-lg-9">
+                                    <div class="ai-service-wrap mt40">
+                                        <div class="ai-service-img">
+                                            <div class="ai-service-img-item wow fadeInLeft" data-wow-delay="0ms" data-wow-duration="600ms">
+                                                <div class="img"><img src="demo/preview/定泰臻翫c.jpg" alt="image "></div>
+                                                <div class="ai-img-content">
+                                                    <h4 class="title">定泰臻翫</h4>
+                                                    <p class="content">導入施耐德 PowerTag IoT 技術，透過無線電錶與 EMS 系統深度整合，實現建築能源即時監控與數位化透明管理。</p>
+                                                    <a class="arrow" href="https://www.ezcontw.com/ding-tai-zhen-wan/" >
+                                                        <svg width="31" height="31" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <rect x="6.12842" y="21.8882" width="22.7911" height="2.8941" transform="rotate(-40.2798 6.12842 21.8882)" fill="#00FF97" />
+                                                        <rect x="9.34692" y="7.78027" width="2.8941" height="2.8941" transform="rotate(-40.2798 9.34692 7.78027)" fill="#00FF97" />
+                                                        <rect x="13.4258" y="8.11658" width="2.8941" height="2.8941" transform="rotate(-40.2798 13.4258 8.11658)" fill="#00FF97" />
+                                                        <rect x="17.5046" y="8.45337" width="2.8941" height="2.8941" transform="rotate(-40.2798 17.5046 8.45337)" fill="#00FF97" />
+                                                        <rect x="21.2471" y="12.8689" width="2.8941" height="2.8941" transform="rotate(-40.2798 21.2471 12.8689)" fill="#00FF97" />
+                                                        <rect x="20.9109" y="16.9485" width="2.8941" height="2.8941" transform="rotate(-40.2798 20.9109 16.9485)" fill="#00FF97" />
+                                                        <rect x="20.5735" y="21.0273" width="2.8941" height="2.8941" transform="rotate(-40.2798 20.5735 21.0273)" fill="#00FF97" />
+                                                        </svg>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="ai-service-img-item wow fadeInLeft" data-wow-delay="150ms" data-wow-duration="600ms">
+                                                <div class="img"><img src="demo/preview/永峰上鈺.jpg" alt="image"></div>
+                                                <div class="ai-img-content">
+                                                    <h4 class="title">永峰建設 永峰上鈺</h4>
+                                                    <p class="content">整合施耐德 PowerTag IoT 無線電錶方案，結合 EMS 能源管理系統，為建物提供高效透明且符合智慧建築指標的電力防護網。</p>
+                                                    <a class="arrow" href="https://www.ezcontw.com/yong-feng-shang-yu/" >
+                                                        <svg width="31" height="31" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <rect x="6.12842" y="21.8882" width="22.7911" height="2.8941" transform="rotate(-40.2798 6.12842 21.8882)" fill="#00FF97" />
+                                                        <rect x="9.34692" y="7.78027" width="2.8941" height="2.8941" transform="rotate(-40.2798 9.34692 7.78027)" fill="#00FF97" />
+                                                        <rect x="13.4258" y="8.11658" width="2.8941" height="2.8941" transform="rotate(-40.2798 13.4258 8.11658)" fill="#00FF97" />
+                                                        <rect x="17.5046" y="8.45337" width="2.8941" height="2.8941" transform="rotate(-40.2798 17.5046 8.45337)" fill="#00FF97" />
+                                                        <rect x="21.2471" y="12.8689" width="2.8941" height="2.8941" transform="rotate(-40.2798 21.2471 12.8689)" fill="#00FF97" />
+                                                        <rect x="20.9109" y="16.9485" width="2.8941" height="2.8941" transform="rotate(-40.2798 20.9109 16.9485)" fill="#00FF97" />
+                                                        <rect x="20.5735" y="21.0273" width="2.8941" height="2.8941" transform="rotate(-40.2798 20.5735 21.0273)" fill="#00FF97" />
+                                                        </svg>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- <div class="clearfix"></div> -->
+                            <div class="spacer-60"></div>
+
+                        </div>
+                    </div>
+
+                    <!-- <div class="spacer-double"></div>
+                    <div class="spacer-60"></div> -->
+
+                </div>
+            </section>
+
+
 
             <!-- process start -->
             <section id="process" data-title='易控獨家' class="process-sction bim_process z-1 bg_img bg_img_mobile pt-150 pb-150" data-background="assets/img/bg/about-bg.png">
@@ -1719,6 +1959,9 @@
     <script src="js/indicator.js"></script>
 
 
+    
+
+
     <!-- ４大關鍵能力 -->
     <!-- Core dependencies -->
     <!-- <script src="assets/js/jquery-3.7.1.min.js"></script> -->
@@ -1750,14 +1993,60 @@
 <script src="assets/js/SplitText.js"></script>
 <script src="assets/js/magiccursor.js"></script>
 
+
     <!-- Main custom script -->
     <script src="assets/js/main.js"></script>
 
 
+    <script src="js/aibutler.js"></script>
 
+
+    <script type="module">
+        import { Application } from 'https://unpkg.com/@splinetool/runtime';
+
+        const canvas = document.getElementById('canvas3d');
+        const app = new Application(canvas);
+
+        // 關鍵：使用 async/await 確保包含物理引擎在內的所有模組載入完畢
+        async function initScene() {
+        try {
+            await app.load('https://prod.spline.design/JlnAz6QvfQenGRDu/scene.splinecode');
+            console.log('✅ 場景與物理引擎模組初始化完畢！');
+        } catch (err) {
+            console.error('場景載入失敗：', err);
+        }
+        }
+
+        initScene();
+
+        // 點擊按鈕觸發相機事件
+        document.getElementById('btn-cam-1').addEventListener('click', () => {
+        app.emitEvent('mouseDown', 'Cam_b_1');
+        console.log('已發送切換至 MainCameraMainCamera');
+        });
+
+        document.getElementById('btn-cam-2').addEventListener('click', () => {
+        app.emitEvent('mouseDown', 'Cam_b_1');
+        console.log('已發送切換至 Cam_b_1Cam_b_1Cam_b_1Cam_b_1');
+        });
+
+        document.getElementById('btn-cam-3').addEventListener('click', () => {
+        app.emitEvent('mouseUp', 'Cam_b_1');
+        console.log('已發送切換至 Cam_b_1Cam_b_1Cam_b_1Cam_b_1');
+        });
+
+        document.getElementById('btn-cam-4').addEventListener('click', () => {
+        app.emitEvent('keyDown', 'Cam_b_1');
+        });
+
+        document.getElementById('btn-cam-5').addEventListener('click', () => {
+        app.emitEvent('keyUp', 'Cam_b_1');
+        });
+
+    </script>
     
 
-    
+    <!-- https://prod.spline.design/JlnAz6QvfQenGRDu/scene.splinecode -->
 
 
 </body>

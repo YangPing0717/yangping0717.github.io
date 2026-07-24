@@ -1,0 +1,140 @@
+:root {
+  /* --bg: #000505; */
+  --iris-primary: #00ffcc;
+  /* Aqua */
+  --iris-secondary: #50c878;
+  /* Emerald */
+  --iris-accent: #ffffff;
+  --crisis-color: #ff3333;
+}
+
+body {
+  /* margin: 0;
+
+  background-color: var(--bg);
+
+  overflow: hidden;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  height: 100vh;
+
+  font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+
+  color: #888; */
+}
+
+/* The Viewport... */
+#interface-container {
+  position: relative;
+  width: 100%;
+  /* height: 100%; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 128px;
+}
+
+/* Overlays */
+#ui-layer {
+  position: absolute;
+  bottom: 12%;
+  z-index: 10;
+  text-align: center;
+  pointer-events: none;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#status-display {
+  font-size: 0.8rem;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: var(--iris-primary);
+  text-shadow: 0 0 10px rgba(0, 255, 204, 0.4);
+  margin-bottom: 20px;
+  transition: color 0.5s;
+  background: rgba(0, 0, 0, 0.3);
+  padding: 5px 15px;
+  border-radius: 20px;
+  border: 1px solid rgba(0, 255, 204, 0.1);
+}
+
+#transcript {
+  font-size: 1.2rem;
+  color: rgba(255, 255, 255, 0.9);
+  max-width: 80%;
+  width: 600px;
+  min-height: 24px;
+  font-weight: 300;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+  line-height: 1.4;
+}
+
+/* Initialization of Overlay */
+.ai_speaker canvas {
+  filter: blur(0.5px) contrast(1.2);
+  position: absolute;
+  margin-top: -300px;
+}
+.ai_speaker #start-screen {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 5, 5, 0.95);
+  z-index: 100;
+  display: flex !important;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 0.8s ease;
+}
+.ai_speaker h1 {
+  color: white;
+  font-weight: 200;
+  letter-spacing: 8px;
+  margin-bottom: 10px;
+}
+.ai_speaker p {
+  color: #666;
+  max-width: 400px;
+  text-align: center;
+  line-height: 1.5;
+}
+.ai_speaker button {
+  margin-top: 30px;
+  padding: 15px 50px;
+  background: transparent;
+  border: 1px solid var(--iris-primary);
+  color: var(--iris-primary);
+  font-size: 1rem;
+  letter-spacing: 3px;
+  cursor: pointer;
+  transition: 0.3s all ease;
+  text-transform: uppercase;
+}
+.ai_speaker button:hover {
+  background: var(--iris-primary);
+  color: black;
+  box-shadow: 0 0 40px var(--iris-primary);
+}
+.ai_speaker {
+  /* Disclaimer Footer */
+}
+.ai_speaker .disclaimer {
+  bottom: 10px;
+  font-size: 0.7rem;
+  color: #333;
+  width: 100%;
+  text-align: center;
+}
