@@ -185,7 +185,7 @@
                     <span><i class="fa fa-windows"></i>&ensp;鍵</span>&ensp;+&ensp;<span><i class="fas fa-mouse"></i>&ensp;上下鍵</span>：可放大縮小<br/>
                     畫面中&ensp;<span>reset</span>：可重置視角
                 </div>
-                <!-- BIM mod -->
+                <!-- eHome mod -->
                 <div class="full wow fadeInUp" data-wow-duration="1.2s" data-wow-delay=".8s" >
                     <!-- <script type="module" src="https://unpkg.com/@splinetool/viewer@1.12.87/build/spline-viewer.js"></script>
                     <spline-viewer loading-anim-type="spinner-small-dark" url="https://prod.spline.design/ow3jz7VpiWPDsyLa/scene.splinecode"></spline-viewer> -->
@@ -212,13 +212,16 @@
 
                     <div class="viewer-container">
                         <div class="controls">
-                            <button id="btn-cam-1" class="btn">重置視角</button>
-                            <button id="btn-cam-2" class="btn">客廳</button>
-                            <button id="btn-cam-3" class="btn">餐廳</button>
-                            <button id="btn-cam-4" class="btn">臥室房間區</button>
-                            <button id="btn-cam-5" class="btn">衛浴區</button>
+                            <button id="btn-cam-1" class="btn"><i class="fas fa-undo"></i> <span>重置視角</span></button>
+                            <button id="btn-cam-2" class="btn"><i class="fas fa-couch"></i> <span>客廳</span></button>
+                            <button id="btn-cam-3" class="btn"><i class="fas fa-utensils"></i> <span>餐廳</span></button>
+                            <button id="btn-cam-4" class="btn"><i class="fas fa-bed"></i> <span>臥室房間區</span></button>
+                            <button id="btn-cam-5" class="btn"><i class="fas fa-toilet-paper"></i> <span>衛浴區</span></button>
                         </div>
                         <canvas id="canvas3d"></canvas>
+                        <div class="spline-hero-container">
+                            
+                        </div>
                     </div>
                     
                     
@@ -238,9 +241,9 @@
                                 <img src="images/misc/arrow-up-right.png" class="forPhone_hide img-fluid wow fadeInLeft bo" alt="" data-wow-delay=".8s" >
                                 <img src="assets/img/icon/animated-gif02.gif" class="img-fluid type2 wow fadeInLeft" alt="icon" data-wow-delay=".8s" > 
                             </div> -->
-                            <div class="col-lg-4 col-11 wow fadeInUp" data-wow-delay=".8s" >
+                            <div class="col-lg-4 col-12 wow fadeInUp" data-wow-delay=".8s" >
                                 <div class="position-relative">
-                                    <h3 class="mb-2 text-lg-start forPhone_br">易控智慧家庭<br/> eHome</h3>
+                                    <h3 class="mb-2 text-lg-start forPhone_br">易控智慧家庭 <br/>eHome</h3>
                                     <!-- <h2 class="mb-2 text-start bestAI">
                                         偵知 <i class="fa fa-chevron-right"></i>
                                         顯示 <i class="fa fa-chevron-right"></i>
@@ -248,9 +251,9 @@
                                     </h2> -->
                                     <!-- <h3 class="mb-2"></h3> -->
                                     <h5 class="mt-2 mb-2 s2">
-                                        <span class="wow fadeInRight" data-wow-delay=".2s">
-                                            <i class="id-color fas fa-tasks"></i>智慧化系統整合設計與智慧室內控制應用
-                                        </span><br/>
+                                        <span class="wow fadeInRight forPhone_hide" data-wow-delay=".2s">
+                                            <i class="id-color fas fa-tasks"></i>智慧化系統整合設計與智慧室內控制應用<br/>
+                                        </span>
                                         <!-- <span class="wow fadeInRight forPhone_hide" data-wow-delay=".2s">
                                             <i class="id-color fas fa-gears"></i>維運管理指標
                                         </span> -->
@@ -2001,7 +2004,7 @@
     <script src="js/aibutler.js"></script>
 
 
-    <script type="module">
+    <!-- <script type="module">
         import { Application } from 'https://unpkg.com/@splinetool/runtime';
 
         const canvas = document.getElementById('canvas3d');
@@ -2043,8 +2046,74 @@
         app.emitEvent('keyUp', 'Cam_b_1');
         });
 
-    </script>
-    
+    </script> -->
+
+
+    <script type="module">
+        import { Application } from 'https://unpkg.com/@splinetool/runtime';
+
+        const canvas = document.getElementById('canvas3d');
+        const app = new Application(canvas);
+
+        // 💡 關鍵：加上這行，把 app 導出給全域/Console 使用！
+        window.app = app;
+
+        async function initScene() {
+            try {
+            await app.load('https://prod.spline.design/JlnAz6QvfQenGRDu/scene.splinecode');
+            console.log('✅ 場景與物理引擎模組初始化完畢！');
+
+            const targetObj = app.findObjectByName('main_obj');
+            // 💡 順便把 targetObj 也導出，等一下測試更方便！
+            window.targetObj = targetObj;
+
+            function updateScale() {
+                if (!targetObj) return;
+
+                if (window.innerWidth <= 768) {
+                targetObj.scale.set(0.7, 0.7, 0.7);
+                // 如果想先預設調整 Y 軸位置，可以寫在這裡：
+                targetObj.position.y = -100; 
+                targetObj.position.x = 8100;
+                } else {
+                targetObj.scale.set(1, 1, 1);
+                targetObj.position.y = 0;
+                }
+            }
+
+            updateScale();
+            window.addEventListener('resize', updateScale);
+
+            } catch (err) {
+            console.error('場景載入失敗：', err);
+            }
+        }
+
+        initScene();
+
+        // 3. 綁定按鈕點擊事件 (這些可以放在全域)
+        document.getElementById('btn-cam-1')?.addEventListener('click', () => {
+            app.emitEvent('mouseDown', 'Cam_b_1');
+            console.log('已發送切換至 Cam_b_1');
+        });
+
+        document.getElementById('btn-cam-2')?.addEventListener('click', () => {
+            app.emitEvent('mouseDown', 'Cam_b_1');
+        });
+
+        document.getElementById('btn-cam-3')?.addEventListener('click', () => {
+            app.emitEvent('mouseUp', 'Cam_b_1');
+        });
+
+        document.getElementById('btn-cam-4')?.addEventListener('click', () => {
+            app.emitEvent('keyDown', 'Cam_b_1');
+        });
+
+        document.getElementById('btn-cam-5')?.addEventListener('click', () => {
+            app.emitEvent('keyUp', 'Cam_b_1');
+        });
+        </script>
+           
 
     <!-- https://prod.spline.design/JlnAz6QvfQenGRDu/scene.splinecode -->
 

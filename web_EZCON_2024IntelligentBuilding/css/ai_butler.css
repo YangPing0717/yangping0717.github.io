@@ -85,6 +85,11 @@ body {
   position: absolute;
   margin-top: -300px;
 }
+@media (max-width: 768px) {
+  .ai_speaker canvas {
+    margin-top: -260px;
+  }
+}
 .ai_speaker #start-screen {
   position: relative;
   top: 0;

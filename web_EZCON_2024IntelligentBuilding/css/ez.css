@@ -2811,7 +2811,7 @@ th, td {
   }
 }
 .eho_page h5.s2 {
-  background: rgba(0, 0, 0, 0.4);
+  background: rgba(0, 0, 0, 0.55);
 }
 .eho_page h5.s2 i {
   color: var(--cyan-light-active);
@@ -2819,6 +2819,7 @@ th, td {
 @media (max-width: 768px) {
   .eho_page h5.s2 {
     margin-top: 8px !important;
+    margin-bottom: 16px !important;
   }
 }
 @media (max-width: 768px) {
@@ -2874,24 +2875,11 @@ th, td {
 @media (max-width: 768px) {
   .eho_page .eho_start_txt {
     margin-top: 0;
-    padding-top: 6rem !important;
+    padding: 6rem 0 5.8rem 1rem;
   }
 }
 .eho_page .eho_start_txt .button {
   pointer-events: initial;
-}
-.eho_page .eho_start_txt .emp_img {
-  width: 90%;
-}
-@media screen and (min-width: 1441px) {
-  .eho_page .eho_start_txt .emp_img {
-    width: initial;
-  }
-}
-@media (max-width: 768px) {
-  .eho_page .eho_start_txt .emp_img {
-    height: 50vh;
-  }
 }
 .eho_page .eho_start_txt h2, .eho_page .eho_start_txt h3 {
   text-shadow: 0 10px 30px rgb(0, 0, 0), 2px 2px 2px rgb(0, 0, 0);
@@ -2899,7 +2887,7 @@ th, td {
 @media (max-width: 768px) {
   .eho_page .eho_start_txt h2, .eho_page .eho_start_txt h3 {
     font-size: 2.4rem;
-    line-height: 2.8rem;
+    line-height: 2.4rem;
   }
 }
 .eho_page .eho_start_txt h2.bestAI, .eho_page .eho_start_txt h3.bestAI {
@@ -2938,6 +2926,11 @@ th, td {
   color: var(--color-white);
   text-shadow: 0 4px 10px rgba(0, 0, 0, 0.5), 2px 2px 2px rgba(0, 0, 0, 0.5);
 }
+@media (max-width: 768px) {
+  .eho_page .eho_start_txt p {
+    display: none;
+  }
+}
 .eho_page .txt_direction {
   position: absolute;
   right: 1rem;
@@ -2970,7 +2963,6 @@ th, td {
   height: 100vh;
   display: block;
 }
-
 .viewer-container {
   width: 100vw;
   height: 100vh;
@@ -2989,6 +2981,12 @@ th, td {
   padding: 12px 16px;
   border-radius: 3rem;
 }
+@media (max-width: 768px) {
+  .viewer-container .controls {
+    gap: 8px;
+    bottom: 1rem;
+  }
+}
 .viewer-container .btn {
   margin-top: 0;
   padding: 10px 20px;
@@ -3000,6 +2998,17 @@ th, td {
   cursor: pointer;
   transition: all 0.2s ease;
   font-size: 0.85rem;
+}
+@media (max-width: 768px) {
+  .viewer-container .btn {
+    padding: 8px 14px;
+  }
+  .viewer-container .btn span {
+    display: none;
+  }
+  .viewer-container .btn i {
+    font-size: 1.1rem;
+  }
 }
 .viewer-container .btn:hover {
   background: #0053c1;
