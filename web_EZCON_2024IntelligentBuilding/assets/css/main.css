@@ -5784,6 +5784,12 @@ body[data-aos-easing=ease] [data-aos] {
     font-size: 1.3rem;
   }
 }
+@media (max-width: 767px) {
+  .ehome_construct .comparison-list {
+    margin-left: -16px;
+    margin-right: -16px;
+  }
+}
 .ehome_construct .comparison-list h3 {
   font-size: 2rem;
   padding: 20px 0 10px;
@@ -5815,7 +5821,12 @@ body[data-aos-easing=ease] [data-aos] {
   }
 }
 .ehome_construct .comparison-list .c-item_wrap {
-  padding: 2.4rem 1.8rem 2.4rem 0;
+  padding: 2rem 1.8rem 2rem 0;
+}
+@media (max-width: 767px) {
+  .ehome_construct .comparison-list .c-item_wrap {
+    padding: 0.8rem;
+  }
 }
 
 @media (max-width: 767px) {

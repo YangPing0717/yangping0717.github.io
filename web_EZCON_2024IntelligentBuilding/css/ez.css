@@ -2307,6 +2307,10 @@ spline-viewer::part(logo) {
   transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   line-height: 1.6rem;
 }
+.hotspot-tooltip.ty2 {
+  bottom: -5rem;
+  left: -12rem;
+}
 @media (min-width: 980px) and (max-width: 1440px) {
   .hotspot-tooltip.ty2 {
     bottom: -6rem;
