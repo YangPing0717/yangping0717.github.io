@@ -1424,7 +1424,15 @@
 
 
 
-        <a href="#" id="back-to-top"></a>
+        <!-- <a href="#" id="back-to-top"></a> -->
+
+        <!-- HTML 結構 -->
+        <div class="xb-backtotop">
+            <a href="#" class="scroll-to-top-btn">
+                <i class="fas fa-arrow-up"></i>
+                <!-- <i class="fas fa-chevron-up"></i> -->
+            </a>
+        </div>
 
         <!-- <section data-title='One' id='one'></section> -->
         <!-- <section data-title='Two' id='two'></section>
@@ -1711,12 +1719,41 @@
         });
     </script>
 
+    <!-- go top -->
+    <script>
+        // JS 寫法
+        document.addEventListener('DOMContentLoaded', function () {
+        const backToTopBtn = document.querySelector('.xb-backtotop');
+        const scrollLink = document.querySelector('.scroll-to-top-btn');
+
+        // 1. 監聽滾動事件顯示/隱藏按鈕
+        window.addEventListener('scroll', function () {
+            if (window.scrollY > 300) {
+            backToTopBtn.classList.add('active');
+            } else {
+            backToTopBtn.classList.remove('active');
+            }
+        });
+
+        // 2. 點擊平滑滾動回頂部
+        if (scrollLink) {
+            scrollLink.addEventListener('click', function (e) {
+            e.preventDefault();
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth' // 原生平滑滾動，效能比 jQuery animate 好很多
+            });
+            });
+        }
+        });
+    </script>
+
     
 
     
 
     <!-- Sidebar Scroll Indicator -->
-    <script src="js/indicator.js"></script>
+    <script src="js/indicator_new.js"></script>
 
 
     <!-- ４大關鍵能力 -->

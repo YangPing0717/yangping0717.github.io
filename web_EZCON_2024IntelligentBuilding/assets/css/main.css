@@ -14187,6 +14187,41 @@ body .mfp-wrap .mfp-container .mfp-content .mfp-close:hover::before, body .mfp-w
   color: var(--color-black);
 }
 
+/* CSS 結構 */
+.xb-backtotop {
+  position: fixed;
+  right: 30px;
+  bottom: 30px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  z-index: 9999;
+}
+.xb-backtotop a {
+  text-align: center;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  width: 40px;
+  height: 40px;
+  display: block;
+  font-size: 16px;
+  color: var(--color-secondary);
+  background-color: var(--color-primary);
+  line-height: 38px;
+}
+.xb-backtotop a:hover {
+  margin-bottom: 4px;
+  color: var(--color-secondary);
+}
+
+.xb-backtotop.active {
+  opacity: 1;
+  visibility: visible;
+}
+
 /*----------------------------------------*/
 /*  19. mobile-menu
 /*----------------------------------------*/
