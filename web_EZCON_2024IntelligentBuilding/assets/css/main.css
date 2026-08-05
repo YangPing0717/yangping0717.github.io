@@ -6672,6 +6672,18 @@ body[data-aos-easing=ease] [data-aos] {
   object-fit: cover;
   margin: 0 -12px 0 -20px;
 }
+.sec-title--two .sub-title.type4 {
+  font-size: 1.4rem;
+}
+.sec-title--two .sub-title.type4 img {
+  filter: contrast(1.5);
+}
+.sec-title--two .sub-title.type4 img.before_sty {
+  width: 8rem;
+  height: 2.8rem;
+  object-fit: cover;
+  margin: 0 -12px;
+}
 
 .sec-title-center .sub-title {
   padding-right: 16px;
@@ -10752,9 +10764,13 @@ img {
   position: relative;
 }
 .tes-sec-title .title img {
-  width: 112px;
   z-index: -1;
   position: relative;
+  filter: hue-rotate(290deg) contrast(2);
+  background: #ffffff;
+  border-radius: 50%;
+  width: 56px;
+  height: 56px;
 }
 @media (max-width: 767px) {
   .tes-sec-title .title img {
@@ -10773,6 +10789,7 @@ img {
   backdrop-filter: blur(60px);
   box-shadow: 0 4px 24px -1px rgba(28, 9, 61, 0.2);
   background: linear-gradient(209deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.05) 100%);
+  display: flex;
 }
 @media (max-width: 767px) {
   .ac-testimonial-item {
@@ -10790,13 +10807,9 @@ img {
 }
 .ac-testimonial-item .xb-item--avatar {
   overflow: hidden;
-  max-width: 233px;
-  margin-right: 50px;
-  border-radius: 10px;
-  -webkit-border-radius: 10px;
-  -moz-border-radius: 10px;
-  -ms-border-radius: 10px;
-  -o-border-radius: 10px;
+  margin-right: 2rem;
+  width: 20rem;
+  position: relative;
 }
 @media (max-width: 767px) {
   .ac-testimonial-item .xb-item--avatar {
@@ -10814,9 +10827,24 @@ img {
     width: 100%;
   }
 }
+.ac-testimonial-item .xb-item--avatar .video-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  padding-bottom: 180%;
+}
+.ac-testimonial-item .xb-item--avatar .video-container video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: grayscale(0.65);
+}
 .ac-testimonial-item .xb-item--content {
-  font-size: 25px;
-  line-height: 34px;
+  font-size: 0.9rem;
+  line-height: 1.6;
   letter-spacing: 0em;
 }
 @media (max-width: 767px) {
@@ -10825,13 +10853,15 @@ img {
   }
 }
 .ac-testimonial-item .xb-item--name {
-  margin-top: 19px;
-  letter-spacing: -0.04em;
+  margin-top: 2rem;
   text-transform: capitalize;
+  font-weight: 600;
+  font-size: 1.5rem;
+  line-height: 1.4;
 }
 .ac-testimonial-item .xb-item--author {
-  margin-top: 60px;
-  border-top: 1px solid #45454f;
+  border-top: 1px solid #9f9f9f;
+  position: relative;
 }
 .ac-testimonial-item .xb-item--quote {
   position: absolute;
@@ -10848,6 +10878,119 @@ img {
   .ac-testimonial-item .xb-item--quote {
     top: 66%;
   }
+}
+.ac-testimonial-item h3 {
+  text-align: initial;
+  font-size: 2rem;
+  line-height: 1.6;
+  margin-top: 0.6rem;
+  margin-bottom: 0.6rem;
+}
+.ac-testimonial-item ul {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 8px;
+  position: relative;
+}
+.ac-testimonial-item ul.ul_li {
+  justify-content: flex-start;
+}
+.ac-testimonial-item ul li {
+  font-weight: bold;
+  font-size: 0.8rem;
+  color: var(--color-black);
+  position: relative;
+  border-radius: 30px;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  -ms-border-radius: 30px;
+  -o-border-radius: 30px;
+  padding: 0 16px 0 30px;
+}
+.ac-testimonial-item ul li:after {
+  position: absolute;
+  font-family: FontAwesome;
+  content: "\f00c";
+  left: 12px;
+  top: 1px;
+  color: var(--color-black);
+}
+
+.list-unstyled li.button {
+  border: 1px solid transparent;
+}
+.list-unstyled li.button::before {
+  top: -1px;
+  left: -1px;
+  right: -1px;
+  bottom: -1px;
+  padding: 1px;
+}
+
+.floating-container {
+  position: absolute;
+  width: 20rem;
+  height: 500px;
+  overflow: hidden;
+  top: -130%;
+  left: -90%;
+}
+
+.floating-icon {
+  position: absolute;
+  height: auto;
+  /* 預設視差變數為 0px */
+  --mouseX: 0px;
+  --mouseY: 0px;
+  /* 平滑過渡讓視差跟隨更自然 */
+  transition: transform 1s ease-out;
+  animation-name: float;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+/* 在 keyframes 中將滑鼠偏移量 (--mouseX, --mouseY) 合併進 transform */
+@keyframes float {
+  0%, 100% {
+    transform: translate(var(--mouseX), var(--mouseY)) translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translate(var(--mouseX), var(--mouseY)) translateY(-18px) rotate(4deg);
+  }
+}
+/* 個別球體佈局與尺寸 */
+.ball-1 {
+  width: 90px;
+  top: 10%;
+  left: 15%;
+  animation-duration: 4s;
+  animation-delay: 0s;
+}
+
+.ball-2 {
+  width: 70px;
+  top: 20%;
+  right: 18%;
+  animation-duration: 5.5s;
+  animation-delay: -1.5s;
+}
+
+.ball-3 {
+  width: 120px;
+  bottom: 15%;
+  left: 25%;
+  animation-duration: 3.8s;
+  animation-delay: -0.8s;
+}
+
+.ball-4 {
+  width: 85px;
+  bottom: 25%;
+  right: 30%;
+  animation-duration: 6s;
+  animation-delay: -2.2s;
+  opacity: 0.85;
 }
 
 .testimonial-wrapper {

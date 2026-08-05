@@ -626,7 +626,7 @@ footer .logo img {
   height: 12rem;
   transition: 0.4s;
   filter: blur(20px);
-  animation: effect infinite 3s linear;
+  animation: effect infinite 4s linear;
   opacity: 0.8;
   overflow: hidden;
 }
@@ -3018,4 +3018,133 @@ th, td {
   background: #0053c1;
   color: #ffffff;
   transform: translateY(-2px);
+}
+
+.gradient-canvas {
+  margin: 0;
+  padding: 0;
+}
+
+#gradient-canvas {
+  /* --gradient-color-1: #fd8cad;
+  --gradient-color-2: #fbe8d0;
+  --gradient-color-3: #fcc3e6;
+  --gradient-color-4: #fcd7d5; */
+  --gradient-color-1: #9E9E9E;
+  --gradient-color-2: #79fff2;
+  --gradient-color-3: #594139;
+  --gradient-color-4: #061c3f;
+}
+
+.gradient-canvas {
+  width: 100vw;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+.gradient-canvas #gradient-canvas {
+  height: 100%;
+  width: 100vw;
+  opacity: 0.7;
+}
+
+.animate_lines {
+  position: absolute;
+  margin: auto;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 80vw;
+}
+
+.animate_lines .line {
+  position: absolute;
+  overflow: hidden;
+  width: 1px;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(23, 25, 28, 0.03);
+}
+
+.animate_lines .line:after {
+  background: -webkit-gradient(linear, left top, left bottom, from(#0a1857), color-stop(50%, #00bbff), to(#00ffb7));
+  background: linear-gradient(to bottom, #0a1857 0%, #00bbff 50%, #00ffb7 100%);
+  content: "";
+  display: block;
+  position: absolute;
+  height: 25vh;
+  width: 100%;
+  top: -50%;
+  left: 0;
+  -webkit-animation: run 5s 0s infinite;
+  animation: run 5s 0s infinite;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -webkit-animation-timing-function: cubic-bezier(0.4, 0.26, 0, 0.97);
+  animation-timing-function: cubic-bezier(0.4, 0.26, 0, 0.97);
+}
+
+.animate_lines .line:nth-child(1) {
+  margin-left: 22%;
+}
+
+.animate_lines .line:nth-child(1):after {
+  -webkit-animation-delay: 2s;
+  animation-delay: 2s;
+}
+
+.animate_lines .line:nth-child(3) {
+  margin-left: 12%;
+}
+
+.animate_lines .line:nth-child(3):after {
+  -webkit-animation-delay: 2.5s;
+  animation-delay: 2.5s;
+}
+
+.animate_lines .line:nth-child(4) {
+  margin-left: 80%;
+}
+
+.animate_lines .line:nth-child(4):after {
+  -webkit-animation-delay: 3s;
+  animation-delay: 3s;
+}
+
+.animate_lines .line:nth-child(5) {
+  margin-left: 85%;
+}
+
+.animate_lines .line:nth-child(5):after {
+  -webkit-animation-delay: 3.5s;
+  animation-delay: 3.5s;
+}
+
+.animate_lines .line:nth-child(6) {
+  margin-left: 100%;
+}
+
+.animate_lines .line:nth-child(6):after {
+  -webkit-animation-delay: 1.5s;
+  animation-delay: 1.5s;
+}
+
+@-webkit-keyframes run {
+  0% {
+    top: 110%;
+  }
+  100% {
+    top: -50%;
+  }
+}
+@keyframes run {
+  0% {
+    top: 110%;
+  }
+  100% {
+    top: -50%;
+  }
 }
