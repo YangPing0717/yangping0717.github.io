@@ -6674,6 +6674,7 @@ body[data-aos-easing=ease] [data-aos] {
 }
 .sec-title--two .sub-title.type4 {
   font-size: 1.4rem;
+  z-index: 10;
 }
 .sec-title--two .sub-title.type4 img {
   filter: contrast(1.5);
