@@ -317,10 +317,10 @@
 		},
 		breakpoints: {
 			'1600': {
-				slidesPerView: 3.8,
+				slidesPerView: 4,
 			},
 			'1200': {
-				slidesPerView: 3,
+				slidesPerView: 3.5,
 			},
 			'1024': {
 				slidesPerView: 1,

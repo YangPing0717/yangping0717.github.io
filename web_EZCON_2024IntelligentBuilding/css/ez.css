@@ -5,10 +5,6 @@
   }
 }
 
-.hide_tem {
-  display: none;
-}
-
 .dark-scheme header.smaller {
   -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
@@ -325,6 +321,10 @@ p strong {
   }
 }
 
+.hide_tem {
+  display: none;
+}
+
 .forPhone_br br {
   display: none;
 }
@@ -343,6 +343,15 @@ p strong {
 @media (max-width: 768px) {
   .forPhone_hide {
     display: none;
+  }
+}
+
+.forPhone_show {
+  display: none;
+}
+@media (max-width: 768px) {
+  .forPhone_show {
+    display: initial;
   }
 }
 
