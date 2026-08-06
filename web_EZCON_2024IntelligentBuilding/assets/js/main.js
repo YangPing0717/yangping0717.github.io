@@ -332,7 +332,8 @@
 				slidesPerView: 1,
 			},
 			'0': {
-				slidesPerView: 1,
+				slidesPerView: 1.15,
+				spaceBetween: 16,
 			},
 		},
 	});
