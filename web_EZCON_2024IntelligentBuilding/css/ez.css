@@ -1480,6 +1480,7 @@ footer .logo img {
   aspect-ratio: 16/9; /* 強制維持 16:9 比例，或根據影片比例調整 */
   background: #000000; /* 載入前預設黑色背景 */
   padding-top: 0;
+  pointer-events: none;
 }
 .video-container video {
   width: 100%;
@@ -1487,6 +1488,7 @@ footer .logo img {
   object-fit: contain; /* 關鍵：確保影片在容器內維持正常比例不變形 */
   position: absolute;
   filter: contrast(1.8) grayscale(0.65);
+  pointer-events: none;
 }
 .video-container video.type1 {
   width: 150%;
