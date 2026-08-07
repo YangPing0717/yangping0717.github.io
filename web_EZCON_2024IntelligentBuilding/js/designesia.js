@@ -283,11 +283,11 @@
            center:true,
            loop:true,
            margin: 20,
-           nav:false,
-           dots:true,
            autoplay: true,
            autoplayTimeout:4000,
            autoplayHoverPause:true,
+           nav:false,
+           dots:false,
            responsive:{
             //     1440:{
             //        items:4
@@ -295,7 +295,7 @@
                1000:{
                    items: 5.3,
                 //    center:false
-                    margin: 28
+                    margin: 24
                },
                600:{
                    items:2
@@ -305,7 +305,6 @@
                }
            }
         });
-
 
 
 
@@ -451,6 +450,16 @@
          });
 
          
+         var owl_home = $('#item-carousel-big-eHome');
+         owl_home.owlCarousel();
+         $('.d-carousel .d-arrow-right').on("click", function() {
+             owl_home.trigger('next.owl.carousel');
+         })
+         $('.d-carousel .d-arrow-left').on("click", function() {
+             owl_home.trigger('prev.owl.carousel');
+         });
+
+
          var owl = $('#item-carousel-big');
          owl.owlCarousel();
          $('.d-carousel .d-arrow-right').on("click", function() {

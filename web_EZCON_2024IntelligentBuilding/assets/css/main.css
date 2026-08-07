@@ -6608,7 +6608,6 @@ body[data-aos-easing=ease] [data-aos] {
   display: inline-block;
   letter-spacing: -0.01em;
   color: var(--color-white);
-  text-transform: capitalize;
 }
 .sec-title .sub-title::before, .sec-title .sub-title::after {
   position: absolute;
@@ -10794,6 +10793,7 @@ img {
   border-radius: 50%;
   width: 56px;
   height: 56px;
+  margin-bottom: 10px;
 }
 @media (max-width: 767px) {
   .tes-sec-title .title img {
@@ -10861,7 +10861,7 @@ img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  filter: grayscale(0.65);
+  filter: grayscale(0.5) contrast(1.1) brightness(1.1);
 }
 .ac-testimonial-item .xb-item--content {
   font-size: 0.9rem;
@@ -10883,6 +10883,7 @@ img {
 @media (max-width: 767px) {
   .ac-testimonial-item .xb-item--name {
     margin-top: 1rem;
+    font-size: 1.3rem;
   }
 }
 .ac-testimonial-item .xb-item--author {
@@ -10972,8 +10973,7 @@ img {
   top: 0;
   left: 0;
 }
-
-.floating-icon {
+.floating-container .floating-icon {
   position: absolute;
   height: auto;
   /* 預設視差變數為 0px */
@@ -10984,6 +10984,56 @@ img {
   animation-name: float;
   animation-iteration-count: infinite;
   animation-timing-function: ease-in-out;
+  /* 個別球體佈局與尺寸 */
+}
+.floating-container .floating-icon.ball-1 {
+  width: 90px;
+  top: 10%;
+  left: 15%;
+  animation-duration: 4s;
+  animation-delay: 0s;
+}
+.floating-container .floating-icon.ball-2 {
+  width: 70px;
+  top: 20%;
+  right: 18%;
+  animation-duration: 5.5s;
+  animation-delay: -1.5s;
+}
+.floating-container .floating-icon.ball-3 {
+  width: 120px;
+  bottom: 8%;
+  left: 6%;
+  animation-duration: 3.8s;
+  animation-delay: -0.8s;
+}
+.floating-container .floating-icon.ball-4 {
+  width: 85px;
+  bottom: 25%;
+  right: 30%;
+  animation-duration: 6s;
+  animation-delay: -2.2s;
+  opacity: 0.85;
+}
+.floating-container.ty2 .floating-icon.ball-1 {
+  width: 110px;
+  top: 20%;
+  left: -13%;
+}
+.floating-container.ty2 .floating-icon.ball-2 {
+  width: 90px;
+  top: 2%;
+  right: 38%;
+}
+.floating-container.ty2 .floating-icon.ball-3 {
+  width: 120px;
+  bottom: 1%;
+  left: 20%;
+}
+.floating-container.ty2 .floating-icon.ball-4 {
+  width: 6cap;
+  bottom: 35%;
+  right: 10%;
 }
 
 /* 在 keyframes 中將滑鼠偏移量 (--mouseX, --mouseY) 合併進 transform */
@@ -10995,40 +11045,6 @@ img {
     transform: translate(var(--mouseX), var(--mouseY)) translateY(-18px) rotate(4deg);
   }
 }
-/* 個別球體佈局與尺寸 */
-.ball-1 {
-  width: 90px;
-  top: 10%;
-  left: 15%;
-  animation-duration: 4s;
-  animation-delay: 0s;
-}
-
-.ball-2 {
-  width: 70px;
-  top: 20%;
-  right: 18%;
-  animation-duration: 5.5s;
-  animation-delay: -1.5s;
-}
-
-.ball-3 {
-  width: 120px;
-  bottom: 15%;
-  left: 25%;
-  animation-duration: 3.8s;
-  animation-delay: -0.8s;
-}
-
-.ball-4 {
-  width: 85px;
-  bottom: 25%;
-  right: 30%;
-  animation-duration: 6s;
-  animation-delay: -2.2s;
-  opacity: 0.85;
-}
-
 .testimonial-wrapper {
   margin-left: -192px;
   margin-right: -216px;
