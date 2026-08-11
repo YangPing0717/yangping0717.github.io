@@ -3096,6 +3096,12 @@ th, td {
   margin: 0;
   padding: 0;
 }
+@media (max-width: 768px) {
+  .gradient-canvas {
+    display: none;
+  }
+}
+
 #gradient-canvas {
   /* --gradient-color-1: #fd8cad;
   --gradient-color-2: #fbe8d0;

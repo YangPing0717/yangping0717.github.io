@@ -10682,6 +10682,12 @@ img {
   position: relative;
 }
 
+@media (max-width: 767px) {
+  .testimonial .de-gradient-edge-top, .testimonial .de-gradient-edge-bottom {
+    display: none;
+  }
+}
+
 /* 當螢幕寬度小於等於 768px 時執行 */
 /* 僅針對擁有 data-video-src 屬性的 .testimonial 區塊，隱藏其內部的影片元件 */
 @media (max-width: 767px) {
@@ -10897,12 +10903,12 @@ img {
   font-weight: 600;
   font-size: 1.5rem;
   line-height: 1.4;
+  margin-bottom: 1rem;
 }
 @media (max-width: 767px) {
   .ac-testimonial-item .xb-item--name {
     margin-top: 1rem;
     font-size: 1.3rem;
-    margin-bottom: 1rem;
   }
 }
 .ac-testimonial-item .xb-item--author {
