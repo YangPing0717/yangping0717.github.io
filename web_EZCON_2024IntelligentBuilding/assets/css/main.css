@@ -10909,6 +10909,11 @@ img {
   border-top: 1px solid #9f9f9f;
   position: relative;
 }
+@media (max-width: 767px) {
+  .ac-testimonial-item .xb-item--author {
+    border-top: 1px solid #2F333A;
+  }
+}
 .ac-testimonial-item .xb-item--quote {
   position: absolute;
   top: 20px;
