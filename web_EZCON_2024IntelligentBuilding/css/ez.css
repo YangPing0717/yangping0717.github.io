@@ -1421,6 +1421,7 @@ footer .logo img {
   margin-top: 0.3rem;
   font-weight: normal;
   text-align: start;
+  opacity: 0.6;
 }
 @media (max-width: 768px) {
   .gallery_type3 .c-item_info .c-item_discr {
@@ -1435,6 +1436,19 @@ footer .logo img {
 @media (max-width: 768px) {
   .gallery_type3 .c-item_info .light {
     margin-right: 0.2rem;
+  }
+}
+@media (max-width: 768px) {
+  .gallery_type3.txt_noscale .c-item_info .c-item_title {
+    font-size: 17px;
+  }
+}
+.gallery_type3.txt_noscale .c-item_info .c-item_discr {
+  font-size: 13px;
+}
+@media (max-width: 768px) {
+  .gallery_type3.txt_noscale .c-item_info .c-item_discr {
+    width: 76%;
   }
 }
 .gallery_type3 .owl-carousel .owl-stage .owl-item .c-item_wrap {

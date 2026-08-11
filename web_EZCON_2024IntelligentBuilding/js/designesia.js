@@ -289,13 +289,44 @@
            nav:false,
            dots:false,
            responsive:{
-            //     1440:{
-            //        items:4
+                1441:{
+                   items:7.5,
+                   margin: 30
+               },
+               1000:{
+                   items: 5.5,
+                //    center:false
+                    margin: 30
+               },
+               600:{
+                   items:2
+               },
+               0:{
+                   items:1.5
+               }
+           }
+        });
+
+
+        //  eHome phone frames 英文版介面 放大居中
+        jQuery("#item-carousel-big-eHome-en").owlCarousel({
+           center:true,
+           loop:true,
+           margin: 20,
+           autoplay: true,
+           autoplayTimeout:4000,
+           autoplayHoverPause:true,
+           nav:false,
+           dots:false,
+           responsive:{
+            //     1441:{
+            //        items:7,
+            //        margin: 30
             //    },
                1000:{
                    items: 5.3,
                 //    center:false
-                    margin: 24
+                    margin: 30
                },
                600:{
                    items:2
@@ -305,7 +336,6 @@
                }
            }
         });
-
 
 
         // 養生村 1
@@ -450,6 +480,16 @@
          });
 
          
+         var owl_home_en = $('#item-carousel-big-eHome-en');
+         owl_home_en.owlCarousel();
+         $('.d-carousel .d-arrow-right').on("click", function() {
+             owl_home_en.trigger('next.owl.carousel');
+         })
+         $('.d-carousel .d-arrow-left').on("click", function() {
+             owl_home_en.trigger('prev.owl.carousel');
+         });
+
+
          var owl_home = $('#item-carousel-big-eHome');
          owl_home.owlCarousel();
          $('.d-carousel .d-arrow-right').on("click", function() {
