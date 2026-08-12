@@ -3009,7 +3009,7 @@ th, td {
 @media (max-width: 768px) {
   .eho_app_title .sec-title .title.type3 span:nth-child(2) {
     top: 0;
-    margin-right: 2rem;
+    margin-right: 6px;
   }
 }
 .eho_app_title .sec-title .title.type3 .discrip {

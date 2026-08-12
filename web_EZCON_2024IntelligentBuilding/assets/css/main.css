@@ -10864,6 +10864,7 @@ img {
   .ac-testimonial-item .xb-item--avatar {
     max-width: 100%;
     margin-right: 0;
+    width: 100%;
   }
 }
 @media only screen and (min-width: 576px) and (max-width: 767px) {
@@ -11017,33 +11018,32 @@ img {
   /* 個別球體佈局與尺寸 */
 }
 .floating-container .floating-icon.ball-1 {
-  width: 90px;
-  top: 10%;
-  left: 15%;
+  width: 150px;
+  top: 3%;
+  left: -2%;
   animation-duration: 4s;
   animation-delay: 0s;
 }
 .floating-container .floating-icon.ball-2 {
-  width: 70px;
-  top: 20%;
-  right: 18%;
+  width: 105px;
+  top: 16%;
+  right: 6%;
   animation-duration: 5.5s;
   animation-delay: -1.5s;
 }
 .floating-container .floating-icon.ball-3 {
-  width: 120px;
-  bottom: 8%;
-  left: 6%;
+  width: 140px;
+  bottom: 2%;
+  left: 0%;
   animation-duration: 3.8s;
   animation-delay: -0.8s;
 }
 .floating-container .floating-icon.ball-4 {
   width: 85px;
   bottom: 25%;
-  right: 30%;
+  right: 22%;
   animation-duration: 6s;
   animation-delay: -2.2s;
-  opacity: 0.85;
 }
 .floating-container.ty2 .floating-icon.ball-1 {
   width: 110px;
@@ -11051,7 +11051,7 @@ img {
   left: -13%;
 }
 .floating-container.ty2 .floating-icon.ball-2 {
-  width: 90px;
+  width: 105px;
   top: 2%;
   right: 38%;
 }
@@ -11061,9 +11061,65 @@ img {
   left: 20%;
 }
 .floating-container.ty2 .floating-icon.ball-4 {
-  width: 6cap;
-  bottom: 35%;
-  right: 10%;
+  width: 98px;
+  right: 0%;
+  top: 22%;
+  opacity: 1;
+}
+.floating-container.ty2 .floating-icon.ball-5 {
+  width: 90px;
+  right: 5%;
+  bottom: 3%;
+  animation-duration: 4s;
+  animation-delay: 0s;
+}
+.floating-container.sound .floating-icon.ball-1 {
+  width: 150px;
+  top: 3%;
+  left: -2%;
+}
+.floating-container.sound .floating-icon.ball-2 {
+  width: 116px;
+  top: 16%;
+  right: -2%;
+}
+.floating-container.sound .floating-icon.ball-3 {
+  width: 140px;
+  bottom: 2%;
+  left: 0%;
+}
+.floating-container.sound .floating-icon.ball-4 {
+  width: 105px;
+  bottom: 4%;
+  right: 22%;
+}
+.floating-container.safe .floating-icon.ball-1 {
+  width: 110px;
+  top: 65%;
+  left: -10%;
+}
+.floating-container.safe .floating-icon.ball-2 {
+  width: 105px;
+  top: 2%;
+  right: 38%;
+}
+.floating-container.safe .floating-icon.ball-3 {
+  width: 120px;
+  bottom: 1%;
+  left: 20%;
+}
+.floating-container.safe .floating-icon.ball-4 {
+  width: 98px;
+  right: 0%;
+  top: 22%;
+  opacity: 1;
+}
+.floating-container.safe .floating-icon.ball-5 {
+  width: 90px;
+  right: 5%;
+  bottom: 3%;
+  animation-duration: 4s;
+  animation-delay: 0s;
 }
 
 /* 在 keyframes 中將滑鼠偏移量 (--mouseX, --mouseY) 合併進 transform */
