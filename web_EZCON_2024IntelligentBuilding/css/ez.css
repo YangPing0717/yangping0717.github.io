@@ -3161,8 +3161,8 @@ th, td {
   width: 100%;
   top: -50%;
   left: 0;
-  -webkit-animation: run 5s 0s infinite;
-  animation: run 5s 0s infinite;
+  -webkit-animation: run 8s 0s infinite;
+  animation: run 8s 0s infinite;
   -webkit-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
   -webkit-animation-timing-function: cubic-bezier(0.4, 0.26, 0, 0.97);

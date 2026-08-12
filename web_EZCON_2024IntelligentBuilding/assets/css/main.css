@@ -5759,7 +5759,7 @@ body[data-aos-easing=ease] [data-aos] {
 
 @media only screen and (min-width: 1200px) and (max-width: 1500px) {
   .ehome_construct {
-    padding: 0 0 0 60px;
+    padding: 160px 0 160px 60px;
   }
 }
 .ehome_construct h2 {
@@ -10828,7 +10828,7 @@ img {
 
 .ac-testimonial-item {
   position: relative;
-  padding: 20px 40px 20px 20px;
+  padding: 20px;
   border-radius: 10px;
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
@@ -10848,7 +10848,7 @@ img {
   }
 }
 .ac-testimonial-item .xb-item--holder {
-  width: calc(100% - 284px);
+  width: 50%;
 }
 @media (max-width: 767px) {
   .ac-testimonial-item .xb-item--holder {
@@ -10856,8 +10856,8 @@ img {
   }
 }
 .ac-testimonial-item .xb-item--avatar {
-  margin-right: 2rem;
-  width: 20rem;
+  margin-right: 1.4rem;
+  width: 50%;
   position: relative;
 }
 @media (max-width: 767px) {
