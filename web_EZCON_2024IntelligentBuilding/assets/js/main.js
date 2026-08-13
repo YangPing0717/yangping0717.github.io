@@ -323,17 +323,20 @@
 			'1600': {
 				slidesPerView: 4,
 			},
-			'1200': {
+			'1440': {
 				slidesPerView: 3.5,
 			},
+			'1200': {
+				slidesPerView: 2.1,
+			},
 			'1024': {
-				slidesPerView: 1,
+				slidesPerView: 1.5,
 			},
 			'768': {
-				slidesPerView: 1,
+				slidesPerView: 1.5,
 			},
 			'576': {
-				slidesPerView: 1,
+				slidesPerView: 1.5,
 			},
 			'0': {
 				slidesPerView: 1.15,
