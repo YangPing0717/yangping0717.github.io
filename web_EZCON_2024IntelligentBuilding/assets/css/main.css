@@ -10872,6 +10872,11 @@ img {
     margin: 0 auto;
   }
 }
+@media (max-width: 767px) {
+  .ac-testimonial-item .xb-item--avatar img {
+    filter: grayscale(0.5) contrast(1.1) brightness(1.1);
+  }
+}
 .ac-testimonial-item .xb-item--avatar .video-container {
   position: relative;
   width: 100%;
