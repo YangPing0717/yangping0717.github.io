@@ -10873,7 +10873,7 @@ img {
   }
 }
 @media (max-width: 767px) {
-  .ac-testimonial-item .xb-item--avatar img {
+  .ac-testimonial-item .xb-item--avatar img.forPhone_show {
     filter: grayscale(0.5) contrast(1.1) brightness(1.1);
   }
 }
