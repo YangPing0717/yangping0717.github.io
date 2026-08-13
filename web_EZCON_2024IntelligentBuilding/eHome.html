@@ -507,12 +507,12 @@
                             <div class="swiper-slide">
                                 <div class="ac-testimonial-item ul_li xb-border">
                                     <div class="xb-item--avatar">
-                                        <!-- <img src="demo/app_fr/app_fr_ModeSetting.png" alt="image"> -->
+                                        <!-- <img src="demo/eHome/img_backhome.jpg" alt="image"> -->
                                         <div class="video-container">
                                             <!-- <video autoplay muted loop playsinline poster="video/BIM-fallback.jpg" class="">
                                                 <source src="video/Smart_home_living_room_with_202608051117.mp4" type="video/mp4">
                                             </video> -->
-                                            <video autoplay muted loop playsinline webkit-playsinline style="pointer-events: none;" poster="demo/eHome/img_backhome.jpg" >
+                                            <video preload="metadata" muted loop playsinline webkit-playsinline style="pointer-events: none;" poster="demo/eHome/img_backhome.jpg" >
                                                 <source src="video/backhome.mp4" type="video/mp4">
                                             </video>
                                         </div>
@@ -565,7 +565,7 @@
                                         <!-- <img src="demo/app_fr/app_fr_ModeSetting.png" alt="image"> -->
                                         <div class="video-container">
                                             <!-- JS 會將 video 標籤插入於此 -->
-                                            <video autoplay muted loop playsinline webkit-playsinline style="pointer-events: none;" poster="demo/eHome/img_leavehome.jpg" >
+                                            <video preload="metadata" muted loop playsinline webkit-playsinline style="pointer-events: none;" poster="demo/eHome/img_leave.jpg" >
                                                 <source src="video/leave3_s.mp4" type="video/mp4">
                                             </video>
                                         </div>
@@ -637,7 +637,7 @@
                                         <!-- <img src="demo/app_fr/app_fr_ModeSetting.png" alt="image"> -->
                                         <div class="video-container">
                                             <!-- JS 會將 video 標籤插入於此 -->
-                                            <video autoplay muted loop playsinline poster="video/BIM-fallback.jpg" class="">
+                                            <video preload="metadata" muted loop playsinline webkit-playsinline style="pointer-events: none;" poster="demo/eHome/img_thea.jpg">
                                                 <source src="video/theater1_s.mp4" type="video/mp4">
                                             </video>
                                         </div>
@@ -697,7 +697,7 @@
                                         <!-- <img src="demo/app_fr/app_fr_ModeSetting.png" alt="image"> -->
                                         <div class="video-container">
                                             <!-- JS 會將 video 標籤插入於此 -->
-                                            <video autoplay muted loop playsinline poster="video/BIM-fallback.jpg" class="">
+                                            <video preload="metadata" muted loop playsinline webkit-playsinline style="pointer-events: none;" poster="demo/eHome/img_security.jpg" >
                                                 <source src="video/security3_s.mp4" type="video/mp4">
                                             </video>
                                         </div>
@@ -1752,6 +1752,142 @@
     <!-- https://prod.spline.design/JlnAz6QvfQenGRDu/scene.splinecode -->
     <!-- <script type="module" src="https://unpkg.com/@splinetool/viewer@1.12.98/build/spline-viewer.js"></script>
     <spline-viewer loading-anim-type="spinner-big-dark" url="https://prod.spline.design/JlnAz6QvfQenGRDu/scene.splinecode"></spline-viewer> -->
+
+
+
+    <!-- <script>
+        const testimonialSwiper = new Swiper('.ac-testimonial-slider', {
+        // 你的其他 Swiper 設定 (例如 speed, loop 等) ...
+
+        on: {
+            init: function () {
+            // 初始化時，只播放第一個 active slide 的影片
+            playActiveVideo(this);
+            },
+            slideChangeTransitionEnd: function () {
+            // 滑塊切換完成後，播放當前影片、暫停其他影片
+            playActiveVideo(this);
+            }
+        }
+        });
+
+        function playActiveVideo(swiper) {
+        // 1. 暫停所有 Swiper 裡面的影片
+        const allVideos = swiper.el.querySelectorAll('video');
+        allVideos.forEach(video => {
+            video.pause();
+            // 可選：暫停時回到第一幀，釋放硬體解碼資源
+            // video.currentTime = 0; 
+        });
+
+        // 2. 找到當前 active slide 裡面的影片並播放
+        const activeSlide = swiper.slides[swiper.activeIndex];
+        const activeVideo = activeSlide ? activeSlide.querySelector('video') : null;
+
+        if (activeVideo) {
+            // 確保已靜音 (iOS 自動播放必要條件)
+            activeVideo.muted = true; 
+            
+            const playPromise = activeVideo.play();
+            if (playPromise !== undefined) {
+            playPromise.catch(error => {
+                // 防止 Auto-play 被瀏覽器阻擋引發的 Error
+                console.log("Video play prevented:", error);
+            });
+            }
+        }
+        }
+    </script> -->
+
+    <script>
+        var slider = new Swiper(".ac-testimonial-slider", {
+  loop: true,
+  speed: 400,
+  spaceBetween: 16,
+  slidesPerView: 1.15,
+  centeredSlides: false,
+  watchSlidesProgress: true,
+  autoplay: {
+    delay: 6000,
+    disableOnInteraction: false,
+  },
+  breakpoints: {
+    576: { slidesPerView: 1, spaceBetween: 30 },
+    768: { slidesPerView: 1, spaceBetween: 30 },
+    1024: { slidesPerView: 2, spaceBetween: 30 },
+    1200: { slidesPerView: 3.5, spaceBetween: 30 },
+    1600: { slidesPerView: 4, spaceBetween: 30 },
+  },
+  on: {
+    init: function () {
+      handleVideoPlay(this);
+    },
+    // 滑動轉換完成後觸發，確保 DOM class (.swiper-slide-active) 已準確更新
+    slideChangeTransitionEnd: function () {
+      handleVideoPlay(this);
+    }
+  }
+});
+
+function handleVideoPlay(swiper) {
+  const isMobile = window.innerWidth < 768;
+
+  if (isMobile) {
+    // ----------------------------------------------------
+    // 【手機版邏輯】：精準只播「當前 Slide」，其餘全部暫停
+    // ----------------------------------------------------
+    
+    // 1. 暫停 Swiper 內的所有影片
+    const allVideos = swiper.el.querySelectorAll('video');
+    allVideos.forEach(function (v) {
+      v.pause();
+    });
+
+    // 2. 取得目前 active 的卡片
+    const activeSlide = swiper.el.querySelector('.swiper-slide-active');
+    if (activeSlide) {
+      const activeVideo = activeSlide.querySelector('video');
+      if (activeVideo) {
+        activeVideo.muted = true;
+        activeVideo.playsInline = true;
+        
+        // 確保影片加載與播放
+        var playPromise = activeVideo.play();
+        if (playPromise !== undefined) {
+          playPromise.catch(function (error) {
+            // 如果遇到暫停中斷或阻擋，自動 reload 並重試
+            if (error.name === 'AbortError' || error.name === 'NotAllowedError') {
+              activeVideo.load();
+              activeVideo.play().catch(function(){});
+            }
+          });
+        }
+      }
+    }
+  } else {
+    // ----------------------------------------------------
+    // 【桌機版邏輯】：顯示區域內的多支影片同時自動播放
+    // ----------------------------------------------------
+    
+    // 抓取畫面上可見的所有卡片 (swiper-slide-visible)
+    let visibleSlides = swiper.el.querySelectorAll('.swiper-slide-visible');
+    if (visibleSlides.length === 0) {
+      visibleSlides = swiper.el.querySelectorAll('.swiper-slide');
+    }
+
+    visibleSlides.forEach(function (slide) {
+      const video = slide.querySelector('video');
+      if (video) {
+        video.muted = true;
+        video.playsInline = true;
+        if (video.paused) {
+          video.play().catch(function(){});
+        }
+      }
+    });
+  }
+}
+    </script>
 
 </body>
 

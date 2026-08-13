@@ -10877,6 +10877,7 @@ img {
   width: 100%;
   overflow: hidden;
   padding-bottom: 180%;
+  pointer-events: none;
 }
 .ac-testimonial-item .xb-item--avatar .video-container video {
   position: absolute;
@@ -10887,6 +10888,7 @@ img {
   object-fit: cover;
   filter: grayscale(0.5) contrast(1.1) brightness(1.1);
   display: initial;
+  pointer-events: none;
 }
 .ac-testimonial-item .xb-item--content {
   font-size: 0.9rem;
@@ -11369,6 +11371,29 @@ img {
     right: -1rem;
     left: auto;
   }
+}
+
+/* 防範 iOS Safari 渲染崩潰機制 */
+.ac-testimonial-slider .swiper-slide,
+.ac-testimonial-slider .video-container,
+.ac-testimonial-slider video {
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+/* 讓 Swiper JS 自動計算寬度，不要寫死 width: 100% 或 width: 100vw */
+.ac-testimonial-slider .swiper-slide {
+  height: auto;
+  box-sizing: border-box;
+}
+
+/* 確保容器影片不會爆開 */
+.ac-testimonial-slider .video-container video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 /* 1. Define the rotation keyframes */
