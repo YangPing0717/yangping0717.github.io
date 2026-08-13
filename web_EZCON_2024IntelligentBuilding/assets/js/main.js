@@ -270,37 +270,37 @@
 	/*------------------------------------------
 	= testimonial slide
 	-------------------------------------------*/
-	// var slider = new Swiper(".xb-testimonial-slider", {
-	// 	loop: true,
-	// 	speed: 400,
-	// 	spaceBetween: 30,
-	// 	slidesPerView: 5,
-	// 	centeredSlides: false,
-	// 	autoplay: {
-	// 		enabled: true,
-	// 		delay: 6000
-	// 	},
-	// 	breakpoints: {
-	// 		'1700': {
-	// 			slidesPerView: 5,
-	// 		},
-	// 		'1600': {
-	// 			slidesPerView: 4,
-	// 		},
-	// 		'1024': {
-	// 			slidesPerView: 3,
-	// 		},
-	// 		'768': {
-	// 			slidesPerView: 2,
-	// 		},
-	// 		'576': {
-	// 			slidesPerView: 1,
-	// 		},
-	// 		'0': {
-	// 			slidesPerView: 1,
-	// 		},
-	// 	},
-	// });
+	var slider = new Swiper(".xb-testimonial-slider", {
+		loop: true,
+		speed: 400,
+		spaceBetween: 30,
+		slidesPerView: 5,
+		centeredSlides: false,
+		autoplay: {
+			enabled: true,
+			delay: 6000
+		},
+		breakpoints: {
+			'1700': {
+				slidesPerView: 5,
+			},
+			'1600': {
+				slidesPerView: 4,
+			},
+			'1024': {
+				slidesPerView: 3,
+			},
+			'768': {
+				slidesPerView: 2,
+			},
+			'576': {
+				slidesPerView: 1,
+			},
+			'0': {
+				slidesPerView: 1,
+			},
+		},
+	});
 
 	
 
@@ -309,38 +309,38 @@
 	/*------------------------------------------
 	= testimonial slide  原來的版本
 	-------------------------------------------*/
-	// var slider = new Swiper(".ac-testimonial-slider", {
-	// 	loop: true,
-	// 	speed: 400,
-	// 	spaceBetween: 30,
-	// 	slidesPerView: 3,
-	// 	centeredSlides: false,
-	// 	autoplay: {
-	// 		enabled: true,
-	// 		delay: 6000
-	// 	},
-	// 	breakpoints: {
-	// 		'1600': {
-	// 			slidesPerView: 4,
-	// 		},
-	// 		'1200': {
-	// 			slidesPerView: 3.5,
-	// 		},
-	// 		'1024': {
-	// 			slidesPerView: 1,
-	// 		},
-	// 		'768': {
-	// 			slidesPerView: 1,
-	// 		},
-	// 		'576': {
-	// 			slidesPerView: 1,
-	// 		},
-	// 		'0': {
-	// 			slidesPerView: 1.15,
-	// 			spaceBetween: 16,
-	// 		},
-	// 	},
-	// });
+	var slider = new Swiper(".ac-testimonial-slider", {
+		loop: true,
+		speed: 400,
+		spaceBetween: 30,
+		slidesPerView: 3,
+		centeredSlides: false,
+		autoplay: {
+			enabled: true,
+			delay: 6000
+		},
+		breakpoints: {
+			'1600': {
+				slidesPerView: 4,
+			},
+			'1200': {
+				slidesPerView: 3.5,
+			},
+			'1024': {
+				slidesPerView: 1,
+			},
+			'768': {
+				slidesPerView: 1,
+			},
+			'576': {
+				slidesPerView: 1,
+			},
+			'0': {
+				slidesPerView: 1.15,
+				spaceBetween: 16,
+			},
+		},
+	});
 
 
 

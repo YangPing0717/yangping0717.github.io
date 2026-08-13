@@ -3134,6 +3134,12 @@ th, td {
   height: 100%;
   width: 80vw;
 }
+@media (max-width: 768px) {
+  .animate_lines {
+    display: none;
+  }
+}
+
 .animate_lines .line {
   position: absolute;
   overflow: hidden;

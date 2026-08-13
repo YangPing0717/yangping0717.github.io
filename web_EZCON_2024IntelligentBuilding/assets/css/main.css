@@ -10857,7 +10857,7 @@ img {
 }
 .ac-testimonial-item .xb-item--avatar {
   margin-right: 1.4rem;
-  width: 50%;
+  width: 56%;
   position: relative;
 }
 @media (max-width: 767px) {
@@ -10889,6 +10889,34 @@ img {
   filter: grayscale(0.5) contrast(1.1) brightness(1.1);
   display: initial;
   pointer-events: none;
+}
+.ac-testimonial-item .xb-item--avatar {
+  /* 預設（手機版 / < 768px）：隱藏影片，改顯示 poster 海報圖 */
+}
+.ac-testimonial-item .xb-item--avatar .video-container {
+  width: 100%;
+  height: 100%;
+  background-image: var(--poster-url);
+  background-size: cover !important;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.ac-testimonial-item .xb-item--avatar .video-container video {
+  display: none; /* 手機端直接隱藏影片，不讓渲染器處理 */
+}
+.ac-testimonial-item .xb-item--avatar {
+  /* 桌機版（>= 768px）：顯示影片，隱藏背景圖 */
+}
+@media (min-width: 768px) {
+  .ac-testimonial-item .xb-item--avatar .video-container {
+    background-image: none;
+  }
+  .ac-testimonial-item .xb-item--avatar .video-container video {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
 }
 .ac-testimonial-item .xb-item--content {
   font-size: 0.9rem;
