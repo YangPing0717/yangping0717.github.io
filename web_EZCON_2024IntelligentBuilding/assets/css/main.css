@@ -11411,6 +11411,12 @@ img {
   }
 }
 
+.ac-testimonial-slider .slick-slide,
+.ac-testimonial-slider .swiper-slide {
+  transform: translateZ(0); /* 避免建立過深的 3D 圖層上下文 */
+  will-change: auto; /* 不要濫用 will-change */
+}
+
 /* 1. Define the rotation keyframes */
 @keyframes spin {
   from {
