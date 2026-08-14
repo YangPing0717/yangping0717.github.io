@@ -309,41 +309,140 @@
 	/*------------------------------------------
 	= testimonial slide  原來的版本
 	-------------------------------------------*/
-	var slider = new Swiper(".ac-testimonial-slider", {
-		loop: true,
-		speed: 400,
-		spaceBetween: 30,
-		slidesPerView: 3,
-		centeredSlides: false,
-		autoplay: {
-			enabled: true,
-			delay: 6000
-		},
-		breakpoints: {
-			'1600': {
-				slidesPerView: 4,
-			},
-			'1440': {
-				slidesPerView: 3.5,
-			},
-			'1200': {
-				slidesPerView: 2.1,
-			},
-			'1024': {
-				slidesPerView: 1.5,
-			},
-			'768': {
-				slidesPerView: 1.5,
-			},
-			'576': {
-				slidesPerView: 1.5,
-			},
-			'0': {
-				slidesPerView: 1.15,
-				spaceBetween: 16,
-			},
-		},
-	});
+	// var slider = new Swiper(".ac-testimonial-slider", {
+	// 	loop: true,
+	// 	speed: 400,
+	// 	spaceBetween: 30,
+	// 	slidesPerView: 3,
+	// 	centeredSlides: false,
+	// 	autoplay: {
+	// 		enabled: true,
+	// 		delay: 6000
+	// 	},
+	// 	breakpoints: {
+	// 		'1600': {
+	// 			slidesPerView: 4,
+	// 		},
+	// 		'1440': {
+	// 			slidesPerView: 3.5,
+	// 		},
+	// 		'1200': {
+	// 			slidesPerView: 2.1,
+	// 		},
+	// 		'1024': {
+	// 			slidesPerView: 1.5,
+	// 		},
+	// 		'768': {
+	// 			slidesPerView: 1.5,
+	// 		},
+	// 		'576': {
+	// 			slidesPerView: 1.5,
+	// 		},
+	// 		'0': {
+	// 			slidesPerView: 1.15,
+	// 			spaceBetween: 16,
+	// 		},
+	// 	},
+	// });
+
+
+
+	let testimonialSwiper = null;
+let videoObserver = null;
+
+function handleResponsiveLayout() {
+  const isMobile = window.innerWidth < 768;
+
+  if (isMobile) {
+    // ----------------------------------------------------
+    // 【手機端】：銷毀 Swiper 輪播機制，啟用垂直滾動播放
+    // ----------------------------------------------------
+    if (testimonialSwiper !== null) {
+      testimonialSwiper.destroy(true, true);
+      testimonialSwiper = null;
+    }
+
+    // 使用 IntersectionObserver 監聽，滑到視窗內的影片才播放，離屏暫停
+    initMobileVideoObserver();
+
+  } else {
+    // ----------------------------------------------------
+    // 【桌機端】：啟動 Swiper 輪播
+    // ----------------------------------------------------
+    if (videoObserver) {
+      videoObserver.disconnect(); // 關閉手機監聽
+    }
+
+    if (testimonialSwiper === null) {
+      testimonialSwiper = new Swiper(".ac-testimonial-slider", {
+        loop: true,
+        speed: 400,
+        spaceBetween: 30,
+        slidesPerView: 3.5,
+        centeredSlides: false,
+        autoplay: {
+          delay: 6000,
+          disableOnInteraction: false,
+        },
+        breakpoints: {
+          1024: { slidesPerView: 2, spaceBetween: 30 },
+          1200: { slidesPerView: 3.5, spaceBetween: 30 },
+          1600: { slidesPerView: 4, spaceBetween: 30 },
+        },
+        on: {
+          afterInit: function () {
+            playDesktopVideos(this);
+          },
+          slideChange: function () {
+            playDesktopVideos(this);
+          }
+        }
+      });
+    }
+  }
+}
+
+// 手機版專用：滑到畫面才播放，離開畫面暫停
+function initMobileVideoObserver() {
+  const videos = document.querySelectorAll('.ac-testimonial-slider video');
+  
+  if (videoObserver) videoObserver.disconnect();
+
+  videoObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      const video = entry.target;
+      video.muted = true;
+      video.playsInline = true;
+
+      if (entry.isIntersecting) {
+        // 滑進視窗：播放
+        video.play().catch(() => {});
+      } else {
+        // 滑出視窗：暫停（節省記憶體）
+        video.pause();
+      }
+    });
+  }, { threshold: 0.3 }); // 當影片露出 30% 時觸發
+
+  videos.forEach(video => videoObserver.observe(video));
+}
+
+// 桌機版專用：播放全部畫面上的影片
+function playDesktopVideos(swiper) {
+  const allVideos = swiper.el.querySelectorAll('video');
+  allVideos.forEach(video => {
+    video.muted = true;
+    video.playsInline = true;
+    if (video.paused) {
+      video.play().catch(() => {});
+    }
+  });
+}
+
+// 頁面載入與視窗縮放時執行
+document.addEventListener("DOMContentLoaded", handleResponsiveLayout);
+window.addEventListener("resize", handleResponsiveLayout);
+
 
 
 
