@@ -3096,12 +3096,6 @@ th, td {
   margin: 0;
   padding: 0;
 }
-@media (max-width: 768px) {
-  .gradient-canvas {
-    display: none;
-  }
-}
-
 #gradient-canvas {
   /* --gradient-color-1: #fd8cad;
   --gradient-color-2: #fbe8d0;
@@ -3140,12 +3134,6 @@ th, td {
   height: 100%;
   width: 80vw;
 }
-@media (max-width: 768px) {
-  .animate_lines {
-    display: none;
-  }
-}
-
 .animate_lines .line {
   position: absolute;
   overflow: hidden;
@@ -3166,8 +3154,8 @@ th, td {
   width: 100%;
   top: -50%;
   left: 0;
-  -webkit-animation: run 6s 0s infinite;
-  animation: run 6s 0s infinite;
+  -webkit-animation: run 7s 0s infinite;
+  animation: run 7s 0s infinite;
   -webkit-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
   -webkit-animation-timing-function: cubic-bezier(0.4, 0.26, 0, 0.97);
