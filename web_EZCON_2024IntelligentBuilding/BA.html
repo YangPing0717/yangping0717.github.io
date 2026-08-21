@@ -1803,7 +1803,10 @@
 
 
     <script type="module">
-        import { Application } from 'https://unpkg.com/@splinetool/runtime';
+        // import { Application } from 'https://unpkg.com/@splinetool/runtime';
+
+        // 找出 spline 生出的 url 去看原始碼裡的 runtime 當初在發佈時用的是什麼版本 指定它
+        import { Application } from 'https://unpkg.com/@splinetool/runtime@1.12.90/build/runtime.js';
 
         const canvas = document.getElementById('canvas3d');
         const app = new Application(canvas);
