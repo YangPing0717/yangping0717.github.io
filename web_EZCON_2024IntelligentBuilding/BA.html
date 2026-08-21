@@ -177,7 +177,13 @@
             
             <div id="top"></div>
             <section id="section-hero" data-title='易控樓宇智慧化控制系統&ensp;BA' class="jarallax bim_page_start">
-                <div class="txt_direction">控制畫面微互動，按住鍵盤：<br/>
+                <div class="txt_direction">
+                    <div class="controls">
+                        <button id="btn-cam-1" class="btn"><i class="fas fa-undo"></i> <span>重置視角</span></button>
+                    </div>
+                    
+                    <!-- <div class="clearfix"></div> -->
+                    控制畫面微互動，按住鍵盤：<br/>
                     <span> Alt&ensp;鍵</span>：可 360° 旋轉<br/>
                     <span><i class="fa fa-windows"></i>&ensp;鍵</span>：可移動<br/>
                     <span><i class="fa fa-windows"></i>&ensp;鍵</span>&ensp;+&ensp;<span><i class="fas fa-mouse"></i>&ensp;上下鍵</span>：可放大縮小<br/>
@@ -185,19 +191,20 @@
                 </div>
                 <!-- BIM mod -->
                 <div class="full wow fadeInUp" data-wow-duration="1.2s" data-wow-delay=".8s" >
-                    <script type="module" src="https://unpkg.com/@splinetool/viewer@1.12.87/build/spline-viewer.js"></script>
-                    <spline-viewer loading-anim-type="spinner-small-dark" url="https://prod.spline.design/ow3jz7VpiWPDsyLa/scene.splinecode"></spline-viewer>
-                    <div class="de-gradient-edge-bottom"></div>
+                    <canvas id="canvas3d"></canvas>
+                    <!-- <script type="module" src="https://unpkg.com/@splinetool/viewer@1.12.87/build/spline-viewer.js"></script>
+                    <spline-viewer loading-anim-type="spinner-small-dark" url="https://prod.spline.design/ow3jz7VpiWPDsyLa/scene.splinecode"></spline-viewer> -->
+                    <!-- <div class="de-gradient-edge-bottom"></div> -->
                 </div>
 
                 <img src="images/background/BA_bg.jpg" class="jarallax-img mobile_bg type4 " alt="">
                 <div class="bim_start jarallax">
                     <div class="container position-relative z1000 wow fadeInDown">
                         <div class="row align-items-center position-relative">
-                            <div class="col-lg-10">
+                            <!-- <div class="col-lg-10">
                                 <img src="images/background/emp-big.png" class="sm-img-fluid img-fluid mt-100 sm-mt-0 emp_img" alt="">
                             </div>
-                            <div class="clearfix"></div>    
+                            <div class="clearfix"></div>     -->
                             <div class="col-lg-1 col-1">
                                 <img src="images/misc/arrow-up-right.png" class="forPhone_hide img-fluid wow fadeInLeft bo" alt="" data-wow-delay=".8s" >
                                 <!-- <img src="assets/img/icon/animated-gif02.gif" class="img-fluid type2 wow fadeInLeft" alt="icon" data-wow-delay=".8s" >  -->
@@ -208,7 +215,7 @@
                                     <h2 class="mb-2 text-start bestAI">
                                         偵知 <i class="fa fa-chevron-right"></i>
                                         顯示 <i class="fa fa-chevron-right"></i>
-                                        連動
+                                        連動 
                                     </h2>
                                     <!-- <h3 class="mb-2"></h3> -->
                                     <h5 class="mt-2 mb-2 s2">
@@ -222,21 +229,26 @@
                                             <i class="id-color fas fa-network-wired"></i>智慧創新指標
                                         </span>
                                     </h5>
-                                    <p class="no-bottom ">
+                                    
+                                    <p class="no-bottom forPhone_hide">
                                         偵知是眼、顯示是腦、連動是手，三者完美結合，讓建築成為具備反應能力的智慧生命體。
                                         BA 系統是智慧建築整合的核心，透過設備串聯與集中管理，讓建築從「被動運作」轉為「主動管理」。易控以穩定的控制核心落實數據監測與節能調度，在降低營運成本的同時，全面優化環境舒適度，打造高效能的頂級 AI 智慧建築。
                                     </p>
                                 </div>
                             </div>
 
-                            <div class="spacer-single d-lg-none d-sm-block"></div>
+                            <div class="spacer-20 d-lg-none d-sm-block"></div>
+                            <div class="col-1 d-lg-none d-sm-block"></div>
 
-                            <div class="col-lg-3">
-                                <a class="btn-main big button wow fadeInLeft" href="#section-schedule-title" data-wow-delay=".8s" >BA 系統核心能力
+                            <div class="col-lg-3 col-10">
+                                <a class="btn-main big forPhone_sm button wow fadeInLeft" href="#section-schedule-title" data-wow-delay=".6s" >BA 系統核心能力
                                     <span class="hoverEffect">
                                         <span></span>
                                     </span>
                                 </a>
+                                <button id="btn-cam-mobile" class="btn button wow fadeInLeft" data-wow-delay=".8s">
+                                    <i class="fas fa-undo"></i> <span>重置</span>
+                                </button>
                             </div>
                         </div>
                     </div>
@@ -244,11 +256,8 @@
                 </div>
             </section>
 
-            
-            
 
             <!-- breadcrumb -->
-
             <section aria-label="section" class="">
                 <div class="container">
                     <div class="row">
@@ -1792,6 +1801,71 @@
 
 
 
+
+    <script type="module">
+        import { Application } from 'https://unpkg.com/@splinetool/runtime';
+
+        const canvas = document.getElementById('canvas3d');
+        const app = new Application(canvas);
+
+        // 💡 關鍵：加上這行，把 app 導出給全域/Console 使用！
+        window.app = app;
+
+        async function initScene() {
+            try {
+            await app.load('https://prod.spline.design/ow3jz7VpiWPDsyLa/scene.splinecode');
+            console.log('✅ 場景與物理引擎模組初始化完畢！');
+
+            const targetObj = app.findObjectByName('main_object');
+            // 💡 順便把 targetObj 也導出，等一下測試更方便！
+            window.targetObj = targetObj;
+
+            function updateScale() {
+                if (!targetObj) return;
+
+                if (window.innerWidth <= 768) {
+                targetObj.scale.set(0.75, 0.75, 0.75);
+                // 如果想先預設調整 Y 軸位置，可以寫在這裡：
+                targetObj.position.y = 400; 
+                targetObj.position.x = 50;
+                } else {
+                targetObj.scale.set(1, 1, 1);
+                targetObj.position.y = 300;
+                }
+            }
+
+            updateScale();
+            window.addEventListener('resize', updateScale);
+
+            } catch (err) {
+            console.error('場景載入失敗：', err);
+            }
+        }
+
+        initScene();
+
+        // 3. 綁定按鈕點擊事件 (這些可以放在全域)
+        document.getElementById('btn-cam-1')?.addEventListener('click', () => {
+            app.emitEvent('mouseDown', 'CameraMain');
+            console.log('已發送切換至 CameraMain');
+        });
+
+        document.getElementById('btn-cam-mobile')?.addEventListener('click', () => {
+            app.emitEvent('mouseDown', 'CameraMain');
+        });
+
+        // document.getElementById('btn-cam-3')?.addEventListener('click', () => {
+        //     app.emitEvent('mouseUp', 'Cam_b_1');
+        // });
+
+        // document.getElementById('btn-cam-4')?.addEventListener('click', () => {
+        //     app.emitEvent('keyDown', 'Cam_b_1');
+        // });
+
+        // document.getElementById('btn-cam-5')?.addEventListener('click', () => {
+        //     app.emitEvent('keyUp', 'Cam_b_1');
+        // });
+    </script>
     
 
     
