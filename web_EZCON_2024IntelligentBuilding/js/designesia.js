@@ -639,7 +639,7 @@
 					items:4
 				},
 				1000:{
-					items:2
+					items:3.6
 				},
 				600:{
 					items:2
