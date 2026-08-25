@@ -1860,9 +1860,9 @@ spline-viewer::part(logo) {
   }
 }
 .bim_page_start .txt_direction .btn {
-  margin-top: 0;
-  margin-bottom: 0.6rem;
-  padding: 10px 20px;
+  margin-top: 0.2rem;
+  margin-bottom: 0.2rem;
+  padding: 6px 16px;
   border: none;
   background: transparent;
   color: #111111 !important;
@@ -1976,8 +1976,8 @@ spline-viewer::part(logo) {
 }
 .bim_process .sec-title .title {
   display: block;
-  font-size: 44px;
-  line-height: 1.2;
+  font-size: 40px;
+  line-height: 1.1;
   color: var(--color-heading);
   font-family: var(--font-heading);
 }
@@ -1987,7 +1987,7 @@ spline-viewer::part(logo) {
   }
 }
 .bim_process .sec-title .title .bigger {
-  font-size: 64px;
+  font-size: 54px;
   width: initial;
   height: initial;
   letter-spacing: -2px;
