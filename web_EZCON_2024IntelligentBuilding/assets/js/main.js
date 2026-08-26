@@ -347,7 +347,7 @@
 
 
 
-	let testimonialSwiper = null;
+let testimonialSwiper = null;
 let videoObserver = null;
 
 function handleResponsiveLayout() {
@@ -385,8 +385,9 @@ function handleResponsiveLayout() {
           disableOnInteraction: false,
         },
         breakpoints: {
-          1024: { slidesPerView: 2, spaceBetween: 30 },
-          1200: { slidesPerView: 3.5, spaceBetween: 30 },
+          1024: { slidesPerView: 1.4, spaceBetween: 30 },
+          1200: { slidesPerView: 1.8, spaceBetween: 30 },
+					1400: { slidesPerView: 3.5, spaceBetween: 30 },
           1600: { slidesPerView: 4, spaceBetween: 30 },
         },
         on: {

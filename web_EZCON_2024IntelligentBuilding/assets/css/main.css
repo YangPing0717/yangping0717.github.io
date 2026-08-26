@@ -5914,11 +5914,12 @@ body[data-aos-easing=ease] [data-aos] {
 }
 .with_subtitle_list .xb-item--list li span:nth-child(3) {
   padding-left: 30px;
-  font-size: 14px;
+  font-size: 13px;
+  margin-top: -6px;
 }
 .with_subtitle_list .xb-item--list li .list_title {
   color: #ffffff;
-  font-size: 130%;
+  font-size: 110%;
 }
 @media (max-width: 767px) {
   .with_subtitle_list .xb-item--list li .list_title {
@@ -6476,8 +6477,8 @@ body[data-aos-easing=ease] [data-aos] {
 
 .sec-title .title {
   display: block;
-  font-size: 62px;
-  line-height: 1.5;
+  font-size: 56px;
+  line-height: 1.3;
   color: var(--color-heading);
   font-family: var(--title-font);
 }
