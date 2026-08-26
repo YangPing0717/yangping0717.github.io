@@ -14328,6 +14328,16 @@ body .mfp-wrap .mfp-container .mfp-content .mfp-close:hover::before, body .mfp-w
     display: none;
   }
 }
+@media only screen and (min-width: 1200px) and (max-width: 1500px) {
+  .thm-btn.ty2 .text > span {
+    display: none;
+  }
+}
+@media (max-width: 767px) {
+  .thm-btn.ty2 .text > span {
+    display: initial;
+  }
+}
 
 .agency-btn .text {
   padding: 21.2px 20px;
