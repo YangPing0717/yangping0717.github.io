@@ -1451,7 +1451,7 @@ footer .logo img {
 }
 @media (max-width: 768px) {
   .gallery_type3.txt_noscale .c-item_info .c-item_discr {
-    width: 76%;
+    width: 85%;
   }
 }
 .gallery_type3 .owl-carousel .owl-stage .owl-item .c-item_wrap {
@@ -1942,7 +1942,7 @@ spline-viewer::part(logo) {
 }
 .bim_feat .sec-title .title {
   display: block;
-  font-size: 52px;
+  font-size: 40px;
   line-height: 1.2;
   color: var(--color-heading);
   font-family: var(--font-heading);
@@ -1953,7 +1953,7 @@ spline-viewer::part(logo) {
   }
 }
 .bim_feat .sec-title .title .bigger {
-  font-size: 68px;
+  font-size: 58px;
   width: initial;
   height: initial;
 }
