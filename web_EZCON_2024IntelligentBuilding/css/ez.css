@@ -396,9 +396,24 @@ header .logo-main {
   color: #222;
 }
 
-.wm-carousel {
-  padding-top: 75vh;
+.wm {
+  width: 100%;
+  color: transparent;
+  -webkit-text-stroke: 1px var(--primary-color);
+  font-size: 300px;
+  position: absolute;
+  left: 0;
+  z-index: 0;
+  text-align: center;
+  font-family: var(--title-font);
+  line-height: 70px;
+  letter-spacing: 0.15em;
+  margin-left: 0;
+  top: initial;
+  transform: translate(-50%, -50%);
+  bottom: 0;
 }
+
 @media (min-width: 769px) and (max-width: 1440px) {
   .wm-carousel {
     padding-top: initial;
@@ -415,9 +430,12 @@ header .logo-main {
 .wm-carousel .images-carousel-group a {
   position: relative;
 }
+.wm-carousel .images-carousel-group a img {
+  height: 28vh;
+}
 @media (min-width: 769px) and (max-width: 1440px) {
   .wm-carousel .images-carousel-group a img {
-    height: 45vh;
+    height: 25vh;
   }
 }
 @media (max-width: 768px) {
@@ -428,21 +446,22 @@ header .logo-main {
 .wm-carousel .images-carousel-group a::before {
   letter-spacing: initial;
   position: absolute;
-  width: 628px;
+  width: 100%;
   height: 6rem;
   left: 0;
-  bottom: 0.8rem;
-  content: "和雍建設 昆明案 - 2024 銀級";
+  bottom: 0;
+  content: "";
   font-size: 1.4rem;
   color: #ffffff;
   -webkit-text-stroke: 0px;
   background: linear-gradient(0deg, rgba(9, 9, 27, 0.9) 30%, rgba(0, 0, 0, 0) 100%);
+  line-height: 5.5;
 }
 @media (min-width: 769px) and (max-width: 1440px) {
   .wm-carousel .images-carousel-group a::before {
-    bottom: 0.8rem;
-    font-size: 1.8rem;
-    width: 582px;
+    bottom: 0;
+    font-size: 1rem;
+    height: 4.2rem;
   }
 }
 @media (max-width: 768px) {
@@ -452,35 +471,50 @@ header .logo-main {
     width: 352px;
   }
 }
-.wm-carousel .images-carousel-group a:nth-child(2)::before {
+.wm-carousel .images-carousel-group a.txt01::before {
+  content: "和雍建設 昆明案 - 2024 銀級";
+}
+.wm-carousel .images-carousel-group a.txt02::before {
   content: "和雍建設 台北士林天母案 - 2024 銀級";
 }
-.wm-carousel .images-carousel-group a:nth-child(3)::before {
+.wm-carousel .images-carousel-group a.txt03::before {
   content: "利百加建設 民有印象 - 2024 銀級";
 }
-.wm-carousel .images-carousel-group a:nth-child(4)::before {
+.wm-carousel .images-carousel-group a.txt04::before {
   content: "傳田建設 傳田豐御 - 2016 銀級";
 }
-.wm-carousel .images-carousel-group a:nth-child(5)::before {
+.wm-carousel .images-carousel-group a.txt05::before {
   content: "峻勝建設 文化首勝 - 2016 銀級";
 }
-.wm-carousel .images-carousel-group a:nth-child(6)::before {
+.wm-carousel .images-carousel-group a.txt06::before {
   content: "傑座建設 甄豪宅 - 2016 銀級";
 }
-.wm-carousel .images-carousel-group a:nth-child(7)::before {
+.wm-carousel .images-carousel-group a.txt07::before {
   content: "將捷建設 將捷 MRT - 2016 銅級";
 }
-.wm-carousel .images-carousel-group a:nth-child(8)::before {
+.wm-carousel .images-carousel-group a.txt08::before {
   content: "城中建設 城心城邑 - 2016 銅級";
 }
-.wm-carousel .images-carousel-group a:nth-child(9)::before {
+.wm-carousel .images-carousel-group a.txt09::before {
   content: "大漢建設 星禾苑 - 2016 銀級";
 }
-.wm-carousel .images-carousel-group a:nth-child(10)::before {
+.wm-carousel .images-carousel-group a.txt10::before {
   content: "邑城建設 邑城仰睦 - 2016 銀級";
 }
-.wm-carousel .images-carousel-group a:nth-child(11)::before {
+.wm-carousel .images-carousel-group a.txt11::before {
   content: "金鋐建設 金鋐琢岳 - 2016 銀級";
+}
+
+.wm-carousel .swiper-slide {
+  width: auto; /* 讓卡片依圖片原本寬度自適應 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.wm-carousel img {
+  display: block;
+  pointer-events: none; /* 防止圖片預設拖拽行為 */
 }
 
 .carousel-indicators {

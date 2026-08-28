@@ -47,6 +47,9 @@
     <!-- Or use a CDN (Example for version 6) -->
     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com" integrity="..." crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
     <link id="colors" href="css/6_2_style.css" rel="stylesheet" type="text/css" >
     <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto:300,400,500|Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp'>
     <link id="colors" href="css/vendors.css" rel="stylesheet" type="text/css" >
@@ -131,7 +134,7 @@
                                     <li><a class="menu-item" href="index.html#section-gallery">Gallery</a></li> 
                                     <li><a class="menu-item" href="index.html#section-location">Getting There</a></li> 
                                     <li><a class="menu-item" href="news.html">News</a></li> -->
-                                    <li style="display: none;"><a class="menu-item" href="#section-hero">選單下拉帶圖像</a>
+                                    <li style="display: none;" ><a class="menu-item" href="#section-hero">選單下拉帶圖像</a>
                                         <ul class="mega">
                                             <li>
                                                 <div class="container">
@@ -243,7 +246,45 @@
                         <div class="mask">
                             
                             <div class="d-content relative z1000">
-                                <div class="wm wm-carousel">
+                                <div class="wm wm-carousel swiper wow fadeInRight ">
+                                    <div class="images-carousel-group swiper-wrapper ">
+                                        <a href="https://www.ezcontw.com/he-yong-jian-she-kun-ming-jie-wan-hua-an/" class="txt01 swiper-slide">
+                                            <img src="demo/preview/和雍a.jpg" alt="">
+                                        </a>
+                                        <a href="https://www.ezcontw.com/he-yong-jian-she-tai-bei-shi-lin-tian-mu-an/" class="txt02 swiper-slide">
+                                            <img src="demo/preview/和雍_天母a.jpg" alt="">
+                                        </a>
+                                        <a href="https://www.ezcontw.com/li-bai-jia-jian-she-min-you-yin-xiang/" class="txt03 swiper-slide">
+                                            <img src="demo/preview/利百加a.jpg" alt=""  >
+                                        </a>
+                                        <a href="https://www.ezcontw.com/chuan-tian-jian-she-chuan-tian-feng-yu/" class="txt04 swiper-slide">
+                                            <img src="demo/preview/傳田a.jpg" alt="">
+                                        </a>
+                                        <a href="https://www.ezcontw.com/jun-sheng-jian-she-wen-hua-shou-sheng/" class="txt05 swiper-slide">
+                                            <img src="demo/preview/峻勝_文化首勝a.jpg" alt="">
+                                        </a>
+                                        <a href="https://www.ezcontw.com/jie-zuo-jian-she-zhen-hao-zhai/" class="txt06 swiper-slide">
+                                            <img src="demo/preview/傑座_甄豪宅a.jpg" alt="">
+                                        </a>
+                                        <a href="https://www.ezcontw.com/jiang-jie-jie-yun-jing-ping-gong-gou-an/" class="txt07 swiper-slide">
+                                            <img src="demo/preview/將捷MRT_a.jpg" alt="">
+                                        </a>
+                                        <a href="https://www.ezcontw.com/cheng-xin-cheng-yi/" class="txt08 swiper-slide"> 
+                                            <img src="demo/preview/城中_城心城邑_b.jpg" alt="">
+                                        </a>
+                                        <a href="https://www.ezcontw.com/da-han-ding-shang-yuan/" class="txt09 swiper-slide"> 
+                                            <img src="demo/preview/大漢_星禾苑a.jpg" alt="">
+                                        </a>
+                                        <a href="https://www.ezcontw.com/yi-cheng-yang-mu/" class="txt10 swiper-slide"> 
+                                            <img src="demo/preview/邑城_邑城仰睦a.jpg" alt="">
+                                        </a>
+                                        <a href="https://www.ezcontw.com/jin-hong-zhuo-yue/" class="txt11 swiper-slide"> 
+                                            <img src="demo/preview/金鋐_金鋐琢岳a.jpg" alt="">
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class="wm wm-carousel" style="display: none;">
                                     <div class="images-carousel-group wow fadeInRight ">
                                         <a href="https://www.ezcontw.com/he-yong-jian-she-kun-ming-jie-wan-hua-an/" >
                                             <img src="demo/preview/和雍a.jpg" alt=""  >
@@ -342,7 +383,7 @@
                 </div>
                 <div class="container">
                     <div class="row">
-                        <div class="col-lg-10" data-jarallax-element="-30">
+                        <div class="col-lg-8" data-jarallax-element="-30">
                             <p class="lead wow fadeInUp">在 2024 智慧建築成為不動產開發、商辦與公共工程的關鍵指標下，如何有效取得智慧建築候選證書、完成智慧建築標章申請，甚至順利達成智慧建築銀級、金級或鑽石級，已不只是設備堆疊，而是一場結合法規理解、系統整合與長期營運思維的專業工程。易控智慧，專注於智慧建築顧問服務與實際系統落地，協助業主與設計團隊，在符合智慧建築評估手冊 2024 年版的前提下，用「最少的冤枉投資，換取最穩定的標章分數」。
                             </p>
                         </div>
@@ -1547,7 +1588,6 @@
                         <div class="col-lg-12">
                             <div class="map-container map-fullwidth">
                                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3616.50270672222!2d121.54258661176576!3d24.98302867775708!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346801fb80b2d25d%3A0x9fa41bb4065c815f!2zMjMx5paw5YyX5biC5paw5bqX5Y2A5a-25YWD6Lev5LiA5q61MTA46JmfMQ!5e0!3m2!1szh-TW!2stw!4v1739424624186!5m2!1szh-TW!2stw" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-
                             </div>
                         </div>
 
@@ -1556,7 +1596,6 @@
                         <div class="col-lg-4 col-md-4 text-center">
                             <p class="lead no-bottom">總部地址</p>
                             <h4 class="s2">新北市新店區寶元路一段 108 號 1 樓</h4>
-                           
                         </div>
                         <div class="col-lg-4 col-md-4 text-center">
                             <p class="lead no-bottom">總部服務專線</p>
@@ -1650,14 +1689,14 @@
             startVisible: true
         });
 
-        $('.wm-carousel').marquee({
-            direction: 'left',
-            duration: 30000,
-            gap: 60,
-            delayBeforeStart: 0, 
-            duplicated: true,
-            startVisible: false
-        });
+        // $('.wm-carousel').marquee({
+        //     direction: 'left',
+        //     duration: 30000,
+        //     gap: 60,
+        //     delayBeforeStart: 0, 
+        //     duplicated: true,
+        //     startVisible: true
+        // });
     });
     </script>
 
@@ -1775,7 +1814,22 @@
 <!-- Main custom script -->
 <!-- <script src="assets/js/main.js"></script> -->
 
-
+<script>
+    jQuery(document).ready(function($) {
+        const swiper = new Swiper('.wm-carousel', {
+            loop: true,               // 無縫循環
+            slidesPerView: 'auto',    // 依據內容自動寬度
+            spaceBetween: 30,         // 卡片間距 (相當於 gap)
+            freeMode: true,           // 自由滑動模式 (不強迫對齊單張卡片)
+            grabCursor: true,         // 滑鼠呈現抓取圖示
+            autoplay: {
+                delay: 0,             // 不停頓
+                disableOnInteraction: false, // 拖拽後繼續自動播放
+            },
+            speed: 6000,              // 滾動速度（數字越大越慢）
+        });
+    });
+</script>
 
 
     
