@@ -212,8 +212,8 @@ h1.big .smaller, .h1_big .smaller {
 }
 
 h1.ultra-big.smaller {
-  font-size: 5.8rem;
-  line-height: 6rem;
+  font-size: 5rem;
+  line-height: 5.2rem;
 }
 @media (max-width: 768px) {
   h1.ultra-big.smaller {
