@@ -823,12 +823,12 @@ footer .logo img {
 }
 
 .features .de_count {
-  width: 75%;
+  width: 78%;
   padding: 1.8rem 0 0 0;
 }
 @media (max-width: 768px) {
   .features .de_count {
-    width: 80%;
+    width: 85%;
     padding: 0;
     margin-top: -1rem;
   }
@@ -3351,4 +3351,480 @@ th, td {
   100% {
     top: -50%;
   }
+}
+/* 遮罩背景 */
+/* 1. Drawer 本身設定 flex 直向佈局，並限制高度與隱藏外部 overflow */
+.drawer {
+  position: fixed;
+  top: 0;
+  right: -420px;
+  width: 400px;
+  max-width: 90vw;
+  height: 100vh;
+  background: #000000;
+  color: #ffffff;
+  box-shadow: -8px 0 25px rgba(0, 0, 0, 0.5);
+  padding: 24px;
+  transition: right 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  z-index: 10000;
+  box-sizing: border-box;
+  border-left: 1px solid #303030;
+  /* 💡 核心設定：使用 Flexbox 直向排列，避免整體出現滾動條 */
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+/* 1. Drawer 本身必須有固定高度，並隱藏超出部分 */
+.drawer {
+  position: fixed;
+  top: 0;
+  right: -420px;
+  width: 400px;
+  max-width: 90vw;
+  height: 100vh; /* 固定與螢幕同高 */
+  z-index: 9999; /* 確保層級夠高，高於 Canvas 和其他網頁元素 */
+  display: flex;
+  flex-direction: column;
+  overflow: hidden; /* 避免 Drawer 本身出滾動條 */
+  pointer-events: auto; /* 強制接收滑鼠與滾輪事件 */
+}
+
+/* 2. Drawer Body 必須有可滾動高度 */
+.drawer-body {
+  flex: 1; /* 自動撐滿剩餘空間 */
+  height: 100%; /* 確保高度受限 */
+  overflow-y: scroll !important; /* 強制啟動垂直滾動軸 */
+  -webkit-overflow-scrolling: touch; /* 平板/手機觸控順暢度優化 */
+  padding-top: 20px;
+  padding-right: 6px;
+  pointer-events: auto; /* 確保區域內可接受事件 */
+}
+.drawer-body section {
+  padding: 0;
+}
+
+.drawer.open {
+  right: 0;
+}
+
+/* 2. Header 保持固定，不參與滾動 */
+.drawer-header {
+  flex-shrink: 0; /* 防止標題區域被擠壓 */
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding-bottom: 16px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.header-title .badge {
+  font-size: 11px;
+  background: #00d2ff;
+  color: #000;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+.header-title h2 {
+  font-size: 20px;
+  margin-top: 6px;
+  font-weight: 600;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  color: #8a99ad;
+  font-size: 28px;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.close-btn:hover {
+  color: #fff;
+}
+
+/* 3. Drawer Body 負責承載過多資料並允許滾動 */
+/* 4. (可選) 美化深色模式下的 CSS 滾動條 */
+.drawer-body::-webkit-scrollbar {
+  width: 6px;
+}
+
+.drawer-body::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 3px;
+}
+
+.drawer-body::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 3px;
+}
+
+.drawer-body::-webkit-scrollbar-thumb:hover {
+  background: #00d2ff; /* 游標移上去時高亮 */
+}
+
+.control-section {
+  margin-bottom: 28px;
+}
+
+.section-title {
+  font-size: 13px;
+  color: #00d2ff;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 14px;
+  font-weight: 600;
+}
+
+/* 情境卡片 2x2 排版 */
+.scene-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.scene-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 14px;
+  color: #ccc;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.scene-card .icon {
+  font-size: 22px;
+}
+
+.scene-card .name {
+  font-size: 14px;
+}
+
+.scene-card:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+}
+
+.scene-card.active {
+  background: linear-gradient(135deg, #0052d4, #4364f7);
+  border-color: #00d2ff;
+  color: #fff;
+  box-shadow: 0 4px 12px rgba(0, 82, 212, 0.4);
+}
+
+/* 設備調控卡片 */
+.device-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  padding: 16px;
+  margin-bottom: 12px;
+}
+
+.device-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.device-icon {
+  font-size: 20px;
+}
+
+.device-name {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.device-status {
+  font-size: 12px;
+  color: #8a99ad;
+  margin-top: 2px;
+}
+
+.device-control {
+  margin-top: 14px;
+}
+
+.device-control label {
+  display: block;
+  font-size: 12px;
+  color: #8a99ad;
+  margin-bottom: 6px;
+}
+
+/* Range input 自訂 */
+input[type=range] {
+  width: 100%;
+  accent-color: #00d2ff;
+}
+
+/* 按鈕組 */
+.btn-group {
+  display: flex;
+  gap: 6px;
+}
+
+.btn-ctrl {
+  flex: 1;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #aaa;
+  padding: 6px 0;
+  font-size: 12px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.btn-ctrl.active, .btn-ctrl:hover {
+  background: rgba(0, 210, 255, 0.2);
+  border-color: #00d2ff;
+  color: #fff;
+}
+
+/* Toggle Switch 樣式 */
+.switch {
+  margin-left: auto;
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 22px;
+}
+.switch::after {
+  background-color: transparent !important;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #333;
+  transition: 0.3s;
+  border-radius: 22px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 16px;
+  width: 16px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  transition: 0.3s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #00d2ff;
+}
+
+input:checked + .slider:before {
+  transform: translateX(18px);
+}
+
+/* 擬真窗簾卡片主體 */
+.curtain-card {
+  background: rgba(18, 24, 36, 0.8);
+  border: 1px solid rgba(0, 210, 255, 0.2);
+}
+
+.curtain-interactive-container {
+  display: flex;
+  gap: 16px;
+  margin-top: 14px;
+  height: 240px;
+}
+
+.control-label {
+  font-size: 11px;
+  color: #8a99ad;
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+/* ================= 左側：角度控制 ================= */
+/* ================= 左側：角度控制區塊 ================= */
+.angle-control-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 60px;
+  height: 100%; /* 填滿 220px 高度 */
+}
+
+.v-slider-container {
+  position: relative;
+  flex: 1; /* 自動撐滿除了 label 之外的所有剩餘高度 */
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden; /* 確保 Slider 旋轉後溢出部分被裁切 */
+}
+.v-slider-container input[type=range] {
+  width: 8px;
+  accent-color: #00d2ff;
+}
+
+/* 葉片側面旋轉預覽 - 配合 220px 適度拉開間距 */
+/* 1. 父容器加上透視，讓 3D 旋轉更立體 */
+.blade-preview-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  justify-content: space-between;
+  position: absolute;
+  left: 6px;
+  pointer-events: none;
+  z-index: 1;
+  perspective: 200px; /* 💡 關鍵：加上 3D 透視深度 */
+}
+
+.blade-line {
+  width: 24px;
+  height: 4px; /* 💡 稍微加厚到 4px，縮放時效果更明顯 */
+  background: #00d2ff;
+  border-radius: 2px;
+  box-shadow: 0 0 8px rgba(0, 210, 255, 0.8);
+  transition: transform 0.1s ease;
+  transform-origin: center center; /* 💡 設定中心點旋轉 */
+}
+
+/* 💡 關鍵調整：讓旋轉後的垂直 Range 滑軌完美等於容器高度 */
+.vertical-range {
+  -webkit-appearance: none;
+  appearance: none;
+  writing-mode: vertical-lr; /* 👈 讓元素原生垂直，完美跟隨父層高度 */
+  direction: rtl; /* 讓數值方向由上至下/由下至上符合直覺 */
+  width: 8px; /* 滑軌實體寬度 */
+  height: 100%; /* 👈 100% 精確與右側同高！ */
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+  outline: none;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.vertical-range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #00d2ff;
+  border: 2px solid #fff;
+  box-shadow: 0 0 10px #00d2ff;
+  cursor: pointer;
+}
+
+/* ================= 右側：高低拖曳 (模擬附件視窗) ================= */
+.height-control-wrapper {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  height: 100%; /* 填滿 220px 高度 */
+}
+
+.curtain-box {
+  position: relative;
+  flex: 1; /* 自動填滿剩餘高度，跟左側保持一致 */
+  border: 2px solid #00d2ff;
+  border-radius: 8px;
+  background: rgba(0, 210, 255, 0.03);
+  box-shadow: inset 0 0 15px rgba(0, 210, 255, 0.15), 0 0 10px rgba(0, 210, 255, 0.2);
+  overflow: hidden;
+}
+
+/* 窗簾實體（拉動時會改變高度） */
+.curtain-sheet {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 70%; /* JS 會動態控制此 % */
+  background: linear-gradient(180deg, rgba(0, 210, 255, 0.25) 0%, rgba(0, 82, 212, 0.4) 100%);
+  border-bottom: 3px solid #00d2ff;
+  box-shadow: 0 4px 12px rgba(0, 210, 255, 0.4);
+  transition: height 0.05s linear;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding: 4px 0;
+}
+.curtain-sheet::before {
+  content: "";
+  position: absolute;
+  bottom: -14px;
+  top: 100%;
+  left: 50%;
+  height: 22px;
+  width: 22px;
+  background: #00d2ff;
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* 百葉窗橫紋 */
+.curtain-slat {
+  height: 1px;
+  background: rgba(255, 255, 255, 0.2);
+  width: 100%;
+}
+
+/* 右側倒轉的滑軌高度也同步對齊 */
+.curtain-height-slider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  writing-mode: vertical-lr;
+  opacity: 0.01;
+  cursor: ns-resize;
+  z-index: 5;
+}
+
+/* 底部按鈕列 */
+.curtain-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.action-btn {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #fff;
+  padding: 8px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 13px;
+  transition: all 0.2s;
+}
+
+.action-btn:hover {
+  background: rgba(0, 210, 255, 0.2);
+  border-color: #00d2ff;
+}
+
+.pause-btn {
+  flex: 1;
+  text-align: center;
 }
