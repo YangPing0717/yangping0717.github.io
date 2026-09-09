@@ -64,7 +64,7 @@
     <!-- <link id="colors" href="css/6_2_style.css" rel="stylesheet" type="text/css" > -->
     <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto:300,400,500|Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp'>
     <link id="colors" href="css/vendors.css" rel="stylesheet" type="text/css" >
-    <link href="css/ez.css?v=202609" rel="stylesheet" type="text/css" >
+    <link href="css/ez.css" rel="stylesheet" type="text/css" >
 
     
     
@@ -1404,6 +1404,10 @@
                     <span class="material-icons-outlined icon">meeting_room</span>
                     <span class="name">離家模式</span>
                 </button>
+                <button class="scene-card" data-scene="sleep">
+                    <span class="material-icons-outlined icon">bed</span>
+                    <span class="name">睡眠模式</span>
+                </button>
                 <button class="scene-card" data-scene="work">
                     <span class="material-icons-outlined icon">work_history</span>
                     <span class="name">工作模式</span>
@@ -1421,70 +1425,71 @@
 
             <!-- 電動窗簾 / 擬真拖曳控制卡片 -->
             <div class="device-card curtain-card">
-            <div class="device-info">
-                <span class="material-icons-outlined device-icon">blinds_closed</span>
-                <div>
-                <div class="device-name">電動百葉窗 (Smart Blinds)</div>
-                <div class="device-status">升降高度 : <span id="heightVal">70%</span>&ensp;&ensp;|&ensp;&ensp;葉片角度 : <span id="angleVal">25°</span></div>
-                </div>
-            </div>
-
-            <!-- 擬真窗簾控制區域 -->
-            <div class="curtain-interactive-container">
-                
-                <!-- 左側：葉片角度控制軸 -->
-                <div class="angle-control-wrapper">
-                    <div class="control-label">葉片角度</div>
-                    <div class="v-slider-container">
-                        <!-- 擬真百葉窗葉片側視圖 -->
-                        <div class="blade-preview-list" id="bladeList">
-                            <div class="blade-line"></div>
-                            <div class="blade-line"></div>
-                            <div class="blade-line"></div>
-                            <div class="blade-line"></div>
-                            <div class="blade-line"></div>
-                            <div class="blade-line"></div>
-                            <div class="blade-line"></div>
-                            <div class="blade-line"></div>
-                            <div class="blade-line"></div>
-                            <div class="blade-line"></div>
-                            <div class="blade-line"></div>
-                        </div>
-                        <!-- 垂直拖曳原生 Range -->
-                        <input type="range" class="vertical-range" id="angleRange" min="0" max="90" value="25">
+                <div class="device-info">
+                    <span class="material-icons-outlined device-icon">blinds_closed</span>
+                    <div>
+                    <div class="device-name">電動百葉窗 (Smart Blinds)</div>
+                    <div class="device-status">升降高度 : <span id="heightVal">70%</span>&ensp;&ensp;|&ensp;&ensp;葉片角度 : <span id="angleVal">25°</span></div>
                     </div>
                 </div>
 
-                <!-- 右側：窗簾高低拖曳區域 -->
-                <div class="height-control-wrapper">
-                    <div class="control-label">升降高度 (Drag to control)</div>
-                    <div class="curtain-box" id="curtainBox">
-                        <!-- 窗簾百葉橫條視覺效果 -->
-                        <div class="curtain-sheet" id="curtainSheet">
-                            <div class="curtain-slat"></div>
-                            <div class="curtain-slat"></div>
-                            <div class="curtain-slat"></div>
-                            <div class="curtain-slat"></div>
-                            <div class="curtain-slat"></div>
-                            <div class="curtain-slat"></div>
-                            <div class="curtain-slat"></div>
-                            <div class="curtain-slat"></div>
-                            <div class="curtain-slat"></div>
-                            <div class="curtain-slat"></div>
+                <!-- 擬真窗簾控制區域 -->
+                <div class="curtain-interactive-container">
+                    
+                    <!-- 左側：葉片角度控制軸 -->
+                    <div class="angle-control-wrapper">
+                        <div class="control-label">葉片角度</div>
+                        <div class="v-slider-container">
+                            <!-- 擬真百葉窗葉片側視圖 -->
+                            <div class="blade-preview-list" id="bladeList">
+                                <div class="blade-line"></div>
+                                <div class="blade-line"></div>
+                                <div class="blade-line"></div>
+                                <div class="blade-line"></div>
+                                <div class="blade-line"></div>
+                                <div class="blade-line"></div>
+                                <div class="blade-line"></div>
+                                <div class="blade-line"></div>
+                                <div class="blade-line"></div>
+                                <div class="blade-line"></div>
+                                <div class="blade-line"></div>
+                            </div>
+                            <!-- 垂直拖曳原生 Range -->
+                            <input type="range" class="vertical-range" id="angleRange" min="0" max="90" value="25">
                         </div>
-                        <!-- 垂直 Slider 疊加於上方實現擬真拖曳 -->
-                        <input type="range" class="curtain-height-slider" id="heightRange" min="0" max="100" value="70">
                     </div>
+
+                    <!-- 右側：窗簾高低拖曳區域 -->
+                    <div class="height-control-wrapper">
+                        <div class="control-label">升降高度 (Drag to control)</div>
+                        <div class="curtain-box" id="curtainBox">
+                            <!-- 窗簾百葉橫條視覺效果 -->
+                            <div class="curtain-sheet" id="curtainSheet">
+                                <div class="curtain-slat"></div>
+                                <div class="curtain-slat"></div>
+                                <div class="curtain-slat"></div>
+                                <div class="curtain-slat"></div>
+                                <div class="curtain-slat"></div>
+                                <div class="curtain-slat"></div>
+                                <div class="curtain-slat"></div>
+                                <div class="curtain-slat"></div>
+                                <div class="curtain-slat"></div>
+                                <div class="curtain-slat"></div>
+                            </div>
+                            <!-- 垂直 Slider 疊加於上方實現擬真拖曳 -->
+                            <input type="range" class="curtain-height-slider" id="heightRange" min="0" max="100" value="70">
+                        </div>
+                    </div>
+
                 </div>
 
-            </div>
-
-            <!-- 底部微調與暫停按鈕 -->
-            <div class="curtain-actions">
-                <button class="action-btn" id="btnStepDown">&minus;</button>
-                <button class="action-btn pause-btn" id="btnPause">❚❚ 暫停</button>
-                <button class="action-btn" id="btnStepUp">&plus;</button>
-            </div>
+                <!-- 底部微調與控制按鈕 -->
+                <div class="curtain-actions">
+                    <button class="action-btn" id="btnStepDown" title="下降 10%">&minus;</button>
+                    <!-- 預設顯示啟動 -->
+                    <button class="action-btn pause-btn" id="btnToggleMove">▶ 啟動升降</button>
+                    <button class="action-btn" id="btnStepUp" title="上升 10%">&plus;</button>
+                </div>
             </div>
 
             <!-- 冷氣空調 -->
@@ -1850,12 +1855,15 @@
 
     <script type="module">
         // import { Application } from 'https://unpkg.com/@splinetool/runtime';
+        
+        // 後來的版本
+        // import { Application } from 'https://cdn.spline.design/@splinetool/runtime@2.0.32/build/runtime.js';
 
         // 找出 spline 生出的 url 去看原始碼裡的 runtime 當初在發佈時用的是什麼版本 指定它
         // 邱Sir
         import { Application } from 'https://unpkg.com/@splinetool/runtime@1.12.98/build/runtime.js';
         
-        // import { Application } from 'https://cdn.spline.design/@splinetool/runtime@2.0.32/build/runtime.js';
+        
 
         const canvas = document.getElementById('canvas3d');
         const app = new Application(canvas);
@@ -1953,21 +1961,55 @@
             // ============================================================
             // 💡【重點】這段 JS 塞在這裡！(在 app 載入完成後綁定 Drawer 按鈕)
             // ============================================================
+            // document.querySelectorAll('.scene-card').forEach(card => {
+            //     card.addEventListener('click', () => {
+            //     // 清除所有卡片的高亮，並為當前點擊的卡片加上 active
+            //     document.querySelectorAll('.scene-card').forEach(c => c.classList.remove('active'));
+            //     card.classList.add('active');
+
+            //     const scene = card.dataset.scene;
+            //     console.log(`已切換至【${card.querySelector('.name').innerText}】`);
+
+            //     // 選擇性：按鈕點擊時同時觸發 Spline 內部的事件（如切換鏡頭或狀態）
+            //     if (scene === 'home') {
+            //         app.emitEvent('mouseDown', 'Cam_b_1');
+            //     } else if (scene === 'away') {
+            //         app.emitEvent('mouseDown', 'Cam_b_2');
+            //     }
+            //     });
+            // });
+
             document.querySelectorAll('.scene-card').forEach(card => {
-                card.addEventListener('click', () => {
-                // 清除所有卡片的高亮，並為當前點擊的卡片加上 active
-                document.querySelectorAll('.scene-card').forEach(c => c.classList.remove('active'));
-                card.classList.add('active');
+                card.addEventListener('click', (e) => {
+                    // 1. 取得 currentTarget (確保點擊到卡片子元素時依然能拿正確的 dataset)
+                    const currentCard = e.currentTarget;
+                    const scene = currentCard.dataset.scene; 
 
-                const scene = card.dataset.scene;
-                console.log(`已切換至【${card.querySelector('.name').innerText}】`);
+                    // 2. 優先使用區域的 app 或全域 window.app
+                    const splineApp = app || window.app;
+                    if (!splineApp) {
+                        console.warn('Spline 尚未載入完成');
+                        return;
+                    }
 
-                // 選擇性：按鈕點擊時同時觸發 Spline 內部的事件（如切換鏡頭或狀態）
-                if (scene === 'home') {
-                    app.emitEvent('mouseDown', 'Cam_b_1');
-                } else if (scene === 'away') {
-                    app.emitEvent('mouseDown', 'Cam_b_2');
-                }
+                    // 3. UI 高亮樣式切換 (選填)
+                    document.querySelectorAll('.scene-card').forEach(c => c.classList.remove('active'));
+                    currentCard.classList.add('active');
+
+                    // 4. 根據情境觸發 Spline 物件事件
+                    if (scene === 'home') {
+                        console.log('離家/回家情境 -> 觸發 light_bn');
+                        splineApp.emitEvent('mouseDown', 'light_bn');
+                        splineApp.emitEvent('mouseDown', 'Cam_b_1');
+                        
+                    } else if (scene === 'away') {
+                        console.log('離家情境 -> 觸發 safe_board');
+                        splineApp.emitEvent('mouseDown', 'safe_board');
+
+                    } else if (scene === 'sleep') {
+                        splineApp.emitEvent('mouseDown', 'safe_board');
+                        splineApp.emitEvent('keyDown', 'Cam_b_1');
+                    }
                 });
             });
 
@@ -2004,7 +2046,7 @@
 
 
         <!-- 電動窗簾 -->
-        <script>
+        <!-- <script>
             // 擷取 DOM 元素
             const heightRange = document.getElementById('heightRange');
             const curtainSheet = document.getElementById('curtainSheet');
@@ -2086,6 +2128,110 @@
             document.getElementById('btnPause')?.addEventListener('click', () => {
             alert('已發送【暫停窗簾動作】指令');
             });
+        </script> -->
+        
+        <script>
+            // 擷取 DOM 元素
+            const heightRange = document.getElementById('heightRange');
+            const curtainSheet = document.getElementById('curtainSheet');
+            const heightVal = document.getElementById('heightVal');
+
+            const angleRange = document.getElementById('angleRange');
+            const bladeLines = document.querySelectorAll('.blade-line');
+            const angleVal = document.getElementById('angleVal');
+
+            // 1. 拖曳控制窗簾升降高度
+            heightRange?.addEventListener('input', (e) => {
+            const val = e.target.value;
+            curtainSheet.style.height = `${val}%`;
+            if (heightVal) heightVal.innerText = `${val}%`;
+
+            /* 可連動 Spline 內窗簾模型動態 */
+            // window.app?.emitEvent('mouseHover', 'Curtain_Object');
+            });
+
+            // 2. 拖曳控制百葉窗葉片角度
+            angleRange?.addEventListener('input', (e) => {
+            const angle = e.target.value; // 0 ~ 90
+            if (angleVal) angleVal.innerText = `${angle}°`;
+
+            // 0~90度映射為 0deg 到 -65deg
+            const rotateDeg = (angle / 90) * -65; 
+            const scaleY = 1 - (angle / 90) * 0.4;
+
+            bladeLines.forEach(line => {
+                line.style.transform = `rotate(${rotateDeg}deg) scaleY(${scaleY})`;
+            });
+            });
+
+            // 3. 兩端 +/- 微調按鈕
+            document.getElementById('btnStepUp')?.addEventListener('click', () => {
+            if (heightRange.value < 100) {
+                heightRange.value = parseInt(heightRange.value) + 10;
+                heightRange.dispatchEvent(new Event('input'));
+            }
+            });
+
+            document.getElementById('btnStepDown')?.addEventListener('click', () => {
+            if (heightRange.value > 0) {
+                heightRange.value = parseInt(heightRange.value) - 10;
+                heightRange.dispatchEvent(new Event('input'));
+            }
+            });
+
+            // ============================================================
+            // 💡 4. 自動升降 / 暫停 切換控制邏輯
+            // ============================================================
+            let autoMoveTimer = null; // 定時器變數
+            let isMoving = false;      // 是否正在自動升降
+            let moveDirection = 1;     // 1 代表往下升降，-1 代表往上升降
+
+            const btnToggleMove = document.getElementById('btnToggleMove');
+
+            function startAutoMove() {
+            isMoving = true;
+            btnToggleMove.innerText = '❚❚ 暫停';
+            btnToggleMove.classList.add('is-active'); // 可搭配 CSS 做按鈕高亮
+
+            // 設定每 50ms 自動移動一次（可自行調整速度）
+            autoMoveTimer = setInterval(() => {
+                let currentVal = parseInt(heightRange.value);
+
+                // 觸底或觸頂時自動轉向
+                if (currentVal >= 100) moveDirection = -1;
+                if (currentVal <= 0) moveDirection = 1;
+
+                // 每次變動 1%
+                heightRange.value = currentVal + moveDirection;
+                // 手動觸發 input 事件以同步更新 UI 高度與文字
+                heightRange.dispatchEvent(new Event('input'));
+            }, 50);
+            }
+
+            function stopAutoMove() {
+            isMoving = false;
+            btnToggleMove.innerText = '▶ 啟動升降';
+            btnToggleMove.classList.remove('is-active');
+
+            if (autoMoveTimer) {
+                clearInterval(autoMoveTimer);
+                autoMoveTimer = null;
+            }
+            }
+
+            // 綁定中間按鈕的點擊事件
+            btnToggleMove?.addEventListener('click', () => {
+            if (isMoving) {
+                stopAutoMove(); // 若正在動，按一下就暫停
+            } else {
+                startAutoMove(); // 若停止中，按一下就啟動
+            }
+            });
+
+            // 如果使用者手動拖曳滑軌，自動暫停動態
+            heightRange?.addEventListener('mousedown', stopAutoMove);
+            heightRange?.addEventListener('touchstart', stopAutoMove);
+
         </script>
 
 

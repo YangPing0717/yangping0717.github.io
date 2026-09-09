@@ -3828,3 +3828,10 @@ input:checked + .slider:before {
   flex: 1;
   text-align: center;
 }
+
+.pause-btn.is-active {
+  background: rgba(0, 210, 255, 0.25);
+  border-color: #00d2ff;
+  box-shadow: 0 0 10px rgba(0, 210, 255, 0.5);
+  color: #00d2ff;
+}
