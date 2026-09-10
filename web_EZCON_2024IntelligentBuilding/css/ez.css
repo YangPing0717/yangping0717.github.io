@@ -1094,6 +1094,12 @@ footer .logo img {
 /* 預設樣式 */
 .widget_tags li a {
   background: linear-gradient(270deg, rgba(0, 255, 177, 0.55) 0%, rgba(0, 255, 177, 0.3) 50%);
+  font-size: 14px;
+}
+@media (max-width: 768px) {
+  .widget_tags li a {
+    font-size: 12px;
+  }
 }
 
 /* 點擊後的選中樣式 (Active) */
@@ -3352,7 +3358,6 @@ th, td {
     top: -50%;
   }
 }
-/* 遮罩背景 */
 /* 1. Drawer 本身設定 flex 直向佈局，並限制高度與隱藏外部 overflow */
 .drawer {
   position: fixed;
@@ -3374,6 +3379,7 @@ th, td {
   flex-direction: column;
   overflow: hidden;
 }
+
 /* 1. Drawer 本身必須有固定高度，並隱藏超出部分 */
 .drawer {
   position: fixed;

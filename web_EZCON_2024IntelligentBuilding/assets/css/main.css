@@ -14272,6 +14272,106 @@ body .mfp-wrap .mfp-container .mfp-content .mfp-close:hover::before, body .mfp-w
   transform: rotate(40deg);
 }
 
+/*----------------------------------------*/
+/*  22. breadcrumb
+/*----------------------------------------*/
+.case_page .breadcrumb {
+  min-height: 500px;
+  padding: 150px 0 100px;
+  margin: 0;
+  display: flex;
+  align-items: center;
+}
+@media (max-width: 991px) {
+  .case_page .breadcrumb {
+    min-height: 380px;
+    padding: 140px 0 100px;
+  }
+}
+@media (max-width: 767px) {
+  .case_page .breadcrumb {
+    min-height: 360px;
+  }
+}
+.case_page .breadcrumb__content {
+  text-align: center;
+}
+.case_page .breadcrumb__list {
+  display: inline-flex;
+  align-items: center;
+  position: relative;
+}
+.case_page .breadcrumb__list::before, .case_page .breadcrumb__list::after {
+  position: absolute;
+  content: "";
+  left: -16px;
+  top: 0;
+  height: 8px;
+  width: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: var(--color-primary);
+  border-radius: 100px;
+  -webkit-border-radius: 100px;
+  -moz-border-radius: 100px;
+  -ms-border-radius: 100px;
+  -o-border-radius: 100px;
+}
+.case_page .breadcrumb__list::after {
+  left: auto;
+  right: -16px;
+}
+.case_page .breadcrumb .breadcrumb-item {
+  color: var(--color-white);
+  text-transform: capitalize;
+}
+.case_page .breadcrumb .breadcrumb-item a {
+  color: currentColor;
+}
+.case_page .breadcrumb__title {
+  font-weight: 400;
+  font-size: 65px;
+  margin-top: 24px;
+  letter-spacing: -0.05em;
+  color: var(--color-white);
+  font-family: var(--font-heading);
+}
+@media (max-width: 1199px) {
+  .case_page .breadcrumb__title {
+    font-size: 52px;
+  }
+}
+@media (max-width: 991px) {
+  .case_page .breadcrumb__title {
+    font-size: 45px;
+    margin-top: 15px;
+  }
+}
+@media (max-width: 767px) {
+  .case_page .breadcrumb__title {
+    font-size: 34px;
+    margin-top: 10px;
+  }
+}
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+  .case_page .breadcrumb__title {
+    font-size: 36px;
+  }
+}
+.case_page .breadcrumb-item + .breadcrumb-item::before {
+  float: left;
+  padding-right: 0;
+  color: rgba(255, 255, 255, 0.75);
+  content: var(--bs-breadcrumb-divider, "/");
+}
+.case_page .breadcrumb-item + .breadcrumb-item::after {
+  float: left;
+  padding-right: var(--bs-breadcrumb-item-padding-x);
+  color: rgba(255, 255, 255, 0.75);
+  content: var(--bs-breadcrumb-divider, "/");
+  margin-right: 7px;
+}
+
 .thm-btn {
   font-size: 16px;
   font-weight: 700;
