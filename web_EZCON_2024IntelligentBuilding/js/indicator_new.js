@@ -51,26 +51,41 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   });
 
-  // 3. 滾動監聽與自動切換 Active 狀態 (使用 IntersectionObserver 高效監聽)
+  // 修改 observerOptions 擴大偵測範圍
   const observerOptions = {
     root: null,
-    rootMargin: '-20% 0px -60% 0px', // 當區塊進入螢幕上緣 20%~40% 區域時觸發
+    rootMargin: '0px 0px -40% 0px', // 當區塊進入螢幕上半部時開始監聽
     threshold: 0
   };
+
+  const visibleTargets = new Map();
 
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
-        const id = entry.target.id;
-        navItems.forEach(item => {
-          if (item.getAttribute('data-target-id') === id) {
-            item.classList.add('active');
-          } else {
-            item.classList.remove('active');
-          }
-        });
+        visibleTargets.set(entry.target.id, entry.target.getBoundingClientRect().top);
+      } else {
+        visibleTargets.delete(entry.target.id);
       }
     });
+
+    // 找出目前在畫面中最靠近頂部的 Section
+    if (visibleTargets.size > 0) {
+      let activeId = null;
+      let minTop = Infinity;
+
+      visibleTargets.forEach((top, id) => {
+        // 優先挑選靠近頂部（但不過度超出上界）的區塊
+        if (Math.abs(top) < minTop) {
+          minTop = Math.abs(top);
+          activeId = id;
+        }
+      });
+
+      navItems.forEach(item => {
+        item.classList.toggle('active', item.getAttribute('data-target-id') === activeId);
+      });
+    }
   }, observerOptions);
 
   // 綁定觀察目標
