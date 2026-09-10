@@ -310,7 +310,7 @@
 
                             <div id="gallery" class="row gh-4 sequence" data-jarallax-element="-10">
 
-                                <div class="col-md-4 item text-center mb20 silver2024">
+                                <div class="col-md-4 item text-center mb20 silver2024 residential private">
                                     <a class="d_demo_img"  href="https://www.ezcontw.com/he-yong-jian-she-kun-ming-jie-wan-hua-an/">
                                         <span class="d-overlay">
                                             <!-- <span>Live Preview</span> -->
@@ -321,7 +321,7 @@
                                     <h5>和雍建設 昆明案 - 2024 銀級</h5>
                                 </div>
 
-                                <div class="col-md-4 item text-center mb20 silver2024">
+                                <div class="col-md-4 item text-center mb20 silver2024 residential">
                                     <a class="d_demo_img"  href="https://www.ezcontw.com/he-yong-jian-she-tai-bei-shi-lin-tian-mu-an/">
                                         <span class="d-overlay">
                                             <!-- <span>Live Preview</span> -->
@@ -332,7 +332,7 @@
                                     <h5>和雍建設 台北士林天母案 - 2024 銀級</h5>
                                 </div>
 
-                                <div class="col-md-4 item text-center mb20 silver2024">
+                                <div class="col-md-4 item text-center mb20 silver2024 private">
                                     <a class="d_demo_img"  href="https://www.ezcontw.com/li-bai-jia-jian-she-min-you-yin-xiang/">
                                         <span class="d-overlay">
                                             <span class="material-icons-two-tone">search</span>
@@ -1094,38 +1094,72 @@
     <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
     <script>
         $(function() {
-            // 初始化 Isotope
+            // 1. 建立選單 class 與中文名稱的對照表
+            var filterNames = {};
+            $('.widget_tags ul li a').each(function() {
+                var filter = $(this).attr('data-filter');
+                var text = $.trim($(this).text());
+                
+                // 排除 'all'，只紀錄有具體分類的選項
+                if (filter && filter !== 'all') {
+                    filterNames[filter] = text;
+                }
+            });
+
+            // 2. 遍歷每一個 .item，蒐集所有匹配到的標籤
+            $('#gallery .item').each(function() {
+                var $item = $(this);
+                var $a = $item.find('.d_demo_img');
+                
+                // 取得這個 item 身上所有的 class
+                var itemClasses = ($item.attr('class') || '').split(/\s+/);
+                var badgesHTML = '';
+
+                // 逐一比對 class
+                for (var i = 0; i < itemClasses.length; i++) {
+                    var cls = itemClasses[i];
+                    if (filterNames[cls]) {
+                        // 比對成功就累加標籤 HTML（不再使用 break 跳出）
+                        badgesHTML += '<span class="case-badge">' + filterNames[cls] + '</span>';
+                    }
+                }
+
+                // 如果有抓到標籤，用一個外層容器包起來後 append 到圖片中
+                if (badgesHTML !== '') {
+                    $a.append('<div class="case-badge-container">' + badgesHTML + '</div>');
+                }
+            });
+
+            // 3. 初始化 Isotope
             var $grid = $('#gallery').isotope({
                 itemSelector: '.item',
                 layoutMode: 'fitRows'
             });
 
-            // 點擊過濾
+            // 預設將第一個選項設為 active
+            $('.widget_tags ul li a').first().addClass('active');
+
+            // 4. 過濾器點擊事件
             $('.widget_tags ul li a').on('click', function(e) {
                 e.preventDefault();
 
-                // --- 樣式切換邏輯 ---
-                // 1. 移除該區域所有標籤的 active class
                 $('.widget_tags li a').removeClass('active');
-                
-                // 2. 為當前被點擊的 <a> 加上 active class
                 $(this).addClass('active');
                 
                 var filterValue = $(this).attr('data-filter');
-                
-                // 如果是 all，filter 就給 '*'，否則給 '.class'
                 var isoFilter = (filterValue === 'all') ? '*' : '.' + filterValue;
                 
                 $grid.isotope({ filter: isoFilter });
 
-                // 過濾完重新計算 Jarallax
                 $grid.on('arrangeComplete', function() {
-                    $(window).trigger('resize.jarallax');
+                    if (window.jQuery && $.fn.jarallax) {
+                        $(window).trigger('resize.jarallax');
+                    }
                 });
-                new WOW().init();
 
-                // 預設行為：讓第一個標籤 (通常是 All) 一開始就是選中狀態
-                // $('.widget_tags li a').first().addClass('active');
+                if (typeof WOW !== 'undefined') {
+                    new WOW().init();
+                }
             });
         });
     </script>

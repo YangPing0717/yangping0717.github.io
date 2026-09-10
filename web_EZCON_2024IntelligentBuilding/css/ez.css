@@ -911,6 +911,39 @@ footer .logo img {
   font-size: 2.2rem;
 }
 
+/* 圖片容器定位基準 */
+.d_demo_img {
+  position: relative !important;
+  display: block !important;
+  overflow: hidden;
+}
+
+/* 標籤的外層容器（定位在左下角，使用 Flex 佈局） */
+.d_demo_img .case-badge-container {
+  position: absolute !important;
+  left: 12px !important;
+  bottom: 12px !important;
+  z-index: 10 !important; /* 確保浮在圖片與 Hover 遮罩之上 */
+  display: flex !important;
+  flex-wrap: wrap; /* 標籤太多時自動換行 */
+  gap: 6px; /* 標籤與標籤之間的間距 */
+  max-width: calc(100% - 24px); /* 避免超出圖片寬度 */
+  pointer-events: none; /* 防止擋住圖片點擊 */
+}
+
+/* 單個標籤樣式 */
+.d_demo_img .case-badge {
+  background-color: rgba(0, 0, 0, 0.8); /* 品牌綠色 */
+  color: #ffffff !important;
+  font-size: 11px;
+  font-weight: 500;
+  padding: 3px 8px;
+  border-radius: 3px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+  line-height: 1.3;
+  white-space: nowrap; /* 避免文字斷行 */
+}
+
 /* breadcrumb */
 .breadcrumb {
   font-size: 15px;
