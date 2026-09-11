@@ -301,14 +301,26 @@
                             <li><a href="#" data-filter="factory">工廠廠辦</a></li>
                             
                             <!-- <li><a href="#" data-filter="silver2024">建築標章 2024 認證</a></li>
-                            <li><a href="#" data-filter="silver">建築標章 2016 認證</a></li> -->
+                            <li><a href="#" data-filter="silver">建築標章 2016 認證</a></li> --> 
                         </ul>
                     </div>
-
+                    <div class="form-group" data-jarallax-element="-10">
+                        <input class="form-control" type="search" name="search" placeholder="">
+                        <button type="button" class="search_icon">
+                            <span>
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M14.002 5H20.002" stroke="#00020F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M14.002 8H17.002" stroke="#00020F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M21.002 11.5C21.002 16.75 16.752 21 11.502 21C6.25195 21 2.00195 16.75 2.00195 11.5C2.00195 6.25 6.25195 2 11.502 2" stroke="#00020F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M22.002 22L20.002 20" stroke="#00020F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </span>
+                        </button>
+                    </div>
                     <div class="row">
-                        <div class="col-md-12 text-center wow fadeInUp">
+                        <div class="col-md-12 text-center wow fadeInUp mt40">
 
-                            <div id="gallery" class="row gh-4 sequence" data-jarallax-element="-10">
+                            <div id="gallery" class="row gh-4 sequence" >
 
                                 <div class="col-md-4 item text-center mb20 silver2024 residential private">
                                     <a class="d_demo_img"  href="https://www.ezcontw.com/he-yong-jian-she-kun-ming-jie-wan-hua-an/">
@@ -1094,6 +1106,130 @@
     <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
     <script>
         $(function() {
+    // 1. 紀錄當前選單 selector (例如 '.residential') 與搜尋關鍵字
+    var currentFilterClass = '*';
+    var currentSearchText = '';
+
+    // ==========================================
+    // 2. 自動為所有 .item 產生標籤
+    // ==========================================
+    var filterNames = {};
+    $('.widget_tags ul li a').each(function() {
+        var filter = $(this).attr('data-filter');
+        var text = $.trim($(this).text());
+        if (filter && filter !== 'all') {
+            filterNames[filter] = text;
+        }
+    });
+
+    $('#gallery .item').each(function() {
+        var $item = $(this);
+        var $a = $item.find('.d_demo_img');
+        var itemClasses = ($item.attr('class') || '').split(/\s+/);
+        var badgesHTML = '';
+
+        for (var i = 0; i < itemClasses.length; i++) {
+            var cls = itemClasses[i];
+            if (filterNames[cls]) {
+                badgesHTML += '<span class="case-badge">' + filterNames[cls] + '</span>';
+            }
+        }
+
+        if (badgesHTML !== '') {
+            $a.append('<div class="case-badge-container">' + badgesHTML + '</div>');
+        }
+    });
+
+    // ==========================================
+    // 3. 初始化 Isotope
+    // ==========================================
+    var $grid = $('#gallery').isotope({
+        itemSelector: '.item',
+        layoutMode: 'fitRows'
+    });
+
+    // 預設高亮第一個選單
+    $('.widget_tags ul li a').first().addClass('active');
+
+    // ==========================================
+    // 4. 核心過濾執行 Function
+    // ==========================================
+    function applyCombinedFilter() {
+        $grid.isotope({
+            filter: function() {
+                var $item = $(this);
+
+                // A. 檢查是否符合選單分類
+                var isMatchedClass = (currentFilterClass === '*') ? true : $item.is(currentFilterClass);
+
+                // B. 檢查是否符合搜尋關鍵字 (比對 h5 標題與標籤文字)
+                var titleText = $item.find('h5').text().toLowerCase();
+                var badgeText = $item.find('.case-badge').text().toLowerCase();
+                var fullText = titleText + ' ' + badgeText;
+
+                var isMatchedSearch = (currentSearchText === '') ? true : (fullText.indexOf(currentSearchText) !== -1);
+
+                // 兩者皆符合才顯示
+                return isMatchedClass && isMatchedSearch;
+            }
+        });
+
+        // 排版完重算 Jarallax / WOW.js
+        $grid.one('arrangeComplete', function() {
+            if (window.jQuery && $.fn.jarallax) {
+                $(window).trigger('resize.jarallax');
+            }
+            if (typeof WOW !== 'undefined') {
+                new WOW().init();
+            }
+        });
+    }
+
+    // ==========================================
+    // 5. 分類選單點擊事件
+    // ==========================================
+    $('.widget_tags ul li a').on('click', function(e) {
+        e.preventDefault();
+
+        $('.widget_tags li a').removeClass('active');
+        $(this).addClass('active');
+
+        var filterValue = $(this).attr('data-filter');
+        currentFilterClass = (filterValue === 'all') ? '*' : '.' + filterValue;
+
+        // 💡 點擊選單時，自動清空搜尋框與關鍵字變數
+        currentSearchText = '';
+        $('input[name="search"]').val('');
+
+        applyCombinedFilter();
+    });
+
+    // ==========================================
+    // 6. 搜尋按鈕與輸入框事件
+    // ==========================================
+    function doSearch() {
+        currentSearchText = $.trim($('input[name="search"]').val()).toLowerCase();
+        applyCombinedFilter();
+    }
+
+    // 點擊搜尋按鈕
+    $('.search_icon').on('click', function(e) {
+        e.preventDefault();
+        doSearch();
+    });
+
+    // 按下 Enter 鍵搜尋
+    $('input[name="search"]').on('keypress', function(e) {
+        if (e.which === 13) {
+            e.preventDefault();
+            doSearch();
+        }
+    });
+});
+    </script>
+
+    <!-- <script>
+        $(function() {
             // 1. 建立選單 class 與中文名稱的對照表
             var filterNames = {};
             $('.widget_tags ul li a').each(function() {
@@ -1162,7 +1298,7 @@
                 }
             });
         });
-    </script>
+    </script> -->
 
 
     <!-- go top -->
