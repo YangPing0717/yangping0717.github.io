@@ -14277,11 +14277,11 @@ body .mfp-wrap .mfp-container .mfp-content .mfp-close:hover::before, body .mfp-w
 /*  22. breadcrumb
 /*----------------------------------------*/
 .case_page .breadcrumb {
-  min-height: 500px;
-  padding: 150px 0 100px;
+  padding: 150px 0 60px;
   margin: 0;
   display: flex;
   align-items: center;
+  background-size: contain !important;
 }
 @media (max-width: 991px) {
   .case_page .breadcrumb {
@@ -14292,6 +14292,8 @@ body .mfp-wrap .mfp-container .mfp-content .mfp-close:hover::before, body .mfp-w
 @media (max-width: 767px) {
   .case_page .breadcrumb {
     min-height: 360px;
+    background-size: cover !important;
+    background-position: center !important;
   }
 }
 .case_page .breadcrumb__content {
