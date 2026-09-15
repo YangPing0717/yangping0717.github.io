@@ -3971,10 +3971,30 @@ input:checked + .slider:before {
   background: transparent;
   border: none;
   color: #ffffff;
-  padding-right: 32px;
   font-size: 16px;
   outline: none !important;
   box-shadow: none !important;
+}
+/* 1. 作用在 input 本身（最關鍵，許多瀏覽器只認 input 本身的 text-overflow） */
+.search-input-wrapper .form-control {
+  width: 100% !important;
+  padding-right: 40px !important; /* 確保留出空間給右側的 X 按鈕 */
+  white-space: nowrap !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+}
+
+/* 2. 作用在 placeholder 偽元素 */
+.search-input-wrapper .form-control::-webkit-input-placeholder {
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  white-space: nowrap !important;
+}
+
+.search-input-wrapper .form-control::placeholder {
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  white-space: nowrap !important;
 }
 
 /* 關閉按鈕 (X) */
