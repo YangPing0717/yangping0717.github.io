@@ -6387,6 +6387,14 @@ body[data-aos-easing=ease] [data-aos] {
   color: var(--color-secondary);
   background-color: var(--color-primary);
 }
+@media (max-width: 767px) {
+  .career-menu button {
+    padding: 14px 18px 14px;
+  }
+  .career-menu button span {
+    display: none;
+  }
+}
 
 .xb-career-item {
   padding: 50px;

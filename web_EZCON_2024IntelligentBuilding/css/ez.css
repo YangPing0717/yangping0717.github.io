@@ -3882,6 +3882,27 @@ input:checked + .slider:before {
   border-color: var(--color-primary);
 }
 
+.sub-category .tags_block li {
+  margin-right: 6px;
+  margin-bottom: 20px;
+}
+@media (max-width: 768px) {
+  .sub-category .tags_block li {
+    margin-right: 4px;
+    margin-bottom: 12px;
+  }
+}
+.sub-category .tags_block li a {
+  font-size: 16px;
+  padding: 8px 16px;
+}
+@media (max-width: 768px) {
+  .sub-category .tags_block li a {
+    font-size: 14px;
+    padding: 6px 12px;
+  }
+}
+
 /* 主分類按鈕 active 樣式 */
 .main-category .career-menu button.active {
   background-color: var(--color-primary);
