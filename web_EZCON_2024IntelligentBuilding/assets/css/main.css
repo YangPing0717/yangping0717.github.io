@@ -12699,6 +12699,7 @@ img {
   color: var(--color-white);
   font-family: var(--font-heading);
   display: block;
+  margin-bottom: 12px;
 }
 .xb-contact-items .xb-item--contact_info a {
   color: var(--color-white);
