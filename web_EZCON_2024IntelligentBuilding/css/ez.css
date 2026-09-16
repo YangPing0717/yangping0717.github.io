@@ -4004,11 +4004,19 @@ input:checked + .slider:before {
   background: transparent;
   border: none;
   color: #aaaaaa;
-  font-size: 20px;
+  font-size: 22px !important;
   cursor: pointer;
   line-height: 1;
+  font-weight: bold;
 }
 
 .search-close-btn:hover {
   color: #ffffff;
+}
+
+/* 確保 input 在手機版能正常被點擊與聚焦 */
+.search-input-wrapper input[name=search] {
+  -webkit-appearance: none;
+  -webkit-user-select: text;
+  user-select: text;
 }

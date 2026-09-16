@@ -57,7 +57,7 @@
     <!-- <link id="colors" href="css/6_2_style.css" rel="stylesheet" type="text/css" > -->
     <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto:300,400,500|Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp'>
     <link id="colors" href="css/vendors.css" rel="stylesheet" type="text/css" >
-    <link id="colors" href="css/ez.css?v=20260915-2" rel="stylesheet" type="text/css" >
+    <link id="colors" href="css/ez.css?v=20260916-1" rel="stylesheet" type="text/css" >
 
 </head>
 
@@ -299,7 +299,7 @@
 
                             <!-- 放大鏡觸發按鈕 -->
                             <button type="button" class="search-trigger-btn" aria-label="Search">
-                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
                             </button>
                             
                             <!-- 展開滑出的輸入框 (作為 .career-menu 的直接子元素  請輸入關鍵字搜尋案例...) -->
@@ -1320,30 +1320,29 @@
     // 4. 點擊放大鏡搜尋 (展開搜尋框 + 顯示第 2 層所有選單 + 全部 item 顯示)
     // ----------------------------------------------------
     $('.search-trigger-btn').on('click', function(e) {
-        e.preventDefault();
-        e.stopPropagation();
+    e.preventDefault();
+    e.stopPropagation();
 
-        // 1. 展開搜尋輸入框
-        $('.search-input-wrapper').addClass('is-active');
+    // 1. 展開搜尋輸入框
+    var $wrapper = $('.search-input-wrapper');
+    var $input = $wrapper.find('input[name="search"]');
 
-        // 2. 重置過濾條件 (主分類與子分類皆設為全部)
-        currentMainFilterClass = '*';
-        currentSubFilterClass = '*';
+    $wrapper.addClass('is-active');
 
-        // 3. UI 狀態重置：移除子分類 active 高亮，並顯示所有子分類按鈕
-        $('.sub-category ul.tags_block li a').removeClass('active');
-        $('.sub-category ul.tags_block li').show();
+    // 2. 重置過濾條件
+    currentMainFilterClass = '*';
+    currentSubFilterClass = '*';
+    $('.sub-category ul.tags_block li a').removeClass('active');
+    $('.sub-category ul.tags_block li').show();
 
-        // 4. 重置搜尋文字並重新過濾畫面 (讓所有 item 全部出現)
-        currentSearchText = '';
-        $('.search-input-wrapper input[name="search"]').val('');
-        applyCombinedFilter();
+    // 3. 重置搜尋內容
+    currentSearchText = '';
+    $input.val('');
+    applyCombinedFilter();
 
-        // 5. Focus 到搜尋輸入框
-        setTimeout(function() {
-            $('.search-input-wrapper input[name="search"]').focus();
-        }, 150);
-    });
+    // 4.【關鍵修正】同步觸發 focus，不使用 setTimeout，讓手機版順利喚起鍵盤
+    $input.focus();
+});
 
     // 點擊關閉 X 按鈕
     $('.search-close-btn').on('click', function(e) {
