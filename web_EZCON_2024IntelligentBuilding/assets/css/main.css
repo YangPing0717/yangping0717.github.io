@@ -12312,10 +12312,13 @@ img {
   text-transform: capitalize;
   color: rgba(255, 255, 255, 0.5);
 }
-.xb-contact-form .xb-input-field input:focus + label,
-.xb-contact-form .xb-input-field input:valid + label,
-.xb-contact-form .xb-input-field textarea:focus + label,
-.xb-contact-form .xb-input-field textarea:valid + label {
+.xb-contact-form .xb-input-field {
+  /* 修改這裡：使用 :not(:placeholder-shown) 替代 :valid */
+}
+.xb-contact-form .xb-input-field input:focus ~ label,
+.xb-contact-form .xb-input-field input:not(:placeholder-shown) ~ label,
+.xb-contact-form .xb-input-field textarea:focus ~ label,
+.xb-contact-form .xb-input-field textarea:not(:placeholder-shown) ~ label {
   transform: translate(15px, -50%);
   opacity: 0;
 }
