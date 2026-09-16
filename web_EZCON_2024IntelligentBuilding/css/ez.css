@@ -3875,6 +3875,15 @@ input:checked + .slider:before {
   color: #00d2ff;
 }
 
+.case-area .container .case-img-gallery {
+  margin-top: 40px;
+}
+@media (max-width: 768px) {
+  .case-area .container .case-img-gallery {
+    margin-top: 16px;
+  }
+}
+
 /* 子分類標籤 active 點擊後的樣式 */
 .sub-category .tags_block li a.active {
   background-color: var(--color-primary);
@@ -3889,7 +3898,7 @@ input:checked + .slider:before {
 @media (max-width: 768px) {
   .sub-category .tags_block li {
     margin-right: 4px;
-    margin-bottom: 12px;
+    margin-bottom: 8px;
   }
 }
 .sub-category .tags_block li a {
@@ -3899,7 +3908,7 @@ input:checked + .slider:before {
 @media (max-width: 768px) {
   .sub-category .tags_block li a {
     font-size: 14px;
-    padding: 6px 12px;
+    padding: 5px 10px;
   }
 }
 
@@ -3915,7 +3924,7 @@ input:checked + .slider:before {
   align-items: center;
   background-color: #000000;
   border-radius: 12px;
-  padding: 4px;
+  padding: 4px 8px;
   overflow: hidden; /* 防止滑出時超出邊框 */
 }
 
@@ -3961,7 +3970,7 @@ input:checked + .slider:before {
   width: 100%;
   opacity: 1;
   pointer-events: auto;
-  padding: 4px 12px;
+  padding: 4px 6px;
 }
 
 /* 輸入框主體 */
@@ -4000,7 +4009,7 @@ input:checked + .slider:before {
 /* 關閉按鈕 (X) */
 .search-close-btn {
   position: absolute;
-  right: 12px;
+  right: 8px;
   background: transparent;
   border: none;
   color: #aaaaaa;

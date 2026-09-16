@@ -6363,6 +6363,12 @@ body[data-aos-easing=ease] [data-aos] {
   border: 1px solid rgba(255, 255, 255, 0.2);
   box-shadow: 0 4px 24px -1px rgba(28, 9, 61, 0.2);
 }
+@media (max-width: 767px) {
+  .career-menu {
+    margin-bottom: 22px;
+    width: 100%;
+  }
+}
 .career-menu button {
   line-height: 1;
   cursor: pointer;
@@ -6389,7 +6395,7 @@ body[data-aos-easing=ease] [data-aos] {
 }
 @media (max-width: 767px) {
   .career-menu button {
-    padding: 14px 18px 14px;
+    padding: 14px 16px 14px;
   }
   .career-menu button span {
     display: none;
