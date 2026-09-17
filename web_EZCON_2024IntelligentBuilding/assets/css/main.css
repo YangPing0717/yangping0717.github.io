@@ -12704,11 +12704,34 @@ img {
   display: block;
   margin-bottom: 12px;
 }
+@media (max-width: 767px) {
+  .xb-contact-items .xb-item--contact_info a {
+    font-size: 18px;
+  }
+}
 .xb-contact-items .xb-item--contact_info a {
   color: var(--color-white);
 }
 .xb-contact-items .xb-item--contact_info a:hover {
   color: var(--color-primary);
+}
+.xb-contact-items .xb-item--location span {
+  margin-left: 6px;
+  margin-right: 6px;
+  padding: 6px 14px;
+  color: white;
+  border-radius: 20px;
+  border: 0.5px solid rgba(0, 255, 151, 0.631372549);
+  font-size: 15px;
+}
+.xb-contact-items .xb-item--location span img {
+  margin-top: -4px;
+}
+.xb-contact-items i {
+  color: var(--color-primary);
+  font-size: 22px;
+  vertical-align: text-bottom;
+  margin-left: 2px;
 }
 .xb-contact-items .form-btn {
   font-size: 14px;
@@ -15274,6 +15297,7 @@ body .mfp-wrap .mfp-container .mfp-content .mfp-close:hover::before, body .mfp-w
   font-family: var(--font-heading);
   border-radius: 61px;
   transition: 0.3s;
+  font-weight: 700;
 }
 .xb-footer-heading .mail::before {
   position: absolute;
@@ -15300,8 +15324,8 @@ body .mfp-wrap .mfp-container .mfp-content .mfp-close:hover::before, body .mfp-w
 }
 @media (max-width: 767px) {
   .xb-footer-heading .mail {
-    padding: 12px 24px;
-    font-size: 16px;
+    padding: 16px 30px;
+    font-size: 18px;
   }
 }
 @media only screen and (min-width: 576px) and (max-width: 767px) {

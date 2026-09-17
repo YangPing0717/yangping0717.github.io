@@ -35,6 +35,15 @@
 }
 @media (max-width: 768px) {
   .forPhone_show {
+    display: initial !important;
+  }
+}
+
+.forPhone_show_ty2 {
+  display: none !important;
+}
+@media (max-width: 768px) {
+  .forPhone_show_ty2 {
     display: flex !important;
   }
 }
@@ -4028,4 +4037,29 @@ input:checked + .slider:before {
   -webkit-appearance: none;
   -webkit-user-select: text;
   user-select: text;
+}
+
+.contact-downl .sec-title h3 {
+  font-size: 36px;
+}
+@media (max-width: 768px) {
+  .contact-downl .sec-title h3 {
+    font-size: 26px;
+  }
+}
+.contact-downl .app_btn {
+  width: 90%;
+}
+@media (max-width: 768px) {
+  .contact-downl .app_btn {
+    width: 80%;
+  }
+}
+
+/* 讓按鈕內部的 <a> 標籤在 hover 時套用灰階 */
+.app_btn a {
+  transition: filter 0.3s ease; /* 加上過渡效果，讓變化更平滑 */
+}
+.app_btn a:hover {
+  filter: invert(1);
 }
