@@ -6365,8 +6365,7 @@ body[data-aos-easing=ease] [data-aos] {
 }
 @media (max-width: 767px) {
   .career-menu {
-    margin-bottom: 22px;
-    width: 100%;
+    margin-bottom: 20px;
   }
 }
 .career-menu button {
