@@ -105,6 +105,10 @@
   }
 }
 
+#mainmenu li a {
+  width: 100%;
+}
+
 #mainmenu li a.active, #mainmenu li a.active:hover {
   color: #ffffff !important;
   cursor: none;
