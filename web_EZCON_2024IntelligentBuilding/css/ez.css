@@ -105,8 +105,10 @@
   }
 }
 
-#mainmenu li a {
-  width: 100%;
+@media (max-width: 768px) {
+  #mainmenu li a {
+    width: 88%;
+  }
 }
 
 #mainmenu li a.active, #mainmenu li a.active:hover {
