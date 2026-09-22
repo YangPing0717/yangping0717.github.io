@@ -4069,3 +4069,16 @@ input:checked + .slider:before {
 .app_btn a:hover {
   filter: invert(1);
 }
+
+/* 針對 WebKit (Chrome, Edge, Safari) 自動填入樣式 override */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  /* 使用巨大的內陰影蓋住原生的淺色背景 */
+  -webkit-box-shadow: 0 0 0px 1000px #000000 inset !important;
+  /* 改變自動填入後的文字顏色 */
+  -webkit-text-fill-color: #ffffff !important;
+  /* 如果有背景過渡動畫，也可拉長延遲時間 */
+  transition: background-color 200s ease-in-out 0s;
+}
