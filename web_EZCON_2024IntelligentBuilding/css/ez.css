@@ -4082,3 +4082,9 @@ input:-webkit-autofill:active {
   /* 如果有背景過渡動畫，也可拉長延遲時間 */
   transition: background-color 200s ease-in-out 0s;
 }
+
+/* 隱藏 Nice Select 清單中的第一個選項（產業類別） */
+.nice-select .list .option:first-child,
+.nice-select .list .option.disabled {
+  display: none !important;
+}
