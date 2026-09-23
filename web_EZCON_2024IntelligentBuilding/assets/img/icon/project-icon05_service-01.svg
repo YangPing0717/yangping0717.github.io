@@ -1,81 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg id="_圖層_1" data-name="圖層_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 20 20">
-  <!-- Generator: Adobe Illustrator 30.7.0, SVG Export Plug-In . SVG Version: 2.1.4 Build 114)  -->
+<svg id="_圖層_1" data-name=" 圖層 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 2 2">
   <defs>
-    <style>
-      .st0 {
-        fill: url(#_未命名漸層);
-      }
-
-      .st1 {
-        stroke: url(#_未命名漸層_71);
-      }
-
-      .st1, .st2 {
-        stroke-linecap: round;
-        stroke-linejoin: round;
-        stroke-width: .7px;
-      }
-
-      .st1, .st2, .st3 {
-        fill: none;
-      }
-
-      .st2 {
-        stroke: url(#_未命名漸層_7);
-      }
-
-      .st4 {
-        fill: url(#_未命名漸層_2);
-      }
-
-      .st5 {
-        fill: url(#_未命名漸層_3);
-        fill-opacity: .2;
-      }
-
-      .st6 {
-        fill: #fff;
-        fill-opacity: .2;
-      }
-
-      .st3 {
-        stroke: url(#_未命名漸層_4);
-        stroke-opacity: .1;
-      }
-    </style>
-    <linearGradient id="_未命名漸層" data-name="未命名漸層" x1=".9" y1="9.4" x2="16.1" y2="-1.4" gradientTransform="translate(0 22) scale(1 -1)" gradientUnits="userSpaceOnUse">
+    <linearGradient id="_未命名漸層" data-name="未命名漸層" x1="0" y1="1071" x2="16" y2="1081" gradientTransform="translate(0 -1058)" gradientUnits="userSpaceOnUse">
       <stop offset="0" stop-color="#00ff97"/>
-      <stop offset=".7" stop-color="#2c32fe"/>
-    </linearGradient>
-    <linearGradient id="_未命名漸層_2" data-name="未命名漸層 2" x1="1.6" y1="15.9" x2="17.3" y2="12.5" gradientTransform="translate(0 22) scale(1 -1)" gradientUnits="userSpaceOnUse">
-      <stop offset="0" stop-color="#00ff97"/>
-      <stop offset=".7" stop-color="#2c32fe"/>
-    </linearGradient>
-    <linearGradient id="_未命名漸層_3" data-name="未命名漸層 3" x1="1.8" y1="18" x2="17" y2="9.9" gradientTransform="translate(0 22) scale(1 -1)" gradientUnits="userSpaceOnUse">
-      <stop offset="0" stop-color="#83e9ff"/>
-      <stop offset=".5" stop-color="#85a0ff"/>
-    </linearGradient>
-    <linearGradient id="_未命名漸層_4" data-name="未命名漸層 4" x1="2.1" y1="14" x2="17.3" y2="14" gradientTransform="translate(0 22) scale(1 -1)" gradientUnits="userSpaceOnUse">
-      <stop offset="0" stop-color="#3cdeb6"/>
-      <stop offset=".7" stop-color="#364aff"/>
-    </linearGradient>
-    <linearGradient id="_未命名漸層_7" data-name="未命名漸層 7" x1="11.6" y1="5.3" x2="19.7" y2="11.2" gradientTransform="translate(0 22) scale(1 -1)" gradientUnits="userSpaceOnUse">
       <stop offset="0" stop-color="#2c32fe"/>
-      <stop offset=".5" stop-color="#00a4af"/>
-      <stop offset="1" stop-color="#00ff97"/>
     </linearGradient>
-    <linearGradient id="_未命名漸層_71" data-name="未命名漸層 7" x1="15.8" y1="6.5" x2="10" y2="6.5" xlink:href="#_未命名漸層_7"/>
+    <linearGradient id="_未命名漸層_2" data-name="未命名漸層 2" x1="2" y1="1064" x2="17" y2="1068" gradientTransform="translate(0 -1058)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#00ff97"/>
+      <stop offset="0" stop-color="#2c32fe"/>
+    </linearGradient>
+    <linearGradient id="_未命名漸層_3" data-name="未命名漸層 3" x1="2" y1="1062" x2="17" y2="107" gradientTransform="translate(0 -1058)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#83e9ff"/>
+      <stop offset="0" stop-color="#85a0ff"/>
+    </linearGradient>
+    <linearGradient id="_未命名漸層_4" data-name="未命名漸層 4" x1="2" y1="1066" x2="17" y2="1066" gradientTransform="translate(0 -1058)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#3cdeb6"/>
+      <stop offset="0" stop-color="#364aff"/>
+    </linearGradient>
+    <linearGradient id="_未命名漸層_5" data-name="未命名漸層 5" x1="12" y1="1075" x2="2" y2="1069" gradientTransform="translate(0 -1058)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#2c32fe"/>
+      <stop offset="0" stop-color="#00a4af"/>
+      <stop offset="0" stop-color="#00ff97"/>
+    </linearGradient>
+    <linearGradient id="_未命名漸層_6" data-name="未命名漸層 6" x1="16" y1="1073" x2="1" y2="1073" gradientTransform="translate(0 -1058)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#2c32fe"/>
+      <stop offset="0" stop-color="#00a4af"/>
+      <stop offset="0" stop-color="#00ff97"/>
+    </linearGradient>
   </defs>
   <g>
-    <path class="st0" d="M18.3,19.1l-3.8-1.2c-.4-.1-.8-.4-1.1-.8-.3-.4-.4-.8-.4-1.3v-2.4h-7v2.4c0,.5-.1.9-.4,1.3-.3.4-.7.6-1.1.8l-3.8,1.2c0,0-.2,0-.2.2,0,0,0,.2,0,.3s0,.2.1.3c0,0,.2.1.3.1h17.4c.1,0,.2,0,.3-.1,0,0,.1-.2.1-.3,0-.1,0-.2,0-.3,0,0-.1-.2-.2-.2Z"/>
-    <path class="st4" d="M15,3.2c-.6-1-1.4-1.8-2.4-2.4C11.7.3,10.6,0,9.4,0,7.7,0,6,.7,4.8,1.9c-1.2,1.2-1.9,2.9-1.9,4.6v.9c0,4.3,3,8.3,6.5,8.3s6.3-3.7,6.5-8.3h0v-.9c0-1.2-.3-2.3-.9-3.3Z"/>
+    <path d="M18,19h-4c0-1,0-2-1-2s0,0,0-1v-2h-7v2c0,0,0,0,0,1s0,0-1,0H0c0,1,0,1,0,1H0s0,0,0,0,0,0,0,0h17s0,0,0,0,0,0,0,0h0s0,0,0,0h0Z" fill="url(#_未命名漸層)"/>
+    <path d="M15,3c0,0-1-2-2-2,0,0-2,0-3,0s-3,0-5,2c-1,1-2,3-2,5h0c0,5,3,9,6,9s6-4,6-8h0c0-2,0-3,0-4Z" fill="url(#_未命名漸層_2)"/>
     <g data-figma-bg-blur-radius="12">
-      <path class="st5" d="M17.3,10.4v-4.8c0-.3-.1-.7-.4-.9-.2-.2-.6-.4-.9-.4H2.9c-.3,0-.7.1-.9.4-.2.2-.4.6-.4.9v4.8c0,.3.1.7.4.9.2.2.6.4.9.4h4.1c0,0,.1,0,.2,0,0,0,.1,0,.2-.1l.8-1.3c.1-.2.3-.4.5-.5s.5-.2.7-.2.5,0,.7.2.4.3.5.5l.8,1.3c0,0,0,.1.2.1,0,0,.1,0,.2,0h4.1c.3,0,.7-.1.9-.4.2-.2.4-.6.4-.9Z"/>
-      <path class="st3" d="M2.9,4.8h13c.2,0,.4,0,.6.2.2.2.2.4.2.6v4.8c0,.2,0,.4-.2.6-.2.2-.4.2-.6.2h-4.1l-.8-1.2c-.2-.3-.4-.5-.7-.7-.3-.2-.6-.2-1-.2-.3,0-.7,0-1,.2-.3.2-.5.4-.7.7h0l-.8,1.2H2.9c-.2,0-.4,0-.6-.2-.2-.2-.2-.4-.2-.6v-4.8c0-.2,0-.4.2-.6.2-.2.4-.2.6-.2Z"/>
+      <path d="M17,1v-5s0,0,0,0c0,0,0,0,0,0H3s0,0,0,0c0,0,0,0,0,0v5s0,0,0,0c0,0,0,0,0,0h4s0,0,0,0h0c0-2,0-2,0-2s0,0,0,0,0,0,0,0,0,0,0,0h0c0,1,0,1,0,1h4s0,0,0,0c0,0,0,0,0,0h0Z" fill="url(#_未命名漸層_3)" fill-opacity="0"/>
+      <path d="M3,5h13s0,0,0,0,0,0,0,0v5s0,0,0,0c0,0,0,0,0,0h-5c0-2,0-2,0-2s0,0,0,0,0,0,0,0,0,0,0,0h0c0,1-4,1-4,1,0,0,0,0,0,0,0,0,0,0,0,0v-5s0,0,0,0,0,0,0,0Z" fill="none" stroke="url(#_未命名漸層_4)" stroke-opacity="0"/>
     </g>
-    <path class="st6" d="M14.6,7.4H4.2c-.1,0-.2,0-.3-.1,0,0-.1-.2-.1-.3s0-.2.1-.3c0,0,.2-.1.3-.1h10.4c.1,0,.2,0,.3.1,0,0,.1.2.1.3s0,.2-.1.3c0,0-.2.1-.3.1Z"/>
+    <path d="M15,7H4s0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0h1s0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0Z" fill="rgba(255, 255, 255, 0)"/>
   </g>
-  <path class="st2" d="M17.5,15.8l.2,1.3c0,.3-.3.6-.6.4l-1.7-1c-.2,0-.4,0-.5,0,.3-.4.5-.8.5-1.3,0-1.2-1-2.1-2.2-2.1s-.9.1-1.3.4c0-.1,0-.2,0-.3,0-1.8,1.6-3.3,3.6-3.3s3.6,1.5,3.6,3.3-.6,2.1-1.4,2.7Z"/>
-  <path class="st1" d="M15.3,15.1c0,.5-.2.9-.5,1.3-.4.5-1,.8-1.8.8l-1.1.6c-.2.1-.4,0-.4-.2v-.8c-.4-.4-.8-1-.8-1.7s.4-1.3,1-1.7c.4-.2.8-.4,1.3-.4,1.2,0,2.2.9,2.2,2.1Z"/>
+  <path d="M18,16h0c0,2,0,2,0,2h-2c0,0,0,0,0,0,0,0,0,0,0-1s0-2-2-2,0,0-1,0h0c0-2,2-4,4-4s4,2,4,3,0,2-1,3h0Z" fill="none" stroke="url(#_未命名漸層_5)" stroke-linecap="round" stroke-linejoin="round" stroke-width="0"/>
+  <path d="M15,15c0,0,0,0,0,1,0,0,0,0-2,0h-1c0,0,0,0,0,0h0c0-1,0-2,0-2s0-1,0-2c0,0,0,0,1,0s2,0,2,2h0Z" fill="none" stroke="url(#_未命名漸層_6)" stroke-linecap="round" stroke-linejoin="round" stroke-width="0"/>
 </svg>
