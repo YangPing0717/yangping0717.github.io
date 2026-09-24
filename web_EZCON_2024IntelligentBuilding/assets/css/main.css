@@ -10174,28 +10174,42 @@ img {
   -o-border-radius: 10px;
 }
 .xb-comment-form .form-check {
-  margin: 20px 0 32px;
+  margin: 20px 0 0 20px;
 }
 .xb-comment-form .form-check .form-check-input {
-  width: 14px;
-  height: 14px;
+  width: 22px;
+  height: 22px;
   border-radius: 0;
   box-shadow: none;
   border-radius: 2px;
   border: 1px solid #fff;
   background-color: #00020f;
 }
-.xb-comment-form .form-check .form-check-input:checked {
-  border-color: #fff;
-  background-color: #00020f;
+.xb-comment-form .form-check .form-check-input:checked, .xb-comment-form .form-check .form-check-input::before, .xb-comment-form .form-check .form-check-input::after {
+  border-color: #fff !important;
+  background-color: #00020f !important;
 }
 .xb-comment-form .form-check label {
-  font-size: 16px;
+  font-size: 17px;
   font-weight: 400;
   margin-bottom: 0;
   line-height: 24px;
   color: var(--color-gray);
-  transform: translate(-3px, -5px);
+  transform: translate(3px, -2px);
+}
+
+.form-check-input[type=checkbox]:checked:after {
+  display: block;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  width: 0.55rem;
+  height: 0.9rem;
+  border: 0.25rem solid #fff;
+  border-top: 0;
+  border-left: 0;
+  margin-left: 0.35rem;
+  margin-top: 1px;
+  background-color: transparent;
 }
 
 .comment_area {

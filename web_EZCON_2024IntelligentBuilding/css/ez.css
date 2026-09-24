@@ -4106,3 +4106,14 @@ input:-webkit-autofill:active {
   margin: 10px 0;
   padding-left: 20px;
 }
+@media (max-width: 768px) {
+  .servive .xb-item--inner p {
+    border-left: none;
+    border-top: 1px dashed rgba(0, 255, 151, 0.5);
+    margin: 0px 0;
+    padding-left: 80px;
+    margin-left: 0;
+    width: 100%;
+    padding-top: 20px;
+  }
+}
