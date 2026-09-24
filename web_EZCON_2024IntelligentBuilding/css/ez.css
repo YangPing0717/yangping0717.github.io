@@ -4097,6 +4097,12 @@ input:-webkit-autofill:active {
   height: 68px;
   background: rgba(0, 34, 255, 0.25);
 }
+@media (max-width: 768px) {
+  .servive .xb-item--inner .xb-item--icon {
+    width: 56px;
+    height: 56px;
+  }
+}
 .servive .xb-item--inner .xb-item--icon img {
   width: 60%;
   height: auto;
@@ -4111,9 +4117,10 @@ input:-webkit-autofill:active {
     border-left: none;
     border-top: 1px dashed rgba(0, 255, 151, 0.5);
     margin: 0px 0;
-    padding-left: 80px;
+    padding-left: 70px;
     margin-left: 0;
     width: 100%;
-    padding-top: 20px;
+    padding-top: 12px;
+    margin-top: -4px;
   }
 }
