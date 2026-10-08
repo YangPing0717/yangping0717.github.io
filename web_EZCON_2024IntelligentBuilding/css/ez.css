@@ -1230,7 +1230,6 @@ footer .logo img {
   .property_score .de_count {
     width: 90%;
     padding: 0;
-    margin-top: -1rem;
   }
 }
 .property_score .de_count h2 {
@@ -1263,7 +1262,12 @@ footer .logo img {
   animation: spin 2s linear infinite;
 }
 .property_score .feat_mb {
-  margin-bottom: -2rem;
+  margin-bottom: 0;
+}
+@media (max-width: 768px) {
+  .property_score .feat_mb {
+    margin-bottom: 2rem;
+  }
 }
 
 /* 1. Define the rotation keyframes */

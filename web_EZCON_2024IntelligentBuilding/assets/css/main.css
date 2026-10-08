@@ -5514,7 +5514,7 @@ body[data-aos-easing=ease] [data-aos] {
 }
 @media (max-width: 767px) {
   .integration-logo-wrap {
-    gap: 12px !important;
+    gap: 8px !important;
     max-height: 620px;
   }
 }
