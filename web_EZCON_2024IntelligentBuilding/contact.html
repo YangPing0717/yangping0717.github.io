@@ -46,7 +46,7 @@
     <link rel="stylesheet" href="assets/css/nice-select.css">
     <!-- 另外加 base_sec.css -->
     <link rel="stylesheet" href="assets/css/base_sec.css?v=20261008-1">
-    <link rel="stylesheet" href="assets/css/main.css?v=20260924-1">
+    <link rel="stylesheet" href="assets/css/main.css?v=20261012-2">
     
 
     <link href="css/style.css" rel="stylesheet" type="text/css" >
@@ -69,7 +69,7 @@
     <!-- <link id="colors" href="css/6_2_style.css" rel="stylesheet" type="text/css" > -->
     <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto:300,400,500|Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp'>
     <link id="colors" href="css/vendors.css" rel="stylesheet" type="text/css" >
-    <link id="colors" href="css/ez.css?v=20261012-1" rel="stylesheet" type="text/css" >
+    <link id="colors" href="css/ez.css?v=20261012-12" rel="stylesheet" type="text/css" >
 
 </head>
 
@@ -336,7 +336,7 @@
                                     <div class="xb-item--holder">
                                         <p class="xb-item--location">台中分部
                                             <!-- <span id="openGalleryBtn">展示空間</span> -->
-                                            <button id="openGalleryBtn" class="xb-border "><img src="assets/img/icon/project-icon07.svg" alt="icon"> 展示空間</button>
+                                            <button id="openGalleryBtn"><img src="assets/img/icon/project-icon07.svg" alt="icon"> 展示空間</button>
                                         </p>
                                         <span class="xb-item--contact_info">
                                             <a href="https://maps.app.goo.gl/ynotwKyuLvKLGWtC6" target="_blank">台中市西屯區市政路 500 號 21 樓之八</a>
@@ -991,8 +991,12 @@
                         <div class="pswp__caption__center"></div>
                     </div>
 
-                    <!-- 縮圖存放容器 -->
-                    <div class="pswp-thumbnails-container"></div>
+                    <!-- 縮圖導覽列 -->
+                    <div class="pswp-thumbnails-shell">
+                        <button class="pswp-thumb-nav pswp-thumb-nav--prev" type="button" aria-label="向左滑動縮圖">&#10094;</button>
+                        <div class="pswp-thumbnails-container"></div>
+                        <button class="pswp-thumb-nav pswp-thumb-nav--next" type="button" aria-label="向右滑動縮圖">&#10095;</button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -1240,50 +1244,134 @@ var galleryItems = [
 
 
     <script>
-        var galleryItems = [
-    {
-        src: 'assets/img/contact/loca_tc_2.jpg',
-                msrc: 'assets/img/contact/loca_tc_2.jpg',
-        w: 1200, h: 1200,
-        title: '圖片 1'
-    },
-    {
-        src: 'assets/img/contact/loca_tn.jpg',
-                msrc: 'assets/img/contact/loca_tn.jpg',
-        w: 1200, h: 1200,
-        title: '圖片 2'
-    },
-    {
-        src: 'assets/img/contact/loca_tn_2.jpg',
-                msrc: 'assets/img/contact/loca_tn_2.jpg',
-        w: 1200, h: 1200,
-        title: '圖片 3'
-    }
-];
+        var galleryCaptionData = [
+            ['智慧展示空間入口', '入口整合品牌識別、智慧門禁設備與展示動線，引導訪客進入情境體驗區，呈現軟體平台串聯門禁、照明及空間設備的智慧建築應用。'],
+            ['迎賓洽談情境', '俐落的會議桌與品牌展示牆形成第一接待場景，讓智慧控制設備自然融入日常洽談與導覽流程。'],
+            ['智慧辦公全景', '從走道串連會議、展示與協作區域，透過整合平台集中管理照明、環控與各式終端設備。'],
+            ['品牌光牆與交流吧台', '發光識別牆界定空間動線，搭配吧台式交流區，示範燈光情境與空間機能的協同設計。'],
+            ['會議與共享機能整合', '長桌會議區、簡易茶水機能與設備展示牆彼此相連，呈現複合辦公空間的一體化控制概念。'],
+            ['開放式智慧會議空間', '以清楚的視線連結會議桌與控制展示區，讓使用者能直接觀察操作指令與設備反應。'],
+            ['環境控制融入工作場景', '照明、空調與會議設備配置於同一開放空間，模擬日常工作時各系統協同運作的狀態。'],
+            ['設備展示與空間互動', '從中島工作區望向整合展示牆，呈現控制介面、感測器與實體設備之間的即時連動。'],
+            ['智慧建築整合展示牆', '多螢幕儀表板集中呈現建築狀態，並搭配門禁、感測、充電與環控設備，展示軟硬體整合成果。'],
+            ['中控平台操作情境', '大型資訊看板結合現場控制元件，模擬管理者從單一平台監看並操作不同建築系統。'],
+            ['彈性隔間與情境切換', '活動隔間、展示牆與會議區形成可調整的工作場景，呼應空間依需求切換模式的智慧控制概念。'],
+            ['智慧會議協作場景', '會議桌正對設備與數據展示區，便於討論時同步查看影像、環境資訊及系統運作狀態。'],
+            ['品牌核心展示端景', '以品牌光牆作為視覺焦點，整合照明與材質層次，營造具科技感的導覽節點。'],
+            ['長桌協作與情境照明', '線性燈光引導會議動線，搭配智慧設備介面，示範會議、簡報與休息模式的快速切換。'],
+            ['智慧空間展示中島', '會議桌與展示櫃構成中央操作區，兩側串連環境資訊與硬體設備，方便進行情境演示。'],
+            ['軟硬體整合示範牆', '管理平台、監控影像與現場設備同框呈現，展示資料如何回傳、判讀並轉化為控制指令。'],
+            ['建築管理儀表板', '多組螢幕顯示建築模型、監控畫面與環境數據，協助管理者掌握跨系統即時狀態。'],
+            ['開放會議與城市採光', '大片窗景引入自然光，搭配可控照明與窗邊綠意，呈現舒適且節能的協作環境。'],
+            ['自然光環境設計', '窗邊植栽與室內採光形成柔和工作氛圍，示範日照條件與人工照明協同調節的可能。'],
+            ['明亮會議模式', '垂直簾柔化日光並維持會議區亮度，搭配環控與顯示設備，支援長時間協作需求。'],
+            ['多媒體與門禁操作介面', '影音、門禁、對講與空間控制介面集中展示，呈現不同終端皆能接入同一管理架構。'],
+            ['節能採光會議情境', '日光透過垂直簾均勻進入空間，兼顧視覺舒適與能源使用，建立高效會議環境。'],
+            ['平台遠端監控視角', '透過玻璃與反射層次觀看中控展示區，呼應遠端平台對空間狀態的持續感知與管理。'],
+            ['材質隔屏與空間分區', '穿孔隔屏在保持採光與通透感的同時界定機能，展現科技設備與室內設計的細緻整合。'],
+            ['智慧照明與共享中島', '吊燈、線性照明與共享中島共同塑造交流場景，可依使用需求切換明暗與氛圍。'],
+            ['智慧配電與備援核心', '控制模組、通訊設備與備援電源集中於透明機櫃，展示建築自動化背後穩定可靠的基礎架構。'],
+            ['能源與設備整合端景', '品牌光牆連結交流吧台與設備區，呈現能源、環控及空間服務在同一場域中的整合。'],
+            ['控制核心可視化展示', '將配電模組與備援設備完整揭露，讓訪客直觀看見軟體指令背後的控制與通訊架構。'],
+            ['智慧建築方案展示區', '門禁終端、資訊看板與設備機櫃共同構成體驗牆，完整呈現從操作介面到現場控制的流程。'],
+            ['情境控制主牆', '大型顯示器與牆面控制面板集中配置，可模擬影音、照明、空調及門禁的一鍵情境操作。'],
+            ['交流吧台細節', '半穿透隔屏、吊燈與高腳座席營造輕鬆交流角落，展現智慧控制亦能兼顧空間質感。'],
+            ['品牌空間與控制展示', '品牌識別、控制面板及配電核心沿動線展開，讓參觀者循序理解智慧建築的系統組成。'],
+            ['導覽廊道與線性照明', '線性燈帶引導訪客前往設備展示區，利用照明節奏強化空間方向與科技氛圍。'],
+            ['智慧辦公獨立工作區', '獨立辦公空間整合照明、環控與門禁介面，呈現管理者在安靜場域中的實際使用情境。'],
+            ['門禁連動的工作空間', '玻璃隔間上的感應裝置連結內部照明與環境模式，示範進出事件觸發空間設備的應用。'],
+            ['自然光與展示收納', '百葉調節日光，展示層架與收納維持整潔機能，營造兼具效率與舒適度的辦公角落。'],
+            ['玻璃隔間智慧會議室', '通透隔間保留視覺連續性，門禁與牆面控制器支援會議室預約、進出及情境啟動。'],
+            ['辦公空間環境模式', '多層次照明、遮陽與牆面控制介面共同運作，可依工作、會議或離席狀態切換。'],
+            ['科技感主管辦公室', '明亮工作桌、收納展示與玻璃門禁整合為完整辦公情境，呈現智慧控制兼顧美感與實用性的成果。']
+        ];
+
+        var galleryCaptions = galleryCaptionData.map(function(caption) {
+            return '<span class="gallery-caption-title">' + caption[0] + '</span><span class="gallery-caption-text">' + caption[1] + '</span>';
+        });
+
+        var galleryItems = Array.from({ length: 39 }, function(_, index) {
+            var number = String(index + 1).padStart(2, '0');
+            var isPortrait = index === 25 || index === 32;
+            var isUpdatedScreenPhoto = index === 20;
+            var basePath = 'assets/img/contact/taichung-gallery/';
+            var cacheVersion = isUpdatedScreenPhoto ? '?v=20261012-screen-2' : '';
+
+            return {
+                src: basePath + 'full/taichung-office-' + number + '.jpg' + cacheVersion,
+                msrc: basePath + 'thumbs/taichung-office-' + number + '.jpg' + cacheVersion,
+                w: isUpdatedScreenPhoto ? 1535 : (isPortrait ? 1602 : 2400),
+                h: isUpdatedScreenPhoto ? 1025 : (isPortrait ? 2400 : 1602),
+                title: galleryCaptions[index] || ('台中展示空間 ' + (index + 1) + ' / 39')
+            };
+        });
 
 function openPhotoSwipe(startIndex = 0) {
     var pswpElement = document.querySelectorAll('.pswp')[0];
     var thumbContainer = pswpElement.querySelector('.pswp-thumbnails-container');
+    var thumbPrevButton = pswpElement.querySelector('.pswp-thumb-nav--prev');
+    var thumbNextButton = pswpElement.querySelector('.pswp-thumb-nav--next');
 
     // 渲染縮圖
     var thumbHtml = '';
     galleryItems.forEach(function(item, index) {
         var thumbSrc = item.msrc || item.src;
-        thumbHtml += `<img src="${thumbSrc}" class="pswp-thumb-item" data-index="${index}" alt="thumb" />`;
+        thumbHtml += `<img src="${thumbSrc}" class="pswp-thumb-item" data-index="${index}" alt="台中展示空間縮圖 ${index + 1}" loading="lazy" decoding="async" />`;
     });
     thumbContainer.innerHTML = thumbHtml;
+
+    function updateThumbNavState() {
+        var maxScrollLeft = thumbContainer.scrollWidth - thumbContainer.clientWidth;
+        thumbPrevButton.disabled = thumbContainer.scrollLeft <= 2;
+        thumbNextButton.disabled = thumbContainer.scrollLeft >= maxScrollLeft - 2;
+    }
+
+    function scrollThumbsOneStep(direction) {
+        var firstThumb = thumbContainer.querySelector('.pswp-thumb-item');
+        if (!firstThumb) return;
+        var styles = window.getComputedStyle(thumbContainer);
+        var gap = parseFloat(styles.columnGap || styles.gap) || 0;
+        var step = firstThumb.getBoundingClientRect().width + gap;
+        thumbContainer.scrollBy({ left: direction * step, behavior: 'smooth' });
+    }
+
+    thumbPrevButton.onclick = function(e) {
+        e.stopPropagation();
+        scrollThumbsOneStep(-1);
+    };
+
+    thumbNextButton.onclick = function(e) {
+        e.stopPropagation();
+        scrollThumbsOneStep(1);
+    };
+
+    thumbContainer.onscroll = updateThumbNavState;
 
     var options = {
         index: startIndex,
         bgOpacity: 0.85,
         showHideOpacity: true,
         history: false,
-        loop: true,
+        loop: false,
         showAnimationDuration: 300,
         hideAnimationDuration: 300
     };
 
     var gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, galleryItems, options);
+    var largePrevButton = pswpElement.querySelector('.pswp__button--arrow--left');
+    var largeNextButton = pswpElement.querySelector('.pswp__button--arrow--right');
+
+    function updateLargeArrowState(currentIndex) {
+        var isFirst = currentIndex === 0;
+        var isLast = currentIndex === galleryItems.length - 1;
+
+        largePrevButton.disabled = isFirst;
+        largeNextButton.disabled = isLast;
+        largePrevButton.classList.toggle('is-disabled', isFirst);
+        largeNextButton.classList.toggle('is-disabled', isLast);
+        largePrevButton.setAttribute('aria-disabled', String(isFirst));
+        largeNextButton.setAttribute('aria-disabled', String(isLast));
+    }
 
     // 更新選中的縮圖
     function updateActiveThumb(currentIndex) {
@@ -1292,7 +1380,12 @@ function openPhotoSwipe(startIndex = 0) {
             var idx = parseInt(thumb.getAttribute('data-index'), 10);
             if (idx === currentIndex) {
                 thumb.classList.add('active');
-                thumb.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+                // 只移動縮圖容器，避免最後一張縮圖讓整個頁面產生水平位移。
+                var centeredScrollLeft = thumb.offsetLeft - (thumbContainer.clientWidth - thumb.offsetWidth) / 2;
+                thumbContainer.scrollTo({
+                    left: Math.max(0, centeredScrollLeft),
+                    behavior: 'auto'
+                });
             } else {
                 thumb.classList.remove('active');
             }
@@ -1303,8 +1396,14 @@ function openPhotoSwipe(startIndex = 0) {
         updateActiveThumb(gallery.getCurrentIndex());
     });
 
+    gallery.listen('afterChange', function() {
+        updateLargeArrowState(gallery.getCurrentIndex());
+    });
+
     gallery.init();
     updateActiveThumb(startIndex);
+    updateLargeArrowState(startIndex);
+    window.requestAnimationFrame(updateThumbNavState);
 
     // 點擊縮圖跳轉
     thumbContainer.onclick = function(e) {

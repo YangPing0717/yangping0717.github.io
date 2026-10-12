@@ -2343,7 +2343,8 @@ spline-viewer::part(logo) {
   position: absolute;
   top: -21px;
   left: 0rem;
-  opacity: 1;
+  opacity: 0;
+  pointer-events: none;
 }
 .productpage .product_func {
   /* Ensure the carousel wrapper serves as the relative anchor */
@@ -4157,21 +4158,254 @@ input:-webkit-autofill:active {
 }
 
 /* --- 3. 底部正方形縮圖區 --- */
-.pswp-thumbnails-container {
+/* 大圖左右切換：沿用 ezlife.html 的弧形邊緣箭頭 */
+.pswp__button--arrow--left,
+.pswp__button--arrow--right {
+  top: 50%;
+  width: 84px;
+  height: min(456px, 58vh);
+  margin-top: 0;
+  transform: translateY(-50%);
+  opacity: 0.78;
+  background: none;
+  transition: opacity 0.25s ease, filter 0.25s ease;
+}
+.pswp__button--arrow--left { left: 0; }
+.pswp__button--arrow--right { right: 0; }
+.pswp .pswp__button--arrow--left::before,
+.pswp .pswp__button--arrow--right::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  width: auto;
+  height: auto;
+  margin: 0;
+  background-image: linear-gradient(180deg, rgba(0, 255, 196, 0.22), rgba(0, 190, 162, 0.88) 50%, rgba(0, 255, 196, 0.22)) !important;
+  background-position: center !important;
+  background-size: 100% 100% !important;
+  background-repeat: no-repeat !important;
+  -webkit-mask-position: center;
+  mask-position: center;
+  -webkit-mask-size: 100% 100%;
+  mask-size: 100% 100%;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+}
+.pswp .pswp__button--arrow--left::before {
+  -webkit-mask-image: url("../assets/img/shape/prev-shape.svg");
+  mask-image: url("../assets/img/shape/prev-shape.svg");
+}
+.pswp .pswp__button--arrow--right::before {
+  -webkit-mask-image: url("../assets/img/shape/next-shape.svg");
+  mask-image: url("../assets/img/shape/next-shape.svg");
+}
+.pswp__button--arrow--left::after,
+.pswp__button--arrow--right::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 25px;
+  height: 25px;
+  border-top: 7px solid #fff;
+  border-right: 7px solid #fff;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.35));
+}
+.pswp__button--arrow--left::after {
+  left: 25px;
+  transform: translateY(-50%) rotate(-135deg);
+}
+.pswp__button--arrow--right::after {
+  right: 25px;
+  transform: translateY(-50%) rotate(45deg);
+}
+.pswp__button--arrow--left:hover,
+.pswp__button--arrow--right:hover,
+.pswp__button--arrow--left:focus-visible,
+.pswp__button--arrow--right:focus-visible {
+  opacity: 1;
+  filter: drop-shadow(0 0 12px rgba(0, 255, 190, 0.45));
+}
+@media (max-width: 767px) {
+  .pswp__button--arrow--left,
+  .pswp__button--arrow--right {
+    width: 64px;
+    height: min(350px, 48vh);
+  }
+  .pswp__button--arrow--left::after,
+  .pswp__button--arrow--right::after {
+    width: 20px;
+    height: 20px;
+    border-width: 6px;
+  }
+  .pswp__button--arrow--left::after { left: 18px; }
+  .pswp__button--arrow--right::after { right: 18px; }
+}
+
+/* 截圖樣式：圓形按鈕藏入畫面邊緣，只露出半圓 */
+.pswp .pswp__button--arrow--left,
+.pswp .pswp__button--arrow--right {
+  top: 50%;
+  width: 112px;
+  height: 112px;
+  transform: translateY(-50%);
+  opacity: 0;
+  pointer-events: auto;
+  overflow: visible;
+  filter: none;
+  transition: opacity 0.28s ease;
+}
+.pswp .pswp__button--arrow--left { left: -56px; }
+.pswp .pswp__button--arrow--right { right: -56px; }
+.pswp__scroll-wrap:has(.pswp__zoom-wrap:hover, .pswp__button--arrow--left:hover, .pswp__button--arrow--right:hover) .pswp__button--arrow--left,
+.pswp__scroll-wrap:has(.pswp__zoom-wrap:hover, .pswp__button--arrow--left:hover, .pswp__button--arrow--right:hover) .pswp__button--arrow--right,
+.pswp__button--arrow--left:focus-visible,
+.pswp__button--arrow--right:focus-visible {
+  opacity: 1;
+}
+.pswp .pswp__button--arrow--left::before,
+.pswp .pswp__button--arrow--right::before {
+  inset: 0;
+  width: 112px;
+  height: 112px;
+  border-radius: 50%;
+  background: radial-gradient(circle at center, rgba(24, 224, 197, 0.7) 0%, rgba(0, 203, 164, 0.5) 58%, rgba(0, 173, 151, 0.2) 100%) !important;
+  -webkit-mask-image: none;
+  mask-image: none;
+  box-shadow: 0 0 24px rgba(0, 255, 204, 0.22);
+}
+.pswp .pswp__button--arrow--left::after,
+.pswp .pswp__button--arrow--right::after {
+  width: 26px;
+  height: 26px;
+  border-top-width: 8px;
+  border-right-width: 8px;
+  border-radius: 3px;
+}
+.pswp .pswp__button--arrow--left::after { left: 69px; }
+.pswp .pswp__button--arrow--right::after { right: 69px; }
+.pswp .pswp__button--arrow--left:hover,
+.pswp .pswp__button--arrow--right:hover {
+  filter: none;
+}
+.pswp .pswp__button--arrow--left:hover::before,
+.pswp .pswp__button--arrow--right:hover::before {
+  background: radial-gradient(circle at center, rgba(45, 239, 213, 0.78) 0%, rgba(0, 218, 174, 0.58) 58%, rgba(0, 190, 161, 0.26) 100%) !important;
+}
+@media (max-width: 767px) {
+  .pswp .pswp__button--arrow--left,
+  .pswp .pswp__button--arrow--right,
+  .pswp .pswp__button--arrow--left::before,
+  .pswp .pswp__button--arrow--right::before {
+    width: 88px;
+    height: 88px;
+  }
+  .pswp .pswp__button--arrow--left { left: -44px; }
+  .pswp .pswp__button--arrow--right { right: -44px; }
+  .pswp .pswp__button--arrow--left::after { left: 53px; }
+  .pswp .pswp__button--arrow--right::after { right: 53px; }
+}
+@media (hover: none), (pointer: coarse) {
+  .pswp .pswp__button--arrow--left,
+  .pswp .pswp__button--arrow--right {
+    opacity: 1;
+    pointer-events: auto;
+  }
+}
+.pswp .pswp__button--arrow--left.is-disabled,
+.pswp .pswp__button--arrow--right.is-disabled,
+.pswp .pswp__button--arrow--left:disabled,
+.pswp .pswp__button--arrow--right:disabled {
+  opacity: 0 !important;
+  pointer-events: none;
+  cursor: default;
+  filter: grayscale(0.35);
+}
+.pswp__scroll-wrap:has(.pswp__zoom-wrap:hover) .pswp__button--arrow--left.is-disabled,
+.pswp__scroll-wrap:has(.pswp__zoom-wrap:hover) .pswp__button--arrow--right.is-disabled,
+.pswp__scroll-wrap:has(.pswp__zoom-wrap:hover) .pswp__button--arrow--left:disabled,
+.pswp__scroll-wrap:has(.pswp__zoom-wrap:hover) .pswp__button--arrow--right:disabled {
+  opacity: 0.28 !important;
+}
+@media (hover: none), (pointer: coarse) {
+  .pswp .pswp__button--arrow--left.is-disabled,
+  .pswp .pswp__button--arrow--right.is-disabled,
+  .pswp .pswp__button--arrow--left:disabled,
+  .pswp .pswp__button--arrow--right:disabled {
+    opacity: 0.28 !important;
+  }
+}
+
+.pswp-thumbnails-shell {
   position: absolute;
   bottom: 12px;
-  left: 0;
-  width: 100%;
+  left: 50%;
+  width: min(calc(100% - 32px), 1320px);
+  transform: translateX(-50%);
   z-index: 1050;
+  pointer-events: auto;
+}
+.pswp-thumbnails-shell::before,
+.pswp-thumbnails-shell::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  z-index: 1;
+  width: 100px;
+  pointer-events: none;
+}
+.pswp-thumbnails-shell::before {
+  left: 0;
+  background: linear-gradient(90deg, rgba(3, 7, 11, 0.9) 0%, rgba(3, 7, 11, 0.52) 42%, rgba(3, 7, 11, 0) 100%);
+}
+.pswp-thumbnails-shell::after {
+  right: 0;
+  background: linear-gradient(270deg, rgba(3, 7, 11, 0.9) 0%, rgba(3, 7, 11, 0.52) 42%, rgba(3, 7, 11, 0) 100%);
+}
+
+.pswp-thumbnails-container {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   gap: 8px;
-  padding: 6px 12px;
+  padding: 6px 34px;
   box-sizing: border-box;
   overflow-x: auto;
+  scrollbar-width: none;
+  scroll-behavior: smooth;
+  scroll-snap-type: x proximity;
   pointer-events: auto; /* 允許點擊 */
   -webkit-overflow-scrolling: touch;
+}
+.pswp-thumbnails-container::-webkit-scrollbar {
+  display: none;
+}
+
+.pswp-thumb-nav {
+  position: absolute;
+  top: 50%;
+  z-index: 2;
+  width: 36px;
+  height: 36px;
+  padding: 0;
+  transform: translateY(-50%);
+  border: 1px solid rgba(255, 255, 255, 0.65);
+  border-radius: 50%;
+  color: #fff;
+  background: rgba(7, 13, 18, 0.82);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.35);
+  cursor: pointer;
+  transition: background 0.2s ease, opacity 0.2s ease, border-color 0.2s ease;
+}
+.pswp-thumb-nav--prev { left: 4px; }
+.pswp-thumb-nav--next { right: 4px; }
+.pswp-thumb-nav:hover:not(:disabled) {
+  border-color: #00ff97;
+  background: rgba(0, 112, 87, 0.92);
+}
+.pswp-thumb-nav:disabled {
+  opacity: 0.25;
+  cursor: default;
 }
 
 .pswp-thumb-item {
@@ -4184,6 +4418,7 @@ input:-webkit-autofill:active {
   opacity: 0.5;
   transition: all 0.2s ease;
   border: 2px solid transparent;
+  scroll-snap-align: center;
 }
 
 .pswp-thumb-item:hover {
@@ -4199,4 +4434,23 @@ input:-webkit-autofill:active {
 /* 將標題文字往上移，不蓋到縮圖 */
 .pswp__caption {
   bottom: 75px !important;
+}
+.pswp__caption__center {
+  max-width: 900px;
+  padding: 12px 20px;
+  text-align: center;
+  line-height: 1.65;
+}
+.gallery-caption-title {
+  display: block;
+  margin-bottom: 3px;
+  color: #ffffff;
+  font-size: 17px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+}
+.gallery-caption-text {
+  display: block;
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 14px;
 }
