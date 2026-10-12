@@ -12728,7 +12728,8 @@ img {
 .xb-contact-items .xb-item--contact_info a:hover {
   color: var(--color-primary);
 }
-.xb-contact-items .xb-item--location span {
+.xb-contact-items .xb-item--location span,
+.xb-contact-items .xb-item--location #openGalleryBtn {
   margin-left: 6px;
   margin-right: 6px;
   padding: 6px 14px;
@@ -12736,8 +12737,12 @@ img {
   border-radius: 20px;
   border: 0.5px solid rgba(0, 255, 151, 0.631372549);
   font-size: 15px;
+  font: inherit;
+  background: transparent;
+  cursor: pointer;
 }
-.xb-contact-items .xb-item--location span img {
+.xb-contact-items .xb-item--location span img,
+.xb-contact-items .xb-item--location #openGalleryBtn img {
   margin-top: -4px;
 }
 .xb-contact-items i {
