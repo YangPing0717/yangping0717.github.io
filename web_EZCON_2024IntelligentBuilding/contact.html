@@ -29,6 +29,14 @@
     <link href="css/plugins.css" rel="stylesheet" type="text/css" >
 
 
+
+    <!-- PhotoSwipe 核心 CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.1/photoswipe.min.css">
+    <!-- 預設 UI 樣式 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.1/default-skin/default-skin.min.css">
+
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/5.4.4/photoswipe.min.css"> -->
+
     
 
     <!-- css include -->
@@ -61,7 +69,7 @@
     <!-- <link id="colors" href="css/6_2_style.css" rel="stylesheet" type="text/css" > -->
     <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto:300,400,500|Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp'>
     <link id="colors" href="css/vendors.css" rel="stylesheet" type="text/css" >
-    <link id="colors" href="css/ez.css?v=20260924-2" rel="stylesheet" type="text/css" >
+    <link id="colors" href="css/ez.css?v=20261012-1" rel="stylesheet" type="text/css" >
 
 </head>
 
@@ -326,7 +334,10 @@
                                     <a href="#!"><img src="assets/img/contact/loca_tc_2.jpg?v=20260915" alt="image"></a> 
                                     </div>
                                     <div class="xb-item--holder">
-                                        <p class="xb-item--location">台中分部<span><img src="assets/img/icon/project-icon07.svg" alt="icon"> 展示空間</span></p>
+                                        <p class="xb-item--location">台中分部
+                                            <!-- <span id="openGalleryBtn">展示空間</span> -->
+                                            <button id="openGalleryBtn" class="xb-border "><img src="assets/img/icon/project-icon07.svg" alt="icon"> 展示空間</button>
+                                        </p>
                                         <span class="xb-item--contact_info">
                                             <a href="https://maps.app.goo.gl/ynotwKyuLvKLGWtC6" target="_blank">台中市西屯區市政路 500 號 21 樓之八</a>
                                         </span>
@@ -382,6 +393,14 @@
                 </div>
             </section>
             <!-- contact end -->
+
+
+
+
+            
+
+
+
 
             <!-- contact start -->
             <section id="service" class="contact" data-title='專人諮詢服務'>
@@ -887,6 +906,7 @@
 
 
 
+
         
         <!-- <a href="#" id="back-to-top"></a> -->
 
@@ -931,7 +951,55 @@
             </div>
         </footer>
         <!-- footer close -->
-    </div>
+
+
+        <!-- 觸發按鈕 -->
+        <!-- <button id="openGalleryBtn" class="btn">開啟相簿</button> -->
+
+
+        <!-- PhotoSwipe Modal 結構 -->
+        <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="pswp__bg"></div>
+            <div class="pswp__scroll-wrap">
+                
+                <!-- 【關鍵】這裡必須剛好有 3 個 pswp__item 供滑動動畫使用 -->
+                <div class="pswp__container">
+                    <div class="pswp__item"></div>
+                    <div class="pswp__item"></div>
+                    <div class="pswp__item"></div>
+                </div>
+
+                <div class="pswp__ui pswp__ui--hidden">
+                    <div class="pswp__top-bar">
+                        <div class="pswp__counter"></div>
+                        <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+                        <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+                        <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+                        <div class="pswp__preloader">
+                            <div class="pswp__preloader__icn">
+                            <div class="pswp__preloader__cut">
+                                <div class="pswp__preloader__donut"></div>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"></button>
+                    <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)"></button>
+
+                    <div class="pswp__caption">
+                        <div class="pswp__caption__center"></div>
+                    </div>
+
+                    <!-- 縮圖存放容器 -->
+                    <div class="pswp-thumbnails-container"></div>
+                </div>
+            </div>
+        </div>
+
+
+
+        </div>
     
 
 
@@ -1111,6 +1179,8 @@
     <script src="js/indicator_new.js"></script>
 
 
+    
+
 
     <!-- ４大關鍵能力 -->
     <!-- Core dependencies -->
@@ -1136,6 +1206,125 @@
 
     <!-- Sliders 控制４大編號-->
     <script src="assets/js/swiper.min.js"></script>
+
+
+
+    
+var galleryItems = [
+            {
+                src: 'assets/img/contact/loca_tc_2.jpg',
+                msrc: 'assets/img/contact/loca_tc_2.jpg', // 正方形縮圖
+                w: 964,
+                h: 1024,
+                title: '圖片 1 說明文字'
+            },
+            {
+                src: 'assets/img/contact/loca_tn.jpg',
+                msrc: 'assets/img/contact/loca_tn.jpg', // 正方形縮圖
+                w: 1024,
+                h: 683,
+                title: '圖片 2 說明文字圖片 2 說明文字圖片 2 說明文字'
+            },
+            {
+                src: 'assets/img/contact/loca_tn_2.jpg',
+                msrc: 'assets/img/contact/loca_tn_2.jpg',
+                w: 964,
+                h: 1024,
+                title: '圖片 3 說明文字圖片 2 說明文字圖片 2 說明文字'
+            }
+        ];
+
+    <!-- PhotoSwipe 核心 JS 與 UI JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.1/photoswipe.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.1/photoswipe-ui-default.min.js"></script>
+
+
+    <script>
+        var galleryItems = [
+    {
+        src: 'assets/img/contact/loca_tc_2.jpg',
+                msrc: 'assets/img/contact/loca_tc_2.jpg',
+        w: 1200, h: 1200,
+        title: '圖片 1'
+    },
+    {
+        src: 'assets/img/contact/loca_tn.jpg',
+                msrc: 'assets/img/contact/loca_tn.jpg',
+        w: 1200, h: 1200,
+        title: '圖片 2'
+    },
+    {
+        src: 'assets/img/contact/loca_tn_2.jpg',
+                msrc: 'assets/img/contact/loca_tn_2.jpg',
+        w: 1200, h: 1200,
+        title: '圖片 3'
+    }
+];
+
+function openPhotoSwipe(startIndex = 0) {
+    var pswpElement = document.querySelectorAll('.pswp')[0];
+    var thumbContainer = pswpElement.querySelector('.pswp-thumbnails-container');
+
+    // 渲染縮圖
+    var thumbHtml = '';
+    galleryItems.forEach(function(item, index) {
+        var thumbSrc = item.msrc || item.src;
+        thumbHtml += `<img src="${thumbSrc}" class="pswp-thumb-item" data-index="${index}" alt="thumb" />`;
+    });
+    thumbContainer.innerHTML = thumbHtml;
+
+    var options = {
+        index: startIndex,
+        bgOpacity: 0.85,
+        showHideOpacity: true,
+        history: false,
+        loop: true,
+        showAnimationDuration: 300,
+        hideAnimationDuration: 300
+    };
+
+    var gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, galleryItems, options);
+
+    // 更新選中的縮圖
+    function updateActiveThumb(currentIndex) {
+        var thumbs = thumbContainer.querySelectorAll('.pswp-thumb-item');
+        thumbs.forEach(function(thumb) {
+            var idx = parseInt(thumb.getAttribute('data-index'), 10);
+            if (idx === currentIndex) {
+                thumb.classList.add('active');
+                thumb.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+            } else {
+                thumb.classList.remove('active');
+            }
+        });
+    }
+
+    gallery.listen('beforeChange', function() {
+        updateActiveThumb(gallery.getCurrentIndex());
+    });
+
+    gallery.init();
+    updateActiveThumb(startIndex);
+
+    // 點擊縮圖跳轉
+    thumbContainer.onclick = function(e) {
+        var target = e.target;
+        if (target && target.classList.contains('pswp-thumb-item')) {
+            var targetIndex = parseInt(target.getAttribute('data-index'), 10);
+            gallery.goTo(targetIndex);
+        }
+    };
+}
+
+// 綁定按鈕
+document.getElementById('openGalleryBtn').addEventListener('click', function() {
+    openPhotoSwipe(0);
+});
+    </script>
+
+
+
+
 
 <!-- Special plugins -->
 <script src="assets/js/plugin.js"></script>
