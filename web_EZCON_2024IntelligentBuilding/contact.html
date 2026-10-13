@@ -46,7 +46,7 @@
     <link rel="stylesheet" href="assets/css/nice-select.css">
     <!-- 另外加 base_sec.css -->
     <link rel="stylesheet" href="assets/css/base_sec.css?v=20261008-1">
-    <link rel="stylesheet" href="assets/css/main.css?v=20261012-2">
+    <link rel="stylesheet" href="assets/css/main.css?v=20261013-5">
     
 
     <link href="css/style.css" rel="stylesheet" type="text/css" >
@@ -69,7 +69,7 @@
     <!-- <link id="colors" href="css/6_2_style.css" rel="stylesheet" type="text/css" > -->
     <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto:300,400,500|Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp'>
     <link id="colors" href="css/vendors.css" rel="stylesheet" type="text/css" >
-    <link id="colors" href="css/ez.css?v=20261012-12" rel="stylesheet" type="text/css" >
+    <link id="colors" href="css/ez.css?v=20261012-13" rel="stylesheet" type="text/css" >
 
 </head>
 
@@ -725,7 +725,10 @@
             <footer id="footer-new" class="footer footer-style-one pt-145 pb-0 bg_img ty2" data-background="assets/img/bg/footer-bg.png" data-title='聯絡易控' >
                 <div class="xb-footer-wrap">
                     <div class="xb-footer-heading wow zoomIn" data-wow-delay="0ms" data-wow-duration="600ms">
-                        <h1 class="title">EZCON</h1>
+                        <div class="ezcon-particle-text" data-particle-text="EZCON">
+                            <h1 class="title">EZCON</h1>
+                            <canvas class="ezcon-particle-text__canvas" aria-hidden="true"></canvas>
+                        </div>
                         <a class="mail" href="mailto:service@ezcon.com.tw"><img src="assets/img/icon/email-icon.svg" alt="icon">service@ezcon.com.tw</a>
                     </div>
                     <div class="xb-footer-nav">
@@ -1213,31 +1216,6 @@
 
 
 
-    
-var galleryItems = [
-            {
-                src: 'assets/img/contact/loca_tc_2.jpg',
-                msrc: 'assets/img/contact/loca_tc_2.jpg', // 正方形縮圖
-                w: 964,
-                h: 1024,
-                title: '圖片 1 說明文字'
-            },
-            {
-                src: 'assets/img/contact/loca_tn.jpg',
-                msrc: 'assets/img/contact/loca_tn.jpg', // 正方形縮圖
-                w: 1024,
-                h: 683,
-                title: '圖片 2 說明文字圖片 2 說明文字圖片 2 說明文字'
-            },
-            {
-                src: 'assets/img/contact/loca_tn_2.jpg',
-                msrc: 'assets/img/contact/loca_tn_2.jpg',
-                w: 964,
-                h: 1024,
-                title: '圖片 3 說明文字圖片 2 說明文字圖片 2 說明文字'
-            }
-        ];
-
     <!-- PhotoSwipe 核心 JS 與 UI JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.1/photoswipe.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.1/photoswipe-ui-default.min.js"></script>
@@ -1431,6 +1409,7 @@ document.getElementById('openGalleryBtn').addEventListener('click', function() {
 
 <!-- Main custom script -->
 <script src="assets/js/main.js"></script>
+<script src="assets/js/ezcon-particle-text.js?v=20261013-2"></script>
 
 
 
