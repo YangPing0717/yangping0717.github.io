@@ -6,6 +6,7 @@
 
     var title = stage.querySelector('.title');
     var canvas = stage.querySelector('.ezcon-particle-text__canvas');
+    var mailLink = document.querySelector('.xb-footer-heading .mail');
     var context = canvas && canvas.getContext('2d');
     if (!title || !canvas || !context) return;
 
@@ -20,6 +21,8 @@
     var reduceMotionQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
     var reducedMotion = reduceMotionQuery.matches;
     var pointer = { active: false, x: 0, y: 0, smoothX: 0, smoothY: 0 };
+    var suppressNextScatter = false;
+    var suppressScatterTimer = null;
 
     var settings = {
         particleSize: 2,
@@ -253,12 +256,36 @@
 
     canvas.addEventListener('pointerenter', function (event) {
         updatePointer(event);
+        if (suppressNextScatter) {
+            suppressNextScatter = false;
+            if (suppressScatterTimer) {
+                window.clearTimeout(suppressScatterTimer);
+                suppressScatterTimer = null;
+            }
+            return;
+        }
         scatterParticles(true);
     });
     canvas.addEventListener('pointermove', updatePointer);
     canvas.addEventListener('pointerleave', function () {
         pointer.active = false;
     });
+
+    if (mailLink) {
+        mailLink.addEventListener('pointerenter', function () {
+            suppressNextScatter = true;
+            pointer.active = false;
+            if (suppressScatterTimer) window.clearTimeout(suppressScatterTimer);
+        });
+
+        mailLink.addEventListener('pointerleave', function () {
+            if (suppressScatterTimer) window.clearTimeout(suppressScatterTimer);
+            suppressScatterTimer = window.setTimeout(function () {
+                suppressNextScatter = false;
+                suppressScatterTimer = null;
+            }, 240);
+        });
+    }
 
     var resizeObserver = new ResizeObserver(queueBuild);
     resizeObserver.observe(stage);
