@@ -46,7 +46,7 @@
     <link rel="stylesheet" href="assets/css/nice-select.css">
     <!-- 另外加 base_sec.css -->
     <link rel="stylesheet" href="assets/css/base_sec.css?v=20261008-1">
-    <link rel="stylesheet" href="assets/css/main.css?v=20261013-5">
+    <link rel="stylesheet" href="assets/css/main.css?v=20261013-8">
     
 
     <link href="css/style.css" rel="stylesheet" type="text/css" >
@@ -336,7 +336,7 @@
                                     <div class="xb-item--holder">
                                         <p class="xb-item--location">台中分部
                                             <!-- <span id="openGalleryBtn">展示空間</span> -->
-                                            <button id="openGalleryBtn"><img src="assets/img/icon/project-icon07.svg" alt="icon"> 展示空間</button>
+                                            <button id="openGalleryBtn" class="open-gallery-btn"><img src="assets/img/icon/project-icon07.svg" alt="icon"> 展示空間</button>
                                         </p>
                                         <span class="xb-item--contact_info">
                                             <a href="https://maps.app.goo.gl/ynotwKyuLvKLGWtC6" target="_blank">台中市西屯區市政路 500 號 21 樓之八</a>
@@ -368,7 +368,7 @@
                                         <a href="#!"><img src="assets/img/contact/loca_tn_2.jpg?v=20260915" alt="image"></a> 
                                     </div>
                                     <div class="xb-item--holder">
-                                        <p class="xb-item--location">台南分部<span><img src="assets/img/icon/project-icon07.svg" alt="icon"> 展示空間</span></p>
+                                        <p class="xb-item--location">台南分部<button id="openTainanGalleryBtn" class="open-gallery-btn"><img src="assets/img/icon/project-icon07.svg" alt="icon"> 展示空間</button></p>
                                         <span class="xb-item--contact_info">
                                             <a href="https://maps.app.goo.gl/AxLhL4jtuSVFANwL9" target="_blank">台南市東區崇慶街一段 106 號 1 樓</a>
                                         </span>
@@ -1222,7 +1222,7 @@
 
 
     <script>
-        var galleryCaptionData = [
+        var taichungGalleryCaptionData = [
             ['智慧展示空間入口', '入口整合品牌識別、智慧門禁設備與展示動線，引導訪客進入情境體驗區，呈現軟體平台串聯門禁、照明及空間設備的智慧建築應用。'],
             ['迎賓洽談情境', '俐落的會議桌與品牌展示牆形成第一接待場景，讓智慧控制設備自然融入日常洽談與導覽流程。'],
             ['智慧辦公全景', '從走道串連會議、展示與協作區域，透過整合平台集中管理照明、環控與各式終端設備。'],
@@ -1264,11 +1264,11 @@
             ['科技感主管辦公室', '明亮工作桌、收納展示與玻璃門禁整合為完整辦公情境，呈現智慧控制兼顧美感與實用性的成果。']
         ];
 
-        var galleryCaptions = galleryCaptionData.map(function(caption) {
+        var taichungGalleryCaptions = taichungGalleryCaptionData.map(function(caption) {
             return '<span class="gallery-caption-title">' + caption[0] + '</span><span class="gallery-caption-text">' + caption[1] + '</span>';
         });
 
-        var galleryItems = Array.from({ length: 39 }, function(_, index) {
+        var taichungGalleryItems = Array.from({ length: 39 }, function(_, index) {
             var number = String(index + 1).padStart(2, '0');
             var isPortrait = index === 25 || index === 32;
             var isUpdatedScreenPhoto = index === 20;
@@ -1280,11 +1280,57 @@
                 msrc: basePath + 'thumbs/taichung-office-' + number + '.jpg' + cacheVersion,
                 w: isUpdatedScreenPhoto ? 1535 : (isPortrait ? 1602 : 2400),
                 h: isUpdatedScreenPhoto ? 1025 : (isPortrait ? 2400 : 1602),
-                title: galleryCaptions[index] || ('台中展示空間 ' + (index + 1) + ' / 39')
+                title: taichungGalleryCaptions[index] || ('台中展示空間 ' + (index + 1) + ' / 39')
             };
         });
 
-function openPhotoSwipe(startIndex = 0) {
+        var tainanGalleryCaptionData = [
+            ['智慧展示廊道', '採光廊道串連品牌資訊牆與智慧設備展示，讓訪客從入口開始認識易控的整合服務與系統架構。'],
+            ['入口動線與空間分區', '金屬材質、玻璃帷幕與網狀樓梯建立清楚動線，導引訪客由接待區進入智慧展示核心。'],
+            ['品牌形象與互動看板', 'EZCON 品牌牆結合直立式資訊螢幕與層次燈光，呈現數位內容和空間設計整合成果。'],
+            ['跨區連結的資訊入口', '互動看板設置於會議展示區入口，可即時提供系統資訊並串連前後場域的參觀動線。'],
+            ['會議展示空間入口', '俐落門框引導視線進入會議區，藍綠吸音天花與大型顯示牆共同營造科技展示情境。'],
+            ['樓層協作工作區', '二樓長桌工作區搭配自然採光與吸音天花，示範舒適辦公環境和機電設備的協同配置。'],
+            ['垂直動線與開放樓層', '金屬樓梯和挑高空間串連上下樓層，讓展示、辦公與會議機能保持視覺連續性。'],
+            ['智慧會議與設備展示', '長桌會議區面向智慧設備牆，可同步進行簡報、系統操作及軟硬體連動展示。'],
+            ['整合展示空間全景', '會議桌、環控設備與多媒體展示牆形成完整場景，呈現智慧建築從操作到回饋的整合流程。'],
+            ['雙側智慧控制展示', '影音監控與建築控制介面分布於兩側展示牆，中央動線方便訪客近距離觀察各項設備。'],
+            ['自然採光會議情境', '大型窗景搭配長桌與吸音天花，營造明亮舒適的協作環境並兼顧影音投影需求。'],
+            ['多功能智慧會議室', '會議區、設備展示牆與茶水機能彼此相連，可進行情境控制、簡報及設備示範。'],
+            ['茶水機能與控制機櫃', '簡潔茶水區緊鄰透明控制機櫃，展示日常機能如何與建築自動化設備自然融合。'],
+            ['交流中島與設備體驗', '中島檯面銜接茶水空間和控制展示牆，形成適合導覽解說與操作交流的中心節點。'],
+            ['窗邊協作與智慧終端', '臨窗工作席面向環境控制展示牆，呈現自然採光、設備資訊與日常辦公共存的使用情境。'],
+            ['智慧控制核心與茶水區', '控制機櫃、多螢幕看板及現場設備集中呈現，示範跨系統資料監看與即時控制。'],
+            ['多媒體與建築設備整合牆', '監控影像、控制面板、門禁與環控終端集中於同一牆面，清楚展示軟硬體整合架構。'],
+            ['長桌會議與情境投影', '吸音天花、投影設備和大型顯示面構成完整會議模式，支援協作、簡報與導覽需求。'],
+            ['明亮彈性的協作空間', '可移動座椅與開放長桌面向窗景，能依人數和活動需求快速調整使用方式。'],
+            ['智慧會議空間全貌', '線性照明、投影系統與控制終端共同構成高效會議環境，呈現設備集中管理的成果。'],
+            ['建築管理展示中樞', '機櫃、監控影像與多組控制介面完整揭露，展示智慧建築資訊彙整和設備聯動能力。'],
+            ['台南展示空間入口', '臨街入口以清楚品牌招牌和服務項目建立識別，讓訪客快速辨認智慧建築體驗據點。'],
+            ['品牌門面與服務識別', '藍色招牌整合智慧建築、能源管理與住宅服務資訊，呈現易控完整解決方案形象。'],
+            ['迎賓品牌展示端景', '自然光落在金屬品牌牆與互動看板上，打造鮮明入口端景並引導訪客進入展示空間。']
+        ];
+
+        var tainanGalleryCaptions = tainanGalleryCaptionData.map(function(caption) {
+            return '<span class="gallery-caption-title">' + caption[0] + '</span><span class="gallery-caption-text">' + caption[1] + '</span>';
+        });
+
+        var tainanPortraitIndexes = [0, 4, 6, 10, 15, 22];
+        var tainanGalleryItems = Array.from({ length: 24 }, function(_, index) {
+            var number = String(index + 1).padStart(2, '0');
+            var isPortrait = tainanPortraitIndexes.indexOf(index) !== -1;
+            var basePath = 'assets/img/contact/tainan-gallery/';
+
+            return {
+                src: basePath + 'full/tainan-office-' + number + '.jpg',
+                msrc: basePath + 'thumbs/tainan-office-' + number + '.jpg',
+                w: isPortrait ? 1800 : 2400,
+                h: isPortrait ? 2400 : 1800,
+                title: tainanGalleryCaptions[index] || ('台南展示空間 ' + (index + 1) + ' / 24')
+            };
+        });
+
+function openPhotoSwipe(galleryItems, galleryLabel, startIndex = 0) {
     var pswpElement = document.querySelectorAll('.pswp')[0];
     var thumbContainer = pswpElement.querySelector('.pswp-thumbnails-container');
     var thumbPrevButton = pswpElement.querySelector('.pswp-thumb-nav--prev');
@@ -1294,7 +1340,7 @@ function openPhotoSwipe(startIndex = 0) {
     var thumbHtml = '';
     galleryItems.forEach(function(item, index) {
         var thumbSrc = item.msrc || item.src;
-        thumbHtml += `<img src="${thumbSrc}" class="pswp-thumb-item" data-index="${index}" alt="台中展示空間縮圖 ${index + 1}" loading="lazy" decoding="async" />`;
+        thumbHtml += `<img src="${thumbSrc}" class="pswp-thumb-item" data-index="${index}" alt="${galleryLabel}縮圖 ${index + 1}" loading="lazy" decoding="async" />`;
     });
     thumbContainer.innerHTML = thumbHtml;
 
@@ -1395,7 +1441,11 @@ function openPhotoSwipe(startIndex = 0) {
 
 // 綁定按鈕
 document.getElementById('openGalleryBtn').addEventListener('click', function() {
-    openPhotoSwipe(0);
+    openPhotoSwipe(taichungGalleryItems, '台中展示空間', 0);
+});
+
+document.getElementById('openTainanGalleryBtn').addEventListener('click', function() {
+    openPhotoSwipe(tainanGalleryItems, '台南展示空間', 0);
 });
     </script>
 
