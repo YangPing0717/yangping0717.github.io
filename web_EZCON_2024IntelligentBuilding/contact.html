@@ -70,6 +70,7 @@
     <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto:300,400,500|Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp'>
     <link id="colors" href="css/vendors.css" rel="stylesheet" type="text/css" >
     <link id="colors" href="css/ez.css?v=20261012-13" rel="stylesheet" type="text/css" >
+    <link href="assets/css/contact-bento-gallery.css?v=20261015-11" rel="stylesheet" type="text/css">
 
 </head>
 
@@ -1219,6 +1220,7 @@
     <!-- PhotoSwipe 核心 JS 與 UI JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.1/photoswipe.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.1/photoswipe-ui-default.min.js"></script>
+    <script src="assets/js/contact-bento-gallery.js?v=20261015-5"></script>
 
 
     <script>
@@ -1441,11 +1443,11 @@ function openPhotoSwipe(galleryItems, galleryLabel, startIndex = 0) {
 
 // 綁定按鈕
 document.getElementById('openGalleryBtn').addEventListener('click', function() {
-    openPhotoSwipe(taichungGalleryItems, '台中展示空間', 0);
+    openBentoGallery(taichungGalleryItems, '台中展示空間', this);
 });
 
 document.getElementById('openTainanGalleryBtn').addEventListener('click', function() {
-    openPhotoSwipe(tainanGalleryItems, '台南展示空間', 0);
+    openBentoGallery(tainanGalleryItems, '台南展示空間', this);
 });
     </script>
 
