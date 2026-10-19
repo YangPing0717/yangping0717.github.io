@@ -329,10 +329,10 @@
                             <div class="xb-contact-items img-hove-effect xb-border">
                                 <div class="xb-item--inner">
                                     <div class="xb-img">
-                                    <a href="#!"><img src="assets/img/contact/loca_tc_2.jpg?v=20260915" alt="image"></a> 
-                                    <a href="#!"><img src="assets/img/contact/loca_tc_2.jpg?v=20260915" alt="image"></a> 
-                                    <a href="#!"><img src="assets/img/contact/loca_tc_2.jpg?v=20260915" alt="image"></a> 
-                                    <a href="#!"><img src="assets/img/contact/loca_tc_2.jpg?v=20260915" alt="image"></a> 
+                                    <a class="open-taichung-gallery-image" href="#!" aria-label="開啟台中展示空間照片藝廊"><img src="assets/img/contact/loca_tc_2.jpg?v=20260915" alt="台中展示空間"></a> 
+                                    <a class="open-taichung-gallery-image" href="#!" aria-label="開啟台中展示空間照片藝廊"><img src="assets/img/contact/loca_tc_2.jpg?v=20260915" alt="台中展示空間"></a> 
+                                    <a class="open-taichung-gallery-image" href="#!" aria-label="開啟台中展示空間照片藝廊"><img src="assets/img/contact/loca_tc_2.jpg?v=20260915" alt="台中展示空間"></a> 
+                                    <a class="open-taichung-gallery-image" href="#!" aria-label="開啟台中展示空間照片藝廊"><img src="assets/img/contact/loca_tc_2.jpg?v=20260915" alt="台中展示空間"></a> 
                                     </div>
                                     <div class="xb-item--holder">
                                         <p class="xb-item--location">台中分部
@@ -363,10 +363,10 @@
                             <div class="xb-contact-items img-hove-effect xb-border">
                                 <div class="xb-item--inner">
                                     <div class="xb-img">
-                                        <a href="#!"><img src="assets/img/contact/loca_tn_2.jpg?v=20260915" alt="image"></a> 
-                                        <a href="#!"><img src="assets/img/contact/loca_tn_2.jpg?v=20260915" alt="image"></a> 
-                                        <a href="#!"><img src="assets/img/contact/loca_tn_2.jpg?v=20260915" alt="image"></a> 
-                                        <a href="#!"><img src="assets/img/contact/loca_tn_2.jpg?v=20260915" alt="image"></a> 
+                                        <a class="open-tainan-gallery-image" href="#!" aria-label="開啟台南展示空間照片藝廊"><img src="assets/img/contact/loca_tn_2.jpg?v=20260915" alt="台南展示空間"></a> 
+                                        <a class="open-tainan-gallery-image" href="#!" aria-label="開啟台南展示空間照片藝廊"><img src="assets/img/contact/loca_tn_2.jpg?v=20260915" alt="台南展示空間"></a> 
+                                        <a class="open-tainan-gallery-image" href="#!" aria-label="開啟台南展示空間照片藝廊"><img src="assets/img/contact/loca_tn_2.jpg?v=20260915" alt="台南展示空間"></a> 
+                                        <a class="open-tainan-gallery-image" href="#!" aria-label="開啟台南展示空間照片藝廊"><img src="assets/img/contact/loca_tn_2.jpg?v=20260915" alt="台南展示空間"></a> 
                                     </div>
                                     <div class="xb-item--holder">
                                         <p class="xb-item--location">台南分部<button id="openTainanGalleryBtn" class="open-gallery-btn"><img src="assets/img/icon/project-icon07.svg" alt="icon"> 展示空間</button></p>
@@ -1321,11 +1321,13 @@
         var tainanGalleryItems = Array.from({ length: 24 }, function(_, index) {
             var number = String(index + 1).padStart(2, '0');
             var isPortrait = tainanPortraitIndexes.indexOf(index) !== -1;
+            var isUpdatedScreenPhoto = index === 20;
             var basePath = 'assets/img/contact/tainan-gallery/';
+            var cacheVersion = isUpdatedScreenPhoto ? '?v=20261019-screen-1' : '';
 
             return {
-                src: basePath + 'full/tainan-office-' + number + '.jpg',
-                msrc: basePath + 'thumbs/tainan-office-' + number + '.jpg',
+                src: basePath + 'full/tainan-office-' + number + '.jpg' + cacheVersion,
+                msrc: basePath + 'thumbs/tainan-office-' + number + '.jpg' + cacheVersion,
                 w: isPortrait ? 1800 : 2400,
                 h: isPortrait ? 2400 : 1800,
                 title: tainanGalleryCaptions[index] || ('台南展示空間 ' + (index + 1) + ' / 24')
@@ -1448,6 +1450,20 @@ document.getElementById('openGalleryBtn').addEventListener('click', function() {
 
 document.getElementById('openTainanGalleryBtn').addEventListener('click', function() {
     openBentoGallery(tainanGalleryItems, '台南展示空間', this);
+});
+
+document.querySelectorAll('.open-taichung-gallery-image').forEach(function(imageLink) {
+    imageLink.addEventListener('click', function(event) {
+        event.preventDefault();
+        openBentoGallery(taichungGalleryItems, '台中展示空間', this);
+    });
+});
+
+document.querySelectorAll('.open-tainan-gallery-image').forEach(function(imageLink) {
+    imageLink.addEventListener('click', function(event) {
+        event.preventDefault();
+        openBentoGallery(tainanGalleryItems, '台南展示空間', this);
+    });
 });
     </script>
 
