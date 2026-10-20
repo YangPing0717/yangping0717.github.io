@@ -180,6 +180,8 @@
     lightboxCounter.textContent = (currentIndex + 1) + ' / ' + currentItems.length;
     lightboxPrev.disabled = currentIndex === 0;
     lightboxNext.disabled = currentIndex === currentItems.length - 1;
+    shell.classList.add('is-lightbox-open');
+    railWrap.setAttribute('aria-hidden', 'true');
     lightbox.classList.add('is-open');
     lightbox.setAttribute('aria-hidden', 'false');
   }
@@ -187,6 +189,8 @@
   function closeLightbox() {
     lightbox.classList.remove('is-open');
     lightbox.setAttribute('aria-hidden', 'true');
+    shell.classList.remove('is-lightbox-open');
+    railWrap.removeAttribute('aria-hidden');
   }
 
   function closeGallery() {
