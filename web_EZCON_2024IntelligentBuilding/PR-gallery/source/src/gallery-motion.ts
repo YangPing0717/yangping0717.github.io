@@ -52,6 +52,7 @@ type State = {
   elapsed: number
   lastAction: number
   lastZoom: number
+  navigationUntil: number
 }
 
 const rest = (): MotionPose => ({ yaw: 0, pitch: 0, distance: 46, panX: 0, panY: 0 })
@@ -79,6 +80,16 @@ function settle(state: State, awaitPointer: boolean) {
   state.autoActive = false
   state.awaitPointer = awaitPointer
   state.actionActive = false
+  state.navigationUntil = 0
+}
+
+// A gesture owns the camera until input stops and its damping tail finishes.
+// Crossing a card must not discard a pending turn or zoom target.
+function isNavigating(state: State) {
+  return !!state.drag || state.actionActive || (state.navigationUntil > 0 && (
+    performance.now() < state.navigationUntil || keys.some(key =>
+      Math.abs(state.target[key] - state.current[key]) > (key === 'distance' ? .002 : .0001))
+  ))
 }
 
 function normalized(node: HTMLElement, point: Point): Point {
@@ -102,7 +113,7 @@ export function useGalleryMotion(options: Options): GalleryMotion {
     current: rest(), base: rest(), target: rest(), follow: zero(), drift: zero(),
     anchor: { x: 0, y: 0 }, lastPointer: { x: 0, y: 0 }, lastClient: null,
     drag: null, awaitPointer: false, actionActive: false, autoActive: false,
-    elapsed: 0, lastAction: options.action.id, lastZoom: NaN,
+    elapsed: 0, lastAction: options.action.id, lastZoom: NaN, navigationUntil: 0,
   }
   const state = stateRef.current
   const binding = useRef<{ node: HTMLDivElement; remove: () => void } | null>(null)
@@ -140,12 +151,12 @@ export function useGalleryMotion(options: Options): GalleryMotion {
       releaseDrag()
       return current.current
     }
-    if (config.hovered !== null && !current.actionActive) {
+    if (config.hovered !== null && !isNavigating(current)) {
       settle(current, true)
       releaseDrag()
       return current.current
     }
-    if (current.awaitPointer && !current.actionActive) {
+    if (current.awaitPointer && !isNavigating(current)) {
       // Hover and pointer-leave freezes must not silently stop enabled auto motion.
       // Manual interactions turn animate off and therefore keep their frozen pose.
       if (config.animate && !config.reduced) current.awaitPointer = false
@@ -201,7 +212,7 @@ export function useGalleryMotion(options: Options): GalleryMotion {
 
     const down = (event: PointerEvent) => {
       const current = stateRef.current!
-      if (!usable() || isControl(event.target) || latest.current.hovered !== null || current.drag || event.button !== 0) return
+      if (!usable() || isControl(event.target) || current.drag || event.button !== 0) return
       const position = point(event)
       current.lastPointer = normalized(node, position)
       current.lastClient = position
@@ -233,7 +244,10 @@ export function useGalleryMotion(options: Options): GalleryMotion {
       if (current.drag || event.buttons !== 0 || event.pointerType === 'touch') return
       if (current.lastClient && position.x === current.lastClient.x && position.y === current.lastClient.y) return
       current.lastClient = position
-      if (latest.current.hovered !== null || isControl(event.target)) {
+      const overCard = event.target instanceof Element && !!event.target.closest('.space-card')
+      // Wheel zoom keeps its target even when the pointer moves across a card.
+      if (current.actionActive) return
+      if ((latest.current.hovered !== null || isControl(event.target)) && !(overCard && isNavigating(current))) {
         current.lastPointer = sample
         settle(current, true)
         return
@@ -246,6 +260,7 @@ export function useGalleryMotion(options: Options): GalleryMotion {
       // A hover/panel freeze holds until this actual movement, without recentering.
       current.awaitPointer = false
       current.actionActive = false
+      current.navigationUntil = performance.now() + 250
       current.lastPointer = sample
       const strength = small ? .55 : 1
       const dx = sample.x - current.anchor.x, dy = sample.y - current.anchor.y
@@ -262,12 +277,14 @@ export function useGalleryMotion(options: Options): GalleryMotion {
       current.lastPointer = normalized(node, position)
       current.anchor = { ...current.lastPointer }
       current.lastClient = position
+      current.navigationUntil = performance.now() + 250
       releaseDrag()
     }
     const cancel = (event: PointerEvent) => { if (stateRef.current!.drag?.id === event.pointerId) freeze() }
     const leave = () => { if (!stateRef.current!.drag) freeze() }
     const wheel = (event: WheelEvent) => {
-      if (!usable() || latest.current.hovered !== null || isControl(event.target)) return
+      const overCard = event.target instanceof Element && !!event.target.closest('.space-card')
+      if (!usable() || (isControl(event.target) && !overCard)) return
       event.preventDefault()
       const current = stateRef.current!
       const pendingDistance = current.actionActive ? current.target.distance : current.base.distance
@@ -275,6 +292,7 @@ export function useGalleryMotion(options: Options): GalleryMotion {
       releaseDrag()
       const units = event.deltaMode === 1 ? 16 : event.deltaMode === 2 ? node.clientHeight : 1
       current.base.distance = clamp(pendingDistance * Math.exp(clamp(event.deltaY * units, -400, 400) * .00085), nearestZoomDistance, farthestZoomDistance)
+      current.actionActive = true
       latest.current.onStart()
       commitManual()
     }
@@ -308,7 +326,7 @@ export function useGalleryMotion(options: Options): GalleryMotion {
     }
     const unavailable = !options.active || options.blocked || !options.visible || document.hidden
     if (unavailable) { settle(state, state.awaitPointer); releaseDrag() }
-    else if (options.hovered !== null && options.hovered !== previous.current.hovered) freeze()
+    else if (options.hovered !== null && options.hovered !== previous.current.hovered && !isNavigating(state)) freeze()
     if (options.reduced && !previous.current.reduced) settle(state, state.awaitPointer)
     previous.current = { hovered: options.hovered, reduced: options.reduced }
 

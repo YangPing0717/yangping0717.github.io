@@ -100,6 +100,7 @@ function SpatialCards({ cards, blocked, visible, selectedId, motion, cardDrag, o
 
 export default function StellarCardGallery({ events = galleryEvents, initialEventId }: { events?: GalleryEvent[]; initialEventId?: string }) {
   const cards = useMemo<GalleryCard[]>(() => events.filter(event => event.photos.length).map(event => ({ ...event.photos[0], id: event.id, eventId: event.id, title: event.shortTitle || event.title, subtitle: [event.year, event.category || '活動紀錄'].filter(Boolean).join(' · '), photoCount: event.photos.length })), [events])
+  const spaceCards = useMemo(() => cards.filter(card => !events.find(event => event.id === card.eventId)?.overviewOnly), [cards, events])
   const reduced = useReducedMotion()
   const entranceAt = useRef(performance.now())
   const [entranceRun, setEntranceRun] = useState(0)
@@ -118,15 +119,15 @@ export default function StellarCardGallery({ events = galleryEvents, initialEven
   const pauseOnInteraction = useCallback(() => setSpinning(false), [])
   const updateZoom = useCallback((value: number) => setZoom(current => current === value ? current : value), [])
   const motion = useGalleryMotion({ region: sceneRef, active: view === 'space', animate: animated, blocked: blocked || draggingId !== null, hovered, reduced, visible, action, onStart: pauseOnInteraction, onZoom: updateZoom })
-  const hoverCard = useCallback((id: string | null) => { if (id) motion.freeze(); setHovered(id) }, [motion])
+  const hoverCard = useCallback((id: string | null) => { setHovered(id) }, [])
   const cardDrag = useGalleryCardDrag({ region: sceneRef, enabled: view === 'space' && visible && !blocked, motion, onStart: pauseOnInteraction, onDragChange: setDraggingId, onHover: hoverCard })
   useEffect(() => {
     if (!entering) return
     if (reduced) { setEntering(false); return }
-    const total = ENTRANCE_DELAY + ENTRANCE_DURATION + Math.max(0, cards.length - 1) * ENTRANCE_STAGGER + 80
+    const total = ENTRANCE_DELAY + ENTRANCE_DURATION + Math.max(0, spaceCards.length - 1) * ENTRANCE_STAGGER + 80
     const timer = window.setTimeout(() => setEntering(false), Math.max(0, total - (performance.now() - entranceAt.current)))
     return () => window.clearTimeout(timer)
-  }, [entering, reduced, cards.length, entranceAt, entranceRun])
+  }, [entering, reduced, spaceCards.length, entranceAt, entranceRun])
   useLayoutEffect(() => {
     const media = window.matchMedia('(max-width: 760px)')
     const update = () => {
@@ -174,7 +175,7 @@ export default function StellarCardGallery({ events = galleryEvents, initialEven
     setAction(current => ({ type, id: current.id + 1 }))
   }
   const showSpace = () => { cardDrag.cancel(); setView('space'); setHovered(null) }, showGrid = () => { cardDrag.cancel(); setView('grid'); setHovered(null) }
-  const spatialCardsProps = { cards, blocked, visible, selectedId, motion, cardDrag, onSelect: openCard, onHover: hoverCard, entering }
+  const spatialCardsProps = { cards: spaceCards, blocked, visible, selectedId, motion, cardDrag, onSelect: openCard, onHover: hoverCard, entering }
 
   return <main className={`gallery-app event-overview view-${view}${selectedEvent && !closing ? ' is-event-open' : ''}${entering && view === 'space' ? ' is-arriving' : ''}`} data-reduced-motion={reduced}>
     <GalleryVideoBackground active={visible && view === 'space' && !selectedEvent} reduced={reduced} />
@@ -184,7 +185,7 @@ export default function StellarCardGallery({ events = galleryEvents, initialEven
     </header>}
     {view === 'space' ? <>
       <section key={`intro-${entranceRun}`} className="gallery-intro" aria-label="畫廊介紹"><div className="eyebrow intro-eyebrow"><span className="tiny-line" /> EZCON · PUBLIC RELATIONS</div><h1>易控公關活動</h1><p className="intro-heading">連結智慧建築，共築永續未來。</p><p className="intro-description">多元交流・深耕產業・拓展連結</p></section>
-      <section className="scene-region" aria-label={`共 ${cards.length} 場活動，可拖曳卡片與旋轉視角的 3D 活動畫廊`} aria-busy={entering} data-card-dragging={draggingId ?? undefined} ref={sceneRef} onPointerMoveCapture={event => { if (!cardDrag.heldId && hovered !== null && event.pointerType !== 'touch' && event.buttons === 0 && event.target instanceof Element && !event.target.closest('button, a, input, select, textarea, [role="button"]')) setHovered(null) }}><div className="scene-topline" aria-hidden="true"><span>THE EVENT COLLECTION</span><span>共 {cards.length} 場活動</span></div>
+      <section className="scene-region" aria-label={`共 ${spaceCards.length} 場活動，可拖曳卡片與旋轉視角的 3D 活動畫廊`} aria-busy={entering} data-card-dragging={draggingId ?? undefined} ref={sceneRef} onPointerMoveCapture={event => { if (!cardDrag.heldId && hovered !== null && event.pointerType !== 'touch' && event.buttons === 0 && event.target instanceof Element && !event.target.closest('button, a, input, select, textarea, [role="button"]')) setHovered(null) }}><div className="scene-topline" aria-hidden="true"><span>THE EVENT COLLECTION</span><span>共 {spaceCards.length} 場活動</span></div>
         <SpatialCards key={entranceRun} {...spatialCardsProps} />
         <div className="scene-bottomline" aria-hidden="true"><span className="crosshair">＋</span><span>DRAG TO EXPLORE THE STORIES</span><span className="crosshair">＋</span></div></section>
       <div className="space-controls"><div className="control-bar" role="group" aria-label="3D 視角控制"><button type="button" className="rotation-button" disabled={reduced} aria-label={spinning ? '暫停自動旋轉' : '開始自動旋轉'} aria-pressed={spinning} onClick={() => { setHovered(null); if (!spinning) cameraAction('resume'); setSpinning(current => !current) }}>{spinning ? <Pause size={16} fill="currentColor" /> : <Play size={16} fill="currentColor" />}<span>{reduced ? '減少動態效果' : spinning ? '暫停旋轉' : '自動旋轉'}</span></button><span className="control-divider" />

@@ -1,3 +1,4 @@
+import { archiveEvents } from './archive-events'
 import { eventReports } from './event-reports'
 import { localAsset } from '../site-paths'
 import { schneiderEvent, type GalleryEvent } from './schneider-event'
@@ -876,9 +877,10 @@ const catalogEvents = [
 export const galleryEvents: GalleryEvent[] = [
   { ...schneiderEvent, shortTitle: '2026 施耐德晚宴', category: '產業交流' },
   ...catalogEvents,
+  ...archiveEvents,
 ].map(event => ({
   ...event,
-  reports: eventReports[event.id] ?? [],
+  reports: eventReports[event.id] ?? ('reports' in event ? event.reports : []),
   photos: event.photos.map(photo => ({
     ...photo,
     imageUrl: localAsset(photo.imageUrl),

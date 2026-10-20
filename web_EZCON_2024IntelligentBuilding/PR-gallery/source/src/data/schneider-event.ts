@@ -17,6 +17,7 @@ export type GalleryEvent = {
   category?: string
   year: string
   sourceUrl: string
+  overviewOnly?: boolean
   reports?: { media: string; url: string }[]
   paragraphs: string[]
   photos: EventPhoto[]
