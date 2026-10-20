@@ -1,0 +1,49 @@
+.event-overview .gallery-video-background {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  pointer-events: none;
+  user-select: none;
+}
+
+.event-overview .gallery-video-frame {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  opacity: .15;
+  filter: grayscale(1) hue-rotate(20deg) saturate(1.2) brightness(.8) contrast(1.2);
+}
+
+.event-overview .gallery-video-frame img,
+.event-overview .gallery-video-frame video {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.event-overview .gallery-video-frame video {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 900ms ease;
+}
+
+.event-overview .gallery-video-frame video.is-ready { opacity: 1; }
+
+/* Keep the central reading area quiet while the video fills the viewport. */
+.event-overview .gallery-video-background::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at 50% 50%, #000000cc 0%, #00000066 23%, transparent 53%);
+}
+
+.event-overview.view-grid .gallery-video-background { opacity: .55; }
+.event-overview.is-event-open .gallery-video-background { opacity: .5; }
+
+@media (prefers-reduced-motion: reduce) {
+  .event-overview .gallery-video-frame video { transition: none; }
+}

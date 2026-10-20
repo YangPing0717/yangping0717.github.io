@@ -1,0 +1,270 @@
+/* DESIGN.md palette. This layer changes paint only; layout, type, and motion
+   remain in the component styles. Photographs retain their original colors. */
+:root {
+  --ez-bg: #000000;
+  --ez-surface: #00020f;
+  --ez-field: #0a101d;
+  --ez-blue: #0072ff;
+  --ez-teal: #04eabb;
+  --ez-violet: #5c33ff;
+  --ez-mint: #00ff97;
+  --ez-active: #3bfed7;
+  --ez-tag: #001a66;
+  --ez-text: #ffffff;
+  --ez-secondary: rgba(255, 255, 255, .75);
+  --ez-muted: #b2b3b7;
+  --ez-border: rgba(255, 255, 255, .35);
+}
+
+.gallery-app.event-overview {
+  --theme-navy: var(--ez-surface);
+  --theme-surface: var(--ez-surface);
+  --theme-surface-raised: var(--ez-field);
+  --theme-ink: var(--ez-text);
+  --theme-muted: var(--ez-muted);
+  --theme-blue: var(--ez-blue);
+  --theme-teal: var(--ez-teal);
+  --theme-teal-light: var(--ez-active);
+  --accent: var(--ez-blue);
+  --muted: var(--ez-muted);
+  --line: var(--ez-border);
+  --background: var(--ez-bg);
+  --foreground: var(--ez-text);
+  color: var(--ez-text);
+  color-scheme: dark;
+  background: var(--ez-bg);
+}
+
+.event-overview ::selection { background: var(--ez-teal); color: var(--ez-bg); }
+.event-overview button:focus-visible,
+.event-overview a:focus-visible { outline-color: var(--ez-blue); }
+
+/* Small blue lights and one faint violet corner keep the black stage quiet. */
+.event-overview .space-atmosphere {
+  background:
+    radial-gradient(ellipse at 50% 48%, #0072ff14, #0072ff08 33%, transparent 66%),
+    radial-gradient(ellipse at 16% 79%, #0072ff0a, transparent 46%),
+    radial-gradient(ellipse at 88% 18%, #5c33ff08, transparent 49%);
+}
+.event-overview .ambient-stars i { background: var(--ez-text); }
+.event-overview .orbit-fallback::before { border-color: #0072ff29; }
+.event-overview .orbit-fallback::after { border-color: #0072ff1b; }
+.event-overview .scene-topline,
+.event-overview .scene-bottomline { color: var(--ez-muted); }
+.event-overview .crosshair { color: #0072ff73; }
+.event-overview .scene-loading { color: var(--ez-secondary); }
+.event-overview .loading-orbit { border-color: #ffffff33; border-top-color: var(--ez-blue); }
+.event-overview .scene-fallback { background: transparent; }
+
+/* Keep the established edge-free scrim; change only its color to true black. */
+.event-overview .gallery-intro::before {
+  background: radial-gradient(ellipse closest-side at center, #000000f2 0%, #000000e0 34%, #000000bf 58%, #00000057 78%, #00000014 89%, #00000000 96%, #00000000 100%);
+}
+.event-overview .intro-eyebrow { color: var(--ez-muted); }
+.event-overview .intro-eyebrow .tiny-line { background: #0072ff99; }
+.event-overview .gallery-intro h1 { color: var(--ez-text); text-shadow: 0 2px 30px #000000b3; }
+.event-overview .gallery-intro h1 em { color: var(--ez-text); }
+.event-overview .intro-heading { color: var(--ez-secondary); }
+.event-overview .intro-description,
+.event-overview .intro-footnote { color: var(--ez-muted); }
+.event-overview .live-dot { background: var(--ez-mint); box-shadow: 0 0 8px #00ff9735; }
+
+/* Header, mode selection, and navigation. */
+.event-overview .site-header {
+  background: linear-gradient(180deg, #000000f2, #00000099 65%, #00000038);
+  border-bottom-color: #ffffff1f;
+}
+.event-overview .brand { color: var(--ez-text); }
+.event-overview .brand-symbol { color: var(--ez-teal); }
+.event-overview .brand-divider { background: var(--ez-border); }
+.event-overview .brand-label { color: var(--ez-muted); }
+.event-overview .view-switch { background: var(--ez-field); border-color: #0072ff66; }
+.event-overview .view-switch button { color: var(--ez-secondary); }
+.event-overview .view-switch button:hover:not(:disabled) { color: var(--ez-text); background: #0072ff1f; }
+.event-overview .view-switch button.active {
+  color: var(--ez-active);
+  background: var(--ez-tag);
+  box-shadow: inset 0 0 0 1px #0072ffbf;
+}
+.event-overview .view-switch button:disabled { color: var(--ez-muted); background: transparent; box-shadow: none; }
+.event-overview .collection-button { color: var(--ez-secondary); }
+.event-overview .collection-button:hover,
+.event-overview .collection-button.active { color: var(--ez-active); }
+.event-overview .collection-count { color: var(--ez-secondary); border-color: var(--ez-border); }
+.event-overview .collection-button.active .collection-count {
+  color: var(--ez-active);
+  background: var(--ez-tag);
+  border-color: var(--ez-blue);
+}
+
+/* Blue frames the photographs; the activity names stay on black. */
+.event-overview .space-card {
+  background: var(--ez-bg);
+  border-color: #0072ff66;
+  box-shadow: 0 15px 40px #00000099, 0 1px 0 #ffffff10 inset;
+}
+.event-overview .space-card:hover,
+.event-overview .space-card:focus-visible {
+  border-color: var(--ez-blue);
+  box-shadow: 0 20px 46px #000000b3, 0 0 24px #0072ff1c;
+}
+.event-overview .space-card.card-is-open { border-color: #04eabbb3; }
+.event-overview .card-image-wrap { background: var(--ez-bg); }
+.event-overview .card-image-wrap::after { background: none; }
+.event-overview .card-number,
+.event-overview .grid-number {
+  color: var(--ez-text);
+  background: var(--ez-tag);
+  border-color: var(--ez-border);
+}
+.event-overview .card-event-count {
+  color: var(--ez-secondary);
+  background: var(--ez-tag);
+  border-color: #0072ff66;
+}
+.event-overview .space-card:hover .card-event-count,
+.event-overview .space-card:focus-visible .card-event-count {
+  color: var(--ez-active);
+  border-color: #04eabb66;
+}
+.event-overview .card-caption { color: var(--ez-text); background: var(--ez-bg); }
+.event-overview .card-caption-dot { background: var(--ez-blue); }
+.event-overview .space-card:hover .card-caption-dot,
+.event-overview .space-card:focus-visible .card-caption-dot,
+.event-overview .space-card.card-is-open .card-caption-dot { background: var(--ez-mint); }
+.event-overview .card-open,
+.event-overview .grid-open { background: var(--ez-blue); color: var(--ez-text); }
+.event-overview .image-unavailable { color: var(--ez-muted); background: var(--ez-field); }
+
+/* Functional colors are limited to the controls currently in use. */
+.event-overview .control-bar {
+  background: var(--ez-bg);
+  border-color: var(--ez-border);
+  box-shadow: 0 10px 32px #00000070;
+}
+.event-overview .rotation-button { color: var(--ez-secondary); }
+.event-overview .rotation-button[aria-pressed="true"] { color: var(--ez-active); background: #0072ff1a; }
+.event-overview .rotation-button:hover:not(:disabled) { color: var(--ez-active); background: var(--ez-tag); }
+.event-overview .control-divider { background: #ffffff29; }
+.event-overview .icon-button { color: var(--ez-secondary); }
+.event-overview .icon-button:hover:not(:disabled) { color: var(--ez-text); background: var(--ez-tag); }
+.event-overview .control-bar button:disabled { color: var(--ez-muted); background: transparent; }
+.event-overview .zoom-readout { color: var(--ez-text); }
+.event-overview .gesture-hint { color: var(--ez-muted); }
+.event-overview .site-footer { color: var(--ez-muted); border-top-color: #ffffff1f; }
+.event-overview .help-button,
+.event-overview .event-source-link,
+.event-overview .event-demo-link { color: var(--ez-secondary); }
+.event-overview .help-button:hover,
+.event-overview .event-source-link:hover,
+.event-overview .event-demo-link:hover { color: var(--ez-active); }
+
+/* Grid, empty states, and supporting dialogs share the same dark surfaces. */
+.event-overview .collection-section { scrollbar-color: #ffffff59 transparent; }
+.event-overview .collection-heading .eyebrow { color: var(--ez-muted); }
+.event-overview .collection-heading h1 { color: var(--ez-text); }
+.event-overview .collection-heading h1 > span { color: var(--ez-active); }
+.event-overview .collection-heading p { color: var(--ez-secondary); }
+.event-overview .text-button { color: var(--ez-secondary); }
+.event-overview .text-button:hover { color: var(--ez-active); }
+.event-overview .grid-image { background: var(--ez-field); border-color: #0072ff66; }
+.event-overview .grid-card:hover .grid-image,
+.event-overview .grid-card:focus-visible .grid-image { border-color: var(--ez-blue); }
+.event-overview .grid-heart { color: var(--ez-teal); }
+.event-overview .grid-caption { color: var(--ez-secondary); }
+.event-overview .grid-caption h2 { color: var(--ez-text); }
+.event-overview .grid-caption p { color: var(--ez-muted); }
+.event-overview .empty-collection { color: var(--ez-muted); }
+.event-overview .empty-collection h2 { color: var(--ez-text); }
+.event-overview .empty-collection p { color: var(--ez-secondary); }
+/* Black text on brand blue passes small-text contrast without changing the blue. */
+.event-overview .primary-button { background: var(--ez-blue); color: var(--ez-bg); }
+.event-overview .primary-button:hover { background: var(--ez-active); color: var(--ez-bg); }
+.event-overview .help-dialog {
+  color: var(--ez-text);
+  color-scheme: dark;
+  background: var(--ez-surface);
+  border-color: var(--ez-border);
+  box-shadow: 0 35px 150px #000000b3;
+}
+.event-overview .help-dialog::backdrop { background: #000000d6; }
+.event-overview .help-content .eyebrow { color: var(--ez-muted); }
+.event-overview .help-content h2,
+.event-overview .help-content dt { color: var(--ez-text); }
+.event-overview .help-content dd { color: var(--ez-secondary); }
+.event-overview .help-content > p { color: var(--ez-muted); border-color: #ffffff29; }
+.event-overview .help-content .detail-close { color: var(--ez-secondary); background: var(--ez-field); }
+.event-overview .help-content .detail-close:hover { color: var(--ez-text); background: var(--ez-blue); }
+.event-overview .toast { background: var(--ez-tag); color: var(--ez-text); box-shadow: 0 10px 35px #0000004d; }
+.event-overview .toast > svg { color: var(--ez-teal); }
+
+/* The event journal is dark throughout, including image placeholders and scrollbars. */
+.event-panel-dialog {
+  --panel-paper: var(--ez-surface);
+  --panel-ink: var(--ez-text);
+  --panel-body: var(--ez-secondary);
+  --panel-muted: var(--ez-muted);
+  --panel-line: #ffffff29;
+  --accent: var(--ez-blue);
+  color: var(--panel-ink);
+  color-scheme: dark;
+}
+.event-panel-dialog ::selection { background: var(--ez-teal); color: var(--ez-bg); }
+.event-panel-dialog button:focus-visible,
+.event-panel-dialog a:focus-visible { outline-color: var(--ez-blue); }
+.event-panel-dialog .event-panel-scrim {
+  background: linear-gradient(90deg, #00000040, #00000070 50%, #000000ab);
+}
+.event-panel-dialog .event-panel-sheet {
+  background: var(--panel-paper);
+  /* Define the exposed edge without changing the sheet or photo geometry. */
+  box-shadow:
+    0 0 0 1px #04eabb24,
+    -12px 0 60px #04eabb0f,
+    -28px 0 90px #000000a3;
+}
+.event-panel-dialog .event-panel-topbar { background: var(--ez-field); border-bottom-color: var(--panel-line); }
+.event-panel-dialog .event-panel-topbar-label { color: var(--ez-secondary); }
+.event-panel-dialog .event-panel-mark { color: var(--ez-teal); }
+.event-panel-dialog .event-panel-close,
+.event-panel-dialog .event-panel-favorite { color: var(--ez-secondary); }
+.event-panel-dialog .event-panel-close svg { border-color: var(--ez-border); }
+.event-panel-dialog .event-panel-close:hover { color: var(--ez-text); }
+.event-panel-dialog .event-panel-close:hover svg { color: var(--ez-text); background: var(--ez-blue); border-color: var(--ez-blue); }
+.event-panel-dialog .event-panel-favorite:hover { color: var(--ez-text); background: var(--ez-tag); border-color: var(--ez-blue); }
+.event-panel-dialog .event-panel-favorite.is-favorite { color: var(--ez-active); background: var(--ez-field); border-color: #04eabb66; }
+.event-panel-dialog .event-panel-scroll { scrollbar-color: #ffffff59 var(--panel-paper); }
+.event-panel-dialog .event-panel-kicker { color: var(--ez-muted); }
+.event-panel-dialog .event-panel-kicker > span + span::before { color: var(--ez-border); }
+.event-panel-dialog .event-panel-kicker-count { color: var(--ez-active); }
+.event-panel-dialog .event-panel-heading h2 { color: var(--ez-text); }
+.event-panel-dialog .event-panel-main-frame { background: var(--ez-field); }
+.event-panel-dialog .event-panel-image-fallback { background: var(--ez-field); color: var(--ez-muted); }
+.event-panel-dialog .event-panel-image-fallback > svg { color: var(--ez-blue); }
+.event-panel-dialog .event-panel-photo-label { color: var(--ez-secondary); }
+.event-panel-dialog .event-panel-photo-count { color: var(--ez-text); }
+.event-panel-dialog .event-panel-photo-count > span { color: var(--ez-muted); }
+.event-panel-dialog .event-panel-photo-controls button { color: var(--ez-text); background: var(--ez-field); border-color: var(--ez-border); }
+.event-panel-dialog .event-panel-photo-controls button:hover:not(:disabled) { color: var(--ez-text); background: var(--ez-blue); border-color: var(--ez-blue); }
+.event-panel-dialog .event-panel-photo-controls button:disabled { color: var(--ez-muted); background: var(--ez-field); border-color: #ffffff29; }
+.event-panel-dialog .event-panel-wall-jump { color: var(--ez-secondary); border-color: #0072ff80; }
+.event-panel-dialog .event-panel-wall-jump:hover { color: var(--ez-active); border-color: var(--ez-blue); }
+.event-panel-dialog .event-panel-story { border-color: var(--panel-line); }
+.event-panel-dialog .event-panel-story h3 { color: var(--ez-text); }
+.event-panel-dialog .event-panel-story h3::before { background: #0072ffa6; }
+.event-panel-dialog .event-panel-story p { color: var(--ez-secondary); }
+.event-panel-dialog .event-panel-wall-section { border-top-color: var(--panel-line); }
+.event-panel-dialog .event-panel-wall-heading h3 { color: var(--ez-text); }
+.event-panel-dialog .event-panel-wall-heading h3 span { color: var(--ez-active); }
+.event-panel-dialog .event-panel-wall-heading p { color: var(--ez-muted); }
+.event-panel-dialog .event-panel-photo-tile { color: var(--ez-secondary); }
+.event-panel-dialog .event-panel-tile-image { background: var(--ez-field); }
+.event-panel-dialog .event-panel-photo-tile:hover:not(:disabled) .event-panel-tile-image { border-color: #0072ffb3; }
+.event-panel-dialog .event-panel-photo-tile.is-selected .event-panel-tile-image { border-color: var(--ez-blue); box-shadow: 0 0 0 2px #0072ff30; }
+.event-panel-dialog .event-panel-tile-caption { color: var(--ez-secondary); }
+.event-panel-dialog .event-panel-tile-caption > span:first-child { color: var(--ez-muted); }
+.event-panel-dialog .event-panel-photo-tile.is-selected .event-panel-tile-caption { color: var(--ez-text); }
+.event-panel-dialog .event-panel-photo-tile.is-selected .event-panel-tile-caption > span:first-child { color: var(--ez-active); }
+.event-panel-dialog .event-panel-endnote { color: var(--ez-muted); border-color: var(--panel-line); }
+.event-panel-dialog .event-panel-endnote > span:last-child { color: var(--ez-muted); }
+.event-panel-dialog .event-panel-moving-cover { background: var(--ez-field); }

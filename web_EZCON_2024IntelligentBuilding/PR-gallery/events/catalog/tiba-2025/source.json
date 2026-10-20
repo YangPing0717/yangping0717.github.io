@@ -1,0 +1,170 @@
+{
+  "eventId": "tiba-2025",
+  "title": "【TIBA】 2025 成果發表會",
+  "retrievedAt": "2026-10-19",
+  "listingSourceUrl": "https://www.ezcontw.com/pr_activities/",
+  "sourceUrl": "https://www.ezcontw.com/pr_activities/#%25E3%2580%2590tiba%25E3%2580%2591-2025-%25E6%2588%2590%25E6%259E%259C%25E7%2599%25BC%25E8%25A1%25A8%25E6%259C%2583",
+  "sourceHeading": "【TIBA】 2025 成果發表會",
+  "sourceHeadingId": "%E3%80%90tiba%E3%80%91-2025-%E6%88%90%E6%9E%9C%E7%99%BC%E8%A1%A8%E6%9C%83",
+  "year": "2025",
+  "yearBasis": "Explicit source heading",
+  "descriptionBasis": "Official listing title and visible stage / presentation / group photographs.",
+  "coverPhotoId": "tiba-2025-photo-01",
+  "imageProcessing": "Resize only with preserved aspect ratio; WebP display maximum 1600px and thumbnail maximum 640px on longest edge. Local original files retained when no larger than 512000 bytes; otherwise link to the original official source.",
+  "photos": [
+    {
+      "id": "tiba-2025-photo-01",
+      "sourceImageUrl": "https://www.ezcontw.com/content/images/2026/01/S__12468252_0.jpg",
+      "sourceOrder": 1,
+      "originalSha256": "5fc118fe23cfe9a68b8523d1900b397143ce5b4ae570c0dee97f969d16ad62bb",
+      "originalWidth": 1477,
+      "originalHeight": 1108,
+      "originalBytes": 227557,
+      "displaySize": [
+        1477,
+        1108
+      ],
+      "displayBytes": 198196,
+      "thumbnailSize": [
+        640,
+        480
+      ],
+      "thumbnailBytes": 44698,
+      "imageUrl": "/events/catalog/tiba-2025/display/photo-01.webp",
+      "thumbnailUrl": "/events/catalog/tiba-2025/thumb/photo-01.webp",
+      "originalUrl": "/events/catalog/tiba-2025/original/photo-01.jpg"
+    },
+    {
+      "id": "tiba-2025-photo-02",
+      "sourceImageUrl": "https://www.ezcontw.com/content/images/2026/01/999609_0.jpg",
+      "sourceOrder": 2,
+      "originalSha256": "65e837946f34fdbc8b78393c66c7c391cdfd7473c971fb2cc3c2e76a88df3e5c",
+      "originalWidth": 1706,
+      "originalHeight": 960,
+      "originalBytes": 139396,
+      "displaySize": [
+        1600,
+        900
+      ],
+      "displayBytes": 100782,
+      "thumbnailSize": [
+        640,
+        360
+      ],
+      "thumbnailBytes": 22702,
+      "imageUrl": "/events/catalog/tiba-2025/display/photo-02.webp",
+      "thumbnailUrl": "/events/catalog/tiba-2025/thumb/photo-02.webp",
+      "originalUrl": "/events/catalog/tiba-2025/original/photo-02.jpg"
+    },
+    {
+      "id": "tiba-2025-photo-03",
+      "sourceImageUrl": "https://www.ezcontw.com/content/images/2026/01/999596.jpg",
+      "sourceOrder": 3,
+      "originalSha256": "ef985f46df811baa6751e53c22a10e8cfa062b0f1d20ee50051129ab1444d905",
+      "originalWidth": 1706,
+      "originalHeight": 960,
+      "originalBytes": 196312,
+      "displaySize": [
+        1600,
+        900
+      ],
+      "displayBytes": 151514,
+      "thumbnailSize": [
+        640,
+        360
+      ],
+      "thumbnailBytes": 32050,
+      "imageUrl": "/events/catalog/tiba-2025/display/photo-03.webp",
+      "thumbnailUrl": "/events/catalog/tiba-2025/thumb/photo-03.webp",
+      "originalUrl": "/events/catalog/tiba-2025/original/photo-03.jpg"
+    },
+    {
+      "id": "tiba-2025-photo-04",
+      "sourceImageUrl": "https://www.ezcontw.com/content/images/2026/01/999587.jpg",
+      "sourceOrder": 4,
+      "originalSha256": "86fefc313904f9df1c60b4276b2e9cf51fb872d30cbf32bc394ea9f7de152929",
+      "originalWidth": 1706,
+      "originalHeight": 960,
+      "originalBytes": 212359,
+      "displaySize": [
+        1600,
+        900
+      ],
+      "displayBytes": 173562,
+      "thumbnailSize": [
+        640,
+        360
+      ],
+      "thumbnailBytes": 33888,
+      "imageUrl": "/events/catalog/tiba-2025/display/photo-04.webp",
+      "thumbnailUrl": "/events/catalog/tiba-2025/thumb/photo-04.webp",
+      "originalUrl": "/events/catalog/tiba-2025/original/photo-04.jpg"
+    },
+    {
+      "id": "tiba-2025-photo-05",
+      "sourceImageUrl": "https://www.ezcontw.com/content/images/2026/01/S__12468240_0.jpg",
+      "sourceOrder": 5,
+      "originalSha256": "04151f8fb0702d114056a51353d78861c77da6ae2d52676c6434f84db4e0d940",
+      "originalWidth": 1477,
+      "originalHeight": 1108,
+      "originalBytes": 193818,
+      "displaySize": [
+        1477,
+        1108
+      ],
+      "displayBytes": 147314,
+      "thumbnailSize": [
+        640,
+        480
+      ],
+      "thumbnailBytes": 42864,
+      "imageUrl": "/events/catalog/tiba-2025/display/photo-05.webp",
+      "thumbnailUrl": "/events/catalog/tiba-2025/thumb/photo-05.webp",
+      "originalUrl": "/events/catalog/tiba-2025/original/photo-05.jpg"
+    },
+    {
+      "id": "tiba-2025-photo-06",
+      "sourceImageUrl": "https://www.ezcontw.com/content/images/2026/01/S__12468229_0.jpg",
+      "sourceOrder": 6,
+      "originalSha256": "b553c3abdb389d5d7e648c113ea09133d04174e27939eb6b336338898bff30c7",
+      "originalWidth": 1477,
+      "originalHeight": 1108,
+      "originalBytes": 212595,
+      "displaySize": [
+        1477,
+        1108
+      ],
+      "displayBytes": 174640,
+      "thumbnailSize": [
+        640,
+        480
+      ],
+      "thumbnailBytes": 43262,
+      "imageUrl": "/events/catalog/tiba-2025/display/photo-06.webp",
+      "thumbnailUrl": "/events/catalog/tiba-2025/thumb/photo-06.webp",
+      "originalUrl": "/events/catalog/tiba-2025/original/photo-06.jpg"
+    },
+    {
+      "id": "tiba-2025-photo-07",
+      "sourceImageUrl": "https://www.ezcontw.com/content/images/2026/01/S__12468231_0.jpg",
+      "sourceOrder": 7,
+      "originalSha256": "eca35b4224d1a46342b5e6f60b379c631e9c88ce0e53326ef8dac3a904831fee",
+      "originalWidth": 1745,
+      "originalHeight": 937,
+      "originalBytes": 214503,
+      "displaySize": [
+        1600,
+        859
+      ],
+      "displayBytes": 149506,
+      "thumbnailSize": [
+        640,
+        344
+      ],
+      "thumbnailBytes": 33232,
+      "imageUrl": "/events/catalog/tiba-2025/display/photo-07.webp",
+      "thumbnailUrl": "/events/catalog/tiba-2025/thumb/photo-07.webp",
+      "originalUrl": "/events/catalog/tiba-2025/original/photo-07.jpg"
+    }
+  ]
+}

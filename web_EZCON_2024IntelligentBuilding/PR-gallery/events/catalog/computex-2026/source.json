@@ -1,0 +1,346 @@
+{
+  "eventId": "computex-2026",
+  "title": "2026 COMPUTEX",
+  "retrievedAt": "2026-10-19",
+  "listingSourceUrl": "https://www.ezcontw.com/pr_activities/",
+  "sourceUrl": "https://www.ezcontw.com/pr_activities/#2026-computex",
+  "sourceHeading": "2026 COMPUTEX",
+  "sourceHeadingId": "2026-computex",
+  "year": "2026",
+  "yearBasis": "Explicit source heading",
+  "descriptionBasis": "Official listing title and visible exhibition / discussion photographs.",
+  "coverPhotoId": "computex-2026-photo-01",
+  "imageProcessing": "Resize only with preserved aspect ratio; WebP display maximum 1600px and thumbnail maximum 640px on longest edge. Local original files retained when no larger than 512000 bytes; otherwise link to the original official source.",
+  "photos": [
+    {
+      "id": "computex-2026-photo-01",
+      "sourceImageUrl": "https://www.ezcontw.com/content/images/2026/06/LINE_ALBUM_aopen_260608_2.jpg",
+      "sourceOrder": 1,
+      "originalSha256": "970e8437a1a984664152e6ed4bf974bb387f0cdb7e4197270122549cad1d065b",
+      "originalWidth": 1706,
+      "originalHeight": 960,
+      "originalBytes": 198266,
+      "displaySize": [
+        1600,
+        900
+      ],
+      "displayBytes": 143384,
+      "thumbnailSize": [
+        640,
+        360
+      ],
+      "thumbnailBytes": 33354,
+      "imageUrl": "/events/catalog/computex-2026/display/photo-01.webp",
+      "thumbnailUrl": "/events/catalog/computex-2026/thumb/photo-01.webp",
+      "originalUrl": "/events/catalog/computex-2026/original/photo-01.jpg"
+    },
+    {
+      "id": "computex-2026-photo-02",
+      "sourceImageUrl": "https://www.ezcontw.com/content/images/2026/06/LINE_ALBUM_aopen_260608_4.jpg",
+      "sourceOrder": 2,
+      "originalSha256": "e4882f193bd30ff35b5a923bb5e6021f7c51c45cabfddc98fab211d01306790d",
+      "originalWidth": 2000,
+      "originalHeight": 1500,
+      "originalBytes": 344725,
+      "displaySize": [
+        1600,
+        1200
+      ],
+      "displayBytes": 201526,
+      "thumbnailSize": [
+        640,
+        480
+      ],
+      "thumbnailBytes": 36974,
+      "imageUrl": "/events/catalog/computex-2026/display/photo-02.webp",
+      "thumbnailUrl": "/events/catalog/computex-2026/thumb/photo-02.webp",
+      "originalUrl": "/events/catalog/computex-2026/original/photo-02.jpg"
+    },
+    {
+      "id": "computex-2026-photo-03",
+      "sourceImageUrl": "https://www.ezcontw.com/content/images/2026/06/LINE_ALBUM_aopen_260608_5.jpg",
+      "sourceOrder": 3,
+      "originalSha256": "79d21565d47bcfc2faa8c026360daa544db74b2a40044efbec6b393ea0780c2e",
+      "originalWidth": 1706,
+      "originalHeight": 960,
+      "originalBytes": 163068,
+      "displaySize": [
+        1600,
+        900
+      ],
+      "displayBytes": 113566,
+      "thumbnailSize": [
+        640,
+        360
+      ],
+      "thumbnailBytes": 25570,
+      "imageUrl": "/events/catalog/computex-2026/display/photo-03.webp",
+      "thumbnailUrl": "/events/catalog/computex-2026/thumb/photo-03.webp",
+      "originalUrl": "/events/catalog/computex-2026/original/photo-03.jpg"
+    },
+    {
+      "id": "computex-2026-photo-04",
+      "sourceImageUrl": "https://www.ezcontw.com/content/images/2026/06/LINE_ALBUM_aopen_260608_7.jpg",
+      "sourceOrder": 4,
+      "originalSha256": "6c75b58649de86e0b6d1b64c5d418610b5c785ba6daa32eb47e2fec30a927272",
+      "originalWidth": 1706,
+      "originalHeight": 960,
+      "originalBytes": 175865,
+      "displaySize": [
+        1600,
+        900
+      ],
+      "displayBytes": 124346,
+      "thumbnailSize": [
+        640,
+        360
+      ],
+      "thumbnailBytes": 25904,
+      "imageUrl": "/events/catalog/computex-2026/display/photo-04.webp",
+      "thumbnailUrl": "/events/catalog/computex-2026/thumb/photo-04.webp",
+      "originalUrl": "/events/catalog/computex-2026/original/photo-04.jpg"
+    },
+    {
+      "id": "computex-2026-photo-05",
+      "sourceImageUrl": "https://www.ezcontw.com/content/images/2026/06/LINE_ALBUM_aopen_260608_11.jpg",
+      "sourceOrder": 5,
+      "originalSha256": "cf6cc4cc03d566bb9f1baea6bdcfb7ee6d882e67e91f6086139508785f58f517",
+      "originalWidth": 1706,
+      "originalHeight": 960,
+      "originalBytes": 146047,
+      "displaySize": [
+        1600,
+        900
+      ],
+      "displayBytes": 99512,
+      "thumbnailSize": [
+        640,
+        360
+      ],
+      "thumbnailBytes": 21460,
+      "imageUrl": "/events/catalog/computex-2026/display/photo-05.webp",
+      "thumbnailUrl": "/events/catalog/computex-2026/thumb/photo-05.webp",
+      "originalUrl": "/events/catalog/computex-2026/original/photo-05.jpg"
+    },
+    {
+      "id": "computex-2026-photo-06",
+      "sourceImageUrl": "https://www.ezcontw.com/content/images/2026/06/LINE_ALBUM_aopen_260608_12.jpg",
+      "sourceOrder": 6,
+      "originalSha256": "a76e61170fd22764d58bded1ced32c259e28bbc9815baf39916b69b8866bfe35",
+      "originalWidth": 1706,
+      "originalHeight": 960,
+      "originalBytes": 165842,
+      "displaySize": [
+        1600,
+        900
+      ],
+      "displayBytes": 112578,
+      "thumbnailSize": [
+        640,
+        360
+      ],
+      "thumbnailBytes": 23612,
+      "imageUrl": "/events/catalog/computex-2026/display/photo-06.webp",
+      "thumbnailUrl": "/events/catalog/computex-2026/thumb/photo-06.webp",
+      "originalUrl": "/events/catalog/computex-2026/original/photo-06.jpg"
+    },
+    {
+      "id": "computex-2026-photo-07",
+      "sourceImageUrl": "https://www.ezcontw.com/content/images/2026/06/LINE_ALBUM_aopen_260608_13.jpg",
+      "sourceOrder": 7,
+      "originalSha256": "ce7618b1b34131c489a19add547638cdfed7b77547716ceaa692b4f9920d92a2",
+      "originalWidth": 1706,
+      "originalHeight": 960,
+      "originalBytes": 158750,
+      "displaySize": [
+        1600,
+        900
+      ],
+      "displayBytes": 106972,
+      "thumbnailSize": [
+        640,
+        360
+      ],
+      "thumbnailBytes": 22090,
+      "imageUrl": "/events/catalog/computex-2026/display/photo-07.webp",
+      "thumbnailUrl": "/events/catalog/computex-2026/thumb/photo-07.webp",
+      "originalUrl": "/events/catalog/computex-2026/original/photo-07.jpg"
+    },
+    {
+      "id": "computex-2026-photo-08",
+      "sourceImageUrl": "https://www.ezcontw.com/content/images/2026/06/LINE_ALBUM_aopen_260608_14.jpg",
+      "sourceOrder": 8,
+      "originalSha256": "e4deeeab8ffcbda7662f306a0d90a1fc0292283168dc07ecc8b930262fd29612",
+      "originalWidth": 2000,
+      "originalHeight": 1500,
+      "originalBytes": 312734,
+      "displaySize": [
+        1600,
+        1200
+      ],
+      "displayBytes": 180978,
+      "thumbnailSize": [
+        640,
+        480
+      ],
+      "thumbnailBytes": 40148,
+      "imageUrl": "/events/catalog/computex-2026/display/photo-08.webp",
+      "thumbnailUrl": "/events/catalog/computex-2026/thumb/photo-08.webp",
+      "originalUrl": "/events/catalog/computex-2026/original/photo-08.jpg"
+    },
+    {
+      "id": "computex-2026-photo-09",
+      "sourceImageUrl": "https://www.ezcontw.com/content/images/2026/06/LINE_ALBUM_aopen_260608_9.jpg",
+      "sourceOrder": 9,
+      "originalSha256": "1a11bc00e39e1d9394fd06f08948c6cbbe31151372adbc875956119ca1c94036",
+      "originalWidth": 1706,
+      "originalHeight": 960,
+      "originalBytes": 190308,
+      "displaySize": [
+        1600,
+        900
+      ],
+      "displayBytes": 135464,
+      "thumbnailSize": [
+        640,
+        360
+      ],
+      "thumbnailBytes": 31850,
+      "imageUrl": "/events/catalog/computex-2026/display/photo-09.webp",
+      "thumbnailUrl": "/events/catalog/computex-2026/thumb/photo-09.webp",
+      "originalUrl": "/events/catalog/computex-2026/original/photo-09.jpg"
+    },
+    {
+      "id": "computex-2026-photo-10",
+      "sourceImageUrl": "https://www.ezcontw.com/content/images/2026/06/LINE_ALBUM_irisgo_260608_1.jpg",
+      "sourceOrder": 10,
+      "originalSha256": "116b0a46756acac390040c4a7402a3224492f545125470a4c2c50898382ad846",
+      "originalWidth": 1280,
+      "originalHeight": 720,
+      "originalBytes": 131418,
+      "displaySize": [
+        1280,
+        720
+      ],
+      "displayBytes": 129772,
+      "thumbnailSize": [
+        640,
+        360
+      ],
+      "thumbnailBytes": 37372,
+      "imageUrl": "/events/catalog/computex-2026/display/photo-10.webp",
+      "thumbnailUrl": "/events/catalog/computex-2026/thumb/photo-10.webp",
+      "originalUrl": "/events/catalog/computex-2026/original/photo-10.jpg"
+    },
+    {
+      "id": "computex-2026-photo-11",
+      "sourceImageUrl": "https://www.ezcontw.com/content/images/2026/06/LINE_ALBUM_irisgo_260608_3.jpg",
+      "sourceOrder": 11,
+      "originalSha256": "04f702d138d46fc9d33791599c91bba65d6fbaeeb698d57e0e904e59e1400b05",
+      "originalWidth": 1477,
+      "originalHeight": 1108,
+      "originalBytes": 285532,
+      "displaySize": [
+        1477,
+        1108
+      ],
+      "displayBytes": 273424,
+      "thumbnailSize": [
+        640,
+        480
+      ],
+      "thumbnailBytes": 57562,
+      "imageUrl": "/events/catalog/computex-2026/display/photo-11.webp",
+      "thumbnailUrl": "/events/catalog/computex-2026/thumb/photo-11.webp",
+      "originalUrl": "/events/catalog/computex-2026/original/photo-11.jpg"
+    },
+    {
+      "id": "computex-2026-photo-12",
+      "sourceImageUrl": "https://www.ezcontw.com/content/images/2026/06/LINE_ALBUM_irisgo_260608_5.jpg",
+      "sourceOrder": 12,
+      "originalSha256": "bcb1658a91730bced2f637c0820083fea6c0cfa7c77c951c43ac70345cffac27",
+      "originalWidth": 1477,
+      "originalHeight": 1108,
+      "originalBytes": 220540,
+      "displaySize": [
+        1477,
+        1108
+      ],
+      "displayBytes": 180648,
+      "thumbnailSize": [
+        640,
+        480
+      ],
+      "thumbnailBytes": 40626,
+      "imageUrl": "/events/catalog/computex-2026/display/photo-12.webp",
+      "thumbnailUrl": "/events/catalog/computex-2026/thumb/photo-12.webp",
+      "originalUrl": "/events/catalog/computex-2026/original/photo-12.jpg"
+    },
+    {
+      "id": "computex-2026-photo-13",
+      "sourceImageUrl": "https://www.ezcontw.com/content/images/2026/06/LINE_ALBUM_irisgo_260608_2.jpg",
+      "sourceOrder": 13,
+      "originalSha256": "413aa667fab9a19d7b31f76b6996ac9399e477e9c9e94ec0d3ec29837f4ea83d",
+      "originalWidth": 1108,
+      "originalHeight": 1477,
+      "originalBytes": 187666,
+      "displaySize": [
+        1108,
+        1477
+      ],
+      "displayBytes": 146642,
+      "thumbnailSize": [
+        480,
+        640
+      ],
+      "thumbnailBytes": 34728,
+      "imageUrl": "/events/catalog/computex-2026/display/photo-13.webp",
+      "thumbnailUrl": "/events/catalog/computex-2026/thumb/photo-13.webp",
+      "originalUrl": "/events/catalog/computex-2026/original/photo-13.jpg"
+    },
+    {
+      "id": "computex-2026-photo-14",
+      "sourceImageUrl": "https://www.ezcontw.com/content/images/2026/06/LINE_ALBUM_irisgo_260608_4.jpg",
+      "sourceOrder": 14,
+      "originalSha256": "6ec62da6d14bf6abba4b3378ed1fa613c8b5599db2773cffd34207656bee4386",
+      "originalWidth": 1108,
+      "originalHeight": 1477,
+      "originalBytes": 200485,
+      "displaySize": [
+        1108,
+        1477
+      ],
+      "displayBytes": 161166,
+      "thumbnailSize": [
+        480,
+        640
+      ],
+      "thumbnailBytes": 37336,
+      "imageUrl": "/events/catalog/computex-2026/display/photo-14.webp",
+      "thumbnailUrl": "/events/catalog/computex-2026/thumb/photo-14.webp",
+      "originalUrl": "/events/catalog/computex-2026/original/photo-14.jpg"
+    },
+    {
+      "id": "computex-2026-photo-15",
+      "sourceImageUrl": "https://www.ezcontw.com/content/images/2026/06/LINE_ALBUM_irisgo_260608_6.jpg",
+      "sourceOrder": 15,
+      "originalSha256": "8a0194e68c9199d5a4164e1db1c4ddda66ef52f12c5b231ee97c1620d7c98db8",
+      "originalWidth": 1108,
+      "originalHeight": 1477,
+      "originalBytes": 167499,
+      "displaySize": [
+        1108,
+        1477
+      ],
+      "displayBytes": 122098,
+      "thumbnailSize": [
+        480,
+        640
+      ],
+      "thumbnailBytes": 27238,
+      "imageUrl": "/events/catalog/computex-2026/display/photo-15.webp",
+      "thumbnailUrl": "/events/catalog/computex-2026/thumb/photo-15.webp",
+      "originalUrl": "/events/catalog/computex-2026/original/photo-15.jpg"
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "source_version": 17,
+  "source_commit": "3d4a14cb2dc1c40485fdd02b59f1e486f6a7c09e",
+  "export_date": "2026-10-20",
+  "event_count": 10,
+  "photo_count": 77,
+  "portable_changes": [
+    "resource URLs resolve beneath the gallery folder",
+    "relative build asset paths",
+    "nested activity entry and return path",
+    "all 77 photo originals bundled locally",
+    "nested entry favicon uses a relative bundled URL"
+  ],
+  "destination": "/Volumes/YP_SSD_2TB/WorkSpace_EZ/web_tc_codex/web_EZCON_2024IntelligentBuilding/3d-gallery/",
+  "verified": [
+    "TypeScript and Vite production build",
+    "10 homepage cards and their images loaded",
+    "background video loaded, loop enabled, playback rate 0.25",
+    "event photo wall and photo switching",
+    "nested activity entry and return to /3d-gallery/",
+    "all 231 photo asset references resolve locally"
+  ]
+}

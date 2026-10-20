@@ -1,0 +1,170 @@
+{
+  "eventId": "tainan-showroom-visit",
+  "title": "吳武易建築師與潤鴻建設參訪易控台南展間",
+  "retrievedAt": "2026-10-19",
+  "listingSourceUrl": "https://www.ezcontw.com/pr_activities/",
+  "sourceUrl": "https://www.ezcontw.com/pr_activities/#%25E5%2590%25B3%25E6%25AD%25A6%25E6%2598%2593%25E5%25BB%25BA%25E7%25AF%2589%25E5%25B8%25AB%25E8%2588%2587%25E6%25BD%25A4%25E9%25B4%25BB%25E5%25BB%25BA%25E8%25A8%25AD%25E5%258F%2583%25E8%25A8%25AA%25E6%2598%2593%25E6%258E%25A7%25E5%258F%25B0%25E5%258D%2597%25E5%25B1%2595%25E9%2596%2593",
+  "sourceHeading": "吳武易建築師與潤鴻建設參訪易控台南展間",
+  "sourceHeadingId": "%E5%90%B3%E6%AD%A6%E6%98%93%E5%BB%BA%E7%AF%89%E5%B8%AB%E8%88%87%E6%BD%A4%E9%B4%BB%E5%BB%BA%E8%A8%AD%E5%8F%83%E8%A8%AA%E6%98%93%E6%8E%A7%E5%8F%B0%E5%8D%97%E5%B1%95%E9%96%93",
+  "year": null,
+  "yearBasis": "Not stated in source heading",
+  "descriptionBasis": "Official listing title and visible showroom / presentation / discussion photographs. No event year inferred from upload paths.",
+  "coverPhotoId": "tainan-showroom-visit-photo-02",
+  "imageProcessing": "Resize only with preserved aspect ratio; WebP display maximum 1600px and thumbnail maximum 640px on longest edge. Local original files retained when no larger than 512000 bytes; otherwise link to the original official source.",
+  "photos": [
+    {
+      "id": "tainan-showroom-visit-photo-02",
+      "sourceImageUrl": "https://www.ezcontw.com/content/images/2026/01/IMG_4691.jpg",
+      "sourceOrder": 2,
+      "originalSha256": "e6b22585046c61e314ea0ee6662bc048fd6fffaabd753974ba8e3714574193bd",
+      "originalWidth": 2000,
+      "originalHeight": 1125,
+      "originalBytes": 249441,
+      "displaySize": [
+        1600,
+        900
+      ],
+      "displayBytes": 143834,
+      "thumbnailSize": [
+        640,
+        360
+      ],
+      "thumbnailBytes": 30262,
+      "imageUrl": "/events/catalog/tainan-showroom-visit/display/photo-02.webp",
+      "thumbnailUrl": "/events/catalog/tainan-showroom-visit/thumb/photo-02.webp",
+      "originalUrl": "/events/catalog/tainan-showroom-visit/original/photo-02.jpg"
+    },
+    {
+      "id": "tainan-showroom-visit-photo-04",
+      "sourceImageUrl": "https://www.ezcontw.com/content/images/2026/01/IMG_4665.jpg",
+      "sourceOrder": 4,
+      "originalSha256": "43ec56ad9e845958c3be208e969366ea773c02b4ee6e5679eee3acec31be545a",
+      "originalWidth": 2000,
+      "originalHeight": 1125,
+      "originalBytes": 222514,
+      "displaySize": [
+        1600,
+        900
+      ],
+      "displayBytes": 126880,
+      "thumbnailSize": [
+        640,
+        360
+      ],
+      "thumbnailBytes": 26928,
+      "imageUrl": "/events/catalog/tainan-showroom-visit/display/photo-04.webp",
+      "thumbnailUrl": "/events/catalog/tainan-showroom-visit/thumb/photo-04.webp",
+      "originalUrl": "/events/catalog/tainan-showroom-visit/original/photo-04.jpg"
+    },
+    {
+      "id": "tainan-showroom-visit-photo-01",
+      "sourceImageUrl": "https://www.ezcontw.com/content/images/2026/01/IMG_4701.jpg",
+      "sourceOrder": 1,
+      "originalSha256": "aa520e04668f8f77867980d0aad5ca9c15a249b6a33908033bb2b56c41a22fda",
+      "originalWidth": 2000,
+      "originalHeight": 1125,
+      "originalBytes": 244731,
+      "displaySize": [
+        1600,
+        900
+      ],
+      "displayBytes": 134614,
+      "thumbnailSize": [
+        640,
+        360
+      ],
+      "thumbnailBytes": 24774,
+      "imageUrl": "/events/catalog/tainan-showroom-visit/display/photo-01.webp",
+      "thumbnailUrl": "/events/catalog/tainan-showroom-visit/thumb/photo-01.webp",
+      "originalUrl": "/events/catalog/tainan-showroom-visit/original/photo-01.jpg"
+    },
+    {
+      "id": "tainan-showroom-visit-photo-03",
+      "sourceImageUrl": "https://www.ezcontw.com/content/images/2026/01/IMG_4686.jpg",
+      "sourceOrder": 3,
+      "originalSha256": "819485c8b23ef1969bb5bd262dec9ce07780ad9d9cd1201af381d5f6e5e83078",
+      "originalWidth": 2000,
+      "originalHeight": 1125,
+      "originalBytes": 288247,
+      "displaySize": [
+        1600,
+        900
+      ],
+      "displayBytes": 176116,
+      "thumbnailSize": [
+        640,
+        360
+      ],
+      "thumbnailBytes": 36822,
+      "imageUrl": "/events/catalog/tainan-showroom-visit/display/photo-03.webp",
+      "thumbnailUrl": "/events/catalog/tainan-showroom-visit/thumb/photo-03.webp",
+      "originalUrl": "/events/catalog/tainan-showroom-visit/original/photo-03.jpg"
+    },
+    {
+      "id": "tainan-showroom-visit-photo-05",
+      "sourceImageUrl": "https://www.ezcontw.com/content/images/2026/01/IMG_4656.jpg",
+      "sourceOrder": 5,
+      "originalSha256": "77baea47d4ae1dc572d7324b89c628cd7077a9c33f97005a04fa339f01e9d9d3",
+      "originalWidth": 2000,
+      "originalHeight": 1125,
+      "originalBytes": 235782,
+      "displaySize": [
+        1600,
+        900
+      ],
+      "displayBytes": 134504,
+      "thumbnailSize": [
+        640,
+        360
+      ],
+      "thumbnailBytes": 27548,
+      "imageUrl": "/events/catalog/tainan-showroom-visit/display/photo-05.webp",
+      "thumbnailUrl": "/events/catalog/tainan-showroom-visit/thumb/photo-05.webp",
+      "originalUrl": "/events/catalog/tainan-showroom-visit/original/photo-05.jpg"
+    },
+    {
+      "id": "tainan-showroom-visit-photo-06",
+      "sourceImageUrl": "https://www.ezcontw.com/content/images/2026/01/IMG_4650.jpg",
+      "sourceOrder": 6,
+      "originalSha256": "3871d6b862d43fd46479232fcbae8747da3ca3ca784441985d0110c412e4021b",
+      "originalWidth": 2000,
+      "originalHeight": 1125,
+      "originalBytes": 241579,
+      "displaySize": [
+        1600,
+        900
+      ],
+      "displayBytes": 140254,
+      "thumbnailSize": [
+        640,
+        360
+      ],
+      "thumbnailBytes": 28406,
+      "imageUrl": "/events/catalog/tainan-showroom-visit/display/photo-06.webp",
+      "thumbnailUrl": "/events/catalog/tainan-showroom-visit/thumb/photo-06.webp",
+      "originalUrl": "/events/catalog/tainan-showroom-visit/original/photo-06.jpg"
+    },
+    {
+      "id": "tainan-showroom-visit-photo-07",
+      "sourceImageUrl": "https://www.ezcontw.com/content/images/2026/01/IMG_4643.jpg",
+      "sourceOrder": 7,
+      "originalSha256": "34aef1bbe800ae0f1f0e27a73dfe58b703e588dd2f7b3898ff8d36287164fb4b",
+      "originalWidth": 2000,
+      "originalHeight": 1125,
+      "originalBytes": 386961,
+      "displaySize": [
+        1600,
+        900
+      ],
+      "displayBytes": 268672,
+      "thumbnailSize": [
+        640,
+        360
+      ],
+      "thumbnailBytes": 43704,
+      "imageUrl": "/events/catalog/tainan-showroom-visit/display/photo-07.webp",
+      "thumbnailUrl": "/events/catalog/tainan-showroom-visit/thumb/photo-07.webp",
+      "originalUrl": "/events/catalog/tainan-showroom-visit/original/photo-07.jpg"
+    }
+  ]
+}

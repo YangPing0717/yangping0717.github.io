@@ -1,0 +1,136 @@
+{
+  "title": "2026 施耐德建築開發商領袖晚宴",
+  "sourceUrl": "https://www.ezcontw.com/2026-shi-nai-de-jian-zhu-kai-fa-shang-ling-xiu-wan-yan/",
+  "listingSourceUrl": "https://www.ezcontw.com/pr_activities/",
+  "coverPhotoId": "photo-07",
+  "deduplication": {
+    "detailImages": 7,
+    "listingImages": 5,
+    "uniquePhotos": 9,
+    "method": "SHA-256 identical original bytes",
+    "duplicates": [
+      {
+        "canonicalUrl": "https://www.ezcontw.com/content/images/2026/08/LINE_ALBUM_20260806---Breaker----_260811_1.jpg",
+        "duplicateUrls": [
+          "https://www.ezcontw.com/content/images/2026/08/LINE_ALBUM_20260806---Breaker----_260811_1-1.jpg"
+        ]
+      },
+      {
+        "canonicalUrl": "https://www.ezcontw.com/content/images/2026/08/LINE_ALBUM_20260806---Breaker----_260811_12.jpg",
+        "duplicateUrls": [
+          "https://www.ezcontw.com/content/images/2026/08/LINE_ALBUM_20260806---Breaker----_260811_12-1.jpg"
+        ]
+      },
+      {
+        "canonicalUrl": "https://www.ezcontw.com/content/images/2026/08/LINE_ALBUM_20260806---Breaker----_260811_11.jpg",
+        "duplicateUrls": [
+          "https://www.ezcontw.com/content/images/2026/08/LINE_ALBUM_20260806---Breaker----_260811_11-1.jpg"
+        ]
+      }
+    ]
+  },
+  "photos": [
+    {
+      "id": "photo-07",
+      "title": "技術交流",
+      "originalUrl": "https://www.ezcontw.com/content/images/2026/08/LINE_ALBUM_20260806---Breaker----_260811_11.jpg",
+      "sourceUrls": [
+        "https://www.ezcontw.com/content/images/2026/08/LINE_ALBUM_20260806---Breaker----_260811_11.jpg",
+        "https://www.ezcontw.com/content/images/2026/08/LINE_ALBUM_20260806---Breaker----_260811_11-1.jpg"
+      ],
+      "width": 1477,
+      "height": 1108,
+      "alt": "展示人員在產品看板與設備展台旁，與三位參與者進行交流。"
+    },
+    {
+      "id": "photo-01",
+      "title": "晚宴舞台",
+      "originalUrl": "https://www.ezcontw.com/content/images/2026/08/LINE_ALBUM_20260806---Breaker----_260811_15-1.jpg",
+      "sourceUrls": [
+        "https://www.ezcontw.com/content/images/2026/08/LINE_ALBUM_20260806---Breaker----_260811_15-1.jpg"
+      ],
+      "width": 2000,
+      "height": 1501,
+      "alt": "晚宴舞台上的講者，背後螢幕顯示「綠建未來 永續共築」活動主題。"
+    },
+    {
+      "id": "photo-02",
+      "title": "現場交流",
+      "originalUrl": "https://www.ezcontw.com/content/images/2026/08/LINE_ALBUM_20260806---Breaker----_260811_1.jpg",
+      "sourceUrls": [
+        "https://www.ezcontw.com/content/images/2026/08/LINE_ALBUM_20260806---Breaker----_260811_1.jpg",
+        "https://www.ezcontw.com/content/images/2026/08/LINE_ALBUM_20260806---Breaker----_260811_1-1.jpg"
+      ],
+      "width": 2000,
+      "height": 1500,
+      "alt": "參與者在施耐德電機展示區聆聽設備與產品介紹。"
+    },
+    {
+      "id": "photo-03",
+      "title": "展台介紹",
+      "originalUrl": "https://www.ezcontw.com/content/images/2026/08/LINE_ALBUM_20260806---Breaker----_260811_5.jpg",
+      "sourceUrls": [
+        "https://www.ezcontw.com/content/images/2026/08/LINE_ALBUM_20260806---Breaker----_260811_5.jpg"
+      ],
+      "width": 2000,
+      "height": 1500,
+      "alt": "展示人員在設備展台前與參與者交流，旁邊設有產品介紹看板。"
+    },
+    {
+      "id": "photo-04",
+      "title": "設備展示",
+      "originalUrl": "https://www.ezcontw.com/content/images/2026/08/LINE_ALBUM_20260806---Breaker----_260811_10.jpg",
+      "sourceUrls": [
+        "https://www.ezcontw.com/content/images/2026/08/LINE_ALBUM_20260806---Breaker----_260811_10.jpg"
+      ],
+      "width": 1477,
+      "height": 1108,
+      "alt": "參與者圍繞設備展台，聆聽現場展示與說明。"
+    },
+    {
+      "id": "photo-05",
+      "title": "近距離解說",
+      "originalUrl": "https://www.ezcontw.com/content/images/2026/08/LINE_ALBUM_20260806---Breaker----_260811_12.jpg",
+      "sourceUrls": [
+        "https://www.ezcontw.com/content/images/2026/08/LINE_ALBUM_20260806---Breaker----_260811_12.jpg",
+        "https://www.ezcontw.com/content/images/2026/08/LINE_ALBUM_20260806---Breaker----_260811_12-1.jpg"
+      ],
+      "width": 1108,
+      "height": 1477,
+      "alt": "展示人員近距離解說展台上的電力設備，參與者在旁觀看。"
+    },
+    {
+      "id": "photo-06",
+      "title": "活動合影",
+      "originalUrl": "https://www.ezcontw.com/content/images/2026/08/LINE_ALBUM_20260806---Breaker----_260811_14.jpg",
+      "sourceUrls": [
+        "https://www.ezcontw.com/content/images/2026/08/LINE_ALBUM_20260806---Breaker----_260811_14.jpg"
+      ],
+      "width": 1477,
+      "height": 1108,
+      "alt": "兩位參與者在「綠建未來 永續共築」活動背板前合影並比出讚的手勢。"
+    },
+    {
+      "id": "photo-08",
+      "title": "展示現場",
+      "originalUrl": "https://www.ezcontw.com/content/images/2026/08/LINE_ALBUM_20260806---Breaker----_260811_3.jpg",
+      "sourceUrls": [
+        "https://www.ezcontw.com/content/images/2026/08/LINE_ALBUM_20260806---Breaker----_260811_3.jpg"
+      ],
+      "width": 2000,
+      "height": 1500,
+      "alt": "參與者在一排施耐德電機產品展台前觀看展示。"
+    },
+    {
+      "id": "photo-09",
+      "title": "合影留念",
+      "originalUrl": "https://www.ezcontw.com/content/images/2026/08/LINE_ALBUM_20260806---Breaker----_260811_13.jpg",
+      "sourceUrls": [
+        "https://www.ezcontw.com/content/images/2026/08/LINE_ALBUM_20260806---Breaker----_260811_13.jpg"
+      ],
+      "width": 1477,
+      "height": 1108,
+      "alt": "兩位參與者在施耐德電機晚宴活動背板前合影。"
+    }
+  ]
+}

@@ -1,0 +1,309 @@
+{
+  "eventId": "building-show-2025",
+  "title": "2025 台北國際建築建材暨產品展",
+  "retrievedAt": "2026-10-19",
+  "listingSourceUrl": "https://www.ezcontw.com/pr_activities/",
+  "sourceUrl": "https://www.ezcontw.com/pr_activities/#2025%25E5%25BB%25BA%25E6%259D%2590%25E5%25B1%2595%25E8%25A8%2598%25E8%2580%2585%25E9%2596%258B%25E5%25B1%2595%25E5%2584%2580%25E5%25BC%258F",
+  "sourceHeading": "2025建材展記者開展儀式",
+  "sourceHeadingId": "2025%E5%BB%BA%E6%9D%90%E5%B1%95%E8%A8%98%E8%80%85%E9%96%8B%E5%B1%95%E5%84%80%E5%BC%8F",
+  "year": "2025",
+  "yearBasis": "Explicit source heading",
+  "descriptionBasis": "Merged the listing’s 2025 building-show press-clipping section with its same-show opening ceremony photographs. Only the 7 original on-site photographs are included; the 34 article screenshots are omitted.",
+  "coverPhotoId": "building-show-2025-photo-02",
+  "imageProcessing": "Resize only with preserved aspect ratio; WebP display maximum 1600px and thumbnail maximum 640px on longest edge. Local original files retained when no larger than 512000 bytes; otherwise link to the original official source.",
+  "photos": [
+    {
+      "id": "building-show-2025-photo-02",
+      "sourceImageUrl": "https://www.ezcontw.com/content/images/2026/01/LINE_ALBUM_2025---_251217_78.jpg",
+      "sourceOrder": 2,
+      "originalSha256": "dbe503e38e7be15e6197a7fe3663a4e89f34d601b56fb14079f18c749e504ef4",
+      "originalWidth": 1477,
+      "originalHeight": 1108,
+      "originalBytes": 226119,
+      "displaySize": [
+        1477,
+        1108
+      ],
+      "displayBytes": 262856,
+      "thumbnailSize": [
+        640,
+        480
+      ],
+      "thumbnailBytes": 48328,
+      "imageUrl": "/events/catalog/building-show-2025/display/photo-02.webp",
+      "thumbnailUrl": "/events/catalog/building-show-2025/thumb/photo-02.webp",
+      "originalUrl": "/events/catalog/building-show-2025/original/photo-02.jpg"
+    },
+    {
+      "id": "building-show-2025-photo-01",
+      "sourceImageUrl": "https://www.ezcontw.com/content/images/2026/01/LINE_ALBUM_2025---_251217_83.jpg",
+      "sourceOrder": 1,
+      "originalSha256": "7ffc54a78f6e5a105cb67219e4cef938a0f3d763a1d74a2ceafcce6a416473e0",
+      "originalWidth": 2000,
+      "originalHeight": 1500,
+      "originalBytes": 368391,
+      "displaySize": [
+        1600,
+        1200
+      ],
+      "displayBytes": 222780,
+      "thumbnailSize": [
+        640,
+        480
+      ],
+      "thumbnailBytes": 54208,
+      "imageUrl": "/events/catalog/building-show-2025/display/photo-01.webp",
+      "thumbnailUrl": "/events/catalog/building-show-2025/thumb/photo-01.webp",
+      "originalUrl": "/events/catalog/building-show-2025/original/photo-01.jpg"
+    },
+    {
+      "id": "building-show-2025-photo-03",
+      "sourceImageUrl": "https://www.ezcontw.com/content/images/2026/01/LINE_ALBUM_2025---_251217_79.jpg",
+      "sourceOrder": 3,
+      "originalSha256": "168ccd328706bb059ed7d80717e58e13468e2bffcb6d6dd7d8f1d8abb54bb0ca",
+      "originalWidth": 2000,
+      "originalHeight": 1125,
+      "originalBytes": 326553,
+      "displaySize": [
+        1600,
+        900
+      ],
+      "displayBytes": 208770,
+      "thumbnailSize": [
+        640,
+        360
+      ],
+      "thumbnailBytes": 47056,
+      "imageUrl": "/events/catalog/building-show-2025/display/photo-03.webp",
+      "thumbnailUrl": "/events/catalog/building-show-2025/thumb/photo-03.webp",
+      "originalUrl": "/events/catalog/building-show-2025/original/photo-03.jpg"
+    },
+    {
+      "id": "building-show-2025-photo-04",
+      "sourceImageUrl": "https://www.ezcontw.com/content/images/2026/01/LINE_ALBUM_2025---_251217_85.jpg",
+      "sourceOrder": 4,
+      "originalSha256": "784b30ed8926209fd0088238d342ae5de05be9ede7e9f3b00f27faa6cd767741",
+      "originalWidth": 2000,
+      "originalHeight": 1500,
+      "originalBytes": 419319,
+      "displaySize": [
+        1600,
+        1200
+      ],
+      "displayBytes": 262512,
+      "thumbnailSize": [
+        640,
+        480
+      ],
+      "thumbnailBytes": 59802,
+      "imageUrl": "/events/catalog/building-show-2025/display/photo-04.webp",
+      "thumbnailUrl": "/events/catalog/building-show-2025/thumb/photo-04.webp",
+      "originalUrl": "/events/catalog/building-show-2025/original/photo-04.jpg"
+    },
+    {
+      "id": "building-show-2025-photo-05",
+      "sourceImageUrl": "https://www.ezcontw.com/content/images/2026/01/LINE_ALBUM_2025---_251217_86.jpg",
+      "sourceOrder": 5,
+      "originalSha256": "74eb889598a74b69ab5b8551cd778f6bac064acae9d7d50ca3a5a33e0b102942",
+      "originalWidth": 1705,
+      "originalHeight": 960,
+      "originalBytes": 174396,
+      "displaySize": [
+        1600,
+        901
+      ],
+      "displayBytes": 172190,
+      "thumbnailSize": [
+        640,
+        360
+      ],
+      "thumbnailBytes": 29514,
+      "imageUrl": "/events/catalog/building-show-2025/display/photo-05.webp",
+      "thumbnailUrl": "/events/catalog/building-show-2025/thumb/photo-05.webp",
+      "originalUrl": "/events/catalog/building-show-2025/original/photo-05.jpg"
+    },
+    {
+      "id": "building-show-2025-photo-06",
+      "sourceImageUrl": "https://www.ezcontw.com/content/images/2026/01/S__70664262.jpg",
+      "sourceOrder": 6,
+      "originalSha256": "91ac8df040355ee4b7d22fcc9b4a16d9a5d58297509b86accba2b3aef97b81d8",
+      "originalWidth": 2000,
+      "originalHeight": 1500,
+      "originalBytes": 290118,
+      "displaySize": [
+        1600,
+        1200
+      ],
+      "displayBytes": 164026,
+      "thumbnailSize": [
+        640,
+        480
+      ],
+      "thumbnailBytes": 21808,
+      "imageUrl": "/events/catalog/building-show-2025/display/photo-06.webp",
+      "thumbnailUrl": "/events/catalog/building-show-2025/thumb/photo-06.webp",
+      "originalUrl": "/events/catalog/building-show-2025/original/photo-06.jpg"
+    },
+    {
+      "id": "building-show-2025-photo-07",
+      "sourceImageUrl": "https://www.ezcontw.com/content/images/2026/01/LINE_ALBUM_2025---_251217_77.jpg",
+      "sourceOrder": 7,
+      "originalSha256": "45002a35705a010f412d6f05551d154e270a4c66a0f09aab1b13d2a05beebc58",
+      "originalWidth": 1705,
+      "originalHeight": 960,
+      "originalBytes": 184146,
+      "displaySize": [
+        1600,
+        901
+      ],
+      "displayBytes": 186050,
+      "thumbnailSize": [
+        640,
+        360
+      ],
+      "thumbnailBytes": 29562,
+      "imageUrl": "/events/catalog/building-show-2025/display/photo-07.webp",
+      "thumbnailUrl": "/events/catalog/building-show-2025/thumb/photo-07.webp",
+      "originalUrl": "/events/catalog/building-show-2025/original/photo-07.jpg"
+    }
+  ],
+  "relatedMediaSourceUrl": "https://www.ezcontw.com/pr_activities/#2025%25E5%258F%25B0%25E5%258C%2597%25E5%259C%258B%25E9%259A%259B%25E5%25BB%25BA%25E7%25AF%2589%25E5%25BB%25BA%25E6%259D%2590%25E6%259A%25A8%25E7%2594%25A2%25E5%2593%2581%25E5%25B1%2595",
+  "omittedMediaScreenshots": [
+    {
+      "sourceImageUrl": "https://www.ezcontw.com/content/images/2026/02/---2026-01-29-17.59.32.png",
+      "originalSha256": "810709641cc75482fb2bd3258c5f02213212289d078668c12e390d01051ea007"
+    },
+    {
+      "sourceImageUrl": "https://www.ezcontw.com/content/images/2026/02/---2026-01-29-17.59.52.png",
+      "originalSha256": "1db35924be8a8b1d66a76b6d4eeaa2a31ae3bb02bb907e316d81bcf131fe1018"
+    },
+    {
+      "sourceImageUrl": "https://www.ezcontw.com/content/images/2026/02/---2026-01-29-18.00.07.png",
+      "originalSha256": "3e25992d7ddd98842ddaeb4506fba2d79c80da4010996217231cad8fc192440d"
+    },
+    {
+      "sourceImageUrl": "https://www.ezcontw.com/content/images/2026/02/---2026-01-29-18.00.24.png",
+      "originalSha256": "c717f7602a2da9fd91fefa837b74d37456fe86ab9c7e1c10eb6f73857a8dd1f9"
+    },
+    {
+      "sourceImageUrl": "https://www.ezcontw.com/content/images/2026/02/---2026-01-29-18.00.47.png",
+      "originalSha256": "9527a7e0d38cfe82582b82fae9b30c95710b1536446b82716679fb03589f75af"
+    },
+    {
+      "sourceImageUrl": "https://www.ezcontw.com/content/images/2026/02/---2026-01-29-18.01.19.png",
+      "originalSha256": "3fa441b8ad446292b080959ce3b4a1836d8f646aa854c2fc45782123f40c26d2"
+    },
+    {
+      "sourceImageUrl": "https://www.ezcontw.com/content/images/2026/02/---2026-01-29-18.01.32.png",
+      "originalSha256": "9d40adf27e170a7c4c1780c8a923cff6a2003a2c12cfb3f1736326abf8775c1f"
+    },
+    {
+      "sourceImageUrl": "https://www.ezcontw.com/content/images/2026/02/---2026-01-30-13.44.13.png",
+      "originalSha256": "169c9118421f90a4501031d524c2794ed860e1bfc81a469f36cb110776a8bd7f"
+    },
+    {
+      "sourceImageUrl": "https://www.ezcontw.com/content/images/2026/02/---2026-01-30-13.44.27.png",
+      "originalSha256": "bb7e65c5fb6a23ede239cb355f1a5ead14e9c1c93d9e9af78159a840aa2a23e8"
+    },
+    {
+      "sourceImageUrl": "https://www.ezcontw.com/content/images/2026/02/---2026-01-30-13.44.38.png",
+      "originalSha256": "b355751f9a5ca75970e79249b3faae1c720b2a885ddb6fe8c3e1ec1dd2e13fc3"
+    },
+    {
+      "sourceImageUrl": "https://www.ezcontw.com/content/images/2026/02/---2026-01-30-13.44.49.png",
+      "originalSha256": "abfec9fb869649fdab052f31047540172566d5b245f0200390474bc7f3ed5ca0"
+    },
+    {
+      "sourceImageUrl": "https://www.ezcontw.com/content/images/2026/02/---2026-01-30-13.45.24.png",
+      "originalSha256": "a53aec5c5ef77fc5dea1a2d60d357515ed8b3da96c19a1359039e73b1018da19"
+    },
+    {
+      "sourceImageUrl": "https://www.ezcontw.com/content/images/2026/02/---2026-01-30-14.09.41.png",
+      "originalSha256": "25762b6b36d2c5704b36322342ab611bd70713c72e96cea61ad88c8f6c0e766c"
+    },
+    {
+      "sourceImageUrl": "https://www.ezcontw.com/content/images/2026/02/---2026-01-30-14.10.06.png",
+      "originalSha256": "11be068a7107a34ed543af3f48a0f868ab14f5bfe5ac3870f412eec3d607126e"
+    },
+    {
+      "sourceImageUrl": "https://www.ezcontw.com/content/images/2026/02/---2026-01-30-14.10.22.png",
+      "originalSha256": "be3d1b6e16abd638388a279b578eb650c56a94eca1fe1f1b376692f8f75b9e15"
+    },
+    {
+      "sourceImageUrl": "https://www.ezcontw.com/content/images/2026/02/---2026-01-30-14.14.40.png",
+      "originalSha256": "0ad255b90fd5666f11c56f7237de620925bc5b4cfe43cb780d63470c7bcc136a"
+    },
+    {
+      "sourceImageUrl": "https://www.ezcontw.com/content/images/2026/02/---2026-01-30-14.15.15.png",
+      "originalSha256": "b0078b33cffd5385b45c84ceeca0cc1f5cf9092bedfc938b0faaf38e6a79ad9b"
+    },
+    {
+      "sourceImageUrl": "https://www.ezcontw.com/content/images/2026/02/---2026-01-30-14.15.46.png",
+      "originalSha256": "413659b684acd17453b7c89055564eccf160be9ba701d4a3b01148d2364a3e44"
+    },
+    {
+      "sourceImageUrl": "https://www.ezcontw.com/content/images/2026/02/---2026-01-30-14.20.58.png",
+      "originalSha256": "992d16ecf6c43bc38c9050bb8d95616f157c6e7394dd0d34bf8477f0f34b5e8a"
+    },
+    {
+      "sourceImageUrl": "https://www.ezcontw.com/content/images/2026/02/---2026-01-30-14.21.46.png",
+      "originalSha256": "0c4d3ae2d5685663e67b59a35afd3b98be518ea6c2419f73eeefdf034d60c5a8"
+    },
+    {
+      "sourceImageUrl": "https://www.ezcontw.com/content/images/2026/02/---2026-01-30-14.23.06.png",
+      "originalSha256": "d952a53e127bc813918615c36fc54cc2eaa36014c7eb1bb1c2b03b337ee7abb8"
+    },
+    {
+      "sourceImageUrl": "https://www.ezcontw.com/content/images/2026/02/---2026-01-30-14.23.25.png",
+      "originalSha256": "3e362498fbc6385050e8c1c77b42c95843f488cd9f6e541a60ea1d1e74fde914"
+    },
+    {
+      "sourceImageUrl": "https://www.ezcontw.com/content/images/2026/02/---2026-01-30-14.23.57.png",
+      "originalSha256": "9e76c06340c665b2edcd60e8eb73ed12d460a81c345eba55a9f136bb6104aeca"
+    },
+    {
+      "sourceImageUrl": "https://www.ezcontw.com/content/images/2026/02/---2026-01-30-14.24.14.png",
+      "originalSha256": "2563429dc64b128f437118a00386250a51253c106b45b199904d1824686ece04"
+    },
+    {
+      "sourceImageUrl": "https://www.ezcontw.com/content/images/2026/02/---2026-01-30-14.25.03.png",
+      "originalSha256": "774cd54edd6739c289bfad9905356bc08b7462983c2d1febed599b52c7dc9417"
+    },
+    {
+      "sourceImageUrl": "https://www.ezcontw.com/content/images/2026/02/---2026-01-30-14.25.18.png",
+      "originalSha256": "f86e231cde856888be5f640a258b1302e6228b23ea28279b501e499a4e74046f"
+    },
+    {
+      "sourceImageUrl": "https://www.ezcontw.com/content/images/2026/02/---2026-01-30-14.29.44.png",
+      "originalSha256": "a8ffddfb61dca3db60f09e664a23c33fbe11fec2e8f3bc0d1e6f7404c6fc4b88"
+    },
+    {
+      "sourceImageUrl": "https://www.ezcontw.com/content/images/2026/02/---2026-01-30-14.30.09.png",
+      "originalSha256": "8526874b1d5b31677c81b0ba944b9ded1aec9d799262c27f85ce90fdad986fa5"
+    },
+    {
+      "sourceImageUrl": "https://www.ezcontw.com/content/images/2026/02/---2026-01-30-14.30.22.png",
+      "originalSha256": "8f75105886daca8a7e6b9dd88b7e8ca1e755ab17c5191a428fd32ff40f59040d"
+    },
+    {
+      "sourceImageUrl": "https://www.ezcontw.com/content/images/2026/02/---2026-01-30-14.30.33.png",
+      "originalSha256": "80180f74c11efccc6aa099179407c6730e16666864c0d04bed10453b53a41a76"
+    },
+    {
+      "sourceImageUrl": "https://www.ezcontw.com/content/images/2026/02/---2026-01-30-14.30.54.png",
+      "originalSha256": "09cd5073f91b051a425ae7ede563664773ee40c4e7e38418303c85b37f0deea0"
+    },
+    {
+      "sourceImageUrl": "https://www.ezcontw.com/content/images/2026/02/---2026-01-30-14.31.11.png",
+      "originalSha256": "7f9e9f8d3940a637d1799fe5a28533c263386be85f43a1829d40bccacc82943f"
+    },
+    {
+      "sourceImageUrl": "https://www.ezcontw.com/content/images/2026/02/---2026-01-30-14.31.30.png",
+      "originalSha256": "bdea5eb075b42e592411e5a966e6d0ae5b88b9d46900bb6d127aee792b5b770c"
+    },
+    {
+      "sourceImageUrl": "https://www.ezcontw.com/content/images/2026/02/---2026-01-30-14.31.45.png",
+      "originalSha256": "290391b5f2eb945b103279315aeb1e3737532087d18a777e62f6295af7dd241a"
+    }
+  ]
+}

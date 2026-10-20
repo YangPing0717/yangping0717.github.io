@@ -1,0 +1,192 @@
+{
+  "eventId": "fire-safety-2026",
+  "title": "2026台北國際防火防災應用展",
+  "retrievedAt": "2026-10-19",
+  "listingSourceUrl": "https://www.ezcontw.com/pr_activities/",
+  "sourceUrl": "https://www.ezcontw.com/pr_activities/#2026%25E5%258F%25B0%25E5%258C%2597%25E5%259C%258B%25E9%259A%259B%25E9%2598%25B2%25E7%2581%25AB%25E9%2598%25B2%25E7%2581%25BD%25E6%2587%2589%25E7%2594%25A8%25E5%25B1%2595",
+  "sourceHeading": "2026台北國際防火防災應用展",
+  "sourceHeadingId": "2026%E5%8F%B0%E5%8C%97%E5%9C%8B%E9%9A%9B%E9%98%B2%E7%81%AB%E9%98%B2%E7%81%BD%E6%87%89%E7%94%A8%E5%B1%95",
+  "year": "2026",
+  "yearBasis": "Explicit source heading",
+  "descriptionBasis": "Official listing title and visible stage / presentation photographs.",
+  "coverPhotoId": "fire-safety-2026-photo-01",
+  "imageProcessing": "Resize only with preserved aspect ratio; WebP display maximum 1600px and thumbnail maximum 640px on longest edge. Local original files retained when no larger than 512000 bytes; otherwise link to the original official source.",
+  "photos": [
+    {
+      "id": "fire-safety-2026-photo-01",
+      "sourceImageUrl": "https://www.ezcontw.com/content/images/2026/05/275423_0.jpg",
+      "sourceOrder": 1,
+      "originalSha256": "f2033a0847facf13d2fb4482a9e517145a77721f2fcc679a405e36c2ab785ad4",
+      "originalWidth": 1706,
+      "originalHeight": 960,
+      "originalBytes": 116096,
+      "displaySize": [
+        1600,
+        900
+      ],
+      "displayBytes": 82932,
+      "thumbnailSize": [
+        640,
+        360
+      ],
+      "thumbnailBytes": 20348,
+      "imageUrl": "/events/catalog/fire-safety-2026/display/photo-01.webp",
+      "thumbnailUrl": "/events/catalog/fire-safety-2026/thumb/photo-01.webp",
+      "originalUrl": "/events/catalog/fire-safety-2026/original/photo-01.jpg"
+    },
+    {
+      "id": "fire-safety-2026-photo-02",
+      "sourceImageUrl": "https://www.ezcontw.com/content/images/2026/05/111639_0.jpg",
+      "sourceOrder": 2,
+      "originalSha256": "9b20fbd07e41d10f2669f602ee96814731daeca5ea4abf0b8a5b5ba58e3a93cf",
+      "originalWidth": 2000,
+      "originalHeight": 1126,
+      "originalBytes": 218507,
+      "displaySize": [
+        1600,
+        901
+      ],
+      "displayBytes": 133628,
+      "thumbnailSize": [
+        640,
+        360
+      ],
+      "thumbnailBytes": 24770,
+      "imageUrl": "/events/catalog/fire-safety-2026/display/photo-02.webp",
+      "thumbnailUrl": "/events/catalog/fire-safety-2026/thumb/photo-02.webp",
+      "originalUrl": "/events/catalog/fire-safety-2026/original/photo-02.jpg"
+    },
+    {
+      "id": "fire-safety-2026-photo-03",
+      "sourceImageUrl": "https://www.ezcontw.com/content/images/2026/05/111640_0.jpg",
+      "sourceOrder": 3,
+      "originalSha256": "3af4efd108c97b29515451fcd81be5ab5badd62553597db361365b002b170131",
+      "originalWidth": 2000,
+      "originalHeight": 1126,
+      "originalBytes": 288552,
+      "displaySize": [
+        1600,
+        901
+      ],
+      "displayBytes": 178618,
+      "thumbnailSize": [
+        640,
+        360
+      ],
+      "thumbnailBytes": 35498,
+      "imageUrl": "/events/catalog/fire-safety-2026/display/photo-03.webp",
+      "thumbnailUrl": "/events/catalog/fire-safety-2026/thumb/photo-03.webp",
+      "originalUrl": "/events/catalog/fire-safety-2026/original/photo-03.jpg"
+    },
+    {
+      "id": "fire-safety-2026-photo-04",
+      "sourceImageUrl": "https://www.ezcontw.com/content/images/2026/05/111641_0.jpg",
+      "sourceOrder": 4,
+      "originalSha256": "5a69808b6b6ae746717855ba07a677ea803b147a3cc7b9d6dd62e197e941ce8b",
+      "originalWidth": 2000,
+      "originalHeight": 1126,
+      "originalBytes": 315369,
+      "displaySize": [
+        1600,
+        901
+      ],
+      "displayBytes": 205910,
+      "thumbnailSize": [
+        640,
+        360
+      ],
+      "thumbnailBytes": 43788,
+      "imageUrl": "/events/catalog/fire-safety-2026/display/photo-04.webp",
+      "thumbnailUrl": "/events/catalog/fire-safety-2026/thumb/photo-04.webp",
+      "originalUrl": "/events/catalog/fire-safety-2026/original/photo-04.jpg"
+    },
+    {
+      "id": "fire-safety-2026-photo-05",
+      "sourceImageUrl": "https://www.ezcontw.com/content/images/2026/05/111642_0.jpg",
+      "sourceOrder": 5,
+      "originalSha256": "c3e98598aea5ccbdae471c5f5da43f5bfaf4f5b1406c5267b262cb57d46a7504",
+      "originalWidth": 2000,
+      "originalHeight": 1126,
+      "originalBytes": 252559,
+      "displaySize": [
+        1600,
+        901
+      ],
+      "displayBytes": 155114,
+      "thumbnailSize": [
+        640,
+        360
+      ],
+      "thumbnailBytes": 35530,
+      "imageUrl": "/events/catalog/fire-safety-2026/display/photo-05.webp",
+      "thumbnailUrl": "/events/catalog/fire-safety-2026/thumb/photo-05.webp",
+      "originalUrl": "/events/catalog/fire-safety-2026/original/photo-05.jpg"
+    },
+    {
+      "id": "fire-safety-2026-photo-06",
+      "sourceImageUrl": "https://www.ezcontw.com/content/images/2026/05/111643_0.jpg",
+      "sourceOrder": 6,
+      "originalSha256": "e62adc03d32670c824c96e581cfe48c0084c0326a7106ee7eac43d2a082352d7",
+      "originalWidth": 2000,
+      "originalHeight": 1126,
+      "originalBytes": 322498,
+      "displaySize": [
+        1600,
+        901
+      ],
+      "displayBytes": 200184,
+      "thumbnailSize": [
+        640,
+        360
+      ],
+      "thumbnailBytes": 39852,
+      "imageUrl": "/events/catalog/fire-safety-2026/display/photo-06.webp",
+      "thumbnailUrl": "/events/catalog/fire-safety-2026/thumb/photo-06.webp",
+      "originalUrl": "/events/catalog/fire-safety-2026/original/photo-06.jpg"
+    },
+    {
+      "id": "fire-safety-2026-photo-07",
+      "sourceImageUrl": "https://www.ezcontw.com/content/images/2026/05/111648_0.jpg",
+      "sourceOrder": 7,
+      "originalSha256": "a5852c21fbd6e1421c5c5f8ecb7ce2aa8e09a60a106a1b752b5276a0e9574660",
+      "originalWidth": 2000,
+      "originalHeight": 1126,
+      "originalBytes": 218165,
+      "displaySize": [
+        1600,
+        901
+      ],
+      "displayBytes": 124636,
+      "thumbnailSize": [
+        640,
+        360
+      ],
+      "thumbnailBytes": 26458,
+      "imageUrl": "/events/catalog/fire-safety-2026/display/photo-07.webp",
+      "thumbnailUrl": "/events/catalog/fire-safety-2026/thumb/photo-07.webp",
+      "originalUrl": "/events/catalog/fire-safety-2026/original/photo-07.jpg"
+    },
+    {
+      "id": "fire-safety-2026-photo-08",
+      "sourceImageUrl": "https://www.ezcontw.com/content/images/2026/05/111649.jpg",
+      "sourceOrder": 8,
+      "originalSha256": "4dd25899bc8ab3d2bbb9334783b65effdb9ee315fa0ba32eb602beb56299c3fa",
+      "originalWidth": 2000,
+      "originalHeight": 1126,
+      "originalBytes": 188653,
+      "displaySize": [
+        1600,
+        901
+      ],
+      "displayBytes": 103066,
+      "thumbnailSize": [
+        640,
+        360
+      ],
+      "thumbnailBytes": 23432,
+      "imageUrl": "/events/catalog/fire-safety-2026/display/photo-08.webp",
+      "thumbnailUrl": "/events/catalog/fire-safety-2026/thumb/photo-08.webp",
+      "originalUrl": "/events/catalog/fire-safety-2026/original/photo-08.jpg"
+    }
+  ]
+}

@@ -1,0 +1,102 @@
+/* Album navigation stays in place; editorial content follows the filmstrip. */
+.event-panel-dialog .event-panel-sheet { width: 68%; }
+.event-panel-dialog .event-panel-topbar { min-height: 64px; }
+.event-panel-dialog .event-panel-scroll { padding-top: 24px; }
+.event-panel-dialog .event-panel-heading { margin-bottom: 20px; }
+.event-panel-dialog .event-panel-heading h2 { margin-top: 12px; font-size: clamp(28px, 2.7vw, 42px); }
+.event-panel-dialog .event-panel-main-frame { height: clamp(260px, 47dvh, 560px); border: 1px solid #ffffff1a; border-radius: 10px; touch-action: pan-y pinch-zoom; }
+.event-panel-dialog .event-panel-main-photo .event-panel-image,
+.event-panel-dialog .event-panel-main-photo .event-panel-image-preview { object-fit: contain; }
+.event-panel-dialog .event-panel-main-photo { inset: 12px 58px; }
+.event-panel-dialog .event-panel-caption { margin-top: 10px; display: grid; grid-template-columns: 1fr auto 1fr; min-height: 30px; }
+.event-panel-dialog .event-panel-photo-label { font-size: 12px; }
+.event-panel-dialog .event-panel-photo-count { font-size: 12px; }
+.event-album-hint { justify-self: end; font-size: 10px; color: #8e96a4; }
+.album-mobile-hint { display: none; }
+.event-album-arrows { position: absolute; inset: 0 8px; justify-content: space-between; align-items: center; pointer-events: none; }
+.event-panel-dialog .event-album-arrows button { width: 44px; height: 44px; pointer-events: auto; background: #060b16dd; }
+.event-album-expand { position: absolute; top: 8px; right: 8px; z-index: 1; display: grid; place-items: center; width: 44px; height: 44px; color: #fff; background: #060b16cc; border: 1px solid #ffffff40; border-radius: 8px; }
+.event-album-expand:hover { background: #0072ff; }
+.event-album-thumbnails { margin-top: 18px; }
+.event-album-filmstrip { display: flex; gap: 10px; overflow-x: auto; overflow-y: hidden; padding: 4px 3px 10px; scrollbar-width: thin; scrollbar-color: #04eabb66 transparent; overscroll-behavior-x: contain; }
+.event-panel-dialog .event-album-filmstrip .event-panel-photo-tile { position: relative; display: block; flex: 0 0 104px; width: 104px; margin: 0; padding: 0; border-radius: 5px; }
+.event-panel-dialog .event-album-filmstrip .event-panel-tile-image { width: 100%; height: 72px; border: 2px solid transparent; border-radius: 5px; box-shadow: none; }
+.event-panel-dialog .event-album-filmstrip .is-selected .event-panel-tile-image { border-color: #04eabb; box-shadow: 0 0 0 1px #04eabb40; }
+.event-album-thumbnail-number { position: absolute; bottom: 5px; left: 6px; font: 9px ui-monospace, monospace; color: white; background: #000b; padding: 2px 4px; border-radius: 3px; }
+.event-panel-dialog .event-album-story { display: block; margin-top: 28px; padding-top: 24px; border-top: 1px solid var(--panel-line, #ffffff26); }
+.event-panel-dialog .event-album-story h3,
+.event-album-reports h3 { margin: 0 0 16px; font-size: 15px; font-weight: 500; color: #fff; letter-spacing: .04em; }
+.event-panel-dialog .event-album-story p { font-size: 14px; line-height: 1.95; max-width: 76ch; }
+.event-album-reports { margin-top: 26px; }
+.event-album-report-links { display: flex; flex-wrap: wrap; gap: 10px; }
+.event-album-report-pill { display: inline-flex; align-items: center; justify-content: center; gap: 9px; min-height: 44px; padding: 10px 18px; border-radius: 999px; border: 1px solid #04eabb55; background: #04eabb08; color: #d9eee9; font-size: 13px; line-height: 1.4; text-decoration: none; }
+.event-album-report-pill:hover { color: #04eabb; border-color: #04eabb; background: #04eabb15; }
+.event-panel-dialog .event-panel-endnote { margin-top: 28px; }
+.event-panel-dialog.is-photo-expanded .event-panel-main-frame { position: fixed; inset: 64px 0 0; width: 100%; height: calc(100dvh - 64px); max-height: none; min-height: 0; z-index: 5; border: 0; border-radius: 0; background: #02050c; }
+.event-panel-dialog.is-photo-expanded .event-panel-main-photo { inset: 24px 60px; }
+@media (max-width: 760px) {
+  .event-panel-dialog .event-panel-sheet { width: 100%; }
+  .event-panel-dialog .event-panel-scroll { padding: 20px 18px 0; }
+  .event-panel-dialog .event-panel-heading { margin-bottom: 18px; }
+  .event-panel-dialog .event-panel-heading h2 { font-size: clamp(25px, 7vw, 34px); line-height: 1.3; }
+  .event-panel-dialog .event-panel-main-frame { height: clamp(210px, 38dvh, 380px); min-height: 0; max-height: none; }
+  .event-panel-dialog .event-panel-main-photo { inset: 8px; }
+  .event-panel-dialog .event-album-arrows { inset: auto 8px 8px; }
+  .event-panel-dialog .event-album-arrows button { background: #02050cbb; }
+  .event-panel-dialog .event-panel-caption { gap: 8px; }
+  .event-panel-dialog .event-panel-photo-label { font-size: 10px; }
+  .event-album-hint { font-size: 9px; }
+  .album-desktop-hint { display: none; }
+  .album-mobile-hint { display: inline; }
+  .event-album-thumbnails { margin-top: 12px; }
+  .event-album-filmstrip { gap: 8px; }
+  .event-panel-dialog .event-album-filmstrip .event-panel-photo-tile { flex-basis: 80px; width: 80px; }
+  .event-panel-dialog .event-album-filmstrip .event-panel-tile-image { height: 58px; }
+  .event-panel-dialog .event-album-story { margin-top: 20px; padding-top: 22px; }
+  .event-panel-dialog .event-album-story p { font-size: 14px; }
+  .event-album-report-links { gap: 8px; }
+  .event-album-report-pill { font-size: 12px; padding-inline: 14px; }
+  .event-panel-dialog.is-photo-expanded .event-panel-main-frame { height: calc(100dvh - 64px); }
+  .event-panel-dialog.is-photo-expanded .event-panel-main-photo { inset: 12px; }
+}
+@media (max-height: 500px) and (max-width: 950px) {
+  .event-panel-dialog .event-panel-main-frame { height: 65dvh; }
+  .event-panel-dialog.is-photo-expanded .event-panel-main-frame { height: calc(100dvh - 64px); }
+}
+
+/* Fit the original photo ratio inside the space remaining above the filmstrip. */
+.event-panel-dialog:not(.is-photo-expanded) .event-panel-main-frame {
+  width: min(100%, calc(var(--album-photo-max-height, 45dvh) * var(--album-photo-ratio, 1.777778)));
+  height: auto; min-height: 0; max-height: none; margin-inline: auto;
+  background: transparent; border: 0; border-radius: 0;
+}
+.event-panel-dialog:not(.is-photo-expanded) .event-panel-main-photo { inset: 0; }
+
+@media (max-height: 500px) {
+  .event-panel-dialog .event-panel-topbar { min-height: 50px; padding-block: 4px; }
+  .event-panel-dialog .event-panel-scroll { padding-top: 10px; }
+  .event-panel-dialog .event-panel-heading { margin-bottom: 10px; }
+  .event-panel-dialog .event-panel-heading h2 { font-size: 23px; margin-top: 6px; }
+  .event-panel-dialog .event-panel-caption { margin-top: 6px; min-height: 22px; }
+  .event-panel-dialog .event-album-thumbnails { margin-top: 6px; }
+  .event-panel-dialog .event-album-filmstrip .event-panel-tile-image { height: 44px; }
+}
+
+/* Keep mobile view controls clear and readable above the spatial cards. */
+@media (max-width: 760px) {
+  .event-overview .site-header .view-switch button { min-height: 44px; min-width: 106px; padding: 10px 14px; font-size: 12px; gap: 7px; }
+  .event-overview .site-header .view-switch button span { display: inline; }
+  .event-overview .site-header .view-switch { margin-inline: auto; }
+  .event-overview .card-caption { font-size: 18px; }
+  .event-overview .card-number, .event-overview .card-event-count { display: none; }
+  .event-overview.view-grid .image-grid { gap: 24px 14px; }
+  .event-overview.view-grid .grid-caption h2 { font-size: 13px; line-height: 1.5; }
+}
+
+@media (max-width: 760px) { .event-overview .gallery-intro { top: 51.5%; } }
+
+/* Mobile uses the scrollable activity list; the spatial mode stays on desktop. */
+@media (max-width: 760px) {
+  .gallery-app.event-overview.view-grid .collection-section { top: 70px; padding-top: 24px; padding-bottom: max(28px, env(safe-area-inset-bottom)); }
+  .gallery-app.event-overview.view-grid .collection-heading { margin-bottom: 24px; }
+}

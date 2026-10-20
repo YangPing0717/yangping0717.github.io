@@ -1,0 +1,104 @@
+{
+  "eventId": "active-aging-2026",
+  "title": "2026 高齡化產業博覽會",
+  "retrievedAt": "2026-10-19",
+  "listingSourceUrl": "https://www.ezcontw.com/pr_activities/",
+  "sourceUrl": "https://www.ezcontw.com/gao-ling-hua-chan-ye-bo-lan-hui/",
+  "sourceHeading": "2026 高齡化產業博覽會",
+  "sourceHeadingId": "2026-%E9%AB%98%E9%BD%A1%E5%8C%96%E7%94%A2%E6%A5%AD%E5%8D%9A%E8%A6%BD%E6%9C%83",
+  "year": "2026",
+  "yearBasis": "Explicit source heading",
+  "descriptionBasis": "Paraphrased from the official linked activity article.",
+  "coverPhotoId": "active-aging-2026-photo-04",
+  "imageProcessing": "Resize only with preserved aspect ratio; WebP display maximum 1600px and thumbnail maximum 640px on longest edge. Local original files retained when no larger than 512000 bytes; otherwise link to the original official source.",
+  "photos": [
+    {
+      "id": "active-aging-2026-photo-04",
+      "sourceImageUrl": "https://www.ezcontw.com/content/images/2026/08/LINE_ALBUM_260807-0809-------_260810_4-2.jpg",
+      "sourceOrder": 4,
+      "originalSha256": "034d591ee4d46d3febe3c12f213fc3f5380939d9eb78543a56bf63c10b3ffd12",
+      "originalWidth": 1280,
+      "originalHeight": 720,
+      "originalBytes": 127920,
+      "displaySize": [
+        1280,
+        720
+      ],
+      "displayBytes": 122068,
+      "thumbnailSize": [
+        640,
+        360
+      ],
+      "thumbnailBytes": 35524,
+      "imageUrl": "/events/catalog/active-aging-2026/display/photo-04.webp",
+      "thumbnailUrl": "/events/catalog/active-aging-2026/thumb/photo-04.webp",
+      "originalUrl": "/events/catalog/active-aging-2026/original/photo-04.jpg"
+    },
+    {
+      "id": "active-aging-2026-photo-02",
+      "sourceImageUrl": "https://www.ezcontw.com/content/images/2026/08/LINE_ALBUM_260807-0809-------_260810_2-2.jpg",
+      "sourceOrder": 2,
+      "originalSha256": "9cc4190027bf60fd21f233f1e50e650f90e92f609ef4e9dffaf1c492cedd86be",
+      "originalWidth": 1706,
+      "originalHeight": 960,
+      "originalBytes": 228846,
+      "displaySize": [
+        1600,
+        900
+      ],
+      "displayBytes": 190848,
+      "thumbnailSize": [
+        640,
+        360
+      ],
+      "thumbnailBytes": 39208,
+      "imageUrl": "/events/catalog/active-aging-2026/display/photo-02.webp",
+      "thumbnailUrl": "/events/catalog/active-aging-2026/thumb/photo-02.webp",
+      "originalUrl": "/events/catalog/active-aging-2026/original/photo-02.jpg"
+    },
+    {
+      "id": "active-aging-2026-photo-01",
+      "sourceImageUrl": "https://www.ezcontw.com/content/images/2026/08/LINE_ALBUM_260807-0809-------_260810_1-2.jpg",
+      "sourceOrder": 1,
+      "originalSha256": "f2b1487cabd04e4b47a247944fd011d5ce24a147d67d082abcd33729dfbaf925",
+      "originalWidth": 960,
+      "originalHeight": 1706,
+      "originalBytes": 141067,
+      "displaySize": [
+        900,
+        1600
+      ],
+      "displayBytes": 98834,
+      "thumbnailSize": [
+        360,
+        640
+      ],
+      "thumbnailBytes": 23450,
+      "imageUrl": "/events/catalog/active-aging-2026/display/photo-01.webp",
+      "thumbnailUrl": "/events/catalog/active-aging-2026/thumb/photo-01.webp",
+      "originalUrl": "/events/catalog/active-aging-2026/original/photo-01.jpg"
+    },
+    {
+      "id": "active-aging-2026-photo-03",
+      "sourceImageUrl": "https://www.ezcontw.com/content/images/2026/08/LINE_ALBUM_260807-0809-------_260810_3-2.jpg",
+      "sourceOrder": 3,
+      "originalSha256": "274f56648f767531ca18f01d0b3ee249f01336c14a730c1fb82ae57fbe29674b",
+      "originalWidth": 720,
+      "originalHeight": 1280,
+      "originalBytes": 112108,
+      "displaySize": [
+        720,
+        1280
+      ],
+      "displayBytes": 100254,
+      "thumbnailSize": [
+        360,
+        640
+      ],
+      "thumbnailBytes": 28794,
+      "imageUrl": "/events/catalog/active-aging-2026/display/photo-03.webp",
+      "thumbnailUrl": "/events/catalog/active-aging-2026/thumb/photo-03.webp",
+      "originalUrl": "/events/catalog/active-aging-2026/original/photo-03.jpg"
+    }
+  ]
+}

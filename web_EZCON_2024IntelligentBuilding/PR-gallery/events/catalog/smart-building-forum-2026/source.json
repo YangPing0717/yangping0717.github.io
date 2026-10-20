@@ -1,0 +1,104 @@
+{
+  "eventId": "smart-building-forum-2026",
+  "title": "2026智慧建築產業交流會",
+  "retrievedAt": "2026-10-19",
+  "listingSourceUrl": "https://www.ezcontw.com/pr_activities/",
+  "sourceUrl": "https://www.ezcontw.com/pr_activities/#2026%25E6%2599%25BA%25E6%2585%25A7%25E5%25BB%25BA%25E7%25AF%2589%25E7%2594%25A2%25E6%25A5%25AD%25E4%25BA%25A4%25E6%25B5%2581%25E6%259C%2583",
+  "sourceHeading": "2026智慧建築產業交流會",
+  "sourceHeadingId": "2026%E6%99%BA%E6%85%A7%E5%BB%BA%E7%AF%89%E7%94%A2%E6%A5%AD%E4%BA%A4%E6%B5%81%E6%9C%83",
+  "year": "2026",
+  "yearBasis": "Explicit source heading",
+  "descriptionBasis": "Official listing title and visible speaker presentation photographs.",
+  "coverPhotoId": "smart-building-forum-2026-photo-03",
+  "imageProcessing": "Resize only with preserved aspect ratio; WebP display maximum 1600px and thumbnail maximum 640px on longest edge. Local original files retained when no larger than 512000 bytes; otherwise link to the original official source.",
+  "photos": [
+    {
+      "id": "smart-building-forum-2026-photo-03",
+      "sourceImageUrl": "https://www.ezcontw.com/content/images/2026/06/LINE_ALBUM_2026317-----------_260610_3.jpg",
+      "sourceOrder": 3,
+      "originalSha256": "d406f4a7cff75d568514d67efd59c1b4fcbd5c9032c39ddd5119cdf548c5db0b",
+      "originalWidth": 1280,
+      "originalHeight": 721,
+      "originalBytes": 99474,
+      "displaySize": [
+        1280,
+        721
+      ],
+      "displayBytes": 93746,
+      "thumbnailSize": [
+        640,
+        361
+      ],
+      "thumbnailBytes": 24084,
+      "imageUrl": "/events/catalog/smart-building-forum-2026/display/photo-03.webp",
+      "thumbnailUrl": "/events/catalog/smart-building-forum-2026/thumb/photo-03.webp",
+      "originalUrl": "/events/catalog/smart-building-forum-2026/original/photo-03.jpg"
+    },
+    {
+      "id": "smart-building-forum-2026-photo-02",
+      "sourceImageUrl": "https://www.ezcontw.com/content/images/2026/06/LINE_ALBUM_2026317-----------_260610_2.jpg",
+      "sourceOrder": 2,
+      "originalSha256": "4bf3afd6de321e1672497f75946aacc20ba8107e5e94a7a0beb3df475c1ff56c",
+      "originalWidth": 1280,
+      "originalHeight": 721,
+      "originalBytes": 105065,
+      "displaySize": [
+        1280,
+        721
+      ],
+      "displayBytes": 101632,
+      "thumbnailSize": [
+        640,
+        361
+      ],
+      "thumbnailBytes": 27602,
+      "imageUrl": "/events/catalog/smart-building-forum-2026/display/photo-02.webp",
+      "thumbnailUrl": "/events/catalog/smart-building-forum-2026/thumb/photo-02.webp",
+      "originalUrl": "/events/catalog/smart-building-forum-2026/original/photo-02.jpg"
+    },
+    {
+      "id": "smart-building-forum-2026-photo-01",
+      "sourceImageUrl": "https://www.ezcontw.com/content/images/2026/06/LINE_ALBUM_2026317-----------_260610_1.jpg",
+      "sourceOrder": 1,
+      "originalSha256": "f1e8483f669a59a6f60b5600cf00b1b271ca5d8e9ca85d62980ae211173c5d63",
+      "originalWidth": 1280,
+      "originalHeight": 721,
+      "originalBytes": 105674,
+      "displaySize": [
+        1280,
+        721
+      ],
+      "displayBytes": 98186,
+      "thumbnailSize": [
+        640,
+        361
+      ],
+      "thumbnailBytes": 20242,
+      "imageUrl": "/events/catalog/smart-building-forum-2026/display/photo-01.webp",
+      "thumbnailUrl": "/events/catalog/smart-building-forum-2026/thumb/photo-01.webp",
+      "originalUrl": "/events/catalog/smart-building-forum-2026/original/photo-01.jpg"
+    },
+    {
+      "id": "smart-building-forum-2026-photo-04",
+      "sourceImageUrl": "https://www.ezcontw.com/content/images/2026/06/LINE_ALBUM_2026317-----------_260610_4.jpg",
+      "sourceOrder": 4,
+      "originalSha256": "842d28989f09125180c04a6cc2c3d5c78e2397190b697f1e9fbeac7c4fdd88da",
+      "originalWidth": 1280,
+      "originalHeight": 721,
+      "originalBytes": 104910,
+      "displaySize": [
+        1280,
+        721
+      ],
+      "displayBytes": 93952,
+      "thumbnailSize": [
+        640,
+        361
+      ],
+      "thumbnailBytes": 25542,
+      "imageUrl": "/events/catalog/smart-building-forum-2026/display/photo-04.webp",
+      "thumbnailUrl": "/events/catalog/smart-building-forum-2026/thumb/photo-04.webp",
+      "originalUrl": "/events/catalog/smart-building-forum-2026/original/photo-04.jpg"
+    }
+  ]
+}

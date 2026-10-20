@@ -1,0 +1,192 @@
+{
+  "eventId": "schneider-leaders-dinner",
+  "title": "【施耐德】建築開發商領袖晚宴",
+  "retrievedAt": "2026-10-19",
+  "listingSourceUrl": "https://www.ezcontw.com/pr_activities/",
+  "sourceUrl": "https://www.ezcontw.com/pr_activities/#%25E3%2580%2590%25E6%2596%25BD%25E8%2580%2590%25E5%25BE%25B7%25E3%2580%2591%25E5%25BB%25BA%25E7%25AF%2589%25E9%2596%258B%25E7%2599%25BC%25E5%2595%2586%25E9%25A0%2598%25E8%25A2%2596%25E6%2599%259A%25E5%25AE%25B4",
+  "sourceHeading": "【施耐德】建築開發商領袖晚宴",
+  "sourceHeadingId": "%E3%80%90%E6%96%BD%E8%80%90%E5%BE%B7%E3%80%91%E5%BB%BA%E7%AF%89%E9%96%8B%E7%99%BC%E5%95%86%E9%A0%98%E8%A2%96%E6%99%9A%E5%AE%B4",
+  "year": null,
+  "yearBasis": "Not stated in source heading",
+  "descriptionBasis": "Official listing title and visible dinner / exhibition / discussion photographs. No event year inferred from upload paths.",
+  "coverPhotoId": "schneider-leaders-dinner-photo-02",
+  "imageProcessing": "Resize only with preserved aspect ratio; WebP display maximum 1600px and thumbnail maximum 640px on longest edge. Local original files retained when no larger than 512000 bytes; otherwise link to the original official source.",
+  "photos": [
+    {
+      "id": "schneider-leaders-dinner-photo-02",
+      "sourceImageUrl": "https://www.ezcontw.com/content/images/2026/01/S__70893653_0.jpg",
+      "sourceOrder": 2,
+      "originalSha256": "99c165f09f39f4f575b39d0304837652e77f85b78f034251333529c3aa1ce4ff",
+      "originalWidth": 2000,
+      "originalHeight": 1334,
+      "originalBytes": 187252,
+      "displaySize": [
+        1600,
+        1067
+      ],
+      "displayBytes": 96092,
+      "thumbnailSize": [
+        640,
+        427
+      ],
+      "thumbnailBytes": 22056,
+      "imageUrl": "/events/catalog/schneider-leaders-dinner/display/photo-02.webp",
+      "thumbnailUrl": "/events/catalog/schneider-leaders-dinner/thumb/photo-02.webp",
+      "originalUrl": "/events/catalog/schneider-leaders-dinner/original/photo-02.jpg"
+    },
+    {
+      "id": "schneider-leaders-dinner-photo-01",
+      "sourceImageUrl": "https://www.ezcontw.com/content/images/2026/01/S__70713350.jpg",
+      "sourceOrder": 1,
+      "originalSha256": "850fcdd5fbbb977dba1816d6dba5a5688491740105db3b52a0d8734a025fffbb",
+      "originalWidth": 2000,
+      "originalHeight": 1500,
+      "originalBytes": 380741,
+      "displaySize": [
+        1600,
+        1200
+      ],
+      "displayBytes": 226690,
+      "thumbnailSize": [
+        640,
+        480
+      ],
+      "thumbnailBytes": 40350,
+      "imageUrl": "/events/catalog/schneider-leaders-dinner/display/photo-01.webp",
+      "thumbnailUrl": "/events/catalog/schneider-leaders-dinner/thumb/photo-01.webp",
+      "originalUrl": "/events/catalog/schneider-leaders-dinner/original/photo-01.jpg"
+    },
+    {
+      "id": "schneider-leaders-dinner-photo-03",
+      "sourceImageUrl": "https://www.ezcontw.com/content/images/2026/01/S__70893646_0.jpg",
+      "sourceOrder": 3,
+      "originalSha256": "610e3f3ec1819df63d6f25b9bf8e5dcf58c0b94101db33fb87ca92c276c7e7d8",
+      "originalWidth": 2000,
+      "originalHeight": 1334,
+      "originalBytes": 364639,
+      "displaySize": [
+        1600,
+        1067
+      ],
+      "displayBytes": 225542,
+      "thumbnailSize": [
+        640,
+        427
+      ],
+      "thumbnailBytes": 39300,
+      "imageUrl": "/events/catalog/schneider-leaders-dinner/display/photo-03.webp",
+      "thumbnailUrl": "/events/catalog/schneider-leaders-dinner/thumb/photo-03.webp",
+      "originalUrl": "/events/catalog/schneider-leaders-dinner/original/photo-03.jpg"
+    },
+    {
+      "id": "schneider-leaders-dinner-photo-04",
+      "sourceImageUrl": "https://www.ezcontw.com/content/images/2026/01/S__70893648_0.jpg",
+      "sourceOrder": 4,
+      "originalSha256": "cd07ffa047f61f4c8528b9b2340464b7dda74d1c0e227229a48b75d12a736ee6",
+      "originalWidth": 2000,
+      "originalHeight": 1334,
+      "originalBytes": 204991,
+      "displaySize": [
+        1600,
+        1067
+      ],
+      "displayBytes": 100264,
+      "thumbnailSize": [
+        640,
+        427
+      ],
+      "thumbnailBytes": 24522,
+      "imageUrl": "/events/catalog/schneider-leaders-dinner/display/photo-04.webp",
+      "thumbnailUrl": "/events/catalog/schneider-leaders-dinner/thumb/photo-04.webp",
+      "originalUrl": "/events/catalog/schneider-leaders-dinner/original/photo-04.jpg"
+    },
+    {
+      "id": "schneider-leaders-dinner-photo-05",
+      "sourceImageUrl": "https://www.ezcontw.com/content/images/2026/01/S__70893649_0.jpg",
+      "sourceOrder": 5,
+      "originalSha256": "456735f19b43b8a746f5952f1ae36e7437fcef22f2b909c7c536d0d6caa225b3",
+      "originalWidth": 2000,
+      "originalHeight": 1334,
+      "originalBytes": 364359,
+      "displaySize": [
+        1600,
+        1067
+      ],
+      "displayBytes": 222060,
+      "thumbnailSize": [
+        640,
+        427
+      ],
+      "thumbnailBytes": 47888,
+      "imageUrl": "/events/catalog/schneider-leaders-dinner/display/photo-05.webp",
+      "thumbnailUrl": "/events/catalog/schneider-leaders-dinner/thumb/photo-05.webp",
+      "originalUrl": "/events/catalog/schneider-leaders-dinner/original/photo-05.jpg"
+    },
+    {
+      "id": "schneider-leaders-dinner-photo-06",
+      "sourceImageUrl": "https://www.ezcontw.com/content/images/2026/01/S__70893651_0.jpg",
+      "sourceOrder": 6,
+      "originalSha256": "45e1d636448ba0da7a783aabd6e83c19a6ba65bdc14947e0429d707b2d5c58f9",
+      "originalWidth": 2000,
+      "originalHeight": 1125,
+      "originalBytes": 266963,
+      "displaySize": [
+        1600,
+        900
+      ],
+      "displayBytes": 156478,
+      "thumbnailSize": [
+        640,
+        360
+      ],
+      "thumbnailBytes": 31272,
+      "imageUrl": "/events/catalog/schneider-leaders-dinner/display/photo-06.webp",
+      "thumbnailUrl": "/events/catalog/schneider-leaders-dinner/thumb/photo-06.webp",
+      "originalUrl": "/events/catalog/schneider-leaders-dinner/original/photo-06.jpg"
+    },
+    {
+      "id": "schneider-leaders-dinner-photo-07",
+      "sourceImageUrl": "https://www.ezcontw.com/content/images/2026/01/S__70893652_0.jpg",
+      "sourceOrder": 7,
+      "originalSha256": "2d97015b7485e4341a54822cfce3694387e9ba657cdd994bb441c96942e85163",
+      "originalWidth": 2000,
+      "originalHeight": 1334,
+      "originalBytes": 255366,
+      "displaySize": [
+        1600,
+        1067
+      ],
+      "displayBytes": 143112,
+      "thumbnailSize": [
+        640,
+        427
+      ],
+      "thumbnailBytes": 30448,
+      "imageUrl": "/events/catalog/schneider-leaders-dinner/display/photo-07.webp",
+      "thumbnailUrl": "/events/catalog/schneider-leaders-dinner/thumb/photo-07.webp",
+      "originalUrl": "/events/catalog/schneider-leaders-dinner/original/photo-07.jpg"
+    },
+    {
+      "id": "schneider-leaders-dinner-photo-08",
+      "sourceImageUrl": "https://www.ezcontw.com/content/images/2026/01/S__70893654_0.jpg",
+      "sourceOrder": 8,
+      "originalSha256": "4db485ddd12ca5b72bb096c87f05a0294c304f487d2fcd6989df58ebc446003f",
+      "originalWidth": 2000,
+      "originalHeight": 1125,
+      "originalBytes": 322388,
+      "displaySize": [
+        1600,
+        900
+      ],
+      "displayBytes": 190940,
+      "thumbnailSize": [
+        640,
+        360
+      ],
+      "thumbnailBytes": 35828,
+      "imageUrl": "/events/catalog/schneider-leaders-dinner/display/photo-08.webp",
+      "thumbnailUrl": "/events/catalog/schneider-leaders-dinner/thumb/photo-08.webp",
+      "originalUrl": "/events/catalog/schneider-leaders-dinner/original/photo-08.jpg"
+    }
+  ]
+}

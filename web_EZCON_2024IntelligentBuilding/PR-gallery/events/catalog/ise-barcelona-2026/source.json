@@ -1,0 +1,192 @@
+{
+  "eventId": "ise-barcelona-2026",
+  "title": "2026 ISE Barcelona 海外參展 - Aopen",
+  "retrievedAt": "2026-10-19",
+  "listingSourceUrl": "https://www.ezcontw.com/pr_activities/",
+  "sourceUrl": "https://www.ezcontw.com/pr_activities/#2026-ise-barcelona-%25E6%25B5%25B7%25E5%25A4%2596%25E5%258F%2583%25E5%25B1%2595aopen",
+  "sourceHeading": "2026 ISE Barcelona 海外參展 - Aopen",
+  "sourceHeadingId": "2026-ise-barcelona-%E6%B5%B7%E5%A4%96%E5%8F%83%E5%B1%95aopen",
+  "year": "2026",
+  "yearBasis": "Explicit source heading",
+  "descriptionBasis": "Official listing title and visible AOPEN booth / group photographs.",
+  "coverPhotoId": "ise-barcelona-2026-photo-01",
+  "imageProcessing": "Resize only with preserved aspect ratio; WebP display maximum 1600px and thumbnail maximum 640px on longest edge. Local original files retained when no larger than 512000 bytes; otherwise link to the original official source.",
+  "photos": [
+    {
+      "id": "ise-barcelona-2026-photo-01",
+      "sourceImageUrl": "https://www.ezcontw.com/content/images/2026/06/LINE_ALBUM_2026-Aopen----_260610_1.jpg",
+      "sourceOrder": 1,
+      "originalSha256": "adda6c320251dc2f3d643f961242eff8ef8ddfb228af570dae44749ef98f7999",
+      "originalWidth": 1477,
+      "originalHeight": 1108,
+      "originalBytes": 191314,
+      "displaySize": [
+        1477,
+        1108
+      ],
+      "displayBytes": 150094,
+      "thumbnailSize": [
+        640,
+        480
+      ],
+      "thumbnailBytes": 38580,
+      "imageUrl": "/events/catalog/ise-barcelona-2026/display/photo-01.webp",
+      "thumbnailUrl": "/events/catalog/ise-barcelona-2026/thumb/photo-01.webp",
+      "originalUrl": "/events/catalog/ise-barcelona-2026/original/photo-01.jpg"
+    },
+    {
+      "id": "ise-barcelona-2026-photo-02",
+      "sourceImageUrl": "https://www.ezcontw.com/content/images/2026/06/LINE_ALBUM_2026-Aopen----_260610_2.jpg",
+      "sourceOrder": 2,
+      "originalSha256": "c9aedbe312a70ad16a342780ef1ac684d7fae9bbe71c70028d7f81138a642cf4",
+      "originalWidth": 1774,
+      "originalHeight": 2364,
+      "originalBytes": 536389,
+      "displaySize": [
+        1201,
+        1600
+      ],
+      "displayBytes": 274250,
+      "thumbnailSize": [
+        480,
+        640
+      ],
+      "thumbnailBytes": 48108,
+      "imageUrl": "/events/catalog/ise-barcelona-2026/display/photo-02.webp",
+      "thumbnailUrl": "/events/catalog/ise-barcelona-2026/thumb/photo-02.webp",
+      "originalUrl": "https://www.ezcontw.com/content/images/2026/06/LINE_ALBUM_2026-Aopen----_260610_2.jpg"
+    },
+    {
+      "id": "ise-barcelona-2026-photo-03",
+      "sourceImageUrl": "https://www.ezcontw.com/content/images/2026/06/LINE_ALBUM_2026-Aopen----_260610_3.jpg",
+      "sourceOrder": 3,
+      "originalSha256": "8782dbfe7893f35fb9f7ac1c900958837c92ded1f8cac098f291494bf21f0b1c",
+      "originalWidth": 1774,
+      "originalHeight": 2364,
+      "originalBytes": 449483,
+      "displaySize": [
+        1201,
+        1600
+      ],
+      "displayBytes": 205204,
+      "thumbnailSize": [
+        480,
+        640
+      ],
+      "thumbnailBytes": 40890,
+      "imageUrl": "/events/catalog/ise-barcelona-2026/display/photo-03.webp",
+      "thumbnailUrl": "/events/catalog/ise-barcelona-2026/thumb/photo-03.webp",
+      "originalUrl": "/events/catalog/ise-barcelona-2026/original/photo-03.jpg"
+    },
+    {
+      "id": "ise-barcelona-2026-photo-04",
+      "sourceImageUrl": "https://www.ezcontw.com/content/images/2026/06/LINE_ALBUM_2026-Aopen----_260610_4.jpg",
+      "sourceOrder": 4,
+      "originalSha256": "dc4185ea94a72727a31afc422661a60815f93dfb99fbf57edc4db6ace6c0b910",
+      "originalWidth": 2000,
+      "originalHeight": 1501,
+      "originalBytes": 361122,
+      "displaySize": [
+        1600,
+        1201
+      ],
+      "displayBytes": 209612,
+      "thumbnailSize": [
+        640,
+        480
+      ],
+      "thumbnailBytes": 40934,
+      "imageUrl": "/events/catalog/ise-barcelona-2026/display/photo-04.webp",
+      "thumbnailUrl": "/events/catalog/ise-barcelona-2026/thumb/photo-04.webp",
+      "originalUrl": "/events/catalog/ise-barcelona-2026/original/photo-04.jpg"
+    },
+    {
+      "id": "ise-barcelona-2026-photo-05",
+      "sourceImageUrl": "https://www.ezcontw.com/content/images/2026/06/LINE_ALBUM_2026-Aopen----_260610_5.jpg",
+      "sourceOrder": 5,
+      "originalSha256": "aff4e212a71f0710c177432d4c34137d373ddf25cc1b357a184f2c0b911ba2e9",
+      "originalWidth": 1774,
+      "originalHeight": 2364,
+      "originalBytes": 462618,
+      "displaySize": [
+        1201,
+        1600
+      ],
+      "displayBytes": 225820,
+      "thumbnailSize": [
+        480,
+        640
+      ],
+      "thumbnailBytes": 45210,
+      "imageUrl": "/events/catalog/ise-barcelona-2026/display/photo-05.webp",
+      "thumbnailUrl": "/events/catalog/ise-barcelona-2026/thumb/photo-05.webp",
+      "originalUrl": "/events/catalog/ise-barcelona-2026/original/photo-05.jpg"
+    },
+    {
+      "id": "ise-barcelona-2026-photo-06",
+      "sourceImageUrl": "https://www.ezcontw.com/content/images/2026/06/LINE_ALBUM_2026-Aopen----_260610_6.jpg",
+      "sourceOrder": 6,
+      "originalSha256": "dac9cc7db75c1aa1b00e224b48c65fa971fe1670809ab2e8c2c670dc1f980355",
+      "originalWidth": 2000,
+      "originalHeight": 1501,
+      "originalBytes": 402743,
+      "displaySize": [
+        1600,
+        1201
+      ],
+      "displayBytes": 254922,
+      "thumbnailSize": [
+        640,
+        480
+      ],
+      "thumbnailBytes": 46144,
+      "imageUrl": "/events/catalog/ise-barcelona-2026/display/photo-06.webp",
+      "thumbnailUrl": "/events/catalog/ise-barcelona-2026/thumb/photo-06.webp",
+      "originalUrl": "/events/catalog/ise-barcelona-2026/original/photo-06.jpg"
+    },
+    {
+      "id": "ise-barcelona-2026-photo-07",
+      "sourceImageUrl": "https://www.ezcontw.com/content/images/2026/06/LINE_ALBUM_2026-Aopen----_260610_7.jpg",
+      "sourceOrder": 7,
+      "originalSha256": "7c5e8e2c5f52ce3193d182f31625ceedd204c76a4a9db87076971afb62790956",
+      "originalWidth": 960,
+      "originalHeight": 1706,
+      "originalBytes": 172333,
+      "displaySize": [
+        900,
+        1600
+      ],
+      "displayBytes": 126034,
+      "thumbnailSize": [
+        360,
+        640
+      ],
+      "thumbnailBytes": 29750,
+      "imageUrl": "/events/catalog/ise-barcelona-2026/display/photo-07.webp",
+      "thumbnailUrl": "/events/catalog/ise-barcelona-2026/thumb/photo-07.webp",
+      "originalUrl": "/events/catalog/ise-barcelona-2026/original/photo-07.jpg"
+    },
+    {
+      "id": "ise-barcelona-2026-photo-08",
+      "sourceImageUrl": "https://www.ezcontw.com/content/images/2026/06/LINE_ALBUM_2026-Aopen----_260610_8.jpg",
+      "sourceOrder": 8,
+      "originalSha256": "58743b65d8f1f8e44c47118d134133bd53c06ebdf509975e8f95af9b2d9fa038",
+      "originalWidth": 960,
+      "originalHeight": 1706,
+      "originalBytes": 145314,
+      "displaySize": [
+        900,
+        1600
+      ],
+      "displayBytes": 100712,
+      "thumbnailSize": [
+        360,
+        640
+      ],
+      "thumbnailBytes": 24520,
+      "imageUrl": "/events/catalog/ise-barcelona-2026/display/photo-08.webp",
+      "thumbnailUrl": "/events/catalog/ise-barcelona-2026/thumb/photo-08.webp",
+      "originalUrl": "/events/catalog/ise-barcelona-2026/original/photo-08.jpg"
+    }
+  ]
+}
