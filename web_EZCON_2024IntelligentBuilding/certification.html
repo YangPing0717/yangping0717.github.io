@@ -57,6 +57,69 @@
     <link id="colors" href="css/vendors.css" rel="stylesheet" type="text/css" >
     <link id="colors" href="css/ez.css?v=202609" rel="stylesheet" type="text/css" >
 
+    <!-- Match the 1080 x 600 background frame used by the other certification sections. -->
+    <style id="certifi-iot-background-size">
+        #certifi-iot .xb-project-img {
+            width: 1080px;
+            max-width: min(100%, 1080px);
+        }
+        #certifi-iot .xb-project-img .xb-img {
+            aspect-ratio: 9 / 5;
+        }
+        #certifi-iot .xb-project-img .xb-img a {
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+        @media (max-width: 1199px) {
+            #certifi-iot .xb-project-img { max-width: 760px; }
+        }
+        @media (max-width: 991px) {
+            #certifi-iot .xb-project-img { max-width: 645px; }
+        }
+    </style>
+
+    <style id="certifi-intel-title-icon">
+        #certifi-third .intel-title-first-line {
+            display: block;
+            position: relative;
+            width: fit-content;
+            max-width: 100%;
+            padding-right: calc(134px + 0.3em);
+            line-height: 1.15;
+        }
+        #certifi-third .intel-title-first-line .bestAI {
+            text-align: left;
+        }
+        #certifi-third .intel-title-first-line img {
+            display: block;
+            position: absolute;
+            top: 50%;
+            right: 0;
+            transform: translateY(-50%);
+            width: 134px;
+            height: 134px;
+            margin: 0;
+            padding: 0;
+            object-fit: contain;
+            z-index: auto;
+        }
+        #certifi-third .intel-title-second-line {
+            display: block;
+            line-height: 1.15;
+            color: #fff;
+            -webkit-text-fill-color: #fff;
+        }
+        #certifi-third .xb-project-wrap_2.for_certifi {
+            margin-top: calc(7.2rem + 32px);
+        }
+            @media (min-width: 769px) {
+            #certifi-third .sec-title .title.type4.margin_v {
+                margin-top: 3px;
+            }
+        }
+    </style>
+
 </head>
 
 <body class="dark-scheme">
@@ -475,6 +538,56 @@
                 <div class="de-gradient-edge-bottom"></div>
             </section>
 
+            <!-- 物聯網設備整合發明專利 -->
+            <section id="certifi-iot" data-title='物聯網設備整合能力' class="service pos-rel pt-200 pb-200 bg_img bg_img_mobile" data-background="assets/img/bg/hero-bg03.jpg">
+                <div class="de-gradient-edge-top"></div>
+                <div class="container mxw-1650">
+                    <div class="row">
+                        <!-- title -->
+                        <div class="col-lg-12 z-3">
+                            <div class="sec-title blog-sec-title">
+                                <span class="sub-title mb-15">物聯網設備整合能力</span>
+                                <h2 class="title type4 margin_v forPhone_br_show text-uppercase wow fadeInUp ">
+                                    <span class="bestAI">智慧財產局發明專利</span><br/>物聯網設備整合控制系統及方法
+                                    <img src="assets/img/icon/ezgif-transBG_2.gif" alt="shape">
+                                </h2>
+                            </div>
+                        </div>
+                        <div class="col-lg-12">
+                            <div class="xb-project-wrap xb-project-wrap_2 for_certifi type2">
+                                <div class="xb-project-item wow fadeInUp" data-wow-delay="0ms" data-wow-duration="600ms">
+                                    <div class="xb-project-content">
+                                        <div class="xb-item--inner xb-border">
+                                            <div class="row">
+                                                <div class="col-lg-7 col-12">
+                                                    <div class="xb-item--img ">
+                                                        <img src="demo/certifi/certificate/iot-device-integration-patent-clean.png" alt="物聯網設備整合控制系統及方法發明專利證書（I941992）">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <p class="xb-item--content clr-white">取得經濟部智慧財產局發明專利「物聯網設備整合控制系統及方法」， 展現易控在物聯網設備整合與系統控制領域的自主研發能力。以設備整合控制技術為基礎，持續深化智慧建築與物聯網應用，為建築場域的智慧化管理提供技術支援。</p>
+                                        </div>
+                                    </div>
+                                    <div class="xb-project-img img-hove-effect">
+                                        <div class="xb-img">
+                                            <a href="#!" ><img src="demo/certifi/certifi_bg_iot_abstract_core.jpg" alt="抽象智慧核心向外串聯多種物聯網裝置示意圖"></a> 
+                                            <a href="#!" ><img src="demo/certifi/certifi_bg_iot_abstract_core.jpg" alt="抽象智慧核心向外串聯多種物聯網裝置示意圖"></a>
+                                            <a href="#!" ><img src="demo/certifi/certifi_bg_iot_abstract_core.jpg" alt="抽象智慧核心向外串聯多種物聯網裝置示意圖"></a>
+                                            <a href="#!" ><img src="demo/certifi/certifi_bg_iot_abstract_core.jpg" alt="抽象智慧核心向外串聯多種物聯網裝置示意圖"></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="background_video type2">
+                        <video class="responsive-video" src="https://www.pexels.com/download/video/32399073/" loop="" muted="" playsinline="" autoplay="" poster="assets/img/bg/hero-bg03_1.jpg">
+                        </video>                        
+                    </div>
+                </div>
+                <div class="de-gradient-edge-bottom"></div>
+            </section>
+
             <!-- 認證 3 -->
             <section id="certifi-third" data-title='Intel&ensp;生態系合作與市場驗證' class="service pos-rel pt-200 pb-200 bg_img bg_img_mobile" data-background="assets/img/bg/hero-bg03.jpg">
                 <div class="de-gradient-edge-top"></div>
@@ -486,9 +599,11 @@
                                 <span class="sub-title mb-15">Intel 生態系合作與市場驗證</span>
                                 <!-- <h2 class="title">富櫻翫<br/>頂級溫泉養生行館 <img src="assets/img/icon/original-9e54f87f13d.gif" alt="shape"></h2> -->
                                 <h2 class="title type4 margin_v forPhone_br_show text-uppercase wow fadeInUp ">
-                                    <span class="bestAI">進入 Intel Edge AI 生態系</span><br/>智慧建築 AI 邊緣應用
-                                    <!-- <img src="assets/img/icon/original-9e54f87f13d.gif" alt="shape"> -->
-                                    <img src="assets/img/icon/ezgif-transBG_2.gif" alt="shape">
+                                    <span class="intel-title-first-line">
+                                        <span class="bestAI">進入 Intel Edge AI 生態系</span>
+                                        <img src="assets/img/icon/ezgif-transBG_2.gif" alt="" aria-hidden="true">
+                                    </span>
+                                    <span class="intel-title-second-line">智慧建築 AI 邊緣應用</span>
                                 </h2>
                             </div>
                         </div>
@@ -554,7 +669,7 @@
 
 
             <!-- end begin -->
-            <section class="jarallax certifi_end" data-title='立即諮詢&ensp;-&ensp;智慧建築整合方案'>
+            <section id="certifi-consult" class="jarallax certifi_end" data-title='立即諮詢&ensp;-&ensp;智慧建築整合方案'>
                 <div class="de-gradient-edge-top"></div>
                 <img src="images/background/4.jpg" class="jarallax-img" alt="">
                 <div class="container position-relative z1000">
@@ -691,9 +806,14 @@
 
 
         
-        <a href="#" id="back-to-top"></a>
+        <!-- Same back-to-top component and shared styling as contact.html. -->
+        <div class="xb-backtotop">
+            <a href="#certifi-top" class="scroll-to-top-btn" aria-label="回到頂部">
+                <i class="fas fa-arrow-up" aria-hidden="true"></i>
+            </a>
+        </div>
 
-        <nav id='scroll-indicator'></nav>
+        <nav id='scroll-indicator' aria-label='認證頁面區塊導覽'></nav>
 
 
         <!-- footer begin -->
@@ -853,7 +973,7 @@
 
 
     <!-- Sidebar Scroll Indicator -->
-    <script src="js/indicator.js"></script>
+    <script src="js/certification-navigation.js?v=20261022-1"></script>
 
 
 
