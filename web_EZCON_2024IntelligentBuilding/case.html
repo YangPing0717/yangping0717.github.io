@@ -66,6 +66,36 @@
         <div class="scrollbar"></div>
         <!-- page preloader begin -->
         <div id="de-loader"></div>
+        <script>
+            (function () {
+                var loaderDismissed = false;
+
+                function dismissPageLoader() {
+                    if (loaderDismissed) return;
+
+                    var loader = document.getElementById('de-loader');
+                    if (!loader) return;
+
+                    loaderDismissed = true;
+                    loader.style.transition = 'opacity 0.3s ease';
+                    loader.style.opacity = '0';
+                    loader.style.pointerEvents = 'none';
+
+                    window.setTimeout(function () {
+                        loader.style.display = 'none';
+                    }, 300);
+                }
+
+                if (document.readyState === 'loading') {
+                    document.addEventListener('DOMContentLoaded', dismissPageLoader, { once: true });
+                } else {
+                    dismissPageLoader();
+                }
+
+                // 外部字型、CDN 或圖片異常時，最多只遮住頁面 2.5 秒。
+                window.setTimeout(dismissPageLoader, 2500);
+            })();
+        </script>
         <!-- page preloader close -->
 
         <!-- header begin -->
@@ -410,7 +440,7 @@
                                 <div class="col-md-4 item text-center mb20 headquarters intelligent">
                                     <a class="d_demo_img" href="https://www.ezcontw.com/tai-nan-dong-qu-zhi-hui-hua-ban-gong-shi/">
                                         <span class="d-overlay"><span class="material-icons-two-tone">search</span></span>
-                                        <img src="demo/preview/企業辦公室_台南東區智慧化辦公室_v5.png?v=20261014" class="color img-fluid wow" alt="台南東區智慧化辦公室">
+                                        <img loading="eager" decoding="async" fetchpriority="high" width="1600" height="900" src="demo/preview/企業辦公室_台南東區智慧化辦公室_v5.png?v=20261014" class="color img-fluid wow" alt="台南東區智慧化辦公室">
                                     </a>
                                     <h5>台南東區智慧化辦公室</h5>
                                 </div>
@@ -418,7 +448,7 @@
                                 <div class="col-md-4 item text-center mb20 headquarters intelligent">
                                     <a class="d_demo_img" href="https://www.ezcontw.com/jiu-zuo-she-ji/">
                                         <span class="d-overlay"><span class="material-icons-two-tone">search</span></span>
-                                        <img src="demo/preview/企業辦公室_玖柞設計_v5.png?v=20261014" class="color img-fluid wow" alt="玖柞設計">
+                                        <img loading="eager" decoding="async" fetchpriority="high" width="1600" height="900" src="demo/preview/企業辦公室_玖柞設計_v5.png?v=20261014" class="color img-fluid wow" alt="玖柞設計">
                                     </a>
                                     <h5>玖柞設計</h5>
                                 </div>
@@ -426,7 +456,7 @@
                                 <div class="col-md-4 item text-center mb20 headquarters intelligent">
                                     <a class="d_demo_img" href="https://www.ezcontw.com/zhong-he-chen-yao-ban-gong-shi/">
                                         <span class="d-overlay"><span class="material-icons-two-tone">search</span></span>
-                                        <img src="demo/preview/企業辦公室_中和宸曜.png?v=20261014" class="color img-fluid wow" alt="中和宸曜辦公室">
+                                        <img loading="eager" decoding="async" width="1600" height="900" src="demo/preview/企業辦公室_中和宸曜.png?v=20261014" class="color img-fluid wow" alt="中和宸曜辦公室">
                                     </a>
                                     <h5>中和宸曜辦公室</h5>
                                 </div>
@@ -434,7 +464,7 @@
                                 <div class="col-md-4 item text-center mb20 headquarters intelligent">
                                     <a class="d_demo_img" href="https://www.ezcontw.com/lin-kou-zhi-sheng-ban-gong-shi/">
                                         <span class="d-overlay"><span class="material-icons-two-tone">search</span></span>
-                                        <img src="demo/preview/企業辦公室_林口志聖.png?v=20261014" class="color img-fluid wow" alt="林口志聖辦公室">
+                                        <img loading="lazy" decoding="async" width="1600" height="900" src="demo/preview/企業辦公室_林口志聖.png?v=20261014" class="color img-fluid wow" alt="林口志聖辦公室">
                                     </a>
                                     <h5>林口志聖辦公室</h5>
                                 </div>
@@ -442,7 +472,7 @@
                                 <div class="col-md-4 item text-center mb20 headquarters intelligent">
                                     <a class="d_demo_img" href="https://www.ezcontw.com/xin-chuang-dian-zi-zhong-he-ban-gong-shi/">
                                         <span class="d-overlay"><span class="material-icons-two-tone">search</span></span>
-                                        <img src="demo/preview/企業辦公室_鑫創電子中和.png?v=20261014" class="color img-fluid wow" alt="鑫創電子中和辦公室">
+                                        <img loading="lazy" decoding="async" width="1600" height="900" src="demo/preview/企業辦公室_鑫創電子中和.png?v=20261014" class="color img-fluid wow" alt="鑫創電子中和辦公室">
                                     </a>
                                     <h5>鑫創電子中和辦公室</h5>
                                 </div>
@@ -450,7 +480,7 @@
                                 <div class="col-md-4 item text-center mb20 headquarters intelligent">
                                     <a class="d_demo_img" href="https://www.ezcontw.com/taichung_xitun_smartoffice/">
                                         <span class="d-overlay"><span class="material-icons-two-tone">search</span></span>
-                                        <img src="demo/preview/企業辦公室_台中西屯區智慧辦公室_v5.png?v=20261014" class="color img-fluid wow" alt="台中西屯區智慧辦公室">
+                                        <img loading="lazy" decoding="async" width="1600" height="900" src="demo/preview/企業辦公室_台中西屯區智慧辦公室_v5.png?v=20261014" class="color img-fluid wow" alt="台中西屯區智慧辦公室">
                                     </a>
                                     <h5>台中西屯區智慧辦公室</h5>
                                 </div>
@@ -458,7 +488,7 @@
                                 <div class="col-md-4 item text-center mb20 headquarters intelligent">
                                     <a class="d_demo_img" href="https://www.ezcontw.com/tai-bei-li-si-wei-jian-zhu-shi-shi-wu-suo/">
                                         <span class="d-overlay"><span class="material-icons-two-tone">search</span></span>
-                                        <img src="demo/preview/企業辦公室_台北李斯緯建築師事務所_v4.png?v=20261014" class="color img-fluid wow" alt="台北李斯緯建築師事務所">
+                                        <img loading="lazy" decoding="async" width="1600" height="900" src="demo/preview/企業辦公室_台北李斯緯建築師事務所_v4.png?v=20261014" class="color img-fluid wow" alt="台北李斯緯建築師事務所">
                                     </a>
                                     <h5>台北李斯緯建築師事務所</h5>
                                 </div>
@@ -466,7 +496,7 @@
                                 <div class="col-md-4 item text-center mb20 headquarters intelligent">
                                     <a class="d_demo_img" href="https://www.ezcontw.com/tao-yuan-liang-zhong-quan-jian-zhu-shi-shi-wu-suo/">
                                         <span class="d-overlay"><span class="material-icons-two-tone">search</span></span>
-                                        <img src="demo/preview/企業辦公室_桃園梁忠權建築師事務所.png?v=20261014" class="color img-fluid wow" alt="桃園梁忠權建築師事務所">
+                                        <img loading="lazy" decoding="async" width="1600" height="900" src="demo/preview/企業辦公室_桃園梁忠權建築師事務所.png?v=20261014" class="color img-fluid wow" alt="桃園梁忠權建築師事務所">
                                     </a>
                                     <h5>桃園梁忠權建築師事務所</h5>
                                 </div>
@@ -474,7 +504,7 @@
                                 <div class="col-md-4 item text-center mb20 headquarters intelligent">
                                     <a class="d_demo_img" href="https://www.ezcontw.com/yi-kong-xin-dian-ban-gong-shi/">
                                         <span class="d-overlay"><span class="material-icons-two-tone">search</span></span>
-                                        <img src="demo/preview/企業辦公室_易控新店.png?v=20261014" class="color img-fluid wow" alt="易控新店辦公室">
+                                        <img loading="lazy" decoding="async" width="1600" height="900" src="demo/preview/企業辦公室_易控新店.png?v=20261014" class="color img-fluid wow" alt="易控新店辦公室">
                                     </a>
                                     <h5>易控新店辦公室</h5>
                                 </div>
@@ -482,7 +512,7 @@
                                 <div class="col-md-4 item text-center mb20 headquarters intelligent">
                                     <a class="d_demo_img" href="https://www.ezcontw.com/fu-xing-zhi-hui-ban-gong-shi/">
                                         <span class="d-overlay"><span class="material-icons-two-tone">search</span></span>
-                                        <img src="demo/preview/企業辦公室_復興智慧辦公室_v4.png?v=20261014" class="color img-fluid wow" alt="復興智慧辦公室">
+                                        <img loading="lazy" decoding="async" width="1600" height="900" src="demo/preview/企業辦公室_復興智慧辦公室_v4.png?v=20261014" class="color img-fluid wow" alt="復興智慧辦公室">
                                     </a>
                                     <h5>復興智慧辦公室</h5>
                                 </div>
@@ -492,7 +522,7 @@
                                         <span class="d-overlay">
                                             <span class="material-icons-two-tone">search</span>
                                         </span>
-                                        <img src="demo/preview/高雄高港造船.png" class="color img-fluid wow" alt="高雄高港造船">
+                                        <img loading="lazy" decoding="async" width="1600" height="900" src="demo/preview/高雄高港造船.png" class="color img-fluid wow" alt="高雄高港造船">
                                     </a>
                                     <h5>高雄高港造船</h5>
                                 </div>
@@ -502,7 +532,7 @@
                                         <span class="d-overlay">
                                             <span class="material-icons-two-tone">search</span>
                                         </span>
-                                        <img src="demo/preview/內政部建築研究所國際會議廳.png?v=20261014" class="color img-fluid wow" alt="內政部建築研究所國際會議廳">
+                                        <img loading="lazy" decoding="async" width="1600" height="900" src="demo/preview/內政部建築研究所國際會議廳.png?v=20261014" class="color img-fluid wow" alt="內政部建築研究所國際會議廳">
                                     </a>
                                     <h5>內政部建築研究所國際會議廳</h5>
                                 </div>
@@ -512,7 +542,7 @@
                                         <span class="d-overlay">
                                             <span class="material-icons-two-tone">search</span>
                                         </span>
-                                        <img src="demo/preview/東榮立體停車場.jpg?v=20261014b" class="color img-fluid wow" alt="東榮立體停車場">
+                                        <img loading="lazy" decoding="async" width="1600" height="900" src="demo/preview/東榮立體停車場.jpg?v=20261014b" class="color img-fluid wow" alt="東榮立體停車場">
                                     </a>
                                     <h5>東榮立體停車場</h5>
                                 </div>
@@ -522,7 +552,7 @@
                                         <span class="d-overlay">
                                             <span class="material-icons-two-tone">search</span>
                                         </span>
-                                        <img src="demo/preview/內政部智慧化展示中心_高雄市府展示屋.jpg?v=20261014b" class="color img-fluid wow" alt="內政部智慧化展示中心 高雄市府展示屋">
+                                        <img loading="lazy" decoding="async" width="1600" height="900" src="demo/preview/內政部智慧化展示中心_高雄市府展示屋.jpg?v=20261014b" class="color img-fluid wow" alt="內政部智慧化展示中心 高雄市府展示屋">
                                     </a>
                                     <h5>內政部智慧化展示中心 高雄市府展示屋</h5>
                                 </div>
@@ -532,7 +562,7 @@
                                         <span class="d-overlay">
                                             <span class="material-icons-two-tone">search</span>
                                         </span>
-                                        <img src="demo/preview/內政部智慧化展示中心_Living3辦公室與倉庫.jpg?v=20261014b" class="color img-fluid wow" alt="內政部智慧化展示中心 Living 3.0 辦公室與倉庫">
+                                        <img loading="lazy" decoding="async" width="1600" height="900" src="demo/preview/內政部智慧化展示中心_Living3辦公室與倉庫.jpg?v=20261014b" class="color img-fluid wow" alt="內政部智慧化展示中心 Living 3.0 辦公室與倉庫">
                                     </a>
                                     <h5>內政部智慧化展示中心 Living 3.0 辦公室與倉庫</h5>
                                 </div>
@@ -542,7 +572,7 @@
                                         <span class="d-overlay">
                                             <span class="material-icons-two-tone">search</span>
                                         </span>
-                                        <img src="demo/preview/內政部智慧化展示中心_Living3.jpg?v=20261014e" class="color img-fluid wow" alt="內政部智慧化展示中心 Living 3.0">
+                                        <img loading="lazy" decoding="async" width="1600" height="900" src="demo/preview/內政部智慧化展示中心_Living3.jpg?v=20261014e" class="color img-fluid wow" alt="內政部智慧化展示中心 Living 3.0">
                                     </a>
                                     <h5>內政部智慧化展示中心 Living 3.0</h5>
                                 </div>
@@ -552,7 +582,7 @@
                                         <span class="d-overlay">
                                             <span class="material-icons-two-tone">search</span>
                                         </span>
-                                        <img src="demo/preview/宜蘭頭城郵局.jpg?v=20261014b" class="color img-fluid wow" alt="宜蘭頭城郵局">
+                                        <img loading="lazy" decoding="async" width="1600" height="900" src="demo/preview/宜蘭頭城郵局.jpg?v=20261014b" class="color img-fluid wow" alt="宜蘭頭城郵局">
                                     </a>
                                     <h5>宜蘭頭城郵局</h5>
                                 </div>
@@ -563,7 +593,7 @@
                                                                             <!-- <span>Live Preview</span> -->
                                                                             <span class="material-icons-two-tone">search</span>
                                                                         </span>
-                                                                        <img src="demo/preview/和雍a.jpg" class="color img-fluid wow " alt="">
+                                                                        <img loading="lazy" decoding="async" width="1600" height="900" src="demo/preview/和雍a.jpg" class="color img-fluid wow " alt="">
                                                                     </a>
                                                                     <h5>和雍建設 昆明案 - 2024 銀級</h5>
                                                                 </div>
@@ -574,7 +604,7 @@
                                                                             <!-- <span>Live Preview</span> -->
                                                                             <span class="material-icons-two-tone">search</span>
                                                                         </span>
-                                                                        <img src="demo/preview/和雍_天母a.jpg" class="color img-fluid wow " alt="">
+                                                                        <img loading="lazy" decoding="async" width="1600" height="900" src="demo/preview/和雍_天母a.jpg" class="color img-fluid wow " alt="">
                                                                     </a>
                                                                     <h5>和雍建設 台北士林天母案 - 2024 銀級</h5>
                                                                 </div>
@@ -584,7 +614,7 @@
                                                                         <span class="d-overlay">
                                                                             <span class="material-icons-two-tone">search</span>
                                                                         </span>
-                                                                        <img src="demo/preview/利百加a.jpg" class="color img-fluid wow " alt="">
+                                                                        <img loading="lazy" decoding="async" width="1600" height="900" src="demo/preview/利百加a.jpg" class="color img-fluid wow " alt="">
                                                                     </a>
                                                                     <h5>利百加建設 民有印象 - 2024 銀級</h5>
                                                                 </div>
@@ -594,7 +624,7 @@
                                                                         <span class="d-overlay">
                                                                             <span class="material-icons-two-tone">search</span>
                                                                         </span>
-                                                                        <img src="demo/preview/傳田a.jpg" class="color img-fluid wow " alt="">
+                                                                        <img loading="lazy" decoding="async" width="1600" height="900" src="demo/preview/傳田a.jpg" class="color img-fluid wow " alt="">
                                                                     </a>
                                                                     <h5>傳田建設 傳田豐御 - 2016 銀級</h5>
                                                                 </div>
@@ -604,7 +634,7 @@
                                                                         <span class="d-overlay">
                                                                             <span class="material-icons-two-tone">search</span>
                                                                         </span>
-                                                                        <img src="demo/preview/峻勝_文化首勝a.jpg" class="color img-fluid wow " alt="">
+                                                                        <img loading="lazy" decoding="async" width="1600" height="900" src="demo/preview/峻勝_文化首勝a.jpg" class="color img-fluid wow " alt="">
                                                                     </a>
                                                                     <h5>峻勝建設 文化首勝 - 2016 銀級</h5>
                                                                 </div>
@@ -614,7 +644,7 @@
                                                                         <span class="d-overlay">
                                                                             <span class="material-icons-two-tone">search</span>
                                                                         </span>
-                                                                        <img src="demo/preview/傑座_甄豪宅a.jpg" class="color img-fluid wow " alt="">
+                                                                        <img loading="lazy" decoding="async" width="1600" height="900" src="demo/preview/傑座_甄豪宅a.jpg" class="color img-fluid wow " alt="">
                                                                     </a>
                                                                     <h5>傑座建設 甄豪宅 - 2016 銀級</h5>
                                                                 </div>
@@ -624,7 +654,7 @@
                                                                         <span class="d-overlay">
                                                                             <span class="material-icons-two-tone">search</span>
                                                                         </span>
-                                                                        <img src="demo/preview/將捷MRT_a.jpg" class="color img-fluid wow " alt="">
+                                                                        <img loading="lazy" decoding="async" width="1600" height="900" src="demo/preview/將捷MRT_a.jpg" class="color img-fluid wow " alt="">
                                                                     </a>
                                                                     <h5>將捷建設 將捷 MRT - 2016 銅級</h5>
                                                                 </div>
@@ -634,7 +664,7 @@
                                                                         <span class="d-overlay">
                                                                             <span class="material-icons-two-tone">search</span>
                                                                         </span>
-                                                                        <img src="demo/preview/城中_城心城邑_b.jpg" class="color img-fluid wow " alt="">
+                                                                        <img loading="lazy" decoding="async" width="1600" height="900" src="demo/preview/城中_城心城邑_b.jpg" class="color img-fluid wow " alt="">
                                                                     </a>
                                                                     <h5>城中建設 城心城邑 - 2016 銅級</h5>
                                                                 </div>
@@ -644,7 +674,7 @@
                                                                         <span class="d-overlay">
                                                                             <span class="material-icons-two-tone">search</span>
                                                                         </span>
-                                                                        <img src="demo/preview/大漢_星禾苑a.jpg" class="color img-fluid wow " alt="">
+                                                                        <img loading="lazy" decoding="async" width="1600" height="900" src="demo/preview/大漢_星禾苑a.jpg" class="color img-fluid wow " alt="">
                                                                     </a>
                                                                     <h5>大漢建設 星禾苑 - 2016 銀級</h5>
                                                                 </div>
@@ -654,7 +684,7 @@
                                                                         <span class="d-overlay">
                                                                             <span class="material-icons-two-tone">search</span>
                                                                         </span>
-                                                                        <img src="demo/preview/邑城_邑城仰睦a.jpg" class="color img-fluid wow " alt="">
+                                                                        <img loading="lazy" decoding="async" width="1600" height="900" src="demo/preview/邑城_邑城仰睦a.jpg" class="color img-fluid wow " alt="">
                                                                     </a>
                                                                     <h5>邑城建設 邑城仰睦 - 2016 銀級</h5>
                                                                 </div>
@@ -664,7 +694,7 @@
                                                                         <span class="d-overlay">
                                                                             <span class="material-icons-two-tone">search</span>
                                                                         </span>
-                                                                        <img src="demo/preview/金鋐_金鋐琢岳a.jpg" class="color img-fluid wow " alt="">
+                                                                        <img loading="lazy" decoding="async" width="1600" height="900" src="demo/preview/金鋐_金鋐琢岳a.jpg" class="color img-fluid wow " alt="">
                                                                     </a>
                                                                     <h5>金鋐建設 金鋐琢岳 - 2016 銀級</h5>
                                                                 </div>
@@ -674,7 +704,7 @@
                                                                         <span class="d-overlay">
                                                                             <span class="material-icons-two-tone">search</span>
                                                                         </span>
-                                                                        <img src="demo/eHome/case_gallery/中悦仰悦.jpg" class="color img-fluid wow " alt="">
+                                                                        <img loading="lazy" decoding="async" width="1600" height="900" src="demo/eHome/case_gallery/中悦仰悦.jpg" class="color img-fluid wow " alt="">
                                                                     </a>
                                                                     <h5>中悦仰悦</h5>
                                                                 </div>
@@ -684,7 +714,7 @@
                                                                         <span class="d-overlay">
                                                                             <span class="material-icons-two-tone">search</span>
                                                                         </span>
-                                                                        <img src="demo/eHome/case_gallery/中悅天鵝堡.jpg" class="color img-fluid wow " alt="">
+                                                                        <img loading="lazy" decoding="async" width="1600" height="900" src="demo/eHome/case_gallery/中悅天鵝堡.jpg" class="color img-fluid wow " alt="">
                                                                     </a>
                                                                     <h5>中悅天鵝堡</h5>
                                                                 </div>
@@ -694,7 +724,7 @@
                                                                         <span class="d-overlay">
                                                                             <span class="material-icons-two-tone">search</span>
                                                                         </span>
-                                                                        <img src="demo/eHome/case_gallery/三重鳳都劉公館.jpg" class="color img-fluid wow " alt="">
+                                                                        <img loading="lazy" decoding="async" width="1600" height="900" src="demo/eHome/case_gallery/三重鳳都劉公館.jpg" class="color img-fluid wow " alt="">
                                                                     </a>
                                                                     <h5>三重鳳都劉公館</h5>
                                                                 </div>
@@ -705,7 +735,7 @@
                                                                             <!-- <span>Live Preview</span> -->
                                                                             <span class="material-icons-two-tone">search</span>
                                                                         </span>
-                                                                        <img src="demo/eHome/case_gallery/新店國泰.jpg" class="color img-fluid wow " alt="">
+                                                                        <img loading="lazy" decoding="async" width="1600" height="900" src="demo/eHome/case_gallery/新店國泰.jpg" class="color img-fluid wow " alt="">
                                                                     </a>
                                                                     <h5>新店國泰雙璽林公館</h5>
                                                                 </div>
@@ -715,7 +745,7 @@
                                                                         <span class="d-overlay">
                                                                             <span class="material-icons-two-tone">search</span>
                                                                         </span>
-                                                                        <img src="demo/eHome/case_gallery/中悅上林苑曹公館.jpg" class="color img-fluid wow " alt="">
+                                                                        <img loading="lazy" decoding="async" width="1600" height="900" src="demo/eHome/case_gallery/中悅上林苑曹公館.jpg" class="color img-fluid wow " alt="">
                                                                     </a>
                                                                     <h5>中悅上林苑曹公館</h5>
                                                                 </div>
@@ -725,7 +755,7 @@
                                                                         <span class="d-overlay">
                                                                             <span class="material-icons-two-tone">search</span>
                                                                         </span>
-                                                                        <img src="demo/preview/中正紀念堂.jpg" class="color img-fluid wow " alt="">
+                                                                        <img loading="lazy" decoding="async" width="1600" height="900" src="demo/preview/中正紀念堂.jpg" class="color img-fluid wow " alt="">
                                                                     </a>
                                                                     <h5>中正紀念堂</h5>
                                                                 </div>
@@ -736,7 +766,7 @@
                                                                             <!-- <span>Live Preview</span> -->
                                                                             <span class="material-icons-two-tone">search</span>
                                                                         </span>
-                                                                        <img src="demo/preview/赤崁樓.jpg" class="color img-fluid wow " alt="">
+                                                                        <img loading="lazy" decoding="async" width="1600" height="900" src="demo/preview/赤崁樓.jpg" class="color img-fluid wow " alt="">
                                                                     </a>
                                                                     <h5>赤崁文化園區</h5>
                                                                 </div>
@@ -747,7 +777,7 @@
                                                                             <!-- <span>Live Preview</span> -->
                                                                             <span class="material-icons-two-tone">search</span>
                                                                         </span>
-                                                                        <img src="demo/preview/台南林森圖書館_2.jpg" class="color img-fluid wow " alt="">
+                                                                        <img loading="lazy" decoding="async" width="1600" height="900" src="demo/preview/台南林森圖書館_2.jpg" class="color img-fluid wow " alt="">
                                                                     </a>
                                                                     <h5>台南林森圖書館</h5>
                                                                 </div>
@@ -757,7 +787,7 @@
                                                                         <span class="d-overlay">
                                                                             <span class="material-icons-two-tone">search</span>
                                                                         </span>
-                                                                        <img src="demo/preview/忠義教育社福園區.jpg" class="color img-fluid wow " alt="">
+                                                                        <img loading="lazy" decoding="async" width="1600" height="900" src="demo/preview/忠義教育社福園區.jpg" class="color img-fluid wow " alt="">
                                                                     </a>
                                                                     <h5>忠義教育社福園區</h5>
                                                                 </div>
@@ -767,7 +797,7 @@
                                                                         <span class="d-overlay">
                                                                             <span class="material-icons-two-tone">search</span>
                                                                         </span>
-                                                                        <img src="demo/preview/桃園蘆竹水資源回收.jpg" class="color img-fluid wow " alt="">
+                                                                        <img loading="lazy" decoding="async" width="1600" height="900" src="demo/preview/桃園蘆竹水資源回收.jpg" class="color img-fluid wow " alt="">
                                                                     </a>
                                                                     <h5>桃園蘆竹水資源回收中心</h5>
                                                                 </div>
@@ -777,7 +807,7 @@
                                                                         <span class="d-overlay">
                                                                             <span class="material-icons-two-tone">search</span>
                                                                         </span>
-                                                                        <img src="demo/preview/屏東高中.jpg" class="color img-fluid wow " alt="">
+                                                                        <img loading="lazy" decoding="async" width="1600" height="900" src="demo/preview/屏東高中.jpg" class="color img-fluid wow " alt="">
                                                                     </a>
                                                                     <h5>屏東高中</h5>
                                                                 </div>
@@ -787,7 +817,7 @@
                                                                         <span class="d-overlay">
                                                                             <span class="material-icons-two-tone">search</span>
                                                                         </span>
-                                                                        <img src="demo/preview/新莊茂旭安控_2.jpg" class="color img-fluid wow " alt="">
+                                                                        <img loading="lazy" decoding="async" width="1600" height="900" src="demo/preview/新莊茂旭安控_2.jpg" class="color img-fluid wow " alt="">
                                                                     </a>
                                                                     <h5>新莊茂旭安控廣場</h5>
                                                                 </div>
@@ -797,7 +827,7 @@
                                                                         <span class="d-overlay">
                                                                             <span class="material-icons-two-tone">search</span>
                                                                         </span>
-                                                                        <img src="demo/preview/中華工程板橋福利站案.jpg" class="color img-fluid wow " alt="">
+                                                                        <img loading="lazy" decoding="async" width="1600" height="900" src="demo/preview/中華工程板橋福利站案.jpg" class="color img-fluid wow " alt="">
                                                                     </a>
                                                                     <h5>中華工程板橋福利站案</h5>
                                                                 </div>
@@ -807,7 +837,7 @@
                                                                         <span class="d-overlay">
                                                                             <span class="material-icons-two-tone">search</span>
                                                                         </span>
-                                                                        <img src="demo/preview/高第璞璞a.jpg" class="color img-fluid wow " alt="">
+                                                                        <img loading="lazy" decoding="async" width="1600" height="900" src="demo/preview/高第璞璞a.jpg" class="color img-fluid wow " alt="">
                                                                     </a>
                                                                     <h5>高第璞璞＋</h5>
                                                                 </div>
@@ -817,7 +847,7 @@
                                                                         <span class="d-overlay">
                                                                             <span class="material-icons-two-tone">search</span>
                                                                         </span>
-                                                                        <img src="demo/preview/碧澄市c.jpg" class="color img-fluid wow " alt="">
+                                                                        <img loading="lazy" decoding="async" width="1600" height="900" src="demo/preview/碧澄市c.jpg" class="color img-fluid wow " alt="">
                                                                     </a>
                                                                     <h5>碧澄市</h5>
                                                                 </div>
@@ -827,7 +857,7 @@
                                                                         <span class="d-overlay">
                                                                             <span class="material-icons-two-tone">search</span>
                                                                         </span>
-                                                                        <img src="demo/preview/碧城FJ.jpg" class="color img-fluid wow " alt="">
+                                                                        <img loading="lazy" decoding="async" width="1600" height="900" src="demo/preview/碧城FJ.jpg" class="color img-fluid wow " alt="">
                                                                     </a>
                                                                     <h5>碧城 FJ TOWER</h5>
                                                                 </div>
@@ -837,7 +867,7 @@
                                                                         <span class="d-overlay">
                                                                             <span class="material-icons-two-tone">search</span>
                                                                         </span>
-                                                                        <img src="demo/preview/曜昇日日昇.jpg" class="color img-fluid wow " alt="">
+                                                                        <img loading="lazy" decoding="async" width="1600" height="900" src="demo/preview/曜昇日日昇.jpg" class="color img-fluid wow " alt="">
                                                                     </a>
                                                                     <h5>曜昇日日昇</h5>
                                                                 </div>
@@ -847,7 +877,7 @@
                                                                         <span class="d-overlay">
                                                                             <span class="material-icons-two-tone">search</span>
                                                                         </span>
-                                                                        <img src="demo/preview/宜蘭文風翠庭19.jpg" class="color img-fluid wow " alt="">
+                                                                        <img loading="lazy" decoding="async" width="1600" height="900" src="demo/preview/宜蘭文風翠庭19.jpg" class="color img-fluid wow " alt="">
                                                                     </a>
                                                                     <h5>宜蘭文風翠庭 19 期</h5>
                                                                 </div>
@@ -857,7 +887,7 @@
                                                                         <span class="d-overlay">
                                                                             <span class="material-icons-two-tone">search</span>
                                                                         </span>
-                                                                        <img src="demo/preview/惟瓦地敦南琴朗2.jpg" class="color img-fluid wow " alt="">
+                                                                        <img loading="lazy" decoding="async" width="1600" height="900" src="demo/preview/惟瓦地敦南琴朗2.jpg" class="color img-fluid wow " alt="">
                                                                     </a>
                                                                     <h5>惟瓦地敦南琴朗</h5>
                                                                 </div>
@@ -867,7 +897,7 @@
                                                                         <span class="d-overlay">
                                                                             <span class="material-icons-two-tone">search</span>
                                                                         </span>
-                                                                        <img src="demo/preview/上德漾.jpg" class="color img-fluid wow " alt="">
+                                                                        <img loading="lazy" decoding="async" width="1600" height="900" src="demo/preview/上德漾.jpg" class="color img-fluid wow " alt="">
                                                                     </a>
                                                                     <h5>上德漾</h5>
                                                                 </div>
@@ -877,7 +907,7 @@
                                                                         <span class="d-overlay">
                                                                             <span class="material-icons-two-tone">search</span>
                                                                         </span>
-                                                                        <img src="demo/preview/永峰上鈺.jpg" class="color img-fluid wow " alt="">
+                                                                        <img loading="lazy" decoding="async" width="1600" height="900" src="demo/preview/永峰上鈺.jpg" class="color img-fluid wow " alt="">
                                                                     </a>
                                                                     <h5>永峰建設 永峰上鈺 - 2016 銀級</h5>
                                                                 </div>
@@ -887,7 +917,7 @@
                                                                         <span class="d-overlay">
                                                                             <span class="material-icons-two-tone">search</span>
                                                                         </span>
-                                                                        <img src="demo/preview/定泰清溪翫.jpg" class="color img-fluid wow " alt="">
+                                                                        <img loading="lazy" decoding="async" width="1600" height="900" src="demo/preview/定泰清溪翫.jpg" class="color img-fluid wow " alt="">
                                                                     </a>
                                                                     <h5>定泰清溪翫</h5>
                                                                 </div>
@@ -897,7 +927,7 @@
                                         <span class="d-overlay">
                                             <span class="material-icons-two-tone">search</span>
                                         </span>
-                                        <img src="demo/preview/學校_亞洲大學健康產業管理學系.png?v=20261014c" class="color img-fluid wow" alt="亞洲大學健康產業管理學系 Demo Room">
+                                        <img loading="lazy" decoding="async" width="1600" height="900" src="demo/preview/學校_亞洲大學健康產業管理學系.png?v=20261014c" class="color img-fluid wow" alt="亞洲大學健康產業管理學系 Demo Room">
                                     </a>
                                     <h5>亞洲大學健康產業管理學系 Demo Room</h5>
                                 </div>
@@ -907,7 +937,7 @@
                                         <span class="d-overlay">
                                             <span class="material-icons-two-tone">search</span>
                                         </span>
-                                        <img src="demo/preview/學校_台大永齡生醫工程館.png?v=20261014" class="color img-fluid wow" alt="台大永齡生醫工程館">
+                                        <img loading="lazy" decoding="async" width="1600" height="900" src="demo/preview/學校_台大永齡生醫工程館.png?v=20261014" class="color img-fluid wow" alt="台大永齡生醫工程館">
                                     </a>
                                     <h5>台大永齡生醫工程館</h5>
                                 </div>
@@ -917,7 +947,7 @@
                                                                         <span class="d-overlay">
                                                                             <span class="material-icons-two-tone">search</span>
                                                                         </span>
-                                                                        <img src="demo/preview/育達國小_普林斯頓_廣亞大樓.jpg" class="color img-fluid wow " alt="">
+                                                                        <img loading="lazy" decoding="async" width="1600" height="900" src="demo/preview/育達國小_普林斯頓_廣亞大樓.jpg" class="color img-fluid wow " alt="">
                                                                     </a>
                                                                     <h5>育達國小(普林斯頓國小)第三期廣亞大樓</h5>
                                                                 </div>
@@ -927,7 +957,7 @@
                                                                         <span class="d-overlay">
                                                                             <span class="material-icons-two-tone">search</span>
                                                                         </span>
-                                                                        <img src="demo/preview/育達國小_普林斯頓_思源樓.jpg" class="color img-fluid wow " alt="">
+                                                                        <img loading="lazy" decoding="async" width="1600" height="900" src="demo/preview/育達國小_普林斯頓_思源樓.jpg" class="color img-fluid wow " alt="">
                                                                     </a>
                                                                     <h5>育達國小(普林斯頓國小)第二期思源樓</h5>
                                                                 </div>
@@ -937,7 +967,7 @@
                                                                         <span class="d-overlay">
                                                                             <span class="material-icons-two-tone">search</span>
                                                                         </span>
-                                                                        <img src="demo/preview/育達國小_思達大樓.jpg" class="color img-fluid wow " alt="">
+                                                                        <img loading="lazy" decoding="async" width="1600" height="900" src="demo/preview/育達國小_思達大樓.jpg" class="color img-fluid wow " alt="">
                                                                     </a>
                                                                     <h5>育達國小(普林斯頓國小)第一期學思達大樓</h5>
                                                                 </div>
@@ -947,7 +977,7 @@
                                         <span class="d-overlay">
                                             <span class="material-icons-two-tone">search</span>
                                         </span>
-                                        <img src="demo/preview/醫療_門諾醫院健康中心.png?v=20261014" class="color img-fluid wow" alt="智慧醫院 門諾醫院－健康中心">
+                                        <img loading="lazy" decoding="async" width="1600" height="900" src="demo/preview/醫療_門諾醫院健康中心.png?v=20261014" class="color img-fluid wow" alt="智慧醫院 門諾醫院－健康中心">
                                     </a>
                                     <h5>智慧醫院 門諾醫院－健康中心</h5>
                                 </div>
@@ -957,7 +987,7 @@
                                         <span class="d-overlay">
                                             <span class="material-icons-two-tone">search</span>
                                         </span>
-                                        <img src="demo/preview/醫療_北投捐血中心.png?v=20261014" class="color img-fluid wow" alt="北投捐血中心">
+                                        <img loading="lazy" decoding="async" width="1600" height="900" src="demo/preview/醫療_北投捐血中心.png?v=20261014" class="color img-fluid wow" alt="北投捐血中心">
                                     </a>
                                     <h5>北投捐血中心</h5>
                                 </div>
@@ -967,7 +997,7 @@
                                                                         <span class="d-overlay">
                                                                             <span class="material-icons-two-tone">search</span>
                                                                         </span>
-                                                                        <img src="demo/preview/門諾_湧愛之家.jpg" class="color img-fluid wow " alt="">
+                                                                        <img loading="lazy" decoding="async" width="1600" height="900" src="demo/preview/門諾_湧愛之家.jpg" class="color img-fluid wow " alt="">
                                                                     </a>
                                                                     <h5>智慧醫院 門諾醫院 - 湧愛之家</h5>
                                                                 </div>
@@ -977,7 +1007,7 @@
                                                                         <span class="d-overlay">
                                                                             <span class="material-icons-two-tone">search</span>
                                                                         </span>
-                                                                        <img src="demo/preview/門諾_年華大樓.jpg" class="color img-fluid wow " alt="">
+                                                                        <img loading="lazy" decoding="async" width="1600" height="900" src="demo/preview/門諾_年華大樓.jpg" class="color img-fluid wow " alt="">
                                                                     </a>
                                                                     <h5>智慧醫院 門諾醫院 - 年華大樓</h5>
                                                                 </div>
@@ -987,7 +1017,7 @@
                                                                         <span class="d-overlay">
                                                                             <span class="material-icons-two-tone">search</span>
                                                                         </span>
-                                                                        <img src="demo/preview/台中上福全球.jpg" class="color img-fluid wow " alt="">
+                                                                        <img loading="lazy" decoding="async" width="1600" height="900" src="demo/preview/台中上福全球.jpg" class="color img-fluid wow " alt="">
                                                                     </a>
                                                                     <h5>台中上福全球</h5>
                                                                 </div>
@@ -998,7 +1028,7 @@
                                                                             <!-- <span>Live Preview</span> -->
                                                                             <span class="material-icons-two-tone">search</span>
                                                                         </span>
-                                                                        <img src="demo/preview/旭集_竹北店2K.jpg" class="color img-fluid wow " alt="">
+                                                                        <img loading="lazy" decoding="async" width="1600" height="900" src="demo/preview/旭集_竹北店2K.jpg" class="color img-fluid wow " alt="">
                                                                     </a>
                                                                     <h5>旭集 - 竹北店</h5>
                                                                 </div>
@@ -1008,7 +1038,7 @@
                                                                         <span class="d-overlay">
                                                                             <span class="material-icons-two-tone">search</span>
                                                                         </span>
-                                                                        <img src="demo/preview/享鮮餐廳.jpg" class="color img-fluid wow " alt="">
+                                                                        <img loading="lazy" decoding="async" width="1600" height="900" src="demo/preview/享鮮餐廳.jpg" class="color img-fluid wow " alt="">
                                                                     </a>
                                                                     <h5>享鮮餐廳</h5>
                                                                 </div>
@@ -1019,7 +1049,7 @@
                                                                             <!-- <span>Live Preview</span> -->
                                                                             <span class="material-icons-two-tone">search</span>
                                                                         </span>
-                                                                        <img src="demo/preview/漢來海港.jpg" class="color img-fluid wow " alt="">
+                                                                        <img loading="lazy" decoding="async" width="1600" height="900" src="demo/preview/漢來海港.jpg" class="color img-fluid wow " alt="">
                                                                     </a>
                                                                     <h5>漢來海港</h5>
                                                                 </div>
@@ -1027,7 +1057,7 @@
                                 <div class="col-md-4 item text-center mb20 commercial">
                                     <a class="d_demo_img" href="https://www.ezcontw.com/tao-yuan-ha-lei-qi-jian-zhan-shi-zhong-xin/">
                                         <span class="d-overlay"><span class="material-icons-two-tone">search</span></span>
-                                        <img src="demo/preview/商業空間效果預覽/01_桃園哈雷旗艦展示中心.png?v=20261015" class="color img-fluid wow" alt="桃園哈雷旗艦展示中心">
+                                        <img loading="lazy" decoding="async" width="1600" height="900" src="demo/preview/商業空間效果預覽/01_桃園哈雷旗艦展示中心.png?v=20261015" class="color img-fluid wow" alt="桃園哈雷旗艦展示中心">
                                     </a>
                                     <h5>桃園哈雷旗艦展示中心</h5>
                                 </div>
@@ -1035,7 +1065,7 @@
                                 <div class="col-md-4 item text-center mb20 commercial">
                                     <a class="d_demo_img" href="https://www.ezcontw.com/tian-mu-mu-shi-yan/">
                                         <span class="d-overlay"><span class="material-icons-two-tone">search</span></span>
-                                        <img src="demo/preview/商業空間效果預覽/02_天母木石研.png?v=20261015" class="color img-fluid wow" alt="天母木石研">
+                                        <img loading="lazy" decoding="async" width="1600" height="900" src="demo/preview/商業空間效果預覽/02_天母木石研.png?v=20261015" class="color img-fluid wow" alt="天母木石研">
                                     </a>
                                     <h5>天母木石研</h5>
                                 </div>
@@ -1043,7 +1073,7 @@
                                 <div class="col-md-4 item text-center mb20 commercial">
                                     <a class="d_demo_img" href="https://www.ezcontw.com/ding-tai-zhen-wan-xiao-shou-zhong-xin-yang-pin-wu/">
                                         <span class="d-overlay"><span class="material-icons-two-tone">search</span></span>
-                                        <img src="demo/preview/商業空間效果預覽/03_定泰臻翫銷售中心樣品屋.png?v=20261015" class="color img-fluid wow" alt="定泰臻翫銷售中心樣品屋">
+                                        <img loading="lazy" decoding="async" width="1600" height="900" src="demo/preview/商業空間效果預覽/03_定泰臻翫銷售中心樣品屋.png?v=20261015" class="color img-fluid wow" alt="定泰臻翫銷售中心樣品屋">
                                     </a>
                                     <h5>定泰臻翫銷售中心樣品屋</h5>
                                 </div>
@@ -1051,7 +1081,7 @@
                                 <div class="col-md-4 item text-center mb20 commercial">
                                     <a class="d_demo_img" href="https://www.ezcontw.com/shang-cheng-ruo-shui-xiao-shou-zhong-xin/">
                                         <span class="d-overlay"><span class="material-icons-two-tone">search</span></span>
-                                        <img src="demo/preview/商業空間效果預覽/04_上城若水銷售中心.png?v=20261015" class="color img-fluid wow" alt="上城若水銷售中心">
+                                        <img loading="lazy" decoding="async" width="1600" height="900" src="demo/preview/商業空間效果預覽/04_上城若水銷售中心.png?v=20261015" class="color img-fluid wow" alt="上城若水銷售中心">
                                     </a>
                                     <h5>上城若水銷售中心</h5>
                                 </div>
@@ -1059,7 +1089,7 @@
                                 <div class="col-md-4 item text-center mb20 commercial">
                                     <a class="d_demo_img" href="https://www.ezcontw.com/clover-bellavita/">
                                         <span class="d-overlay"><span class="material-icons-two-tone">search</span></span>
-                                        <img src="demo/preview/商業空間效果預覽/05_CLOVER_BELLAVITA.png?v=20261015" class="color img-fluid wow" alt="CLOVER BELLAVITA">
+                                        <img loading="lazy" decoding="async" width="1600" height="900" src="demo/preview/商業空間效果預覽/05_CLOVER_BELLAVITA.png?v=20261015" class="color img-fluid wow" alt="CLOVER BELLAVITA">
                                     </a>
                                     <h5>CLOVER BELLAVITA</h5>
                                 </div>
@@ -1067,7 +1097,7 @@
                                 <div class="col-md-4 item text-center mb20 commercial">
                                     <a class="d_demo_img" href="https://www.ezcontw.com/lao-rui-si-niu-le-pai-can-ting/">
                                         <span class="d-overlay"><span class="material-icons-two-tone">search</span></span>
-                                        <img src="demo/preview/商業空間效果預覽/06_勞瑞斯牛肋排餐廳.png?v=20261015" class="color img-fluid wow" alt="勞瑞斯牛肋排餐廳">
+                                        <img loading="lazy" decoding="async" width="1600" height="900" src="demo/preview/商業空間效果預覽/06_勞瑞斯牛肋排餐廳.png?v=20261015" class="color img-fluid wow" alt="勞瑞斯牛肋排餐廳">
                                     </a>
                                     <h5>勞瑞斯牛肋排餐廳</h5>
                                 </div>
@@ -1075,7 +1105,7 @@
                                 <div class="col-md-4 item text-center mb20 commercial">
                                     <a class="d_demo_img" href="https://www.ezcontw.com/ding-tai-feng-101dian/">
                                         <span class="d-overlay"><span class="material-icons-two-tone">search</span></span>
-                                        <img src="demo/preview/商業空間效果預覽/07_鼎泰豐101店.png?v=20261015" class="color img-fluid wow" alt="鼎泰豐 101 店">
+                                        <img loading="lazy" decoding="async" width="1600" height="900" src="demo/preview/商業空間效果預覽/07_鼎泰豐101店.png?v=20261015" class="color img-fluid wow" alt="鼎泰豐 101 店">
                                     </a>
                                     <h5>鼎泰豐 101 店</h5>
                                 </div>
@@ -1085,7 +1115,7 @@
                                                                         <span class="d-overlay">
                                                                             <span class="material-icons-two-tone">search</span>
                                                                         </span>
-                                                                        <img src="demo/preview/松綠翫.jpg" class="color img-fluid wow " alt="">
+                                                                        <img loading="lazy" decoding="async" width="1600" height="900" src="demo/preview/松綠翫.jpg" class="color img-fluid wow " alt="">
                                                                     </a>
                                                                     <h5>松綠翫</h5>
                                                                 </div>
@@ -1095,7 +1125,7 @@
                                                                         <span class="d-overlay">
                                                                             <span class="material-icons-two-tone">search</span>
                                                                         </span>
-                                                                        <img src="demo/preview/長安大序.jpg" class="color img-fluid wow " alt="">
+                                                                        <img loading="lazy" decoding="async" width="1600" height="900" src="demo/preview/長安大序.jpg" class="color img-fluid wow " alt="">
                                                                     </a>
                                                                     <h5>長安大序</h5>
                                                                 </div>
@@ -1105,7 +1135,7 @@
                                                                         <span class="d-overlay">
                                                                             <span class="material-icons-two-tone">search</span>
                                                                         </span>
-                                                                        <img src="demo/preview/富櫻翫3.jpg" class="color img-fluid wow " alt="">
+                                                                        <img loading="lazy" decoding="async" width="1600" height="900" src="demo/preview/富櫻翫3.jpg" class="color img-fluid wow " alt="">
                                                                     </a>
                                                                     <h5>富櫻翫 智慧養生村</h5>
                                                                 </div>
@@ -1116,7 +1146,7 @@
                                         <span class="d-overlay">
                                             <span class="material-icons-two-tone">search</span>
                                         </span>
-                                        <img src="demo/preview/BA_桃園全家福社區.jpg?v=20261014b" class="color img-fluid wow" alt="社區電動車 EMS｜桃園全家福社區">
+                                        <img loading="lazy" decoding="async" width="1600" height="900" src="demo/preview/BA_桃園全家福社區.jpg?v=20261014b" class="color img-fluid wow" alt="社區電動車 EMS｜桃園全家福社區">
                                     </a>
                                     <h5>社區電動車 EMS - 桃園全家福社區</h5>
                                 </div>
@@ -1126,7 +1156,7 @@
                                         <span class="d-overlay">
                                             <span class="material-icons-two-tone">search</span>
                                         </span>
-                                        <img src="demo/preview/BA_知心畫.jpg?v=20261014" class="color img-fluid wow" alt="社區電動車 EMS｜知心畫">
+                                        <img loading="lazy" decoding="async" width="1600" height="900" src="demo/preview/BA_知心畫.jpg?v=20261014" class="color img-fluid wow" alt="社區電動車 EMS｜知心畫">
                                     </a>
                                     <h5>社區電動車 EMS - 知心畫</h5>
                                 </div>
@@ -1136,7 +1166,7 @@
                                         <span class="d-overlay">
                                             <span class="material-icons-two-tone">search</span>
                                         </span>
-                                        <img src="demo/preview/BA_文風翠庭20期.jpg?v=20261014" class="color img-fluid wow" alt="社區電動車 EMS｜文風翠庭20期">
+                                        <img loading="lazy" decoding="async" width="1600" height="900" src="demo/preview/BA_文風翠庭20期.jpg?v=20261014" class="color img-fluid wow" alt="社區電動車 EMS｜文風翠庭20期">
                                     </a>
                                     <h5>社區電動車 EMS - 文風翠庭20期</h5>
                                 </div>
@@ -1146,7 +1176,7 @@
                                         <span class="d-overlay">
                                             <span class="material-icons-two-tone">search</span>
                                         </span>
-                                        <img src="demo/preview/BA_上德立.jpg?v=20261014" class="color img-fluid wow" alt="社區電動車 EMS｜上德立">
+                                        <img loading="lazy" decoding="async" width="1600" height="900" src="demo/preview/BA_上德立.jpg?v=20261014" class="color img-fluid wow" alt="社區電動車 EMS｜上德立">
                                     </a>
                                     <h5>社區電動車 EMS - 上德立</h5>
                                 </div>
@@ -1156,7 +1186,7 @@
                                         <span class="d-overlay">
                                             <span class="material-icons-two-tone">search</span>
                                         </span>
-                                        <img src="demo/preview/BA_上德序.jpg?v=20261014" class="color img-fluid wow" alt="社區電動車 EMS｜上德序">
+                                        <img loading="lazy" decoding="async" width="1600" height="900" src="demo/preview/BA_上德序.jpg?v=20261014" class="color img-fluid wow" alt="社區電動車 EMS｜上德序">
                                     </a>
                                     <h5>社區電動車 EMS - 上德序</h5>
                                 </div>
@@ -1166,7 +1196,7 @@
                                         <span class="d-overlay">
                                             <span class="material-icons-two-tone">search</span>
                                         </span>
-                                        <img src="demo/preview/BA_上德悅.jpg?v=20261014" class="color img-fluid wow" alt="社區電動車 EMS｜上德悅">
+                                        <img loading="lazy" decoding="async" width="1600" height="900" src="demo/preview/BA_上德悅.jpg?v=20261014" class="color img-fluid wow" alt="社區電動車 EMS｜上德悅">
                                     </a>
                                     <h5>社區電動車 EMS - 上德悅</h5>
                                 </div>
@@ -1176,7 +1206,7 @@
                                         <span class="d-overlay">
                                             <span class="material-icons-two-tone">search</span>
                                         </span>
-                                        <img src="demo/preview/BA_成裕ONE.jpg?v=20261014" class="color img-fluid wow" alt="社區電動車 EMS｜成裕ONE">
+                                        <img loading="lazy" decoding="async" width="1600" height="900" src="demo/preview/BA_成裕ONE.jpg?v=20261014" class="color img-fluid wow" alt="社區電動車 EMS｜成裕ONE">
                                     </a>
                                     <h5>社區電動車 EMS - 成裕ONE</h5>
                                 </div>
@@ -1186,7 +1216,7 @@
                                         <span class="d-overlay">
                                             <span class="material-icons-two-tone">search</span>
                                         </span>
-                                        <img src="demo/preview/BA_全坤峰景.jpg?v=20261014" class="color img-fluid wow" alt="社區電動車 EMS｜全坤峰景">
+                                        <img loading="lazy" decoding="async" width="1600" height="900" src="demo/preview/BA_全坤峰景.jpg?v=20261014" class="color img-fluid wow" alt="社區電動車 EMS｜全坤峰景">
                                     </a>
                                     <h5>社區電動車 EMS - 全坤峰景</h5>
                                 </div>
@@ -1196,7 +1226,7 @@
                                         <span class="d-overlay">
                                             <span class="material-icons-two-tone">search</span>
                                         </span>
-                                        <img src="demo/preview/BA_達運敦沐.jpg?v=20261014b" class="color img-fluid wow" alt="社區電動車 EMS｜達運敦沐">
+                                        <img loading="lazy" decoding="async" width="1600" height="900" src="demo/preview/BA_達運敦沐.jpg?v=20261014b" class="color img-fluid wow" alt="社區電動車 EMS｜達運敦沐">
                                     </a>
                                     <h5>社區電動車 EMS - 達運敦沐</h5>
                                 </div>
@@ -1206,7 +1236,7 @@
                                         <span class="d-overlay">
                                             <span class="material-icons-two-tone">search</span>
                                         </span>
-                                        <img src="demo/preview/BA_麗景名苑.jpg?v=20261014b" class="color img-fluid wow" alt="社區電動車 EMS｜麗景名苑">
+                                        <img loading="lazy" decoding="async" width="1600" height="900" src="demo/preview/BA_麗景名苑.jpg?v=20261014b" class="color img-fluid wow" alt="社區電動車 EMS｜麗景名苑">
                                     </a>
                                     <h5>社區電動車 EMS - 麗景名苑</h5>
                                 </div>
@@ -1216,7 +1246,7 @@
                                         <span class="d-overlay">
                                             <span class="material-icons-two-tone">search</span>
                                         </span>
-                                        <img src="demo/preview/BA_左岸京站.jpg?v=20261014b" class="color img-fluid wow" alt="社區電動車 EMS｜左岸京站">
+                                        <img loading="lazy" decoding="async" width="1600" height="900" src="demo/preview/BA_左岸京站.jpg?v=20261014b" class="color img-fluid wow" alt="社區電動車 EMS｜左岸京站">
                                     </a>
                                     <h5>社區電動車 EMS - 左岸京站</h5>
                                 </div>
@@ -1226,7 +1256,7 @@
                                         <span class="d-overlay">
                                             <span class="material-icons-two-tone">search</span>
                                         </span>
-                                        <img src="demo/preview/BA_達麗河藴.jpg?v=20261014" class="color img-fluid wow" alt="機器人整合｜達麗建設 達麗河藴">
+                                        <img loading="lazy" decoding="async" width="1600" height="900" src="demo/preview/BA_達麗河藴.jpg?v=20261014" class="color img-fluid wow" alt="機器人整合｜達麗建設 達麗河藴">
                                     </a>
                                     <h5>機器人整合 - 達麗建設 達麗河藴</h5>
                                 </div>
@@ -1236,7 +1266,7 @@
                                         <span class="d-overlay">
                                             <span class="material-icons-two-tone">search</span>
                                         </span>
-                                        <img src="demo/preview/BA_新店新建案透天社區.jpg?v=20261014b" class="color img-fluid wow" alt="新店新建案透天社區">
+                                        <img loading="lazy" decoding="async" width="1600" height="900" src="demo/preview/BA_新店新建案透天社區.jpg?v=20261014b" class="color img-fluid wow" alt="新店新建案透天社區">
                                     </a>
                                     <h5>新店新建案透天社區</h5>
                                 </div>
@@ -1246,7 +1276,7 @@
                                         <span class="d-overlay">
                                             <span class="material-icons-two-tone">search</span>
                                         </span>
-                                        <img src="demo/preview/BA_豐謙Vita.jpg?v=20261014" class="color img-fluid wow" alt="社區電動車 EMS｜豐謙Vita">
+                                        <img loading="lazy" decoding="async" width="1600" height="900" src="demo/preview/BA_豐謙Vita.jpg?v=20261014" class="color img-fluid wow" alt="社區電動車 EMS｜豐謙Vita">
                                     </a>
                                     <h5>社區電動車 EMS - 豐謙Vita</h5>
                                 </div>
@@ -1256,7 +1286,7 @@
                                         <span class="d-overlay">
                                             <span class="material-icons-two-tone">search</span>
                                         </span>
-                                        <img src="demo/preview/竹北富宇天空樹.jpg?v=20261014" class="color img-fluid wow" alt="社區電動車 EMS｜竹北富宇天空樹社區">
+                                        <img loading="lazy" decoding="async" width="1600" height="900" src="demo/preview/竹北富宇天空樹.jpg?v=20261014" class="color img-fluid wow" alt="社區電動車 EMS｜竹北富宇天空樹社區">
                                     </a>
                                     <h5>社區電動車 EMS - 竹北富宇天空樹社區</h5>
                                 </div>
@@ -1266,7 +1296,7 @@
                                         <span class="d-overlay">
                                             <span class="material-icons-two-tone">search</span>
                                         </span>
-                                        <img src="demo/preview/BA_碧澄一期建案.jpg?v=20261014" class="color img-fluid wow" alt="碧澄一期建案">
+                                        <img loading="lazy" decoding="async" width="1600" height="900" src="demo/preview/BA_碧澄一期建案.jpg?v=20261014" class="color img-fluid wow" alt="碧澄一期建案">
                                     </a>
                                     <h5>碧澄一期建案</h5>
                                 </div>
@@ -1276,7 +1306,7 @@
                                         <span class="d-overlay">
                                             <span class="material-icons-two-tone">search</span>
                                         </span>
-                                        <img src="demo/preview/BA_碧澄二期建案.jpg?v=20261014" class="color img-fluid wow" alt="碧澄二期建案">
+                                        <img loading="lazy" decoding="async" width="1600" height="900" src="demo/preview/BA_碧澄二期建案.jpg?v=20261014" class="color img-fluid wow" alt="碧澄二期建案">
                                     </a>
                                     <h5>碧澄二期建案</h5>
                                 </div>
@@ -1286,7 +1316,7 @@
                                         <span class="d-overlay">
                                             <span class="material-icons-two-tone">search</span>
                                         </span>
-                                        <img src="demo/preview/BA_定泰翫寶龍_白天.png?v=20261014" class="color img-fluid wow" alt="定泰翫寶龍">
+                                        <img loading="lazy" decoding="async" width="1600" height="900" src="demo/preview/BA_定泰翫寶龍_白天.png?v=20261014" class="color img-fluid wow" alt="定泰翫寶龍">
                                     </a>
                                     <h5>定泰翫寶龍</h5>
                                 </div>
@@ -1296,7 +1326,7 @@
                                         <span class="d-overlay">
                                             <span class="material-icons-two-tone">search</span>
                                         </span>
-                                        <img src="demo/preview/BA_定泰青松翫.jpg?v=20261014" class="color img-fluid wow" alt="定泰青松翫">
+                                        <img loading="lazy" decoding="async" width="1600" height="900" src="demo/preview/BA_定泰青松翫.jpg?v=20261014" class="color img-fluid wow" alt="定泰青松翫">
                                     </a>
                                     <h5>定泰青松翫</h5>
                                 </div>
@@ -1306,7 +1336,7 @@
                                         <span class="d-overlay">
                                             <span class="material-icons-two-tone">search</span>
                                         </span>
-                                        <img src="demo/preview/BA_定泰翫花同.png?v=20261014" class="color img-fluid wow" alt="定泰翫花同">
+                                        <img loading="lazy" decoding="async" width="1600" height="900" src="demo/preview/BA_定泰翫花同.png?v=20261014" class="color img-fluid wow" alt="定泰翫花同">
                                     </a>
                                     <h5>定泰翫花同</h5>
                                 </div>
@@ -1316,7 +1346,7 @@
                                                                         <span class="d-overlay">
                                                                             <span class="material-icons-two-tone">search</span>
                                                                         </span>
-                                                                        <img src="demo/preview/篤篤源2K_2.jpg" class="color img-fluid wow " alt="">
+                                                                        <img loading="lazy" decoding="async" width="1600" height="900" src="demo/preview/篤篤源2K_2.jpg" class="color img-fluid wow " alt="">
                                                                     </a>
                                                                     <h5>篤篤源</h5>
                                                                 </div>
@@ -1326,7 +1356,7 @@
                                                                         <span class="d-overlay">
                                                                             <span class="material-icons-two-tone">search</span>
                                                                         </span>
-                                                                        <img src="demo/eHome/case_gallery/永安豪景曾公館.jpg" class="color img-fluid wow " alt="">
+                                                                        <img loading="lazy" decoding="async" width="1600" height="900" src="demo/eHome/case_gallery/永安豪景曾公館.jpg" class="color img-fluid wow " alt="">
                                                                     </a>
                                                                     <h5>永安豪景曾公館</h5>
                                                                 </div>
@@ -1336,7 +1366,7 @@
                                                                         <span class="d-overlay">
                                                                             <span class="material-icons-two-tone">search</span>
                                                                         </span>
-                                                                        <img src="demo/eHome/case_gallery/北投遊公館.jpg" class="color img-fluid wow " alt="">
+                                                                        <img loading="lazy" decoding="async" width="1600" height="900" src="demo/eHome/case_gallery/北投遊公館.jpg" class="color img-fluid wow " alt="">
                                                                     </a>
                                                                     <h5>北投游公館</h5>
                                                                 </div>
@@ -1346,7 +1376,7 @@
                                                                         <span class="d-overlay">
                                                                             <span class="material-icons-two-tone">search</span>
                                                                         </span>
-                                                                        <img src="demo/eHome/case_gallery/宜蘭三星鄉案.jpg" class="color img-fluid wow " alt="">
+                                                                        <img loading="lazy" decoding="async" width="1600" height="900" src="demo/eHome/case_gallery/宜蘭三星鄉案.jpg" class="color img-fluid wow " alt="">
                                                                     </a>
                                                                     <h5>宜蘭三星鄉案</h5>
                                                                 </div>
@@ -1356,7 +1386,7 @@
                                                                         <span class="d-overlay">
                                                                             <span class="material-icons-two-tone">search</span>
                                                                         </span>
-                                                                        <img src="demo/eHome/case_gallery/林口郎翠山莊.jpg" class="color img-fluid wow " alt="">
+                                                                        <img loading="lazy" decoding="async" width="1600" height="900" src="demo/eHome/case_gallery/林口郎翠山莊.jpg" class="color img-fluid wow " alt="">
                                                                     </a>
                                                                     <h5>林口郎翠山莊</h5>
                                                                 </div>
@@ -1366,7 +1396,7 @@
                                                                         <span class="d-overlay">
                                                                             <span class="material-icons-two-tone">search</span>
                                                                         </span>
-                                                                        <img src="demo/eHome/case_gallery/八德直心巷.jpg" class="color img-fluid wow " alt="">
+                                                                        <img loading="lazy" decoding="async" width="1600" height="900" src="demo/eHome/case_gallery/八德直心巷.jpg" class="color img-fluid wow " alt="">
                                                                     </a>
                                                                     <h5>八德直心巷</h5>
                                                                 </div>
@@ -1376,7 +1406,7 @@
                                                                         <span class="d-overlay">
                                                                             <span class="material-icons-two-tone">search</span>
                                                                         </span>
-                                                                        <img src="demo/preview/定泰臻翫c.jpg" class="color img-fluid wow " alt="">
+                                                                        <img loading="lazy" decoding="async" width="1600" height="900" src="demo/preview/定泰臻翫c.jpg" class="color img-fluid wow " alt="">
                                                                     </a>
                                                                     <h5>定泰臻翫</h5>
                                                                 </div>
@@ -1386,7 +1416,7 @@
                                                                         <span class="d-overlay">
                                                                             <span class="material-icons-two-tone">search</span>
                                                                         </span>
-                                                                        <img src="demo/eHome/case_gallery/碧澄三期.jpg" class="color img-fluid wow " alt="">
+                                                                        <img loading="lazy" decoding="async" width="1600" height="900" src="demo/eHome/case_gallery/碧澄三期.jpg" class="color img-fluid wow " alt="">
                                                                     </a>
                                                                     <h5>碧澄三期建案</h5>
                                                                 </div>
@@ -1396,7 +1426,7 @@
                                         <span class="d-overlay">
                                             <span class="material-icons-two-tone">search</span>
                                         </span>
-                                        <img src="demo/preview/私人宅邸_關西美居景森.png?v=20261015-2" class="color img-fluid wow" alt="關西美居景森">
+                                        <img loading="lazy" decoding="async" width="1600" height="900" src="demo/preview/私人宅邸_關西美居景森.png?v=20261015-2" class="color img-fluid wow" alt="關西美居景森">
                                     </a>
                                     <h5>關西美居景森</h5>
                                 </div>
@@ -1406,7 +1436,7 @@
                                         <span class="d-overlay">
                                             <span class="material-icons-two-tone">search</span>
                                         </span>
-                                        <img src="demo/preview/私人宅邸_兆傑樂群居.png?v=20261015-2" class="color img-fluid wow" alt="兆傑樂群居">
+                                        <img loading="lazy" decoding="async" width="1600" height="900" src="demo/preview/私人宅邸_兆傑樂群居.png?v=20261015-2" class="color img-fluid wow" alt="兆傑樂群居">
                                     </a>
                                     <h5>兆傑樂群居</h5>
                                 </div>
@@ -1416,7 +1446,7 @@
                                         <span class="d-overlay">
                                             <span class="material-icons-two-tone">search</span>
                                         </span>
-                                        <img src="demo/preview/私人宅邸_嘉磐樸樹.png?v=20261015-2" class="color img-fluid wow" alt="嘉磐樸樹">
+                                        <img loading="lazy" decoding="async" width="1600" height="900" src="demo/preview/私人宅邸_嘉磐樸樹.png?v=20261015-2" class="color img-fluid wow" alt="嘉磐樸樹">
                                     </a>
                                     <h5>嘉磐樸樹</h5>
                                 </div>
