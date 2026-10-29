@@ -57,7 +57,7 @@
     <!-- <link id="colors" href="css/6_2_style.css" rel="stylesheet" type="text/css" > -->
     <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto:300,400,500|Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp'>
     <link id="colors" href="css/vendors.css" rel="stylesheet" type="text/css" >
-    <link id="colors" href="css/ez.css?v=20261028-3" rel="stylesheet" type="text/css" >
+    <link id="colors" href="css/ez.css?v=20261029-1" rel="stylesheet" type="text/css" >
 
 </head>
 
@@ -2202,6 +2202,41 @@
                     behavior: 'smooth'
                 });
             };
+
+            const centerSelectedSubCategory = function (item) {
+                if (!window.matchMedia('(max-width: 767px)').matches) return;
+
+                const visibleItems = Array.from(scroller.querySelectorAll('.tags_block > li')).filter(function (listItem) {
+                    return listItem.offsetParent !== null;
+                });
+                const itemIndex = visibleItems.indexOf(item);
+                const maxScroll = Math.max(0, scroller.scrollWidth - scroller.clientWidth);
+                let targetScroll;
+
+                if (itemIndex === 0) {
+                    targetScroll = 0;
+                } else if (itemIndex === visibleItems.length - 1) {
+                    targetScroll = maxScroll;
+                } else {
+                    const itemCenter = item.offsetLeft + (item.offsetWidth / 2);
+                    targetScroll = itemCenter - (scroller.clientWidth / 2);
+                    targetScroll = Math.max(0, Math.min(targetScroll, maxScroll));
+                }
+
+                scroller.scrollTo({
+                    left: targetScroll,
+                    behavior: 'smooth'
+                });
+            };
+
+            scroller.addEventListener('click', function (event) {
+                const link = event.target.closest('.tags_block > li > a');
+                if (!link || !scroller.contains(link)) return;
+
+                window.requestAnimationFrame(function () {
+                    centerSelectedSubCategory(link.parentElement);
+                });
+            });
 
             scroller.addEventListener('scroll', updateButtons, { passive: true });
             window.addEventListener('resize', updateButtons);
