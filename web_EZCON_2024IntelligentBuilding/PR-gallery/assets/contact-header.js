@@ -4,7 +4,7 @@
   const frame = document.createElement('iframe');
   frame.className = 'ezcon-contact-header';
   frame.title = '易控官網導覽';
-  frame.src = new URL('contact-header.html?v=20261020-standalone-1', script.src).href;
+  frame.src = new URL('contact-header.html?v=20261102-menu', script.src).href;
   frame.style.setProperty('--header-visible-height', '100px');
   const style = document.createElement('style');
   style.textContent = `
