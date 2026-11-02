@@ -4,6 +4,8 @@
   var shell;
   var railWrap;
   var rail;
+  var railPrev;
+  var railNext;
   var lightbox;
   var lightboxImage;
   var lightboxCaption;
@@ -38,6 +40,10 @@
       '<div class="ez-bento-head">',
       '  <div class="ez-bento-heading"><h2><span class="ez-bento-location"></span><img class="ez-bento-title-icon" src="assets/img/icon/project-icon07.svg" alt="" aria-hidden="true"><span class="ez-bento-title-text">展示空間</span></h2><p></p></div>',
       '  <div class="ez-bento-drag-hint"><strong>← 拖曳 →</strong> 或使用滑鼠滾輪</div>',
+      '  <div class="ez-bento-controls">',
+      '    <button class="ez-bento-rail-nav ez-bento-rail-prev" type="button" aria-label="向左瀏覽照片">‹</button>',
+      '    <button class="ez-bento-rail-nav ez-bento-rail-next" type="button" aria-label="向右瀏覽照片">›</button>',
+      '  </div>',
       '  <button class="ez-bento-close" type="button" aria-label="關閉相簿">×</button>',
       '</div>',
       '<div class="ez-bento-rail-wrap"><div class="ez-bento-rail"></div></div>',
@@ -53,6 +59,10 @@
 
     railWrap = shell.querySelector('.ez-bento-rail-wrap');
     rail = shell.querySelector('.ez-bento-rail');
+    railPrev = shell.querySelector('.ez-bento-rail-prev');
+    railNext = shell.querySelector('.ez-bento-rail-next');
+    railPrev.addEventListener('click', function () { scrollRail(-1); });
+    railNext.addEventListener('click', function () { scrollRail(1); });
     lightbox = shell.querySelector('.ez-bento-lightbox');
     lightboxImage = shell.querySelector('.ez-bento-lightbox-image');
     lightboxCaption = shell.querySelector('.ez-bento-lightbox-caption');
@@ -104,7 +114,11 @@
   }
 
   function sizeCells() {
-    if (!railWrap || window.matchMedia('(max-width: 767px)').matches) return;
+    if (!railWrap) return;
+    if (window.matchMedia('(max-width: 767px)').matches) {
+      shell.style.setProperty('--ez-bento-rail-center', (railWrap.offsetTop + railWrap.clientHeight / 2 - 5) + 'px');
+      return;
+    }
     var usable = Math.max(420, railWrap.clientHeight - 58);
     var cell = Math.max(190, Math.min(430, (usable - 14) / 2));
     shell.style.setProperty('--ez-bento-cell', cell + 'px');
@@ -117,9 +131,19 @@
   function paintRail() {
     railX = clampRail();
     rail.style.transform = 'translate3d(' + railX + 'px,0,0)';
+    railPrev.disabled = railX >= -1;
+    railNext.disabled = railX <= Math.min(0, railWrap.clientWidth - rail.scrollWidth - 28) + 1;
+  }
+
+  function scrollRail(direction) {
+    var railStyle = getComputedStyle(rail);
+    var step = parseFloat(railStyle.gridAutoColumns) + (parseFloat(railStyle.columnGap) || 0);
+    railX -= direction * step;
+    paintRail();
   }
 
   function onRailPointerDown(event) {
+    if (event.button !== 0) return;
     dragging = true;
     moved = false;
     pressedTile = event.target.closest ? event.target.closest('.ez-bento-tile') : null;
@@ -209,7 +233,7 @@
     railX = 0;
     var labelParts = currentLabel.replace(/展示空間\s*$/, '').trim();
     shell.querySelector('.ez-bento-location').textContent = labelParts;
-    shell.querySelector('.ez-bento-heading p').textContent = '拖曳探索 ' + currentItems.length + ' 張照片，點選任一照片可放大檢視。';
+    shell.querySelector('.ez-bento-heading p').textContent = '共 ' + currentItems.length + ' 張照片，左右箭頭或拖曳瀏覽，點選方格放大。';
     renderItems();
     shell.classList.add('is-open');
     shell.setAttribute('aria-hidden', 'false');
